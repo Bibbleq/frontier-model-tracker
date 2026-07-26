@@ -1,0 +1,59 @@
+# 365Explained Frontier Model Tracker
+
+An independent, community-maintained history of frontier and significant AI model availability across the Microsoft AI stack.
+
+The project tracks when models are released by their vendors and when they become available across Microsoft surfaces including:
+
+- Microsoft 365 Copilot
+- Microsoft Copilot Studio
+- GitHub Copilot
+- GitHub Models
+- Microsoft Foundry / Azure AI Foundry / Azure OpenAI
+
+The aim is to distinguish *what happened* from *how it was exposed*: underlying model use, specialist experiences, model-picker availability, previews, GA, defaults, retirements, catalogue availability and admin/policy changes are recorded as separate events.
+
+## Project status
+
+The structured dataset is intended to be the source of truth. Presentation layers such as the 365Explained web timeline will consume generated representations of that data.
+
+Until the initial validation pass is complete, treat the dataset as a research project rather than official product documentation.
+
+## Repository layout
+
+```text
+data/              Human-maintained source data and data guidance
+generated/         Machine-generated JSON/CSV outputs
+schema/            JSON Schema for event validation
+scripts/           Build and validation tooling
+web/               Reusable timeline renderer / demo
+wordpress/         WordPress integration
+.github/           Contribution and validation workflows
+```
+
+## Event model
+
+A model may have several events on the same surface: vendor release, limited/public preview, confirmed underlying use, selectable model, specialist experience, GA, default, retirement, catalogue availability, or an admin/policy change.
+
+This prevents a catalogue listing from being mistaken for GitHub Copilot availability, or a specialist Microsoft 365 agent from being mistaken for general Copilot Chat model selection.
+
+## Evidence policy
+
+Every availability claim should be backed by a public source. Primary vendor, Microsoft, GitHub and product-documentation sources are preferred.
+
+The dataset records **publicly documented availability**. It does not claim to represent internal deployment dates, undocumented service architecture or roadmap information.
+
+Corrections are welcome through pull requests and issues. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Licensing
+
+Source code in this repository is licensed under the **MIT License**. See [LICENSE](LICENSE).
+
+The structured research dataset under `/data` and generated representations derived from it under `/generated` are licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**. See [LICENSE-DATA](LICENSE-DATA).
+
+Third-party names, trademarks, linked source material and quoted content remain subject to their respective owners' rights.
+
+## Independence
+
+365Explained Frontier Model Tracker is an independent community project. It is not affiliated with, authorised, sponsored or approved by Microsoft Corporation, OpenAI, Anthropic, GitHub or any other model provider referenced in the dataset.
+
+Microsoft, Azure, Microsoft 365, Copilot, GitHub and other product names are used descriptively to identify the products and services being tracked.

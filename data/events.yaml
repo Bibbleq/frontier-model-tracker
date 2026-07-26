@@ -1,0 +1,113 @@
+version: 1
+updated: "2026-07-26"
+events:
+  - id: github-copilot-launch-2021-06-29
+    date: "2021-06-29"
+    vendor: OpenAI
+    model: Codex
+    platform:
+      owner: GitHub
+      product: GitHub Copilot
+      experience: Code completion
+    event_type: platform_launch
+    status: preview
+    selectable: false
+    confidence: confirmed
+    notes: GitHub Copilot technical preview launched powered by OpenAI Codex.
+    sources:
+      - publisher: GitHub
+        title: Introducing GitHub Copilot
+        url: https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/
+
+  - id: azure-openai-launch-2021-11-02
+    date: "2021-11-02"
+    vendor: OpenAI
+    model: GPT-3 family
+    platform:
+      owner: Microsoft
+      product: Azure OpenAI Service
+      experience: Service preview
+    event_type: platform_launch
+    status: limited_preview
+    selectable: true
+    confidence: confirmed
+    notes: Invite-only Azure OpenAI Service preview exposed GPT-3 models under Azure enterprise controls.
+    sources:
+      - publisher: Microsoft
+        title: New Azure OpenAI Service
+        url: https://news.microsoft.com/source/features/ai/new-azure-openai-service/
+
+  - id: openai-gpt-4-release-2023-03-14
+    date: "2023-03-14"
+    vendor: OpenAI
+    model: GPT-4
+    platform:
+      owner: OpenAI
+      product: OpenAI
+      experience: Model release
+    event_type: vendor_release
+    status: release
+    selectable: true
+    confidence: confirmed
+    notes: Public release of GPT-4.
+    sources:
+      - publisher: OpenAI
+        title: GPT-4
+        url: https://openai.com/index/gpt-4-research/
+
+  - id: m365-copilot-gpt-4-preview-2023-03-16
+    date: "2023-03-16"
+    vendor: OpenAI
+    model: GPT-4
+    platform:
+      owner: Microsoft
+      product: Microsoft 365 Copilot
+      experience: Initial commercial preview
+    event_type: underlying_model
+    status: preview
+    selectable: false
+    confidence: confirmed
+    notes: Microsoft 365 Copilot was announced using LLMs including GPT-4; Microsoft subsequently confirmed it was already GPT-4 powered.
+    sources:
+      - publisher: Microsoft
+        title: Introducing Microsoft 365 Copilot
+        url: https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work/
+      - publisher: Microsoft Azure
+        title: Introducing GPT-4 in Azure OpenAI Service
+        url: https://azure.microsoft.com/en-us/blog/introducing-gpt4-in-azure-openai-service/
+
+  - id: openai-gpt-4o-foundry-2024-05-13-preview
+    date: "2024-05-13"
+    vendor: OpenAI
+    model: GPT-4o
+    platform:
+      owner: Microsoft
+      product: Azure OpenAI Service
+      experience: Model deployment
+    event_type: public_preview
+    status: preview
+    selectable: true
+    confidence: confirmed
+    notes: GPT-4o entered Azure OpenAI preview on the same date as OpenAI's public announcement.
+    sources:
+      - publisher: Microsoft Azure
+        title: Introducing GPT-4o, OpenAI's new flagship multimodal model, now in preview on Azure
+        url: https://azure.microsoft.com/en-us/blog/introducing-gpt-4o-openais-new-flagship-multimodal-model-now-in-preview-on-azure/
+
+  - id: openai-gpt-5-all-surfaces-2025-08-07-m365
+    date: "2025-08-07"
+    vendor: OpenAI
+    model: GPT-5
+    platform:
+      owner: Microsoft
+      product: Microsoft 365 Copilot
+      experience: Copilot
+    event_type: model_picker
+    status: rollout
+    selectable: true
+    confidence: confirmed
+    notes: GPT-5 began rolling out in Microsoft 365 Copilot on its vendor release date, including a Try GPT-5 experience for licensed users.
+    sources:
+      - publisher: Microsoft
+        title: "Available today: GPT-5 in Microsoft 365 Copilot"
+        url: https://www.microsoft.com/en-us/microsoft-365/blog/2025/08/07/available-today-gpt-5-in-microsoft-365-copilot/
