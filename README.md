@@ -14,14 +14,15 @@ The aim is to distinguish *what happened* from *how it was exposed*: underlying 
 
 ## Project status
 
-The structured dataset is intended to be the source of truth. Presentation layers such as the 365Explained web timeline will consume generated representations of that data.
+The structured dataset is the source of truth. It currently contains **144 canonical events** spanning 2020 to 26 July 2026, plus **36 validation targets** that are deliberately excluded from firm timeline claims until better evidence is found. Presentation layers such as the 365Explained web timeline consume generated representations of that data.
 
-Until the initial validation pass is complete, treat the dataset as a research project rather than official product documentation.
+Treat the dataset as a sourced research project rather than official product documentation.
 
 ## Repository layout
 
 ```text
 data/              Human-maintained source data and data guidance
+docs/              Research provenance and editorial guidance
 generated/         Machine-generated JSON/CSV outputs
 schema/            JSON Schema for event validation
 scripts/           Build and validation tooling
@@ -36,9 +37,13 @@ A model may have several events on the same surface: vendor release, limited/pub
 
 This prevents a catalogue listing from being mistaken for GitHub Copilot availability, or a specialist Microsoft 365 agent from being mistaken for general Copilot Chat model selection.
 
+Schema v2 also preserves date precision, platform family/product/experience, event scope and selectability, source primacy and retrieval date, caveats, and related events. Unresolved claims live in `validation_backlog` rather than being assigned invented dates or scopes.
+
 ## Evidence policy
 
 Every availability claim should be backed by a public source. Primary vendor, Microsoft, GitHub and product-documentation sources are preferred.
+
+`confirmed` means a primary source explicitly supports the material date and scope. `supported` is reserved for claims backed by strong evidence where the exact first date relies on retrospective or current documentation. Claims that do not meet either threshold stay outside the canonical event list.
 
 The dataset records **publicly documented availability**. It does not claim to represent internal deployment dates, undocumented service architecture or roadmap information.
 

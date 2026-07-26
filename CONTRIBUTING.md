@@ -10,13 +10,14 @@ Corrections, additional model events and better primary sources are welcome.
 4. Keep GitHub Models separate from GitHub Copilot.
 5. Keep embedded/specialist use separate from a generally selectable model.
 6. Use separate events for preview, GA, default, retirement and policy changes when those dates are independently known.
-7. If the date or scope is uncertain, lower the confidence field and explain why in `notes`.
+7. Preserve the evidence's real date precision; do not invent a day.
+8. If a claim is not yet strong enough for `confirmed` or `supported`, add it to `validation_backlog` instead of the canonical timeline.
 
 ## Adding or correcting an event
 
 Edit `data/events.yaml`. Each event needs a stable `id`, date, vendor/model,
-platform/surface information, event classification, confidence and at least one
-public source.
+platform/surface information, structured event classification, confidence, an
+evidence note, and at least one public source.
 
 Please keep IDs descriptive and stable, for example:
 
@@ -33,13 +34,16 @@ python scripts/build.py
 ```
 
 The build validates the YAML against the JSON Schema, checks IDs and sources,
-and regenerates `generated/events.json` and `generated/events.csv`.
+and regenerates `generated/events.json`, `generated/events.csv`, and
+`generated/validation-backlog.csv`.
 
 ## Confidence
 
 - `confirmed`: clear first-party evidence for the event/date/scope
-- `probable`: evidence is good but a detail such as exact rollout date or scope remains uncertain
-- `needs-verification`: retained for research, but should not be used for firm lag calculations
+- `supported`: strong evidence, but the exact first date relies on retrospective/current documentation or paired evidence
+
+Unresolved claims belong in `validation_backlog`; they do not receive a
+canonical confidence value until promoted with sufficient evidence.
 
 ## Pull requests
 
