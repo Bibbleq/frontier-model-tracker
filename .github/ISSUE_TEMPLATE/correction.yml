@@ -1,0 +1,32 @@
+name: Correct an availability event
+description: Report a date, scope, status or source that should be corrected.
+title: "Correction: "
+labels: []
+body:
+  - type: textarea
+    id: current
+    attributes:
+      label: Current claim
+      description: What event or statement is currently wrong or incomplete?
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Proposed correction
+      description: What should the dataset say instead?
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Public source
+      description: Prefer a first-party vendor, Microsoft, GitHub or product-documentation URL.
+      placeholder: https://...
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Include preview/GA, region, admin-policy or model-picker nuance where relevant.
