@@ -60,7 +60,7 @@ def write_outputs(data: dict) -> None:
 
     fields = ["id", "date", "vendor", "model", "platform_owner", "platform_product", "experience", "event_type", "status", "selectable", "confidence", "notes", "sources"]
     with (OUTPUT_DIR / "events.csv").open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         for event in events:
             writer.writerow({
