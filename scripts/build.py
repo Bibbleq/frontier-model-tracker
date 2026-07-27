@@ -5,6 +5,8 @@ import csv
 import json
 import re
 import sys
+from calendar import monthrange
+from datetime import date as date_cls
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -297,6 +299,123 @@ def source_urls(record: dict) -> str:
     return " || ".join(source["url"] for source in record.get("sources", []))
 
 
+# --------------------------------------------------------------------------
+# Derived lag. Never stored in canonical data; recomputed on every build.
+# The rules are documented in docs/methodology.md.
+# --------------------------------------------------------------------------
+TIERS = ["microsoft", "copilot", "m365", "studio", "github_copilot", "foundry"]
+MEASURES = {
+    # "how soon could anyone use it here at all", including underlying and
+    # specialist use that a user cannot select
+    "any_exposure": {"underlying", "specialist", "catalogue", "selectable", "default"},
+    # "how soon could a user actually choose it here"
+    "selectable_or_default": {"selectable", "default"},
+}
+
+
+def date_interval(date: dict) -> tuple[date_cls, date_cls]:
+    """Widen a partial date into the interval of days it could mean."""
+    start, precision = date["start"], date["precision"]
+    if precision == "day":
+        low = date_cls.fromisoformat(start)
+        high = low
+    elif precision == "month":
+        year, month = (int(part) for part in start.split("-"))
+        low = date_cls(year, month, 1)
+        high = date_cls(year, month, monthrange(year, month)[1])
+    else:
+        year = int(start)
+        low = date_cls(year, 1, 1)
+        high = date_cls(year, 12, 31)
+
+    if date.get("end"):
+        high = date_interval({"start": date["end"], "precision": precision})[1]
+    return low, high
+
+
+def derive_lag(data: dict, models: dict, platforms: dict) -> list[dict]:
+    events = [e for e in data["events"] if e["kind"] == "availability"]
+    surfaces = {entry["id"]: entry for entry in platforms["surfaces"]}
+    model_names = {entry["id"]: entry for entry in models["models"]}
+
+    # Open research questions suppress a lag answer: an unresearched gap must
+    # not render as evidence that a model never arrived.
+    open_questions: set[tuple[str, str]] = set()
+    for item in data["validation_backlog"]:
+        if item["state"] not in ("open", "blocked"):
+            continue
+        surface = surfaces.get(item.get("surface_id", ""))
+        if not surface:
+            continue
+        for model_id in item.get("model_ids", []):
+            for tier in surface["counts_as"]:
+                open_questions.add((model_id, tier))
+
+    baseline: dict[str, dict] = {}
+    for event in events:
+        if not surfaces[event["surface_id"]].get("vendor_baseline"):
+            continue
+        low, _ = date_interval(event["date"])
+        for model_id in event["model_ids"]:
+            if model_id not in baseline or low < baseline[model_id]["low"]:
+                baseline[model_id] = {"low": low, "high": date_interval(event["date"])[1],
+                                      "event": event["id"], "lifecycle": event["lifecycle"]}
+
+    rows: list[dict] = []
+    for model_id in sorted(model_names):
+        base = baseline.get(model_id)
+        for tier in TIERS:
+            for measure, exposures in MEASURES.items():
+                candidates = [
+                    e for e in events
+                    if model_id in e["model_ids"]
+                    and tier in surfaces[e["surface_id"]]["counts_as"]
+                    and e["exposure"] in exposures
+                ]
+                row = {
+                    "model_id": model_id,
+                    "model": model_names[model_id]["display_name"],
+                    "vendor": model_names[model_id]["vendor"],
+                    "tier": tier,
+                    "measure": measure,
+                    "baseline_event": base["event"] if base else "",
+                    "baseline_date": base["low"].isoformat() if base else "",
+                    "baseline_lifecycle": base["lifecycle"] if base else "",
+                    "first_event": "", "first_date": "", "first_surface": "",
+                    "first_exposure": "", "first_lifecycle": "",
+                    "lag_days_min": "", "lag_days_max": "", "certainty": "",
+                }
+                if not candidates:
+                    if (model_id, tier) in open_questions:
+                        row["certainty"] = "unknown_open_research"
+                    elif base:
+                        row["certainty"] = "not_recorded"
+                    else:
+                        row["certainty"] = "unknown_no_baseline"
+                    rows.append(row)
+                    continue
+
+                first = min(candidates, key=lambda e: (date_interval(e["date"])[0], e["id"]))
+                low, high = date_interval(first["date"])
+                row.update({
+                    "first_event": first["id"],
+                    "first_date": first["date"]["start"],
+                    "first_surface": first["surface_id"],
+                    "first_exposure": first["exposure"],
+                    "first_lifecycle": first["lifecycle"],
+                })
+                if not base:
+                    row["certainty"] = "unknown_no_baseline"
+                else:
+                    lag_min = (low - base["high"]).days
+                    lag_max = (high - base["low"]).days
+                    row["lag_days_min"] = lag_min
+                    row["lag_days_max"] = lag_max
+                    row["certainty"] = "exact" if lag_min == lag_max else "range"
+                rows.append(row)
+    return rows
+
+
 def write_outputs(data: dict, models: dict, platforms: dict) -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     model_names = {entry["id"]: entry["display_name"] for entry in models["models"]}
@@ -338,6 +457,17 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
                 "caveat": event.get("caveat", ""),
                 "sources": source_urls(event),
             })
+
+    lag_fields = [
+        "model_id", "model", "vendor", "tier", "measure",
+        "baseline_event", "baseline_date", "baseline_lifecycle",
+        "first_event", "first_date", "first_surface", "first_exposure", "first_lifecycle",
+        "lag_days_min", "lag_days_max", "certainty",
+    ]
+    with (OUTPUT_DIR / "lag.csv").open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=lag_fields, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(derive_lag(data, models, platforms))
 
     backlog_fields = ["id", "state", "working_claim", "reason", "target", "resolution", "sources"]
     with (OUTPUT_DIR / "validation-backlog.csv").open("w", encoding="utf-8", newline="") as handle:
