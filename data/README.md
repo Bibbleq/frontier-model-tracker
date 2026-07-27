@@ -102,9 +102,23 @@ becoming available.
 
 ## Relationships
 
-`relations` express directed links between events. Each is a verb from this
-event to the target: `supersedes`, `announced_by`, `previews_for`, `restores`,
-`part_of`. Targets must exist and must not be the event itself.
+`relations` express directed links between events. Each is a verb read from
+this event to the target. Inverses are derived, never authored, so the two
+directions cannot disagree.
+
+| Verb | Meaning | Implied date order |
+| --- | --- | --- |
+| `announced_by` | this was announced by the target | target not later |
+| `previews_for` | this preview leads to the target's GA | target not earlier |
+| `restores` | this restores what the target suspended | target strictly earlier |
+| `supersedes` | this replaces the target | target not later |
+| `part_of` | this belongs to the target umbrella event | target not later |
+| `depends_on` | this requires the target to have happened | target not later |
+
+The build enforces those orderings and rejects cycles. A cycle would assert
+that two events each precede the other, which cannot be true and makes any
+derived traversal non-terminating. Targets must exist and must not be the
+event itself.
 
 ## Validation backlog
 

@@ -227,6 +227,7 @@ def validate_semantics(data: dict, models: dict, platforms: dict) -> None:
     check_lifecycle_ordering(events)
     check_suspension_pairs(events)
     check_vendor_baseline(events, known_models, known_surfaces)
+    check_relations(events)
 
 
 def _availability(events: list[dict]) -> list[dict]:
@@ -276,6 +277,58 @@ def check_suspension_pairs(events: list[dict]) -> None:
                     fail(f"{event['id']}: restoration without a prior suspension on the same surface")
                 if event["date"]["start"] < suspended[key]:
                     fail(f"{event['id']}: restoration dated before its suspension")
+
+
+# Each relation implies an ordering between the two events. "target_earlier"
+# means the target must not be dated after this event, and vice versa.
+RELATION_ORDER = {
+    "supersedes": "target_earlier",
+    "announced_by": "target_earlier",
+    "part_of": "target_earlier",
+    "depends_on": "target_earlier",
+    "restores": "target_strictly_earlier",
+    "previews_for": "target_later",
+}
+
+
+def check_relations(events: list[dict]) -> None:
+    """Relations must be acyclic and consistent with the dates they imply."""
+    by_id = {event["id"]: event for event in events}
+
+    for event in events:
+        for relation in event.get("relations", []):
+            target = by_id[relation["target"]]
+            here, there = event["date"]["start"], target["date"]["start"]
+            rule = RELATION_ORDER[relation["type"]]
+            if rule == "target_earlier" and there > here:
+                fail(f"{event['id']}: {relation['type']} target {target['id']} is dated later ({there} > {here})")
+            if rule == "target_strictly_earlier" and there >= here:
+                fail(f"{event['id']}: {relation['type']} target {target['id']} must be strictly earlier ({there} >= {here})")
+            if rule == "target_later" and there < here:
+                fail(f"{event['id']}: {relation['type']} target {target['id']} is dated earlier ({there} < {here})")
+
+    # Cycle detection over the whole relation graph. A cycle means the dataset
+    # asserts two events each precede the other, which cannot be true and makes
+    # any derived traversal non-terminating.
+    colour: dict[str, int] = {}
+    stack: list[str] = []
+
+    def visit(node: str) -> None:
+        colour[node] = 1
+        stack.append(node)
+        for relation in by_id[node].get("relations", []):
+            nxt = relation["target"]
+            if colour.get(nxt) == 1:
+                cycle = " -> ".join(stack[stack.index(nxt):] + [nxt])
+                fail(f"relation cycle: {cycle}")
+            if colour.get(nxt, 0) == 0:
+                visit(nxt)
+        stack.pop()
+        colour[node] = 2
+
+    for event in events:
+        if colour.get(event["id"], 0) == 0:
+            visit(event["id"])
 
 
 def check_vendor_baseline(events: list[dict], models: dict, surfaces: dict) -> None:

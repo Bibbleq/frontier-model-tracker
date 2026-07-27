@@ -97,6 +97,12 @@
       "confidence": "confirmed",
       "evidence_note": "GitHub introduced Copilot technical preview as an AI pair programmer powered by OpenAI Codex.",
       "caveat": "Published as a technical preview.",
+      "relations": [
+        {
+          "type": "previews_for",
+          "target": "github-copilot-ga-2022-06-21"
+        }
+      ],
       "sources": [
         {
           "publisher": "GitHub",
@@ -310,6 +316,12 @@
       "confidence": "confirmed",
       "evidence_note": "Microsoft introduced Microsoft 365 Copilot in private preview; Microsoft subsequently confirmed it was already GPT-4 powered.",
       "caveat": "Use 16 March as first public M365 Copilot preview; 1 November is product GA, not first GPT-4 availability.",
+      "relations": [
+        {
+          "type": "previews_for",
+          "target": "m365-copilot-ga-2023-11-01"
+        }
+      ],
       "sources": [
         {
           "publisher": "Microsoft",
@@ -1398,6 +1410,12 @@
       "confidence": "supported",
       "evidence_note": "Microsoft's June GA announcement states Researcher and Analyst debuted through Frontier in April; Analyst is explicitly built on o3-mini.",
       "caveat": "Delivered through the Microsoft 365 Copilot Frontier early-access programme.",
+      "relations": [
+        {
+          "type": "previews_for",
+          "target": "m365-analyst-ga-2025-06-02"
+        }
+      ],
       "sources": [
         {
           "publisher": "Microsoft",
@@ -1768,6 +1786,12 @@
       "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "GPT-5 entered public preview in GitHub Copilot on release day.",
+      "relations": [
+        {
+          "type": "previews_for",
+          "target": "github-gpt5-ga-2025-09-09"
+        }
+      ],
       "sources": [
         {
           "publisher": "GitHub",
@@ -2035,6 +2059,12 @@
       "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Claude Sonnet 4.5 entered GitHub Copilot public preview on release day.",
+      "relations": [
+        {
+          "type": "previews_for",
+          "target": "github-sonnet4-5-ga-2025-10-13"
+        }
+      ],
       "sources": [
         {
           "publisher": "GitHub",
@@ -2860,7 +2890,7 @@
       "caveat": "This app-level setting is separate from, though dependent on, the global Anthropic subprocessor control. It is on by default for EU/EFTA/UK tenants created after 25 March 2026; tenants existing before that date are directed to the Message Center for their default. Coverage began with Excel and PowerPoint, with Word support documented as arriving in summer 2026.",
       "relations": [
         {
-          "type": "announced_by",
+          "type": "depends_on",
           "target": "m365-anthropic-subprocessor-2026-01-07"
         }
       ],
@@ -3527,6 +3557,12 @@
       "confidence": "confirmed",
       "evidence_note": "OpenAI began previewing GPT-5.6 Sol ahead of the 9 July family release.",
       "caveat": "Keep this separate from the 9 July GPT-5.6 family release.",
+      "relations": [
+        {
+          "type": "previews_for",
+          "target": "openai-gpt5-6-2026-07-09"
+        }
+      ],
       "sources": [
         {
           "publisher": "OpenAI",
@@ -3682,6 +3718,12 @@
       "confidence": "confirmed",
       "evidence_note": "Anthropic announced Fable 5 redeployment after the US Department of Commerce lifted the export controls behind the June suspension; GitHub re-enabled access.",
       "caveat": "This date covers Fable 5's general restoration on the Claude platform, Claude.ai and Claude Code. Mythos 5 access was restored earlier for some approved US organisations, following government approval granted on 26 June 2026. Re-enablement on partner clouds, including Amazon Web Services, Google Cloud and Microsoft Foundry, was described as following 'as soon as possible' and is not established as having occurred on this date.",
+      "relations": [
+        {
+          "type": "restores",
+          "target": "anthropic-fable5-suspension-2026-06-12"
+        }
+      ],
       "sources": [
         {
           "publisher": "Anthropic",
@@ -3717,6 +3759,12 @@
       "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic announced Fable 5 redeployment after the restrictions behind the June suspension changed; GitHub re-enabled access.",
+      "relations": [
+        {
+          "type": "restores",
+          "target": "github-fable5-suspension-2026-06-12"
+        }
+      ],
       "sources": [
         {
           "publisher": "GitHub",
@@ -4074,10 +4122,6 @@
         {
           "type": "announced_by",
           "target": "anthropic-opus5-2026-07-24"
-        },
-        {
-          "type": "announced_by",
-          "target": "github-opus5-2026-07-24"
         }
       ],
       "sources": [
@@ -4122,7 +4166,7 @@
       "relations": [
         {
           "type": "announced_by",
-          "target": "foundry-opus5-availability-2026-07-24"
+          "target": "anthropic-opus5-2026-07-24"
         }
       ],
       "sources": [
