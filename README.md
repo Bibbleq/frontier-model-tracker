@@ -14,14 +14,14 @@ The aim is to distinguish *what happened* from *how it was exposed*: underlying 
 
 ## Project status
 
-The structured dataset is the source of truth. It currently contains **148 canonical events** spanning June 2020 to July 2026, plus **34 validation targets** that are deliberately excluded from firm timeline claims until better evidence is found. Research is current to 27 July 2026. Presentation layers such as the 365Explained web timeline consume generated representations of that data.
+The structured dataset is the source of truth. It currently contains **148 canonical events** spanning June 2020 to July 2026, plus **36 validation targets** that are deliberately excluded from firm timeline claims until better evidence is found. Research is current to 27 July 2026. Presentation layers such as the 365Explained web timeline consume generated representations of that data.
 
 Treat the dataset as a sourced research project rather than official product documentation.
 
 ## Repository layout
 
 ```text
-data/              Human-maintained source data and data guidance
+data/              Human-maintained source data: model and surface registries, events
 docs/              Research provenance and editorial guidance
 generated/         Machine-generated JSON/CSV outputs
 schema/            JSON Schema for event validation
@@ -37,7 +37,7 @@ A model may have several events on the same surface: vendor release, limited/pub
 
 This prevents a catalogue listing from being mistaken for GitHub Copilot availability, or a specialist Microsoft 365 agent from being mistaken for general Copilot Chat model selection.
 
-Schema v2 also preserves date precision, platform family/product/experience, event scope and selectability, source primacy and retrieval date, caveats, and related events. Unresolved claims live in `validation_backlog` rather than being assigned invented dates or scopes.
+Schema v3 separates three orthogonal axes: `kind` (is this an availability fact, an announcement, a policy change or a milestone), `lifecycle` (where in the release cycle) and `exposure` (underlying, specialist, catalogue, selectable or default). Models and surfaces are referenced by stable IDs from `data/models.yaml` and `data/platforms.yaml`, so a model cannot appear under two spellings and a product rename does not fragment its history. Unresolved claims live in `validation_backlog` rather than being assigned invented dates or scopes.
 
 ## Evidence policy
 

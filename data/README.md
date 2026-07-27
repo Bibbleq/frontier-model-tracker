@@ -1,45 +1,120 @@
 # Dataset
 
-`events.yaml` is the human-maintained source of truth.
+Three human-maintained files are the source of truth:
 
-The file contains canonical sourced events and a separate `validation_backlog`.
-Backlog items are research targets, not timeline facts.
+- `models.yaml` — the model registry: stable IDs, vendors, families, aliases
+- `platforms.yaml` — the surface registry: stable IDs, rename lineage, analytical tiers, experiences
+- `events.yaml` — the canonical timeline and the validation backlog
+
+Events reference the registries by ID. Nothing in `events.yaml` names a model
+or a product in free text, so a model cannot be recorded under two spellings
+and a 2023 Azure OpenAI event cannot be relabelled with a 2025 brand name.
+
+## The three axes
+
+Every event answers three separate questions. They are deliberately
+orthogonal: none of them restates another.
+
+| Field | Question | Values |
+| --- | --- | --- |
+| `kind` | Is this an availability fact at all? | `availability`, `announcement`, `policy`, `milestone` |
+| `lifecycle` | Where in the release cycle? | `private_preview`, `limited_preview`, `public_preview`, `ga`, `deprecated`, `retired`, `suspended`, `restored` |
+| `exposure` | How is the model exposed? | `underlying`, `specialist`, `catalogue`, `selectable`, `default`, `not_applicable` |
+
+`lifecycle` and `exposure` apply only when `kind: availability`. The schema
+enforces this, which is what stops an announcement of future availability from
+ever entering a timeline or a lag calculation.
+
+`selectable` is **derived** from `exposure` and appears only in generated
+output. It is never authored, so it cannot contradict the exposure.
 
 ## Record shape
 
-Each canonical event records:
+```yaml
+- id: "foundry-opus5-availability-2026-07-24"
+  kind: "availability"
+  date:
+    start: "2026-07-24"
+    precision: "day"
+  surface_id: "microsoft-foundry"
+  model_ids: ["claude-opus-5"]
+  model_claim: "specific"
+  lifecycle: "ga"
+  exposure: "catalogue"
+  confidence: "confirmed"
+  evidence_note: "..."
+  sources:
+    - publisher: "Microsoft"
+      title: "..."
+      url: "https://..."
+      primary: true
+      retrieved_at: "2026-07-27"
+```
 
-- stable `id`, `date`, and `date_precision`
-- vendor and a single model, or `models[]` for a true family/milestone event
-- `platform.owner`, `platform.family`, `platform.product`, and optional experience
-- structured `event.type`, availability, scope, and nullable selectability
-- `confirmed` or `supported` confidence
-- a concise evidence note, optional caveat/notes/tags/relationships
-- one or more sources with publisher, title, HTTPS URL, primary status, and retrieval date
+`model_claim` says whether the sources support each named model individually
+(`specific`) or only the family as a group (`family`). A family announcement
+lists its members without pretending each was separately dated.
 
-Use month or year precision when the evidence does not support a day. Never
-invent a day merely to satisfy sorting or display code.
+Optional fields: `experience_ids`, `caveat`, `notes`, `tags`, `relations`,
+`confidence_detail`.
 
-## Event classes
+## Dates
 
-Typical `event.type` values include:
+`date.precision` is `day`, `month` or `year`, and `date.start` must match it.
+Use `date.end` for a rollout window. Never pad a month to a day to make
+sorting or rendering easier — the build rejects a mismatch, and derived lag
+becomes a range rather than a false point.
 
-- `vendor_release`
-- `platform_launch`
-- `limited_preview`
-- `public_preview`
-- `underlying_model`
-- `specialist_experience`
-- `model_picker`
-- `ga`
-- `default_model`
-- `catalogue_availability`
-- `retirement`
-- `admin_policy`
-- `suspension`
-- `restoration`
+## Confidence
 
-An event describes one claim on one date. Do not combine a preview and GA into
-one row if both dates are known. Split model-specific platform availability
-into separate records; retain `models[]` only for genuine family announcements
-or multi-model product milestones.
+`confidence` is the headline and must equal the weakest part of the claim.
+Where parts differ in strength, record that explicitly:
+
+```yaml
+  confidence: "supported"
+  confidence_detail:
+    model: "confirmed"
+    date: "supported"
+```
+
+That case is common: the model attribution is first-party and certain while
+the exact first date rests on retrospective documentation.
+
+## Governance events
+
+Admin and policy changes use `kind: policy`. They live on the surface that
+exposes the control, usually an admin centre, and name their target in
+`applies_to`:
+
+```yaml
+  kind: "policy"
+  surface_id: "m365-admin"
+  model_ids: []
+  applies_to:
+    vendor: "Anthropic"
+    regions: ["EU", "EFTA", "UK"]
+    surfaces: ["m365-copilot"]
+    experiences: ["word", "excel", "powerpoint"]
+```
+
+They carry no `model_ids`, so a policy toggle can never be counted as a model
+becoming available.
+
+## Relationships
+
+`relations` express directed links between events. Each is a verb from this
+event to the target: `supersedes`, `announced_by`, `previews_for`, `restores`,
+`part_of`. Targets must exist and must not be the event itself.
+
+## Validation backlog
+
+Backlog items are research targets, not timeline facts. Each has a `state`:
+
+- `open` — still being researched
+- `promoted` — became a canonical event; records `promoted_to`
+- `rejected` — investigated and found unsupportable; records `resolution`
+- `blocked` — cannot progress without a source that does not appear to exist
+
+`rejected` matters: it stops the same question being reopened and decided
+differently next time. A rejected item stays visible with its evidence
+attached.

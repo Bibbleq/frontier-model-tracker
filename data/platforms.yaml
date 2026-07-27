@@ -159,9 +159,14 @@ surfaces:
 # Events carry `experience_ids` as a list, because several announcements cover
 # more than one experience at once.
 experiences:
-  - id: copilot-chat
+  - id: m365-copilot-chat
     display_name: "Copilot Chat"
     surface: m365-copilot
+    note: "Deliberately distinct from github-copilot-chat. Both are marketed as 'Copilot Chat' but they are different products on different surfaces, and conflating them would overstate reach."
+  - id: github-copilot-chat
+    display_name: "Copilot Chat"
+    surface: github-copilot
+    note: "Deliberately distinct from m365-copilot-chat."
   - id: researcher
     display_name: "Researcher"
     surface: m365-copilot
