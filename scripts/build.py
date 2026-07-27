@@ -33,7 +33,7 @@ DATE_PATTERNS = {
 # to detect impossible orderings such as GA before preview on the same surface.
 LIFECYCLE_ORDER = ["private_preview", "limited_preview", "public_preview", "ga"]
 
-warnings: list[str] = []
+warnings: list[dict] = []
 
 
 def fail(message: str) -> None:
@@ -41,9 +41,12 @@ def fail(message: str) -> None:
     raise SystemExit(1)
 
 
-def warn(message: str) -> None:
-    if message not in warnings:
-        warnings.append(message)
+def warn(code: str, subject: str, message: str) -> None:
+    """Record a non-fatal finding. Warnings are a work queue, not noise, so
+    they are emitted as structured data for the dashboard as well as text."""
+    entry = {"code": code, "subject": subject, "message": message}
+    if entry not in warnings:
+        warnings.append(entry)
 
 
 def load_validated(data_path: Path, schema_path: Path) -> dict:
@@ -197,17 +200,17 @@ def validate_semantics(data: dict, models: dict, platforms: dict) -> None:
 
         if event["kind"] == "availability" and event["exposure"] in ("selectable", "default"):
             if surface.get("vendor_baseline"):
-                warn(f"{eid}: selectable exposure on a vendor baseline surface")
+                warn("selectable_on_vendor_surface", eid, "selectable exposure on a vendor baseline surface")
 
         # Living documentation is edited in place, so a citation that reads
         # correctly today may not attest the same claim later.
         for source in event["sources"]:
             if source.get("source_type") in ("documentation", "release_notes") and not source.get("archived_url"):
-                warn(f"{eid}: documentation source has no archived_url and may be edited in place: {source['url']}")
+                warn("missing_archive", eid, f"documentation source has no archived_url and may be edited in place: {source['url']}")
 
         # Warnings: not wrong, but worth a human look.
         if date["precision"] == "day" and date["start"].endswith("-01"):
-            warn(f"{eid}: day precision on the first of the month may be an invented day")
+            warn("suspicious_day_precision", eid, "day precision on the first of the month may be an invented day")
         if event["confidence"] == "confirmed":
             primary = [s for s in event["sources"] if s["primary"]]
             types = {s.get("source_type") for s in primary}
@@ -215,7 +218,7 @@ def validate_semantics(data: dict, models: dict, platforms: dict) -> None:
             # attests the date, rather than merely proving current support.
             attested = any(s.get("quote") and "date" in s.get("supports", ["date"]) for s in primary)
             if types == {"documentation"} and not attested:
-                warn(f"{eid}: 'confirmed' rests only on current documentation with no quoted attestation, which rarely proves a historical first date")
+                warn("unquoted_documentation", eid, "'confirmed' rests only on current documentation with no quoted attestation, which rarely proves a historical first date")
 
     for item in data["validation_backlog"]:
         for model_id in item.get("model_ids", []):
@@ -227,7 +230,7 @@ def validate_semantics(data: dict, models: dict, platforms: dict) -> None:
         if item.get("promoted_to") and item["promoted_to"] not in known_events:
             fail(f"{item['id']}: promoted_to points at unknown event {item['promoted_to']}")
         if item["state"] == "open" and not item.get("surface_ids"):
-            warn(f"{item['id']}: open item names no surface, so it cannot suppress a lag answer")
+            warn("backlog_without_surface", item["id"], "open item names no surface, so it cannot suppress a lag answer")
 
     # Ordering and cross-event coherence.
     sorted_ids = [e["id"] for e in sorted(events, key=lambda i: (i["date"]["start"], i["id"]))]
@@ -368,7 +371,7 @@ def check_vendor_baseline(events: list[dict], models: dict, surfaces: dict) -> N
         if model_id not in baseline
     }
     for model_id in sorted(missing):
-        warn(f"{model_id}: no vendor release event, so lag cannot be derived")
+        warn("no_vendor_baseline", model_id, "no vendor release event, so lag cannot be derived")
 
 
 def source_urls(record: dict) -> str:
@@ -579,6 +582,39 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
                 "event_count": surface_use.get(entry["id"], 0),
             })
 
+    # A single document the editorial dashboard can read. Deliberately carries
+    # no timestamp: generated output must stay byte-identical on rebuild so the
+    # CI check that generated files are committed keeps working.
+    lag_rows = derive_lag(data, models, platforms)
+    status = {
+        "totals": {
+            "events": len(data["events"]),
+            "backlog": len(data["validation_backlog"]),
+            "sources": sum(len(e["sources"]) for e in data["events"])
+            + sum(len(b.get("sources", [])) for b in data["validation_backlog"]),
+            "models": len(models["models"]),
+            "surfaces": len(platforms["surfaces"]),
+            "confirmed": sum(1 for e in data["events"] if e["confidence"] == "confirmed"),
+            "supported": sum(1 for e in data["events"] if e["confidence"] == "supported"),
+        },
+        "kinds": dict(sorted(collections.Counter(e["kind"] for e in data["events"]).items())),
+        "backlog_states": dict(sorted(collections.Counter(b["state"] for b in data["validation_backlog"]).items())),
+        "warnings": sorted(warnings, key=lambda w: (w["code"], w["subject"])),
+        "warning_counts": dict(sorted(collections.Counter(w["code"] for w in warnings).items())),
+        "coverage": {
+            "models_without_events": sorted(
+                entry["id"] for entry in models["models"] if not model_use.get(entry["id"])
+            ),
+            "surfaces_without_events": sorted(
+                entry["id"] for entry in platforms["surfaces"] if not surface_use.get(entry["id"])
+            ),
+        },
+        "lag_certainty": dict(sorted(collections.Counter(r["certainty"] for r in lag_rows).items())),
+    }
+    with (OUTPUT_DIR / "status.json").open("w", encoding="utf-8", newline="\n") as handle:
+        json.dump(status, handle, indent=2, ensure_ascii=False)
+        handle.write("\n")
+
     lag_fields = [
         "model_id", "model", "vendor", "tier", "measure",
         "baseline_event", "baseline_date", "baseline_lifecycle",
@@ -588,7 +624,7 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
     with (OUTPUT_DIR / "lag.csv").open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=lag_fields, lineterminator="\n")
         writer.writeheader()
-        writer.writerows(derive_lag(data, models, platforms))
+        writer.writerows(lag_rows)
 
     backlog_fields = [
         "id", "state", "model_ids", "models", "surface_ids", "working_claim",
@@ -620,8 +656,8 @@ if __name__ == "__main__":
     validate_semantics(dataset, registry_models, registry_platforms)
     write_outputs(dataset, registry_models, registry_platforms)
 
-    for message in warnings:
-        print(f"WARNING: {message}", file=sys.stderr)
+    for entry in sorted(warnings, key=lambda w: (w["code"], w["subject"])):
+        print(f"WARNING [{entry['code']}] {entry['subject']}: {entry['message']}", file=sys.stderr)
     print(
         f"Validated {len(registry_models['models'])} models and "
         f"{len(registry_platforms['surfaces'])} surfaces; "

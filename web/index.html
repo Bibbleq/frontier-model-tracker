@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>365Explained Frontier Model Tracker — data</title>
+<meta name="description" content="Sourced history of frontier and significant AI model availability across the Microsoft AI stack. Machine-readable JSON and CSV under CC BY 4.0.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <nav class="top">
+    <a href="index.html">Data</a>
+    <a href="dashboard.html">Editorial dashboard</a>
+    <a href="https://github.com/Bibbleq/frontier-model-tracker">Repository</a>
+    <a href="https://github.com/Bibbleq/frontier-model-tracker/blob/main/docs/methodology.md">Methodology</a>
+  </nav>
+
+  <h1>Frontier Model Tracker — data</h1>
+  <p class="lede">
+    An independent, community-maintained history of frontier and significant AI model
+    availability across the Microsoft AI stack. This page publishes the machine-readable
+    outputs. The dataset in the repository is authoritative; everything here is generated
+    from it and rebuilt on every change.
+  </p>
+
+  <div class="cards" id="totals"></div>
+
+  <h2>Files</h2>
+  <ul class="files">
+    <li><a href="data/events.json">events.json</a><span>Full dataset: metadata, canonical events and the validation backlog</span></li>
+    <li><a href="data/events.csv">events.csv</a><span>Flattened timeline, IDs resolved to display names</span></li>
+    <li><a href="data/lag.csv">lag.csv</a><span>Derived adoption lag. Read <code>certainty</code> before <code>lag_days_min</code></span></li>
+    <li><a href="data/validation-backlog.csv">validation-backlog.csv</a><span>Open research questions — not confirmed history</span></li>
+    <li><a href="data/models.csv">models.csv</a><span>Model registry with aliases and families</span></li>
+    <li><a href="data/surfaces.csv">surfaces.csv</a><span>Surface registry with rename lineage and analytical tiers</span></li>
+    <li><a href="data/status.json">status.json</a><span>Build totals, warnings and coverage gaps</span></li>
+  </ul>
+
+  <h2>Reading it correctly</h2>
+  <p>Three distinctions do most of the work, and collapsing any of them produces a wrong answer.</p>
+  <table>
+    <thead><tr><th>Field</th><th>Question it answers</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">kind</td><td>Is this an availability fact at all, or an announcement, policy change or milestone? Only <code>availability</code> belongs on a timeline.</td></tr>
+      <tr><td class="mono">lifecycle</td><td>Where in the release cycle: preview, GA, retired, suspended, restored.</td></tr>
+      <tr><td class="mono">exposure</td><td>How the model is exposed: underlying, specialist, catalogue, selectable or default.</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Catalogue availability counts as Microsoft availability but never as Copilot availability.
+    GitHub Models is not GitHub Copilot. A specialist experience is not the general model picker.
+    An announcement of future availability is not first availability. These rules are enforced
+    by the build, not left to the reader.
+  </p>
+  <p>
+    Lag is derived, never stored. A row may be <code>exact</code>, a <code>range</code> when a
+    date is only known to a month, or one of three distinct unknowns — including
+    <code>unknown_open_research</code>, which means the question is unresearched rather than
+    the model absent.
+  </p>
+
+  <h2>Licence</h2>
+  <p>
+    Data under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code under MIT.
+    Attribute as “365Explained Frontier Model Tracker”. This is a sourced research project, not
+    official product documentation, and is not affiliated with Microsoft, OpenAI, Anthropic or GitHub.
+  </p>
+
+  <footer id="footer">Dataset version <span class="mono" id="ver">—</span>, research current to <span class="mono" id="cutoff">—</span>.</footer>
+</main>
+
+<script>
+fetch('data/status.json').then(r => r.json()).then(s => {
+  const t = s.totals;
+  const cards = [
+    ['events', t.events], ['sources', t.sources], ['models', t.models],
+    ['surfaces', t.surfaces], ['open questions', s.backlog_states.open || 0],
+  ];
+  document.getElementById('totals').innerHTML = cards
+    .map(([k, n]) => `<div class="card"><div class="n">${n}</div><div class="k">${k}</div></div>`).join('');
+}).catch(() => {});
+
+fetch('data/events.json').then(r => r.json()).then(d => {
+  document.getElementById('ver').textContent = 'v' + d.version;
+  document.getElementById('cutoff').textContent = d.research_cutoff;
+}).catch(() => {});
+</script>
+</body>
+</html>

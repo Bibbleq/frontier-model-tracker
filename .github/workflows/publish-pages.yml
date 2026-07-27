@@ -1,0 +1,70 @@
+name: Publish data and dashboard
+
+# The repository is authoritative. This publishes the generated outputs to a
+# stable URL so presentation layers, including the 365Explained WordPress site,
+# can consume them without copying historical claims into a second place.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "schema/**"
+      - "scripts/**"
+      - "generated/**"
+      - "web/**"
+      - ".github/workflows/publish-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never let two deploys race; always finish the one in flight.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install build dependencies
+        run: python -m pip install pyyaml jsonschema
+
+      - name: Rebuild from source
+        run: python scripts/build.py
+
+      - name: Refuse to publish stale generated files
+        run: git diff --exit-code -- generated/
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site/data
+          cp web/index.html web/dashboard.html web/style.css _site/
+          cp generated/events.json generated/status.json generated/*.csv _site/data/
+          # A dataset consumers can cite: the exact schema alongside the data.
+          mkdir -p _site/schema
+          cp schema/*.json _site/schema/
+          echo "User-agent: *" > _site/robots.txt
+          echo "Allow: /" >> _site/robots.txt
+          ls -R _site
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
