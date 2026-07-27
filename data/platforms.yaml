@@ -1,0 +1,194 @@
+# Canonical surface registry.
+#
+# A "surface" is a distinct, independently queryable place a model can appear.
+# Events reference surfaces by stable `id`; display names and product renames
+# are resolved from here so history is never relabelled with a later brand.
+#
+# `counts_as` drives derived analysis. It is the mechanism that keeps
+# "GitHub Models is not GitHub Copilot" and "Foundry catalogue availability is
+# not Copilot availability" executable rather than aspirational.
+#
+#   microsoft       counts toward "first Microsoft availability"
+#   copilot         counts toward "first Copilot availability"
+#   m365            counts toward "first Microsoft 365 availability"
+#   studio          counts toward "first Copilot Studio availability"
+#   github_copilot  counts toward "first GitHub Copilot availability"
+#   foundry         counts toward "first Foundry availability"
+#
+# `vendor_baseline: true` marks a vendor's own surface. The earliest
+# availability event on a vendor baseline surface is the lag origin for that
+# model. Vendor surfaces never appear in `counts_as`.
+
+version: 1
+
+surfaces:
+  # ---------------------------------------------------------------- vendors
+  - id: openai
+    display_name: "OpenAI"
+    owner: OpenAI
+    vendor_baseline: true
+    counts_as: []
+  - id: openai-api
+    display_name: "OpenAI API"
+    owner: OpenAI
+    vendor_baseline: true
+    counts_as: []
+  - id: chatgpt
+    display_name: "ChatGPT"
+    owner: OpenAI
+    vendor_baseline: true
+    counts_as: []
+  - id: anthropic-claude
+    display_name: "Claude"
+    owner: Anthropic
+    vendor_baseline: true
+    counts_as: []
+  - id: google-gemini
+    display_name: "Gemini"
+    owner: Google
+    vendor_baseline: true
+    counts_as: []
+  - id: google-gemini-api
+    display_name: "Gemini API"
+    owner: Google
+    vendor_baseline: true
+    counts_as: []
+  - id: mistral
+    display_name: "Mistral"
+    owner: Mistral AI
+    vendor_baseline: true
+    counts_as: []
+  - id: xai-grok
+    display_name: "Grok"
+    owner: xAI
+    vendor_baseline: true
+    counts_as: []
+
+  # ----------------------------------------------------------- microsoft 365
+  - id: m365-copilot
+    display_name: "Microsoft 365 Copilot"
+    owner: Microsoft
+    family: Microsoft 365
+    counts_as: [microsoft, copilot, m365]
+  - id: m365-admin
+    display_name: "Microsoft 365 admin centre"
+    owner: Microsoft
+    family: Microsoft 365
+    note: "Administrative and governance surface. Deliberately not counted as Copilot availability: an admin control is not a model becoming available to users."
+    counts_as: [microsoft]
+
+  # --------------------------------------------------------- copilot studio
+  - id: copilot-studio
+    display_name: "Microsoft Copilot Studio"
+    owner: Microsoft
+    family: Copilot Studio
+    renamed_from: power-virtual-agents
+    counts_as: [microsoft, copilot, studio]
+  - id: power-virtual-agents
+    display_name: "Power Virtual Agents"
+    owner: Microsoft
+    family: Copilot Studio
+    renamed_to: copilot-studio
+    renamed_on: "2023-11-15"
+    counts_as: [microsoft, copilot, studio]
+
+  # ---------------------------------------------------------------- github
+  - id: github-copilot
+    display_name: "GitHub Copilot"
+    owner: GitHub
+    family: GitHub Copilot
+    counts_as: [microsoft, copilot, github_copilot]
+  - id: github-models
+    display_name: "GitHub Models"
+    owner: GitHub
+    family: GitHub Models
+    note: "A developer model catalogue, not GitHub Copilot. Counts as Microsoft availability but never as Copilot availability."
+    counts_as: [microsoft]
+
+  # --------------------------------------------------------------- foundry
+  # One product lineage, four successive names. Events keep the name that was
+  # current on the day; `lineage` groups them for "first Foundry availability".
+  - id: azure-openai
+    display_name: "Azure OpenAI Service"
+    owner: Microsoft
+    family: Microsoft Foundry
+    lineage: foundry
+    renamed_to: azure-ai-foundry
+    counts_as: [microsoft, foundry]
+  - id: azure-ai-catalog
+    display_name: "Azure AI model catalogue"
+    owner: Microsoft
+    family: Microsoft Foundry
+    lineage: foundry
+    renamed_to: azure-ai-foundry
+    note: "The Azure Machine Learning / Azure AI model catalogue that later became Foundry Models."
+    counts_as: [microsoft, foundry]
+  - id: azure-ai-studio
+    display_name: "Azure AI Studio"
+    owner: Microsoft
+    family: Microsoft Foundry
+    lineage: foundry
+    renamed_to: azure-ai-foundry
+    renamed_on: "2024-11-19"
+    counts_as: [microsoft, foundry]
+  - id: azure-ai-foundry
+    display_name: "Azure AI Foundry"
+    owner: Microsoft
+    family: Microsoft Foundry
+    lineage: foundry
+    renamed_from: azure-ai-studio
+    renamed_to: microsoft-foundry
+    counts_as: [microsoft, foundry]
+  - id: microsoft-foundry
+    display_name: "Microsoft Foundry"
+    owner: Microsoft
+    family: Microsoft Foundry
+    lineage: foundry
+    renamed_from: azure-ai-foundry
+    counts_as: [microsoft, foundry]
+
+  # ------------------------------------------------------------- corporate
+  - id: microsoft-corporate
+    display_name: "Microsoft"
+    owner: Microsoft
+    note: "Corporate/strategic surface for partnership and strategy milestones that are not availability on any product."
+    counts_as: []
+
+# Controlled experience vocabulary. An experience narrows a surface: a model
+# reaching Researcher is not the same as reaching the general model picker.
+# Events carry `experience_ids` as a list, because several announcements cover
+# more than one experience at once.
+experiences:
+  - id: copilot-chat
+    display_name: "Copilot Chat"
+    surface: m365-copilot
+  - id: researcher
+    display_name: "Researcher"
+    surface: m365-copilot
+  - id: analyst
+    display_name: "Analyst"
+    surface: m365-copilot
+  - id: cowork
+    display_name: "Cowork"
+    surface: m365-copilot
+  - id: word
+    display_name: "Word"
+    surface: m365-copilot
+  - id: excel
+    display_name: "Excel"
+    surface: m365-copilot
+  - id: powerpoint
+    display_name: "PowerPoint"
+    surface: m365-copilot
+  - id: quick-response
+    display_name: "Quick response"
+    surface: m365-copilot
+  - id: think-deeper
+    display_name: "Think deeper"
+    surface: m365-copilot
+  - id: code-completion
+    display_name: "Code completion"
+    surface: github-copilot
+  - id: conversation-booster
+    display_name: "Conversation booster"
+    surface: copilot-studio

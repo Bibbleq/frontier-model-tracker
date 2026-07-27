@@ -14,6 +14,10 @@ from jsonschema import Draft202012Validator
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "events.yaml"
 SCHEMA_PATH = ROOT / "schema" / "events.schema.json"
+MODELS_PATH = ROOT / "data" / "models.yaml"
+MODELS_SCHEMA_PATH = ROOT / "schema" / "models.schema.json"
+PLATFORMS_PATH = ROOT / "data" / "platforms.yaml"
+PLATFORMS_SCHEMA_PATH = ROOT / "schema" / "platforms.schema.json"
 OUTPUT_DIR = ROOT / "generated"
 
 DATE_PATTERNS = {
@@ -28,19 +32,57 @@ def fail(message: str) -> None:
     raise SystemExit(1)
 
 
-def load() -> dict:
-    with DATA_PATH.open("r", encoding="utf-8") as handle:
+def load_validated(data_path: Path, schema_path: Path) -> dict:
+    with data_path.open("r", encoding="utf-8") as handle:
         data = yaml.safe_load(handle)
-    with SCHEMA_PATH.open("r", encoding="utf-8") as handle:
+    with schema_path.open("r", encoding="utf-8") as handle:
         schema = json.load(handle)
 
     errors = sorted(Draft202012Validator(schema).iter_errors(data), key=lambda error: list(error.path))
     if errors:
         for error in errors:
             location = ".".join(str(part) for part in error.absolute_path) or "root"
-            print(f"SCHEMA {location}: {error.message}", file=sys.stderr)
+            print(f"SCHEMA {data_path.name} {location}: {error.message}", file=sys.stderr)
         raise SystemExit(1)
     return data
+
+
+def load() -> dict:
+    return load_validated(DATA_PATH, SCHEMA_PATH)
+
+
+def validate_registries() -> tuple[dict, dict]:
+    """Load and internally check the model and surface registries."""
+    models = load_validated(MODELS_PATH, MODELS_SCHEMA_PATH)
+    platforms = load_validated(PLATFORMS_PATH, PLATFORMS_SCHEMA_PATH)
+
+    model_ids = [entry["id"] for entry in models["models"]]
+    if len(model_ids) != len(set(model_ids)):
+        fail("duplicate model id in models.yaml")
+    family_ids = {entry["id"] for entry in models["families"]}
+    known_models = set(model_ids)
+    for entry in models["models"]:
+        if entry.get("family") and entry["family"] not in family_ids:
+            fail(f"{entry['id']}: unknown family {entry['family']}")
+        for link in ("supersedes", "superseded_by"):
+            if entry.get(link) and entry[link] not in known_models:
+                fail(f"{entry['id']}: {link} points at unknown model {entry[link]}")
+
+    surface_ids = [entry["id"] for entry in platforms["surfaces"]]
+    if len(surface_ids) != len(set(surface_ids)):
+        fail("duplicate surface id in platforms.yaml")
+    known_surfaces = set(surface_ids)
+    for entry in platforms["surfaces"]:
+        for link in ("renamed_from", "renamed_to"):
+            if entry.get(link) and entry[link] not in known_surfaces:
+                fail(f"{entry['id']}: {link} points at unknown surface {entry[link]}")
+        if entry.get("vendor_baseline") and entry["counts_as"]:
+            fail(f"{entry['id']}: a vendor baseline surface must not declare counts_as tiers")
+    for entry in platforms["experiences"]:
+        if entry["surface"] not in known_surfaces:
+            fail(f"{entry['id']}: experience on unknown surface {entry['surface']}")
+
+    return models, platforms
 
 
 def validate_semantics(data: dict) -> None:
@@ -132,10 +174,12 @@ def write_outputs(data: dict) -> None:
 
 
 if __name__ == "__main__":
+    models, platforms = validate_registries()
     dataset = load()
     validate_semantics(dataset)
     write_outputs(dataset)
     print(
-        f"Validated {len(dataset['events'])} canonical events and "
+        f"Validated {len(models['models'])} models and {len(platforms['surfaces'])} surfaces; "
+        f"{len(dataset['events'])} canonical events and "
         f"{len(dataset['validation_backlog'])} validation items; regenerated outputs."
     )
