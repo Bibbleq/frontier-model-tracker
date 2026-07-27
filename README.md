@@ -14,7 +14,7 @@ The aim is to distinguish *what happened* from *how it was exposed*: underlying 
 
 ## Project status
 
-The structured dataset is the source of truth. It currently contains **144 canonical events** spanning 2020 to 26 July 2026, plus **36 validation targets** that are deliberately excluded from firm timeline claims until better evidence is found. Presentation layers such as the 365Explained web timeline consume generated representations of that data.
+The structured dataset is the source of truth. It currently contains **148 canonical events** spanning June 2020 to July 2026, plus **34 validation targets** that are deliberately excluded from firm timeline claims until better evidence is found. Research is current to 27 July 2026. Presentation layers such as the 365Explained web timeline consume generated representations of that data.
 
 Treat the dataset as a sourced research project rather than official product documentation.
 

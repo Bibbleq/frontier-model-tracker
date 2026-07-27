@@ -76,14 +76,14 @@ def validate_semantics(data: dict) -> None:
         fail("events must be sorted by date and id")
 
 
-def source_urls(event: dict) -> str:
-    return " || ".join(source["url"] for source in event["sources"])
+def source_urls(record: dict) -> str:
+    return " || ".join(source["url"] for source in record.get("sources", []))
 
 
 def write_outputs(data: dict) -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    with (OUTPUT_DIR / "events.json").open("w", encoding="utf-8") as handle:
+    with (OUTPUT_DIR / "events.json").open("w", encoding="utf-8", newline="\n") as handle:
         json.dump(data, handle, indent=2, ensure_ascii=False)
         handle.write("\n")
 
@@ -117,11 +117,18 @@ def write_outputs(data: dict) -> None:
                 "sources": source_urls(event),
             })
 
-    backlog_fields = ["id", "working_claim", "reason", "target"]
+    backlog_fields = ["id", "working_claim", "reason", "target", "sources"]
     with (OUTPUT_DIR / "validation-backlog.csv").open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=backlog_fields, lineterminator="\n")
         writer.writeheader()
-        writer.writerows(data["validation_backlog"])
+        for item in data["validation_backlog"]:
+            writer.writerow({
+                "id": item["id"],
+                "working_claim": item["working_claim"],
+                "reason": item["reason"],
+                "target": item["target"],
+                "sources": source_urls(item),
+            })
 
 
 if __name__ == "__main__":
