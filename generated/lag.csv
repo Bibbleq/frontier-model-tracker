@@ -683,7 +683,7 @@ mistral-large-3,Mistral Large 3,Mistral AI,github_copilot,any_exposure,mistral3-
 mistral-large-3,Mistral Large 3,Mistral AI,github_copilot,selectable_or_default,mistral3-2025-12-02,2025-12-02,ga,,,,,,,,not_recorded
 mistral-large-3,Mistral Large 3,Mistral AI,foundry,any_exposure,mistral3-2025-12-02,2025-12-02,ga,foundry-mistral-large3-2025-12-02,2025-12-02,microsoft-foundry,catalogue,ga,0,0,exact
 mistral-large-3,Mistral Large 3,Mistral AI,foundry,selectable_or_default,mistral3-2025-12-02,2025-12-02,ga,,,,,,,,not_recorded
-o1,o1,OpenAI,microsoft,any_exposure,openai-o1-full-2024-12-17,2024-12-17,ga,github-o1-full-preview-2024-12-20,2024-12-20,github-copilot,selectable,public_preview,3,3,exact
+o1,o1,OpenAI,microsoft,any_exposure,openai-o1-full-2024-12-17,2024-12-17,ga,github-models-o1-2024-12-20,2024-12-20,github-models,catalogue,public_preview,3,3,exact
 o1,o1,OpenAI,microsoft,selectable_or_default,openai-o1-full-2024-12-17,2024-12-17,ga,github-o1-full-preview-2024-12-20,2024-12-20,github-copilot,selectable,public_preview,3,3,exact
 o1,o1,OpenAI,copilot,any_exposure,openai-o1-full-2024-12-17,2024-12-17,ga,github-o1-full-preview-2024-12-20,2024-12-20,github-copilot,selectable,public_preview,3,3,exact
 o1,o1,OpenAI,copilot,selectable_or_default,openai-o1-full-2024-12-17,2024-12-17,ga,github-o1-full-preview-2024-12-20,2024-12-20,github-copilot,selectable,public_preview,3,3,exact
