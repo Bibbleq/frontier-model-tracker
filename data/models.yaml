@@ -202,6 +202,10 @@ models:
   - id: gemini-1-5-pro
     display_name: "Gemini 1.5 Pro"
     vendor: Google
+  - id: gemini-2-5-pro
+    display_name: "Gemini 2.5 Pro"
+    vendor: Google
+    note: "Referenced only by an open validation-backlog item; no canonical event yet."
   - id: gemini-3-6-flash
     display_name: "Gemini 3.6 Flash"
     vendor: Google
@@ -228,6 +232,10 @@ models:
   - id: deepseek-r1
     display_name: "DeepSeek-R1"
     vendor: DeepSeek
+  - id: deepseek-v3
+    display_name: "DeepSeek-V3"
+    vendor: DeepSeek
+    note: "Referenced only by open validation-backlog items; no canonical event yet. Distinct from DeepSeek V3.2."
   - id: deepseek-v3-2
     display_name: "DeepSeek V3.2"
     vendor: DeepSeek

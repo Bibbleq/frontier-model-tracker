@@ -430,7 +430,7 @@ def emit_event(event: dict, out: list[str]) -> None:
 
 
 BACKLOG_ORDER = [
-    "id", "state", "working_claim", "reason", "target", "model_ids", "surface_id",
+    "id", "state", "working_claim", "reason", "target", "model_ids", "surface_ids",
     "resolution", "resolved_on", "promoted_to", "sources",
 ]
 
@@ -443,7 +443,7 @@ def emit_backlog(item: dict, out: list[str]) -> None:
         lead = "  - " if first else "    "
         first = False
         value = item[key]
-        if key == "model_ids":
+        if key in ("model_ids", "surface_ids"):
             out.append(f"{lead}{key}: [{', '.join(q(v) for v in value)}]")
         elif key == "sources":
             out.append(f"{lead}sources:")

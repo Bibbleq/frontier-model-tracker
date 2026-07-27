@@ -4163,61 +4163,66 @@
   ],
   "validation_backlog": [
     {
-      "id": "github-gemini-1-5-pro-first-availability-2024",
-      "state": "open",
-      "working_claim": "Gemini 1.5 Pro became selectable in GitHub Copilot some time after the 29 October 2024 GitHub Universe multi-model announcement.",
-      "reason": "The only record is the Universe keynote, which announced multi-model choice rather than dating each model's arrival. Reclassifying it as an announcement leaves this model with no GitHub Copilot availability date.",
-      "target": "Find the dated GitHub changelog entry for Gemini 1.5 Pro reaching the Copilot model picker.",
-      "model_ids": [
-        "gemini-1-5-pro"
-      ],
-      "surface_id": "github-copilot"
-    },
-    {
-      "id": "m365-researcher-first-availability-2025",
-      "state": "open",
-      "working_claim": "Researcher reached general availability in Microsoft 365 Copilot on 2 June 2025, alongside Analyst.",
-      "reason": "The 25 March 2025 record is an announcement, and the 2 June GA evidence note covers Researcher but the event itself is scoped to Analyst and o3-mini. Researcher has no availability event of its own.",
-      "target": "Split a dedicated Researcher availability event once the model attribution and date are separately sourced.",
-      "model_ids": [
-        "openai-deep-research"
-      ],
-      "surface_id": "m365-copilot"
-    },
-    {
       "id": "azure-chatgpt-preview-2023-03-09",
       "state": "open",
       "working_claim": "ChatGPT/GPT-3.5 generation reached Azure OpenAI preview on 9 March 2023.",
       "reason": "Present in the editorial master backlog but absent from the sourced canonical pack.",
-      "target": "Pin the dated Microsoft Azure announcement and confirm model naming."
+      "target": "Pin the dated Microsoft Azure announcement and confirm model naming.",
+      "model_ids": [
+        "gpt-3-5"
+      ],
+      "surface_ids": [
+        "azure-openai"
+      ]
     },
     {
       "id": "azure-gpt4-turbo-first-availability-2023",
       "state": "open",
       "working_claim": "GPT-4 Turbo became available in Azure OpenAI after the November 2023 vendor release.",
       "reason": "The exact first Azure availability date was not preserved in the sourced pack.",
-      "target": "Locate a dated Azure model-release or deployment announcement."
+      "target": "Locate a dated Azure model-release or deployment announcement.",
+      "model_ids": [
+        "gpt-4-turbo"
+      ],
+      "surface_ids": [
+        "azure-openai"
+      ]
     },
     {
       "id": "deepseek-r1-vendor-2025-01-20",
       "state": "open",
       "working_claim": "DeepSeek-R1 released 20 January 2025.",
       "reason": "Microsoft's 29 January landing is confirmed; the vendor release row still needs a durable first-party citation.",
-      "target": "Pin the official DeepSeek-R1 release source."
+      "target": "Pin the official DeepSeek-R1 release source.",
+      "model_ids": [
+        "deepseek-r1"
+      ],
+      "surface_ids": [
+        "deepseek"
+      ]
     },
     {
       "id": "deepseek-v3-first-microsoft-availability-2024",
       "state": "open",
       "working_claim": "DeepSeek-V3 later entered a Microsoft developer catalogue.",
       "reason": "The vendor date is queued separately, but first Microsoft availability is not represented.",
-      "target": "Locate the first dated Foundry or GitHub Models record."
+      "target": "Locate the first dated Foundry or GitHub Models record.",
+      "model_ids": [
+        "deepseek-v3"
+      ]
     },
     {
       "id": "deepseek-v3-vendor-2024-12-26",
       "state": "open",
       "working_claim": "DeepSeek-V3 released 26 December 2024.",
       "reason": "Discussed in research but not promoted without a durable primary release source.",
-      "target": "Use a DeepSeek official release/repository announcement with explicit date."
+      "target": "Use a DeepSeek official release/repository announcement with explicit date.",
+      "model_ids": [
+        "deepseek-v3"
+      ],
+      "surface_ids": [
+        "deepseek"
+      ]
     },
     {
       "id": "foundry-fable5-restoration-2026",
@@ -4225,6 +4230,12 @@
       "working_claim": "Fable 5 availability in Microsoft Foundry was restored at some point after the export controls were lifted on 30 June 2026.",
       "reason": "The 12 June suspension is now recorded canonically at 'supported' confidence, but no restoration date is established for Foundry. CNBC reported on 30 June 2026 that Anthropic would re-enable Fable 5 on Amazon Web Services, Google Cloud and Microsoft Foundry 'as soon as possible', which is an announcement of future availability rather than a first-availability date. Microsoft Learn currently lists claude-fable-5 as an available Anthropic-hosted preview, proving the end state but not the date.",
       "target": "Locate a dated Microsoft Foundry re-enablement record, or a Learn page revision, that pins when Fable 5 returned to the Foundry catalogue.",
+      "model_ids": [
+        "claude-fable-5"
+      ],
+      "surface_ids": [
+        "microsoft-foundry"
+      ],
       "sources": [
         {
           "publisher": "CNBC",
@@ -4246,200 +4257,433 @@
       ]
     },
     {
+      "id": "foundry-fable5-suspension-2026",
+      "state": "promoted",
+      "working_claim": "Fable 5 availability in Microsoft Foundry was suspended alongside the vendor-level action on 12 June 2026.",
+      "reason": "Anthropic's directive statement is global and does not name Foundry, so Microsoft-side evidence was required before recording a Foundry state change.",
+      "target": "Locate dated Microsoft Foundry suspension evidence.",
+      "model_ids": [
+        "claude-fable-5"
+      ],
+      "surface_ids": [
+        "microsoft-foundry"
+      ],
+      "resolution": "CNBC's report that Anthropic would re-enable Fable 5 'on Amazon Web Services, Google Cloud and Microsoft Foundry' establishes retrospectively that Foundry distribution had been suspended. Promoted at 'supported' confidence because no Microsoft-issued notice exists. The restoration half remains open as foundry-fable5-restoration-2026.",
+      "resolved_on": "2026-07-27",
+      "promoted_to": "foundry-fable5-suspension-2026-06-12"
+    },
+    {
       "id": "foundry-gpt5-5-first-availability-2026-04-24",
       "state": "open",
       "working_claim": "GPT-5.5 entered Microsoft Foundry around 24 April 2026.",
       "reason": "The sourced pack contains vendor, GitHub, M365 and Studio events but no Foundry record.",
-      "target": "Pin the Microsoft model announcement or catalogue release note."
+      "target": "Pin the Microsoft model announcement or catalogue release note.",
+      "model_ids": [
+        "gpt-5-5"
+      ],
+      "surface_ids": [
+        "microsoft-foundry"
+      ]
     },
     {
       "id": "foundry-kimi-k2-7-first-availability-2026-07",
       "state": "open",
       "working_claim": "Kimi K2.7 variants appeared in Microsoft Foundry in early July 2026.",
       "reason": "Current catalogue presence does not prove first availability.",
-      "target": "Locate a dated Foundry announcement for each Kimi variant."
+      "target": "Locate a dated Foundry announcement for each Kimi variant.",
+      "model_ids": [
+        "kimi-k2-7-code"
+      ],
+      "surface_ids": [
+        "microsoft-foundry"
+      ]
     },
     {
       "id": "foundry-o3-o4-mini-2025-04-16",
       "state": "open",
       "working_claim": "o3 and o4-mini reached Microsoft Foundry around the 16 April 2025 vendor release.",
       "reason": "The sourced pack confirms GitHub but does not include a Foundry event.",
-      "target": "Pin a dated Microsoft Foundry announcement for each model."
+      "target": "Pin a dated Microsoft Foundry announcement for each model.",
+      "model_ids": [
+        "o3",
+        "o4-mini"
+      ],
+      "surface_ids": [
+        "azure-ai-foundry"
+      ]
     },
     {
       "id": "foundry-opus4-5-first-availability-2025-11-24",
       "state": "open",
       "working_claim": "Claude Opus 4.5 entered Microsoft Foundry public preview around vendor launch.",
       "reason": "The sourced pack contains vendor and Studio events but no Foundry event.",
-      "target": "Locate the dated Foundry model announcement."
+      "target": "Locate the dated Foundry model announcement.",
+      "model_ids": [
+        "claude-opus-4-5"
+      ],
+      "surface_ids": [
+        "microsoft-foundry"
+      ]
+    },
+    {
+      "id": "foundry-sonnet5-2026-06-30",
+      "state": "promoted",
+      "working_claim": "Claude Sonnet 5 was available through Foundry around its 30 June release.",
+      "reason": "Likely after Claude Foundry GA on 29 June, but current catalogue presence did not prove the first date.",
+      "target": "Locate a dated Microsoft Foundry Sonnet 5 release record.",
+      "model_ids": [
+        "claude-sonnet-5"
+      ],
+      "surface_ids": [
+        "microsoft-foundry"
+      ],
+      "resolution": "Microsoft's Foundry announcement carries a 30 June 2026 publication date and opens by referring back to the 29 June Claude GA post, which pins the date.",
+      "resolved_on": "2026-07-27",
+      "promoted_to": "foundry-sonnet5-ga-2026-06-30"
     },
     {
       "id": "gemini1-5-pro-public-preview-ga-2024",
       "state": "open",
       "working_claim": "Gemini 1.5 Pro had broader public-preview/GA milestones after its 15 February 2024 limited preview.",
       "reason": "This pass verified the initial private/limited preview, not the later exact public-preview and GA dates.",
-      "target": "Add separate Google primary-source events for public preview and GA before using those dates in lag calculations."
+      "target": "Add separate Google primary-source events for public preview and GA before using those dates in lag calculations.",
+      "model_ids": [
+        "gemini-1-5-pro"
+      ],
+      "surface_ids": [
+        "google-gemini"
+      ]
     },
     {
       "id": "github-copilot-chat-gpt3-5-start-2023",
       "state": "open",
       "working_claim": "GitHub Copilot Chat initially used GPT-3.5.",
       "reason": "Later GitHub history supports the lineage, but the exact first-production date is not pinned.",
-      "target": "Find the original Copilot Chat launch/changelog explicitly naming GPT-3.5."
+      "target": "Find the original Copilot Chat launch/changelog explicitly naming GPT-3.5.",
+      "model_ids": [
+        "gpt-3-5"
+      ],
+      "surface_ids": [
+        "github-copilot"
+      ]
     },
     {
       "id": "github-copilot-chat-gpt4-transition-2023-11",
       "state": "open",
       "working_claim": "Copilot Chat moved from GPT-3.5 to GPT-4 in late November 2023.",
       "reason": "Exact production date remains unverified.",
-      "target": "Find the original GitHub changelog or archived docs for the GPT-4 transition."
+      "target": "Find the original GitHub changelog or archived docs for the GPT-4 transition.",
+      "model_ids": [
+        "gpt-4"
+      ],
+      "surface_ids": [
+        "github-copilot"
+      ]
     },
     {
       "id": "github-foundry-opus4-7-2026-04-16",
       "state": "open",
       "working_claim": "Claude Opus 4.7 landed on GitHub Copilot and Microsoft Foundry at or around vendor launch.",
       "reason": "M365 and Studio launch-day scope is sourced; separate GitHub/Foundry first-day records still need their own primary URLs.",
-      "target": "Find the GitHub changelog and Foundry model announcement."
+      "target": "Find the GitHub changelog and Foundry model announcement.",
+      "model_ids": [
+        "claude-opus-4-7"
+      ],
+      "surface_ids": [
+        "github-copilot",
+        "microsoft-foundry"
+      ]
     },
     {
       "id": "github-gemini1-5-pro-first-picker-date-2024",
       "state": "open",
       "working_claim": "Gemini 1.5 Pro became selectable in GitHub Copilot after the 29 October 2024 multi-model announcement.",
-      "reason": "The announcement says Gemini was coming; the exact first picker date remains unresolved.",
-      "target": "Find the GitHub changelog for first selectable Gemini 1.5 Pro availability."
+      "reason": "The announcement says Gemini was coming; the exact first picker date remains unresolved. The 29 October 2024 GitHub Universe keynote is recorded as an announcement rather than availability, because treating it as availability placed a GA before a later public preview on the same surface. That leaves Gemini 1.5 Pro with no GitHub Copilot availability date at all.",
+      "target": "Find the GitHub changelog for first selectable Gemini 1.5 Pro availability.",
+      "model_ids": [
+        "gemini-1-5-pro"
+      ],
+      "surface_ids": [
+        "github-copilot"
+      ]
     },
     {
       "id": "github-gpt4-1-first-availability-2025",
       "state": "open",
       "working_claim": "GPT-4.1 entered the GitHub ecosystem around its 14 April 2025 release.",
       "reason": "GitHub Copilot and GitHub Models must be sourced independently.",
-      "target": "Locate product-specific GitHub changelog records."
+      "target": "Locate product-specific GitHub changelog records.",
+      "model_ids": [
+        "gpt-4-1"
+      ],
+      "surface_ids": [
+        "github-copilot",
+        "github-models"
+      ]
     },
     {
       "id": "github-o3-mini-claude3-7-ga-2025-04-04",
       "state": "open",
       "working_claim": "o3-mini and Claude 3.7 Sonnet reached GitHub Copilot GA on 4 April 2025.",
       "reason": "Discussed and likely correct, but the exact original changelog URLs were not pinned during this pass.",
-      "target": "Add separate model GA events from GitHub changelog."
+      "target": "Add separate model GA events from GitHub changelog.",
+      "model_ids": [
+        "o3-mini",
+        "claude-3-7-sonnet"
+      ],
+      "surface_ids": [
+        "github-copilot"
+      ]
     },
     {
       "id": "github-opus4-5-preview-ga-2025",
       "state": "open",
       "working_claim": "Claude Opus 4.5 entered GitHub paid-plan preview on 24 November 2025 and GA on 18 December 2025.",
       "reason": "Discussed earlier; exact GitHub changelog URLs still need pinning.",
-      "target": "Create preview and GA records separately after verification."
+      "target": "Create preview and GA records separately after verification.",
+      "model_ids": [
+        "claude-opus-4-5"
+      ],
+      "surface_ids": [
+        "github-copilot"
+      ]
     },
     {
       "id": "google-gemini2-5-pro-github-2025-04-11",
       "state": "open",
       "working_claim": "Gemini 2.5 Pro entered GitHub Copilot public preview on 11 April 2025.",
       "reason": "Discussed earlier, but source URLs were not pinned in this pass.",
-      "target": "Verify the Google vendor release and GitHub preview dates independently."
+      "target": "Verify the Google vendor release and GitHub preview dates independently.",
+      "model_ids": [
+        "gemini-2-5-pro"
+      ],
+      "surface_ids": [
+        "github-copilot"
+      ]
     },
     {
       "id": "gpt5-6-copilot-studio-2026",
       "state": "open",
       "working_claim": "No reliable Copilot Studio GPT-5.6 availability event found as of 26 July 2026.",
       "reason": "M365, GitHub and Foundry are confirmed on 9 July; Studio must not be inferred.",
-      "target": "Leave absent/NF until Microsoft publishes a Studio event."
+      "target": "Leave absent/NF until Microsoft publishes a Studio event.",
+      "model_ids": [
+        "gpt-5-6-sol",
+        "gpt-5-6-terra",
+        "gpt-5-6-luna"
+      ],
+      "surface_ids": [
+        "copilot-studio"
+      ]
     },
     {
       "id": "kimi-k2-7-vendor-release-2026",
       "state": "open",
       "working_claim": "Kimi K2.7/K2.7 Code was newly released around the start of July 2026.",
       "reason": "GitHub's 1 July Copilot event is confirmed; Moonshot's vendor release date remains unresolved.",
-      "target": "Pin a Moonshot AI primary launch source."
+      "target": "Pin a Moonshot AI primary launch source.",
+      "model_ids": [
+        "kimi-k2-7-code"
+      ],
+      "surface_ids": [
+        "moonshot"
+      ]
+    },
+    {
+      "id": "m365-anthropic-eu-setting-2026-04",
+      "state": "promoted",
+      "working_claim": "A new EU/EFTA/UK Anthropic admin setting arrived around early April 2026.",
+      "reason": "Current Microsoft Learn documentation proved the setting and the 1 May transition, but the 3 April date was not revalidated at import time.",
+      "target": "Use Microsoft Learn page history or Message Center evidence to establish the exact date.",
+      "model_ids": [],
+      "surface_ids": [
+        "m365-admin"
+      ],
+      "resolution": "Microsoft Learn states the date verbatim: 'On April 3, 2026, Microsoft introduced a new Microsoft 365 admin center setting Copilot in M365 apps with Anthropic models in EU/EFTA and UK.'",
+      "resolved_on": "2026-07-27",
+      "promoted_to": "m365-anthropic-eu-apps-setting-2026-04-03"
     },
     {
       "id": "m365-gpt5-1-first-availability-2025",
       "state": "open",
       "working_claim": "GPT-5.1 existed in the Microsoft ecosystem, but a general M365 Copilot first-availability date is unknown.",
       "reason": "Later migration/upgrade references do not prove core M365 launch.",
-      "target": "Only add if Microsoft published a specific M365 Copilot launch or rollout."
+      "target": "Only add if Microsoft published a specific M365 Copilot launch or rollout.",
+      "model_ids": [
+        "gpt-5-1"
+      ],
+      "surface_ids": [
+        "m365-copilot"
+      ]
     },
     {
       "id": "m365-o1-first-availability-2024",
       "state": "open",
       "working_claim": "o1 was announced as coming to Microsoft 365 Copilot in September 2024, but later concrete availability remains unresolved.",
       "reason": "An announcement of future support is not an availability event.",
-      "target": "Find a dated Microsoft source proving actual M365 use or selectable availability."
+      "target": "Find a dated Microsoft source proving actual M365 use or selectable availability.",
+      "model_ids": [
+        "o1"
+      ],
+      "surface_ids": [
+        "m365-copilot"
+      ]
     },
     {
       "id": "m365-opus4-7-core-chat-picker-2026-05",
       "state": "open",
       "working_claim": "Opus 4.7 later reached the broader Microsoft 365 Copilot Chat picker around May 2026.",
       "reason": "16 April only proves Cowork Frontier plus Excel rollout.",
-      "target": "Find the exact Copilot Chat picker rollout date."
+      "target": "Find the exact Copilot Chat picker rollout date.",
+      "model_ids": [
+        "claude-opus-4-7"
+      ],
+      "surface_ids": [
+        "m365-copilot"
+      ]
+    },
+    {
+      "id": "m365-researcher-first-availability-2025",
+      "state": "open",
+      "working_claim": "Researcher reached general availability in Microsoft 365 Copilot on 2 June 2025, alongside Analyst.",
+      "reason": "The 25 March 2025 record is an announcement, and the 2 June GA evidence note covers Researcher but the event itself is scoped to Analyst and o3-mini. Researcher has no availability event of its own.",
+      "target": "Split a dedicated Researcher availability event once the model attribution and date are separately sourced.",
+      "model_ids": [
+        "openai-deep-research"
+      ],
+      "surface_ids": [
+        "m365-copilot"
+      ]
     },
     {
       "id": "meta-cohere-flux-mai-foundry-history",
       "state": "open",
       "working_claim": "Meta Llama 3.x, Cohere, FLUX and Microsoft MAI have catalogue milestones worth tracking.",
       "reason": "These broader catalogue candidates remain outside the current sourced pack.",
-      "target": "Add only material frontier/significant events with dated primary Foundry sources."
+      "target": "Add only material frontier/significant events with dated primary Foundry sources.",
+      "model_ids": [],
+      "surface_ids": [
+        "microsoft-foundry"
+      ]
     },
     {
       "id": "microsoft-foundry-branding-2025-11-18",
       "state": "open",
       "working_claim": "Azure AI Foundry evolved into Microsoft Foundry branding on 18 November 2025.",
       "reason": "The editorial backlog includes the milestone but the sourced pack only captures Anthropic catalogue entry.",
-      "target": "Pin the Microsoft platform announcement."
+      "target": "Pin the Microsoft platform announcement.",
+      "model_ids": [],
+      "surface_ids": [
+        "microsoft-foundry"
+      ]
     },
     {
       "id": "openai-codex-public-release-2021-08-10",
       "state": "open",
       "working_claim": "OpenAI publicly introduced/released Codex on 10 August 2021.",
       "reason": "Useful contrast with GitHub Copilot's 29 June preview, but a durable first-party OpenAI launch URL was not pinned during this pass.",
-      "target": "Locate an archived/first-party OpenAI Codex launch announcement and verify the date convention."
+      "target": "Locate an archived/first-party OpenAI Codex launch announcement and verify the date convention.",
+      "model_ids": [
+        "codex"
+      ],
+      "surface_ids": [
+        "openai"
+      ]
     },
     {
       "id": "openai-gpt5-1-vendor-2025-11",
       "state": "open",
       "working_claim": "GPT-5.1 had a product release on 12 November 2025 and API release around 13 November.",
       "reason": "The sourced pack contains Studio availability but no vendor release event.",
-      "target": "Pin the OpenAI first-party release source and date convention."
+      "target": "Pin the OpenAI first-party release source and date convention.",
+      "model_ids": [
+        "gpt-5-1"
+      ],
+      "surface_ids": [
+        "openai",
+        "openai-api"
+      ]
     },
     {
       "id": "openai-o3-o4mini-vendor-2025-04-16",
       "state": "open",
       "working_claim": "OpenAI released o3 and o4-mini on 16 April 2025.",
       "reason": "GitHub's same-day preview event is sourced; the vendor row should use an OpenAI first-party launch source.",
-      "target": "Pin the OpenAI o3/o4-mini launch announcement."
+      "target": "Pin the OpenAI o3/o4-mini launch announcement.",
+      "model_ids": [
+        "o3",
+        "o4-mini"
+      ],
+      "surface_ids": [
+        "openai"
+      ]
     },
     {
       "id": "opus5-m365-studio-2026-07-24",
       "state": "open",
       "working_claim": "Opus 5 is confirmed in GitHub Copilot and Microsoft Foundry on 24 July; Microsoft 365 Copilot and Copilot Studio first availability are not independently sourced.",
       "reason": "Cross-platform assumptions must not become day-zero records. The Foundry leg was resolved on 27 July 2026 by Microsoft's same-day Foundry announcement; no Microsoft 365 or Copilot Studio announcement has been located.",
-      "target": "Find separate Microsoft 365 Copilot and Copilot Studio primary announcements, or keep those surfaces N/F."
+      "target": "Find separate Microsoft 365 Copilot and Copilot Studio primary announcements, or keep those surfaces N/F.",
+      "model_ids": [
+        "claude-opus-5"
+      ],
+      "surface_ids": [
+        "m365-copilot",
+        "copilot-studio"
+      ]
     },
     {
       "id": "studio-gpt4-1-first-availability-2025",
       "state": "open",
       "working_claim": "GPT-4.1 became available in Copilot Studio before becoming the default in late October 2025.",
       "reason": "Current/later documentation establishes support and default status but not the initial release day.",
-      "target": "Find the first Studio GPT-4.1 announcement."
+      "target": "Find the first Studio GPT-4.1 announcement.",
+      "model_ids": [
+        "gpt-4-1"
+      ],
+      "surface_ids": [
+        "copilot-studio"
+      ]
     },
     {
       "id": "studio-gpt4o-default-2024-09",
       "state": "open",
       "working_claim": "Copilot Studio moved from GPT-3.5 Turbo to GPT-4o as its default around September 2024.",
       "reason": "The lineage is supported by later Microsoft documentation, but the first default date is not pinned to a dated primary announcement.",
-      "target": "Locate the Copilot Studio release-plan/changelog entry for GPT-4o default."
+      "target": "Locate the Copilot Studio release-plan/changelog entry for GPT-4o default.",
+      "model_ids": [
+        "gpt-4o"
+      ],
+      "surface_ids": [
+        "copilot-studio"
+      ]
     },
     {
       "id": "studio-sonnet5-first-date-2026",
       "state": "open",
       "working_claim": "Copilot Studio supports Claude Sonnet 5 in supported regions/new agent experience.",
       "reason": "Current support is known, but initial rollout versus later GA date is not pinned.",
-      "target": "Find a dated Studio release note or announcement."
+      "target": "Find a dated Studio release note or announcement.",
+      "model_ids": [
+        "claude-sonnet-5"
+      ],
+      "surface_ids": [
+        "copilot-studio"
+      ]
     },
     {
       "id": "xai-github-copilot-picker",
       "state": "open",
       "working_claim": "No reliable evidence yet that xAI/Grok models entered the GitHub Copilot picker.",
       "reason": "Foundry catalogue availability is not GitHub Copilot availability.",
-      "target": "Only add if a GitHub Copilot changelog/model-picker source exists."
+      "target": "Only add if a GitHub Copilot changelog/model-picker source exists.",
+      "model_ids": [
+        "grok-3",
+        "grok-4"
+      ],
+      "surface_ids": [
+        "github-copilot"
+      ]
     }
   ]
 }

@@ -241,7 +241,12 @@
           "uniqueItems": true,
           "items": {"$ref": "#/$defs/identifier"}
         },
-        "surface_id": {"$ref": "#/$defs/identifier"},
+        "surface_ids": {
+          "comment": "A research question may span several surfaces. Naming them lets the lag builder suppress an answer on exactly the affected tiers rather than reporting the gap as absence.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/identifier"}
+        },
         "resolution": {"type": "string", "minLength": 1},
         "resolved_on": {"$ref": "#/$defs/day"},
         "promoted_to": {"$ref": "#/$defs/identifier"},

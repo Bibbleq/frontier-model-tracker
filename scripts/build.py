@@ -206,6 +206,18 @@ def validate_semantics(data: dict, models: dict, platforms: dict) -> None:
             if types == {"documentation"}:
                 warn(f"{eid}: 'confirmed' rests only on current documentation, which rarely proves a historical first date")
 
+    for item in data["validation_backlog"]:
+        for model_id in item.get("model_ids", []):
+            if model_id not in known_models:
+                fail(f"{item['id']}: backlog names unknown model {model_id}")
+        for surface_id in item.get("surface_ids", []):
+            if surface_id not in known_surfaces:
+                fail(f"{item['id']}: backlog names unknown surface {surface_id}")
+        if item.get("promoted_to") and item["promoted_to"] not in known_events:
+            fail(f"{item['id']}: promoted_to points at unknown event {item['promoted_to']}")
+        if item["state"] == "open" and not item.get("surface_ids"):
+            warn(f"{item['id']}: open item names no surface, so it cannot suppress a lag answer")
+
     # Ordering and cross-event coherence.
     sorted_ids = [e["id"] for e in sorted(events, key=lambda i: (i["date"]["start"], i["id"]))]
     if event_ids != sorted_ids:
@@ -344,12 +356,10 @@ def derive_lag(data: dict, models: dict, platforms: dict) -> list[dict]:
     for item in data["validation_backlog"]:
         if item["state"] not in ("open", "blocked"):
             continue
-        surface = surfaces.get(item.get("surface_id", ""))
-        if not surface:
-            continue
-        for model_id in item.get("model_ids", []):
-            for tier in surface["counts_as"]:
-                open_questions.add((model_id, tier))
+        for surface_id in item.get("surface_ids", []):
+            for model_id in item.get("model_ids", []):
+                for tier in surfaces[surface_id]["counts_as"]:
+                    open_questions.add((model_id, tier))
 
     baseline: dict[str, dict] = {}
     for event in events:
@@ -469,7 +479,10 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
         writer.writeheader()
         writer.writerows(derive_lag(data, models, platforms))
 
-    backlog_fields = ["id", "state", "working_claim", "reason", "target", "resolution", "sources"]
+    backlog_fields = [
+        "id", "state", "model_ids", "models", "surface_ids", "working_claim",
+        "reason", "target", "resolution", "resolved_on", "promoted_to", "sources",
+    ]
     with (OUTPUT_DIR / "validation-backlog.csv").open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=backlog_fields, lineterminator="\n")
         writer.writeheader()
@@ -477,10 +490,15 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
             writer.writerow({
                 "id": item["id"],
                 "state": item["state"],
+                "model_ids": " | ".join(item.get("model_ids", [])),
+                "models": " | ".join(model_names[m] for m in item.get("model_ids", [])),
+                "surface_ids": " | ".join(item.get("surface_ids", [])),
                 "working_claim": item["working_claim"],
                 "reason": item["reason"],
                 "target": item["target"],
                 "resolution": item.get("resolution", ""),
+                "resolved_on": item.get("resolved_on", ""),
+                "promoted_to": item.get("promoted_to", ""),
                 "sources": source_urls(item),
             })
 

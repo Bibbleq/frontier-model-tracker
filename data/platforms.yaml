@@ -63,6 +63,21 @@ surfaces:
     owner: xAI
     vendor_baseline: true
     counts_as: []
+  - id: deepseek
+    display_name: "DeepSeek"
+    owner: DeepSeek
+    vendor_baseline: true
+    counts_as: []
+  - id: meta
+    display_name: "Meta"
+    owner: Meta
+    vendor_baseline: true
+    counts_as: []
+  - id: moonshot
+    display_name: "Moonshot AI"
+    owner: Moonshot AI
+    vendor_baseline: true
+    counts_as: []
 
   # ----------------------------------------------------------- microsoft 365
   - id: m365-copilot
