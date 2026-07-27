@@ -11,6 +11,7 @@ on:
       - "data/**"
       - "schema/**"
       - "scripts/**"
+      - "requirements.txt"
       - "generated/**"
       - "web/**"
       - ".github/workflows/publish-pages.yml"
@@ -40,7 +41,10 @@ jobs:
           python-version: "3.12"
 
       - name: Install build dependencies
-        run: python -m pip install pyyaml jsonschema
+        run: python -m pip install -r requirements.txt
+
+      - name: Run invariant tests
+        run: python -m unittest discover -s tests -v
 
       - name: Rebuild from source
         run: python scripts/build.py
