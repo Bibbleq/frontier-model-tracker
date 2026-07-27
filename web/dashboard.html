@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Editorial dashboard — Frontier Model Tracker</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <nav class="top">
+    <a href="index.html">Data</a>
+    <a href="dashboard.html">Editorial dashboard</a>
+    <a href="https://github.com/Bibbleq/frontier-model-tracker">Repository</a>
+    <a href="https://github.com/Bibbleq/frontier-model-tracker/blob/main/docs/methodology.md">Methodology</a>
+  </nav>
+
+  <h1>Editorial dashboard</h1>
+  <p class="lede">
+    Everything here is derived from the dataset on every build, so it cannot drift from the
+    source. Nothing on this page is a separate to-do list to keep in sync — resolve an item by
+    editing the YAML and the row disappears.
+  </p>
+
+  <div id="body"><p class="muted">Loading…</p></div>
+
+  <footer>Rebuilt with the dataset. If a row here looks stale, the build has not run since the change.</footer>
+</main>
+
+<script>
+const WHY = {
+  missing_archive: "Living documentation is edited in place. Without a snapshot, a citation may stop attesting what it was cited for. Fix: look up the URL at archive.org/wayback/available and add archived_url.",
+  no_vendor_baseline: "No vendor release event exists for this model, so adoption lag cannot be measured from anything. Fix: add the vendor release event, or accept that lag stays unknown.",
+  suspicious_day_precision: "A date landing on the first of a month is the classic signature of a month-precision fact padded to a day. Fix: confirm the day, or change the precision to month.",
+  unquoted_documentation: "A confirmed claim resting only on current documentation. Current docs prove a model is supported now, rarely when it first was. Fix: add a quote that supports the date, or downgrade to supported.",
+  backlog_without_surface: "An open question that names no surface cannot suppress a lag answer, so the gap will read as absence. Fix: add surface_ids.",
+  selectable_on_vendor_surface: "Selectable exposure on a vendor's own surface is usually a modelling slip. Fix: check the exposure.",
+};
+const LABEL = {
+  missing_archive: "Sources needing an archive snapshot",
+  no_vendor_baseline: "Models with no vendor release",
+  suspicious_day_precision: "Dates that may be invented days",
+  unquoted_documentation: "Confirmed claims resting on unquoted documentation",
+  backlog_without_surface: "Backlog items that cannot suppress lag",
+  selectable_on_vendor_surface: "Selectable exposure on a vendor surface",
+};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const REPO = 'https://github.com/Bibbleq/frontier-model-tracker';
+
+Promise.all([
+  fetch('data/status.json').then(r => r.json()),
+  fetch('data/events.json').then(r => r.json()),
+]).then(([s, d]) => {
+  const out = [];
+  const t = s.totals;
+
+  out.push('<div class="cards">' + [
+    ['events', t.events], ['open questions', s.backlog_states.open || 0],
+    ['warnings', s.warnings.length], ['supported (soft)', t.supported],
+    ['coverage gaps', s.coverage.models_without_events.length + s.coverage.surfaces_without_events.length],
+  ].map(([k, n]) => `<div class="card"><div class="n">${n}</div><div class="k">${esc(k)}</div></div>`).join('') + '</div>');
+
+  // ---- work queue -------------------------------------------------------
+  out.push('<h2>Work queue</h2>');
+  out.push('<p class="muted">Build warnings, grouped. Each is a specific, resolvable task — the count is meant to fall over time.</p>');
+  const byCode = {};
+  s.warnings.forEach(w => (byCode[w.code] = byCode[w.code] || []).push(w));
+  Object.keys(byCode).sort((a, b) => byCode[b].length - byCode[a].length).forEach(code => {
+    const items = byCode[code];
+    out.push(`<details><summary>${esc(LABEL[code] || code)} <span class="pill warn">${items.length}</span></summary>`);
+    out.push(`<p class="why">${esc(WHY[code] || '')}</p><table><tbody>`);
+    items.forEach(w => out.push(
+      `<tr><td class="mono">${esc(w.subject)}</td><td class="muted">${esc(w.message)}</td></tr>`));
+    out.push('</tbody></table></details>');
+  });
+
+  // ---- open research ----------------------------------------------------
+  const open = d.validation_backlog.filter(b => b.state === 'open' || b.state === 'blocked');
+  out.push(`<h2>Open research questions <span class="pill warn">${open.length}</span></h2>`);
+  out.push('<p class="muted">Claims deliberately held out of the timeline until the evidence supports them. Lag answers on the named surfaces are suppressed rather than reported as absence.</p>');
+  out.push('<table><thead><tr><th>Question</th><th>Models</th><th>Surfaces</th><th>Evidence</th></tr></thead><tbody>');
+  open.forEach(b => out.push(
+    `<tr>
+       <td><strong>${esc(b.working_claim)}</strong>
+           <div class="muted" style="margin-top:.25rem">${esc(b.target)}</div>
+           <div class="mono muted" style="margin-top:.25rem;font-size:.8rem">${esc(b.id)}</div></td>
+       <td class="mono">${(b.model_ids || []).map(esc).join('<br>') || '<span class="muted">—</span>'}</td>
+       <td class="mono">${(b.surface_ids || []).map(esc).join('<br>') || '<span class="pill warn">none</span>'}</td>
+       <td>${(b.sources || []).length ? `<span class="pill ok">${b.sources.length}</span>` : '<span class="muted">—</span>'}</td>
+     </tr>`));
+  out.push('</tbody></table>');
+
+  // ---- resolved ---------------------------------------------------------
+  const done = d.validation_backlog.filter(b => b.state === 'promoted' || b.state === 'rejected');
+  if (done.length) {
+    out.push(`<h2>Resolved <span class="pill ok">${done.length}</span></h2>`);
+    out.push('<p class="muted">Kept on the record so the same question is not reopened and answered differently.</p>');
+    out.push('<table><thead><tr><th>Question</th><th>State</th><th>How it resolved</th></tr></thead><tbody>');
+    done.forEach(b => out.push(
+      `<tr><td class="mono">${esc(b.id)}</td>
+           <td><span class="pill ok">${esc(b.state)}</span></td>
+           <td>${esc(b.resolution || '')}${b.promoted_to ? ` <span class="mono muted">→ ${esc(b.promoted_to)}</span>` : ''}</td></tr>`));
+    out.push('</tbody></table>');
+  }
+
+  // ---- soft claims ------------------------------------------------------
+  const soft = d.events.filter(e => e.confidence === 'supported');
+  out.push(`<h2>Claims at <code>supported</code> confidence <span class="pill warn">${soft.length}</span></h2>`);
+  out.push('<p class="muted">Strong evidence, but some part of the claim rests on retrospective or paired evidence. <code>confidence_detail</code> says which part.</p>');
+  out.push('<table><thead><tr><th>Event</th><th>Date</th><th>Which part is soft</th></tr></thead><tbody>');
+  soft.forEach(e => {
+    const cd = e.confidence_detail || {};
+    const parts = Object.keys(cd).length
+      ? Object.entries(cd).map(([k, v]) =>
+          `<span class="pill ${v === 'supported' ? 'warn' : 'plain'}">${esc(k)}: ${esc(v)}</span>`).join(' ')
+      : '<span class="muted">not broken down</span>';
+    out.push(`<tr><td class="mono">${esc(e.id)}</td>
+                  <td class="mono">${esc(e.date.start)}<span class="muted"> ${esc(e.date.precision)}</span></td>
+                  <td>${parts}</td></tr>`);
+  });
+  out.push('</tbody></table>');
+
+  // ---- coverage ---------------------------------------------------------
+  const cm = s.coverage.models_without_events, cs = s.coverage.surfaces_without_events;
+  out.push('<h2>Coverage gaps</h2>');
+  out.push('<p class="muted">Registry entries with no events. Either a genuine gap, or an entry added so a backlog item can name its target.</p>');
+  out.push(`<p><strong>Models</strong> ${cm.length ? cm.map(x => `<code>${esc(x)}</code>`).join(' ') : '<span class="muted">none</span>'}</p>`);
+  out.push(`<p><strong>Surfaces</strong> ${cs.length ? cs.map(x => `<code>${esc(x)}</code>`).join(' ') : '<span class="muted">none</span>'}</p>`);
+
+  // ---- lag health -------------------------------------------------------
+  out.push('<h2>Lag answerability</h2>');
+  out.push('<p class="muted">Every model, tier and measure combination. The three unknowns are deliberately distinct: a gap in research must never read the same as a model never arriving.</p>');
+  const LC = {
+    exact: ['ok', 'A single defensible number'],
+    range: ['plain', 'A window, because a date is only known to a month'],
+    not_recorded: ['plain', 'Vendor release exists, no availability recorded on this tier'],
+    unknown_open_research: ['warn', 'An open backlog item covers this model and tier'],
+    unknown_no_baseline: ['warn', 'No vendor release, so nothing to measure from'],
+  };
+  out.push('<table><thead><tr><th>Certainty</th><th>Rows</th><th>Meaning</th></tr></thead><tbody>');
+  Object.entries(s.lag_certainty).sort((a, b) => b[1] - a[1]).forEach(([k, n]) => {
+    const [cls, why] = LC[k] || ['plain', ''];
+    out.push(`<tr><td><span class="pill ${cls}">${esc(k)}</span></td><td class="mono">${n}</td><td class="muted">${esc(why)}</td></tr>`);
+  });
+  out.push('</tbody></table>');
+
+  out.push(`<p style="margin-top:2rem"><a href="${REPO}/blob/main/data/events.yaml">Edit the dataset →</a></p>`);
+  document.getElementById('body').innerHTML = out.join('');
+}).catch(e => {
+  document.getElementById('body').innerHTML =
+    `<p class="err">Could not load the generated data. ${esc(e.message)}</p>`;
+});
+</script>
+</body>
+</html>
