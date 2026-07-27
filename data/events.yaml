@@ -688,7 +688,7 @@ events:
         published_at: "2024-09-19"
         source_type: "changelog"
         quote: "In GitHub Models, you can use o1 models both in the playground and via the API."
-        supports: [date, model, exposure]
+        supports: ["date", "model", "exposure"]
   - id: "github-models-o1-preview-waitlist-2024-09-19"
     kind: "availability"
     date:
@@ -714,7 +714,7 @@ events:
         published_at: "2024-09-19"
         source_type: "changelog"
         quote: "You can now join the waitlist for early access to OpenAI o1 for use in GitHub Copilot in Visual Studio Code and GitHub Models."
-        supports: [date, model, exposure]
+        supports: ["date", "model", "exposure"]
   - id: "github-o1-mini-waitlist-2024-09-19"
     kind: "availability"
     date:
@@ -854,7 +854,7 @@ events:
         published_at: "2024-12-20"
         source_type: "announcement"
         quote: "We're bringing o1 to you in Copilot Chat across Copilot Pro, Business, and Enterprise, and including GitHub Models. It's also available for you to start using right now!"
-        supports: [date, model, exposure]
+        supports: ["date", "model", "exposure"]
   - id: "github-o1-full-preview-2024-12-20"
     kind: "availability"
     date:
@@ -961,7 +961,7 @@ events:
         published_at: "2025-01-31"
         source_type: "changelog"
         quote: "GitHub Models users with a paid Copilot plan are able to leverage the o3-mini model to enhance their AI applications and projects."
-        supports: [date, model, exposure]
+        supports: ["date", "model", "exposure"]
   - id: "github-o3-mini-preview-2025-01-31"
     kind: "availability"
     date:
@@ -1876,6 +1876,7 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260621221608/https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor"
   - id: "m365-gpt5-2-2025-12-11"
     kind: "availability"
     date:
@@ -2008,6 +2009,7 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260621221608/https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor"
   - id: "anthropic-sonnet4-6-2026-02-17"
     kind: "availability"
     date:
@@ -2206,6 +2208,7 @@ events:
         primary: true
         retrieved_at: "2026-07-27"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260621221608/https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor"
         quote: "On April 3, 2026, Microsoft introduced a new Microsoft 365 admin center setting Copilot in M365 apps with Anthropic models in EU/EFTA and UK to enable Anthropic as the default model for Copilot in Microsoft 365 apps."
         supports: ["date", "policy"]
       - publisher: "Microsoft Learn"

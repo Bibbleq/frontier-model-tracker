@@ -2713,7 +2713,8 @@
           "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor",
           "primary": true,
           "retrieved_at": "2026-07-26",
-          "source_type": "documentation"
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20260621221608/https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor"
         }
       ]
     },
@@ -2899,7 +2900,8 @@
           "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor",
           "primary": true,
           "retrieved_at": "2026-07-26",
-          "source_type": "documentation"
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20260621221608/https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor"
         }
       ]
     },
@@ -3192,6 +3194,7 @@
           "primary": true,
           "retrieved_at": "2026-07-27",
           "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20260621221608/https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor",
           "quote": "On April 3, 2026, Microsoft introduced a new Microsoft 365 admin center setting Copilot in M365 apps with Anthropic models in EU/EFTA and UK to enable Anthropic as the default model for Copilot in Microsoft 365 apps.",
           "supports": [
             "date",

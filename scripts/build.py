@@ -199,6 +199,12 @@ def validate_semantics(data: dict, models: dict, platforms: dict) -> None:
             if surface.get("vendor_baseline"):
                 warn(f"{eid}: selectable exposure on a vendor baseline surface")
 
+        # Living documentation is edited in place, so a citation that reads
+        # correctly today may not attest the same claim later.
+        for source in event["sources"]:
+            if source.get("source_type") in ("documentation", "release_notes") and not source.get("archived_url"):
+                warn(f"{eid}: documentation source has no archived_url and may be edited in place: {source['url']}")
+
         # Warnings: not wrong, but worth a human look.
         if date["precision"] == "day" and date["start"].endswith("-01"):
             warn(f"{eid}: day precision on the first of the month may be an invented day")
