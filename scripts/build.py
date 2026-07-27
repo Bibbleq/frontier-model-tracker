@@ -22,6 +22,7 @@ MODELS_SCHEMA_PATH = ROOT / "schema" / "models.schema.json"
 PLATFORMS_PATH = ROOT / "data" / "platforms.yaml"
 PLATFORMS_SCHEMA_PATH = ROOT / "schema" / "platforms.schema.json"
 OUTPUT_DIR = ROOT / "generated"
+README_PATH = ROOT / "README.md"
 
 DATE_PATTERNS = {
     "year": re.compile(r"^\d{4}$"),
@@ -68,38 +69,119 @@ def load() -> dict:
     return load_validated(DATA_PATH, SCHEMA_PATH)
 
 
-def validate_registries() -> tuple[dict, dict]:
-    """Load and internally check the model and surface registries."""
-    models = load_validated(MODELS_PATH, MODELS_SCHEMA_PATH)
-    platforms = load_validated(PLATFORMS_PATH, PLATFORMS_SCHEMA_PATH)
-
+def validate_registry_semantics(models: dict, platforms: dict) -> None:
+    """Check graph and identity rules that JSON Schema cannot express."""
     model_ids = [entry["id"] for entry in models["models"]]
     if len(model_ids) != len(set(model_ids)):
         fail("duplicate model id in models.yaml")
-    family_ids = {entry["id"] for entry in models["families"]}
+    family_ids_list = [entry["id"] for entry in models["families"]]
+    if len(family_ids_list) != len(set(family_ids_list)):
+        fail("duplicate family id in models.yaml")
+    family_ids = set(family_ids_list)
     known_models = set(model_ids)
+    names: dict[str, str] = {}
     for entry in models["models"]:
         if entry.get("family") and entry["family"] not in family_ids:
             fail(f"{entry['id']}: unknown family {entry['family']}")
+        for name in [entry["display_name"], *entry.get("aliases", [])]:
+            key = name.casefold()
+            if key in names and names[key] != entry["id"]:
+                fail(f"{entry['id']}: name or alias {name!r} is already used by {names[key]}")
+            names[key] = entry["id"]
         for link in ("supersedes", "superseded_by"):
             if entry.get(link) and entry[link] not in known_models:
                 fail(f"{entry['id']}: {link} points at unknown model {entry[link]}")
+
+    model_by_id = {entry["id"]: entry for entry in models["models"]}
+    for entry in models["models"]:
+        if entry.get("supersedes"):
+            target = model_by_id[entry["supersedes"]]
+            if target.get("superseded_by") != entry["id"]:
+                fail(f"{entry['id']}: supersedes link is not reciprocated by {target['id']}")
+        if entry.get("superseded_by"):
+            target = model_by_id[entry["superseded_by"]]
+            if target.get("supersedes") != entry["id"]:
+                fail(f"{entry['id']}: superseded_by link is not reciprocated by {target['id']}")
+
+    def reject_cycles(graph: dict[str, set[str]], label: str) -> None:
+        colour: dict[str, int] = {}
+        stack: list[str] = []
+
+        def visit(node: str) -> None:
+            colour[node] = 1
+            stack.append(node)
+            for nxt in graph.get(node, set()):
+                if colour.get(nxt) == 1:
+                    cycle = " -> ".join(stack[stack.index(nxt):] + [nxt])
+                    fail(f"{label} cycle: {cycle}")
+                if colour.get(nxt, 0) == 0:
+                    visit(nxt)
+            stack.pop()
+            colour[node] = 2
+
+        for node in graph:
+            if colour.get(node, 0) == 0:
+                visit(node)
+
+    reject_cycles(
+        {entry["id"]: {entry["supersedes"]} for entry in models["models"] if entry.get("supersedes")},
+        "model succession",
+    )
 
     surface_ids = [entry["id"] for entry in platforms["surfaces"]]
     if len(surface_ids) != len(set(surface_ids)):
         fail("duplicate surface id in platforms.yaml")
     known_surfaces = set(surface_ids)
+    surface_by_id = {entry["id"]: entry for entry in platforms["surfaces"]}
+    rename_graph: dict[str, set[str]] = {surface_id: set() for surface_id in surface_ids}
     for entry in platforms["surfaces"]:
         for link in ("renamed_from", "renamed_to"):
             if entry.get(link) and entry[link] not in known_surfaces:
                 fail(f"{entry['id']}: {link} points at unknown surface {entry[link]}")
+        if entry.get("renamed_to"):
+            rename_graph[entry["id"]].add(entry["renamed_to"])
+        if entry.get("renamed_from"):
+            rename_graph[entry["renamed_from"]].add(entry["id"])
+        for other_id in rename_graph[entry["id"]]:
+            other = surface_by_id[other_id]
+            if entry.get("lineage") and other.get("lineage") and entry["lineage"] != other["lineage"]:
+                fail(f"{entry['id']}: rename target {other_id} belongs to a different lineage")
         if entry.get("vendor_baseline") and entry["counts_as"]:
             fail(f"{entry['id']}: a vendor baseline surface must not declare counts_as tiers")
+    reject_cycles(rename_graph, "surface rename")
+
+    experience_ids = [entry["id"] for entry in platforms["experiences"]]
+    if len(experience_ids) != len(set(experience_ids)):
+        fail("duplicate experience id in platforms.yaml")
     for entry in platforms["experiences"]:
         if entry["surface"] not in known_surfaces:
             fail(f"{entry['id']}: experience on unknown surface {entry['surface']}")
 
+
+def validate_registries() -> tuple[dict, dict]:
+    """Load and internally check the model and surface registries."""
+    models = load_validated(MODELS_PATH, MODELS_SCHEMA_PATH)
+    platforms = load_validated(PLATFORMS_PATH, PLATFORMS_SCHEMA_PATH)
+    validate_registry_semantics(models, platforms)
+
     return models, platforms
+
+
+def validate_documented_counts(data: dict) -> None:
+    """Prevent the public README status from silently drifting from the data."""
+    readme = README_PATH.read_text(encoding="utf-8")
+    event_match = re.search(r"contains \*\*(\d+) canonical events\*\*", readme)
+    backlog_match = re.search(r"plus \*\*(\d+) validation targets\*\*", readme)
+    if not event_match or not backlog_match:
+        fail("README.md must state the current canonical event and validation-target counts")
+    documented_events = int(event_match.group(1))
+    documented_backlog = int(backlog_match.group(1))
+    actual_events = len(data["events"])
+    actual_backlog = len(data["validation_backlog"])
+    if documented_events != actual_events:
+        fail(f"README.md says {documented_events} canonical events, but data/events.yaml contains {actual_events}")
+    if documented_backlog != actual_backlog:
+        fail(f"README.md says {documented_backlog} validation targets, but data/events.yaml contains {actual_backlog}")
 
 
 def rename_groups(platforms: dict) -> dict[str, str]:
@@ -259,24 +341,22 @@ def check_semantic_duplicates(events: list[dict]) -> None:
 
 
 def check_lifecycle_ordering(events: list[dict]) -> None:
-    first: dict[tuple, tuple[str, str]] = {}
+    latest: dict[tuple, tuple[int, str, str]] = {}
     for event in _availability(events):
         if event["lifecycle"] not in LIFECYCLE_ORDER:
             continue
         for model_id in event["model_ids"]:
             key = (event["surface_id"], model_id)
             stage = LIFECYCLE_ORDER.index(event["lifecycle"])
-            if key in first:
-                prior_stage, prior_date, prior_id = first[key]
+            if key in latest:
+                prior_stage, prior_date, prior_id = latest[key]
                 if stage < prior_stage and event["date"]["start"] > prior_date:
                     fail(
                         f"{event['id']}: {event['lifecycle']} dated after {prior_id} "
                         f"reached a later stage on the same surface"
                     )
-                if stage > prior_stage:
-                    continue
-            else:
-                first[key] = (stage, event["date"]["start"], event["id"])
+            if key not in latest or stage >= latest[key][0]:
+                latest[key] = (stage, event["date"]["start"], event["id"])
 
 
 def check_suspension_pairs(events: list[dict]) -> None:
@@ -289,8 +369,8 @@ def check_suspension_pairs(events: list[dict]) -> None:
             elif event["lifecycle"] == "restored":
                 if key not in suspended:
                     fail(f"{event['id']}: restoration without a prior suspension on the same surface")
-                if event["date"]["start"] < suspended[key]:
-                    fail(f"{event['id']}: restoration dated before its suspension")
+                if event["date"]["start"] <= suspended[key]:
+                    fail(f"{event['id']}: restoration must be dated after its suspension")
 
 
 # Each relation implies an ordering between the two events. "target_earlier"
@@ -653,6 +733,7 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
 if __name__ == "__main__":
     registry_models, registry_platforms = validate_registries()
     dataset = load()
+    validate_documented_counts(dataset)
     validate_semantics(dataset, registry_models, registry_platforms)
     write_outputs(dataset, registry_models, registry_platforms)
 
