@@ -78,7 +78,29 @@ Where parts differ in strength, record that explicitly:
 ```
 
 That case is common: the model attribution is first-party and certain while
-the exact first date rests on retrospective documentation.
+the exact first date rests on retrospective documentation. It is not the only
+shape. For the Claude Fable 5 suspension in Foundry the date is certain and it
+is the *surface* that is soft, because no Microsoft-issued notice exists.
+
+## Sources
+
+Beyond publisher, title, URL, primary flag and retrieval date:
+
+- `source_type` — `announcement`, `changelog`, `documentation`, `release_notes`,
+  `news` or `other`
+- `published_at` — when the source was published, if known
+- `quote` — the verbatim sentence that attests the claim
+- `supports` — which parts of the claim this source underwrites, from `date`,
+  `model`, `exposure`, `lifecycle`, `policy`
+- `note` — commentary about the source, not words taken from it
+- `archived_url` — a snapshot, for sources likely to be edited in place
+
+`quote` and `supports` earn their keep together. The build warns when a
+`confirmed` event rests only on `documentation` sources, because current docs
+prove a model is supported now and rarely prove when it first was. That
+warning is suppressed when a documentation source carries a `quote` that
+`supports` the date, since that means someone has checked the page actually
+attests the date rather than merely the capability.
 
 ## Governance events
 
@@ -102,9 +124,23 @@ becoming available.
 
 ## Relationships
 
-`relations` express directed links between events. Each is a verb from this
-event to the target: `supersedes`, `announced_by`, `previews_for`, `restores`,
-`part_of`. Targets must exist and must not be the event itself.
+`relations` express directed links between events. Each is a verb read from
+this event to the target. Inverses are derived, never authored, so the two
+directions cannot disagree.
+
+| Verb | Meaning | Implied date order |
+| --- | --- | --- |
+| `announced_by` | this was announced by the target | target not later |
+| `previews_for` | this preview leads to the target's GA | target not earlier |
+| `restores` | this restores what the target suspended | target strictly earlier |
+| `supersedes` | this replaces the target | target not later |
+| `part_of` | this belongs to the target umbrella event | target not later |
+| `depends_on` | this requires the target to have happened | target not later |
+
+The build enforces those orderings and rejects cycles. A cycle would assert
+that two events each precede the other, which cannot be true and makes any
+derived traversal non-terminating. Targets must exist and must not be the
+event itself.
 
 ## Validation backlog
 

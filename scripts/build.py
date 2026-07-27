@@ -202,9 +202,25 @@ def validate_semantics(data: dict, models: dict, platforms: dict) -> None:
         if date["precision"] == "day" and date["start"].endswith("-01"):
             warn(f"{eid}: day precision on the first of the month may be an invented day")
         if event["confidence"] == "confirmed":
-            types = {s.get("source_type") for s in event["sources"] if s["primary"]}
-            if types == {"documentation"}:
-                warn(f"{eid}: 'confirmed' rests only on current documentation, which rarely proves a historical first date")
+            primary = [s for s in event["sources"] if s["primary"]]
+            types = {s.get("source_type") for s in primary}
+            # A verbatim quote means someone has checked that the page actually
+            # attests the date, rather than merely proving current support.
+            attested = any(s.get("quote") and "date" in s.get("supports", ["date"]) for s in primary)
+            if types == {"documentation"} and not attested:
+                warn(f"{eid}: 'confirmed' rests only on current documentation with no quoted attestation, which rarely proves a historical first date")
+
+    for item in data["validation_backlog"]:
+        for model_id in item.get("model_ids", []):
+            if model_id not in known_models:
+                fail(f"{item['id']}: backlog names unknown model {model_id}")
+        for surface_id in item.get("surface_ids", []):
+            if surface_id not in known_surfaces:
+                fail(f"{item['id']}: backlog names unknown surface {surface_id}")
+        if item.get("promoted_to") and item["promoted_to"] not in known_events:
+            fail(f"{item['id']}: promoted_to points at unknown event {item['promoted_to']}")
+        if item["state"] == "open" and not item.get("surface_ids"):
+            warn(f"{item['id']}: open item names no surface, so it cannot suppress a lag answer")
 
     # Ordering and cross-event coherence.
     sorted_ids = [e["id"] for e in sorted(events, key=lambda i: (i["date"]["start"], i["id"]))]
@@ -215,6 +231,7 @@ def validate_semantics(data: dict, models: dict, platforms: dict) -> None:
     check_lifecycle_ordering(events)
     check_suspension_pairs(events)
     check_vendor_baseline(events, known_models, known_surfaces)
+    check_relations(events)
 
 
 def _availability(events: list[dict]) -> list[dict]:
@@ -264,6 +281,58 @@ def check_suspension_pairs(events: list[dict]) -> None:
                     fail(f"{event['id']}: restoration without a prior suspension on the same surface")
                 if event["date"]["start"] < suspended[key]:
                     fail(f"{event['id']}: restoration dated before its suspension")
+
+
+# Each relation implies an ordering between the two events. "target_earlier"
+# means the target must not be dated after this event, and vice versa.
+RELATION_ORDER = {
+    "supersedes": "target_earlier",
+    "announced_by": "target_earlier",
+    "part_of": "target_earlier",
+    "depends_on": "target_earlier",
+    "restores": "target_strictly_earlier",
+    "previews_for": "target_later",
+}
+
+
+def check_relations(events: list[dict]) -> None:
+    """Relations must be acyclic and consistent with the dates they imply."""
+    by_id = {event["id"]: event for event in events}
+
+    for event in events:
+        for relation in event.get("relations", []):
+            target = by_id[relation["target"]]
+            here, there = event["date"]["start"], target["date"]["start"]
+            rule = RELATION_ORDER[relation["type"]]
+            if rule == "target_earlier" and there > here:
+                fail(f"{event['id']}: {relation['type']} target {target['id']} is dated later ({there} > {here})")
+            if rule == "target_strictly_earlier" and there >= here:
+                fail(f"{event['id']}: {relation['type']} target {target['id']} must be strictly earlier ({there} >= {here})")
+            if rule == "target_later" and there < here:
+                fail(f"{event['id']}: {relation['type']} target {target['id']} is dated earlier ({there} < {here})")
+
+    # Cycle detection over the whole relation graph. A cycle means the dataset
+    # asserts two events each precede the other, which cannot be true and makes
+    # any derived traversal non-terminating.
+    colour: dict[str, int] = {}
+    stack: list[str] = []
+
+    def visit(node: str) -> None:
+        colour[node] = 1
+        stack.append(node)
+        for relation in by_id[node].get("relations", []):
+            nxt = relation["target"]
+            if colour.get(nxt) == 1:
+                cycle = " -> ".join(stack[stack.index(nxt):] + [nxt])
+                fail(f"relation cycle: {cycle}")
+            if colour.get(nxt, 0) == 0:
+                visit(nxt)
+        stack.pop()
+        colour[node] = 2
+
+    for event in events:
+        if colour.get(event["id"], 0) == 0:
+            visit(event["id"])
 
 
 def check_vendor_baseline(events: list[dict], models: dict, surfaces: dict) -> None:
@@ -344,12 +413,10 @@ def derive_lag(data: dict, models: dict, platforms: dict) -> list[dict]:
     for item in data["validation_backlog"]:
         if item["state"] not in ("open", "blocked"):
             continue
-        surface = surfaces.get(item.get("surface_id", ""))
-        if not surface:
-            continue
-        for model_id in item.get("model_ids", []):
-            for tier in surface["counts_as"]:
-                open_questions.add((model_id, tier))
+        for surface_id in item.get("surface_ids", []):
+            for model_id in item.get("model_ids", []):
+                for tier in surfaces[surface_id]["counts_as"]:
+                    open_questions.add((model_id, tier))
 
     baseline: dict[str, dict] = {}
     for event in events:
@@ -429,7 +496,8 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
     event_fields = [
         "id", "kind", "date_start", "date_precision", "date_end", "surface_id", "surface",
         "experiences", "model_ids", "models", "model_claim", "lifecycle", "exposure",
-        "selectable", "confidence", "evidence_note", "caveat", "sources",
+        "selectable", "confidence", "confidence_detail", "evidence_note", "caveat",
+        "source_types", "sources",
     ]
     with (OUTPUT_DIR / "events.csv").open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=event_fields, lineterminator="\n")
@@ -453,8 +521,14 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
                 # derived, never authored, so it cannot contradict exposure
                 "selectable": "" if exposure is None else str(exposure in ("selectable", "default")).lower(),
                 "confidence": event["confidence"],
+                "confidence_detail": " | ".join(
+                    f"{part}={value}" for part, value in sorted(event.get("confidence_detail", {}).items())
+                ),
                 "evidence_note": event["evidence_note"],
                 "caveat": event.get("caveat", ""),
+                "source_types": " | ".join(
+                    dict.fromkeys(s.get("source_type", "other") for s in event["sources"])
+                ),
                 "sources": source_urls(event),
             })
 
@@ -469,7 +543,10 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
         writer.writeheader()
         writer.writerows(derive_lag(data, models, platforms))
 
-    backlog_fields = ["id", "state", "working_claim", "reason", "target", "resolution", "sources"]
+    backlog_fields = [
+        "id", "state", "model_ids", "models", "surface_ids", "working_claim",
+        "reason", "target", "resolution", "resolved_on", "promoted_to", "sources",
+    ]
     with (OUTPUT_DIR / "validation-backlog.csv").open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=backlog_fields, lineterminator="\n")
         writer.writeheader()
@@ -477,10 +554,15 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
             writer.writerow({
                 "id": item["id"],
                 "state": item["state"],
+                "model_ids": " | ".join(item.get("model_ids", [])),
+                "models": " | ".join(model_names[m] for m in item.get("model_ids", [])),
+                "surface_ids": " | ".join(item.get("surface_ids", [])),
                 "working_claim": item["working_claim"],
                 "reason": item["reason"],
                 "target": item["target"],
                 "resolution": item.get("resolution", ""),
+                "resolved_on": item.get("resolved_on", ""),
+                "promoted_to": item.get("promoted_to", ""),
                 "sources": source_urls(item),
             })
 
