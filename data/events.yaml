@@ -663,6 +663,58 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "github-models-o1-mini-waitlist-2024-09-19"
+    kind: "availability"
+    date:
+      start: "2024-09-19"
+      precision: "day"
+    surface_id: "github-models"
+    model_ids: ["o1-mini"]
+    model_claim: "specific"
+    lifecycle: "limited_preview"
+    exposure: "catalogue"
+    confidence: "confirmed"
+    evidence_note: "GitHub opened early access to the o1 models for use in GitHub Models as well as GitHub Copilot, gated behind the same waitlist."
+    caveat: "Recorded separately from the GitHub Copilot event on the same date. GitHub Models is a developer model catalogue, not GitHub Copilot: it counts as Microsoft availability but never as Copilot availability."
+    relations:
+      - type: "announced_by"
+        target: "openai-o1-preview-2024-09-12"
+    sources:
+      - publisher: "GitHub"
+        title: "Sign up for OpenAI o1 access on GitHub"
+        url: "https://github.blog/changelog/2024-09-19-sign-up-for-openai-o1-access-on-github/"
+        primary: true
+        retrieved_at: "2026-07-27"
+        published_at: "2024-09-19"
+        source_type: "changelog"
+        quote: "In GitHub Models, you can use o1 models both in the playground and via the API."
+        supports: ["date", "model", "exposure"]
+  - id: "github-models-o1-preview-waitlist-2024-09-19"
+    kind: "availability"
+    date:
+      start: "2024-09-19"
+      precision: "day"
+    surface_id: "github-models"
+    model_ids: ["o1-preview"]
+    model_claim: "specific"
+    lifecycle: "limited_preview"
+    exposure: "catalogue"
+    confidence: "confirmed"
+    evidence_note: "GitHub opened early access to the o1 models for use in GitHub Models as well as GitHub Copilot, gated behind the same waitlist."
+    caveat: "Recorded separately from the GitHub Copilot event on the same date. GitHub Models is a developer model catalogue, not GitHub Copilot: it counts as Microsoft availability but never as Copilot availability."
+    relations:
+      - type: "announced_by"
+        target: "openai-o1-preview-2024-09-12"
+    sources:
+      - publisher: "GitHub"
+        title: "Sign up for OpenAI o1 access on GitHub"
+        url: "https://github.blog/changelog/2024-09-19-sign-up-for-openai-o1-access-on-github/"
+        primary: true
+        retrieved_at: "2026-07-27"
+        published_at: "2024-09-19"
+        source_type: "changelog"
+        quote: "You can now join the waitlist for early access to OpenAI o1 for use in GitHub Copilot in Visual Studio Code and GitHub Models."
+        supports: ["date", "model", "exposure"]
   - id: "github-o1-mini-waitlist-2024-09-19"
     kind: "availability"
     date:
@@ -777,6 +829,32 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "github-models-o1-2024-12-20"
+    kind: "availability"
+    date:
+      start: "2024-12-20"
+      precision: "day"
+    surface_id: "github-models"
+    model_ids: ["o1"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "catalogue"
+    confidence: "confirmed"
+    evidence_note: "GitHub made the full o1 model available in GitHub Models on the same day it reached Copilot Chat public preview."
+    caveat: "Recorded separately from the GitHub Copilot event on the same date. GitHub Models is a developer model catalogue, not GitHub Copilot: it counts as Microsoft availability but never as Copilot availability."
+    relations:
+      - type: "announced_by"
+        target: "openai-o1-full-2024-12-17"
+    sources:
+      - publisher: "GitHub"
+        title: "OpenAI's o1 model available in Copilot Chat and GitHub Models"
+        url: "https://github.blog/news-insights/openais-o1-model-available-in-copilot-chat-and-github-models/"
+        primary: true
+        retrieved_at: "2026-07-27"
+        published_at: "2024-12-20"
+        source_type: "announcement"
+        quote: "We're bringing o1 to you in Copilot Chat across Copilot Pro, Business, and Enterprise, and including GitHub Models. It's also available for you to start using right now!"
+        supports: ["date", "model", "exposure"]
   - id: "github-o1-full-preview-2024-12-20"
     kind: "availability"
     date:
@@ -858,6 +936,32 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "github-models-o3-mini-2025-01-31"
+    kind: "availability"
+    date:
+      start: "2025-01-31"
+      precision: "day"
+    surface_id: "github-models"
+    model_ids: ["o3-mini"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "catalogue"
+    confidence: "confirmed"
+    evidence_note: "o3-mini became available to GitHub Models users on a paid Copilot plan on the same day it entered GitHub Copilot public preview."
+    caveat: "Recorded separately from the GitHub Copilot event on the same date. Access required a paid Copilot plan, so GitHub Models availability was not open to all GitHub users."
+    relations:
+      - type: "announced_by"
+        target: "openai-o3-mini-2025-01-31"
+    sources:
+      - publisher: "GitHub"
+        title: "OpenAI o3-mini now available in GitHub Copilot and GitHub Models (Public Preview)"
+        url: "https://github.blog/changelog/2025-01-31-openai-o3-mini-now-available-in-github-copilot-and-github-models-public-preview/"
+        primary: true
+        retrieved_at: "2026-07-27"
+        published_at: "2025-01-31"
+        source_type: "changelog"
+        quote: "GitHub Models users with a paid Copilot plan are able to leverage the o3-mini model to enhance their AI applications and projects."
+        supports: ["date", "model", "exposure"]
   - id: "github-o3-mini-preview-2025-01-31"
     kind: "availability"
     date:
@@ -1772,6 +1876,7 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260621221608/https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor"
   - id: "m365-gpt5-2-2025-12-11"
     kind: "availability"
     date:
@@ -1904,6 +2009,7 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260621221608/https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor"
   - id: "anthropic-sonnet4-6-2026-02-17"
     kind: "availability"
     date:
@@ -2102,6 +2208,7 @@ events:
         primary: true
         retrieved_at: "2026-07-27"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260621221608/https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor"
         quote: "On April 3, 2026, Microsoft introduced a new Microsoft 365 admin center setting Copilot in M365 apps with Anthropic models in EU/EFTA and UK to enable Anthropic as the default model for Copilot in Microsoft 365 apps."
         supports: ["date", "policy"]
       - publisher: "Microsoft Learn"
@@ -3162,6 +3269,29 @@ validation_backlog:
     target: "Add separate Google primary-source events for public preview and GA before using those dates in lag calculations."
     model_ids: ["gemini-1-5-pro"]
     surface_ids: ["google-gemini"]
+  - id: "github-models-launch-2024"
+    state: "open"
+    working_claim: "GitHub Models launched as a developer model catalogue during 2024, before the o1 early-access wave in September."
+    reason: "The surface is referenced by several sourced events but its own launch is not recorded, which makes the catalogue look newer and thinner than it is."
+    target: "Find the GitHub Models launch announcement and record it as a milestone."
+    model_ids: []
+    surface_ids: ["github-models"]
+  - id: "github-models-o3-o4-mini-2025-04-16"
+    state: "open"
+    working_claim: "o3 and o4-mini reached GitHub Models at or shortly after their 16 April 2025 GitHub Copilot public preview."
+    reason: "The GitHub changelog covering both surfaces says the models 'will also be available through GitHub Models', which is an announcement of future availability rather than a first-availability date. The GitHub Copilot leg is recorded; the GitHub Models leg is not."
+    target: "Find a dated GitHub Models catalogue or changelog record for o3 and o4-mini."
+    model_ids: ["o3", "o4-mini"]
+    surface_ids: ["github-models"]
+    sources:
+      - publisher: "GitHub"
+        title: "OpenAI o3 and o4-mini are now available in public preview for GitHub Copilot and GitHub Models"
+        url: "https://github.blog/changelog/2025-04-16-openai-o3-and-o4-mini-are-now-available-in-public-preview-for-github-copilot-and-github-models/"
+        primary: true
+        retrieved_at: "2026-07-27"
+        published_at: "2025-04-16"
+        source_type: "changelog"
+        quote: "Both o3 and o4-mini will also be available through GitHub Models, enabling developers to experiment, build, and deploy AI-powered features faster than ever."
   - id: "github-copilot-chat-gpt3-5-start-2023"
     state: "open"
     working_claim: "GitHub Copilot Chat initially used GPT-3.5."

@@ -2,6 +2,20 @@
 
 How derived analysis is computed, and what it deliberately refuses to compute.
 
+## Generated outputs
+
+| File | Contents |
+| --- | --- |
+| `events.json` | The dataset verbatim, metadata included |
+| `events.csv` | Flattened timeline, IDs resolved to display names |
+| `validation-backlog.csv` | The research queue with states and targets |
+| `models.csv`, `surfaces.csv` | The registries, each with an `event_count` |
+| `lag.csv` | Derived adoption lag |
+
+`event_count` in the registry exports is a coverage signal. A registry entry
+with zero events is either a gap worth filling or an entry that exists only so
+a backlog item can name its target.
+
 `generated/lag.csv` is rebuilt from source on every build. Lag is never stored
 in canonical data, so it cannot drift from the events it describes and cannot
 be edited into a claim the sources do not support.
