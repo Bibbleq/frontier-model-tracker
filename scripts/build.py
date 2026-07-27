@@ -202,9 +202,13 @@ def validate_semantics(data: dict, models: dict, platforms: dict) -> None:
         if date["precision"] == "day" and date["start"].endswith("-01"):
             warn(f"{eid}: day precision on the first of the month may be an invented day")
         if event["confidence"] == "confirmed":
-            types = {s.get("source_type") for s in event["sources"] if s["primary"]}
-            if types == {"documentation"}:
-                warn(f"{eid}: 'confirmed' rests only on current documentation, which rarely proves a historical first date")
+            primary = [s for s in event["sources"] if s["primary"]]
+            types = {s.get("source_type") for s in primary}
+            # A verbatim quote means someone has checked that the page actually
+            # attests the date, rather than merely proving current support.
+            attested = any(s.get("quote") and "date" in s.get("supports", ["date"]) for s in primary)
+            if types == {"documentation"} and not attested:
+                warn(f"{eid}: 'confirmed' rests only on current documentation with no quoted attestation, which rarely proves a historical first date")
 
     for item in data["validation_backlog"]:
         for model_id in item.get("model_ids", []):
@@ -492,7 +496,8 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
     event_fields = [
         "id", "kind", "date_start", "date_precision", "date_end", "surface_id", "surface",
         "experiences", "model_ids", "models", "model_claim", "lifecycle", "exposure",
-        "selectable", "confidence", "evidence_note", "caveat", "sources",
+        "selectable", "confidence", "confidence_detail", "evidence_note", "caveat",
+        "source_types", "sources",
     ]
     with (OUTPUT_DIR / "events.csv").open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=event_fields, lineterminator="\n")
@@ -516,8 +521,14 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
                 # derived, never authored, so it cannot contradict exposure
                 "selectable": "" if exposure is None else str(exposure in ("selectable", "default")).lower(),
                 "confidence": event["confidence"],
+                "confidence_detail": " | ".join(
+                    f"{part}={value}" for part, value in sorted(event.get("confidence_detail", {}).items())
+                ),
                 "evidence_note": event["evidence_note"],
                 "caveat": event.get("caveat", ""),
+                "source_types": " | ".join(
+                    dict.fromkeys(s.get("source_type", "other") for s in event["sources"])
+                ),
                 "sources": source_urls(event),
             })
 

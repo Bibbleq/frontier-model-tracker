@@ -40,6 +40,7 @@ events:
         url: "https://openai.com/index/openai-api/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "microsoft-openai-gpt3-license-2020-09-22"
     kind: "milestone"
     date:
@@ -56,6 +57,7 @@ events:
         url: "https://blogs.microsoft.com/blog/2020/09/22/microsoft-teams-up-with-openai-to-exclusively-license-gpt-3-language-model/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-copilot-preview-codex-2021-06-29"
     kind: "availability"
     date:
@@ -79,6 +81,7 @@ events:
         url: "https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "azure-openai-preview-2021-11-02"
     kind: "availability"
     date:
@@ -98,6 +101,7 @@ events:
         url: "https://news.microsoft.com/source/features/ai/new-azure-openai-service/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "other"
   - id: "github-copilot-ga-2022-06-21"
     kind: "availability"
     date:
@@ -117,6 +121,7 @@ events:
         url: "https://github.blog/news-insights/product-news/github-copilot-is-generally-available-to-all-developers/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "chatgpt-launch-2022-11-30"
     kind: "availability"
     date:
@@ -135,6 +140,7 @@ events:
         url: "https://openai.com/index/chatgpt/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "azure-openai-ga-2023-01-17"
     kind: "availability"
     date:
@@ -153,6 +159,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/general-availability-of-azure-openai-service-expands-access-to-large-advanced-ai-models-with-added-enterprise-benefits/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "pva-generative-ai-preview-2023-03-06"
     kind: "milestone"
     date:
@@ -169,6 +176,7 @@ events:
         url: "https://www.microsoft.com/en-us/power-platform/blog/2023/03/06/build-solutions-faster-with-microsoft-power-platform-and-next-generation-ai/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "other"
   - id: "anthropic-claude1-2023-03-14"
     kind: "availability"
     date:
@@ -187,6 +195,7 @@ events:
         url: "https://www.anthropic.com/news/introducing-claude"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "openai-gpt4-2023-03-14"
     kind: "availability"
     date:
@@ -205,6 +214,7 @@ events:
         url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "release_notes"
   - id: "m365-copilot-preview-gpt4-2023-03-16"
     kind: "availability"
     date:
@@ -227,11 +237,13 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/16/introducing-microsoft-365-copilot-a-whole-new-way-to-work/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
       - publisher: "Microsoft Azure"
         title: "Introducing GPT-4 in Azure OpenAI Service"
         url: "https://azure.microsoft.com/en-us/blog/introducing-gpt4-in-azure-openai-service/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "azure-gpt4-preview-2023-03-21"
     kind: "availability"
     date:
@@ -253,6 +265,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/introducing-gpt4-in-azure-openai-service/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "anthropic-claude2-2023-07-11"
     kind: "availability"
     date:
@@ -271,6 +284,7 @@ events:
         url: "https://www.anthropic.com/news/claude-2"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "meta-llama2-azure-2023-07-18"
     kind: "availability"
     date:
@@ -290,6 +304,7 @@ events:
         url: "https://blogs.microsoft.com/blog/2023/07/18/microsoft-and-meta-expand-their-ai-partnership-with-llama-2-on-azure-and-windows/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "m365-copilot-ga-2023-11-01"
     kind: "availability"
     date:
@@ -309,6 +324,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-365/blog/2023/11/15/announcing-microsoft-copilot-studio-customize-copilot-for-microsoft-365-and-build-your-own-standalone-copilots/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
         note: "This 15 November Microsoft announcement explicitly references the 1 November M365 Copilot GA."
   - id: "openai-gpt4-turbo-2023-11-06"
     kind: "availability"
@@ -328,6 +344,7 @@ events:
         url: "https://openai.com/index/new-models-and-developer-products-announced-at-devday/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "azure-ai-studio-preview-2023-11-15"
     kind: "milestone"
     date:
@@ -343,6 +360,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/unleashing-the-power-of-generative-ai-azure-ai-studio-leads-the-way/3977692"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "copilot-studio-launch-2023-11-15"
     kind: "milestone"
     date:
@@ -358,6 +376,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-365/blog/2023/11/15/announcing-microsoft-copilot-studio-customize-copilot-for-microsoft-365-and-build-your-own-standalone-copilots/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "anthropic-claude2-1-2023-11-21"
     kind: "availability"
     date:
@@ -376,6 +395,7 @@ events:
         url: "https://www.anthropic.com/news/claude-2-1"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "google-gemini1-5-pro-2024-02-15"
     kind: "availability"
     date:
@@ -395,6 +415,7 @@ events:
         url: "https://blog.google/innovation-and-ai/products/google-gemini-next-generation-model-february-2024/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "anthropic-claude3-family-2024-03-04"
     kind: "availability"
     date:
@@ -414,6 +435,7 @@ events:
         url: "https://www.anthropic.com/news/claude-3-family"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "anthropic-claude3-haiku-2024-03-13"
     kind: "availability"
     date:
@@ -432,6 +454,7 @@ events:
         url: "https://www.anthropic.com/news/claude-3-haiku"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "m365-gpt4-turbo-2024-04-02"
     kind: "availability"
     date:
@@ -453,6 +476,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-365/blog/2024/04/02/bringing-the-latest-capabilities-to-copilot-for-microsoft-365-customers/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "azure-gpt4o-preview-2024-05-13"
     kind: "availability"
     date:
@@ -474,6 +498,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/introducing-gpt-4o-openais-new-flagship-multimodal-model-now-in-preview-on-azure/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "openai-gpt4o-2024-05-13"
     kind: "availability"
     date:
@@ -492,6 +517,7 @@ events:
         url: "https://openai.com/index/hello-gpt-4o/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "anthropic-claude3-5-sonnet-2024-06-21"
     kind: "availability"
     date:
@@ -510,6 +536,7 @@ events:
         url: "https://www.anthropic.com/news/claude-3-5-sonnet"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-gpt4o-underlying-2024-07-31"
     kind: "availability"
     date:
@@ -532,6 +559,7 @@ events:
         url: "https://github.blog/changelog/2024-07-31-github-copilot-chat-and-pull-request-summaries-are-now-powered-by-gpt-4o/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "azure-o1-mini-preview-2024-09-12"
     kind: "availability"
     date:
@@ -554,6 +582,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/introducing-o1-openais-new-reasoning-model-series-for-developers-and-enterprises-on-azure/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "azure-o1-preview-2024-09-12"
     kind: "availability"
     date:
@@ -576,6 +605,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/introducing-o1-openais-new-reasoning-model-series-for-developers-and-enterprises-on-azure/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "openai-o1-preview-2024-09-12"
     kind: "availability"
     date:
@@ -594,6 +624,7 @@ events:
         url: "https://openai.com/index/introducing-openai-o1-preview/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "m365-gpt4o-wave2-2024-09-16"
     kind: "availability"
     date:
@@ -613,6 +644,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-365/blog/2024/09/16/microsoft-365-copilot-wave-2-pages-python-in-excel-and-agents/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "m365-o1-announced-2024-09-16"
     kind: "announcement"
     date:
@@ -630,6 +662,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-365/blog/2024/09/16/microsoft-365-copilot-wave-2-pages-python-in-excel-and-agents/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-o1-mini-waitlist-2024-09-19"
     kind: "availability"
     date:
@@ -650,6 +683,7 @@ events:
         url: "https://github.blog/changelog/2024-09-19-sign-up-for-openai-o1-access-on-github/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "github-o1-preview-waitlist-2024-09-19"
     kind: "availability"
     date:
@@ -670,6 +704,7 @@ events:
         url: "https://github.blog/changelog/2024-09-19-sign-up-for-openai-o1-access-on-github/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "github-multimodel-announcement-2024-10-29"
     kind: "announcement"
     date:
@@ -687,6 +722,7 @@ events:
         url: "https://github.blog/news-insights/product-news/bringing-developer-choice-to-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-claude3-5-sonnet-all-users-2024-11-01"
     kind: "availability"
     date:
@@ -705,6 +741,7 @@ events:
         url: "https://github.blog/changelog/2024-11-01-claude-3-5-sonnet-is-now-available-to-all-copilot-users-in-public-preview/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "azure-ai-foundry-announced-2024-11-19"
     kind: "milestone"
     date:
@@ -720,6 +757,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/the-next-wave-of-azure-innovation-azure-ai-foundry-intelligent-data-and-more/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "openai-o1-full-2024-12-17"
     kind: "availability"
     date:
@@ -738,6 +776,7 @@ events:
         url: "https://openai.com/index/o1-and-new-tools-for-developers/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-o1-full-preview-2024-12-20"
     kind: "availability"
     date:
@@ -756,6 +795,7 @@ events:
         url: "https://github.blog/news-insights/openais-o1-model-available-in-copilot-chat-and-github-models/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "deepseek-r1-foundry-2025-01-29"
     kind: "availability"
     date:
@@ -775,6 +815,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/deepseek-r1-is-now-available-on-azure-ai-foundry-and-github/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "deepseek-r1-github-models-2025-01-29"
     kind: "availability"
     date:
@@ -794,6 +835,7 @@ events:
         url: "https://github.blog/changelog/2025-01-29-deepseek-r1-is-now-available-in-github-models-public-preview/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "azure-o3-mini-2025-01-31"
     kind: "availability"
     date:
@@ -815,6 +857,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/announcing-the-availability-of-the-o3-mini-reasoning-model-in-microsoft-azure-openai-service/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-o3-mini-preview-2025-01-31"
     kind: "availability"
     date:
@@ -836,6 +879,7 @@ events:
         url: "https://github.blog/changelog/2025-01-31-openai-o3-mini-now-available-in-github-copilot-and-github-models-public-preview/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "openai-o3-mini-2025-01-31"
     kind: "availability"
     date:
@@ -854,6 +898,7 @@ events:
         url: "https://openai.com/index/o3-mini-system-card/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "xai-grok3-2025-02-19"
     kind: "availability"
     date:
@@ -873,6 +918,7 @@ events:
         url: "https://x.ai/news/grok-3"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "anthropic-claude3-7-sonnet-2025-02-24"
     kind: "availability"
     date:
@@ -891,6 +937,7 @@ events:
         url: "https://www.anthropic.com/news/claude-3-7-sonnet"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-claude3-7-preview-2025-02-24"
     kind: "availability"
     date:
@@ -909,6 +956,7 @@ events:
         url: "https://github.blog/changelog/2025-02-24-claude-3-7-sonnet-is-now-available-in-github-copilot-in-public-preview/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "m365-analyst-announced-2025-03-25"
     kind: "announcement"
     date:
@@ -927,6 +975,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-365/blog/2025/03/25/introducing-researcher-and-analyst-in-microsoft-365-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "m365-researcher-announced-2025-03-25"
     kind: "announcement"
     date:
@@ -945,6 +994,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-365/blog/2025/03/25/introducing-researcher-and-analyst-in-microsoft-365-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "m365-analyst-frontier-2025-04"
     kind: "availability"
     date:
@@ -957,6 +1007,9 @@ events:
     lifecycle: "limited_preview"
     exposure: "specialist"
     confidence: "supported"
+    confidence_detail:
+      model: "confirmed"
+      date: "supported"
     evidence_note: "Microsoft's June GA announcement states Researcher and Analyst debuted through Frontier in April; Analyst is explicitly built on o3-mini."
     caveat: "Delivered through the Microsoft 365 Copilot Frontier early-access programme."
     relations:
@@ -968,6 +1021,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-365/blog/2025/06/02/researcher-and-analyst-are-now-generally-available-in-microsoft-365-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "azure-gpt4-1-2025-04-14"
     kind: "availability"
     date:
@@ -989,6 +1043,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/announcing-the-gpt-4-1-model-series-for-azure-ai-foundry-developers/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "openai-gpt4-1-2025-04-14"
     kind: "availability"
     date:
@@ -1007,6 +1062,7 @@ events:
         url: "https://openai.com/index/gpt-4-1/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-o3-preview-2025-04-16"
     kind: "availability"
     date:
@@ -1025,6 +1081,7 @@ events:
         url: "https://github.blog/changelog/2025-04-16-openai-o3-and-o4-mini-are-now-available-in-public-preview-for-github-copilot-and-github-models/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "github-o4-mini-preview-2025-04-16"
     kind: "availability"
     date:
@@ -1043,6 +1100,7 @@ events:
         url: "https://github.blog/changelog/2025-04-16-openai-o3-and-o4-mini-are-now-available-in-public-preview-for-github-copilot-and-github-models/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "foundry-grok3-2025-05-19"
     kind: "availability"
     date:
@@ -1054,6 +1112,9 @@ events:
     lifecycle: "ga"
     exposure: "catalogue"
     confidence: "supported"
+    confidence_detail:
+      model: "confirmed"
+      date: "supported"
     evidence_note: "Grok 3 and Grok 3 Mini became available through Azure AI Foundry around Microsoft Build 2025."
     caveat: "Upgrade to confirmed-first-date if the original 19 May Microsoft launch post is pinned."
     sources:
@@ -1062,11 +1123,13 @@ events:
         url: "https://techcrunch.com/2025/05/19/xais-grok-3-comes-to-microsoft-azure/"
         primary: false
         retrieved_at: "2026-07-26"
+        source_type: "other"
       - publisher: "Microsoft"
         title: "What's new in Azure AI Foundry | June 2025"
         url: "https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-june-2025/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "release_notes"
         note: "Primary Microsoft recap confirms availability but is not the first-day announcement."
   - id: "foundry-grok3-mini-2025-05-19"
     kind: "availability"
@@ -1079,6 +1142,9 @@ events:
     lifecycle: "ga"
     exposure: "catalogue"
     confidence: "supported"
+    confidence_detail:
+      model: "confirmed"
+      date: "supported"
     evidence_note: "Grok 3 and Grok 3 Mini became available through Azure AI Foundry around Microsoft Build 2025."
     caveat: "Upgrade to confirmed-first-date if the original 19 May Microsoft launch post is pinned."
     sources:
@@ -1087,11 +1153,13 @@ events:
         url: "https://techcrunch.com/2025/05/19/xais-grok-3-comes-to-microsoft-azure/"
         primary: false
         retrieved_at: "2026-07-26"
+        source_type: "other"
       - publisher: "Microsoft"
         title: "What's new in Azure AI Foundry | June 2025"
         url: "https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-june-2025/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "release_notes"
         note: "Primary Microsoft recap confirms availability but is not the first-day announcement."
   - id: "anthropic-claude4-2025-05-22"
     kind: "availability"
@@ -1111,6 +1179,7 @@ events:
         url: "https://www.anthropic.com/news/claude-4"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-opus4-preview-2025-05-22"
     kind: "availability"
     date:
@@ -1129,6 +1198,7 @@ events:
         url: "https://github.blog/changelog/2025-05-22-anthropic-claude-sonnet-4-and-claude-opus-4-are-now-in-public-preview-in-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "github-sonnet4-preview-2025-05-22"
     kind: "availability"
     date:
@@ -1147,6 +1217,7 @@ events:
         url: "https://github.blog/changelog/2025-05-22-anthropic-claude-sonnet-4-and-claude-opus-4-are-now-in-public-preview-in-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "m365-analyst-ga-2025-06-02"
     kind: "availability"
     date:
@@ -1166,6 +1237,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-365/blog/2025/06/02/researcher-and-analyst-are-now-generally-available-in-microsoft-365-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "anthropic-opus4-1-2025-08-05"
     kind: "availability"
     date:
@@ -1184,6 +1256,7 @@ events:
         url: "https://www.anthropic.com/news/claude-opus-4-1"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "foundry-gpt5-2025-08-07"
     kind: "availability"
     date:
@@ -1202,6 +1275,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/gpt-5-in-azure-ai-foundry-the-future-of-ai-apps-and-agents-starts-here/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-gpt5-preview-2025-08-07"
     kind: "availability"
     date:
@@ -1223,6 +1297,7 @@ events:
         url: "https://github.blog/changelog/2025-08-07-openai-gpt-5-is-now-in-public-preview-for-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "m365-gpt5-2025-08-07"
     kind: "availability"
     date:
@@ -1241,6 +1316,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-365/blog/2025/08/07/available-today-gpt-5-in-microsoft-365-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "openai-gpt5-2025-08-07"
     kind: "availability"
     date:
@@ -1259,6 +1335,7 @@ events:
         url: "https://openai.com/index/introducing-gpt-5/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "studio-gpt5-2025-08-07"
     kind: "availability"
     date:
@@ -1278,6 +1355,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/available-today-gpt-5-in-microsoft-copilot-studio/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "other"
   - id: "github-gpt5-ga-2025-09-09"
     kind: "availability"
     date:
@@ -1296,6 +1374,7 @@ events:
         url: "https://github.blog/changelog/2025-09-09-openai-gpt-5-and-gpt-5-mini-are-now-generally-available-in-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "github-gpt5-mini-ga-2025-09-09"
     kind: "availability"
     date:
@@ -1314,6 +1393,7 @@ events:
         url: "https://github.blog/changelog/2025-09-09-openai-gpt-5-and-gpt-5-mini-are-now-generally-available-in-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "m365-researcher-opus4-1-2025-09-24"
     kind: "availability"
     date:
@@ -1334,6 +1414,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-365/blog/2025/09/24/expanding-model-choice-in-microsoft-365-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "studio-opus4-1-2025-09-24"
     kind: "availability"
     date:
@@ -1353,6 +1434,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/anthropic-joins-the-multi-model-lineup-in-microsoft-copilot-studio/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "other"
   - id: "studio-sonnet4-2025-09-24"
     kind: "availability"
     date:
@@ -1372,6 +1454,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/anthropic-joins-the-multi-model-lineup-in-microsoft-copilot-studio/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "other"
   - id: "anthropic-sonnet4-5-2025-09-29"
     kind: "availability"
     date:
@@ -1390,6 +1473,7 @@ events:
         url: "https://www.anthropic.com/news/claude-sonnet-4-5"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-sonnet4-5-preview-2025-09-29"
     kind: "availability"
     date:
@@ -1411,6 +1495,7 @@ events:
         url: "https://github.blog/changelog/2025-09-29-anthropic-claude-sonnet-4-5-is-in-public-preview-for-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "studio-sonnet4-5-2025-09-29"
     kind: "availability"
     date:
@@ -1430,6 +1515,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/available-today-claude-sonnet-4-5-in-microsoft-copilot-studio/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "other"
   - id: "xai-grok4-foundry-2025-09-29"
     kind: "availability"
     date:
@@ -1448,6 +1534,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/grok-4-is-now-available-in-azure-ai-foundry-unlock-frontier-intelligence-and-business-ready-capabilities/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "studio-gpt4-1-default-2025-10"
     kind: "availability"
     date:
@@ -1459,6 +1546,10 @@ events:
     lifecycle: "ga"
     exposure: "default"
     confidence: "supported"
+    confidence_detail:
+      model: "confirmed"
+      date: "supported"
+      exposure: "confirmed"
     evidence_note: "Copilot Studio release notes document GPT-4o retirement for normal generative orchestration and transition to GPT-4.1 as default."
     caveat: "Historical change was around 27–31 October; pin exact day if an archived release-note entry is preserved."
     sources:
@@ -1467,6 +1558,7 @@ events:
         url: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "documentation"
   - id: "github-sonnet4-5-ga-2025-10-13"
     kind: "availability"
     date:
@@ -1485,6 +1577,7 @@ events:
         url: "https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "anthropic-haiku4-5-2025-10-15"
     kind: "availability"
     date:
@@ -1503,6 +1596,7 @@ events:
         url: "https://www.anthropic.com/news/claude-haiku-4-5"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "studio-gpt5-1-2025-11-12"
     kind: "availability"
     date:
@@ -1522,6 +1616,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/available-now-gpt-5-1-in-microsoft-copilot-studio/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "other"
   - id: "foundry-haiku4-5-2025-11-18"
     kind: "availability"
     date:
@@ -1540,6 +1635,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/introducing-anthropics-claude-models-in-microsoft-foundry-bringing-frontier-intelligence-to-azure/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "foundry-opus4-1-2025-11-18"
     kind: "availability"
     date:
@@ -1558,6 +1654,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/introducing-anthropics-claude-models-in-microsoft-foundry-bringing-frontier-intelligence-to-azure/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "foundry-sonnet4-5-2025-11-18"
     kind: "availability"
     date:
@@ -1576,6 +1673,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/introducing-anthropics-claude-models-in-microsoft-foundry-bringing-frontier-intelligence-to-azure/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "anthropic-opus4-5-2025-11-24"
     kind: "availability"
     date:
@@ -1594,6 +1692,7 @@ events:
         url: "https://www.anthropic.com/news/claude-opus-4-5"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "studio-opus4-5-2025-11-24"
     kind: "availability"
     date:
@@ -1613,6 +1712,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/announcing-claude-opus-4-5-in-copilot-studio/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "other"
   - id: "foundry-mistral-large3-2025-12-02"
     kind: "availability"
     date:
@@ -1631,6 +1731,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/introducing-mistral-large-3-in-microsoft-foundry-open-capable-and-ready-for-production-workloads/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "mistral3-2025-12-02"
     kind: "availability"
     date:
@@ -1649,6 +1750,7 @@ events:
         url: "https://mistral.ai/news/mistral-3/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "m365-anthropic-admin-control-2025-12-08"
     kind: "policy"
     date:
@@ -1659,6 +1761,8 @@ events:
     applies_to:
       vendor: "Anthropic"
     confidence: "supported"
+    confidence_detail:
+      date: "supported"
     evidence_note: "Microsoft documented administrative controls for connecting Copilot to Anthropic as an AI subprocessor ahead of the January transition."
     caveat: "Use page history/change log if the precise 8 December UI introduction needs stricter evidence."
     sources:
@@ -1667,6 +1771,7 @@ events:
         url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "documentation"
   - id: "m365-gpt5-2-2025-12-11"
     kind: "availability"
     date:
@@ -1685,6 +1790,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-365/blog/2025/12/11/available-today-gpt-5-2-in-microsoft-365-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "openai-gpt5-2-2025-12-11"
     kind: "availability"
     date:
@@ -1703,6 +1809,7 @@ events:
         url: "https://openai.com/index/introducing-gpt-5-2/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "studio-gpt5-2-2025-12-11"
     kind: "availability"
     date:
@@ -1721,6 +1828,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-365/blog/2025/12/11/available-today-gpt-5-2-in-microsoft-365-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "foundry-deepseek-v3-2-2025-12-15"
     kind: "availability"
     date:
@@ -1739,6 +1847,7 @@ events:
         url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-dec-2025-jan-2026/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "release_notes"
   - id: "foundry-deepseek-v3-2-speciale-2025-12-15"
     kind: "availability"
     date:
@@ -1757,6 +1866,7 @@ events:
         url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-dec-2025-jan-2026/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "release_notes"
   - id: "studio-anthropic-default-policy-2026-01-06"
     kind: "policy"
     date:
@@ -1775,6 +1885,7 @@ events:
         url: "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/anthropic-joins-the-multi-model-lineup-in-microsoft-copilot-studio/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "other"
   - id: "m365-anthropic-subprocessor-2026-01-07"
     kind: "policy"
     date:
@@ -1792,6 +1903,7 @@ events:
         url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "documentation"
   - id: "anthropic-sonnet4-6-2026-02-17"
     kind: "availability"
     date:
@@ -1810,6 +1922,7 @@ events:
         url: "https://www.anthropic.com/news/claude-sonnet-4-6"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-sonnet4-6-2026-02-17"
     kind: "availability"
     date:
@@ -1829,6 +1942,7 @@ events:
         url: "https://github.blog/changelog/2026-02-17-claude-sonnet-4-6-is-now-generally-available-in-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "m365-gpt5-3-instant-2026-03-03"
     kind: "availability"
     date:
@@ -1848,6 +1962,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-gpt-5-3-instant-in-microsoft-365-copilot/4496567"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "openai-gpt5-3-instant-2026-03-03"
     kind: "availability"
     date:
@@ -1866,6 +1981,7 @@ events:
         url: "https://openai.com/index/gpt-5-3-instant/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "studio-gpt5-3-chat-2026-03-03"
     kind: "availability"
     date:
@@ -1885,6 +2001,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-gpt-5-3-instant-in-microsoft-365-copilot/4496567"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "openai-gpt5-4-2026-03-05"
     kind: "availability"
     date:
@@ -1903,6 +2020,7 @@ events:
         url: "https://openai.com/index/introducing-gpt-5-4/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "m365-gpt5-4-thinking-2026-03-06"
     kind: "availability"
     date:
@@ -1922,6 +2040,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-gpt-5-4-thinking-in-microsoft-365-copilot/4499746"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "studio-gpt5-4-reasoning-2026-03-06"
     kind: "availability"
     date:
@@ -1941,6 +2060,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-gpt-5-4-thinking-in-microsoft-365-copilot/4499746"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "m365-wave3-frontier-2026-03-09"
     kind: "milestone"
     date:
@@ -1956,6 +2076,7 @@ events:
         url: "https://blogs.microsoft.com/blog/2026/03/09/introducing-the-first-frontier-suite-built-on-intelligence-trust/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "m365-anthropic-eu-apps-setting-2026-04-03"
     kind: "policy"
     date:
@@ -1981,13 +2102,15 @@ events:
         primary: true
         retrieved_at: "2026-07-27"
         source_type: "documentation"
-        note: "States: 'On April 3, 2026, Microsoft introduced a new Microsoft 365 admin center setting Copilot in M365 apps with Anthropic models in EU/EFTA and UK to enable Anthropic as the default model for Copilot in Microsoft 365 apps.'"
+        quote: "On April 3, 2026, Microsoft introduced a new Microsoft 365 admin center setting Copilot in M365 apps with Anthropic models in EU/EFTA and UK to enable Anthropic as the default model for Copilot in Microsoft 365 apps."
+        supports: ["date", "policy"]
       - publisher: "Microsoft Learn"
         title: "Copilot in Microsoft 365 apps with Anthropic models"
         url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-anthropic-apps"
         primary: true
         retrieved_at: "2026-07-27"
         source_type: "documentation"
+        supports: ["policy"]
   - id: "anthropic-opus4-7-2026-04-16"
     kind: "availability"
     date:
@@ -2006,6 +2129,7 @@ events:
         url: "https://www.anthropic.com/news/claude-opus-4-7"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "m365-opus4-7-2026-04-16"
     kind: "availability"
     date:
@@ -2026,6 +2150,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-anthropic-claude-opus-4-7-in-microsoft-365-copilot/4511666"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "studio-opus4-7-2026-04-16"
     kind: "availability"
     date:
@@ -2045,6 +2170,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-anthropic-claude-opus-4-7-in-microsoft-365-copilot/4511666"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "openai-gpt5-5-2026-04-23"
     kind: "availability"
     date:
@@ -2063,6 +2189,7 @@ events:
         url: "https://openai.com/index/introducing-gpt-5-5/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-gpt5-5-ga-2026-04-24"
     kind: "availability"
     date:
@@ -2081,6 +2208,7 @@ events:
         url: "https://github.blog/changelog/2026-04-24-gpt-5-5-is-generally-available-for-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "m365-gpt5-5-thinking-2026-04-27"
     kind: "availability"
     date:
@@ -2099,6 +2227,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-gpt-5-5-thinking-and-chatgpt-images-2-0-in-microsoft-365-copilot/4514243"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "studio-gpt5-5-reasoning-2026-04-27"
     kind: "availability"
     date:
@@ -2118,6 +2247,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-gpt-5-5-thinking-and-chatgpt-images-2-0-in-microsoft-365-copilot/4514243"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "m365-anthropic-independent-processor-end-2026-05-01"
     kind: "policy"
     date:
@@ -2136,6 +2266,7 @@ events:
         url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-anthropic-apps"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "documentation"
   - id: "foundry-gpt5-5-instant-2026-05-07"
     kind: "availability"
     date:
@@ -2154,6 +2285,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-gpt-5-5-instant-in-microsoft-365-copilot/4517084"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "m365-gpt5-5-instant-2026-05-07"
     kind: "availability"
     date:
@@ -2173,6 +2305,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-gpt-5-5-instant-in-microsoft-365-copilot/4517084"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "studio-gpt5-5-chat-2026-05-07"
     kind: "availability"
     date:
@@ -2192,6 +2325,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-gpt-5-5-instant-in-microsoft-365-copilot/4517084"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "anthropic-opus4-8-2026-05-28"
     kind: "availability"
     date:
@@ -2210,6 +2344,7 @@ events:
         url: "https://www.anthropic.com/news/claude-opus-4-8"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-opus4-8-ga-2026-05-28"
     kind: "availability"
     date:
@@ -2228,6 +2363,7 @@ events:
         url: "https://github.blog/changelog/2026-05-28-claude-opus-4-8-is-generally-available-for-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "m365-opus4-8-2026-05-28"
     kind: "availability"
     date:
@@ -2247,6 +2383,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-anthropic-claude-opus-4-8-in-microsoft-365-copilot/4523405"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "studio-opus4-8-2026-05-28"
     kind: "availability"
     date:
@@ -2265,6 +2402,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-anthropic-claude-opus-4-8-in-microsoft-365-copilot/4523405"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "anthropic-fable5-2026-06-09"
     kind: "availability"
     date:
@@ -2284,6 +2422,7 @@ events:
         url: "https://www.anthropic.com/news/claude-fable-5-mythos-5"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "foundry-fable5-2026-06-09"
     kind: "availability"
     date:
@@ -2302,6 +2441,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/claude-fable-5-is-now-available-in-microsoft-foundry-powering-the-next-era-of-autonomous-agents/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-fable5-ga-2026-06-09"
     kind: "availability"
     date:
@@ -2320,6 +2460,7 @@ events:
         url: "https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "m365-fable5-preview-2026-06-10"
     kind: "availability"
     date:
@@ -2340,6 +2481,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/Microsoft365CopilotBlog/available-today-anthropic-claude-fable-5-in-microsoft-365-copilot/4526832"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "anthropic-fable5-suspension-2026-06-12"
     kind: "availability"
     date:
@@ -2365,6 +2507,7 @@ events:
         url: "https://www.anthropic.com/news/redeploying-fable-5"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "foundry-fable5-suspension-2026-06-12"
     kind: "availability"
     date:
@@ -2376,6 +2519,11 @@ events:
     lifecycle: "suspended"
     exposure: "catalogue"
     confidence: "supported"
+    confidence_detail:
+      model: "confirmed"
+      date: "confirmed"
+      lifecycle: "confirmed"
+      exposure: "supported"
     evidence_note: "Anthropic disabled Fable 5 and Mythos 5 for all customers from 5:21pm ET on 12 June 2026 to comply with a US Commerce Department export-control directive barring access by any foreign national. The action was global and removed the models from partner distribution, including Microsoft Foundry."
     caveat: "Confidence is 'supported' rather than 'confirmed' because no Microsoft-issued Foundry suspension notice was located; the date is Anthropic's global compliance action. That Foundry was affected is established retrospectively by the CNBC re-enablement report rather than by a first-party Microsoft record."
     relations:
@@ -2389,7 +2537,8 @@ events:
         retrieved_at: "2026-07-27"
         published_at: "2026-06-12"
         source_type: "announcement"
-        note: "Records that the directive arrived at 5:21pm ET and that Anthropic had to 'abruptly disable Fable 5 and Mythos 5 for all our customers'. Microsoft Foundry is not named in the body."
+        quote: "The net effect of this order is that we must abruptly disable Fable 5 and Mythos 5 for all our customers."
+        supports: ["date", "model", "lifecycle"]
       - publisher: "CNBC"
         title: "Anthropic says Trump admin has lifted export controls on Claude Fable 5 and Mythos 5"
         url: "https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html"
@@ -2397,7 +2546,8 @@ events:
         retrieved_at: "2026-07-27"
         published_at: "2026-06-30"
         source_type: "news"
-        note: "Reports that Anthropic would 're-enable access to Fable 5 on Amazon Web Services, Google Cloud and Microsoft Foundry', which establishes retrospectively that Foundry distribution had been suspended."
+        quote: "Anthropic will also re-enable access to Fable 5 on Amazon Web Services, Google Cloud and Microsoft Foundry as soon as possible."
+        supports: ["exposure"]
   - id: "github-fable5-suspension-2026-06-12"
     kind: "availability"
     date:
@@ -2416,6 +2566,7 @@ events:
         url: "https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
         note: "GitHub changelog editor notes reflect suspension/restoration."
   - id: "openai-gpt5-6-preview-2026-06-26"
     kind: "availability"
@@ -2439,6 +2590,7 @@ events:
         url: "https://openai.com/index/previewing-gpt-5-6-sol/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "claude-foundry-ga-2026-06-29"
     kind: "availability"
     date:
@@ -2459,6 +2611,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/claude-in-microsoft-foundry-is-now-generally-available/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
       - publisher: "Microsoft Learn"
         title: "Claude models in Microsoft Foundry"
         url: "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
@@ -2484,6 +2637,7 @@ events:
         url: "https://www.anthropic.com/news/claude-sonnet-5"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "foundry-sonnet5-ga-2026-06-30"
     kind: "availability"
     date:
@@ -2509,7 +2663,8 @@ events:
         retrieved_at: "2026-07-27"
         published_at: "2026-06-30"
         source_type: "announcement"
-        note: "Opens: 'On June 29, 2026, we announced the general availability of Claude in Microsoft Foundry... Today, we're continuing that momentum with the general availability of Claude Sonnet 5 in Microsoft Foundry.'"
+        quote: "On June 29, 2026, we announced the general availability of Claude in Microsoft Foundry, giving enterprises a production-ready path to build with Claude models in the Azure ecosystem. Today, we're continuing that momentum with the general availability of Claude Sonnet 5 in Microsoft Foundry."
+        supports: ["date", "model", "lifecycle"]
   - id: "github-sonnet5-ga-2026-06-30"
     kind: "availability"
     date:
@@ -2528,6 +2683,7 @@ events:
         url: "https://github.blog/changelog/2026-06-30-claude-sonnet-5-is-generally-available-for-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "anthropic-fable5-restoration-2026-07-01"
     kind: "availability"
     date:
@@ -2550,6 +2706,7 @@ events:
         url: "https://www.anthropic.com/news/redeploying-fable-5"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
       - publisher: "CNBC"
         title: "Anthropic says Trump admin has lifted export controls on Claude Fable 5 and Mythos 5"
         url: "https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html"
@@ -2557,6 +2714,7 @@ events:
         retrieved_at: "2026-07-27"
         published_at: "2026-06-30"
         source_type: "news"
+        quote: "Anthropic also said it has restored access to Mythos 5 for some U.S. organizations, following government approval granted on June 26."
   - id: "github-fable5-restoration-2026-07-01"
     kind: "availability"
     date:
@@ -2578,6 +2736,7 @@ events:
         url: "https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
         note: "GitHub changelog editor notes record restoration."
   - id: "github-kimi-k2-7-code-2026-07-01"
     kind: "availability"
@@ -2598,6 +2757,7 @@ events:
         url: "https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "m365-sonnet5-2026-07-02"
     kind: "availability"
     date:
@@ -2617,6 +2777,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-anthropic%E2%80%99s-claude-sonnet-5-in-microsoft-365-copilot/4532188"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-kimi-k2-7-enterprise-2026-07-07"
     kind: "availability"
     date:
@@ -2636,6 +2797,7 @@ events:
         url: "https://github.blog/changelog/2026-07-07-kimi-k2-7-now-available-for-copilot-business-and-enterprise/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "foundry-gpt5-6-2026-07-09"
     kind: "availability"
     date:
@@ -2654,6 +2816,7 @@ events:
         url: "https://azure.microsoft.com/en-us/blog/gpt-5-6-now-available-in-microsoft-foundry/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-gpt5-6-luna-2026-07-09"
     kind: "availability"
     date:
@@ -2672,6 +2835,7 @@ events:
         url: "https://github.blog/changelog/2026-07-09-openais-gpt-5-6-sol-terra-and-luna-are-now-available-in-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "github-gpt5-6-sol-2026-07-09"
     kind: "availability"
     date:
@@ -2690,6 +2854,7 @@ events:
         url: "https://github.blog/changelog/2026-07-09-openais-gpt-5-6-sol-terra-and-luna-are-now-available-in-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "github-gpt5-6-terra-2026-07-09"
     kind: "availability"
     date:
@@ -2708,6 +2873,7 @@ events:
         url: "https://github.blog/changelog/2026-07-09-openais-gpt-5-6-sol-terra-and-luna-are-now-available-in-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "m365-gpt5-6-2026-07-09"
     kind: "availability"
     date:
@@ -2727,6 +2893,7 @@ events:
         url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-openai%E2%80%99s-gpt-5-6-in-microsoft-365-copilot/4533152"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "openai-gpt5-6-2026-07-09"
     kind: "availability"
     date:
@@ -2745,6 +2912,7 @@ events:
         url: "https://openai.com/index/gpt-5-6/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-gemini3-6-flash-2026-07-21"
     kind: "availability"
     date:
@@ -2763,6 +2931,7 @@ events:
         url: "https://github.blog/changelog/2026-07-21-gemini-3-6-flash-is-now-available-in-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "google-gemini3-6-flash-2026-07-21"
     kind: "availability"
     date:
@@ -2774,6 +2943,9 @@ events:
     lifecycle: "ga"
     exposure: "not_applicable"
     confidence: "supported"
+    confidence_detail:
+      model: "confirmed"
+      date: "supported"
     evidence_note: "Google's model documentation lists Gemini 3.6 Flash as stable and updated on 21 July 2026."
     sources:
       - publisher: "Google"
@@ -2781,6 +2953,7 @@ events:
         url: "https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "documentation"
   - id: "anthropic-opus5-2026-07-24"
     kind: "availability"
     date:
@@ -2799,6 +2972,7 @@ events:
         url: "https://www.anthropic.com/news/claude-opus-5"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "foundry-opus5-availability-2026-07-24"
     kind: "availability"
     date:
@@ -2823,13 +2997,15 @@ events:
         retrieved_at: "2026-07-27"
         published_at: "2026-07-24"
         source_type: "announcement"
-        note: "States 'Claude Opus 5 is Zero Data Retention compatible'."
+        quote: "Claude Opus 5 is Zero Data Retention compatible."
+        supports: ["date", "model", "lifecycle"]
       - publisher: "Microsoft Learn"
         title: "Claude models in Microsoft Foundry"
         url: "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
         primary: true
         retrieved_at: "2026-07-27"
         source_type: "documentation"
+        supports: ["exposure"]
         note: "Lists claude-opus-5 as Hosted on Azure (GA) and available for the Data Zone Standard (US) deployment type."
   - id: "github-opus5-2026-07-24"
     kind: "availability"
@@ -2853,6 +3029,7 @@ events:
         url: "https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "changelog"
   - id: "m365-openai-operated-policy-2026-07-24"
     kind: "policy"
     date:
@@ -2863,6 +3040,8 @@ events:
     applies_to:
       vendor: "OpenAI"
     confidence: "supported"
+    confidence_detail:
+      date: "supported"
     evidence_note: "Microsoft documents that from 24 July 2026 eligible commercial customers have OpenAI-operated models enabled for all users unless admins choose 'No users'."
     caveat: "Preserve the official eligibility and geographic wording from Microsoft Learn."
     sources:
@@ -2871,6 +3050,7 @@ events:
         url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/openai-subprocessor"
         primary: true
         retrieved_at: "2026-07-26"
+        source_type: "documentation"
 validation_backlog:
   - id: "azure-chatgpt-preview-2023-03-09"
     state: "open"

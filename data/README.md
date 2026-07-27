@@ -78,7 +78,29 @@ Where parts differ in strength, record that explicitly:
 ```
 
 That case is common: the model attribution is first-party and certain while
-the exact first date rests on retrospective documentation.
+the exact first date rests on retrospective documentation. It is not the only
+shape. For the Claude Fable 5 suspension in Foundry the date is certain and it
+is the *surface* that is soft, because no Microsoft-issued notice exists.
+
+## Sources
+
+Beyond publisher, title, URL, primary flag and retrieval date:
+
+- `source_type` — `announcement`, `changelog`, `documentation`, `release_notes`,
+  `news` or `other`
+- `published_at` — when the source was published, if known
+- `quote` — the verbatim sentence that attests the claim
+- `supports` — which parts of the claim this source underwrites, from `date`,
+  `model`, `exposure`, `lifecycle`, `policy`
+- `note` — commentary about the source, not words taken from it
+- `archived_url` — a snapshot, for sources likely to be edited in place
+
+`quote` and `supports` earn their keep together. The build warns when a
+`confirmed` event rests only on `documentation` sources, because current docs
+prove a model is supported now and rarely prove when it first was. That
+warning is suppressed when a documentation source carries a `quote` that
+`supports` the date, since that means someone has checked the page actually
+attests the date rather than merely the capability.
 
 ## Governance events
 
