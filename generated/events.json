@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "updated": "2026-07-27",
   "research_cutoff": "2026-07-27",
   "metadata": {
@@ -29,20 +29,18 @@
   "events": [
     {
       "id": "openai-api-2020-06-11",
-      "date": "2020-06-11",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-3 family",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "OpenAI API"
+      "kind": "availability",
+      "date": {
+        "start": "2020-06-11",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "launch",
-        "selectable": null
-      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "gpt-3"
+      ],
+      "model_claim": "family",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI launched its API, initially giving developers access to GPT-3-era language models.",
       "sources": [
@@ -57,20 +55,16 @@
     },
     {
       "id": "microsoft-openai-gpt3-license-2020-09-22",
-      "date": "2020-09-22",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-3",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft",
-        "product": "Microsoft/OpenAI partnership"
+      "kind": "milestone",
+      "date": {
+        "start": "2020-09-22",
+        "precision": "day"
       },
-      "event": {
-        "type": "strategic_milestone",
-        "availability": "announced",
-        "selectable": null
-      },
+      "surface_id": "microsoft-corporate",
+      "model_ids": [
+        "gpt-3"
+      ],
+      "model_claim": "specific",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced an exclusive licence for GPT-3 technology for use in its own products and services.",
       "sources": [
@@ -85,24 +79,24 @@
     },
     {
       "id": "github-copilot-preview-codex-2021-06-29",
-      "date": "2021-06-29",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "Codex",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot",
-        "experience": "code_completion"
+      "kind": "availability",
+      "date": {
+        "start": "2021-06-29",
+        "precision": "day"
       },
-      "event": {
-        "type": "platform_launch",
-        "availability": "technical_preview",
-        "selectable": false,
-        "scope": "underlying_model"
-      },
+      "surface_id": "github-copilot",
+      "experience_ids": [
+        "code-completion"
+      ],
+      "model_ids": [
+        "codex"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "underlying",
       "confidence": "confirmed",
       "evidence_note": "GitHub introduced Copilot technical preview as an AI pair programmer powered by OpenAI Codex.",
+      "caveat": "Published as a technical preview.",
       "sources": [
         {
           "publisher": "GitHub",
@@ -115,23 +109,21 @@
     },
     {
       "id": "azure-openai-preview-2021-11-02",
-      "date": "2021-11-02",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-3 family",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure OpenAI Service"
+      "kind": "availability",
+      "date": {
+        "start": "2021-11-02",
+        "precision": "day"
       },
-      "event": {
-        "type": "platform_launch",
-        "availability": "invite_only_preview",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "azure-openai",
+      "model_ids": [
+        "gpt-3"
+      ],
+      "model_claim": "family",
+      "lifecycle": "limited_preview",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft introduced Azure OpenAI Service with GPT-3 access, initially by invitation.",
+      "caveat": "Access was invite-only at this point.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -144,22 +136,21 @@
     },
     {
       "id": "github-copilot-ga-2022-06-21",
-      "date": "2022-06-21",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "Codex",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot",
-        "experience": "code_completion"
+      "kind": "availability",
+      "date": {
+        "start": "2022-06-21",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga",
-        "selectable": null,
-        "scope": "underlying_model"
-      },
+      "surface_id": "github-copilot",
+      "experience_ids": [
+        "code-completion"
+      ],
+      "model_ids": [
+        "codex"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "underlying",
       "confidence": "confirmed",
       "evidence_note": "GitHub Copilot became generally available to individual developers.",
       "sources": [
@@ -174,20 +165,18 @@
     },
     {
       "id": "chatgpt-launch-2022-11-30",
-      "date": "2022-11-30",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-3.5 generation",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "ChatGPT"
+      "kind": "availability",
+      "date": {
+        "start": "2022-11-30",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "launch",
-        "selectable": null
-      },
+      "surface_id": "chatgpt",
+      "model_ids": [
+        "gpt-3-5"
+      ],
+      "model_claim": "family",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI launched ChatGPT as a research preview using a GPT-3.5-generation model.",
       "sources": [
@@ -202,21 +191,20 @@
     },
     {
       "id": "azure-openai-ga-2023-01-17",
-      "date": "2023-01-17",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-3.5 / Codex / DALL-E 2",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure OpenAI Service"
+      "kind": "availability",
+      "date": {
+        "start": "2023-01-17",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "azure-openai",
+      "model_ids": [
+        "gpt-3-5",
+        "codex",
+        "dall-e-2"
+      ],
+      "model_claim": "family",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Azure OpenAI Service became generally available.",
       "sources": [
@@ -227,31 +215,20 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "models": [
-        "GPT-3.5",
-        "Codex",
-        "DALL-E 2"
       ]
     },
     {
       "id": "pva-generative-ai-preview-2023-03-06",
-      "date": "2023-03-06",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "Azure OpenAI-backed generative AI",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Power Virtual Agents",
-        "experience": "conversation_booster"
+      "kind": "milestone",
+      "date": {
+        "start": "2023-03-06",
+        "precision": "day"
       },
-      "event": {
-        "type": "platform_launch",
-        "availability": "preview",
-        "selectable": null,
-        "scope": "underlying_model"
-      },
+      "surface_id": "power-virtual-agents",
+      "experience_ids": [
+        "conversation-booster"
+      ],
+      "model_ids": [],
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced Azure OpenAI-backed generative AI capabilities in Power Virtual Agents, forming the lineage later branded Copilot Studio.",
       "sources": [
@@ -266,20 +243,18 @@
     },
     {
       "id": "anthropic-claude1-2023-03-14",
-      "date": "2023-03-14",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude 1",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2023-03-14",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic introduced Claude.",
       "sources": [
@@ -294,20 +269,18 @@
     },
     {
       "id": "openai-gpt4-2023-03-14",
-      "date": "2023-03-14",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-4",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "OpenAI"
+      "kind": "availability",
+      "date": {
+        "start": "2023-03-14",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-4"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI released GPT-4 on 14 March 2023.",
       "sources": [
@@ -322,23 +295,21 @@
     },
     {
       "id": "m365-copilot-preview-gpt4-2023-03-16",
-      "date": "2023-03-16",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-4",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2023-03-16",
+        "precision": "day"
       },
-      "event": {
-        "type": "platform_launch",
-        "availability": "private_preview",
-        "selectable": false,
-        "scope": "underlying_model"
-      },
+      "surface_id": "m365-copilot",
+      "model_ids": [
+        "gpt-4"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "private_preview",
+      "exposure": "underlying",
       "confidence": "confirmed",
       "evidence_note": "Microsoft introduced Microsoft 365 Copilot in private preview; Microsoft subsequently confirmed it was already GPT-4 powered.",
+      "caveat": "Use 16 March as first public M365 Copilot preview; 1 November is product GA, not first GPT-4 availability.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -354,28 +325,30 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Use 16 March as first public M365 Copilot preview; 1 November is product GA, not first GPT-4 availability."
+      ]
     },
     {
       "id": "azure-gpt4-preview-2023-03-21",
-      "date": "2023-03-21",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-4",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure OpenAI Service"
+      "kind": "availability",
+      "date": {
+        "start": "2023-03-21",
+        "precision": "day"
       },
-      "event": {
-        "type": "public_preview",
-        "availability": "preview",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "azure-openai",
+      "model_ids": [
+        "gpt-4"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced GPT-4 preview in Azure OpenAI Service seven days after OpenAI's release.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt4-2023-03-14"
+        }
+      ],
       "sources": [
         {
           "publisher": "Microsoft Azure",
@@ -384,30 +357,22 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "related_events": [
-        {
-          "id": "openai-gpt4-2023-03-14",
-          "relation": "vendor_release"
-        }
       ]
     },
     {
       "id": "anthropic-claude2-2023-07-11",
-      "date": "2023-07-11",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude 2",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2023-07-11",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-2"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic released Claude 2.",
       "sources": [
@@ -422,23 +387,21 @@
     },
     {
       "id": "meta-llama2-azure-2023-07-18",
-      "date": "2023-07-18",
-      "date_precision": "day",
-      "vendor": "Meta",
-      "model": "Llama 2",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure"
+      "kind": "availability",
+      "date": {
+        "start": "2023-07-18",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "announced",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "azure-ai-catalog",
+      "model_ids": [
+        "llama-2"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Meta and Microsoft announced support for the Llama 2 family on Azure and Windows.",
+      "caveat": "This is the support announcement; use a separate event if a later exact catalogue deployment date is established.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -447,28 +410,25 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "This is the support announcement; use a separate event if a later exact catalogue deployment date is established."
+      ]
     },
     {
       "id": "m365-copilot-ga-2023-11-01",
-      "date": "2023-11-01",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-4 generation",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2023-11-01",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga",
-        "selectable": null,
-        "scope": "product_availability"
-      },
+      "surface_id": "m365-copilot",
+      "model_ids": [
+        "gpt-4"
+      ],
+      "model_claim": "family",
+      "lifecycle": "ga",
+      "exposure": "underlying",
       "confidence": "confirmed",
       "evidence_note": "Microsoft 365 Copilot became generally available for enterprise customers on 1 November 2023.",
+      "caveat": "This is product GA, not first GPT-4 availability.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -478,25 +438,22 @@
           "retrieved_at": "2026-07-26",
           "note": "This 15 November Microsoft announcement explicitly references the 1 November M365 Copilot GA."
         }
-      ],
-      "caveat": "This is product GA, not first GPT-4 availability."
+      ]
     },
     {
       "id": "openai-gpt4-turbo-2023-11-06",
-      "date": "2023-11-06",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-4 Turbo",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "OpenAI API"
+      "kind": "availability",
+      "date": {
+        "start": "2023-11-06",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "preview",
-        "selectable": null
-      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "gpt-4-turbo"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI launched the GPT-4 Turbo preview at DevDay.",
       "sources": [
@@ -511,20 +468,13 @@
     },
     {
       "id": "azure-ai-studio-preview-2023-11-15",
-      "date": "2023-11-15",
-      "date_precision": "day",
-      "vendor": "Microsoft",
-      "model": "Azure AI Studio",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure AI Studio"
+      "kind": "milestone",
+      "date": {
+        "start": "2023-11-15",
+        "precision": "day"
       },
-      "event": {
-        "type": "platform_launch",
-        "availability": "public_preview",
-        "selectable": null
-      },
+      "surface_id": "azure-ai-studio",
+      "model_ids": [],
       "confidence": "confirmed",
       "evidence_note": "Azure AI Studio entered public preview as Microsoft's broader generative-AI development environment.",
       "sources": [
@@ -539,20 +489,13 @@
     },
     {
       "id": "copilot-studio-launch-2023-11-15",
-      "date": "2023-11-15",
-      "date_precision": "day",
-      "vendor": "Microsoft",
-      "model": "Copilot Studio",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio"
+      "kind": "milestone",
+      "date": {
+        "start": "2023-11-15",
+        "precision": "day"
       },
-      "event": {
-        "type": "platform_launch",
-        "availability": "launch",
-        "selectable": null
-      },
+      "surface_id": "copilot-studio",
+      "model_ids": [],
       "confidence": "confirmed",
       "evidence_note": "Microsoft launched Copilot Studio, incorporating and expanding the Power Virtual Agents lineage.",
       "sources": [
@@ -567,20 +510,18 @@
     },
     {
       "id": "anthropic-claude2-1-2023-11-21",
-      "date": "2023-11-21",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude 2.1",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2023-11-21",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-2-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic released Claude 2.1 to its API and claude.ai.",
       "sources": [
@@ -595,22 +536,21 @@
     },
     {
       "id": "google-gemini1-5-pro-2024-02-15",
-      "date": "2024-02-15",
-      "date_precision": "day",
-      "vendor": "Google",
-      "model": "Gemini 1.5 Pro",
-      "platform": {
-        "owner": "Google",
-        "family": "Vendor",
-        "product": "Gemini"
+      "kind": "availability",
+      "date": {
+        "start": "2024-02-15",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "private_preview",
-        "selectable": null
-      },
+      "surface_id": "google-gemini",
+      "model_ids": [
+        "gemini-1-5-pro"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "private_preview",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Google introduced Gemini 1.5 and released Gemini 1.5 Pro for early testing/private preview.",
+      "caveat": "Later public-preview and GA milestones should be separate if used for lag analysis.",
       "sources": [
         {
           "publisher": "Google",
@@ -619,27 +559,26 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Later public-preview and GA milestones should be separate if used for lag analysis."
+      ]
     },
     {
       "id": "anthropic-claude3-family-2024-03-04",
-      "date": "2024-03-04",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude 3 family",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2024-03-04",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "family_launch",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-3-opus",
+        "claude-3-sonnet"
+      ],
+      "model_claim": "family",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic announced Claude 3; Opus and Sonnet were available at launch, while Haiku followed separately.",
+      "caveat": "Do not use this family announcement as Haiku's individual release date.",
       "sources": [
         {
           "publisher": "Anthropic",
@@ -648,29 +587,22 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Do not use this family announcement as Haiku's individual release date.",
-      "models": [
-        "Claude 3 Opus",
-        "Claude 3 Sonnet"
       ]
     },
     {
       "id": "anthropic-claude3-haiku-2024-03-13",
-      "date": "2024-03-13",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude 3 Haiku",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2024-03-13",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-3-haiku"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic released Claude 3 Haiku.",
       "sources": [
@@ -685,23 +617,26 @@
     },
     {
       "id": "m365-gpt4-turbo-2024-04-02",
-      "date": "2024-04-02",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-4 Turbo",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2024-04-02",
+        "precision": "day"
       },
-      "event": {
-        "type": "confirmed_in_use",
-        "availability": "production",
-        "selectable": false,
-        "scope": "underlying_model"
-      },
+      "surface_id": "m365-copilot",
+      "model_ids": [
+        "gpt-4-turbo"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "underlying",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced priority GPT-4 Turbo access for all licensed commercial Microsoft 365 Copilot customers.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt4-turbo-2023-11-06"
+        }
+      ],
       "sources": [
         {
           "publisher": "Microsoft",
@@ -710,33 +645,30 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "related_events": [
-        {
-          "id": "openai-gpt4-turbo-2023-11-06",
-          "relation": "vendor_release"
-        }
       ]
     },
     {
       "id": "azure-gpt4o-preview-2024-05-13",
-      "date": "2024-05-13",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-4o",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure OpenAI Service"
+      "kind": "availability",
+      "date": {
+        "start": "2024-05-13",
+        "precision": "day"
       },
-      "event": {
-        "type": "public_preview",
-        "availability": "preview",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "azure-openai",
+      "model_ids": [
+        "gpt-4o"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced GPT-4o preview in Azure on the same day as OpenAI's release.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt4o-2024-05-13"
+        }
+      ],
       "sources": [
         {
           "publisher": "Microsoft Azure",
@@ -745,30 +677,22 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "related_events": [
-        {
-          "id": "openai-gpt4o-2024-05-13",
-          "relation": "vendor_release"
-        }
       ]
     },
     {
       "id": "openai-gpt4o-2024-05-13",
-      "date": "2024-05-13",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-4o",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "OpenAI"
+      "kind": "availability",
+      "date": {
+        "start": "2024-05-13",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-4o"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI announced GPT-4o.",
       "sources": [
@@ -783,20 +707,18 @@
     },
     {
       "id": "anthropic-claude3-5-sonnet-2024-06-21",
-      "date": "2024-06-21",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude 3.5 Sonnet",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2024-06-21",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-3-5-sonnet"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic announced Claude 3.5 Sonnet; this project uses 21 June as the canonical release date.",
       "sources": [
@@ -811,24 +733,29 @@
     },
     {
       "id": "github-gpt4o-underlying-2024-07-31",
-      "date": "2024-07-31",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-4o",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot",
-        "experience": "Copilot Chat"
+      "kind": "availability",
+      "date": {
+        "start": "2024-07-31",
+        "precision": "day"
       },
-      "event": {
-        "type": "underlying_model",
-        "availability": "production",
-        "selectable": false,
-        "scope": "underlying_model"
-      },
+      "surface_id": "github-copilot",
+      "experience_ids": [
+        "github-copilot-chat"
+      ],
+      "model_ids": [
+        "gpt-4o"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "underlying",
       "confidence": "confirmed",
       "evidence_note": "GitHub Copilot Chat and pull-request summaries moved to GPT-4o.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt4o-2024-05-13"
+        }
+      ],
       "sources": [
         {
           "publisher": "GitHub",
@@ -837,33 +764,31 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "related_events": [
-        {
-          "id": "openai-gpt4o-2024-05-13",
-          "relation": "vendor_release"
-        }
       ]
     },
     {
       "id": "azure-o1-mini-preview-2024-09-12",
-      "date": "2024-09-12",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "o1-mini",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure AI Studio / Azure OpenAI"
+      "kind": "availability",
+      "date": {
+        "start": "2024-09-12",
+        "precision": "day"
       },
-      "event": {
-        "type": "limited_preview",
-        "availability": "restricted_preview",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "azure-openai",
+      "model_ids": [
+        "o1-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "limited_preview",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced early access to o1-preview and o1-mini for select Azure customers, alongside GitHub Models access.",
+      "caveat": "Access was restricted to selected customers at this point.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-o1-preview-2024-09-12"
+        }
+      ],
       "sources": [
         {
           "publisher": "Microsoft Azure",
@@ -871,34 +796,32 @@
           "url": "https://azure.microsoft.com/en-us/blog/introducing-o1-openais-new-reasoning-model-series-for-developers-and-enterprises-on-azure/",
           "primary": true,
           "retrieved_at": "2026-07-26"
-        }
-      ],
-      "related_events": [
-        {
-          "id": "openai-o1-preview-2024-09-12",
-          "relation": "vendor_release"
         }
       ]
     },
     {
       "id": "azure-o1-preview-2024-09-12",
-      "date": "2024-09-12",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "o1-preview",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure AI Studio / Azure OpenAI"
+      "kind": "availability",
+      "date": {
+        "start": "2024-09-12",
+        "precision": "day"
       },
-      "event": {
-        "type": "limited_preview",
-        "availability": "restricted_preview",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "azure-openai",
+      "model_ids": [
+        "o1-preview"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "limited_preview",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced early access to o1-preview and o1-mini for select Azure customers, alongside GitHub Models access.",
+      "caveat": "Access was restricted to selected customers at this point.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-o1-preview-2024-09-12"
+        }
+      ],
       "sources": [
         {
           "publisher": "Microsoft Azure",
@@ -907,30 +830,23 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "related_events": [
-        {
-          "id": "openai-o1-preview-2024-09-12",
-          "relation": "vendor_release"
-        }
       ]
     },
     {
       "id": "openai-o1-preview-2024-09-12",
-      "date": "2024-09-12",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "o1-preview / o1-mini",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "OpenAI"
+      "kind": "availability",
+      "date": {
+        "start": "2024-09-12",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "preview",
-        "selectable": null
-      },
+      "surface_id": "openai",
+      "model_ids": [
+        "o1-preview",
+        "o1-mini"
+      ],
+      "model_claim": "family",
+      "lifecycle": "public_preview",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI introduced o1-preview and o1-mini.",
       "sources": [
@@ -941,31 +857,25 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "models": [
-        "o1-preview",
-        "o1-mini"
       ]
     },
     {
       "id": "m365-gpt4o-wave2-2024-09-16",
-      "date": "2024-09-16",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-4o",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2024-09-16",
+        "precision": "day"
       },
-      "event": {
-        "type": "confirmed_in_use",
-        "availability": "production",
-        "selectable": false,
-        "scope": "underlying_model"
-      },
+      "surface_id": "m365-copilot",
+      "model_ids": [
+        "gpt-4o"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "underlying",
       "confidence": "confirmed",
       "evidence_note": "Microsoft's Wave 2 announcement described M365 Copilot as 'now with GPT-4o and enhanced orchestration'.",
+      "caveat": "Treat this as first strong public confirmation, not necessarily the literal backend cutover date.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -974,28 +884,23 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Treat this as first strong public confirmation, not necessarily the literal backend cutover date."
+      ]
     },
     {
       "id": "m365-o1-announced-2024-09-16",
-      "date": "2024-09-16",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "o1",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot"
+      "kind": "announcement",
+      "date": {
+        "start": "2024-09-16",
+        "precision": "day"
       },
-      "event": {
-        "type": "rollout",
-        "availability": "announced",
-        "selectable": null,
-        "scope": "announced_future_availability"
-      },
+      "surface_id": "m365-copilot",
+      "model_ids": [
+        "o1"
+      ],
+      "model_claim": "specific",
       "confidence": "confirmed",
       "evidence_note": "Wave 2 said Microsoft would add OpenAI o1 models to Microsoft 365 Copilot.",
+      "caveat": "Do not classify this as o1 GA or first use.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -1004,29 +909,28 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Do not classify this as o1 GA or first use."
+      ]
     },
     {
       "id": "github-o1-mini-waitlist-2024-09-19",
-      "date": "2024-09-19",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "o1-mini",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot",
-        "experience": "Copilot Chat"
+      "kind": "availability",
+      "date": {
+        "start": "2024-09-19",
+        "precision": "day"
       },
-      "event": {
-        "type": "limited_preview",
-        "availability": "waitlist",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "experience_ids": [
+        "github-copilot-chat"
+      ],
+      "model_ids": [
+        "o1-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "limited_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "GitHub opened a waitlist for early o1 access in Copilot and GitHub Models.",
+      "caveat": "Access was gated behind a waitlist at this point.",
       "sources": [
         {
           "publisher": "GitHub",
@@ -1039,24 +943,24 @@
     },
     {
       "id": "github-o1-preview-waitlist-2024-09-19",
-      "date": "2024-09-19",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "o1-preview",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot",
-        "experience": "Copilot Chat"
+      "kind": "availability",
+      "date": {
+        "start": "2024-09-19",
+        "precision": "day"
       },
-      "event": {
-        "type": "limited_preview",
-        "availability": "waitlist",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "experience_ids": [
+        "github-copilot-chat"
+      ],
+      "model_ids": [
+        "o1-preview"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "limited_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "GitHub opened a waitlist for early o1 access in Copilot and GitHub Models.",
+      "caveat": "Access was gated behind a waitlist at this point.",
       "sources": [
         {
           "publisher": "GitHub",
@@ -1069,23 +973,22 @@
     },
     {
       "id": "github-multimodel-announcement-2024-10-29",
-      "date": "2024-10-29",
-      "date_precision": "day",
-      "vendor": "Multiple",
-      "model": "Claude 3.5 Sonnet / Gemini 1.5 Pro / o1 family",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "announcement",
+      "date": {
+        "start": "2024-10-29",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "announced_rollout",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-3-5-sonnet",
+        "gemini-1-5-pro",
+        "o1-preview",
+        "o1-mini"
+      ],
+      "model_claim": "family",
       "confidence": "confirmed",
       "evidence_note": "At GitHub Universe, GitHub announced multi-model Copilot choice spanning Anthropic, Google and OpenAI.",
+      "caveat": "Model-specific first availability dates must be recorded independently. Announced with a progressive rollout.",
       "sources": [
         {
           "publisher": "GitHub",
@@ -1094,32 +997,22 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Model-specific first availability dates must be recorded independently.",
-      "models": [
-        "Claude 3.5 Sonnet",
-        "Gemini 1.5 Pro",
-        "o1-preview",
-        "o1-mini"
       ]
     },
     {
       "id": "github-claude3-5-sonnet-all-users-2024-11-01",
-      "date": "2024-11-01",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude 3.5 Sonnet",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2024-11-01",
+        "precision": "day"
       },
-      "event": {
-        "type": "public_preview",
-        "availability": "public_preview",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-3-5-sonnet"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Claude 3.5 Sonnet became available in public preview to all Copilot users, subject to managed-plan policy.",
       "sources": [
@@ -1134,20 +1027,13 @@
     },
     {
       "id": "azure-ai-foundry-announced-2024-11-19",
-      "date": "2024-11-19",
-      "date_precision": "day",
-      "vendor": "Microsoft",
-      "model": "Azure AI Foundry",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure AI Foundry"
+      "kind": "milestone",
+      "date": {
+        "start": "2024-11-19",
+        "precision": "day"
       },
-      "event": {
-        "type": "platform_launch",
-        "availability": "announced",
-        "selectable": null
-      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [],
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced Azure AI Foundry as the next evolution of its AI application and model platform.",
       "sources": [
@@ -1162,20 +1048,18 @@
     },
     {
       "id": "openai-o1-full-2024-12-17",
-      "date": "2024-12-17",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "o1",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "OpenAI API"
+      "kind": "availability",
+      "date": {
+        "start": "2024-12-17",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "o1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI announced the full o1 model and new developer tools.",
       "sources": [
@@ -1190,21 +1074,18 @@
     },
     {
       "id": "github-o1-full-preview-2024-12-20",
-      "date": "2024-12-20",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "o1",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2024-12-20",
+        "precision": "day"
       },
-      "event": {
-        "type": "public_preview",
-        "availability": "public_preview",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "o1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "GitHub made the full o1 model available in Copilot Chat public preview and GitHub Models.",
       "sources": [
@@ -1219,23 +1100,21 @@
     },
     {
       "id": "deepseek-r1-foundry-2025-01-29",
-      "date": "2025-01-29",
-      "date_precision": "day",
-      "vendor": "DeepSeek",
-      "model": "DeepSeek-R1",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure AI Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2025-01-29",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "public_preview",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "deepseek-r1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "DeepSeek-R1 became available through Azure AI Foundry and GitHub Models.",
+      "caveat": "GitHub Models is not evidence of GitHub Copilot model-picker availability.",
       "sources": [
         {
           "publisher": "Microsoft Azure",
@@ -1244,28 +1123,25 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "GitHub Models is not evidence of GitHub Copilot model-picker availability."
+      ]
     },
     {
       "id": "deepseek-r1-github-models-2025-01-29",
-      "date": "2025-01-29",
-      "date_precision": "day",
-      "vendor": "DeepSeek",
-      "model": "DeepSeek-R1",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Models",
-        "product": "GitHub Models"
+      "kind": "availability",
+      "date": {
+        "start": "2025-01-29",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "public_preview",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "github-models",
+      "model_ids": [
+        "deepseek-r1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "DeepSeek-R1 became available through Azure AI Foundry and GitHub Models.",
+      "caveat": "GitHub Models is not evidence of GitHub Copilot model-picker availability.",
       "sources": [
         {
           "publisher": "GitHub",
@@ -1274,27 +1150,30 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "GitHub Models is not evidence of GitHub Copilot model-picker availability."
+      ]
     },
     {
       "id": "azure-o3-mini-2025-01-31",
-      "date": "2025-01-31",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "o3-mini",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure OpenAI Service"
+      "kind": "availability",
+      "date": {
+        "start": "2025-01-31",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "available",
-        "selectable": null
-      },
+      "surface_id": "azure-openai",
+      "model_ids": [
+        "o3-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced o3-mini availability in Azure OpenAI Service on launch day.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-o3-mini-2025-01-31"
+        }
+      ],
       "sources": [
         {
           "publisher": "Microsoft Azure",
@@ -1303,33 +1182,30 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "related_events": [
-        {
-          "id": "openai-o3-mini-2025-01-31",
-          "relation": "vendor_release"
-        }
       ]
     },
     {
       "id": "github-o3-mini-preview-2025-01-31",
-      "date": "2025-01-31",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "o3-mini",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2025-01-31",
+        "precision": "day"
       },
-      "event": {
-        "type": "public_preview",
-        "availability": "public_preview",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "o3-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "o3-mini entered public preview in GitHub Copilot and GitHub Models on launch day.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-o3-mini-2025-01-31"
+        }
+      ],
       "sources": [
         {
           "publisher": "GitHub",
@@ -1338,30 +1214,22 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "related_events": [
-        {
-          "id": "openai-o3-mini-2025-01-31",
-          "relation": "vendor_release"
-        }
       ]
     },
     {
       "id": "openai-o3-mini-2025-01-31",
-      "date": "2025-01-31",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "o3-mini",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "OpenAI"
+      "kind": "availability",
+      "date": {
+        "start": "2025-01-31",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "openai",
+      "model_ids": [
+        "o3-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI released o3-mini.",
       "sources": [
@@ -1376,22 +1244,22 @@
     },
     {
       "id": "xai-grok3-2025-02-19",
-      "date": "2025-02-19",
-      "date_precision": "day",
-      "vendor": "xAI",
-      "model": "Grok 3 / Grok 3 mini",
-      "platform": {
-        "owner": "xAI",
-        "family": "Vendor",
-        "product": "Grok"
+      "kind": "availability",
+      "date": {
+        "start": "2025-02-19",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "beta",
-        "selectable": null
-      },
+      "surface_id": "xai-grok",
+      "model_ids": [
+        "grok-3",
+        "grok-3-mini"
+      ],
+      "model_claim": "family",
+      "lifecycle": "public_preview",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "xAI unveiled Grok 3 Beta and Grok 3 mini.",
+      "caveat": "Published as a beta release.",
       "sources": [
         {
           "publisher": "xAI",
@@ -1400,28 +1268,22 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "models": [
-        "Grok 3",
-        "Grok 3 mini"
       ]
     },
     {
       "id": "anthropic-claude3-7-sonnet-2025-02-24",
-      "date": "2025-02-24",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude 3.7 Sonnet",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2025-02-24",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-3-7-sonnet"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic released Claude 3.7 Sonnet.",
       "sources": [
@@ -1436,21 +1298,18 @@
     },
     {
       "id": "github-claude3-7-preview-2025-02-24",
-      "date": "2025-02-24",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude 3.7 Sonnet",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2025-02-24",
+        "precision": "day"
       },
-      "event": {
-        "type": "public_preview",
-        "availability": "public_preview",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-3-7-sonnet"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Claude 3.7 Sonnet entered GitHub Copilot public preview on its release day.",
       "sources": [
@@ -1465,24 +1324,22 @@
     },
     {
       "id": "m365-analyst-announced-2025-03-25",
-      "date": "2025-03-25",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "o3-mini",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot",
-        "experience": "Analyst"
+      "kind": "announcement",
+      "date": {
+        "start": "2025-03-25",
+        "precision": "day"
       },
-      "event": {
-        "type": "specialist_experience",
-        "availability": "announced",
-        "selectable": false,
-        "scope": "embedded_agent"
-      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "analyst"
+      ],
+      "model_ids": [
+        "o3-mini"
+      ],
+      "model_claim": "specific",
       "confidence": "confirmed",
       "evidence_note": "Microsoft introduced Analyst, later explicitly documented as built on o3-mini.",
+      "caveat": "Do not record this as general o3/o3-mini Copilot Chat picker availability.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -1491,29 +1348,26 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Do not record this as general o3/o3-mini Copilot Chat picker availability."
+      ]
     },
     {
       "id": "m365-researcher-announced-2025-03-25",
-      "date": "2025-03-25",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "OpenAI deep research model",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot",
-        "experience": "Researcher"
+      "kind": "announcement",
+      "date": {
+        "start": "2025-03-25",
+        "precision": "day"
       },
-      "event": {
-        "type": "specialist_experience",
-        "availability": "announced",
-        "selectable": false,
-        "scope": "embedded_agent"
-      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "researcher"
+      ],
+      "model_ids": [
+        "openai-deep-research"
+      ],
+      "model_claim": "specific",
       "confidence": "confirmed",
       "evidence_note": "Microsoft introduced Researcher, combining OpenAI deep research technology with Microsoft 365 Copilot orchestration.",
+      "caveat": "Do not record this as general o3/o3-mini Copilot Chat picker availability.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -1522,29 +1376,28 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Do not record this as general o3/o3-mini Copilot Chat picker availability."
+      ]
     },
     {
       "id": "m365-analyst-frontier-2025-04",
-      "date": "2025-04",
-      "date_precision": "month",
-      "vendor": "OpenAI",
-      "model": "o3-mini",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot",
-        "experience": "Analyst"
+      "kind": "availability",
+      "date": {
+        "start": "2025-04",
+        "precision": "month"
       },
-      "event": {
-        "type": "specialist_experience",
-        "availability": "frontier_preview",
-        "selectable": false,
-        "scope": "embedded_agent"
-      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "analyst"
+      ],
+      "model_ids": [
+        "o3-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "limited_preview",
+      "exposure": "specialist",
       "confidence": "supported",
       "evidence_note": "Microsoft's June GA announcement states Researcher and Analyst debuted through Frontier in April; Analyst is explicitly built on o3-mini.",
+      "caveat": "Delivered through the Microsoft 365 Copilot Frontier early-access programme.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -1557,22 +1410,28 @@
     },
     {
       "id": "azure-gpt4-1-2025-04-14",
-      "date": "2025-04-14",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-4.1 family",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure AI Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2025-04-14",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "available",
-        "selectable": null
-      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "gpt-4-1",
+        "gpt-4-1-mini",
+        "gpt-4-1-nano"
+      ],
+      "model_claim": "family",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced the GPT-4.1 model series for Azure AI Foundry developers on launch day.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt4-1-2025-04-14"
+        }
+      ],
       "sources": [
         {
           "publisher": "Microsoft Azure",
@@ -1581,35 +1440,24 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "related_events": [
-        {
-          "id": "openai-gpt4-1-2025-04-14",
-          "relation": "vendor_release"
-        }
-      ],
-      "models": [
-        "GPT-4.1",
-        "GPT-4.1 mini",
-        "GPT-4.1 nano"
       ]
     },
     {
       "id": "openai-gpt4-1-2025-04-14",
-      "date": "2025-04-14",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-4.1 family",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "OpenAI API"
+      "kind": "availability",
+      "date": {
+        "start": "2025-04-14",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "gpt-4-1",
+        "gpt-4-1-mini",
+        "gpt-4-1-nano"
+      ],
+      "model_claim": "family",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI introduced GPT-4.1, GPT-4.1 mini and GPT-4.1 nano.",
       "sources": [
@@ -1620,30 +1468,22 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "models": [
-        "GPT-4.1",
-        "GPT-4.1 mini",
-        "GPT-4.1 nano"
       ]
     },
     {
       "id": "github-o3-preview-2025-04-16",
-      "date": "2025-04-16",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "o3",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2025-04-16",
+        "precision": "day"
       },
-      "event": {
-        "type": "public_preview",
-        "availability": "public_preview",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "o3"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI o3 and o4-mini entered public preview in GitHub Copilot and GitHub Models.",
       "sources": [
@@ -1658,21 +1498,18 @@
     },
     {
       "id": "github-o4-mini-preview-2025-04-16",
-      "date": "2025-04-16",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "o4-mini",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2025-04-16",
+        "precision": "day"
       },
-      "event": {
-        "type": "public_preview",
-        "availability": "public_preview",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "o4-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI o3 and o4-mini entered public preview in GitHub Copilot and GitHub Models.",
       "sources": [
@@ -1687,23 +1524,21 @@
     },
     {
       "id": "foundry-grok3-2025-05-19",
-      "date": "2025-05-19",
-      "date_precision": "day",
-      "vendor": "xAI",
-      "model": "Grok 3",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure AI Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2025-05-19",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "available",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "grok-3"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
       "confidence": "supported",
       "evidence_note": "Grok 3 and Grok 3 Mini became available through Azure AI Foundry around Microsoft Build 2025.",
+      "caveat": "Upgrade to confirmed-first-date if the original 19 May Microsoft launch post is pinned.",
       "sources": [
         {
           "publisher": "TechCrunch",
@@ -1720,28 +1555,25 @@
           "retrieved_at": "2026-07-26",
           "note": "Primary Microsoft recap confirms availability but is not the first-day announcement."
         }
-      ],
-      "caveat": "Upgrade to confirmed-first-date if the original 19 May Microsoft launch post is pinned."
+      ]
     },
     {
       "id": "foundry-grok3-mini-2025-05-19",
-      "date": "2025-05-19",
-      "date_precision": "day",
-      "vendor": "xAI",
-      "model": "Grok 3 Mini",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure AI Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2025-05-19",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "available",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "grok-3-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
       "confidence": "supported",
       "evidence_note": "Grok 3 and Grok 3 Mini became available through Azure AI Foundry around Microsoft Build 2025.",
+      "caveat": "Upgrade to confirmed-first-date if the original 19 May Microsoft launch post is pinned.",
       "sources": [
         {
           "publisher": "TechCrunch",
@@ -1758,25 +1590,23 @@
           "retrieved_at": "2026-07-26",
           "note": "Primary Microsoft recap confirms availability but is not the first-day announcement."
         }
-      ],
-      "caveat": "Upgrade to confirmed-first-date if the original 19 May Microsoft launch post is pinned."
+      ]
     },
     {
       "id": "anthropic-claude4-2025-05-22",
-      "date": "2025-05-22",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Sonnet 4 / Claude Opus 4",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2025-05-22",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-sonnet-4",
+        "claude-opus-4"
+      ],
+      "model_claim": "family",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic released Claude Sonnet 4 and Claude Opus 4.",
       "sources": [
@@ -1787,29 +1617,22 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "models": [
-        "Claude Sonnet 4",
-        "Claude Opus 4"
       ]
     },
     {
       "id": "github-opus4-preview-2025-05-22",
-      "date": "2025-05-22",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 4",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2025-05-22",
+        "precision": "day"
       },
-      "event": {
-        "type": "public_preview",
-        "availability": "public_preview",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-opus-4"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Claude Sonnet 4 and Opus 4 entered public preview in GitHub Copilot on release day.",
       "sources": [
@@ -1824,21 +1647,18 @@
     },
     {
       "id": "github-sonnet4-preview-2025-05-22",
-      "date": "2025-05-22",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Sonnet 4",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2025-05-22",
+        "precision": "day"
       },
-      "event": {
-        "type": "public_preview",
-        "availability": "public_preview",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-sonnet-4"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Claude Sonnet 4 and Opus 4 entered public preview in GitHub Copilot on release day.",
       "sources": [
@@ -1853,22 +1673,21 @@
     },
     {
       "id": "m365-analyst-ga-2025-06-02",
-      "date": "2025-06-02",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "o3-mini",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot",
-        "experience": "Analyst"
+      "kind": "availability",
+      "date": {
+        "start": "2025-06-02",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga",
-        "selectable": false,
-        "scope": "embedded_agent"
-      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "analyst"
+      ],
+      "model_ids": [
+        "o3-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "specialist",
       "confidence": "confirmed",
       "evidence_note": "Researcher and Analyst became generally available; Microsoft explicitly describes Analyst as built on o3-mini.",
       "sources": [
@@ -1883,20 +1702,18 @@
     },
     {
       "id": "anthropic-opus4-1-2025-08-05",
-      "date": "2025-08-05",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 4.1",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-05",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-opus-4-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic released Claude Opus 4.1.",
       "sources": [
@@ -1911,21 +1728,18 @@
     },
     {
       "id": "foundry-gpt5-2025-08-07",
-      "date": "2025-08-07",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure AI Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-07",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "gpt-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "GPT-5 became available in Azure AI Foundry at launch.",
       "sources": [
@@ -1940,21 +1754,18 @@
     },
     {
       "id": "github-gpt5-preview-2025-08-07",
-      "date": "2025-08-07",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-07",
+        "precision": "day"
       },
-      "event": {
-        "type": "public_preview",
-        "availability": "public_preview",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "GPT-5 entered public preview in GitHub Copilot on release day.",
       "sources": [
@@ -1969,21 +1780,18 @@
     },
     {
       "id": "m365-gpt5-2025-08-07",
-      "date": "2025-08-07",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-07",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "rollout",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "m365-copilot",
+      "model_ids": [
+        "gpt-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced same-day GPT-5 rollout in Microsoft 365 Copilot, including a visible 'Try GPT-5' experience.",
       "sources": [
@@ -1998,20 +1806,18 @@
     },
     {
       "id": "openai-gpt5-2025-08-07",
-      "date": "2025-08-07",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "OpenAI"
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-07",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI released GPT-5.",
       "sources": [
@@ -2026,23 +1832,21 @@
     },
     {
       "id": "studio-gpt5-2025-08-07",
-      "date": "2025-08-07",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio"
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-07",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "early_release",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "gpt-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Copilot Studio added GPT-5 and formalised primary-model selection for orchestration/generative answers.",
+      "caveat": "Published under GitHub's early-release programme.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -2055,21 +1859,18 @@
     },
     {
       "id": "github-gpt5-ga-2025-09-09",
-      "date": "2025-09-09",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2025-09-09",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "GPT-5 and GPT-5 mini became generally available in GitHub Copilot.",
       "sources": [
@@ -2084,21 +1885,18 @@
     },
     {
       "id": "github-gpt5-mini-ga-2025-09-09",
-      "date": "2025-09-09",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5 mini",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2025-09-09",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-5-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "GPT-5 and GPT-5 mini became generally available in GitHub Copilot.",
       "sources": [
@@ -2113,24 +1911,24 @@
     },
     {
       "id": "m365-researcher-opus4-1-2025-09-24",
-      "date": "2025-09-24",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 4.1",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot",
-        "experience": "Researcher"
+      "kind": "availability",
+      "date": {
+        "start": "2025-09-24",
+        "precision": "day"
       },
-      "event": {
-        "type": "specialist_experience",
-        "availability": "frontier",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "researcher"
+      ],
+      "model_ids": [
+        "claude-opus-4-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "limited_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Microsoft added Claude Opus 4.1 as an alternative model in Researcher.",
+      "caveat": "Do not attribute Claude Sonnet 4 to Researcher from this event. Delivered through the Microsoft 365 Copilot Frontier early-access programme.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -2139,28 +1937,25 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Do not attribute Claude Sonnet 4 to Researcher from this event."
+      ]
     },
     {
       "id": "studio-opus4-1-2025-09-24",
-      "date": "2025-09-24",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 4.1",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio"
+      "kind": "availability",
+      "date": {
+        "start": "2025-09-24",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "early_release",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "claude-opus-4-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Copilot Studio added Claude Sonnet 4 and Claude Opus 4.1 as early-release model choices.",
+      "caveat": "Published under GitHub's early-release programme.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -2173,23 +1968,21 @@
     },
     {
       "id": "studio-sonnet4-2025-09-24",
-      "date": "2025-09-24",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Sonnet 4",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio"
+      "kind": "availability",
+      "date": {
+        "start": "2025-09-24",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "early_release",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "claude-sonnet-4"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Copilot Studio added Claude Sonnet 4 and Claude Opus 4.1 as early-release model choices.",
+      "caveat": "Published under GitHub's early-release programme.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -2202,20 +1995,18 @@
     },
     {
       "id": "anthropic-sonnet4-5-2025-09-29",
-      "date": "2025-09-29",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Sonnet 4.5",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2025-09-29",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-sonnet-4-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic released Claude Sonnet 4.5.",
       "sources": [
@@ -2230,21 +2021,18 @@
     },
     {
       "id": "github-sonnet4-5-preview-2025-09-29",
-      "date": "2025-09-29",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Sonnet 4.5",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2025-09-29",
+        "precision": "day"
       },
-      "event": {
-        "type": "public_preview",
-        "availability": "public_preview",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-sonnet-4-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Claude Sonnet 4.5 entered GitHub Copilot public preview on release day.",
       "sources": [
@@ -2259,23 +2047,21 @@
     },
     {
       "id": "studio-sonnet4-5-2025-09-29",
-      "date": "2025-09-29",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Sonnet 4.5",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio"
+      "kind": "availability",
+      "date": {
+        "start": "2025-09-29",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "early_release",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "claude-sonnet-4-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Copilot Studio added Claude Sonnet 4.5 on release day.",
+      "caveat": "Published under GitHub's early-release programme.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -2288,21 +2074,18 @@
     },
     {
       "id": "xai-grok4-foundry-2025-09-29",
-      "date": "2025-09-29",
-      "date_precision": "day",
-      "vendor": "xAI",
-      "model": "Grok 4",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Azure AI Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2025-09-29",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "available",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "grok-4"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced Grok 4 availability in Azure AI Foundry.",
       "sources": [
@@ -2317,23 +2100,21 @@
     },
     {
       "id": "studio-gpt4-1-default-2025-10",
-      "date": "2025-10",
-      "date_precision": "month",
-      "vendor": "OpenAI",
-      "model": "GPT-4.1",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio"
+      "kind": "availability",
+      "date": {
+        "start": "2025-10",
+        "precision": "month"
       },
-      "event": {
-        "type": "default_model",
-        "availability": "rollout",
-        "selectable": null,
-        "scope": "default_model"
-      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "gpt-4-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "default",
       "confidence": "supported",
       "evidence_note": "Copilot Studio release notes document GPT-4o retirement for normal generative orchestration and transition to GPT-4.1 as default.",
+      "caveat": "Historical change was around 27–31 October; pin exact day if an archived release-note entry is preserved.",
       "sources": [
         {
           "publisher": "Microsoft Learn",
@@ -2342,26 +2123,22 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Historical change was around 27–31 October; pin exact day if an archived release-note entry is preserved."
+      ]
     },
     {
       "id": "github-sonnet4-5-ga-2025-10-13",
-      "date": "2025-10-13",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Sonnet 4.5",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2025-10-13",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-sonnet-4-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Claude Sonnet 4.5 became generally available in GitHub Copilot.",
       "sources": [
@@ -2376,20 +2153,18 @@
     },
     {
       "id": "anthropic-haiku4-5-2025-10-15",
-      "date": "2025-10-15",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Haiku 4.5",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2025-10-15",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-haiku-4-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic released Claude Haiku 4.5.",
       "sources": [
@@ -2404,23 +2179,21 @@
     },
     {
       "id": "studio-gpt5-1-2025-11-12",
-      "date": "2025-11-12",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.1",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio"
+      "kind": "availability",
+      "date": {
+        "start": "2025-11-12",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "experimental",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "gpt-5-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Copilot Studio added GPT-5.1 as an experimental model.",
+      "caveat": "No equivalent clean first general M365 Copilot availability date has been established. Published as an experimental model.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -2429,26 +2202,22 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "No equivalent clean first general M365 Copilot availability date has been established."
+      ]
     },
     {
       "id": "foundry-haiku4-5-2025-11-18",
-      "date": "2025-11-18",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Haiku 4.5",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Microsoft Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2025-11-18",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "preview",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "claude-haiku-4-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced Claude models in Microsoft Foundry.",
       "sources": [
@@ -2463,21 +2232,18 @@
     },
     {
       "id": "foundry-opus4-1-2025-11-18",
-      "date": "2025-11-18",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 4.1",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Microsoft Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2025-11-18",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "preview",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "claude-opus-4-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced Claude models in Microsoft Foundry.",
       "sources": [
@@ -2492,21 +2258,18 @@
     },
     {
       "id": "foundry-sonnet4-5-2025-11-18",
-      "date": "2025-11-18",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Sonnet 4.5",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Microsoft Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2025-11-18",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "preview",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "claude-sonnet-4-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced Claude models in Microsoft Foundry.",
       "sources": [
@@ -2521,20 +2284,18 @@
     },
     {
       "id": "anthropic-opus4-5-2025-11-24",
-      "date": "2025-11-24",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 4.5",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2025-11-24",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-opus-4-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic released Claude Opus 4.5.",
       "sources": [
@@ -2549,23 +2310,21 @@
     },
     {
       "id": "studio-opus4-5-2025-11-24",
-      "date": "2025-11-24",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 4.5",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio"
+      "kind": "availability",
+      "date": {
+        "start": "2025-11-24",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "early_release",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "claude-opus-4-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Copilot Studio added Claude Opus 4.5 on release day; Microsoft also announced Foundry public-preview availability.",
+      "caveat": "Published under GitHub's early-release programme.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -2578,21 +2337,18 @@
     },
     {
       "id": "foundry-mistral-large3-2025-12-02",
-      "date": "2025-12-02",
-      "date_precision": "day",
-      "vendor": "Mistral AI",
-      "model": "Mistral Large 3",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Microsoft Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2025-12-02",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "available",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "mistral-large-3"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced Mistral Large 3 availability in Microsoft Foundry on the vendor release date.",
       "sources": [
@@ -2607,20 +2363,19 @@
     },
     {
       "id": "mistral3-2025-12-02",
-      "date": "2025-12-02",
-      "date_precision": "day",
-      "vendor": "Mistral AI",
-      "model": "Mistral 3 / Mistral Large 3",
-      "platform": {
-        "owner": "Mistral AI",
-        "family": "Vendor",
-        "product": "Mistral"
+      "kind": "availability",
+      "date": {
+        "start": "2025-12-02",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "mistral",
+      "model_ids": [
+        "mistral-3",
+        "mistral-large-3"
+      ],
+      "model_claim": "family",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Mistral announced Mistral 3, including Mistral Large 3.",
       "sources": [
@@ -2631,31 +2386,23 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "models": [
-        "Mistral 3",
-        "Mistral Large 3"
       ]
     },
     {
       "id": "m365-anthropic-admin-control-2025-12-08",
-      "date": "2025-12-08",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude models",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 admin"
+      "kind": "policy",
+      "date": {
+        "start": "2025-12-08",
+        "precision": "day"
       },
-      "event": {
-        "type": "admin_policy",
-        "availability": "introduced",
-        "selectable": null,
-        "scope": "governance"
+      "surface_id": "m365-admin",
+      "model_ids": [],
+      "applies_to": {
+        "vendor": "Anthropic"
       },
       "confidence": "supported",
       "evidence_note": "Microsoft documented administrative controls for connecting Copilot to Anthropic as an AI subprocessor ahead of the January transition.",
+      "caveat": "Use page history/change log if the precise 8 December UI introduction needs stricter evidence.",
       "sources": [
         {
           "publisher": "Microsoft Learn",
@@ -2664,26 +2411,22 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Use page history/change log if the precise 8 December UI introduction needs stricter evidence."
+      ]
     },
     {
       "id": "m365-gpt5-2-2025-12-11",
-      "date": "2025-12-11",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.2",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2025-12-11",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "available",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "m365-copilot",
+      "model_ids": [
+        "gpt-5-2"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced GPT-5.2 in Microsoft 365 Copilot, explicitly exposed through the model selector.",
       "sources": [
@@ -2698,20 +2441,18 @@
     },
     {
       "id": "openai-gpt5-2-2025-12-11",
-      "date": "2025-12-11",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.2",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "OpenAI"
+      "kind": "availability",
+      "date": {
+        "start": "2025-12-11",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-2"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI released GPT-5.2.",
       "sources": [
@@ -2726,21 +2467,18 @@
     },
     {
       "id": "studio-gpt5-2-2025-12-11",
-      "date": "2025-12-11",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.2",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio"
+      "kind": "availability",
+      "date": {
+        "start": "2025-12-11",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "available",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "gpt-5-2"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "The GPT-5.2 announcement also describes same-day availability in Copilot Studio.",
       "sources": [
@@ -2755,21 +2493,18 @@
     },
     {
       "id": "foundry-deepseek-v3-2-2025-12-15",
-      "date": "2025-12-15",
-      "date_precision": "day",
-      "vendor": "DeepSeek",
-      "model": "DeepSeek V3.2",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Microsoft Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2025-12-15",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "public_preview",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "deepseek-v3-2"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft's Foundry recap states DeepSeek V3.2 and V3.2-Speciale launched in public preview on 15 December 2025.",
       "sources": [
@@ -2784,21 +2519,18 @@
     },
     {
       "id": "foundry-deepseek-v3-2-speciale-2025-12-15",
-      "date": "2025-12-15",
-      "date_precision": "day",
-      "vendor": "DeepSeek",
-      "model": "DeepSeek V3.2-Speciale",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Microsoft Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2025-12-15",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "public_preview",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "deepseek-v3-2-speciale"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft's Foundry recap states DeepSeek V3.2 and V3.2-Speciale launched in public preview on 15 December 2025.",
       "sources": [
@@ -2813,23 +2545,19 @@
     },
     {
       "id": "studio-anthropic-default-policy-2026-01-06",
-      "date": "2026-01-06",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude models",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio"
+      "kind": "policy",
+      "date": {
+        "start": "2026-01-06",
+        "precision": "day"
       },
-      "event": {
-        "type": "admin_policy",
-        "availability": "policy_update",
-        "selectable": null,
-        "scope": "governance"
+      "surface_id": "copilot-studio",
+      "model_ids": [],
+      "applies_to": {
+        "vendor": "Anthropic"
       },
       "confidence": "confirmed",
       "evidence_note": "Microsoft updated Studio guidance so Anthropic models were enabled by default in most supported geographies, with different treatment for EU/EFTA/UK.",
+      "caveat": "Preserve geography-specific wording; do not generalise globally.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -2838,25 +2566,19 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Preserve geography-specific wording; do not generalise globally."
+      ]
     },
     {
       "id": "m365-anthropic-subprocessor-2026-01-07",
-      "date": "2026-01-07",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude models",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot"
+      "kind": "policy",
+      "date": {
+        "start": "2026-01-07",
+        "precision": "day"
       },
-      "event": {
-        "type": "admin_policy",
-        "availability": "policy_update",
-        "selectable": null,
-        "scope": "governance"
+      "surface_id": "m365-copilot",
+      "model_ids": [],
+      "applies_to": {
+        "vendor": "Anthropic"
       },
       "confidence": "confirmed",
       "evidence_note": "Anthropic began operating under Microsoft's documented AI-subprocessor arrangement for relevant Microsoft 365 Copilot scenarios.",
@@ -2872,20 +2594,18 @@
     },
     {
       "id": "anthropic-sonnet4-6-2026-02-17",
-      "date": "2026-02-17",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Sonnet 4.6",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2026-02-17",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic released Claude Sonnet 4.6.",
       "sources": [
@@ -2900,23 +2620,21 @@
     },
     {
       "id": "github-sonnet4-6-2026-02-17",
-      "date": "2026-02-17",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Sonnet 4.6",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-02-17",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga_rollout",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "GitHub announced Claude Sonnet 4.6 generally available and rolling out in Copilot on release day.",
+      "caveat": "Generally available and rolling out progressively.",
       "sources": [
         {
           "publisher": "GitHub",
@@ -2929,22 +2647,21 @@
     },
     {
       "id": "m365-gpt5-3-instant-2026-03-03",
-      "date": "2026-03-03",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.3 Instant",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot",
-        "experience": "Quick response"
+      "kind": "availability",
+      "date": {
+        "start": "2026-03-03",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "rollout",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "quick-response"
+      ],
+      "model_ids": [
+        "gpt-5-3-instant"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced GPT-5.3 Instant in Microsoft 365 Copilot as the Quick response option.",
       "sources": [
@@ -2959,20 +2676,18 @@
     },
     {
       "id": "openai-gpt5-3-instant-2026-03-03",
-      "date": "2026-03-03",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.3 Instant",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "OpenAI"
+      "kind": "availability",
+      "date": {
+        "start": "2026-03-03",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-3-instant"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI released GPT-5.3 Instant.",
       "sources": [
@@ -2987,24 +2702,21 @@
     },
     {
       "id": "studio-gpt5-3-chat-2026-03-03",
-      "date": "2026-03-03",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.3 Instant",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio",
-        "experience": "GPT-5.3 Chat"
+      "kind": "availability",
+      "date": {
+        "start": "2026-03-03",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "early_release",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "gpt-5-3-instant"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Copilot Studio received GPT-5.3 Instant as GPT-5.3 Chat.",
+      "caveat": "Published under GitHub's early-release programme.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -3017,20 +2729,18 @@
     },
     {
       "id": "openai-gpt5-4-2026-03-05",
-      "date": "2026-03-05",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.4",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "OpenAI"
+      "kind": "availability",
+      "date": {
+        "start": "2026-03-05",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-4"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI released GPT-5.4 in ChatGPT, the API and Codex.",
       "sources": [
@@ -3045,22 +2755,21 @@
     },
     {
       "id": "m365-gpt5-4-thinking-2026-03-06",
-      "date": "2026-03-06",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.4",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot",
-        "experience": "Think deeper"
+      "kind": "availability",
+      "date": {
+        "start": "2026-03-06",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "rollout",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "think-deeper"
+      ],
+      "model_ids": [
+        "gpt-5-4"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced GPT-5.4 Thinking in Microsoft 365 Copilot under Think deeper.",
       "sources": [
@@ -3075,24 +2784,21 @@
     },
     {
       "id": "studio-gpt5-4-reasoning-2026-03-06",
-      "date": "2026-03-06",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.4",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio",
-        "experience": "GPT-5.4 Reasoning"
+      "kind": "availability",
+      "date": {
+        "start": "2026-03-06",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "early_release",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "gpt-5-4"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Copilot Studio added GPT-5.4 Reasoning in early release.",
+      "caveat": "Published under GitHub's early-release programme.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -3105,21 +2811,13 @@
     },
     {
       "id": "m365-wave3-frontier-2026-03-09",
-      "date": "2026-03-09",
-      "date_precision": "day",
-      "vendor": "Multiple",
-      "model": "Frontier model experiences",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot"
+      "kind": "milestone",
+      "date": {
+        "start": "2026-03-09",
+        "precision": "day"
       },
-      "event": {
-        "type": "platform_milestone",
-        "availability": "announced",
-        "selectable": null,
-        "scope": "product_strategy"
-      },
+      "surface_id": "m365-copilot",
+      "model_ids": [],
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced its Wave 3 / Frontier suite direction, including broader Frontier experiences and Cowork.",
       "sources": [
@@ -3134,24 +2832,38 @@
     },
     {
       "id": "m365-anthropic-eu-apps-setting-2026-04-03",
-      "date": "2026-04-03",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude models",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 admin",
-        "experience": "Copilot in Microsoft 365 apps (Word / Excel / PowerPoint)"
+      "kind": "policy",
+      "date": {
+        "start": "2026-04-03",
+        "precision": "day"
       },
-      "event": {
-        "type": "admin_policy",
-        "availability": "introduced",
-        "selectable": null,
-        "scope": "governance"
+      "surface_id": "m365-admin",
+      "model_ids": [],
+      "applies_to": {
+        "vendor": "Anthropic",
+        "surfaces": [
+          "m365-copilot"
+        ],
+        "experiences": [
+          "word",
+          "excel",
+          "powerpoint"
+        ],
+        "regions": [
+          "EU",
+          "EFTA",
+          "UK"
+        ]
       },
       "confidence": "confirmed",
       "evidence_note": "Microsoft introduced the Microsoft 365 admin centre setting 'Copilot in M365 apps with Anthropic models' for EU/EFTA and UK tenants, enabling Anthropic as the default model for Copilot in Microsoft 365 apps.",
+      "caveat": "This app-level setting is separate from, though dependent on, the global Anthropic subprocessor control. It is on by default for EU/EFTA/UK tenants created after 25 March 2026; tenants existing before that date are directed to the Message Center for their default. Coverage began with Excel and PowerPoint, with Word support documented as arriving in summer 2026.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "m365-anthropic-subprocessor-2026-01-07"
+        }
+      ],
       "sources": [
         {
           "publisher": "Microsoft Learn",
@@ -3170,31 +2882,22 @@
           "retrieved_at": "2026-07-27",
           "source_type": "documentation"
         }
-      ],
-      "caveat": "This app-level setting is separate from, though dependent on, the global Anthropic subprocessor control. It is on by default for EU/EFTA/UK tenants created after 25 March 2026; tenants existing before that date are directed to the Message Center for their default. Coverage began with Excel and PowerPoint, with Word support documented as arriving in summer 2026.",
-      "related_events": [
-        {
-          "id": "m365-anthropic-subprocessor-2026-01-07",
-          "relation": "other"
-        }
       ]
     },
     {
       "id": "anthropic-opus4-7-2026-04-16",
-      "date": "2026-04-16",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 4.7",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2026-04-16",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-opus-4-7"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic released Claude Opus 4.7.",
       "sources": [
@@ -3209,24 +2912,25 @@
     },
     {
       "id": "m365-opus4-7-2026-04-16",
-      "date": "2026-04-16",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 4.7",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot",
-        "experience": "Copilot Cowork / Excel"
+      "kind": "availability",
+      "date": {
+        "start": "2026-04-16",
+        "precision": "day"
       },
-      "event": {
-        "type": "rollout",
-        "availability": "frontier_rollout",
-        "selectable": true,
-        "scope": "experience_availability"
-      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "cowork",
+        "excel"
+      ],
+      "model_ids": [
+        "claude-opus-4-7"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced Claude Opus 4.7 in Copilot Cowork for Frontier users and rolling out to Excel.",
+      "caveat": "Do not describe this as universal Copilot Chat availability on 16 April. Delivered through the Microsoft 365 Copilot Frontier programme.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -3235,28 +2939,25 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Do not describe this as universal Copilot Chat availability on 16 April."
+      ]
     },
     {
       "id": "studio-opus4-7-2026-04-16",
-      "date": "2026-04-16",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 4.7",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio"
+      "kind": "availability",
+      "date": {
+        "start": "2026-04-16",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "early_release",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "claude-opus-4-7"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "The Opus 4.7 Microsoft announcement states the model was available in Copilot Studio early release.",
+      "caveat": "Published under GitHub's early-release programme.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -3269,20 +2970,18 @@
     },
     {
       "id": "openai-gpt5-5-2026-04-23",
-      "date": "2026-04-23",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.5",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "OpenAI"
+      "kind": "availability",
+      "date": {
+        "start": "2026-04-23",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI introduced GPT-5.5; the API followed on 24 April.",
       "sources": [
@@ -3297,21 +2996,18 @@
     },
     {
       "id": "github-gpt5-5-ga-2026-04-24",
-      "date": "2026-04-24",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.5",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-04-24",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "GPT-5.5 became generally available in GitHub Copilot one day after OpenAI's announcement.",
       "sources": [
@@ -3326,21 +3022,18 @@
     },
     {
       "id": "m365-gpt5-5-thinking-2026-04-27",
-      "date": "2026-04-27",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.5 Thinking",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-04-27",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "rollout",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "m365-copilot",
+      "model_ids": [
+        "gpt-5-5-thinking"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced GPT-5.5 Thinking rollout in Copilot Chat, Word, Excel and PowerPoint.",
       "sources": [
@@ -3355,24 +3048,21 @@
     },
     {
       "id": "studio-gpt5-5-reasoning-2026-04-27",
-      "date": "2026-04-27",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.5",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio",
-        "experience": "GPT-5.5 Reasoning"
+      "kind": "availability",
+      "date": {
+        "start": "2026-04-27",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "early_release",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "gpt-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Copilot Studio received GPT-5.5 Reasoning in early release.",
+      "caveat": "Published under GitHub's early-release programme.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -3385,23 +3075,19 @@
     },
     {
       "id": "m365-anthropic-independent-processor-end-2026-05-01",
-      "date": "2026-05-01",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude models",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot"
+      "kind": "policy",
+      "date": {
+        "start": "2026-05-01",
+        "precision": "day"
       },
-      "event": {
-        "type": "admin_policy",
-        "availability": "policy_cutover",
-        "selectable": null,
-        "scope": "governance"
+      "surface_id": "m365-copilot",
+      "model_ids": [],
+      "applies_to": {
+        "vendor": "Anthropic"
       },
       "confidence": "confirmed",
       "evidence_note": "Microsoft documentation records decommissioning of the previous independent-processor setting; continued Claude access follows the Microsoft AI-subprocessor configuration.",
+      "caveat": "Do not describe this as Anthropic ceasing to process data entirely; follow current service terms. A cutover of an existing policy rather than a new control.",
       "sources": [
         {
           "publisher": "Microsoft Learn",
@@ -3410,26 +3096,22 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Do not describe this as Anthropic ceasing to process data entirely; follow current service terms."
+      ]
     },
     {
       "id": "foundry-gpt5-5-instant-2026-05-07",
-      "date": "2026-05-07",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.5 Instant",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Microsoft Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2026-05-07",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "available",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-5-5-instant"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft's GPT-5.5 Instant announcement confirms developer availability through Microsoft Foundry.",
       "sources": [
@@ -3444,22 +3126,21 @@
     },
     {
       "id": "m365-gpt5-5-instant-2026-05-07",
-      "date": "2026-05-07",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.5 Instant",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot",
-        "experience": "Quick response"
+      "kind": "availability",
+      "date": {
+        "start": "2026-05-07",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "rollout",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "quick-response"
+      ],
+      "model_ids": [
+        "gpt-5-5-instant"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced GPT-5.5 Instant as the Quick response model.",
       "sources": [
@@ -3474,24 +3155,21 @@
     },
     {
       "id": "studio-gpt5-5-chat-2026-05-07",
-      "date": "2026-05-07",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.5 Instant",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio",
-        "experience": "GPT-5.5 Chat"
+      "kind": "availability",
+      "date": {
+        "start": "2026-05-07",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "early_release",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "gpt-5-5-instant"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Copilot Studio received GPT-5.5 Chat in the same rollout.",
+      "caveat": "Published under GitHub's early-release programme.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -3504,20 +3182,18 @@
     },
     {
       "id": "anthropic-opus4-8-2026-05-28",
-      "date": "2026-05-28",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 4.8",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2026-05-28",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-opus-4-8"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic released Claude Opus 4.8.",
       "sources": [
@@ -3532,21 +3208,18 @@
     },
     {
       "id": "github-opus4-8-ga-2026-05-28",
-      "date": "2026-05-28",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 4.8",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-05-28",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-opus-4-8"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Claude Opus 4.8 became generally available in GitHub Copilot on release day.",
       "sources": [
@@ -3561,22 +3234,24 @@
     },
     {
       "id": "m365-opus4-8-2026-05-28",
-      "date": "2026-05-28",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 4.8",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot",
-        "experience": "Cowork / Copilot Chat / Excel / PowerPoint"
+      "kind": "availability",
+      "date": {
+        "start": "2026-05-28",
+        "precision": "day"
       },
-      "event": {
-        "type": "rollout",
-        "availability": "rollout",
-        "selectable": true,
-        "scope": "experience_availability"
-      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "cowork",
+        "m365-copilot-chat",
+        "excel",
+        "powerpoint"
+      ],
+      "model_ids": [
+        "claude-opus-4-8"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced Opus 4.8 available in Cowork Frontier and rolling out to Copilot Chat, Excel and PowerPoint.",
       "sources": [
@@ -3591,21 +3266,18 @@
     },
     {
       "id": "studio-opus4-8-2026-05-28",
-      "date": "2026-05-28",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 4.8",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Copilot Studio",
-        "product": "Microsoft Copilot Studio"
+      "kind": "availability",
+      "date": {
+        "start": "2026-05-28",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "rollout",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "claude-opus-4-8"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Microsoft's Opus 4.8 announcement states the model was rolling out to Copilot Studio.",
       "sources": [
@@ -3620,22 +3292,21 @@
     },
     {
       "id": "anthropic-fable5-2026-06-09",
-      "date": "2026-06-09",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Fable 5",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2026-06-09",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-fable-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic released Claude Fable 5 and announced Mythos 5 for restricted cybersecurity use; Mythos Preview existed earlier.",
+      "caveat": "Use 'first generally available Mythos-class model', not 'first Mythos model'.",
       "sources": [
         {
           "publisher": "Anthropic",
@@ -3644,26 +3315,22 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Use 'first generally available Mythos-class model', not 'first Mythos model'."
+      ]
     },
     {
       "id": "foundry-fable5-2026-06-09",
-      "date": "2026-06-09",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Fable 5",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Microsoft Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2026-06-09",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "available",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "claude-fable-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced Fable 5 availability in Microsoft Foundry on release day.",
       "sources": [
@@ -3678,21 +3345,18 @@
     },
     {
       "id": "github-fable5-ga-2026-06-09",
-      "date": "2026-06-09",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Fable 5",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-06-09",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-fable-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Claude Fable 5 became generally available in GitHub Copilot on release day.",
       "sources": [
@@ -3707,24 +3371,26 @@
     },
     {
       "id": "m365-fable5-preview-2026-06-10",
-      "date": "2026-06-10",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Fable 5",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot",
-        "experience": "Cowork Frontier / Excel / PowerPoint"
+      "kind": "availability",
+      "date": {
+        "start": "2026-06-10",
+        "precision": "day"
       },
-      "event": {
-        "type": "limited_preview",
-        "availability": "preview",
-        "selectable": true,
-        "scope": "experience_availability"
-      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "cowork",
+        "excel",
+        "powerpoint"
+      ],
+      "model_ids": [
+        "claude-fable-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced Fable 5 in Copilot Cowork Frontier (default off) and private preview for Excel and PowerPoint.",
+      "caveat": "Retain the model-specific retention/governance caveats from the announcement in product detail metadata.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -3733,26 +3399,23 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Retain the model-specific retention/governance caveats from the announcement in product detail metadata."
+      ]
     },
     {
       "id": "anthropic-fable5-suspension-2026-06-12",
-      "date": "2026-06-12",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Fable 5 / Mythos 5",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2026-06-12",
+        "precision": "day"
       },
-      "event": {
-        "type": "suspension",
-        "availability": "suspended",
-        "selectable": null,
-        "scope": "availability_state"
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-fable-5",
+        "claude-mythos-5"
+      ],
+      "model_claim": "family",
+      "lifecycle": "suspended",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Anthropic suspended Fable 5 and Mythos 5 after receiving a US Commerce Department export-control directive at 5:21pm ET, citing national security authorities. The directive barred access by any foreign national, whether inside or outside the United States and including Anthropic's own foreign national employees, which is why the shutdown applied to all customers globally; downstream access was affected.",
       "sources": [
@@ -3772,31 +3435,31 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "models": [
-        "Claude Fable 5",
-        "Claude Mythos 5"
       ]
     },
     {
       "id": "foundry-fable5-suspension-2026-06-12",
-      "date": "2026-06-12",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Fable 5",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Microsoft Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2026-06-12",
+        "precision": "day"
       },
-      "event": {
-        "type": "suspension",
-        "availability": "suspended",
-        "selectable": null,
-        "scope": "availability_state"
-      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "claude-fable-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "suspended",
+      "exposure": "catalogue",
       "confidence": "supported",
       "evidence_note": "Anthropic disabled Fable 5 and Mythos 5 for all customers from 5:21pm ET on 12 June 2026 to comply with a US Commerce Department export-control directive barring access by any foreign national. The action was global and removed the models from partner distribution, including Microsoft Foundry.",
+      "caveat": "Confidence is 'supported' rather than 'confirmed' because no Microsoft-issued Foundry suspension notice was located; the date is Anthropic's global compliance action. That Foundry was affected is established retrospectively by the CNBC re-enablement report rather than by a first-party Microsoft record.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-fable5-suspension-2026-06-12"
+        }
+      ],
       "sources": [
         {
           "publisher": "Anthropic",
@@ -3818,32 +3481,22 @@
           "source_type": "news",
           "note": "Reports that Anthropic would 're-enable access to Fable 5 on Amazon Web Services, Google Cloud and Microsoft Foundry', which establishes retrospectively that Foundry distribution had been suspended."
         }
-      ],
-      "caveat": "Confidence is 'supported' rather than 'confirmed' because no Microsoft-issued Foundry suspension notice was located; the date is Anthropic's global compliance action. That Foundry was affected is established retrospectively by the CNBC re-enablement report rather than by a first-party Microsoft record.",
-      "related_events": [
-        {
-          "id": "anthropic-fable5-suspension-2026-06-12",
-          "relation": "same_announcement"
-        }
       ]
     },
     {
       "id": "github-fable5-suspension-2026-06-12",
-      "date": "2026-06-12",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Fable 5",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-06-12",
+        "precision": "day"
       },
-      "event": {
-        "type": "suspension",
-        "availability": "suspended",
-        "selectable": null,
-        "scope": "availability_state"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-fable-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "suspended",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic suspended Fable 5 and Mythos 5 availability following a US government export-control directive; downstream access was affected.",
       "sources": [
@@ -3859,22 +3512,21 @@
     },
     {
       "id": "openai-gpt5-6-preview-2026-06-26",
-      "date": "2026-06-26",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.6 Sol",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "OpenAI"
+      "kind": "availability",
+      "date": {
+        "start": "2026-06-26",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "limited_preview",
-        "selectable": null
-      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-6-sol"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "limited_preview",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI began previewing GPT-5.6 Sol ahead of the 9 July family release.",
+      "caveat": "Keep this separate from the 9 July GPT-5.6 family release.",
       "sources": [
         {
           "publisher": "OpenAI",
@@ -3883,28 +3535,25 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Keep this separate from the 9 July GPT-5.6 family release."
+      ]
     },
     {
       "id": "claude-foundry-ga-2026-06-29",
-      "date": "2026-06-29",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude models",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Microsoft Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2026-06-29",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga",
-        "selectable": null,
-        "scope": "platform_availability"
+      "surface_id": "microsoft-foundry",
+      "model_ids": [],
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "applies_to": {
+        "vendor": "Anthropic"
       },
       "confidence": "confirmed",
       "evidence_note": "Claude in Microsoft Foundry reached GA, including an Azure-hosted deployment option.",
+      "caveat": "Do not claim Azure hosting eliminates Anthropic's processor/operator role where service terms still apply. GA covers the Claude offering in Foundry rather than every Claude model on Azure infrastructure: Learn distinguishes 'Hosted on Azure' from 'Hosted on Anthropic infrastructure' versions, and as of 27 July 2026 lists claude-opus-5, claude-opus-4-8, claude-sonnet-5 and claude-haiku-4-5 as Azure-hosted, with Fable 5 still Anthropic-hosted preview. The Azure-hosted set on 29 June is not independently sourced, so treat the current listing as catalogue state rather than evidence of the GA-day composition.",
       "sources": [
         {
           "publisher": "Microsoft Azure",
@@ -3922,25 +3571,22 @@
           "source_type": "documentation",
           "note": "Current-state catalogue. Distinguishes 'Hosted on Azure' from 'Hosted on Anthropic infrastructure' versions and lists deployment types."
         }
-      ],
-      "caveat": "Do not claim Azure hosting eliminates Anthropic's processor/operator role where service terms still apply. GA covers the Claude offering in Foundry rather than every Claude model on Azure infrastructure: Learn distinguishes 'Hosted on Azure' from 'Hosted on Anthropic infrastructure' versions, and as of 27 July 2026 lists claude-opus-5, claude-opus-4-8, claude-sonnet-5 and claude-haiku-4-5 as Azure-hosted, with Fable 5 still Anthropic-hosted preview. The Azure-hosted set on 29 June is not independently sourced, so treat the current listing as catalogue state rather than evidence of the GA-day composition."
+      ]
     },
     {
       "id": "anthropic-sonnet5-2026-06-30",
-      "date": "2026-06-30",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Sonnet 5",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2026-06-30",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-sonnet-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic released Claude Sonnet 5.",
       "sources": [
@@ -3955,23 +3601,30 @@
     },
     {
       "id": "foundry-sonnet5-ga-2026-06-30",
-      "date": "2026-06-30",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Sonnet 5",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Microsoft Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2026-06-30",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "claude-sonnet-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced the general availability of Claude Sonnet 5 in Microsoft Foundry, the day after the Claude in Microsoft Foundry GA announcement.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "claude-foundry-ga-2026-06-29"
+        },
+        {
+          "type": "announced_by",
+          "target": "anthropic-sonnet5-2026-06-30"
+        }
+      ],
       "sources": [
         {
           "publisher": "Microsoft",
@@ -3983,35 +3636,22 @@
           "source_type": "announcement",
           "note": "Opens: 'On June 29, 2026, we announced the general availability of Claude in Microsoft Foundry... Today, we're continuing that momentum with the general availability of Claude Sonnet 5 in Microsoft Foundry.'"
         }
-      ],
-      "related_events": [
-        {
-          "id": "claude-foundry-ga-2026-06-29",
-          "relation": "other"
-        },
-        {
-          "id": "anthropic-sonnet5-2026-06-30",
-          "relation": "vendor_release"
-        }
       ]
     },
     {
       "id": "github-sonnet5-ga-2026-06-30",
-      "date": "2026-06-30",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Sonnet 5",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-06-30",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-sonnet-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Claude Sonnet 5 became generally available in GitHub Copilot on release day.",
       "sources": [
@@ -4026,23 +3666,22 @@
     },
     {
       "id": "anthropic-fable5-restoration-2026-07-01",
-      "date": "2026-07-01",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Fable 5 / Mythos 5",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-01",
+        "precision": "day"
       },
-      "event": {
-        "type": "restoration",
-        "availability": "restored",
-        "selectable": null,
-        "scope": "availability_state"
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-fable-5",
+        "claude-mythos-5"
+      ],
+      "model_claim": "family",
+      "lifecycle": "restored",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Anthropic announced Fable 5 redeployment after the US Department of Commerce lifted the export controls behind the June suspension; GitHub re-enabled access.",
+      "caveat": "This date covers Fable 5's general restoration on the Claude platform, Claude.ai and Claude Code. Mythos 5 access was restored earlier for some approved US organisations, following government approval granted on 26 June 2026. Re-enablement on partner clouds, including Amazon Web Services, Google Cloud and Microsoft Foundry, was described as following 'as soon as possible' and is not established as having occurred on this date.",
       "sources": [
         {
           "publisher": "Anthropic",
@@ -4060,30 +3699,22 @@
           "published_at": "2026-06-30",
           "source_type": "news"
         }
-      ],
-      "caveat": "This date covers Fable 5's general restoration on the Claude platform, Claude.ai and Claude Code. Mythos 5 access was restored earlier for some approved US organisations, following government approval granted on 26 June 2026. Re-enablement on partner clouds, including Amazon Web Services, Google Cloud and Microsoft Foundry, was described as following 'as soon as possible' and is not established as having occurred on this date.",
-      "models": [
-        "Claude Fable 5",
-        "Claude Mythos 5"
       ]
     },
     {
       "id": "github-fable5-restoration-2026-07-01",
-      "date": "2026-07-01",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Fable 5",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-01",
+        "precision": "day"
       },
-      "event": {
-        "type": "restoration",
-        "availability": "restored",
-        "selectable": null,
-        "scope": "availability_state"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-fable-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "restored",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic announced Fable 5 redeployment after the restrictions behind the June suspension changed; GitHub re-enabled access.",
       "sources": [
@@ -4099,23 +3730,21 @@
     },
     {
       "id": "github-kimi-k2-7-code-2026-07-01",
-      "date": "2026-07-01",
-      "date_precision": "day",
-      "vendor": "Moonshot AI",
-      "model": "Kimi K2.7 Code",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-01",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga_rollout",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "kimi-k2-7-code"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Kimi K2.7 Code became generally available as the first open-weight selectable model in the Copilot picker, initially rolling to Pro, Pro+ and Max.",
+      "caveat": "Generally available and rolling out progressively.",
       "sources": [
         {
           "publisher": "GitHub",
@@ -4128,22 +3757,22 @@
     },
     {
       "id": "m365-sonnet5-2026-07-02",
-      "date": "2026-07-02",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Sonnet 5",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot",
-        "experience": "Copilot Cowork / PowerPoint"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-02",
+        "precision": "day"
       },
-      "event": {
-        "type": "rollout",
-        "availability": "rollout",
-        "selectable": true,
-        "scope": "experience_availability"
-      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "cowork",
+        "powerpoint"
+      ],
+      "model_ids": [
+        "claude-sonnet-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced Claude Sonnet 5 rolling out to Copilot Cowork and PowerPoint.",
       "sources": [
@@ -4158,23 +3787,21 @@
     },
     {
       "id": "github-kimi-k2-7-enterprise-2026-07-07",
-      "date": "2026-07-07",
-      "date_precision": "day",
-      "vendor": "Moonshot AI",
-      "model": "Kimi K2.7 Code",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-07",
+        "precision": "day"
       },
-      "event": {
-        "type": "rollout",
-        "availability": "business_enterprise",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "kimi-k2-7-code"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Kimi K2.7 Code availability expanded to Copilot Business and Enterprise, with admin policy control.",
+      "caveat": "This event expanded availability to Business and Enterprise plans.",
       "sources": [
         {
           "publisher": "GitHub",
@@ -4187,21 +3814,20 @@
     },
     {
       "id": "foundry-gpt5-6-2026-07-09",
-      "date": "2026-07-09",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.6 family",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Microsoft Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-09",
+        "precision": "day"
       },
-      "event": {
-        "type": "ga",
-        "availability": "ga",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-5-6-sol",
+        "gpt-5-6-terra",
+        "gpt-5-6-luna"
+      ],
+      "model_claim": "family",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced GPT-5.6 generally available in Microsoft Foundry on release day.",
       "sources": [
@@ -4216,21 +3842,18 @@
     },
     {
       "id": "github-gpt5-6-luna-2026-07-09",
-      "date": "2026-07-09",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.6 Luna",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-09",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "available",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-5-6-luna"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "GPT-5.6 Sol, Terra and Luna became available in GitHub Copilot on release day.",
       "sources": [
@@ -4245,21 +3868,18 @@
     },
     {
       "id": "github-gpt5-6-sol-2026-07-09",
-      "date": "2026-07-09",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.6 Sol",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-09",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "available",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-5-6-sol"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "GPT-5.6 Sol, Terra and Luna became available in GitHub Copilot on release day.",
       "sources": [
@@ -4274,21 +3894,18 @@
     },
     {
       "id": "github-gpt5-6-terra-2026-07-09",
-      "date": "2026-07-09",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.6 Terra",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-09",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "available",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-5-6-terra"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "GPT-5.6 Sol, Terra and Luna became available in GitHub Copilot on release day.",
       "sources": [
@@ -4303,23 +3920,23 @@
     },
     {
       "id": "m365-gpt5-6-2026-07-09",
-      "date": "2026-07-09",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.6 family",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-09",
+        "precision": "day"
       },
-      "event": {
-        "type": "rollout",
-        "availability": "available",
-        "selectable": true,
-        "scope": "experience_availability"
-      },
+      "surface_id": "m365-copilot",
+      "model_ids": [
+        "gpt-5-6-sol",
+        "gpt-5-6-terra",
+        "gpt-5-6-luna"
+      ],
+      "model_claim": "family",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced GPT-5.6 across Word, Excel, PowerPoint, Copilot Chat and Cowork, describing GPT-5.6 as the preferred model.",
+      "caveat": "Use Microsoft's wording 'preferred model'; do not infer all default traffic is routed to GPT-5.6.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -4328,25 +3945,24 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Use Microsoft's wording 'preferred model'; do not infer all default traffic is routed to GPT-5.6."
+      ]
     },
     {
       "id": "openai-gpt5-6-2026-07-09",
-      "date": "2026-07-09",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "GPT-5.6 Sol / Terra / Luna",
-      "platform": {
-        "owner": "OpenAI",
-        "family": "Vendor",
-        "product": "OpenAI"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-09",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-6-sol",
+        "gpt-5-6-terra",
+        "gpt-5-6-luna"
+      ],
+      "model_claim": "family",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI released the GPT-5.6 family.",
       "sources": [
@@ -4357,30 +3973,22 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "models": [
-        "GPT-5.6 Sol",
-        "GPT-5.6 Terra",
-        "GPT-5.6 Luna"
       ]
     },
     {
       "id": "github-gemini3-6-flash-2026-07-21",
-      "date": "2026-07-21",
-      "date_precision": "day",
-      "vendor": "Google",
-      "model": "Gemini 3.6 Flash",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-21",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "available",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gemini-3-6-flash"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Gemini 3.6 Flash became available in GitHub Copilot on 21 July.",
       "sources": [
@@ -4395,20 +4003,18 @@
     },
     {
       "id": "google-gemini3-6-flash-2026-07-21",
-      "date": "2026-07-21",
-      "date_precision": "day",
-      "vendor": "Google",
-      "model": "Gemini 3.6 Flash",
-      "platform": {
-        "owner": "Google",
-        "family": "Vendor",
-        "product": "Gemini API"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-21",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "stable",
-        "selectable": null
-      },
+      "surface_id": "google-gemini-api",
+      "model_ids": [
+        "gemini-3-6-flash"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "supported",
       "evidence_note": "Google's model documentation lists Gemini 3.6 Flash as stable and updated on 21 July 2026.",
       "sources": [
@@ -4423,20 +4029,18 @@
     },
     {
       "id": "anthropic-opus5-2026-07-24",
-      "date": "2026-07-24",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 5",
-      "platform": {
-        "owner": "Anthropic",
-        "family": "Vendor",
-        "product": "Claude"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-24",
+        "precision": "day"
       },
-      "event": {
-        "type": "vendor_release",
-        "availability": "release",
-        "selectable": null
-      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-opus-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "Anthropic released Claude Opus 5.",
       "sources": [
@@ -4451,23 +4055,31 @@
     },
     {
       "id": "foundry-opus5-availability-2026-07-24",
-      "date": "2026-07-24",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 5",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft Foundry",
-        "product": "Microsoft Foundry"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-24",
+        "precision": "day"
       },
-      "event": {
-        "type": "catalogue_availability",
-        "availability": "available",
-        "selectable": null,
-        "scope": "catalogue_availability"
-      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "claude-opus-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "Microsoft announced Claude Opus 5, the first fifth-generation Opus model, as available in Microsoft Foundry on the day of Anthropic's release.",
+      "caveat": "Claude Opus 5 is Zero Data Retention compatible, in contrast to Claude Fable 5, which Microsoft documents as a Preview model with Data Retention. Treat the Learn catalogue listing as current-state evidence rather than proof of the first-availability date.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-opus5-2026-07-24"
+        },
+        {
+          "type": "announced_by",
+          "target": "github-opus5-2026-07-24"
+        }
+      ],
       "sources": [
         {
           "publisher": "Microsoft",
@@ -4488,38 +4100,31 @@
           "source_type": "documentation",
           "note": "Lists claude-opus-5 as Hosted on Azure (GA) and available for the Data Zone Standard (US) deployment type."
         }
-      ],
-      "caveat": "Claude Opus 5 is Zero Data Retention compatible, in contrast to Claude Fable 5, which Microsoft documents as a Preview model with Data Retention. Treat the Learn catalogue listing as current-state evidence rather than proof of the first-availability date.",
-      "related_events": [
-        {
-          "id": "anthropic-opus5-2026-07-24",
-          "relation": "vendor_release"
-        },
-        {
-          "id": "github-opus5-2026-07-24",
-          "relation": "other"
-        }
       ]
     },
     {
       "id": "github-opus5-2026-07-24",
-      "date": "2026-07-24",
-      "date_precision": "day",
-      "vendor": "Anthropic",
-      "model": "Claude Opus 5",
-      "platform": {
-        "owner": "GitHub",
-        "family": "GitHub Copilot",
-        "product": "GitHub Copilot"
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-24",
+        "precision": "day"
       },
-      "event": {
-        "type": "model_picker",
-        "availability": "available",
-        "selectable": true,
-        "scope": "model_picker"
-      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-opus-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
       "confidence": "confirmed",
       "evidence_note": "Claude Opus 5 became available in GitHub Copilot on release day, with admin enablement for managed plans.",
+      "caveat": "Microsoft's same-day Foundry announcement records that Claude Opus 5 is Zero Data Retention compatible, unlike Claude Fable 5. Carry that governance distinction alongside model-picker availability.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "foundry-opus5-availability-2026-07-24"
+        }
+      ],
       "sources": [
         {
           "publisher": "GitHub",
@@ -4528,34 +4133,23 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Microsoft's same-day Foundry announcement records that Claude Opus 5 is Zero Data Retention compatible, unlike Claude Fable 5. Carry that governance distinction alongside model-picker availability.",
-      "related_events": [
-        {
-          "id": "foundry-opus5-availability-2026-07-24",
-          "relation": "other"
-        }
       ]
     },
     {
       "id": "m365-openai-operated-policy-2026-07-24",
-      "date": "2026-07-24",
-      "date_precision": "day",
-      "vendor": "OpenAI",
-      "model": "OpenAI-operated models",
-      "platform": {
-        "owner": "Microsoft",
-        "family": "Microsoft 365",
-        "product": "Microsoft 365 admin"
+      "kind": "policy",
+      "date": {
+        "start": "2026-07-24",
+        "precision": "day"
       },
-      "event": {
-        "type": "admin_policy",
-        "availability": "policy_update",
-        "selectable": null,
-        "scope": "governance"
+      "surface_id": "m365-admin",
+      "model_ids": [],
+      "applies_to": {
+        "vendor": "OpenAI"
       },
       "confidence": "supported",
       "evidence_note": "Microsoft documents that from 24 July 2026 eligible commercial customers have OpenAI-operated models enabled for all users unless admins choose 'No users'.",
+      "caveat": "Preserve the official eligibility and geographic wording from Microsoft Learn.",
       "sources": [
         {
           "publisher": "Microsoft Learn",
@@ -4564,43 +4158,70 @@
           "primary": true,
           "retrieved_at": "2026-07-26"
         }
-      ],
-      "caveat": "Preserve the official eligibility and geographic wording from Microsoft Learn."
+      ]
     }
   ],
   "validation_backlog": [
     {
+      "id": "github-gemini-1-5-pro-first-availability-2024",
+      "state": "open",
+      "working_claim": "Gemini 1.5 Pro became selectable in GitHub Copilot some time after the 29 October 2024 GitHub Universe multi-model announcement.",
+      "reason": "The only record is the Universe keynote, which announced multi-model choice rather than dating each model's arrival. Reclassifying it as an announcement leaves this model with no GitHub Copilot availability date.",
+      "target": "Find the dated GitHub changelog entry for Gemini 1.5 Pro reaching the Copilot model picker.",
+      "model_ids": [
+        "gemini-1-5-pro"
+      ],
+      "surface_id": "github-copilot"
+    },
+    {
+      "id": "m365-researcher-first-availability-2025",
+      "state": "open",
+      "working_claim": "Researcher reached general availability in Microsoft 365 Copilot on 2 June 2025, alongside Analyst.",
+      "reason": "The 25 March 2025 record is an announcement, and the 2 June GA evidence note covers Researcher but the event itself is scoped to Analyst and o3-mini. Researcher has no availability event of its own.",
+      "target": "Split a dedicated Researcher availability event once the model attribution and date are separately sourced.",
+      "model_ids": [
+        "openai-deep-research"
+      ],
+      "surface_id": "m365-copilot"
+    },
+    {
       "id": "azure-chatgpt-preview-2023-03-09",
+      "state": "open",
       "working_claim": "ChatGPT/GPT-3.5 generation reached Azure OpenAI preview on 9 March 2023.",
       "reason": "Present in the editorial master backlog but absent from the sourced canonical pack.",
       "target": "Pin the dated Microsoft Azure announcement and confirm model naming."
     },
     {
       "id": "azure-gpt4-turbo-first-availability-2023",
+      "state": "open",
       "working_claim": "GPT-4 Turbo became available in Azure OpenAI after the November 2023 vendor release.",
       "reason": "The exact first Azure availability date was not preserved in the sourced pack.",
       "target": "Locate a dated Azure model-release or deployment announcement."
     },
     {
       "id": "deepseek-r1-vendor-2025-01-20",
+      "state": "open",
       "working_claim": "DeepSeek-R1 released 20 January 2025.",
       "reason": "Microsoft's 29 January landing is confirmed; the vendor release row still needs a durable first-party citation.",
       "target": "Pin the official DeepSeek-R1 release source."
     },
     {
       "id": "deepseek-v3-first-microsoft-availability-2024",
+      "state": "open",
       "working_claim": "DeepSeek-V3 later entered a Microsoft developer catalogue.",
       "reason": "The vendor date is queued separately, but first Microsoft availability is not represented.",
       "target": "Locate the first dated Foundry or GitHub Models record."
     },
     {
       "id": "deepseek-v3-vendor-2024-12-26",
+      "state": "open",
       "working_claim": "DeepSeek-V3 released 26 December 2024.",
       "reason": "Discussed in research but not promoted without a durable primary release source.",
       "target": "Use a DeepSeek official release/repository announcement with explicit date."
     },
     {
       "id": "foundry-fable5-restoration-2026",
+      "state": "open",
       "working_claim": "Fable 5 availability in Microsoft Foundry was restored at some point after the export controls were lifted on 30 June 2026.",
       "reason": "The 12 June suspension is now recorded canonically at 'supported' confidence, but no restoration date is established for Foundry. CNBC reported on 30 June 2026 that Anthropic would re-enable Fable 5 on Amazon Web Services, Google Cloud and Microsoft Foundry 'as soon as possible', which is an announcement of future availability rather than a first-availability date. Microsoft Learn currently lists claude-fable-5 as an available Anthropic-hosted preview, proving the end state but not the date.",
       "target": "Locate a dated Microsoft Foundry re-enablement record, or a Learn page revision, that pins when Fable 5 returned to the Foundry catalogue.",
@@ -4626,168 +4247,196 @@
     },
     {
       "id": "foundry-gpt5-5-first-availability-2026-04-24",
+      "state": "open",
       "working_claim": "GPT-5.5 entered Microsoft Foundry around 24 April 2026.",
       "reason": "The sourced pack contains vendor, GitHub, M365 and Studio events but no Foundry record.",
       "target": "Pin the Microsoft model announcement or catalogue release note."
     },
     {
       "id": "foundry-kimi-k2-7-first-availability-2026-07",
+      "state": "open",
       "working_claim": "Kimi K2.7 variants appeared in Microsoft Foundry in early July 2026.",
       "reason": "Current catalogue presence does not prove first availability.",
       "target": "Locate a dated Foundry announcement for each Kimi variant."
     },
     {
       "id": "foundry-o3-o4-mini-2025-04-16",
+      "state": "open",
       "working_claim": "o3 and o4-mini reached Microsoft Foundry around the 16 April 2025 vendor release.",
       "reason": "The sourced pack confirms GitHub but does not include a Foundry event.",
       "target": "Pin a dated Microsoft Foundry announcement for each model."
     },
     {
       "id": "foundry-opus4-5-first-availability-2025-11-24",
+      "state": "open",
       "working_claim": "Claude Opus 4.5 entered Microsoft Foundry public preview around vendor launch.",
       "reason": "The sourced pack contains vendor and Studio events but no Foundry event.",
       "target": "Locate the dated Foundry model announcement."
     },
     {
       "id": "gemini1-5-pro-public-preview-ga-2024",
+      "state": "open",
       "working_claim": "Gemini 1.5 Pro had broader public-preview/GA milestones after its 15 February 2024 limited preview.",
       "reason": "This pass verified the initial private/limited preview, not the later exact public-preview and GA dates.",
       "target": "Add separate Google primary-source events for public preview and GA before using those dates in lag calculations."
     },
     {
       "id": "github-copilot-chat-gpt3-5-start-2023",
+      "state": "open",
       "working_claim": "GitHub Copilot Chat initially used GPT-3.5.",
       "reason": "Later GitHub history supports the lineage, but the exact first-production date is not pinned.",
       "target": "Find the original Copilot Chat launch/changelog explicitly naming GPT-3.5."
     },
     {
       "id": "github-copilot-chat-gpt4-transition-2023-11",
+      "state": "open",
       "working_claim": "Copilot Chat moved from GPT-3.5 to GPT-4 in late November 2023.",
       "reason": "Exact production date remains unverified.",
       "target": "Find the original GitHub changelog or archived docs for the GPT-4 transition."
     },
     {
       "id": "github-foundry-opus4-7-2026-04-16",
+      "state": "open",
       "working_claim": "Claude Opus 4.7 landed on GitHub Copilot and Microsoft Foundry at or around vendor launch.",
       "reason": "M365 and Studio launch-day scope is sourced; separate GitHub/Foundry first-day records still need their own primary URLs.",
       "target": "Find the GitHub changelog and Foundry model announcement."
     },
     {
       "id": "github-gemini1-5-pro-first-picker-date-2024",
+      "state": "open",
       "working_claim": "Gemini 1.5 Pro became selectable in GitHub Copilot after the 29 October 2024 multi-model announcement.",
       "reason": "The announcement says Gemini was coming; the exact first picker date remains unresolved.",
       "target": "Find the GitHub changelog for first selectable Gemini 1.5 Pro availability."
     },
     {
       "id": "github-gpt4-1-first-availability-2025",
+      "state": "open",
       "working_claim": "GPT-4.1 entered the GitHub ecosystem around its 14 April 2025 release.",
       "reason": "GitHub Copilot and GitHub Models must be sourced independently.",
       "target": "Locate product-specific GitHub changelog records."
     },
     {
       "id": "github-o3-mini-claude3-7-ga-2025-04-04",
+      "state": "open",
       "working_claim": "o3-mini and Claude 3.7 Sonnet reached GitHub Copilot GA on 4 April 2025.",
       "reason": "Discussed and likely correct, but the exact original changelog URLs were not pinned during this pass.",
       "target": "Add separate model GA events from GitHub changelog."
     },
     {
       "id": "github-opus4-5-preview-ga-2025",
+      "state": "open",
       "working_claim": "Claude Opus 4.5 entered GitHub paid-plan preview on 24 November 2025 and GA on 18 December 2025.",
       "reason": "Discussed earlier; exact GitHub changelog URLs still need pinning.",
       "target": "Create preview and GA records separately after verification."
     },
     {
       "id": "google-gemini2-5-pro-github-2025-04-11",
+      "state": "open",
       "working_claim": "Gemini 2.5 Pro entered GitHub Copilot public preview on 11 April 2025.",
       "reason": "Discussed earlier, but source URLs were not pinned in this pass.",
       "target": "Verify the Google vendor release and GitHub preview dates independently."
     },
     {
       "id": "gpt5-6-copilot-studio-2026",
+      "state": "open",
       "working_claim": "No reliable Copilot Studio GPT-5.6 availability event found as of 26 July 2026.",
       "reason": "M365, GitHub and Foundry are confirmed on 9 July; Studio must not be inferred.",
       "target": "Leave absent/NF until Microsoft publishes a Studio event."
     },
     {
       "id": "kimi-k2-7-vendor-release-2026",
+      "state": "open",
       "working_claim": "Kimi K2.7/K2.7 Code was newly released around the start of July 2026.",
       "reason": "GitHub's 1 July Copilot event is confirmed; Moonshot's vendor release date remains unresolved.",
       "target": "Pin a Moonshot AI primary launch source."
     },
     {
       "id": "m365-gpt5-1-first-availability-2025",
+      "state": "open",
       "working_claim": "GPT-5.1 existed in the Microsoft ecosystem, but a general M365 Copilot first-availability date is unknown.",
       "reason": "Later migration/upgrade references do not prove core M365 launch.",
       "target": "Only add if Microsoft published a specific M365 Copilot launch or rollout."
     },
     {
       "id": "m365-o1-first-availability-2024",
+      "state": "open",
       "working_claim": "o1 was announced as coming to Microsoft 365 Copilot in September 2024, but later concrete availability remains unresolved.",
       "reason": "An announcement of future support is not an availability event.",
       "target": "Find a dated Microsoft source proving actual M365 use or selectable availability."
     },
     {
       "id": "m365-opus4-7-core-chat-picker-2026-05",
+      "state": "open",
       "working_claim": "Opus 4.7 later reached the broader Microsoft 365 Copilot Chat picker around May 2026.",
       "reason": "16 April only proves Cowork Frontier plus Excel rollout.",
       "target": "Find the exact Copilot Chat picker rollout date."
     },
     {
       "id": "meta-cohere-flux-mai-foundry-history",
+      "state": "open",
       "working_claim": "Meta Llama 3.x, Cohere, FLUX and Microsoft MAI have catalogue milestones worth tracking.",
       "reason": "These broader catalogue candidates remain outside the current sourced pack.",
       "target": "Add only material frontier/significant events with dated primary Foundry sources."
     },
     {
       "id": "microsoft-foundry-branding-2025-11-18",
+      "state": "open",
       "working_claim": "Azure AI Foundry evolved into Microsoft Foundry branding on 18 November 2025.",
       "reason": "The editorial backlog includes the milestone but the sourced pack only captures Anthropic catalogue entry.",
       "target": "Pin the Microsoft platform announcement."
     },
     {
       "id": "openai-codex-public-release-2021-08-10",
+      "state": "open",
       "working_claim": "OpenAI publicly introduced/released Codex on 10 August 2021.",
       "reason": "Useful contrast with GitHub Copilot's 29 June preview, but a durable first-party OpenAI launch URL was not pinned during this pass.",
       "target": "Locate an archived/first-party OpenAI Codex launch announcement and verify the date convention."
     },
     {
       "id": "openai-gpt5-1-vendor-2025-11",
+      "state": "open",
       "working_claim": "GPT-5.1 had a product release on 12 November 2025 and API release around 13 November.",
       "reason": "The sourced pack contains Studio availability but no vendor release event.",
       "target": "Pin the OpenAI first-party release source and date convention."
     },
     {
       "id": "openai-o3-o4mini-vendor-2025-04-16",
+      "state": "open",
       "working_claim": "OpenAI released o3 and o4-mini on 16 April 2025.",
       "reason": "GitHub's same-day preview event is sourced; the vendor row should use an OpenAI first-party launch source.",
       "target": "Pin the OpenAI o3/o4-mini launch announcement."
     },
     {
       "id": "opus5-m365-studio-2026-07-24",
+      "state": "open",
       "working_claim": "Opus 5 is confirmed in GitHub Copilot and Microsoft Foundry on 24 July; Microsoft 365 Copilot and Copilot Studio first availability are not independently sourced.",
       "reason": "Cross-platform assumptions must not become day-zero records. The Foundry leg was resolved on 27 July 2026 by Microsoft's same-day Foundry announcement; no Microsoft 365 or Copilot Studio announcement has been located.",
       "target": "Find separate Microsoft 365 Copilot and Copilot Studio primary announcements, or keep those surfaces N/F."
     },
     {
       "id": "studio-gpt4-1-first-availability-2025",
+      "state": "open",
       "working_claim": "GPT-4.1 became available in Copilot Studio before becoming the default in late October 2025.",
       "reason": "Current/later documentation establishes support and default status but not the initial release day.",
       "target": "Find the first Studio GPT-4.1 announcement."
     },
     {
       "id": "studio-gpt4o-default-2024-09",
+      "state": "open",
       "working_claim": "Copilot Studio moved from GPT-3.5 Turbo to GPT-4o as its default around September 2024.",
       "reason": "The lineage is supported by later Microsoft documentation, but the first default date is not pinned to a dated primary announcement.",
       "target": "Locate the Copilot Studio release-plan/changelog entry for GPT-4o default."
     },
     {
       "id": "studio-sonnet5-first-date-2026",
+      "state": "open",
       "working_claim": "Copilot Studio supports Claude Sonnet 5 in supported regions/new agent experience.",
       "reason": "Current support is known, but initial rollout versus later GA date is not pinned.",
       "target": "Find a dated Studio release note or announcement."
     },
     {
       "id": "xai-github-copilot-picker",
+      "state": "open",
       "working_claim": "No reliable evidence yet that xAI/Grok models entered the GitHub Copilot picker.",
       "reason": "Foundry catalogue availability is not GitHub Copilot availability.",
       "target": "Only add if a GitHub Copilot changelog/model-picker source exists."
