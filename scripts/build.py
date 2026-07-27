@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import collections
 import csv
 import json
 import re
@@ -530,6 +531,46 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
                     dict.fromkeys(s.get("source_type", "other") for s in event["sources"])
                 ),
                 "sources": source_urls(event),
+            })
+
+    # Registry exports, so a consumer can resolve ids and tiers without
+    # parsing YAML or hardcoding the vocabulary.
+    model_fields = ["id", "display_name", "vendor", "family", "aliases", "supersedes", "superseded_by", "event_count"]
+    model_use = collections.Counter(m for event in data["events"] for m in event["model_ids"])
+    with (OUTPUT_DIR / "models.csv").open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=model_fields, lineterminator="\n")
+        writer.writeheader()
+        for entry in models["models"]:
+            writer.writerow({
+                "id": entry["id"],
+                "display_name": entry["display_name"],
+                "vendor": entry["vendor"],
+                "family": entry.get("family", ""),
+                "aliases": " | ".join(entry.get("aliases", [])),
+                "supersedes": entry.get("supersedes", ""),
+                "superseded_by": entry.get("superseded_by", ""),
+                "event_count": model_use.get(entry["id"], 0),
+            })
+
+    surface_fields = ["id", "display_name", "owner", "family", "lineage", "vendor_baseline",
+                      "counts_as", "renamed_from", "renamed_to", "renamed_on", "event_count"]
+    surface_use = collections.Counter(event["surface_id"] for event in data["events"])
+    with (OUTPUT_DIR / "surfaces.csv").open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=surface_fields, lineterminator="\n")
+        writer.writeheader()
+        for entry in platforms["surfaces"]:
+            writer.writerow({
+                "id": entry["id"],
+                "display_name": entry["display_name"],
+                "owner": entry["owner"],
+                "family": entry.get("family", ""),
+                "lineage": entry.get("lineage", ""),
+                "vendor_baseline": str(entry.get("vendor_baseline", False)).lower(),
+                "counts_as": " | ".join(entry["counts_as"]),
+                "renamed_from": entry.get("renamed_from", ""),
+                "renamed_to": entry.get("renamed_to", ""),
+                "renamed_on": entry.get("renamed_on", ""),
+                "event_count": surface_use.get(entry["id"], 0),
             })
 
     lag_fields = [

@@ -55,6 +55,30 @@ without a primary source. **Warnings** are printed but do not fail: day
 precision landing on the first of a month, `confirmed` resting only on
 current documentation, and models with no vendor release event.
 
+## Identifier stability
+
+Identifiers are a public interface. Once a commit reaches `main`, the IDs in
+it are permanent.
+
+- **Never rename an ID that has been merged.** Downstream consumers, the
+  generated CSVs and the `promoted_to` links in the validation backlog all
+  reference them.
+- **Never reuse an ID** for a different event, model or surface, even if the
+  original was removed.
+- If a model or product is renamed by its vendor, keep the ID and change
+  `display_name`. Add the old name to `aliases` (models) or set
+  `renamed_from` / `renamed_to` (surfaces). GPT-4o keeping its ID through a
+  display change is the intent; Azure OpenAI becoming Microsoft Foundry is
+  modelled as a rename chain, not an ID change.
+- If an ID is genuinely wrong, correct it in the same pull request that
+  introduced it. After that, treat it as permanent and record the correction
+  in `caveat` instead.
+
+IDs are lowercase, digits and hyphens only, enforced by all three schemas.
+Event IDs read surface-model-date, for example
+`foundry-opus5-availability-2026-07-24`. Keep them descriptive enough to
+recognise in a diff without opening the file.
+
 ## Confidence
 
 - `confirmed`: clear first-party evidence for the event/date/scope
