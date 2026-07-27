@@ -41,3 +41,23 @@ Its internal ChatGPT citation tokens were not treated as publishable evidence. C
 - Month/year precision is retained rather than converted to an invented day.
 
 The source pages themselves are not redistributed in this repository. Source records include retrieval dates, and the schema permits publication dates, source types, archive URLs, and source notes when those details are available.
+
+## Corrections round, 27 July 2026
+
+`metadata.import_provenance` is a fixed historical record of the 26 July 2026 import, not a live count. It stays at 144 canonical events and 36 validation items; current totals are derived from the data itself.
+
+The first corrections round added four canonical events and retired four backlog items. Every URL was refetched and read before the record was written.
+
+Promoted from the backlog:
+
+- **Copilot in Microsoft 365 apps with Anthropic models, 3 April 2026.** Microsoft Learn states the date explicitly: "On April 3, 2026, Microsoft introduced a new Microsoft 365 admin center setting Copilot in M365 apps with Anthropic models in EU/EFTA and UK." That closed the outstanding request for page-history or Message Center evidence.
+- **Claude Sonnet 5 GA in Microsoft Foundry, 30 June 2026.** The Microsoft announcement carries a 30 June publication date and opens by referring back to the 29 June Claude GA post, which pins the date the working claim lacked.
+- **Claude Opus 5 in Microsoft Foundry, 24 July 2026.** Microsoft's same-day announcement, corroborated by the Learn catalogue listing `claude-opus-5` as Hosted on Azure.
+- **Claude Fable 5 suspension in Microsoft Foundry, 12 June 2026**, at `supported` confidence. Anthropic's directive statement is global and does not name Foundry; CNBC's later report that access had to be re-enabled "on Amazon Web Services, Google Cloud and Microsoft Foundry" establishes retrospectively that Foundry distribution was affected.
+
+Deliberately **not** promoted:
+
+- **Fable 5 restoration in Microsoft Foundry.** The proposed 1 July 2026 date matched the vendor and GitHub restorations, but the best available source says partner-cloud re-enablement would follow "as soon as possible". Under the project's own rule that an announcement of future availability is not first availability, this stays a validation target with the evidence attached.
+- **Splitting the two GPT-5.6 vendor records.** They were reported as reading like duplicates. They do not: the 26 June record is `limited_preview` for GPT-5.6 Sol and the 9 July record is `release` for the Sol / Terra / Luna family, and the earlier record already carries a caveat separating them. Left unchanged.
+
+One unsourced detail was dropped rather than recorded: a Message Center reference giving a 4 May 2026 effective date for default-on behaviour appeared in no cited source. The 25 March 2026 tenant-creation threshold and the summer 2026 Word rollout, both documented on Microsoft Learn, were kept.

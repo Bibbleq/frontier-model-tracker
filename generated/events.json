@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "updated": "2026-07-26",
-  "research_cutoff": "2026-07-26",
+  "updated": "2026-07-27",
+  "research_cutoff": "2026-07-27",
   "metadata": {
     "project": "365Explained Frontier Model Tracker",
     "purpose": "Sourced history of frontier and significant model availability across tracked Microsoft surfaces.",
@@ -3133,6 +3133,53 @@
       ]
     },
     {
+      "id": "m365-anthropic-eu-apps-setting-2026-04-03",
+      "date": "2026-04-03",
+      "date_precision": "day",
+      "vendor": "Anthropic",
+      "model": "Claude models",
+      "platform": {
+        "owner": "Microsoft",
+        "family": "Microsoft 365",
+        "product": "Microsoft 365 admin",
+        "experience": "Copilot in Microsoft 365 apps (Word / Excel / PowerPoint)"
+      },
+      "event": {
+        "type": "admin_policy",
+        "availability": "introduced",
+        "selectable": null,
+        "scope": "governance"
+      },
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft introduced the Microsoft 365 admin centre setting 'Copilot in M365 apps with Anthropic models' for EU/EFTA and UK tenants, enabling Anthropic as the default model for Copilot in Microsoft 365 apps.",
+      "sources": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Anthropic models in Microsoft Online Services",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor",
+          "primary": true,
+          "retrieved_at": "2026-07-27",
+          "source_type": "documentation",
+          "note": "States: 'On April 3, 2026, Microsoft introduced a new Microsoft 365 admin center setting Copilot in M365 apps with Anthropic models in EU/EFTA and UK to enable Anthropic as the default model for Copilot in Microsoft 365 apps.'"
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Copilot in Microsoft 365 apps with Anthropic models",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-anthropic-apps",
+          "primary": true,
+          "retrieved_at": "2026-07-27",
+          "source_type": "documentation"
+        }
+      ],
+      "caveat": "This app-level setting is separate from, though dependent on, the global Anthropic subprocessor control. It is on by default for EU/EFTA/UK tenants created after 25 March 2026; tenants existing before that date are directed to the Message Center for their default. Coverage began with Excel and PowerPoint, with Word support documented as arriving in summer 2026.",
+      "related_events": [
+        {
+          "id": "m365-anthropic-subprocessor-2026-01-07",
+          "relation": "other"
+        }
+      ]
+    },
+    {
       "id": "anthropic-opus4-7-2026-04-16",
       "date": "2026-04-16",
       "date_precision": "day",
@@ -3707,8 +3754,17 @@
         "scope": "availability_state"
       },
       "confidence": "confirmed",
-      "evidence_note": "Anthropic suspended Fable 5 and Mythos 5 availability following a US government export-control directive; downstream access was affected.",
+      "evidence_note": "Anthropic suspended Fable 5 and Mythos 5 after receiving a US Commerce Department export-control directive at 5:21pm ET, citing national security authorities. The directive barred access by any foreign national, whether inside or outside the United States and including Anthropic's own foreign national employees, which is why the shutdown applied to all customers globally; downstream access was affected.",
       "sources": [
+        {
+          "publisher": "Anthropic",
+          "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5",
+          "url": "https://www.anthropic.com/news/fable-mythos-access",
+          "primary": true,
+          "retrieved_at": "2026-07-27",
+          "published_at": "2026-06-12",
+          "source_type": "announcement"
+        },
         {
           "publisher": "Anthropic",
           "title": "Redeploying Fable 5",
@@ -3720,6 +3776,55 @@
       "models": [
         "Claude Fable 5",
         "Claude Mythos 5"
+      ]
+    },
+    {
+      "id": "foundry-fable5-suspension-2026-06-12",
+      "date": "2026-06-12",
+      "date_precision": "day",
+      "vendor": "Anthropic",
+      "model": "Claude Fable 5",
+      "platform": {
+        "owner": "Microsoft",
+        "family": "Microsoft Foundry",
+        "product": "Microsoft Foundry"
+      },
+      "event": {
+        "type": "suspension",
+        "availability": "suspended",
+        "selectable": null,
+        "scope": "availability_state"
+      },
+      "confidence": "supported",
+      "evidence_note": "Anthropic disabled Fable 5 and Mythos 5 for all customers from 5:21pm ET on 12 June 2026 to comply with a US Commerce Department export-control directive barring access by any foreign national. The action was global and removed the models from partner distribution, including Microsoft Foundry.",
+      "sources": [
+        {
+          "publisher": "Anthropic",
+          "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5",
+          "url": "https://www.anthropic.com/news/fable-mythos-access",
+          "primary": true,
+          "retrieved_at": "2026-07-27",
+          "published_at": "2026-06-12",
+          "source_type": "announcement",
+          "note": "Records that the directive arrived at 5:21pm ET and that Anthropic had to 'abruptly disable Fable 5 and Mythos 5 for all our customers'. Microsoft Foundry is not named in the body."
+        },
+        {
+          "publisher": "CNBC",
+          "title": "Anthropic says Trump admin has lifted export controls on Claude Fable 5 and Mythos 5",
+          "url": "https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html",
+          "primary": false,
+          "retrieved_at": "2026-07-27",
+          "published_at": "2026-06-30",
+          "source_type": "news",
+          "note": "Reports that Anthropic would 're-enable access to Fable 5 on Amazon Web Services, Google Cloud and Microsoft Foundry', which establishes retrospectively that Foundry distribution had been suspended."
+        }
+      ],
+      "caveat": "Confidence is 'supported' rather than 'confirmed' because no Microsoft-issued Foundry suspension notice was located; the date is Anthropic's global compliance action. That Foundry was affected is established retrospectively by the CNBC re-enablement report rather than by a first-party Microsoft record.",
+      "related_events": [
+        {
+          "id": "anthropic-fable5-suspension-2026-06-12",
+          "relation": "same_announcement"
+        }
       ]
     },
     {
@@ -3807,9 +3912,18 @@
           "url": "https://azure.microsoft.com/en-us/blog/claude-in-microsoft-foundry-is-now-generally-available/",
           "primary": true,
           "retrieved_at": "2026-07-26"
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Claude models in Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models",
+          "primary": true,
+          "retrieved_at": "2026-07-27",
+          "source_type": "documentation",
+          "note": "Current-state catalogue. Distinguishes 'Hosted on Azure' from 'Hosted on Anthropic infrastructure' versions and lists deployment types."
         }
       ],
-      "caveat": "Do not claim Azure hosting eliminates Anthropic's processor/operator role where service terms still apply."
+      "caveat": "Do not claim Azure hosting eliminates Anthropic's processor/operator role where service terms still apply. GA covers the Claude offering in Foundry rather than every Claude model on Azure infrastructure: Learn distinguishes 'Hosted on Azure' from 'Hosted on Anthropic infrastructure' versions, and as of 27 July 2026 lists claude-opus-5, claude-opus-4-8, claude-sonnet-5 and claude-haiku-4-5 as Azure-hosted, with Fable 5 still Anthropic-hosted preview. The Azure-hosted set on 29 June is not independently sourced, so treat the current listing as catalogue state rather than evidence of the GA-day composition."
     },
     {
       "id": "anthropic-sonnet5-2026-06-30",
@@ -3836,6 +3950,48 @@
           "url": "https://www.anthropic.com/news/claude-sonnet-5",
           "primary": true,
           "retrieved_at": "2026-07-26"
+        }
+      ]
+    },
+    {
+      "id": "foundry-sonnet5-ga-2026-06-30",
+      "date": "2026-06-30",
+      "date_precision": "day",
+      "vendor": "Anthropic",
+      "model": "Claude Sonnet 5",
+      "platform": {
+        "owner": "Microsoft",
+        "family": "Microsoft Foundry",
+        "product": "Microsoft Foundry"
+      },
+      "event": {
+        "type": "ga",
+        "availability": "ga",
+        "selectable": null,
+        "scope": "catalogue_availability"
+      },
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft announced the general availability of Claude Sonnet 5 in Microsoft Foundry, the day after the Claude in Microsoft Foundry GA announcement.",
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "Claude Sonnet 5 Is Now Generally Available in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/claude-sonnet-5-is-now-generally-available-in-microsoft-foundry/4530737",
+          "primary": true,
+          "retrieved_at": "2026-07-27",
+          "published_at": "2026-06-30",
+          "source_type": "announcement",
+          "note": "Opens: 'On June 29, 2026, we announced the general availability of Claude in Microsoft Foundry... Today, we're continuing that momentum with the general availability of Claude Sonnet 5 in Microsoft Foundry.'"
+        }
+      ],
+      "related_events": [
+        {
+          "id": "claude-foundry-ga-2026-06-29",
+          "relation": "other"
+        },
+        {
+          "id": "anthropic-sonnet5-2026-06-30",
+          "relation": "vendor_release"
         }
       ]
     },
@@ -3886,7 +4042,7 @@
         "scope": "availability_state"
       },
       "confidence": "confirmed",
-      "evidence_note": "Anthropic announced Fable 5 redeployment after the restrictions behind the June suspension changed; GitHub re-enabled access.",
+      "evidence_note": "Anthropic announced Fable 5 redeployment after the US Department of Commerce lifted the export controls behind the June suspension; GitHub re-enabled access.",
       "sources": [
         {
           "publisher": "Anthropic",
@@ -3894,8 +4050,18 @@
           "url": "https://www.anthropic.com/news/redeploying-fable-5",
           "primary": true,
           "retrieved_at": "2026-07-26"
+        },
+        {
+          "publisher": "CNBC",
+          "title": "Anthropic says Trump admin has lifted export controls on Claude Fable 5 and Mythos 5",
+          "url": "https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html",
+          "primary": false,
+          "retrieved_at": "2026-07-27",
+          "published_at": "2026-06-30",
+          "source_type": "news"
         }
       ],
+      "caveat": "This date covers Fable 5's general restoration on the Claude platform, Claude.ai and Claude Code. Mythos 5 access was restored earlier for some approved US organisations, following government approval granted on 26 June 2026. Re-enablement on partner clouds, including Amazon Web Services, Google Cloud and Microsoft Foundry, was described as following 'as soon as possible' and is not established as having occurred on this date.",
       "models": [
         "Claude Fable 5",
         "Claude Mythos 5"
@@ -4284,6 +4450,58 @@
       ]
     },
     {
+      "id": "foundry-opus5-availability-2026-07-24",
+      "date": "2026-07-24",
+      "date_precision": "day",
+      "vendor": "Anthropic",
+      "model": "Claude Opus 5",
+      "platform": {
+        "owner": "Microsoft",
+        "family": "Microsoft Foundry",
+        "product": "Microsoft Foundry"
+      },
+      "event": {
+        "type": "catalogue_availability",
+        "availability": "available",
+        "selectable": null,
+        "scope": "catalogue_availability"
+      },
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft announced Claude Opus 5, the first fifth-generation Opus model, as available in Microsoft Foundry on the day of Anthropic's release.",
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "Claude Opus 5 is available today in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/claude-opus-5-is-available-today-in-microsoft-foundry/4535068",
+          "primary": true,
+          "retrieved_at": "2026-07-27",
+          "published_at": "2026-07-24",
+          "source_type": "announcement",
+          "note": "States 'Claude Opus 5 is Zero Data Retention compatible'."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Claude models in Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models",
+          "primary": true,
+          "retrieved_at": "2026-07-27",
+          "source_type": "documentation",
+          "note": "Lists claude-opus-5 as Hosted on Azure (GA) and available for the Data Zone Standard (US) deployment type."
+        }
+      ],
+      "caveat": "Claude Opus 5 is Zero Data Retention compatible, in contrast to Claude Fable 5, which Microsoft documents as a Preview model with Data Retention. Treat the Learn catalogue listing as current-state evidence rather than proof of the first-availability date.",
+      "related_events": [
+        {
+          "id": "anthropic-opus5-2026-07-24",
+          "relation": "vendor_release"
+        },
+        {
+          "id": "github-opus5-2026-07-24",
+          "relation": "other"
+        }
+      ]
+    },
+    {
       "id": "github-opus5-2026-07-24",
       "date": "2026-07-24",
       "date_precision": "day",
@@ -4309,6 +4527,13 @@
           "url": "https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot/",
           "primary": true,
           "retrieved_at": "2026-07-26"
+        }
+      ],
+      "caveat": "Microsoft's same-day Foundry announcement records that Claude Opus 5 is Zero Data Retention compatible, unlike Claude Fable 5. Carry that governance distinction alongside model-picker availability.",
+      "related_events": [
+        {
+          "id": "foundry-opus5-availability-2026-07-24",
+          "relation": "other"
         }
       ]
     },
@@ -4375,10 +4600,29 @@
       "target": "Use a DeepSeek official release/repository announcement with explicit date."
     },
     {
-      "id": "foundry-fable5-suspension-restoration-2026",
-      "working_claim": "Fable 5 availability in Microsoft Foundry was suspended and later restored alongside the vendor-level action.",
-      "reason": "The pack directly supports Anthropic and GitHub state changes but not a distinct Microsoft first-party state-change record.",
-      "target": "Locate dated Microsoft Foundry suspension and restoration evidence."
+      "id": "foundry-fable5-restoration-2026",
+      "working_claim": "Fable 5 availability in Microsoft Foundry was restored at some point after the export controls were lifted on 30 June 2026.",
+      "reason": "The 12 June suspension is now recorded canonically at 'supported' confidence, but no restoration date is established for Foundry. CNBC reported on 30 June 2026 that Anthropic would re-enable Fable 5 on Amazon Web Services, Google Cloud and Microsoft Foundry 'as soon as possible', which is an announcement of future availability rather than a first-availability date. Microsoft Learn currently lists claude-fable-5 as an available Anthropic-hosted preview, proving the end state but not the date.",
+      "target": "Locate a dated Microsoft Foundry re-enablement record, or a Learn page revision, that pins when Fable 5 returned to the Foundry catalogue.",
+      "sources": [
+        {
+          "publisher": "CNBC",
+          "title": "Anthropic says Trump admin has lifted export controls on Claude Fable 5 and Mythos 5",
+          "url": "https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html",
+          "primary": false,
+          "retrieved_at": "2026-07-27",
+          "published_at": "2026-06-30",
+          "source_type": "news"
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Claude models in Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models",
+          "primary": true,
+          "retrieved_at": "2026-07-27",
+          "source_type": "documentation"
+        }
+      ]
     },
     {
       "id": "foundry-gpt5-5-first-availability-2026-04-24",
@@ -4403,12 +4647,6 @@
       "working_claim": "Claude Opus 4.5 entered Microsoft Foundry public preview around vendor launch.",
       "reason": "The sourced pack contains vendor and Studio events but no Foundry event.",
       "target": "Locate the dated Foundry model announcement."
-    },
-    {
-      "id": "foundry-sonnet5-2026-06-30",
-      "working_claim": "Claude Sonnet 5 was available through Foundry around its 30 June release.",
-      "reason": "Likely after Claude Foundry GA on 29 June, but current catalogue presence does not prove the first date.",
-      "target": "Locate a dated Microsoft Foundry Sonnet 5 release record."
     },
     {
       "id": "gemini1-5-pro-public-preview-ga-2024",
@@ -4477,12 +4715,6 @@
       "target": "Pin a Moonshot AI primary launch source."
     },
     {
-      "id": "m365-anthropic-eu-setting-2026-04",
-      "working_claim": "A new EU/EFTA/UK Anthropic admin setting arrived around early April 2026.",
-      "reason": "Current Microsoft Learn documentation proves the setting and 1 May transition, but the previously discussed 3 April date was not revalidated.",
-      "target": "Use Microsoft Learn page history or Message Center evidence to establish the exact date."
-    },
-    {
       "id": "m365-gpt5-1-first-availability-2025",
       "working_claim": "GPT-5.1 existed in the Microsoft ecosystem, but a general M365 Copilot first-availability date is unknown.",
       "reason": "Later migration/upgrade references do not prove core M365 launch.",
@@ -4531,10 +4763,10 @@
       "target": "Pin the OpenAI o3/o4-mini launch announcement."
     },
     {
-      "id": "opus5-foundry-m365-studio-2026-07-24",
-      "working_claim": "Opus 5 is confirmed in GitHub Copilot on 24 July; Foundry, M365 and Studio first availability are not all independently sourced.",
-      "reason": "Cross-platform assumptions must not become day-zero records.",
-      "target": "Find separate Foundry, M365 and Studio primary announcements or keep those surfaces N/F."
+      "id": "opus5-m365-studio-2026-07-24",
+      "working_claim": "Opus 5 is confirmed in GitHub Copilot and Microsoft Foundry on 24 July; Microsoft 365 Copilot and Copilot Studio first availability are not independently sourced.",
+      "reason": "Cross-platform assumptions must not become day-zero records. The Foundry leg was resolved on 27 July 2026 by Microsoft's same-day Foundry announcement; no Microsoft 365 or Copilot Studio announcement has been located.",
+      "target": "Find separate Microsoft 365 Copilot and Copilot Studio primary announcements, or keep those surfaces N/F."
     },
     {
       "id": "studio-gpt4-1-first-availability-2025",

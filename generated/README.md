@@ -5,7 +5,7 @@ Files in this directory are generated from `data/events.yaml` by
 
 - `events.json` contains schema-v2 metadata, canonical events, and the validation backlog.
 - `events.csv` is the flattened canonical event timeline.
-- `validation-backlog.csv` is the flattened research queue and must not be presented as confirmed history.
+- `validation-backlog.csv` is the flattened research queue and must not be presented as confirmed history. Its `sources` column carries any evidence already gathered against a target; a populated row is still an open question, not a claim.
 
 Generated dataset representations are licensed under CC BY 4.0; see
 `../LICENSE-DATA`.
