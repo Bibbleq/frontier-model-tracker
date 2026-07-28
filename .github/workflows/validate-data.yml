@@ -7,6 +7,7 @@ on:
       - "schema/**"
       - "scripts/**"
       - "generated/**"
+      - "published/**"
       - "requirements.txt"
       - "tests/**"
       - ".github/workflows/validate-data.yml"
@@ -16,6 +17,7 @@ on:
       - "schema/**"
       - "scripts/**"
       - "generated/**"
+      - "published/**"
       - "requirements.txt"
       - "tests/**"
       - ".github/workflows/validate-data.yml"
@@ -39,3 +41,7 @@ jobs:
         run: python scripts/build.py
       - name: Ensure generated files are committed
         run: git diff --exit-code -- generated/
+      - name: Assemble published contract
+        run: python scripts/assemble_site.py _site
+      - name: Verify published contract
+        run: python scripts/check_published_tree.py _site
