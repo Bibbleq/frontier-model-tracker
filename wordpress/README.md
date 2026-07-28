@@ -8,17 +8,17 @@ anything in this repository:
 
 - Contract: [`docs/data-contract.md`](../docs/data-contract.md)
 - Manifest: <https://bibbleq.github.io/frontier-model-tracker/manifest.json>
-- Pinned tree: <https://bibbleq.github.io/frontier-model-tracker/v3/>
+- Pinned tree: <https://bibbleq.github.io/frontier-model-tracker/c1/v3/>
 
 ## Why they are separate
 
-**Licensing.** This repository is MIT code and CC BY 4.0 data. A plugin
-distributed through wordpress.org must be GPLv2-or-later, and CC BY 4.0 is not
-GPL-compatible. Fetching the data at runtime keeps the two apart: the plugin is
-GPL code, the dataset stays CC BY and is consumed with attribution rather than
-bundled. It also lowers the bar for contributions — someone improving a
-renderer never touches the dataset, and someone correcting a date never touches
-PHP.
+**Licensing and attribution.** This repository is MIT code and CC BY 4.0
+data; CC BY 4.0 is GPL-compatible, while a plugin distributed through
+wordpress.org is normally GPLv2-or-later. Fetching rather than bundling keeps
+ownership and attribution clear: the plugin remains GPL code and the dataset is
+consumed under CC BY with visible credit. It also lowers the bar for
+contributions — someone improving a renderer never touches the dataset, and
+someone correcting a date never touches PHP.
 
 **Release cadence and tooling.** The dataset changes weekly; a renderer changes
 rarely. WordPress.org releases plugins as versioned zips through SVN, which is
