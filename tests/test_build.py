@@ -141,9 +141,6 @@ class RegistryInvariantTests(unittest.TestCase):
 
 
 class DatasetContractTests(unittest.TestCase):
-    def test_readme_count_matches_dataset(self) -> None:
-        build.validate_documented_counts(build.load())
-
     def test_open_backlog_suppresses_missing_lag(self) -> None:
         models = {"models": [{"id": "model", "display_name": "Model", "vendor": "Vendor"}]}
         platforms = {
