@@ -14,7 +14,7 @@ The aim is to distinguish *what happened* from *how it was exposed*: underlying 
 
 ## Project status
 
-The structured dataset is the source of truth. It currently contains **152 canonical events** spanning June 2020 to July 2026, plus **40 validation targets** that are deliberately excluded from firm timeline claims until better evidence is found. Research is current to 27 July 2026. Machine-readable totals, warning counts and coverage gaps are published in [`generated/status.json`](generated/status.json). Presentation layers such as the 365Explained web timeline consume generated representations of that data.
+The structured dataset is the source of truth. It contains **over 140 canonical events** spanning June 2020 onward, alongside dozens of validation targets undergoing further research. Exact current totals, warning counts and coverage gaps are published in [`generated/status.json`](generated/status.json). Presentation layers such as the 365Explained web timeline consume generated representations of that data.
 
 Treat the dataset as a sourced research project rather than official product documentation.
 
