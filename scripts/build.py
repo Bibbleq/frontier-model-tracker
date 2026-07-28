@@ -142,12 +142,20 @@ def validate_registry_semantics(models: dict, platforms: dict) -> None:
             rename_graph[entry["id"]].add(entry["renamed_to"])
         if entry.get("renamed_from"):
             rename_graph[entry["renamed_from"]].add(entry["id"])
-        for other_id in rename_graph[entry["id"]]:
-            other = surface_by_id[other_id]
-            if entry.get("lineage") and other.get("lineage") and entry["lineage"] != other["lineage"]:
-                fail(f"{entry['id']}: rename target {other_id} belongs to a different lineage")
         if entry.get("vendor_baseline") and entry["counts_as"]:
             fail(f"{entry['id']}: a vendor baseline surface must not declare counts_as tiers")
+
+    # Checked over the completed graph. Doing this while the graph is still
+    # being built makes the result depend on declaration order: an edge
+    # declared only as `renamed_from` on a later entry is invisible when the
+    # earlier entry is processed, so a mismatch in that direction is missed.
+    for source_id, targets in rename_graph.items():
+        source = surface_by_id[source_id]
+        for target_id in targets:
+            target = surface_by_id[target_id]
+            if source.get("lineage") and target.get("lineage") and source["lineage"] != target["lineage"]:
+                fail(f"{source_id}: rename target {target_id} belongs to a different lineage")
+
     reject_cycles(rename_graph, "surface rename")
 
     experience_ids = [entry["id"] for entry in platforms["experiences"]]
@@ -360,17 +368,39 @@ def check_lifecycle_ordering(events: list[dict]) -> None:
 
 
 def check_suspension_pairs(events: list[dict]) -> None:
-    suspended: dict[tuple, str] = {}
+    """A restoration must reverse a suspension that could have preceded it.
+
+    Dates are compared as intervals rather than as strings, because the project
+    records the precision the evidence supports. A suspension and a restoration
+    both known only to the same month, or both recorded on the same day, are
+    legitimate: a short outage is real, and padding either date to force a
+    strict ordering would invent precision the sources do not have. Only a
+    restoration that must have ended before its suspension began is impossible.
+
+    Suspensions are collected first so that same-date pairs are not rejected
+    because "restored" happens to sort before "suspended" within a date.
+    """
+    suspensions: dict[tuple, list[dict]] = {}
     for event in _availability(events):
+        if event["lifecycle"] != "suspended":
+            continue
         for model_id in event["model_ids"]:
-            key = (event["surface_id"], model_id)
-            if event["lifecycle"] == "suspended":
-                suspended[key] = event["date"]["start"]
-            elif event["lifecycle"] == "restored":
-                if key not in suspended:
-                    fail(f"{event['id']}: restoration without a prior suspension on the same surface")
-                if event["date"]["start"] <= suspended[key]:
-                    fail(f"{event['id']}: restoration must be dated after its suspension")
+            suspensions.setdefault((event["surface_id"], model_id), []).append(event)
+
+    for event in _availability(events):
+        if event["lifecycle"] != "restored":
+            continue
+        _, restored_end = date_interval(event["date"])
+        for model_id in event["model_ids"]:
+            candidates = suspensions.get((event["surface_id"], model_id), [])
+            if not candidates:
+                fail(f"{event['id']}: restoration without a suspension on the same surface")
+            if all(restored_end < date_interval(s["date"])[0] for s in candidates):
+                earliest = min(candidates, key=lambda s: date_interval(s["date"])[0])
+                fail(
+                    f"{event['id']}: restoration ends before its suspension "
+                    f"({earliest['id']}) could have begun"
+                )
 
 
 # Each relation implies an ordering between the two events. "target_earlier"

@@ -6,11 +6,19 @@ import unittest
 from scripts import build
 
 
-def availability(event_id: str, day: str, lifecycle: str, *, surface: str = "surface", model: str = "model") -> dict:
+def availability(
+    event_id: str,
+    day: str,
+    lifecycle: str,
+    *,
+    surface: str = "surface",
+    model: str = "model",
+    precision: str = "day",
+) -> dict:
     return {
         "id": event_id,
         "kind": "availability",
-        "date": {"start": day, "precision": "day"},
+        "date": {"start": day, "precision": precision},
         "surface_id": surface,
         "model_ids": [model],
         "lifecycle": lifecycle,
@@ -40,13 +48,42 @@ class EventInvariantTests(unittest.TestCase):
         with self.assertRaises(SystemExit):
             build.check_lifecycle_ordering(events)
 
-    def test_restoration_must_follow_suspension(self) -> None:
+    def test_restoration_without_suspension_is_rejected(self) -> None:
+        with self.assertRaises(SystemExit):
+            build.check_suspension_pairs([availability("restored", "2025-01-01", "restored")])
+
+    def test_restoration_entirely_before_suspension_is_rejected(self) -> None:
         events = [
-            availability("suspended", "2025-01-01", "suspended"),
+            availability("suspended", "2025-02-01", "suspended"),
             availability("restored", "2025-01-01", "restored"),
         ]
         with self.assertRaises(SystemExit):
             build.check_suspension_pairs(events)
+
+    def test_same_day_suspension_and_restoration_is_allowed(self) -> None:
+        """A short outage is real. Rejecting it would force an invented date."""
+        events = [
+            availability("suspended", "2025-01-01", "suspended"),
+            availability("restored", "2025-01-01", "restored"),
+        ]
+        build.check_suspension_pairs(events)
+
+    def test_same_month_suspension_and_restoration_is_allowed(self) -> None:
+        """Where the evidence supports only a month, both events share it."""
+        events = [
+            availability("suspended", "2026-06", "suspended", precision="month"),
+            availability("restored", "2026-06", "restored", precision="month"),
+        ]
+        build.check_suspension_pairs(events)
+
+    def test_same_date_pair_is_order_independent(self) -> None:
+        """Events are sorted by (date, id), so 'restored' can precede
+        'suspended' in iteration order on a shared date."""
+        events = [
+            availability("restored", "2025-01-01", "restored"),
+            availability("suspended", "2025-01-01", "suspended"),
+        ]
+        build.check_suspension_pairs(events)
 
     def test_relation_cycles_are_rejected(self) -> None:
         first = availability("first", "2025-01-01", "ga")
@@ -70,6 +107,29 @@ class RegistryInvariantTests(unittest.TestCase):
         models["models"][1].setdefault("aliases", []).append(models["models"][0]["display_name"])
         with self.assertRaises(SystemExit):
             build.validate_registry_semantics(models, copy.deepcopy(self.platforms))
+
+    def test_lineage_mismatch_is_caught_in_either_direction(self) -> None:
+        """The edge may be declared from either end, and the target may appear
+        first in the file. Checking while the graph is still being built misses
+        the `renamed_from`-only case."""
+        models = {"models": [{"id": "m", "display_name": "M", "vendor": "V"}], "families": []}
+        for declaring, surfaces in (
+            ("renamed_from on the later entry", [
+                {"id": "old", "display_name": "Old", "owner": "M", "lineage": "alpha", "counts_as": []},
+                {"id": "new", "display_name": "New", "owner": "M", "lineage": "beta",
+                 "renamed_from": "old", "counts_as": []},
+            ]),
+            ("renamed_to on the earlier entry", [
+                {"id": "old", "display_name": "Old", "owner": "M", "lineage": "alpha",
+                 "renamed_to": "new", "counts_as": []},
+                {"id": "new", "display_name": "New", "owner": "M", "lineage": "beta", "counts_as": []},
+            ]),
+        ):
+            with self.subTest(declaring):
+                with self.assertRaises(SystemExit):
+                    build.validate_registry_semantics(
+                        copy.deepcopy(models), {"surfaces": surfaces, "experiences": []}
+                    )
 
     def test_surface_rename_cycles_are_rejected(self) -> None:
         platforms = copy.deepcopy(self.platforms)
