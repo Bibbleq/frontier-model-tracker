@@ -22,14 +22,27 @@ Treat the dataset as a sourced research project rather than official product doc
 
 ```text
 data/              Human-maintained source data: model and surface registries, events
-docs/              Research provenance and editorial guidance
+docs/              Data contract, methodology and research provenance
 generated/         Machine-generated JSON/CSV outputs
 schema/            JSON Schema for event validation
 scripts/           Build and validation tooling
 web/               Reusable timeline renderer / demo
-wordpress/         WordPress integration
+wordpress/         Pointer to the separate display-layer repositories
 .github/           Contribution and validation workflows
 ```
+
+## Consuming the data
+
+The generated outputs are published to a stable URL on every change to `main`.
+Display layers — the 365Explained WordPress plugin first, others later — live in
+their own repositories and consume that endpoint rather than this one.
+
+Start at the manifest: <https://bibbleq.github.io/frontier-model-tracker/manifest.json>
+
+[`docs/data-contract.md`](docs/data-contract.md) is the promise consumers can
+rely on: which paths are stable, how versioning and deprecation work, and the
+obligations a renderer has to meet so the distinctions the dataset keeps are not
+flattened in the rendering.
 
 ## Event model
 
