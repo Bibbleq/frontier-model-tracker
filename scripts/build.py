@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import collections
 import csv
+import hashlib
 import json
 import re
 import sys
@@ -13,6 +14,30 @@ from urllib.parse import urlparse
 
 import yaml
 from jsonschema import Draft202012Validator
+
+# The published data contract. See docs/data-contract.md.
+#
+# CONTRACT_VERSION describes the publishing layout: the URL structure, the
+# manifest format and which files exist. The dataset's own `version` describes
+# the shape of the records. They move independently.
+CONTRACT_VERSION = 1
+BASE_URL = "https://bibbleq.github.io/frontier-model-tracker/"
+ATTRIBUTION = "365Explained Frontier Model Tracker"
+
+# Files promised to consumers, in the order they appear in the manifest. The
+# key is the path on the published site; the value describes it.
+PUBLISHED_FILES = {
+    "data/events.json": "The whole dataset: metadata, canonical events and the validation backlog",
+    "data/status.json": "Totals, warning counts, coverage gaps and lag certainty distribution",
+    "data/events.csv": "Flattened canonical timeline, identifiers resolved to display names",
+    "data/validation-backlog.csv": "Open research questions with states and targets, not confirmed history",
+    "data/lag.csv": "Derived adoption lag; read certainty before any number",
+    "data/models.csv": "Model registry with aliases, families and event counts",
+    "data/surfaces.csv": "Surface registry with rename lineage, analytical tiers and event counts",
+    "schema/events.schema.json": "JSON Schema the dataset validates against",
+    "schema/models.schema.json": "JSON Schema for the model registry",
+    "schema/platforms.schema.json": "JSON Schema for the surface registry",
+}
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "events.yaml"
@@ -742,11 +767,66 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
             })
 
 
+def write_manifest(data: dict) -> None:
+    """Emit the machine-readable form of docs/data-contract.md.
+
+    A consumer fetches this first: it is small, it states both version numbers,
+    and it carries a checksum for every promised file so the larger downloads
+    can be verified and skipped when unchanged. Written last, because it
+    describes the files the rest of the build has just produced.
+
+    Deliberately contains no build timestamp. The build must be reproducible
+    byte for byte, which CI enforces with `git diff --exit-code`, so the only
+    dates here are data: the dataset's own `updated` and `research_cutoff`.
+    """
+    source_dir = {"data": OUTPUT_DIR, "schema": ROOT / "schema"}
+
+    files = []
+    for published_path, description in PUBLISHED_FILES.items():
+        prefix, _, name = published_path.partition("/")
+        local = source_dir[prefix] / name
+        if not local.exists():
+            fail(f"manifest promises {published_path} but {local} was not produced")
+        payload = local.read_bytes()
+        files.append({
+            "path": published_path,
+            "media_type": "application/json" if name.endswith(".json") else "text/csv",
+            "description": description,
+            "bytes": len(payload),
+            "sha256": hashlib.sha256(payload).hexdigest(),
+        })
+
+    manifest = {
+        "contract_version": CONTRACT_VERSION,
+        "dataset_version": data["version"],
+        "updated": data["updated"],
+        "research_cutoff": data["research_cutoff"],
+        "base_url": BASE_URL,
+        "pinned_url": f"{BASE_URL}v{data['version']}/",
+        "documentation": "https://github.com/Bibbleq/frontier-model-tracker/blob/main/docs/data-contract.md",
+        "licence": {
+            "data": "CC-BY-4.0",
+            "code": "MIT",
+            "attribution": ATTRIBUTION,
+            "notice": (
+                "A sourced research project, not official product documentation. "
+                "Not affiliated with Microsoft, OpenAI, Anthropic or GitHub."
+            ),
+        },
+        "files": files,
+    }
+
+    with (OUTPUT_DIR / "manifest.json").open("w", encoding="utf-8", newline="\n") as handle:
+        json.dump(manifest, handle, indent=2, ensure_ascii=False)
+        handle.write("\n")
+
+
 if __name__ == "__main__":
     registry_models, registry_platforms = validate_registries()
     dataset = load()
     validate_semantics(dataset, registry_models, registry_platforms)
     write_outputs(dataset, registry_models, registry_platforms)
+    write_manifest(dataset)
 
     for entry in sorted(warnings, key=lambda w: (w["code"], w["subject"])):
         print(f"WARNING [{entry['code']}] {entry['subject']}: {entry['message']}", file=sys.stderr)

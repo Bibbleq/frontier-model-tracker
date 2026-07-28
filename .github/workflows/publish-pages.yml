@@ -54,15 +54,29 @@ jobs:
 
       - name: Assemble site
         run: |
-          mkdir -p _site/data
+          set -euo pipefail
+          mkdir -p _site/data _site/schema
           cp web/index.html web/dashboard.html web/style.css _site/
           cp generated/events.json generated/status.json generated/*.csv _site/data/
           # A dataset consumers can cite: the exact schema alongside the data.
-          mkdir -p _site/schema
           cp schema/*.json _site/schema/
+          # The machine-readable form of docs/data-contract.md. Consumers fetch
+          # this first to check versions and verify checksums.
+          cp generated/manifest.json _site/
+
+          # Publish a second tree pinned to the dataset major version. A
+          # consumer that wants to be left alone pins to /v3/; one that wants
+          # new fields as they appear uses /. See docs/data-contract.md.
+          VERSION="$(python -c 'import json;print(json.load(open("generated/manifest.json"))["dataset_version"])')"
+          mkdir -p "_site/v${VERSION}"
+          cp -r _site/data _site/schema _site/manifest.json "_site/v${VERSION}/"
+
           echo "User-agent: *" > _site/robots.txt
           echo "Allow: /" >> _site/robots.txt
           ls -R _site
+
+      - name: Verify the published tree matches the manifest
+        run: python scripts/check_published_tree.py _site
 
       - uses: actions/configure-pages@v5
 
