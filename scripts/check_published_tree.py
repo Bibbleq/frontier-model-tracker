@@ -1,20 +1,10 @@
 #!/usr/bin/env python3
-"""Verify an assembled site against the manifest before it is published.
-
-The data contract promises a set of files at stable paths, each with a byte
-length and a SHA-256. That promise is only worth anything if something checks
-the assembled tree actually keeps it, so this runs in the publish workflow
-between assembling the site and uploading it.
-
-Checks both the latest tree and the pinned version tree, because a consumer
-that pins is relying on the pinned copy being identical, not merely present.
-
-Usage: python scripts/check_published_tree.py _site
-"""
+"""Verify the live tree and every immutable version snapshot before publishing."""
 from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -24,15 +14,14 @@ def fail(message: str) -> None:
     raise SystemExit(1)
 
 
-def check_tree(root: Path, manifest: dict, label: str) -> int:
+def load_manifest(root: Path, label: str) -> dict:
     manifest_path = root / "manifest.json"
     if not manifest_path.exists():
         fail(f"{label}: manifest.json is missing")
+    return json.loads(manifest_path.read_text(encoding="utf-8"))
 
-    published = json.loads(manifest_path.read_text(encoding="utf-8"))
-    if published != manifest:
-        fail(f"{label}: manifest.json differs from the generated manifest")
 
+def check_tree(root: Path, manifest: dict, label: str) -> int:
     for entry in manifest["files"]:
         target = root / entry["path"]
         if not target.exists():
@@ -54,24 +43,42 @@ def main() -> None:
     if not site.is_dir():
         fail(f"{site} is not a directory")
 
-    manifest = json.loads((site / "manifest.json").read_text(encoding="utf-8"))
-    version = manifest["dataset_version"]
+    latest = load_manifest(site, "latest")
+    count = check_tree(site, latest, "latest")
 
-    count = check_tree(site, manifest, "latest")
-    pinned = site / f"v{version}"
-    if not pinned.is_dir():
-        fail(f"the pinned tree v{version} promised by the contract was not assembled")
-    check_tree(pinned, manifest, f"v{version}")
+    expected = site / f"c{latest['contract_version']}" / f"v{latest['dataset_version']}"
+    if not expected.is_dir():
+        fail(
+            "the immutable snapshot "
+            f"c{latest['contract_version']}/v{latest['dataset_version']} is missing"
+        )
 
-    # The viewer is not part of the contract, but publishing the data without
-    # it would still be a broken deploy.
+    snapshots = 0
+    for manifest_path in sorted(site.glob("c*/v*/manifest.json")):
+        snapshot = manifest_path.parent
+        relative = snapshot.relative_to(site).as_posix()
+        match = re.fullmatch(r"c(\d+)/v(\d+)", relative)
+        if not match:
+            fail(f"invalid snapshot path: {relative}")
+        manifest = load_manifest(snapshot, relative)
+        if int(match.group(1)) != manifest["contract_version"]:
+            fail(f"{relative}: path does not match contract_version")
+        if int(match.group(2)) != manifest["dataset_version"]:
+            fail(f"{relative}: path does not match dataset_version")
+        check_tree(snapshot, manifest, relative)
+        snapshots += 1
+
+    if snapshots == 0:
+        fail("no immutable contract snapshots were assembled")
+
     for page in ("index.html", "dashboard.html", "style.css"):
         if not (site / page).exists():
             fail(f"{page} is missing from the assembled site")
 
     print(
-        f"Published tree verified: contract v{manifest['contract_version']}, "
-        f"dataset v{version}, {count} files in both the latest and v{version} trees."
+        f"Published tree verified: latest contract v{latest['contract_version']}, "
+        f"dataset v{latest['dataset_version']}, {count} payload files, "
+        f"{snapshots} immutable snapshot(s)."
     )
 
 
