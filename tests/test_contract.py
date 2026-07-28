@@ -6,6 +6,7 @@ version bump, not a green build.
 """
 from __future__ import annotations
 
+import csv
 import hashlib
 import json
 import unittest
@@ -102,7 +103,7 @@ class ConsumerContractTests(unittest.TestCase):
         kinds = {"availability", "announcement", "policy", "milestone"}
         lifecycles = {
             "private_preview", "limited_preview", "public_preview", "ga",
-            "deprecated", "retired", "suspended", "restored",
+            "legacy", "deprecated", "retired", "suspended", "restored",
         }
         exposures = {
             "underlying", "specialist", "catalogue", "selectable", "default", "not_applicable",
@@ -129,6 +130,93 @@ class ConsumerContractTests(unittest.TestCase):
         self.assertIn("microsoft", surfaces["github-models"]["counts_as"])
         self.assertNotIn("copilot", surfaces["microsoft-foundry"]["counts_as"])
         self.assertNotIn("copilot", surfaces["m365-admin"]["counts_as"])
+
+
+class CurrentStateTests(unittest.TestCase):
+    """current-state.csv exists so renderers do not each re-derive "is it still
+    available" and each get it wrong the same way."""
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        with (GENERATED / "current-state.csv").open(encoding="utf-8", newline="") as handle:
+            cls.rows = list(csv.DictReader(handle))
+        cls.events = json.loads((GENERATED / "events.json").read_text(encoding="utf-8"))
+
+    def test_covers_every_model_and_surface_with_an_availability_event(self) -> None:
+        expected = {
+            (model_id, event["surface_id"])
+            for event in self.events["events"]
+            if event["kind"] == "availability"
+            for model_id in event["model_ids"]
+        }
+        self.assertEqual({(r["model_id"], r["surface_id"]) for r in self.rows}, expected)
+
+    def test_terminal_flag_agrees_with_the_lifecycle(self) -> None:
+        for row in self.rows:
+            with self.subTest(row["last_event"]):
+                self.assertEqual(
+                    row["state_is_terminal"] == "true",
+                    row["lifecycle"] in build.TERMINAL_LIFECYCLES,
+                )
+
+    def test_named_event_is_the_latest_for_that_pair(self) -> None:
+        by_id = {e["id"]: e for e in self.events["events"]}
+        for row in self.rows:
+            with self.subTest(f'{row["model_id"]}/{row["surface_id"]}'):
+                named = by_id[row["last_event"]]
+                latest = max(
+                    (
+                        e for e in self.events["events"]
+                        if e["kind"] == "availability"
+                        and row["model_id"] in e["model_ids"]
+                        and e["surface_id"] == row["surface_id"]
+                    ),
+                    key=lambda e: build.date_interval(e["date"])[0],
+                )
+                self.assertEqual(
+                    build.date_interval(named["date"])[0],
+                    build.date_interval(latest["date"])[0],
+                )
+
+    def test_carries_the_research_cutoff_so_staleness_is_computable(self) -> None:
+        """No build timestamp is available, so a consumer needs the cutoff to
+        judge how old a non-terminal state is."""
+        for row in self.rows:
+            self.assertEqual(row["known_as_of"], self.events["research_cutoff"])
+
+
+class LifecycleOrderTests(unittest.TestCase):
+    def test_progression_includes_the_end_of_life_stages(self) -> None:
+        """Ordering has to cover the terminal stages, or a return to GA after
+        retirement would not be detected as a regression."""
+        self.assertEqual(
+            build.LIFECYCLE_ORDER,
+            ["private_preview", "limited_preview", "public_preview",
+             "ga", "legacy", "deprecated", "retired"],
+        )
+
+    def test_ga_after_retirement_is_rejected(self) -> None:
+        events = [
+            {"id": "retired", "kind": "availability", "date": {"start": "2025-01-01", "precision": "day"},
+             "surface_id": "s", "model_ids": ["m"], "lifecycle": "retired", "exposure": "catalogue"},
+            {"id": "back", "kind": "availability", "date": {"start": "2025-06-01", "precision": "day"},
+             "surface_id": "s", "model_ids": ["m"], "lifecycle": "ga", "exposure": "catalogue"},
+        ]
+        with self.assertRaises(SystemExit):
+            build.check_lifecycle_ordering(events)
+
+    def test_suspension_is_not_a_stage(self) -> None:
+        """A suspension is a reversible interruption, so a later GA is not a
+        regression and must not be rejected."""
+        events = [
+            {"id": "ga", "kind": "availability", "date": {"start": "2025-01-01", "precision": "day"},
+             "surface_id": "s", "model_ids": ["m"], "lifecycle": "ga", "exposure": "catalogue"},
+            {"id": "susp", "kind": "availability", "date": {"start": "2025-02-01", "precision": "day"},
+             "surface_id": "s", "model_ids": ["m"], "lifecycle": "suspended", "exposure": "catalogue"},
+            {"id": "rest", "kind": "availability", "date": {"start": "2025-03-01", "precision": "day"},
+             "surface_id": "s", "model_ids": ["m"], "lifecycle": "ga", "exposure": "catalogue"},
+        ]
+        build.check_lifecycle_ordering(events)
 
 
 if __name__ == "__main__":
