@@ -17,27 +17,29 @@ to render the data honestly.
 https://bibbleq.github.io/frontier-model-tracker/
 ```
 
-Two trees are published on every change to `main`:
+The live tree and immutable release snapshots are published from `main`:
 
 | Tree | Meaning |
 | --- | --- |
-| `/` | Latest. Tracks the newest dataset version. The shape may change when the dataset major version changes. |
-| `/v3/` | Pinned to dataset version 3. The shape will not change. |
+| `/` | Latest. Receives data additions and corrections and may move to a new version pair. |
+| `/c1/v3/` | Immutable snapshot of contract version 1 and dataset version 3. Its bytes never change. |
 
-A consumer that wants to be left alone should pin to `/v3/`. A consumer that
-wants new fields as they appear should use `/`.
+Consumers that need current research should use `/`, inspect both version
+numbers in the manifest, and refuse unsupported versions. Consumers that need
+reproducible bytes can pin to the version-pair snapshot.
 
 Start at the manifest:
 
 ```
 https://bibbleq.github.io/frontier-model-tracker/manifest.json
-https://bibbleq.github.io/frontier-model-tracker/v3/manifest.json
+https://bibbleq.github.io/frontier-model-tracker/c1/v3/manifest.json
 ```
 
 ## What is in the contract
 
-These paths are stable within a version tree. Each is also listed in
-`manifest.json` with its byte length and SHA-256.
+These paths are stable within a version tree. Every payload path (everything
+except `manifest.json` itself) is listed in the manifest with its byte length
+and SHA-256. The manifest is verified separately against the committed snapshot.
 
 | Path | Contents |
 | --- | --- |
@@ -66,11 +68,13 @@ removed from an enum, or a field's meaning changed.
 **`contract_version`** describes this document and the publishing layout — URL
 structure, the manifest format, which files exist. It is currently `1`.
 
-Either may increment without the other.
+Either may increment without the other. Snapshot paths therefore include both
+numbers: `/c{contract_version}/v{dataset_version}/`.
 
 ### What is a breaking change
 
-Breaking, and therefore requires a version bump and a new pinned tree:
+Breaking, and therefore requires the relevant version bump and a new immutable
+version-pair snapshot:
 
 - removing or renaming a field
 - removing a value from a closed enum (`kind`, `lifecycle`, `exposure`,
@@ -94,15 +98,18 @@ failing on them.
 
 ### Deprecation policy
 
-When the dataset major version increments:
+When either version changes:
 
-1. The new version appears at `/` and at its own pinned tree, for example `/v4/`.
-2. The previous pinned tree, `/v3/`, keeps being published unchanged for at
-   least **six months**.
-3. The change is recorded in the change log at the end of this document, and
-   in the repository release notes.
+1. The new version pair appears at `/` and gets its own committed snapshot,
+   for example `/c1/v4/` or `/c2/v3/`.
+2. Previous snapshots remain published for at least **six months**.
+3. The change is recorded in the change log at the end of this document and in
+   the repository release notes.
 
-A pinned tree is never altered in place except to correct a publishing fault.
+Snapshots are stored under `published/cN/vN/` in the repository and copied
+into every Pages artifact. A snapshot is never altered in place. Data additions
+and corrections after its creation appear only in the live `/` tree and in a
+future snapshot.
 
 ## Obligations on a consumer
 
@@ -264,4 +271,4 @@ them:
 
 | Contract | Dataset | Change |
 | --- | --- | --- |
-| 1 | 3 | Initial contract. Establishes the base URL, the pinned `/v3/` tree, `manifest.json`, the versioning and deprecation policy, and the consumer obligations above. |
+| 1 | 3 | Initial contract. Establishes the base URL, immutable `/c1/v3/` snapshot, `manifest.json`, versioning and deprecation policy, and consumer obligations above. |
