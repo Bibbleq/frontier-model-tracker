@@ -7,8 +7,20 @@ A display layer consumes the published data contract rather than reading
 anything in this repository:
 
 - Contract: [`docs/data-contract.md`](../docs/data-contract.md)
-- Manifest: <https://bibbleq.github.io/frontier-model-tracker/manifest.json>
-- Pinned tree: <https://bibbleq.github.io/frontier-model-tracker/c1/v3/>
+- Live manifest: <https://bibbleq.github.io/frontier-model-tracker/manifest.json>
+- Immutable snapshot: <https://bibbleq.github.io/frontier-model-tracker/c1/v3/>
+
+**A display layer should read the live tree, not the snapshot.** The snapshot's
+bytes never change, which is what makes it citable, but it also means it never
+receives a correction. `dataset_version` only moves when the *shape* of the
+records changes, which is rare, so a snapshot can sit unchanged for a long time
+while corrections land in the live tree. A renderer pinned to it would keep
+showing a date the project has since fixed.
+
+Use the snapshot when you need reproducible bytes — citing the dataset in an
+article, or reproducing a chart. For rendering current availability, read `/`
+and check both version numbers in the manifest, refusing versions you do not
+support.
 
 ## Why they are separate
 
