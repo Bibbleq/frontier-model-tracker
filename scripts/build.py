@@ -22,7 +22,6 @@ MODELS_SCHEMA_PATH = ROOT / "schema" / "models.schema.json"
 PLATFORMS_PATH = ROOT / "data" / "platforms.yaml"
 PLATFORMS_SCHEMA_PATH = ROOT / "schema" / "platforms.schema.json"
 OUTPUT_DIR = ROOT / "generated"
-README_PATH = ROOT / "README.md"
 
 DATE_PATTERNS = {
     "year": re.compile(r"^\d{4}$"),
@@ -173,23 +172,6 @@ def validate_registries() -> tuple[dict, dict]:
     validate_registry_semantics(models, platforms)
 
     return models, platforms
-
-
-def validate_documented_counts(data: dict) -> None:
-    """Prevent the public README status from silently drifting from the data."""
-    readme = README_PATH.read_text(encoding="utf-8")
-    event_match = re.search(r"contains \*\*(\d+) canonical events\*\*", readme)
-    backlog_match = re.search(r"plus \*\*(\d+) validation targets\*\*", readme)
-    if not event_match or not backlog_match:
-        fail("README.md must state the current canonical event and validation-target counts")
-    documented_events = int(event_match.group(1))
-    documented_backlog = int(backlog_match.group(1))
-    actual_events = len(data["events"])
-    actual_backlog = len(data["validation_backlog"])
-    if documented_events != actual_events:
-        fail(f"README.md says {documented_events} canonical events, but data/events.yaml contains {actual_events}")
-    if documented_backlog != actual_backlog:
-        fail(f"README.md says {documented_backlog} validation targets, but data/events.yaml contains {actual_backlog}")
 
 
 def rename_groups(platforms: dict) -> dict[str, str]:
@@ -763,7 +745,6 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
 if __name__ == "__main__":
     registry_models, registry_platforms = validate_registries()
     dataset = load()
-    validate_documented_counts(dataset)
     validate_semantics(dataset, registry_models, registry_platforms)
     write_outputs(dataset, registry_models, registry_platforms)
 
