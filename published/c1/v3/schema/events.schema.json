@@ -1,0 +1,274 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://365explained.example/schema/events.schema.json",
+  "title": "365Explained Frontier Model Tracker dataset",
+  "type": "object",
+  "required": ["version", "updated", "research_cutoff", "metadata", "events", "validation_backlog"],
+  "properties": {
+    "version": {"const": 3},
+    "updated": {"$ref": "#/$defs/day"},
+    "research_cutoff": {"$ref": "#/$defs/day"},
+    "metadata": {"$ref": "#/$defs/metadata"},
+    "events": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/event"}
+    },
+    "validation_backlog": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/validation_item"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "day": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "partial_date": {"type": "string", "pattern": "^\\d{4}(?:-\\d{2}(?:-\\d{2})?)?$"},
+    "identifier": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+
+    "metadata": {
+      "type": "object",
+      "required": ["project", "purpose", "interpretation_rules", "confidence_definitions", "import_provenance"],
+      "properties": {
+        "project": {"type": "string", "minLength": 1},
+        "purpose": {"type": "string", "minLength": 1},
+        "interpretation_rules": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "confidence_definitions": {
+          "type": "object",
+          "required": ["confirmed", "supported"],
+          "properties": {
+            "confirmed": {"type": "string", "minLength": 1},
+            "supported": {"type": "string", "minLength": 1}
+          },
+          "additionalProperties": false
+        },
+        "import_provenance": {
+          "type": "object",
+          "required": ["seed_archive_sha256", "editorial_backlog_sha256", "canonical_seed_events", "canonical_seed_validation_items", "published_events", "validation_items"],
+          "properties": {
+            "seed_archive_sha256": {"type": "string", "pattern": "^[A-F0-9]{64}$"},
+            "editorial_backlog_sha256": {"type": "string", "pattern": "^[A-F0-9]{64}$"},
+            "canonical_seed_events": {"type": "integer", "minimum": 1},
+            "canonical_seed_validation_items": {"type": "integer", "minimum": 0},
+            "published_events": {"type": "integer", "minimum": 1},
+            "validation_items": {"type": "integer", "minimum": 0}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "date": {
+      "type": "object",
+      "required": ["start", "precision"],
+      "properties": {
+        "start": {"$ref": "#/$defs/partial_date"},
+        "precision": {"type": "string", "enum": ["day", "month", "year"]},
+        "end": {"$ref": "#/$defs/partial_date"},
+        "basis": {"type": "string", "enum": ["announced", "documented", "observed"]}
+      },
+      "additionalProperties": false
+    },
+
+    "source": {
+      "type": "object",
+      "required": ["publisher", "title", "url", "primary", "retrieved_at"],
+      "properties": {
+        "publisher": {"type": "string", "minLength": 1},
+        "title": {"type": "string", "minLength": 1},
+        "url": {"type": "string", "pattern": "^https://"},
+        "primary": {"type": "boolean"},
+        "retrieved_at": {"$ref": "#/$defs/day"},
+        "published_at": {"$ref": "#/$defs/partial_date"},
+        "source_type": {
+          "type": "string",
+          "enum": ["announcement", "changelog", "documentation", "release_notes", "news", "other"]
+        },
+        "archived_url": {"type": "string", "pattern": "^https://"},
+        "quote": {"type": "string", "minLength": 1},
+        "supports": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "enum": ["date", "model", "exposure", "lifecycle", "policy"]}
+        },
+        "note": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+
+    "relation": {
+      "type": "object",
+      "required": ["type", "target"],
+      "properties": {
+        "comment": "Each relation is a verb read from this event to the target. Inverses are derived, never authored, so the two directions cannot disagree.",
+        "type": {
+          "type": "string",
+          "enum": ["supersedes", "announced_by", "previews_for", "restores", "part_of", "depends_on"]
+        },
+        "target": {"$ref": "#/$defs/identifier"}
+      },
+      "additionalProperties": false
+    },
+
+    "confidence_detail": {
+      "type": "object",
+      "minProperties": 1,
+      "properties": {
+        "date": {"type": "string", "enum": ["confirmed", "supported"]},
+        "model": {"type": "string", "enum": ["confirmed", "supported"]},
+        "exposure": {"type": "string", "enum": ["confirmed", "supported"]},
+        "lifecycle": {"type": "string", "enum": ["confirmed", "supported"]}
+      },
+      "additionalProperties": false
+    },
+
+    "applies_to": {
+      "comment": "The target of a policy or governance control. A control lives on the surface that exposes it (usually an admin centre) but applies to other surfaces, experiences, vendors or regions.",
+      "type": "object",
+      "minProperties": 1,
+      "properties": {
+        "vendor": {"type": "string", "minLength": 1},
+        "regions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "surfaces": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/identifier"}
+        },
+        "experiences": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/identifier"}
+        },
+        "note": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+
+    "event": {
+      "type": "object",
+      "required": ["id", "kind", "date", "surface_id", "model_ids", "confidence", "evidence_note", "sources"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "kind": {"type": "string", "enum": ["availability", "announcement", "policy", "milestone"]},
+        "date": {"$ref": "#/$defs/date"},
+        "surface_id": {"$ref": "#/$defs/identifier"},
+        "experience_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/identifier"}
+        },
+        "model_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/identifier"}
+        },
+        "model_claim": {"type": "string", "enum": ["specific", "family"]},
+        "lifecycle": {
+          "type": "string",
+          "enum": ["private_preview", "limited_preview", "public_preview", "ga", "deprecated", "retired", "suspended", "restored"]
+        },
+        "exposure": {
+          "type": "string",
+          "enum": ["underlying", "specialist", "catalogue", "selectable", "default", "not_applicable"]
+        },
+        "applies_to": {"$ref": "#/$defs/applies_to"},
+        "confidence": {"type": "string", "enum": ["confirmed", "supported"]},
+        "confidence_detail": {"$ref": "#/$defs/confidence_detail"},
+        "evidence_note": {"type": "string", "minLength": 1},
+        "caveat": {"type": "string", "minLength": 1},
+        "notes": {"type": "string", "minLength": 1},
+        "tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "relations": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/relation"}
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/source"}
+        }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "comment": "Availability facts must say where in the release cycle they sit and how the model is exposed.",
+          "if": {"properties": {"kind": {"const": "availability"}}, "required": ["kind"]},
+          "then": {"required": ["lifecycle", "exposure"]}
+        },
+        {
+          "comment": "Only availability events carry lifecycle/exposure; an announcement is not a release stage.",
+          "if": {"properties": {"kind": {"not": {"const": "availability"}}}, "required": ["kind"]},
+          "then": {
+            "properties": {
+              "lifecycle": false,
+              "exposure": false
+            }
+          }
+        },
+        {
+          "comment": "If a model is named, the claim must say whether it is specific or family level.",
+          "if": {"properties": {"model_ids": {"minItems": 1}}, "required": ["model_ids"]},
+          "then": {"required": ["model_claim"]}
+        }
+      ]
+    },
+
+    "validation_item": {
+      "type": "object",
+      "required": ["id", "state", "working_claim", "reason", "target"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "state": {"type": "string", "enum": ["open", "promoted", "rejected", "blocked"]},
+        "working_claim": {"type": "string", "minLength": 1},
+        "reason": {"type": "string", "minLength": 1},
+        "target": {"type": "string", "minLength": 1},
+        "model_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/identifier"}
+        },
+        "surface_ids": {
+          "comment": "A research question may span several surfaces. Naming them lets the lag builder suppress an answer on exactly the affected tiers rather than reporting the gap as absence.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/identifier"}
+        },
+        "resolution": {"type": "string", "minLength": 1},
+        "resolved_on": {"$ref": "#/$defs/day"},
+        "promoted_to": {"$ref": "#/$defs/identifier"},
+        "sources": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/source"}
+        }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "comment": "A resolved item must record how it was resolved.",
+          "if": {"properties": {"state": {"enum": ["promoted", "rejected"]}}, "required": ["state"]},
+          "then": {"required": ["resolution", "resolved_on"]}
+        },
+        {
+          "comment": "A promoted item must name the event it became.",
+          "if": {"properties": {"state": {"const": "promoted"}}, "required": ["state"]},
+          "then": {"required": ["promoted_to"]}
+        }
+      ]
+    }
+  }
+}
