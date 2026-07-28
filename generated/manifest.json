@@ -4,7 +4,7 @@
   "updated": "2026-07-27",
   "research_cutoff": "2026-07-27",
   "base_url": "https://bibbleq.github.io/frontier-model-tracker/",
-  "pinned_url": "https://bibbleq.github.io/frontier-model-tracker/v3/",
+  "snapshot_url": "https://bibbleq.github.io/frontier-model-tracker/c1/v3/",
   "documentation": "https://github.com/Bibbleq/frontier-model-tracker/blob/main/docs/data-contract.md",
   "licence": {
     "data": "CC-BY-4.0",
