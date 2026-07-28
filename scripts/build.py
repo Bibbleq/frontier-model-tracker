@@ -802,7 +802,7 @@ def write_manifest(data: dict) -> None:
         "updated": data["updated"],
         "research_cutoff": data["research_cutoff"],
         "base_url": BASE_URL,
-        "pinned_url": f"{BASE_URL}v{data['version']}/",
+        "snapshot_url": f"{BASE_URL}c{CONTRACT_VERSION}/v{data['version']}/",
         "documentation": "https://github.com/Bibbleq/frontier-model-tracker/blob/main/docs/data-contract.md",
         "licence": {
             "data": "CC-BY-4.0",
