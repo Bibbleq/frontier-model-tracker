@@ -20,7 +20,7 @@ from jsonschema import Draft202012Validator
 # CONTRACT_VERSION describes the publishing layout: the URL structure, the
 # manifest format and which files exist. The dataset's own `version` describes
 # the shape of the records. They move independently.
-CONTRACT_VERSION = 1
+CONTRACT_VERSION = 2
 BASE_URL = "https://bibbleq.github.io/frontier-model-tracker/"
 ATTRIBUTION = "365Explained Frontier Model Tracker"
 
@@ -32,6 +32,7 @@ PUBLISHED_FILES = {
     "data/events.csv": "Flattened canonical timeline, identifiers resolved to display names",
     "data/validation-backlog.csv": "Open research questions with states and targets, not confirmed history",
     "data/lag.csv": "Derived adoption lag; read certainty before any number",
+    "data/current-state.csv": "Last known lifecycle per model and surface; read state_is_terminal before presenting it as current",
     "data/models.csv": "Model registry with aliases, families and event counts",
     "data/surfaces.csv": "Surface registry with rename lineage, analytical tiers and event counts",
     "schema/events.schema.json": "JSON Schema the dataset validates against",
@@ -55,8 +56,17 @@ DATE_PATTERNS = {
 }
 
 # Lifecycle stages that represent a release progression, earliest first. Used
-# to detect impossible orderings such as GA before preview on the same surface.
-LIFECYCLE_ORDER = ["private_preview", "limited_preview", "public_preview", "ga"]
+# to detect impossible orderings such as GA before preview, or a return to GA
+# after retirement, on the same surface. `suspended` and `restored` are
+# deliberately absent: they are a reversible interruption, not a stage.
+LIFECYCLE_ORDER = [
+    "private_preview", "limited_preview", "public_preview",
+    "ga", "legacy", "deprecated", "retired",
+]
+
+# Stages from which a model does not return. A renderer may treat these as an
+# end state; anything else is only the last thing we know, not the current one.
+TERMINAL_LIFECYCLES = {"retired"}
 
 warnings: list[dict] = []
 
@@ -529,6 +539,71 @@ def date_interval(date: dict) -> tuple[date_cls, date_cls]:
     return low, high
 
 
+def derive_current_state(data: dict, models: dict, platforms: dict) -> list[dict]:
+    """Last known lifecycle for each model and surface.
+
+    The dataset records events, not states. The latest event on a surface says
+    what most recently changed, which is not the same as what is true today: a
+    model whose last record is a 2023 preview has almost certainly moved on,
+    and the dataset simply does not know it yet because model withdrawal is
+    published far less consistently than model arrival.
+
+    This exists so that every renderer does not re-derive it, and re-derive it
+    wrongly, by treating the latest lifecycle as present tense. Two columns
+    carry the caveat:
+
+      state_is_terminal   the model reached a stage it does not return from
+      open_questions      unresolved backlog items naming this model and surface
+
+    Only when `state_is_terminal` is true is the lifecycle safe to present as
+    the current state. Otherwise it is the last known state as of the
+    dataset's research cutoff, which is emitted alongside every row.
+    """
+    surfaces = {entry["id"]: entry for entry in platforms["surfaces"]}
+    model_entries = {entry["id"]: entry for entry in models["models"]}
+
+    open_questions: collections.Counter = collections.Counter()
+    for item in data["validation_backlog"]:
+        if item["state"] not in ("open", "blocked"):
+            continue
+        for surface_id in item.get("surface_ids", []):
+            for model_id in item.get("model_ids", []):
+                open_questions[(model_id, surface_id)] += 1
+
+    latest: dict[tuple, dict] = {}
+    for event in data["events"]:
+        if event["kind"] != "availability":
+            continue
+        for model_id in event["model_ids"]:
+            key = (model_id, event["surface_id"])
+            current = latest.get(key)
+            if current is None or date_interval(event["date"])[0] >= date_interval(current["date"])[0]:
+                latest[key] = event
+
+    rows = []
+    for (model_id, surface_id), event in sorted(latest.items()):
+        model = model_entries[model_id]
+        surface = surfaces[surface_id]
+        rows.append({
+            "model_id": model_id,
+            "model": model["display_name"],
+            "vendor": model["vendor"],
+            "surface_id": surface_id,
+            "surface": surface["display_name"],
+            "counts_as": " | ".join(surface["counts_as"]),
+            "lifecycle": event["lifecycle"],
+            "exposure": event["exposure"],
+            "state_is_terminal": str(event["lifecycle"] in TERMINAL_LIFECYCLES).lower(),
+            "last_event": event["id"],
+            "last_event_date": event["date"]["start"],
+            "last_event_precision": event["date"]["precision"],
+            "known_as_of": data["research_cutoff"],
+            "model_superseded_by": model.get("superseded_by", ""),
+            "open_questions": open_questions[(model_id, surface_id)],
+        })
+    return rows
+
+
 def derive_lag(data: dict, models: dict, platforms: dict) -> list[dict]:
     events = [e for e in data["events"] if e["kind"] == "availability"]
     surfaces = {entry["id"]: entry for entry in platforms["surfaces"]}
@@ -731,6 +806,17 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
     with (OUTPUT_DIR / "status.json").open("w", encoding="utf-8", newline="\n") as handle:
         json.dump(status, handle, indent=2, ensure_ascii=False)
         handle.write("\n")
+
+    state_fields = [
+        "model_id", "model", "vendor", "surface_id", "surface", "counts_as",
+        "lifecycle", "exposure", "state_is_terminal",
+        "last_event", "last_event_date", "last_event_precision", "known_as_of",
+        "model_superseded_by", "open_questions",
+    ]
+    with (OUTPUT_DIR / "current-state.csv").open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=state_fields, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(derive_current_state(data, models, platforms))
 
     lag_fields = [
         "model_id", "model", "vendor", "tier", "measure",

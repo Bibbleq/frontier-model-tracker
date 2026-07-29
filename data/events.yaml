@@ -3238,6 +3238,21 @@ validation_backlog:
     target: "Locate a dated Foundry announcement for each Kimi variant."
     model_ids: ["kimi-k2-7-code"]
     surface_ids: ["microsoft-foundry"]
+  - id: "foundry-model-retirement-schedule"
+    state: "open"
+    working_claim: "Foundry publishes dated deprecation and retirement records for every model it has carried, none of which the timeline records."
+    reason: "The dataset holds no terminal lifecycle event at all, so a renderer showing the latest state per surface presents models as still in preview or GA long after they were withdrawn. Microsoft documents a five-stage lifecycle (Preview, GA, Legacy, Deprecated, Retired), publishes a retirement schedule, and exposes lifecycleStatus and deprecation.inference through the Models API. Retirement dates are set programmatically 18 months out at GA launch, so there is no announcement to catch but the dates are knowable from launch day."
+    target: "Harvest the Foundry model retirement schedule and record deprecated and retired events for models already in the timeline, using the published dates rather than observation."
+    model_ids: []
+    surface_ids: ["microsoft-foundry", "azure-openai", "azure-ai-foundry", "azure-ai-studio"]
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Foundry Models lifecycle and support policy"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirements"
+        primary: true
+        retrieved_at: "2026-07-28"
+        source_type: "documentation"
+        quote: "GA models have their retirement date set programmatically at launch to 18 months out—there's no separate \"announcement.\""
   - id: "foundry-o3-o4-mini-2025-04-16"
     state: "open"
     working_claim: "o3 and o4-mini reached Microsoft Foundry around the 16 April 2025 vendor release."
@@ -3306,6 +3321,26 @@ validation_backlog:
     target: "Find the original GitHub changelog or archived docs for the GPT-4 transition."
     model_ids: ["gpt-4"]
     surface_ids: ["github-copilot"]
+  - id: "github-copilot-model-deprecations"
+    state: "open"
+    working_claim: "GitHub has announced Copilot model deprecations in dated changelog entries that the timeline does not record."
+    reason: "Ten GitHub Copilot model and surface pairs have a preview as their latest recorded event, so they render as permanently in preview. GitHub publishes deprecation changelogs with notice periods, including entries covering o1, GPT-4.5, o3-mini and GPT-4o in June 2025 and a set of Claude, OpenAI and Gemini models in September 2025."
+    target: "Work through the GitHub changelog deprecation entries and record deprecated and retired events for models already in the timeline."
+    model_ids: []
+    surface_ids: ["github-copilot", "github-models"]
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of o1, GPT-4.5, o3-mini, and GPT-4o"
+        url: "https://github.blog/changelog/2025-06-20-upcoming-deprecation-of-o1-gpt-4-5-o3-mini-and-gpt-4o/"
+        primary: true
+        retrieved_at: "2026-07-28"
+        source_type: "changelog"
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of select Copilot models from Claude, OpenAI, and Gemini"
+        url: "https://github.blog/changelog/2025-09-23-upcoming-deprecation-of-select-copilot-models-from-claude-openai-and-gemini/"
+        primary: true
+        retrieved_at: "2026-07-28"
+        source_type: "changelog"
   - id: "github-foundry-opus4-7-2026-04-16"
     state: "open"
     working_claim: "Claude Opus 4.7 landed on GitHub Copilot and Microsoft Foundry at or around vendor launch."
@@ -3400,6 +3435,13 @@ validation_backlog:
     target: "Split a dedicated Researcher availability event once the model attribution and date are separately sourced."
     model_ids: ["openai-deep-research"]
     surface_ids: ["m365-copilot"]
+  - id: "m365-underlying-model-retirement"
+    state: "blocked"
+    working_claim: "Models that once powered Microsoft 365 Copilot as underlying models have since been withdrawn, on dates that are not publicly documented."
+    reason: "Microsoft does not disclose which model powers Microsoft 365 Copilot at a given time, so a change of underlying model is neither announced nor externally observable. Unlike a catalogue or model-picker surface, absence cannot be checked: there is no listing to disappear from. No source appears able to establish these dates."
+    target: "Recorded as blocked rather than open so the question is not repeatedly reopened. Revisit only if Microsoft begins publishing underlying-model lifecycle information for Microsoft 365 Copilot."
+    model_ids: []
+    surface_ids: ["m365-copilot"]
   - id: "meta-cohere-flux-mai-foundry-history"
     state: "open"
     working_claim: "Meta Llama 3.x, Cohere, FLUX and Microsoft MAI have catalogue milestones worth tracking."
@@ -3428,6 +3470,20 @@ validation_backlog:
     target: "Pin the OpenAI first-party release source and date convention."
     model_ids: ["gpt-5-1"]
     surface_ids: ["openai", "openai-api"]
+  - id: "openai-model-deprecations"
+    state: "open"
+    working_claim: "OpenAI publishes dated shutdown records for its models, including several the timeline carries as vendor releases with no end."
+    reason: "Vendor surfaces are the lag baseline, so a vendor model with no terminal event reads as available indefinitely. OpenAI maintains a deprecations page structured as a dated table of shutdown date, model and recommended replacement, and states a minimum notice of six months for generally available models and as little as two weeks for preview models."
+    target: "Harvest the OpenAI deprecations table and record retired events for vendor models already in the timeline, with the published shutdown date and the replacement recorded as a supersedes relation."
+    model_ids: []
+    surface_ids: ["openai", "openai-api", "chatgpt"]
+    sources:
+      - publisher: "OpenAI"
+        title: "Deprecations"
+        url: "https://developers.openai.com/api/docs/deprecations"
+        primary: true
+        retrieved_at: "2026-07-28"
+        source_type: "documentation"
   - id: "openai-o3-o4mini-vendor-2025-04-16"
     state: "open"
     working_claim: "OpenAI released o3 and o4-mini on 16 April 2025."
@@ -3442,6 +3498,13 @@ validation_backlog:
     target: "Find separate Microsoft 365 Copilot and Copilot Studio primary announcements, or keep those surfaces N/F."
     model_ids: ["claude-opus-5"]
     surface_ids: ["m365-copilot", "copilot-studio"]
+  - id: "retirements-recorded-in-cited-sources"
+    state: "open"
+    working_claim: "Sources already cited in the timeline document model retirements that were not recorded, because only the arriving model was captured."
+    reason: "The dataset was built by tracking arrivals, so where a source announced one model replacing another, the replacement was recorded and the departure discarded. studio-gpt4-1-default-2025-10 is the clearest case: its own evidence note reads 'Copilot Studio release notes document GPT-4o retirement for normal generative orchestration and transition to GPT-4.1 as default', yet no GPT-4o retirement event exists. This is a re-reading task rather than a research task, and the sources are already in the dataset."
+    target: "Re-read every cited source that mentions a retirement, deprecation or replacement, and record the departure alongside the arrival. Start with studio-gpt4-1-default-2025-10 and GPT-4o in Copilot Studio."
+    model_ids: ["gpt-4o"]
+    surface_ids: ["copilot-studio"]
   - id: "studio-gpt4-1-first-availability-2025"
     state: "open"
     working_claim: "GPT-4.1 became available in Copilot Studio before becoming the default in late October 2025."

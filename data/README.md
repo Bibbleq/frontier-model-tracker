@@ -18,7 +18,7 @@ orthogonal: none of them restates another.
 | Field | Question | Values |
 | --- | --- | --- |
 | `kind` | Is this an availability fact at all? | `availability`, `announcement`, `policy`, `milestone` |
-| `lifecycle` | Where in the release cycle? | `private_preview`, `limited_preview`, `public_preview`, `ga`, `deprecated`, `retired`, `suspended`, `restored` |
+| `lifecycle` | Where in the release cycle? | `private_preview`, `limited_preview`, `public_preview`, `ga`, `legacy`, `deprecated`, `retired`, `suspended`, `restored` |
 | `exposure` | How is the model exposed? | `underlying`, `specialist`, `catalogue`, `selectable`, `default`, `not_applicable` |
 
 `lifecycle` and `exposure` apply only when `kind: availability`. The schema
@@ -101,6 +101,46 @@ prove a model is supported now and rarely prove when it first was. That
 warning is suppressed when a documentation source carries a `quote` that
 `supports` the date, since that means someone has checked the page actually
 attests the date rather than merely the capability.
+
+## Recording an ending
+
+The dataset was built by tracking arrivals, and endings are published far less
+consistently. Record them anyway: without a terminal event a model sits at the
+last stage anyone recorded, and a renderer will show it as though nothing has
+changed since.
+
+The lifecycle runs `private_preview` -> `limited_preview` -> `public_preview`
+-> `ga` -> `legacy` -> `deprecated` -> `retired`. The last three matter here:
+
+| Stage | Meaning |
+| --- | --- |
+| `legacy` | Newer models exist and migration is advised; new deployments still allowed |
+| `deprecated` | Existing customers only; new customers cannot start |
+| `retired` | Removed from service |
+
+**Where the date is published**, record it as normal. Foundry sets GA
+retirement dates 18 months out at launch and publishes a schedule; OpenAI
+publishes a shutdown table; GitHub publishes deprecation changelogs.
+
+**Where a model simply disappeared**, do not invent a day. Bound it instead:
+
+```yaml
+  lifecycle: "retired"
+  date:
+    start: "2025-11-04"   # last date observed present
+    end: "2026-02-17"     # first date observed absent
+    precision: "day"
+  confidence: "supported"
+  caveat: "No withdrawal notice was published. Bounded by catalogue observation."
+```
+
+That is the honest shape — the removal happened somewhere in the window, and
+the derived lag machinery already understands intervals.
+
+**Where absence cannot be observed at all**, do not guess. A model used as an
+`underlying` model on a surface that does not disclose it, such as Microsoft
+365 Copilot, leaves no listing to disappear from. Open a `blocked` backlog item
+saying no source can exist, so the question is not repeatedly reopened.
 
 ## Governance events
 

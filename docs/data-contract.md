@@ -9,7 +9,7 @@ This document is the promise those consumers can rely on. It describes what is
 stable, what may change, how change is signalled, and what a consumer must do
 to render the data honestly.
 
-**Contract version 1. Dataset version 3.**
+**Contract version 2. Dataset version 3.**
 
 ## Base URL
 
@@ -22,7 +22,8 @@ The live tree and immutable release snapshots are published from `main`:
 | Tree | Meaning |
 | --- | --- |
 | `/` | Latest. Receives data additions and corrections and may move to a new version pair. |
-| `/c1/v3/` | Immutable snapshot of contract version 1 and dataset version 3. Its bytes never change. |
+| `/c2/v3/` | Immutable snapshot of contract version 2 and dataset version 3. Its bytes never change. |
+| `/c1/v3/` | Earlier snapshot, retained. |
 
 Consumers that need current research should use `/`, inspect both version
 numbers in the manifest, and refuse unsupported versions. Consumers that need
@@ -32,7 +33,7 @@ Start at the manifest:
 
 ```
 https://bibbleq.github.io/frontier-model-tracker/manifest.json
-https://bibbleq.github.io/frontier-model-tracker/c1/v3/manifest.json
+https://bibbleq.github.io/frontier-model-tracker/c2/v3/manifest.json
 ```
 
 ## What is in the contract
@@ -49,6 +50,7 @@ and SHA-256. The manifest is verified separately against the committed snapshot.
 | `data/events.csv` | Flattened timeline, IDs resolved to display names |
 | `data/validation-backlog.csv` | Research queue with states and targets |
 | `data/lag.csv` | Derived adoption lag |
+| `data/current-state.csv` | Last known lifecycle per model and surface, with the caveats needed to read it |
 | `data/models.csv`, `data/surfaces.csv` | The registries, each with an `event_count` |
 | `schema/events.schema.json` | JSON Schema the dataset validates against |
 | `schema/models.schema.json`, `schema/platforms.schema.json` | Registry schemas |
@@ -95,6 +97,12 @@ Not breaking, and may happen at any time without notice:
 
 Consumers must therefore **ignore fields they do not recognise** rather than
 failing on them.
+
+The same applies to values. A closed enum may gain a value — `lifecycle`
+gained `legacy` at contract version 2 — so a consumer must treat an
+unrecognised value as opaque rather than rejecting the record or mapping it
+onto the nearest value it knows. Removing a value stays breaking; adding one
+does not.
 
 ### Deprecation policy
 
@@ -208,7 +216,33 @@ They must never be rendered as timeline events, and `rejected` items must not
 be presented as claims. If you surface the backlog at all, label it as
 unresolved research.
 
-### 7. Show confidence
+### 7. The latest event is not the current state
+
+The dataset records events, not states. The most recent event for a model on a
+surface says what last changed; it does not say what is true today.
+
+Model withdrawal is published far less consistently than model arrival, and on
+some surfaces not at all, so a model can sit in the dataset at the last stage
+anyone recorded long after it left. Reading the latest `lifecycle` as present
+tense produces claims the data never made — that GPT-4 is still in public
+preview on Azure OpenAI, for example, because its arrival was recorded and its
+progression was not.
+
+Use `data/current-state.csv`, which derives this once so that every renderer
+does not derive it differently. Two columns carry the caveat:
+
+| Column | Meaning |
+| --- | --- |
+| `state_is_terminal` | The model reached a stage it does not return from. Only then is `lifecycle` safe to present as the current state. |
+| `open_questions` | Count of unresolved backlog items naming this model and surface. |
+| `known_as_of` | The dataset's research cutoff. Everything else is last-known, not current. |
+
+Where the state is not terminal, say so. "Last recorded as GA in November
+2023" is honest; "GA" is not. `model_superseded_by` is offered as a hint for a
+reader, not as evidence that a model was withdrawn — succession in the
+registry is a fact about models, not about any surface.
+
+### 8. Show confidence
 
 Every event has `confidence`, either `confirmed` or `supported`, and may carry
 `confidence_detail` naming which part of the claim is soft. `supported` means
@@ -271,4 +305,5 @@ them:
 
 | Contract | Dataset | Change |
 | --- | --- | --- |
+| 2 | 3 | Adds `data/current-state.csv` and the obligation not to render the latest event as the current state. Adds `legacy` to the `lifecycle` enum and states that consumers must tolerate unrecognised enum values. |
 | 1 | 3 | Initial contract. Establishes the base URL, immutable `/c1/v3/` snapshot, `manifest.json`, versioning and deprecation policy, and consumer obligations above. |
