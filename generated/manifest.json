@@ -17,57 +17,57 @@
       "path": "data/events.json",
       "media_type": "application/json",
       "description": "The whole dataset: metadata, canonical events and the validation backlog",
-      "bytes": 186207,
-      "sha256": "45f6a0c6d3faeabc9a7bba6d0e8c0e01117c860722c2bf59e18c64e5e023978e"
+      "bytes": 201528,
+      "sha256": "c660b70df5adf8c15c9da6c9f4b00a7a72840e8805d6b6d9407080cfd59d614e"
     },
     {
       "path": "data/status.json",
       "media_type": "application/json",
       "description": "Totals, warning counts, coverage gaps and lag certainty distribution",
-      "bytes": 8073,
-      "sha256": "9d3ed0f878adc5055e621e0a8228ea0b47364716e6a9367278eb57e67fb431e0"
+      "bytes": 10695,
+      "sha256": "0d14c0bb098b0ea96a8fd6f69643ffdb69475bde35a75606a4c1e5bff9836889"
     },
     {
       "path": "data/events.csv",
       "media_type": "text/csv",
       "description": "Flattened canonical timeline, identifiers resolved to display names",
-      "bytes": 62519,
-      "sha256": "9e817df281cf82725cf735f1a01a23de6a35311895a16282cf02a66cbd5b3321"
+      "bytes": 67457,
+      "sha256": "537721e874b06f229a77ce3a1618df6d07619c61ab4c3e1c259365f98e7bd653"
     },
     {
       "path": "data/validation-backlog.csv",
       "media_type": "text/csv",
       "description": "Open research questions with states and targets, not confirmed history",
-      "bytes": 19845,
-      "sha256": "8b6273dcda32578813983e4ae611dcf718522f1c07e15f0d2a4d370a1a619baf"
+      "bytes": 21607,
+      "sha256": "244dcb2dd086888647c134de90c874bb34aad733640c94391e4710e59095d531"
     },
     {
       "path": "data/lag.csv",
       "media_type": "text/csv",
       "description": "Derived adoption lag; read certainty before any number",
-      "bytes": 108541,
-      "sha256": "56ee898aed30ce5fd54d06f91b647e6ba5f8eb734b9f23fc14cbe546d9f80252"
+      "bytes": 107941,
+      "sha256": "a0b63165d2a498e6923f19641ee89703d580e19ba0a25f270fd9e998ae2f8b69"
     },
     {
       "path": "data/current-state.csv",
       "media_type": "text/csv",
       "description": "Last known lifecycle per model and surface; read state_is_terminal before presenting it as current",
-      "bytes": 23204,
-      "sha256": "9e70493e6573c73fcd12ff827a8ebc0a2f005964e512a325e860e3dc2936c1c8"
+      "bytes": 23472,
+      "sha256": "daa05dcead2e9bb650e434e21d6ee57abae05ab681ad77be9c3c5601a8e7339e"
     },
     {
       "path": "data/models.csv",
       "media_type": "text/csv",
       "description": "Model registry with aliases, families and event counts",
       "bytes": 2770,
-      "sha256": "c3b39fc4b81a4f8bb13bcaed813834d98a0b5ddd571d0c920f0072e0b8e7eb83"
+      "sha256": "7259b1ba37ed09e14426af11a77cb1c098498f89e587d96eaa085c10a329265e"
     },
     {
       "path": "data/surfaces.csv",
       "media_type": "text/csv",
       "description": "Surface registry with rename lineage, analytical tiers and event counts",
-      "bytes": 1835,
-      "sha256": "1069d032613a61dd75f72d8a2537bbd082821739553a274a5c56d57f659195cc"
+      "bytes": 1836,
+      "sha256": "b2ed760e716aeda4fc31cb4f0c91d70fbfcd805c8d773bf8a812ae3972f55fa9"
     },
     {
       "path": "schema/events.schema.json",

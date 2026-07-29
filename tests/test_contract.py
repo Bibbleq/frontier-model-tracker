@@ -58,6 +58,43 @@ class ManifestTests(unittest.TestCase):
         self.assertEqual(self.manifest["updated"], self.events["updated"])
 
 
+class LagBaselineTests(unittest.TestCase):
+    """A shutdown is an availability event but not an arrival. Treating one as
+    the vendor release would date a model's launch to the day it was switched
+    off, and every platform event would then look like it predates the model."""
+
+    def test_a_retirement_is_not_an_arrival(self) -> None:
+        self.assertNotIn("retired", build.ARRIVAL_LIFECYCLES)
+        self.assertNotIn("deprecated", build.ARRIVAL_LIFECYCLES)
+        self.assertNotIn("legacy", build.ARRIVAL_LIFECYCLES)
+        self.assertNotIn("suspended", build.ARRIVAL_LIFECYCLES)
+
+    def test_no_published_lag_row_is_anchored_to_a_shutdown(self) -> None:
+        with (GENERATED / "lag.csv").open(encoding="utf-8", newline="") as handle:
+            rows = list(csv.DictReader(handle))
+        anchored = {r["baseline_lifecycle"] for r in rows if r["baseline_lifecycle"]}
+        self.assertTrue(anchored <= build.ARRIVAL_LIFECYCLES, f"anchored to {anchored}")
+
+    def test_retirement_only_vendor_record_yields_no_baseline(self) -> None:
+        """DALL-E 2's only OpenAI record is its shutdown. Its lag must be
+        unknown, not measured from the day it stopped working."""
+        models = {"models": [{"id": "m", "display_name": "M", "vendor": "V"}]}
+        platforms = {"surfaces": [
+            {"id": "vendor", "display_name": "V", "vendor_baseline": True, "counts_as": []},
+            {"id": "product", "display_name": "P", "counts_as": ["microsoft"]},
+        ]}
+        data = {"events": [
+            {"id": "gone", "kind": "availability", "date": {"start": "2026-05-12", "precision": "day"},
+             "surface_id": "vendor", "model_ids": ["m"], "lifecycle": "retired", "exposure": "not_applicable"},
+            {"id": "on-product", "kind": "availability", "date": {"start": "2023-01-17", "precision": "day"},
+             "surface_id": "product", "model_ids": ["m"], "lifecycle": "ga", "exposure": "catalogue"},
+        ], "validation_backlog": []}
+        rows = build.derive_lag(data, models, platforms)
+        microsoft = [r for r in rows if r["tier"] == "microsoft" and r["measure"] == "any_exposure"]
+        self.assertTrue(microsoft)
+        self.assertEqual(microsoft[0]["certainty"], "unknown_no_baseline")
+
+
 class ConsumerContractTests(unittest.TestCase):
     """Guarantees docs/data-contract.md makes to display layers."""
 
