@@ -1733,30 +1733,6 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
-  - id: "studio-gpt4-1-default-2025-10"
-    kind: "availability"
-    date:
-      start: "2025-10"
-      precision: "month"
-    surface_id: "copilot-studio"
-    model_ids: ["gpt-4-1"]
-    model_claim: "specific"
-    lifecycle: "ga"
-    exposure: "default"
-    confidence: "supported"
-    confidence_detail:
-      model: "confirmed"
-      date: "supported"
-      exposure: "confirmed"
-    evidence_note: "Copilot Studio release notes document GPT-4o retirement for normal generative orchestration and transition to GPT-4.1 as default."
-    caveat: "Historical change was around 27–31 October; pin exact day if an archived release-note entry is preserved."
-    sources:
-      - publisher: "Microsoft Learn"
-        title: "What's new in Microsoft Copilot Studio"
-        url: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
-        primary: true
-        retrieved_at: "2026-07-26"
-        source_type: "documentation"
   - id: "github-sonnet4-5-ga-2025-10-13"
     kind: "availability"
     date:
@@ -1963,6 +1939,59 @@ events:
         quote: "Oct 27, 2025 | o1-mini | o4-mini"
         supports: [date, model, lifecycle]
         note: "Announcement of 2025-04-28, shutdown 2025-10-27, replacement o4-mini."
+  - id: "studio-gpt4-1-default-2025-10"
+    kind: "availability"
+    date:
+      start: "2025-10-27"
+      end: "2025-10-31"
+      precision: "day"
+    surface_id: "copilot-studio"
+    model_ids: ["gpt-4-1"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "default"
+    confidence: "confirmed"
+    evidence_note: "Copilot Studio release notes document GPT-4o retirement for normal generative orchestration and transition to GPT-4.1 as default."
+    caveat: "Historical change was around 27–31 October; pin exact day if an archived release-note entry is preserved."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "What's new in Microsoft Copilot Studio"
+        url: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+        primary: true
+        retrieved_at: "2026-07-26"
+        source_type: "documentation"
+      - publisher: "Microsoft Learn"
+        title: "What's new in Copilot Studio"
+        url: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+        primary: true
+        retrieved_at: "2026-07-28"
+        source_type: "release_notes"
+        quote: 'Between October 27 and 31, 2025, GPT-4o will be retired in Copilot Studio for agents using generative orchestration, except for GCC customers who can continue using GPT-4o. The new default model is GPT-4.1, which delivers improved performance, reliability, and consistency across experiences. GPT-4o remains available until November 26, 2025 if you turn on the "Continue using retired models" option.'
+        supports: [date, exposure]
+        note: "Dates the switch to the 27-31 October 2025 window, replacing the month-precision estimate this event previously carried."
+  - id: "studio-gpt4o-retired-2025-10-27"
+    kind: "availability"
+    date:
+      start: "2025-10-27"
+      end: "2025-10-31"
+      precision: "day"
+    surface_id: "copilot-studio"
+    model_ids: ["gpt-4o"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "default"
+    confidence: "confirmed"
+    evidence_note: "Copilot Studio retired GPT-4o for agents using generative orchestration, replacing it as the default with GPT-4.1. The release notes give a window rather than a day, so the event is bounded to it."
+    caveat: "Three qualifications the source makes explicit. GCC customers could continue using GPT-4o. Other customers could keep it until 26 November 2025 through the option to continue using retired models, so this is the end of default availability rather than the last possible day of use. And the timeline holds no Copilot Studio arrival for GPT-4o at all, so this retirement ends an exposure whose beginning was never recorded; that gap is tracked as studio-gpt4o-default-2024-09."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "What's new in Copilot Studio"
+        url: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+        primary: true
+        retrieved_at: "2026-07-28"
+        source_type: "release_notes"
+        quote: 'Between October 27 and 31, 2025, GPT-4o will be retired in Copilot Studio for agents using generative orchestration, except for GCC customers who can continue using GPT-4o. The new default model is GPT-4.1, which delivers improved performance, reliability, and consistency across experiences. GPT-4o remains available until November 26, 2025 if you turn on the "Continue using retired models" option.'
+        supports: [date, model, lifecycle]
   - id: "studio-gpt5-1-2025-11-12"
     kind: "availability"
     date:
@@ -2311,6 +2340,50 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "changelog"
+  - id: "studio-gpt5-ga-2026-03"
+    kind: "availability"
+    date:
+      start: "2026-03"
+      precision: "month"
+    surface_id: "copilot-studio"
+    model_ids: ["gpt-5"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "GPT-5 reached general availability in Copilot Studio for production agents, having entered public preview there in August 2025."
+    caveat: "The release notes group entries by month without giving a day, so the date carries month precision. Excludes GCC environments."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "What's new in Copilot Studio"
+        url: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+        primary: true
+        retrieved_at: "2026-07-28"
+        source_type: "release_notes"
+        quote: 'ChatGPT-5 is now generally available globally (excluding GCC environments) for use in production agents.'
+        supports: [date, model, lifecycle]
+  - id: "studio-sonnet4-5-ga-2026-03"
+    kind: "availability"
+    date:
+      start: "2026-03"
+      precision: "month"
+    surface_id: "copilot-studio"
+    model_ids: ["claude-sonnet-4-5"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "Claude Sonnet 4.5 reached general availability in Copilot Studio, having entered public preview there in September 2025."
+    caveat: "The same entry names Claude Sonnet 4.6 and an unqualified Claude Opus. Neither is recorded: the timeline holds no Copilot Studio arrival for Sonnet 4.6, and Claude Opus does not identify a specific model. Month precision because the release notes give no day. Excludes GCC environments."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "What's new in Copilot Studio"
+        url: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+        primary: true
+        retrieved_at: "2026-07-28"
+        source_type: "release_notes"
+        quote: 'Claude Sonnet 4.5, Claude Sonnet 4.6, and Claude Opus are now generally available globally (excluding GCC environments).'
+        supports: [date, model, lifecycle]
   - id: "m365-gpt5-3-instant-2026-03-03"
     kind: "availability"
     date:
@@ -2965,6 +3038,28 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "studio-gpt5-5-chat-ga-2026-06"
+    kind: "availability"
+    date:
+      start: "2026-06"
+      precision: "month"
+    surface_id: "copilot-studio"
+    model_ids: ["gpt-5-5-instant"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "GPT-5.5 Chat became generally available as a primary AI model in Copilot Studio, having entered public preview there in May 2026."
+    caveat: "Copilot Studio calls this model GPT-5.5 Chat; the registry carries it as GPT-5.5 Instant with that name as an alias. The same entry names Claude Sonnet 5, which has no Copilot Studio arrival recorded and is left to the backlog. Month precision because the release notes give no day."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "What's new in Copilot Studio"
+        url: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+        primary: true
+        retrieved_at: "2026-07-28"
+        source_type: "release_notes"
+        quote: '(General availability) Select Claude Sonnet 5 or GPT-5.5 Chat as your agent''s primary AI model for improved response quality and reasoning.'
+        supports: [date, model, lifecycle]
   - id: "anthropic-fable5-2026-06-09"
     kind: "availability"
     date:
@@ -3984,12 +4079,15 @@ validation_backlog:
     model_ids: ["claude-opus-5"]
     surface_ids: ["m365-copilot", "copilot-studio"]
   - id: "retirements-recorded-in-cited-sources"
-    state: "open"
+    state: "promoted"
     working_claim: "Sources already cited in the timeline document model retirements that were not recorded, because only the arriving model was captured."
-    reason: "The dataset was built by tracking arrivals, so where a source announced one model replacing another, the replacement was recorded and the departure discarded. studio-gpt4-1-default-2025-10 is the clearest case: its own evidence note reads 'Copilot Studio release notes document GPT-4o retirement for normal generative orchestration and transition to GPT-4.1 as default', yet no GPT-4o retirement event exists. This is a re-reading task rather than a research task, and the sources are already in the dataset."
-    target: "Re-read every cited source that mentions a retirement, deprecation or replacement, and record the departure alongside the arrival. Start with studio-gpt4-1-default-2025-10 and GPT-4o in Copilot Studio."
+    reason: "The dataset was built by tracking arrivals, so where a source announced one model replacing another, the replacement was recorded and the departure discarded."
+    target: "Re-read every cited source that mentions a retirement, deprecation or replacement, and record the departure alongside the arrival."
     model_ids: ["gpt-4o"]
     surface_ids: ["copilot-studio"]
+    resolution: "The Copilot Studio release notes were re-read on 28 July 2026. The GPT-4o retirement they document is now recorded, bounded to the 27-31 October 2025 window the source gives. The same sentence also dated the GPT-4.1 default switch, which had been carried at month precision as a supported claim and is now a confirmed day-bounded one. Further instances of the same pattern belong to each surface's own harvest rather than to a standing item."
+    resolved_on: "2026-07-28"
+    promoted_to: "studio-gpt4o-retired-2025-10-27"
   - id: "studio-gpt4-1-first-availability-2025"
     state: "open"
     working_claim: "GPT-4.1 became available in Copilot Studio before becoming the default in late October 2025."
@@ -3997,6 +4095,20 @@ validation_backlog:
     target: "Find the first Studio GPT-4.1 announcement."
     model_ids: ["gpt-4-1"]
     surface_ids: ["copilot-studio"]
+  - id: "studio-arrivals-in-release-notes"
+    state: "open"
+    working_claim: "The Copilot Studio release notes date general availability for several models the timeline still carries only as public preview."
+    reason: "Found while harvesting retirements. The release notes gave GA dates for GPT-5 and Claude Sonnet 4.5, which are now recorded, but the same page names others the timeline cannot yet place: Claude Sonnet 4.6 and Claude Sonnet 5 have no Copilot Studio arrival at all, an unqualified Claude Opus in March 2026 does not identify a specific model, GPT-5 Chat reached GA for European and United States regions in November 2025, and Mistral Medium 3.5 entered preview in May 2026 for a vendor the registry does not carry."
+    target: "Work through the remaining Copilot Studio entries, adding registry entries where a model is genuinely new and recording arrivals before their GA transitions."
+    model_ids: ["claude-sonnet-4-6", "claude-sonnet-5"]
+    surface_ids: ["copilot-studio"]
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "What's new in Copilot Studio"
+        url: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+        primary: true
+        retrieved_at: "2026-07-28"
+        source_type: "release_notes"
   - id: "studio-gpt4o-default-2024-09"
     state: "open"
     working_claim: "Copilot Studio moved from GPT-3.5 Turbo to GPT-4o as its default around September 2024."

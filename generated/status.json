@@ -1,23 +1,23 @@
 {
   "totals": {
-    "events": 172,
-    "backlog": 49,
-    "sources": 190,
+    "events": 176,
+    "backlog": 50,
+    "sources": 196,
     "models": 64,
     "surfaces": 23,
-    "confirmed": 163,
-    "supported": 9
+    "confirmed": 168,
+    "supported": 8
   },
   "kinds": {
     "announcement": 10,
-    "availability": 150,
+    "availability": 154,
     "milestone": 6,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 1,
     "open": 45,
-    "promoted": 3
+    "promoted": 4
   },
   "warnings": [
     {
@@ -143,6 +143,26 @@
     {
       "code": "missing_archive",
       "subject": "studio-gpt4-1-default-2025-10",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "studio-gpt4o-retired-2025-10-27",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "studio-gpt5-5-chat-ga-2026-06",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "studio-gpt5-ga-2026-03",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "studio-sonnet4-5-ga-2026-03",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
     },
     {
@@ -273,7 +293,7 @@
   ],
   "warning_counts": {
     "backlog_without_surface": 1,
-    "missing_archive": 24,
+    "missing_archive": 28,
     "no_vendor_baseline": 15,
     "suspicious_day_precision": 8,
     "unquoted_documentation": 2
@@ -291,8 +311,8 @@
   },
   "lag_certainty": {
     "exact": 235,
-    "not_recorded": 247,
-    "range": 6,
+    "not_recorded": 245,
+    "range": 8,
     "unknown_no_baseline": 189,
     "unknown_open_research": 91
   }
