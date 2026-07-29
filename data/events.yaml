@@ -1368,6 +1368,29 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "github-o1-retired-2025-07-07"
+    kind: "availability"
+    date:
+      start: "2025-07-07"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["o1"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "GitHub removed o1 from the Copilot model pickers, suggesting o3 as the alternative."
+    caveat: "Removal from the model picker. The changelog deprecates the model in the github.com/copilot and IDE pickers rather than announcing a wider withdrawal, so this records the end of selectable availability on this surface."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of o1, GPT-4.5, o3-mini, and GPT-4o"
+        url: "https://github.blog/changelog/2025-06-20-upcoming-deprecation-of-o1-gpt-4-5-o3-mini-and-gpt-4o/"
+        primary: true
+        retrieved_at: "2026-07-28"
+        published_at: "2025-06-20"
+        source_type: "changelog"
+        quote: "GitHub Copilot will deprecate the following models in github.com/copilot and Copilot IDE model pickers according to the schedule below."
+        supports: [date, model, lifecycle]
   - id: "openai-o1-preview-retired-2025-07-28"
     kind: "availability"
     date:
@@ -1409,6 +1432,29 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "github-gpt4o-retired-2025-08-06"
+    kind: "availability"
+    date:
+      start: "2025-08-06"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["gpt-4o"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "GitHub removed GPT-4o from the Copilot model pickers, suggesting GPT-4.1 as the alternative."
+    caveat: "Removal from the model picker. The changelog deprecates the model in the github.com/copilot and IDE pickers rather than announcing a wider withdrawal, so this records the end of selectable availability on this surface. The timeline records GPT-4o on GitHub Copilot only as an underlying model in July 2024; the date it became selectable in the picker is not recorded, so this retirement ends an exposure the dataset never captured beginning."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of o1, GPT-4.5, o3-mini, and GPT-4o"
+        url: "https://github.blog/changelog/2025-06-20-upcoming-deprecation-of-o1-gpt-4-5-o3-mini-and-gpt-4o/"
+        primary: true
+        retrieved_at: "2026-07-28"
+        published_at: "2025-06-20"
+        source_type: "changelog"
+        quote: "GitHub Copilot will deprecate the following models in github.com/copilot and Copilot IDE model pickers according to the schedule below."
+        supports: [date, model, lifecycle]
   - id: "foundry-gpt5-2025-08-07"
     kind: "availability"
     date:
@@ -1749,6 +1795,152 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "github-claude-opus4-retired-2025-10-23"
+    kind: "availability"
+    date:
+      start: "2025-10-23"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["claude-opus-4"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "GitHub removed Claude Opus 4 from Copilot, suggesting Claude Opus 4.1 as the alternative."
+    caveat: "Removal across all GitHub Copilot experiences, which the changelog lists as Copilot Chat, inline edits, ask and agent modes, and code completions."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of select Copilot models from Claude, OpenAI, and Gemini"
+        url: "https://github.blog/changelog/2025-09-23-upcoming-deprecation-of-select-copilot-models-from-claude-openai-and-gemini/"
+        primary: true
+        retrieved_at: "2026-07-28"
+        published_at: "2025-09-23"
+        source_type: "changelog"
+        quote: "We will deprecate the following models across all GitHub Copilot experiences."
+        supports: [date, model, lifecycle]
+  - id: "github-claude3-7-sonnet-retired-2025-10-23"
+    kind: "availability"
+    date:
+      start: "2025-10-23"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["claude-3-7-sonnet"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "GitHub removed Claude Sonnet 3.7 from Copilot, suggesting Claude Sonnet 4 as the alternative."
+    caveat: "Removal across all GitHub Copilot experiences, which the changelog lists as Copilot Chat, inline edits, ask and agent modes, and code completions."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of select Copilot models from Claude, OpenAI, and Gemini"
+        url: "https://github.blog/changelog/2025-09-23-upcoming-deprecation-of-select-copilot-models-from-claude-openai-and-gemini/"
+        primary: true
+        retrieved_at: "2026-07-28"
+        published_at: "2025-09-23"
+        source_type: "changelog"
+        quote: "We will deprecate the following models across all GitHub Copilot experiences."
+        supports: [date, model, lifecycle]
+  - id: "github-o1-mini-retired-2025-10-23"
+    kind: "availability"
+    date:
+      start: "2025-10-23"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["o1-mini"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "GitHub removed o1-mini from Copilot, suggesting GPT-5 mini as the alternative."
+    caveat: "Removal across all GitHub Copilot experiences, which the changelog lists as Copilot Chat, inline edits, ask and agent modes, and code completions."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of select Copilot models from Claude, OpenAI, and Gemini"
+        url: "https://github.blog/changelog/2025-09-23-upcoming-deprecation-of-select-copilot-models-from-claude-openai-and-gemini/"
+        primary: true
+        retrieved_at: "2026-07-28"
+        published_at: "2025-09-23"
+        source_type: "changelog"
+        quote: "We will deprecate the following models across all GitHub Copilot experiences."
+        supports: [date, model, lifecycle]
+  - id: "github-o3-mini-retired-2025-10-23"
+    kind: "availability"
+    date:
+      start: "2025-10-23"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["o3-mini"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "GitHub removed o3-mini from Copilot, suggesting GPT-5 mini as the alternative. Its removal had been announced for 18 July 2025 in the June changelog and then postponed, so this is the date it actually took effect."
+    caveat: "Removal across all GitHub Copilot experiences, which the changelog lists as Copilot Chat, inline edits, ask and agent modes, and code completions. The June 2025 changelog listed o3-mini as postponed rather than giving a date, which is why the earlier announcement is not recorded as a retirement."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of select Copilot models from Claude, OpenAI, and Gemini"
+        url: "https://github.blog/changelog/2025-09-23-upcoming-deprecation-of-select-copilot-models-from-claude-openai-and-gemini/"
+        primary: true
+        retrieved_at: "2026-07-28"
+        published_at: "2025-09-23"
+        source_type: "changelog"
+        quote: "We will deprecate the following models across all GitHub Copilot experiences."
+        supports: [date, model, lifecycle]
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of o1, GPT-4.5, o3-mini, and GPT-4o"
+        url: "https://github.blog/changelog/2025-06-20-upcoming-deprecation-of-o1-gpt-4-5-o3-mini-and-gpt-4o/"
+        primary: true
+        retrieved_at: "2026-07-28"
+        published_at: "2025-06-20"
+        source_type: "changelog"
+        note: "Lists o3-mini as postponed, originally scheduled for 2025-07-18."
+  - id: "github-o3-retired-2025-10-23"
+    kind: "availability"
+    date:
+      start: "2025-10-23"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["o3"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "GitHub removed o3 from Copilot, suggesting GPT-5 as the alternative."
+    caveat: "Removal across all GitHub Copilot experiences, which the changelog lists as Copilot Chat, inline edits, ask and agent modes, and code completions."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of select Copilot models from Claude, OpenAI, and Gemini"
+        url: "https://github.blog/changelog/2025-09-23-upcoming-deprecation-of-select-copilot-models-from-claude-openai-and-gemini/"
+        primary: true
+        retrieved_at: "2026-07-28"
+        published_at: "2025-09-23"
+        source_type: "changelog"
+        quote: "We will deprecate the following models across all GitHub Copilot experiences."
+        supports: [date, model, lifecycle]
+  - id: "github-o4-mini-retired-2025-10-23"
+    kind: "availability"
+    date:
+      start: "2025-10-23"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["o4-mini"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "GitHub removed o4-mini from Copilot, suggesting GPT-5 mini as the alternative."
+    caveat: "Removal across all GitHub Copilot experiences, which the changelog lists as Copilot Chat, inline edits, ask and agent modes, and code completions."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of select Copilot models from Claude, OpenAI, and Gemini"
+        url: "https://github.blog/changelog/2025-09-23-upcoming-deprecation-of-select-copilot-models-from-claude-openai-and-gemini/"
+        primary: true
+        retrieved_at: "2026-07-28"
+        published_at: "2025-09-23"
+        source_type: "changelog"
+        quote: "We will deprecate the following models across all GitHub Copilot experiences."
+        supports: [date, model, lifecycle]
   - id: "openai-o1-mini-retired-2025-10-27"
     kind: "availability"
     date:
@@ -3592,9 +3784,9 @@ validation_backlog:
     surface_ids: ["github-copilot"]
   - id: "github-copilot-model-deprecations"
     state: "open"
-    working_claim: "GitHub has announced Copilot model deprecations in dated changelog entries that the timeline does not record."
-    reason: "Ten GitHub Copilot model and surface pairs have a preview as their latest recorded event, so they render as permanently in preview. GitHub publishes deprecation changelogs with notice periods, including entries covering o1, GPT-4.5, o3-mini and GPT-4o in June 2025 and a set of Claude, OpenAI and Gemini models in September 2025."
-    target: "Work through the GitHub changelog deprecation entries and record deprecated and retired events for models already in the timeline."
+    working_claim: "GitHub announces Copilot model deprecations in dated changelog entries, most of which the timeline now records."
+    reason: "First pass complete on 28 July 2026. Both known changelogs were read and eight retirements recorded, all with dates that have already passed. Three models named in them are outside the registry and were not added, because the timeline holds no arrival for them either: GPT-4.5, Gemini 2.0 Flash and Claude Sonnet 3.7 Thinking. GitHub publishes these as individual posts rather than a maintained schedule, so there is no single page to re-read."
+    target: "Watch the GitHub changelog for further deprecation posts. Decide separately whether GPT-4.5, Gemini 2.0 Flash and Claude Sonnet 3.7 Thinking belong in the registry, which requires finding their arrivals first."
     model_ids: []
     surface_ids: ["github-copilot", "github-models"]
     sources:
@@ -3603,13 +3795,22 @@ validation_backlog:
         url: "https://github.blog/changelog/2025-06-20-upcoming-deprecation-of-o1-gpt-4-5-o3-mini-and-gpt-4o/"
         primary: true
         retrieved_at: "2026-07-28"
+        published_at: "2025-06-20"
         source_type: "changelog"
       - publisher: "GitHub"
         title: "Upcoming deprecation of select Copilot models from Claude, OpenAI, and Gemini"
         url: "https://github.blog/changelog/2025-09-23-upcoming-deprecation-of-select-copilot-models-from-claude-openai-and-gemini/"
         primary: true
         retrieved_at: "2026-07-28"
+        published_at: "2025-09-23"
         source_type: "changelog"
+  - id: "github-gpt4o-selectable-arrival"
+    state: "open"
+    working_claim: "GPT-4o became selectable in the GitHub Copilot model picker at some point between July 2024 and its removal on 6 August 2025."
+    reason: "The June 2025 changelog deprecates GPT-4o from the Copilot model pickers, which means it was selectable there. The timeline records GPT-4o on GitHub Copilot only as an underlying model in July 2024, so the retirement now ends an exposure whose beginning was never captured. Found by harvesting the deprecation changelogs: an ending can reveal a missing arrival."
+    target: "Find the dated GitHub changelog entry for GPT-4o entering the Copilot model picker."
+    model_ids: ["gpt-4o"]
+    surface_ids: ["github-copilot"]
   - id: "github-foundry-opus4-7-2026-04-16"
     state: "open"
     working_claim: "Claude Opus 4.7 landed on GitHub Copilot and Microsoft Foundry at or around vendor launch."
