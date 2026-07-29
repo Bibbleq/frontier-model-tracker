@@ -68,6 +68,14 @@ LIFECYCLE_ORDER = [
 # end state; anything else is only the last thing we know, not the current one.
 TERMINAL_LIFECYCLES = {"retired"}
 
+# Stages at which a model first becomes available somewhere. A retirement is an
+# availability event but it is not an arrival, so it must never be mistaken for
+# the vendor release that anchors lag. Without this, a model whose only vendor
+# record is its shutdown would have its "release" dated to the day it was
+# switched off, and every platform event would then look like it predates the
+# model existing.
+ARRIVAL_LIFECYCLES = {"private_preview", "limited_preview", "public_preview", "ga"}
+
 warnings: list[dict] = []
 
 
@@ -477,6 +485,8 @@ def check_vendor_baseline(events: list[dict], models: dict, surfaces: dict) -> N
     baseline: dict[str, str] = {}
     for event in _availability(events):
         if surfaces[event["surface_id"]].get("vendor_baseline"):
+            if event["lifecycle"] not in ARRIVAL_LIFECYCLES:
+                continue
             for model_id in event["model_ids"]:
                 if model_id not in baseline or event["date"]["start"] < baseline[model_id]:
                     baseline[model_id] = event["date"]["start"]
@@ -623,6 +633,9 @@ def derive_lag(data: dict, models: dict, platforms: dict) -> list[dict]:
     baseline: dict[str, dict] = {}
     for event in events:
         if not surfaces[event["surface_id"]].get("vendor_baseline"):
+            continue
+        # A shutdown is not a release. See ARRIVAL_LIFECYCLES.
+        if event["lifecycle"] not in ARRIVAL_LIFECYCLES:
             continue
         low, _ = date_interval(event["date"])
         for model_id in event["model_ids"]:

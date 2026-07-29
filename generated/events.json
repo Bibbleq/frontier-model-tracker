@@ -385,6 +385,44 @@
       ]
     },
     {
+      "id": "openai-codex-retired-2023-03-23",
+      "kind": "availability",
+      "date": {
+        "start": "2023-03-23",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "codex"
+      ],
+      "model_claim": "family",
+      "lifecycle": "retired",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "supported"
+      },
+      "evidence_note": "OpenAI shut down the Codex models in the API, listing code-davinci-001, code-davinci-002, code-cushman-001 and code-cushman-002, and directing users to GPT-4o.",
+      "caveat": "Announced on 20 March 2023 for shutdown on 23 March, three days later, long before OpenAI adopted a minimum notice period. The registry carries Codex as one generation-level entry while the deprecation table names four specific model identifiers, so the model attribution is 'supported' rather than 'confirmed'.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Deprecations",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "primary": true,
+          "retrieved_at": "2026-07-28",
+          "source_type": "documentation",
+          "quote": "Mar 23, 2023 | code-davinci-002 | gpt-4o",
+          "supports": [
+            "date",
+            "lifecycle"
+          ],
+          "note": "Announcement of 2023-03-20, 'Codex Models', shutdown 2023-03-23."
+        }
+      ]
+    },
+    {
       "id": "anthropic-claude2-2023-07-11",
       "kind": "availability",
       "date": {
@@ -1958,6 +1996,40 @@
       ]
     },
     {
+      "id": "openai-o1-preview-retired-2025-07-28",
+      "kind": "availability",
+      "date": {
+        "start": "2025-07-28",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "o1-preview"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "retired",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI shut down o1-preview, directing users to o3. The deprecation table names the bare model, not a dated snapshot, so the model itself was withdrawn.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Deprecations",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "primary": true,
+          "retrieved_at": "2026-07-28",
+          "source_type": "documentation",
+          "quote": "July 28, 2025 | o1-preview | o3",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Announcement of 2025-04-28, shutdown 2025-07-28, replacement o3."
+        }
+      ]
+    },
+    {
       "id": "anthropic-opus4-1-2025-08-05",
       "kind": "availability",
       "date": {
@@ -2466,6 +2538,40 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "announcement"
+        }
+      ]
+    },
+    {
+      "id": "openai-o1-mini-retired-2025-10-27",
+      "kind": "availability",
+      "date": {
+        "start": "2025-10-27",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "o1-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "retired",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI shut down o1-mini, directing users to o4-mini. Announced in the same 28 April 2025 notice as o1-preview but with a later shutdown date.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Deprecations",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "primary": true,
+          "retrieved_at": "2026-07-28",
+          "source_type": "documentation",
+          "quote": "Oct 27, 2025 | o1-mini | o4-mini",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Announcement of 2025-04-28, shutdown 2025-10-27, replacement o4-mini."
         }
       ]
     },
@@ -3302,6 +3408,198 @@
       ]
     },
     {
+      "id": "openai-gpt4-1-nano-shutdown-announced-2026-04-22",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-04-22",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "gpt-4-1-nano"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI announced that GPT-4.1 nano would be shut down in the API on 23 October 2026, with GPT-5.6 Luna as the replacement.",
+      "caveat": "Recorded as an announcement, not a retirement: the shutdown date falls after this dataset's research cutoff.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Deprecations",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "primary": true,
+          "retrieved_at": "2026-07-28",
+          "source_type": "documentation",
+          "quote": "Oct 23, 2026 | gpt-4.1-nano | gpt-4.1-nano-2025-04-14 | gpt-5.6-luna",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Announcement of 2026-04-22, shutdown 2026-10-23, listed as 'gpt-4.1-nano | gpt-4.1-nano-2025-04-14'."
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt4-shutdown-announced-2026-04-22",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-04-22",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-4"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI announced that GPT-4 would be shut down in the API on 23 October 2026, with GPT-5.6 Sol as the replacement. The table lists the bare gpt-4 alias alongside the gpt-4-0613 snapshot, so the model itself is scheduled for withdrawal.",
+      "caveat": "Recorded as an announcement, not a retirement: the shutdown date falls after this dataset's research cutoff and had not happened when the record was written. Promote it to a retired event once the date passes and the shutdown is observable.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Deprecations",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "primary": true,
+          "retrieved_at": "2026-07-28",
+          "source_type": "documentation",
+          "quote": "Unless safety or compliance concerns require a faster timeline, we provide the following minimum notice periods before model retirement: Generally available models: At least 6 months. Specialized variants of generally available models: At least 3 months.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Announcement of 2026-04-22, 'Legacy GPT Model Snapshots', shutdown 2026-10-23."
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt4-turbo-shutdown-announced-2026-04-22",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-04-22",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "gpt-4-turbo"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI announced that GPT-4 Turbo would be shut down in the API on 23 October 2026, with GPT-5.6 Sol as the replacement.",
+      "caveat": "Recorded as an announcement, not a retirement: the shutdown date falls after this dataset's research cutoff.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Deprecations",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "primary": true,
+          "retrieved_at": "2026-07-28",
+          "source_type": "documentation",
+          "quote": "Oct 23, 2026 | gpt-4-turbo | gpt-4-turbo-2024-04-09, gpt-4-turbo-completions | gpt-5.6-sol",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Announcement of 2026-04-22, shutdown 2026-10-23, listed as 'gpt-4-turbo | gpt-4-turbo-2024-04-09, gpt-4-turbo-completions'."
+        }
+      ]
+    },
+    {
+      "id": "openai-o1-shutdown-announced-2026-04-22",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-04-22",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "o1"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI announced that o1 would be shut down in the API on 23 October 2026, with GPT-5.6 Sol as the replacement.",
+      "caveat": "Recorded as an announcement, not a retirement: the shutdown date falls after this dataset's research cutoff.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Deprecations",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "primary": true,
+          "retrieved_at": "2026-07-28",
+          "source_type": "documentation",
+          "quote": "Oct 23, 2026 | o1-2024-12-17 | o1 | gpt-5.6-sol",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Announcement of 2026-04-22, shutdown 2026-10-23, listed as 'o1-2024-12-17 | o1'."
+        }
+      ]
+    },
+    {
+      "id": "openai-o3-mini-shutdown-announced-2026-04-22",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-04-22",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "o3-mini"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI announced that o3-mini would be shut down in the API on 23 October 2026, with GPT-5.6 Sol as the replacement.",
+      "caveat": "Recorded as an announcement, not a retirement: the shutdown date falls after this dataset's research cutoff.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Deprecations",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "primary": true,
+          "retrieved_at": "2026-07-28",
+          "source_type": "documentation",
+          "quote": "Oct 23, 2026 | o3-mini-2025-01-31 | o3-mini | gpt-5.6-sol",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Announcement of 2026-04-22, shutdown 2026-10-23, listed as 'o3-mini-2025-01-31 | o3-mini'."
+        }
+      ]
+    },
+    {
+      "id": "openai-o4-mini-shutdown-announced-2026-04-22",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-04-22",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "o4-mini"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI announced that o4-mini would be shut down in the API on 23 October 2026, with GPT-5.6 Terra as the replacement.",
+      "caveat": "Recorded as an announcement, not a retirement: the shutdown date falls after this dataset's research cutoff. The dataset holds no OpenAI release record for o4-mini, so its scheduled withdrawal is recorded without a matching vendor arrival.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Deprecations",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "primary": true,
+          "retrieved_at": "2026-07-28",
+          "source_type": "documentation",
+          "quote": "Oct 23, 2026 | o4-mini-2025-04-16 | o4-mini | gpt-5.6-terra",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Announcement of 2026-04-22, shutdown 2026-10-23, listed as 'o4-mini-2025-04-16 | o4-mini'."
+        }
+      ]
+    },
+    {
       "id": "openai-gpt5-5-2026-04-23",
       "kind": "availability",
       "date": {
@@ -3518,6 +3816,41 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "announcement"
+        }
+      ]
+    },
+    {
+      "id": "openai-dall-e-2-retired-2026-05-12",
+      "kind": "availability",
+      "date": {
+        "start": "2026-05-12",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "dall-e-2"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "retired",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI shut down DALL-E 2 in the API alongside DALL-E 3, directing users to the gpt-image models.",
+      "caveat": "The dataset holds no OpenAI release record for DALL-E 2; it enters the timeline through the January 2023 Azure OpenAI availability. Its retirement is therefore recorded without a matching vendor arrival.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Deprecations",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "primary": true,
+          "retrieved_at": "2026-07-28",
+          "source_type": "documentation",
+          "quote": "May 12, 2026 | dall-e-2 | gpt-image-2, gpt-image-1, or gpt-image-1-mini",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Announcement of 2025-11-14, shutdown 2026-05-12."
         }
       ]
     },
@@ -5130,14 +5463,43 @@
     {
       "id": "openai-model-deprecations",
       "state": "open",
-      "working_claim": "OpenAI publishes dated shutdown records for its models, including several the timeline carries as vendor releases with no end.",
-      "reason": "Vendor surfaces are the lag baseline, so a vendor model with no terminal event reads as available indefinitely. OpenAI maintains a deprecations page structured as a dated table of shutdown date, model and recommended replacement, and states a minimum notice of six months for generally available models and as little as two weeks for preview models.",
-      "target": "Harvest the OpenAI deprecations table and record retired events for vendor models already in the timeline, with the published shutdown date and the replacement recorded as a supersedes relation.",
+      "working_claim": "OpenAI publishes dated shutdown records for its models, several of which the timeline carries as vendor releases with no end.",
+      "reason": "First pass complete on 28 July 2026. Rows naming the bare model alias were harvested: four shutdowns that had already happened became retired events, and six scheduled for 23 October 2026 became announcements, because a shutdown dated after the research cutoff has not happened yet. What remains is the rows that name only a dated API snapshot, which is a different question and is tracked separately.",
+      "target": "Re-run once the 23 October 2026 shutdowns pass, promoting each announcement to a retired event, and again as new deprecation notices are published.",
       "model_ids": [],
       "surface_ids": [
         "openai",
         "openai-api",
         "chatgpt"
+      ],
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Deprecations",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "primary": true,
+          "retrieved_at": "2026-07-28",
+          "source_type": "documentation",
+          "quote": "Unless safety or compliance concerns require a faster timeline, we provide the following minimum notice periods before model retirement: Generally available models: At least 6 months. Specialized variants of generally available models: At least 3 months."
+        }
+      ]
+    },
+    {
+      "id": "openai-snapshot-only-deprecations",
+      "state": "open",
+      "working_claim": "GPT-4o, GPT-5, GPT-5 mini and o3 have shutdown dates published against dated API snapshots rather than the bare model.",
+      "reason": "The deprecations table lists gpt-4o-2024-05-13, gpt-5-2025-08-07, gpt-5-mini-2025-08-07 and o3-2025-04-16 without the bare model alias that other rows carry. Retiring one dated snapshot is not the same as retiring the model: GPT-4o shipped several snapshots, so its 2024-05-13 shutdown leaves the model available. Recording these as model retirements would be inference, not evidence.",
+      "target": "Establish, per model, whether the deprecated snapshot was the last one in service. Where it was, record a retirement; where it was not, record nothing and note the snapshot lifecycle is below this dataset's granularity.",
+      "model_ids": [
+        "gpt-4o",
+        "gpt-5",
+        "gpt-5-mini",
+        "o3",
+        "gpt-3-5"
+      ],
+      "surface_ids": [
+        "openai",
+        "openai-api"
       ],
       "sources": [
         {
@@ -5228,6 +5590,19 @@
       ],
       "surface_ids": [
         "copilot-studio"
+      ]
+    },
+    {
+      "id": "vendor-surface-consolidation",
+      "state": "open",
+      "working_claim": "The three OpenAI vendor surfaces are applied inconsistently, so one model's history can be split across them.",
+      "reason": "openai, openai-api and chatgpt were assigned per event during the import rather than by a rule. GPT-4's release sits on openai, GPT-4 Turbo's on openai-api, and GPT-3.5's on chatgpt. The deprecations harvest made this visible: the source is the API, but retirements were recorded on whichever surface already held each model so the lifecycle stayed coherent, which means an API-sourced fact now sits on a non-API surface for some models.",
+      "target": "Decide whether these are genuinely separate surfaces or one vendor surface with product labels, then migrate consistently. Until then current-state may show a model twice under different vendor surfaces.",
+      "model_ids": [],
+      "surface_ids": [
+        "openai",
+        "openai-api",
+        "chatgpt"
       ]
     },
     {

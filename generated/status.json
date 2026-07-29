@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 152,
-    "backlog": 45,
-    "sources": 168,
+    "events": 162,
+    "backlog": 47,
+    "sources": 179,
     "models": 64,
     "surfaces": 23,
-    "confirmed": 144,
-    "supported": 8
+    "confirmed": 153,
+    "supported": 9
   },
   "kinds": {
-    "announcement": 4,
-    "availability": 136,
+    "announcement": 10,
+    "availability": 140,
     "milestone": 6,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 1,
-    "open": 41,
+    "open": 43,
     "promoted": 3
   },
   "warnings": [
@@ -77,13 +77,68 @@
     },
     {
       "code": "missing_archive",
+      "subject": "openai-codex-retired-2023-03-23",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-dall-e-2-retired-2026-05-12",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-gpt4-1-nano-shutdown-announced-2026-04-22",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
+    },
+    {
+      "code": "missing_archive",
       "subject": "openai-gpt4-2023-03-14",
       "message": "documentation source has no archived_url and may be edited in place: https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
     },
     {
       "code": "missing_archive",
+      "subject": "openai-gpt4-shutdown-announced-2026-04-22",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-gpt4-turbo-shutdown-announced-2026-04-22",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-o1-mini-retired-2025-10-27",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-o1-preview-retired-2025-07-28",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-o1-shutdown-announced-2026-04-22",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-o3-mini-shutdown-announced-2026-04-22",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-o4-mini-shutdown-announced-2026-04-22",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
+    },
+    {
+      "code": "missing_archive",
       "subject": "studio-gpt4-1-default-2025-10",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+    },
+    {
+      "code": "no_vendor_baseline",
+      "subject": "claude-mythos-5",
+      "message": "no vendor release event, so lag cannot be derived"
     },
     {
       "code": "no_vendor_baseline",
@@ -198,8 +253,8 @@
   ],
   "warning_counts": {
     "backlog_without_surface": 1,
-    "missing_archive": 12,
-    "no_vendor_baseline": 14,
+    "missing_archive": 22,
+    "no_vendor_baseline": 15,
     "suspicious_day_precision": 6,
     "unquoted_documentation": 2
   },
@@ -216,9 +271,9 @@
   },
   "lag_certainty": {
     "exact": 232,
-    "not_recorded": 271,
+    "not_recorded": 259,
     "range": 6,
-    "unknown_no_baseline": 179,
+    "unknown_no_baseline": 191,
     "unknown_open_research": 80
   }
 }

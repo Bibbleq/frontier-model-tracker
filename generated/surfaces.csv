@@ -1,6 +1,6 @@
 id,display_name,owner,family,lineage,vendor_baseline,counts_as,renamed_from,renamed_to,renamed_on,event_count
-openai,OpenAI,OpenAI,,,true,,,,,11
-openai-api,OpenAI API,OpenAI,,,true,,,,,4
+openai,OpenAI,OpenAI,,,true,,,,,15
+openai-api,OpenAI API,OpenAI,,,true,,,,,10
 chatgpt,ChatGPT,OpenAI,,,true,,,,,1
 anthropic-claude,Claude,Anthropic,,,true,,,,,20
 google-gemini,Gemini,Google,,,true,,,,,1
