@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 162,
-    "backlog": 47,
-    "sources": 179,
+    "events": 164,
+    "backlog": 48,
+    "sources": 181,
     "models": 64,
     "surfaces": 23,
-    "confirmed": 153,
+    "confirmed": 155,
     "supported": 9
   },
   "kinds": {
     "announcement": 10,
-    "availability": 140,
+    "availability": 142,
     "milestone": 6,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 1,
-    "open": 43,
+    "open": 44,
     "promoted": 3
   },
   "warnings": [
@@ -49,6 +49,16 @@
       "code": "missing_archive",
       "subject": "foundry-grok3-mini-2025-05-19",
       "message": "documentation source has no archived_url and may be edited in place: https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-june-2025/"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-grok3-mini-retired-2026-05-01",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-grok3-retired-2026-05-01",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
     },
     {
       "code": "missing_archive",
@@ -217,6 +227,16 @@
     },
     {
       "code": "suspicious_day_precision",
+      "subject": "foundry-grok3-mini-retired-2026-05-01",
+      "message": "day precision on the first of the month may be an invented day"
+    },
+    {
+      "code": "suspicious_day_precision",
+      "subject": "foundry-grok3-retired-2026-05-01",
+      "message": "day precision on the first of the month may be an invented day"
+    },
+    {
+      "code": "suspicious_day_precision",
       "subject": "github-claude3-5-sonnet-all-users-2024-11-01",
       "message": "day precision on the first of the month may be an invented day"
     },
@@ -253,9 +273,9 @@
   ],
   "warning_counts": {
     "backlog_without_surface": 1,
-    "missing_archive": 22,
+    "missing_archive": 24,
     "no_vendor_baseline": 15,
-    "suspicious_day_precision": 6,
+    "suspicious_day_precision": 8,
     "unquoted_documentation": 2
   },
   "coverage": {
@@ -271,9 +291,9 @@
   },
   "lag_certainty": {
     "exact": 232,
-    "not_recorded": 259,
+    "not_recorded": 248,
     "range": 6,
-    "unknown_no_baseline": 191,
-    "unknown_open_research": 80
+    "unknown_no_baseline": 189,
+    "unknown_open_research": 93
   }
 }

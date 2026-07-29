@@ -3709,6 +3709,74 @@
       ]
     },
     {
+      "id": "foundry-grok3-mini-retired-2026-05-01",
+      "kind": "availability",
+      "date": {
+        "start": "2026-05-01",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "grok-3-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "retired",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft Foundry retired Grok 3 Mini on the same day as Grok 3, listing grok-4-1-fast-reasoning as the replacement.",
+      "caveat": "Recorded on Microsoft Foundry because that was the product name on the retirement date. The model arrived under the Azure AI Foundry name in May 2025; the two are one product in the rename lineage.",
+      "sources": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Model retirement schedule - Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule",
+          "primary": true,
+          "retrieved_at": "2026-07-28",
+          "source_type": "documentation",
+          "quote": "grok-3-mini | 1 | Retired | 2026-05-01 | grok-4-1-fast-reasoning",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-grok3-retired-2026-05-01",
+      "kind": "availability",
+      "date": {
+        "start": "2026-05-01",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "grok-3"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "retired",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft Foundry retired Grok 3, listing Grok 4 as the replacement. The schedule records it as already retired, so the date is the transition rather than a plan.",
+      "caveat": "Recorded on Microsoft Foundry because that was the product name on the retirement date. The model arrived under the Azure AI Foundry name in May 2025; the two are one product in the rename lineage.",
+      "sources": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Model retirement schedule - Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule",
+          "primary": true,
+          "retrieved_at": "2026-07-28",
+          "source_type": "documentation",
+          "quote": "grok-3 | 1 | Retired | 2026-05-01 | grok-4",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
       "id": "m365-anthropic-independent-processor-end-2026-05-01",
       "kind": "policy",
       "date": {
@@ -5054,26 +5122,46 @@
     {
       "id": "foundry-model-retirement-schedule",
       "state": "open",
-      "working_claim": "Foundry publishes dated deprecation and retirement records for every model it has carried, none of which the timeline records.",
-      "reason": "The dataset holds no terminal lifecycle event at all, so a renderer showing the latest state per surface presents models as still in preview or GA long after they were withdrawn. Microsoft documents a five-stage lifecycle (Preview, GA, Legacy, Deprecated, Retired), publishes a retirement schedule, and exposes lifecycleStatus and deprecation.inference through the Models API. Retirement dates are set programmatically 18 months out at GA launch, so there is no announcement to catch but the dates are knowable from launch day.",
-      "target": "Harvest the Foundry model retirement schedule and record deprecated and retired events for models already in the timeline, using the published dates rather than observation.",
-      "model_ids": [],
+      "working_claim": "Foundry publishes lifecycle stage and retirement date for every model it carries, most of which the timeline cannot yet record.",
+      "reason": "First pass complete on 28 July 2026, and it yielded far less history than expected. The schedule is a current-state and future-schedule document, not a dated log: it gives each model's stage today and a retirement date, but never the date a model entered Deprecated or Legacy. Only rows already marked Retired with a past date carry a transition this dataset can record, and of those only Grok 3 and Grok 3 Mini map to models the timeline already tracks on a Foundry surface. Everything else is either a future date, an undated status, or a model outside the registry.",
+      "target": "Re-read as retirement dates pass, promoting each to a retired event. For the models currently marked Deprecated, find a dated Microsoft notice for the deprecation itself rather than inferring one from current status.",
+      "model_ids": [
+        "gpt-4-1",
+        "gpt-4-1-mini",
+        "gpt-4-1-nano",
+        "gpt-4o",
+        "o1",
+        "o3-mini",
+        "o4-mini",
+        "deepseek-r1"
+      ],
       "surface_ids": [
         "microsoft-foundry",
-        "azure-openai",
         "azure-ai-foundry",
-        "azure-ai-studio"
+        "azure-openai"
       ],
       "sources": [
         {
           "publisher": "Microsoft Learn",
-          "title": "Foundry Models lifecycle and support policy",
-          "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirements",
+          "title": "Model retirement schedule - Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule",
           "primary": true,
           "retrieved_at": "2026-07-28",
-          "source_type": "documentation",
-          "quote": "GA models have their retirement date set programmatically at launch to 18 months out—there's no separate \"announcement.\""
+          "source_type": "documentation"
         }
+      ]
+    },
+    {
+      "id": "foundry-gpt5-3-chat-retirement-2026-06-29",
+      "state": "open",
+      "working_claim": "The gpt-5.3-chat model retired from Microsoft Foundry on 29 June 2026 is the model this registry calls GPT-5.3 Instant.",
+      "reason": "The Foundry schedule lists gpt-5.3-chat as retired on 29 June 2026. The registry carries GPT-5.3 Instant with 'GPT-5.3 Chat' as an alias because Copilot Studio uses that name, but the timeline holds no Foundry event for the model at all, so recording a Foundry retirement would be both an identity inference and an ending without a beginning.",
+      "target": "Confirm that Foundry's gpt-5.3-chat and the Copilot Studio GPT-5.3 Chat are the same model, and find when it first appeared in Foundry.",
+      "model_ids": [
+        "gpt-5-3-instant"
+      ],
+      "surface_ids": [
+        "microsoft-foundry"
       ]
     },
     {

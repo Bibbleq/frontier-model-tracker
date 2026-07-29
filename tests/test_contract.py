@@ -179,14 +179,33 @@ class CurrentStateTests(unittest.TestCase):
             cls.rows = list(csv.DictReader(handle))
         cls.events = json.loads((GENERATED / "events.json").read_text(encoding="utf-8"))
 
-    def test_covers_every_model_and_surface_with_an_availability_event(self) -> None:
+    def test_covers_every_model_and_product_with_an_availability_event(self) -> None:
+        """Rows are one per model and *product*, not per surface name: a
+        product keeps one row across a rename."""
+        platforms = build.load_validated(build.PLATFORMS_PATH, build.PLATFORMS_SCHEMA_PATH)
+        groups = build.rename_groups(platforms)
         expected = {
-            (model_id, event["surface_id"])
+            (model_id, groups[event["surface_id"]])
             for event in self.events["events"]
             if event["kind"] == "availability"
             for model_id in event["model_ids"]
         }
-        self.assertEqual({(r["model_id"], r["surface_id"]) for r in self.rows}, expected)
+        actual = {(r["model_id"], groups[r["surface_id"]]) for r in self.rows}
+        self.assertEqual(actual, expected)
+
+    def test_a_rename_does_not_split_a_product_into_two_rows(self) -> None:
+        platforms = build.load_validated(build.PLATFORMS_PATH, build.PLATFORMS_SCHEMA_PATH)
+        groups = build.rename_groups(platforms)
+        keys = [(r["model_id"], groups[r["surface_id"]]) for r in self.rows]
+        self.assertEqual(len(keys), len(set(keys)), "a product appears twice under different names")
+
+    def test_surface_shown_is_the_one_the_latest_event_used(self) -> None:
+        """Not the rename group's representative, which would label current
+        Copilot Studio rows with the Power Virtual Agents name."""
+        by_id = {e["id"]: e for e in self.events["events"]}
+        for row in self.rows:
+            with self.subTest(row["last_event"]):
+                self.assertEqual(row["surface_id"], by_id[row["last_event"]]["surface_id"])
 
     def test_terminal_flag_agrees_with_the_lifecycle(self) -> None:
         for row in self.rows:
@@ -197,6 +216,8 @@ class CurrentStateTests(unittest.TestCase):
                 )
 
     def test_named_event_is_the_latest_for_that_pair(self) -> None:
+        platforms = build.load_validated(build.PLATFORMS_PATH, build.PLATFORMS_SCHEMA_PATH)
+        groups = build.rename_groups(platforms)
         by_id = {e["id"]: e for e in self.events["events"]}
         for row in self.rows:
             with self.subTest(f'{row["model_id"]}/{row["surface_id"]}'):
@@ -206,7 +227,7 @@ class CurrentStateTests(unittest.TestCase):
                         e for e in self.events["events"]
                         if e["kind"] == "availability"
                         and row["model_id"] in e["model_ids"]
-                        and e["surface_id"] == row["surface_id"]
+                        and groups[e["surface_id"]] == groups[row["surface_id"]]
                     ),
                     key=lambda e: build.date_interval(e["date"])[0],
                 )
