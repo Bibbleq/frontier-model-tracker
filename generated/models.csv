@@ -52,8 +52,8 @@ claude-mythos-5,Claude Mythos 5,Anthropic,,,,,2
 gemini-1-5-pro,Gemini 1.5 Pro,Google,,,,,2
 gemini-2-5-pro,Gemini 2.5 Pro,Google,,,,,0
 gemini-3-6-flash,Gemini 3.6 Flash,Google,,,,,2
-grok-3,Grok 3,xAI,,,,,2
-grok-3-mini,Grok 3 Mini,xAI,,Grok 3 mini,,,2
+grok-3,Grok 3,xAI,,,,,3
+grok-3-mini,Grok 3 Mini,xAI,,Grok 3 mini,,,3
 grok-4,Grok 4,xAI,,,,,1
 llama-2,Llama 2,Meta,,,,,1
 mistral-3,Mistral 3,Mistral AI,,,,,1

@@ -353,7 +353,7 @@ def validate_semantics(data: dict, models: dict, platforms: dict) -> None:
         fail("events must be sorted by date.start and id")
 
     check_semantic_duplicates(events)
-    check_lifecycle_ordering(events)
+    check_lifecycle_ordering(events, groups)
     check_suspension_pairs(events)
     check_vendor_baseline(events, known_models, known_surfaces)
     check_relations(events)
@@ -373,13 +373,26 @@ def check_semantic_duplicates(events: list[dict]) -> None:
             seen[key] = event["id"]
 
 
-def check_lifecycle_ordering(events: list[dict]) -> None:
+def check_lifecycle_ordering(events: list[dict], groups: dict[str, str] | None = None) -> None:
+    """Ordering is checked per product, not per surface name.
+
+    The contract tells contributors to label an event with the surface name
+    that was current on the day, so a model can arrive on Azure AI Foundry and
+    retire on Microsoft Foundry. Those are one product under two names, and
+    keying on `surface_id` would treat them as unrelated and never compare
+    them. `groups` collapses a rename chain to one representative.
+    """
+    groups = groups or {}
+    return _check_lifecycle_ordering(events, groups)
+
+
+def _check_lifecycle_ordering(events: list[dict], groups: dict[str, str]) -> None:
     latest: dict[tuple, tuple[int, str, str]] = {}
     for event in _availability(events):
         if event["lifecycle"] not in LIFECYCLE_ORDER:
             continue
         for model_id in event["model_ids"]:
-            key = (event["surface_id"], model_id)
+            key = (groups.get(event["surface_id"], event["surface_id"]), model_id)
             stage = LIFECYCLE_ORDER.index(event["lifecycle"])
             if key in latest:
                 prior_stage, prior_date, prior_id = latest[key]
@@ -580,19 +593,27 @@ def derive_current_state(data: dict, models: dict, platforms: dict) -> list[dict
             for model_id in item.get("model_ids", []):
                 open_questions[(model_id, surface_id)] += 1
 
+    groups = rename_groups(platforms)
     latest: dict[tuple, dict] = {}
     for event in data["events"]:
         if event["kind"] != "availability":
             continue
         for model_id in event["model_ids"]:
-            key = (model_id, event["surface_id"])
+            # One product under successive names is one row. The surface shown
+            # is the one carrying the most recent event.
+            key = (model_id, groups.get(event["surface_id"], event["surface_id"]))
             current = latest.get(key)
             if current is None or date_interval(event["date"])[0] >= date_interval(current["date"])[0]:
                 latest[key] = event
 
     rows = []
-    for (model_id, surface_id), event in sorted(latest.items()):
+    for (model_id, group_id), event in sorted(latest.items()):
         model = model_entries[model_id]
+        # Rows are grouped by rename lineage, but reported under the surface
+        # name the most recent event actually used. Reporting the group's
+        # representative would label current Copilot Studio events with the
+        # Power Virtual Agents name it was renamed from.
+        surface_id = event["surface_id"]
         surface = surfaces[surface_id]
         rows.append({
             "model_id": model_id,
@@ -609,7 +630,10 @@ def derive_current_state(data: dict, models: dict, platforms: dict) -> list[dict
             "last_event_precision": event["date"]["precision"],
             "known_as_of": data["research_cutoff"],
             "model_superseded_by": model.get("superseded_by", ""),
-            "open_questions": open_questions[(model_id, surface_id)],
+            "open_questions": sum(
+                count for (question_model, question_surface), count in open_questions.items()
+                if question_model == model_id and groups.get(question_surface, question_surface) == group_id
+            ),
         })
     return rows
 
