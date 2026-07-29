@@ -68,7 +68,7 @@ consumer that reads the previous shape: a field removed or renamed, a value
 removed from an enum, or a field's meaning changed.
 
 **`contract_version`** describes this document and the publishing layout — URL
-structure, the manifest format, which files exist. It is currently `1`.
+structure, the manifest format, which files exist. It is currently `2`.
 
 Either may increment without the other. Snapshot paths therefore include both
 numbers: `/c{contract_version}/v{dataset_version}/`.
@@ -146,7 +146,7 @@ absent, the event is not an availability fact.
 ### 2. Do not merge `lifecycle` and `exposure`
 
 `lifecycle` says where in the release cycle: `private_preview`,
-`limited_preview`, `public_preview`, `ga`, `deprecated`, `retired`,
+`limited_preview`, `public_preview`, `ga`, `legacy`, `deprecated`, `retired`,
 `suspended`, `restored`.
 
 `exposure` says how the model is exposed: `underlying`, `specialist`,

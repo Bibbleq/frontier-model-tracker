@@ -233,8 +233,8 @@ claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,copilot,any_exposure,anthropic-son
 claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,copilot,selectable_or_default,anthropic-sonnet4-6-2026-02-17,2026-02-17,ga,github-sonnet4-6-2026-02-17,2026-02-17,github-copilot,selectable,ga,0,0,exact
 claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,m365,any_exposure,anthropic-sonnet4-6-2026-02-17,2026-02-17,ga,,,,,,,,not_recorded
 claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,m365,selectable_or_default,anthropic-sonnet4-6-2026-02-17,2026-02-17,ga,,,,,,,,not_recorded
-claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,studio,any_exposure,anthropic-sonnet4-6-2026-02-17,2026-02-17,ga,,,,,,,,not_recorded
-claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,studio,selectable_or_default,anthropic-sonnet4-6-2026-02-17,2026-02-17,ga,,,,,,,,not_recorded
+claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,studio,any_exposure,anthropic-sonnet4-6-2026-02-17,2026-02-17,ga,,,,,,,,unknown_open_research
+claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,studio,selectable_or_default,anthropic-sonnet4-6-2026-02-17,2026-02-17,ga,,,,,,,,unknown_open_research
 claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,github_copilot,any_exposure,anthropic-sonnet4-6-2026-02-17,2026-02-17,ga,github-sonnet4-6-2026-02-17,2026-02-17,github-copilot,selectable,ga,0,0,exact
 claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,github_copilot,selectable_or_default,anthropic-sonnet4-6-2026-02-17,2026-02-17,ga,github-sonnet4-6-2026-02-17,2026-02-17,github-copilot,selectable,ga,0,0,exact
 claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,foundry,any_exposure,anthropic-sonnet4-6-2026-02-17,2026-02-17,ga,,,,,,,,not_recorded
@@ -396,13 +396,13 @@ gpt-4,GPT-4,OpenAI,github_copilot,selectable_or_default,openai-gpt4-2023-03-14,2
 gpt-4,GPT-4,OpenAI,foundry,any_exposure,openai-gpt4-2023-03-14,2023-03-14,ga,azure-gpt4-preview-2023-03-21,2023-03-21,azure-openai,catalogue,public_preview,7,7,exact
 gpt-4,GPT-4,OpenAI,foundry,selectable_or_default,openai-gpt4-2023-03-14,2023-03-14,ga,,,,,,,,not_recorded
 gpt-4-1,GPT-4.1,OpenAI,microsoft,any_exposure,openai-gpt4-1-2025-04-14,2025-04-14,ga,azure-gpt4-1-2025-04-14,2025-04-14,azure-ai-foundry,catalogue,ga,0,0,exact
-gpt-4-1,GPT-4.1,OpenAI,microsoft,selectable_or_default,openai-gpt4-1-2025-04-14,2025-04-14,ga,studio-gpt4-1-default-2025-10,2025-10,copilot-studio,default,ga,170,200,range
-gpt-4-1,GPT-4.1,OpenAI,copilot,any_exposure,openai-gpt4-1-2025-04-14,2025-04-14,ga,studio-gpt4-1-default-2025-10,2025-10,copilot-studio,default,ga,170,200,range
-gpt-4-1,GPT-4.1,OpenAI,copilot,selectable_or_default,openai-gpt4-1-2025-04-14,2025-04-14,ga,studio-gpt4-1-default-2025-10,2025-10,copilot-studio,default,ga,170,200,range
+gpt-4-1,GPT-4.1,OpenAI,microsoft,selectable_or_default,openai-gpt4-1-2025-04-14,2025-04-14,ga,studio-gpt4-1-default-2025-10,2025-10-27,copilot-studio,default,ga,196,200,range
+gpt-4-1,GPT-4.1,OpenAI,copilot,any_exposure,openai-gpt4-1-2025-04-14,2025-04-14,ga,studio-gpt4-1-default-2025-10,2025-10-27,copilot-studio,default,ga,196,200,range
+gpt-4-1,GPT-4.1,OpenAI,copilot,selectable_or_default,openai-gpt4-1-2025-04-14,2025-04-14,ga,studio-gpt4-1-default-2025-10,2025-10-27,copilot-studio,default,ga,196,200,range
 gpt-4-1,GPT-4.1,OpenAI,m365,any_exposure,openai-gpt4-1-2025-04-14,2025-04-14,ga,,,,,,,,not_recorded
 gpt-4-1,GPT-4.1,OpenAI,m365,selectable_or_default,openai-gpt4-1-2025-04-14,2025-04-14,ga,,,,,,,,not_recorded
-gpt-4-1,GPT-4.1,OpenAI,studio,any_exposure,openai-gpt4-1-2025-04-14,2025-04-14,ga,studio-gpt4-1-default-2025-10,2025-10,copilot-studio,default,ga,170,200,range
-gpt-4-1,GPT-4.1,OpenAI,studio,selectable_or_default,openai-gpt4-1-2025-04-14,2025-04-14,ga,studio-gpt4-1-default-2025-10,2025-10,copilot-studio,default,ga,170,200,range
+gpt-4-1,GPT-4.1,OpenAI,studio,any_exposure,openai-gpt4-1-2025-04-14,2025-04-14,ga,studio-gpt4-1-default-2025-10,2025-10-27,copilot-studio,default,ga,196,200,range
+gpt-4-1,GPT-4.1,OpenAI,studio,selectable_or_default,openai-gpt4-1-2025-04-14,2025-04-14,ga,studio-gpt4-1-default-2025-10,2025-10-27,copilot-studio,default,ga,196,200,range
 gpt-4-1,GPT-4.1,OpenAI,github_copilot,any_exposure,openai-gpt4-1-2025-04-14,2025-04-14,ga,,,,,,,,unknown_open_research
 gpt-4-1,GPT-4.1,OpenAI,github_copilot,selectable_or_default,openai-gpt4-1-2025-04-14,2025-04-14,ga,,,,,,,,unknown_open_research
 gpt-4-1,GPT-4.1,OpenAI,foundry,any_exposure,openai-gpt4-1-2025-04-14,2025-04-14,ga,azure-gpt4-1-2025-04-14,2025-04-14,azure-ai-foundry,catalogue,ga,0,0,exact
@@ -449,8 +449,8 @@ gpt-4o,GPT-4o,OpenAI,copilot,any_exposure,openai-gpt4o-2024-05-13,2024-05-13,ga,
 gpt-4o,GPT-4o,OpenAI,copilot,selectable_or_default,openai-gpt4o-2024-05-13,2024-05-13,ga,github-gpt4o-retired-2025-08-06,2025-08-06,github-copilot,selectable,retired,450,450,exact
 gpt-4o,GPT-4o,OpenAI,m365,any_exposure,openai-gpt4o-2024-05-13,2024-05-13,ga,m365-gpt4o-wave2-2024-09-16,2024-09-16,m365-copilot,underlying,ga,126,126,exact
 gpt-4o,GPT-4o,OpenAI,m365,selectable_or_default,openai-gpt4o-2024-05-13,2024-05-13,ga,,,,,,,,not_recorded
-gpt-4o,GPT-4o,OpenAI,studio,any_exposure,openai-gpt4o-2024-05-13,2024-05-13,ga,,,,,,,,unknown_open_research
-gpt-4o,GPT-4o,OpenAI,studio,selectable_or_default,openai-gpt4o-2024-05-13,2024-05-13,ga,,,,,,,,unknown_open_research
+gpt-4o,GPT-4o,OpenAI,studio,any_exposure,openai-gpt4o-2024-05-13,2024-05-13,ga,studio-gpt4o-retired-2025-10-27,2025-10-27,copilot-studio,default,retired,532,536,range
+gpt-4o,GPT-4o,OpenAI,studio,selectable_or_default,openai-gpt4o-2024-05-13,2024-05-13,ga,studio-gpt4o-retired-2025-10-27,2025-10-27,copilot-studio,default,retired,532,536,range
 gpt-4o,GPT-4o,OpenAI,github_copilot,any_exposure,openai-gpt4o-2024-05-13,2024-05-13,ga,github-gpt4o-underlying-2024-07-31,2024-07-31,github-copilot,underlying,ga,79,79,exact
 gpt-4o,GPT-4o,OpenAI,github_copilot,selectable_or_default,openai-gpt4o-2024-05-13,2024-05-13,ga,github-gpt4o-retired-2025-08-06,2025-08-06,github-copilot,selectable,retired,450,450,exact
 gpt-4o,GPT-4o,OpenAI,foundry,any_exposure,openai-gpt4o-2024-05-13,2024-05-13,ga,azure-gpt4o-preview-2024-05-13,2024-05-13,azure-openai,catalogue,public_preview,0,0,exact
