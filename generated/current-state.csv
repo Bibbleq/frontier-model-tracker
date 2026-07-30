@@ -3,9 +3,9 @@ claude-1,Claude 1,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,ant
 claude-2,Claude 2,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-claude2-2023-07-11,2023-07-11,day,2026-07-27,,0
 claude-2-1,Claude 2.1,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-claude2-1-2023-11-21,2023-11-21,day,2026-07-27,,0
 claude-3-5-sonnet,Claude 3.5 Sonnet,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-claude3-5-sonnet-2024-06-21,2024-06-21,day,2026-07-27,,0
-claude-3-5-sonnet,Claude 3.5 Sonnet,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,public_preview,selectable,false,github-claude3-5-sonnet-all-users-2024-11-01,2024-11-01,day,2026-07-27,,0
+claude-3-5-sonnet,Claude 3.5 Sonnet,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-claude3-5-sonnet-ga-2025-04-04,2025-04-04,day,2026-07-27,,0
 claude-3-7-sonnet,Claude 3.7 Sonnet,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-claude3-7-sonnet-2025-02-24,2025-02-24,day,2026-07-27,,0
-claude-3-7-sonnet,Claude 3.7 Sonnet,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-claude3-7-sonnet-retired-2025-10-23,2025-10-23,day,2026-07-27,,1
+claude-3-7-sonnet,Claude 3.7 Sonnet,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-claude3-7-sonnet-retired-2025-10-23,2025-10-23,day,2026-07-27,,0
 claude-3-haiku,Claude 3 Haiku,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-claude3-haiku-2024-03-13,2024-03-13,day,2026-07-27,,0
 claude-3-opus,Claude 3 Opus,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-claude3-family-2024-03-04,2024-03-04,day,2026-07-27,,0
 claude-3-sonnet,Claude 3 Sonnet,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-claude3-family-2024-03-04,2024-03-04,day,2026-07-27,,0
@@ -137,7 +137,7 @@ o1-preview,o1-preview,OpenAI,github-models,GitHub Models,microsoft,limited_previ
 o1-preview,o1-preview,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,limited_preview,catalogue,false,azure-o1-preview-2024-09-12,2024-09-12,day,2026-07-27,o1,0
 o1-preview,o1-preview,OpenAI,openai,OpenAI,,retired,not_applicable,true,openai-o1-preview-retired-2025-07-28,2025-07-28,day,2026-07-27,o1,0
 o3,o3,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-o3-retired-2025-10-23,2025-10-23,day,2026-07-27,,0
-o3-mini,o3-mini,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-o3-mini-retired-2025-10-23,2025-10-23,day,2026-07-27,,1
+o3-mini,o3-mini,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-o3-mini-retired-2025-10-23,2025-10-23,day,2026-07-27,,0
 o3-mini,o3-mini,OpenAI,github-models,GitHub Models,microsoft,public_preview,catalogue,false,github-models-o3-mini-2025-01-31,2025-01-31,day,2026-07-27,,0
 o3-mini,o3-mini,OpenAI,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,specialist,false,m365-analyst-ga-2025-06-02,2025-06-02,day,2026-07-27,,0
 o3-mini,o3-mini,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,catalogue,false,azure-o3-mini-2025-01-31,2025-01-31,day,2026-07-27,,3
