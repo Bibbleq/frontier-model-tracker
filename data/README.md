@@ -142,6 +142,32 @@ the derived lag machinery already understands intervals.
 365 Copilot, leaves no listing to disappear from. Open a `blocked` backlog item
 saying no source can exist, so the question is not repeatedly reopened.
 
+## Recording a promotion
+
+Endings are under-published; so are middles. A model can arrive in preview with
+a dated announcement and reach GA with none, leaving it parked at
+`public_preview` years after the fact.
+
+Azure OpenAI is the clearest case, and it is deliberate rather than an
+oversight. Microsoft's lifecycle policy states that a GA model's retirement
+date is set programmatically at launch and that there is **no separate
+announcement**, and that preview deployments are force-upgraded to GA rather
+than the GA being announced per model. The what's-new changelog announces
+releases and previews; the retirement schedule reports current status without
+dating the change. So the transition genuinely has no publication date to find.
+
+Do not close that gap by inference. A model being absent from the preview list,
+or a retirement schedule row implying it must have passed GA, dates nothing.
+Open a `blocked` backlog item naming every affected model and surface, quote
+the policy that makes the date unobtainable, and say in `target` that the
+search has already been done. `blocked` items suppress lag the same way `open`
+ones do, so the pair reports `unknown_open_research` rather than absence, and
+`current-state.csv` shows a non-terminal state with an open question against it.
+
+Exceptions exist and are worth recording when a vendor does announce one — GPT-4
+Turbo with Vision reached GA on Azure with a dated post on 1 May 2024, and that
+is a normal `lifecycle: "ga"` event.
+
 ## Governance events
 
 Admin and policy changes use `kind: policy`. They live on the surface that
