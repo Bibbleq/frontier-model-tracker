@@ -17,29 +17,29 @@
       "path": "data/events.json",
       "media_type": "application/json",
       "description": "The whole dataset: metadata, canonical events and the validation backlog",
-      "bytes": 319933,
-      "sha256": "ace53ad75f5a88f8275db8622a219fd388c207bff756ff3592c5dc5982a81b34"
+      "bytes": 323893,
+      "sha256": "35837bc61bd3d66cb37798e62fb7cf0a905f9c3a1ff7e48124afb5f1f76d4143"
     },
     {
       "path": "data/status.json",
       "media_type": "application/json",
       "description": "Totals, warning counts, coverage gaps and lag certainty distribution",
-      "bytes": 5353,
-      "sha256": "e5f38c53cc01ca63edafa2a3e20567d72bd0865aee80f7052adf3ce74ac05153"
+      "bytes": 2265,
+      "sha256": "4f81557487249bf70081a9537dd2438618ea971444d785df8f354c3c1eef210d"
     },
     {
       "path": "data/events.csv",
       "media_type": "text/csv",
       "description": "Flattened canonical timeline, identifiers resolved to display names",
-      "bytes": 101764,
-      "sha256": "a92511ec9ab36b8a137033fbffc6936d7bc223a8b90ee890d2598be13c1e875f"
+      "bytes": 102284,
+      "sha256": "3e787e6e647fbe920bc0ef120eb1e9fcf1472d6590369628bcd1d18934519526"
     },
     {
       "path": "data/validation-backlog.csv",
       "media_type": "text/csv",
       "description": "Open research questions with states and targets, not confirmed history",
-      "bytes": 46053,
-      "sha256": "1b9bb3c8ae37bcdab7c4a0cc6d89c07bd27a699b590e5f5218249c5dcaabbbdd"
+      "bytes": 47107,
+      "sha256": "176c6ac0655169d2b48f4f34e0a5a37bbe8d45d608e355507b7a4d923229e75d"
     },
     {
       "path": "data/lag.csv",

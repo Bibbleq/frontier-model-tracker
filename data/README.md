@@ -65,6 +65,20 @@ Use `date.end` for a rollout window. Never pad a month to a day to make
 sorting or rendering easier — the build rejects a mismatch, and derived lag
 becomes a range rather than a false point.
 
+A day-precision date on the **first of a month** is flagged, because that is
+the shape a padded month takes. The flag clears when a source vouches for the
+day, and only two things count:
+
+- a source whose `published_at` is that exact day, which is how dated
+  changelogs and launch posts establish a date; or
+- a `quote` whose `supports` list includes `date`, which is an author asserting
+  that the quoted words name the day.
+
+A quote on its own does not clear it. Many events quote a source for the model
+or the lifecycle while the date rests on something else. If neither applies,
+the day is not evidenced and the honest fix is month precision, not a better
+argument.
+
 ## Confidence
 
 `confidence` is the headline and must equal the weakest part of the claim.

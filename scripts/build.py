@@ -325,7 +325,8 @@ def validate_semantics(data: dict, models: dict, platforms: dict) -> None:
 
         # Warnings: not wrong, but worth a human look.
         if date["precision"] == "day" and date["start"].endswith("-01"):
-            warn("suspicious_day_precision", eid, "day precision on the first of the month may be an invented day")
+            if not day_precision_is_attested(event):
+                warn("suspicious_day_precision", eid, "day precision on the first of the month may be an invented day")
         if event["confidence"] == "confirmed":
             primary = [s for s in event["sources"] if s["primary"]]
             types = {s.get("source_type") for s in primary}
@@ -538,6 +539,29 @@ def check_vendor_baseline(events: list[dict], models: dict, surfaces: dict) -> N
     }
     for model_id in sorted(missing):
         warn("no_vendor_baseline", model_id, "no vendor release event, so lag cannot be derived")
+
+
+def day_precision_is_attested(event: dict) -> bool:
+    """Has anyone actually checked this first-of-the-month day?
+
+    A day-precision date ending in -01 is the shape a padded month takes, so it
+    is flagged until a source vouches for it. Two things count, and both mean a
+    human looked rather than that time has passed:
+
+    - a source published on that exact day, which is how dated changelogs and
+      launch posts establish a date; or
+    - a quote whose `supports` list claims the date, which is an author
+      asserting that the quoted words attest the day.
+
+    A quote alone is not enough. Plenty of events quote a source for the model
+    or the lifecycle while the date rests on something else entirely.
+    """
+    start = event["date"]["start"]
+    return any(
+        source.get("published_at") == start
+        or (source.get("quote") and "date" in source.get("supports", []))
+        for source in event["sources"]
+    )
 
 
 def source_urls(record: dict) -> str:

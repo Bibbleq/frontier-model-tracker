@@ -486,13 +486,23 @@ events:
     evidence_note: "Microsoft 365 Copilot became generally available for enterprise customers on 1 November 2023."
     caveat: "This is product GA, not first GPT-4 availability."
     sources:
-      - publisher: "Microsoft"
-        title: "Announcing Microsoft Copilot Studio"
-        url: "https://www.microsoft.com/en-us/microsoft-365/blog/2023/11/15/announcing-microsoft-copilot-studio-customize-copilot-for-microsoft-365-and-build-your-own-standalone-copilots/"
+      - publisher: "Microsoft Community Hub"
+        title: "Microsoft 365 Copilot is generally available"
+        url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/microsoft-365-copilot-is-generally-available/3969331"
         primary: true
-        retrieved_at: "2026-07-26"
+        retrieved_at: "2026-07-30"
+        published_at: "2023-11-01"
         source_type: "announcement"
-        note: "This 15 November Microsoft announcement explicitly references the 1 November M365 Copilot GA."
+        quote: "Starting today, Microsoft 365 Copilot is generally available for enterprise customers worldwide."
+        supports: ["date", "lifecycle"]
+      - publisher: "Microsoft"
+        title: "Introducing Microsoft Copilot Studio and new features in Copilot for Microsoft 365"
+        url: "https://www.microsoft.com/en-us/microsoft-365/blog/2023/11/15/announcing-microsoft-copilot-studio-customize-copilot-for-microsoft-365-and-build-your-own-standalone-copilots/"
+        primary: false
+        retrieved_at: "2026-07-26"
+        published_at: "2023-11-15"
+        source_type: "announcement"
+        note: "Retained as a supporting reference. It postdates the general availability by two weeks and is principally about Copilot Studio, so it cannot date this event on its own."
   - id: "openai-gpt4-turbo-2023-11-06"
     kind: "availability"
     date:
@@ -1052,6 +1062,7 @@ events:
         url: "https://github.blog/changelog/2024-11-01-claude-3-5-sonnet-is-now-available-to-all-copilot-users-in-public-preview/"
         primary: true
         retrieved_at: "2026-07-26"
+        published_at: "2024-11-01"
         source_type: "changelog"
   - id: "azure-ai-foundry-announced-2024-11-19"
     kind: "milestone"
@@ -3045,16 +3056,22 @@ events:
     model_ids: []
     applies_to:
       vendor: "Anthropic"
-    confidence: "confirmed"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
     evidence_note: "Anthropic began operating under Microsoft's documented AI-subprocessor arrangement for relevant Microsoft 365 Copilot scenarios."
+    caveat: "The cited page establishes that the arrangement exists but nowhere states when it began. Read in full on 30 July 2026, it dates only two later changes, an EU, EFTA and UK setting on 3 April 2026 and a GCC setting on 22 July 2026. The 7 January date therefore rests on the editorial pack this dataset was imported from, not on the source, and the confidence is downgraded accordingly."
     sources:
       - publisher: "Microsoft Learn"
         title: "Connect Microsoft 365 Copilot to an AI subprocessor"
         url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor"
         primary: true
-        retrieved_at: "2026-07-26"
+        retrieved_at: "2026-07-30"
         source_type: "documentation"
         archived_url: "https://web.archive.org/web/20260621221608/https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor"
+        quote: "To enable this change, Anthropic has onboarded as a Microsoft subprocessor."
+        supports: ["policy"]
+        note: "Scoped to policy deliberately. The page attests the arrangement, not its start date."
   - id: "anthropic-sonnet4-6-2026-02-17"
     kind: "availability"
     date:
@@ -3666,6 +3683,8 @@ events:
         retrieved_at: "2026-07-26"
         source_type: "documentation"
         archived_url: "https://web.archive.org/web/20260621221619/https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-anthropic-apps"
+        quote: "The Anthropic independent processor (IP) setting was decommissioned on May 1, 2026."
+        supports: ["date", "policy"]
   - id: "openai-gpt5-5-instant-2026-05-05"
     kind: "availability"
     date:
@@ -4243,8 +4262,12 @@ events:
         title: "Redeploying Fable 5"
         url: "https://www.anthropic.com/news/redeploying-fable-5"
         primary: true
-        retrieved_at: "2026-07-26"
+        retrieved_at: "2026-07-30"
+        published_at: "2026-06-30"
         source_type: "announcement"
+        quote: "Fable 5 will be available starting tomorrow, Wednesday, July 1, to users globally on the Claude Platform, Claude.ai, Claude Code, and Claude Cowork."
+        supports: ["date", "lifecycle"]
+        note: "Anthropic names the day explicitly, so 1 July is stated rather than inferred from the 30 June export-control news. GitHub's changelog independently records re-enablement on the same day."
       - publisher: "CNBC"
         title: "Anthropic says Trump admin has lifted export controls on Claude Fable 5 and Mythos 5"
         url: "https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html"
@@ -4275,7 +4298,10 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "changelog"
-        note: "GitHub changelog editor notes record restoration."
+        published_at: "2026-06-09"
+        quote: "Effective today, Anthropic's Claude Fable 5 is now re-enabled and generally available in GitHub Copilot."
+        supports: ["date", "lifecycle"]
+        note: "The post is dated 9 June, its original general-availability announcement, and carries two later editor's notes appended in place: a suspension on 12 June and this re-enablement on 1 July. The quoted note is what dates this event, not the post's publication date."
   - id: "github-kimi-k2-7-code-2026-07-01"
     kind: "availability"
     date:
@@ -4295,6 +4321,7 @@ events:
         url: "https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot/"
         primary: true
         retrieved_at: "2026-07-26"
+        published_at: "2026-07-01"
         source_type: "changelog"
   - id: "m365-sonnet5-2026-07-02"
     kind: "availability"
@@ -5064,6 +5091,13 @@ validation_backlog:
     target: "Submit https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-june-2025/ to the Wayback Machine from a browser or a network where Save Page Now works, then add the resulting archived_url to foundry-grok3-2025-05-19 and foundry-grok3-mini-2025-05-19. Alternatively find a second source for the same two arrivals, which would make the unarchived page non-load-bearing. Note that devblogs.microsoft.com posts are dated retrospectives, so any snapshot will do; freshness does not matter here as it does for rolling pages."
     model_ids: ["grok-3", "grok-3-mini"]
     surface_ids: ["azure-ai-foundry"]
+  - id: "m365-anthropic-subprocessor-start-date"
+    state: "open"
+    working_claim: "Anthropic began operating as a Microsoft subprocessor for Microsoft 365 Copilot on 7 January 2026."
+    reason: "Found while checking day-precision dates. The event carries that date but its only source, Microsoft's subprocessor page, never states it. Read in full on 30 July 2026 the page dates only two later changes, 3 April 2026 and 22 July 2026, so the January date comes from the editorial pack this dataset was imported from rather than from evidence. The event's confidence has been downgraded to supported and the date marked as the soft part."
+    target: "Find a dated Microsoft source for the subprocessor arrangement beginning: a Message Center post, a Microsoft 365 roadmap entry, or an archived capture of the subprocessor page showing when it first appeared. The Wayback Machine is the most promising route, since the page's earliest capture would bound the start. If no date can be established, the honest outcome is to widen the event to month or year precision rather than keep an unsourced day."
+    model_ids: []
+    surface_ids: ["m365-copilot"]
   - id: "gpt-5-5-variants-vendor-release-2026-04"
     state: "open"
     working_claim: "GPT-5.5 Thinking was released by OpenAI on 23 April 2026, the date already recorded for GPT-5.5 itself."
