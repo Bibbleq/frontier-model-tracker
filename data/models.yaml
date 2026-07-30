@@ -238,7 +238,7 @@ models:
   - id: deepseek-v3
     display_name: "DeepSeek-V3"
     vendor: DeepSeek
-    note: "Referenced only by open validation-backlog items; no canonical event yet. Distinct from DeepSeek V3.2."
+    note: "Distinct from DeepSeek V3.2. The vendor release is recorded; no Microsoft availability is, so this model anchors no lag yet."
   - id: deepseek-v3-2
     display_name: "DeepSeek V3.2"
     vendor: DeepSeek
