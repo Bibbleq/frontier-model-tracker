@@ -168,6 +168,27 @@ Exceptions exist and are worth recording when a vendor does announce one — GPT
 Turbo with Vision reached GA on Azure with a dated post on 1 May 2024, and that
 is a normal `lifecycle: "ga"` event.
 
+## When a partner ships before the vendor
+
+The build refuses an availability event on a non-vendor surface dated before
+that model's vendor release, because it almost always means an announcement has
+been recorded as availability or a date is wrong.
+
+Occasionally it is true. GitHub Copilot ran on OpenAI Codex from 29 June 2021;
+OpenAI opened the Codex private beta on 10 August. Microsoft had the model
+first, and the resulting lag is legitimately negative.
+
+Declare it in the data rather than working around it:
+
+```yaml
+  tags: ["pre_release_access"]
+```
+
+The guard then reports a `pre_release_access` warning instead of failing, so the
+exception stays visible in the warning queue. Do not reach for the tag to
+silence a date you have not checked — a test asserts the exact list of events
+carrying it, so adding one is a deliberate act.
+
 ## Governance events
 
 Admin and policy changes use `kind: policy`. They live on the surface that

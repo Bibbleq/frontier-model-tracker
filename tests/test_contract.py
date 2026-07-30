@@ -95,6 +95,54 @@ class LagBaselineTests(unittest.TestCase):
         self.assertEqual(microsoft[0]["certainty"], "unknown_no_baseline")
 
 
+class PreReleaseAccessTests(unittest.TestCase):
+    """A partner surface dated before the vendor release is almost always an
+    error, but not always. GitHub ran Copilot on Codex six weeks before OpenAI
+    released Codex. The guard therefore stays fatal by default and the
+    exception has to be declared in the data."""
+
+    def _fixture(self, tags: list[str]) -> tuple[dict, dict, dict]:
+        models = {"models": [{"id": "m", "display_name": "M", "vendor": "V"}]}
+        platforms = {"surfaces": [
+            {"id": "vendor", "display_name": "V", "vendor_baseline": True, "counts_as": []},
+            {"id": "partner", "display_name": "P", "counts_as": ["microsoft"]},
+        ]}
+        events = [
+            {"id": "vendor-release", "kind": "availability",
+             "date": {"start": "2021-08-10", "precision": "day"}, "surface_id": "vendor",
+             "model_ids": ["m"], "lifecycle": "private_preview", "exposure": "not_applicable"},
+            {"id": "partner-first", "kind": "availability",
+             "date": {"start": "2021-06-29", "precision": "day"}, "surface_id": "partner",
+             "model_ids": ["m"], "lifecycle": "public_preview", "exposure": "underlying",
+             "tags": tags},
+        ]
+        return events, models, platforms
+
+    def _surfaces(self, platforms: dict) -> dict:
+        return {s["id"]: s for s in platforms["surfaces"]}
+
+    def test_undeclared_precedence_is_fatal(self) -> None:
+        events, models, platforms = self._fixture(tags=[])
+        with self.assertRaises(SystemExit):
+            build.check_vendor_baseline(events, models, self._surfaces(platforms))
+
+    def test_declared_precedence_warns_instead_of_failing(self) -> None:
+        events, models, platforms = self._fixture(tags=["pre_release_access"])
+        before = len(build.warnings)
+        build.check_vendor_baseline(events, models, self._surfaces(platforms))
+        raised = build.warnings[before:]
+        self.assertTrue(any(w["code"] == "pre_release_access" for w in raised),
+                        f"expected a pre_release_access warning, got {raised}")
+
+    def test_the_exception_is_not_used_casually(self) -> None:
+        """If this list grows, check each one is genuine partner pre-release
+        access and not a date error being waved through."""
+        events = json.loads((GENERATED / "events.json").read_text(encoding="utf-8"))
+        tagged = [e["id"] for e in events["events"]
+                  if "pre_release_access" in e.get("tags", [])]
+        self.assertEqual(tagged, ["github-copilot-preview-codex-2021-06-29"])
+
+
 class ConsumerContractTests(unittest.TestCase):
     """Guarantees docs/data-contract.md makes to display layers."""
 
