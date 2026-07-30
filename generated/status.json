@@ -1,23 +1,23 @@
 {
   "totals": {
-    "events": 208,
+    "events": 212,
     "backlog": 56,
-    "sources": 238,
+    "sources": 242,
     "models": 66,
     "surfaces": 23,
-    "confirmed": 191,
+    "confirmed": 195,
     "supported": 17
   },
   "kinds": {
-    "announcement": 10,
-    "availability": 184,
+    "announcement": 11,
+    "availability": 187,
     "milestone": 8,
     "policy": 6
   },
   "backlog_states": {
-    "blocked": 2,
-    "open": 37,
-    "promoted": 17
+    "blocked": 3,
+    "open": 33,
+    "promoted": 20
   },
   "warnings": [
     {
@@ -211,6 +211,11 @@
       "message": "no vendor release event, so lag cannot be derived"
     },
     {
+      "code": "no_vendor_baseline",
+      "subject": "openai-deep-research",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
       "code": "pre_release_access",
       "subject": "github-copilot-preview-codex-2021-06-29",
       "message": "dated 2021-06-29, before codex was released by its vendor on 2021-08-10"
@@ -293,7 +298,7 @@
   ],
   "warning_counts": {
     "missing_archive": 35,
-    "no_vendor_baseline": 3,
+    "no_vendor_baseline": 4,
     "pre_release_access": 1,
     "selectable_on_vendor_surface": 1,
     "suspicious_day_precision": 12,
@@ -304,10 +309,10 @@
     "surfaces_without_events": []
   },
   "lag_certainty": {
-    "exact": 291,
+    "exact": 295,
     "not_recorded": 354,
     "range": 19,
-    "unknown_no_baseline": 42,
-    "unknown_open_research": 86
+    "unknown_no_baseline": 48,
+    "unknown_open_research": 76
   }
 }

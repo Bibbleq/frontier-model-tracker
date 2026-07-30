@@ -195,10 +195,10 @@ claude-opus-5,Claude Opus 5,Anthropic,microsoft,any_exposure,anthropic-opus5-202
 claude-opus-5,Claude Opus 5,Anthropic,microsoft,selectable_or_default,anthropic-opus5-2026-07-24,2026-07-24,ga,github-opus5-2026-07-24,2026-07-24,github-copilot,selectable,ga,0,0,exact
 claude-opus-5,Claude Opus 5,Anthropic,copilot,any_exposure,anthropic-opus5-2026-07-24,2026-07-24,ga,github-opus5-2026-07-24,2026-07-24,github-copilot,selectable,ga,0,0,exact
 claude-opus-5,Claude Opus 5,Anthropic,copilot,selectable_or_default,anthropic-opus5-2026-07-24,2026-07-24,ga,github-opus5-2026-07-24,2026-07-24,github-copilot,selectable,ga,0,0,exact
-claude-opus-5,Claude Opus 5,Anthropic,m365,any_exposure,anthropic-opus5-2026-07-24,2026-07-24,ga,,,,,,,,unknown_open_research
-claude-opus-5,Claude Opus 5,Anthropic,m365,selectable_or_default,anthropic-opus5-2026-07-24,2026-07-24,ga,,,,,,,,unknown_open_research
-claude-opus-5,Claude Opus 5,Anthropic,studio,any_exposure,anthropic-opus5-2026-07-24,2026-07-24,ga,,,,,,,,unknown_open_research
-claude-opus-5,Claude Opus 5,Anthropic,studio,selectable_or_default,anthropic-opus5-2026-07-24,2026-07-24,ga,,,,,,,,unknown_open_research
+claude-opus-5,Claude Opus 5,Anthropic,m365,any_exposure,anthropic-opus5-2026-07-24,2026-07-24,ga,m365-opus5-2026-07-24,2026-07-24,m365-copilot,selectable,ga,0,0,exact
+claude-opus-5,Claude Opus 5,Anthropic,m365,selectable_or_default,anthropic-opus5-2026-07-24,2026-07-24,ga,m365-opus5-2026-07-24,2026-07-24,m365-copilot,selectable,ga,0,0,exact
+claude-opus-5,Claude Opus 5,Anthropic,studio,any_exposure,anthropic-opus5-2026-07-24,2026-07-24,ga,studio-opus5-2026-07-24,2026-07-24,copilot-studio,selectable,ga,0,0,exact
+claude-opus-5,Claude Opus 5,Anthropic,studio,selectable_or_default,anthropic-opus5-2026-07-24,2026-07-24,ga,studio-opus5-2026-07-24,2026-07-24,copilot-studio,selectable,ga,0,0,exact
 claude-opus-5,Claude Opus 5,Anthropic,github_copilot,any_exposure,anthropic-opus5-2026-07-24,2026-07-24,ga,github-opus5-2026-07-24,2026-07-24,github-copilot,selectable,ga,0,0,exact
 claude-opus-5,Claude Opus 5,Anthropic,github_copilot,selectable_or_default,anthropic-opus5-2026-07-24,2026-07-24,ga,github-opus5-2026-07-24,2026-07-24,github-copilot,selectable,ga,0,0,exact
 claude-opus-5,Claude Opus 5,Anthropic,foundry,any_exposure,anthropic-opus5-2026-07-24,2026-07-24,ga,foundry-opus5-availability-2026-07-24,2026-07-24,microsoft-foundry,catalogue,ga,0,0,exact
@@ -779,12 +779,12 @@ o4-mini,o4-mini,OpenAI,github_copilot,any_exposure,openai-o4-mini-2025-04-16,202
 o4-mini,o4-mini,OpenAI,github_copilot,selectable_or_default,openai-o4-mini-2025-04-16,2025-04-16,ga,github-o4-mini-preview-2025-04-16,2025-04-16,github-copilot,selectable,public_preview,0,0,exact
 o4-mini,o4-mini,OpenAI,foundry,any_exposure,openai-o4-mini-2025-04-16,2025-04-16,ga,,,,,,,,unknown_open_research
 o4-mini,o4-mini,OpenAI,foundry,selectable_or_default,openai-o4-mini-2025-04-16,2025-04-16,ga,,,,,,,,unknown_open_research
-openai-deep-research,OpenAI deep research model,OpenAI,microsoft,any_exposure,,,,,,,,,,,unknown_open_research
-openai-deep-research,OpenAI deep research model,OpenAI,microsoft,selectable_or_default,,,,,,,,,,,unknown_open_research
-openai-deep-research,OpenAI deep research model,OpenAI,copilot,any_exposure,,,,,,,,,,,unknown_open_research
-openai-deep-research,OpenAI deep research model,OpenAI,copilot,selectable_or_default,,,,,,,,,,,unknown_open_research
-openai-deep-research,OpenAI deep research model,OpenAI,m365,any_exposure,,,,,,,,,,,unknown_open_research
-openai-deep-research,OpenAI deep research model,OpenAI,m365,selectable_or_default,,,,,,,,,,,unknown_open_research
+openai-deep-research,OpenAI deep research model,OpenAI,microsoft,any_exposure,,,,m365-researcher-ga-2025-06-02,2025-06-02,m365-copilot,specialist,ga,,,unknown_no_baseline
+openai-deep-research,OpenAI deep research model,OpenAI,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+openai-deep-research,OpenAI deep research model,OpenAI,copilot,any_exposure,,,,m365-researcher-ga-2025-06-02,2025-06-02,m365-copilot,specialist,ga,,,unknown_no_baseline
+openai-deep-research,OpenAI deep research model,OpenAI,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+openai-deep-research,OpenAI deep research model,OpenAI,m365,any_exposure,,,,m365-researcher-ga-2025-06-02,2025-06-02,m365-copilot,specialist,ga,,,unknown_no_baseline
+openai-deep-research,OpenAI deep research model,OpenAI,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 openai-deep-research,OpenAI deep research model,OpenAI,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
 openai-deep-research,OpenAI deep research model,OpenAI,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 openai-deep-research,OpenAI deep research model,OpenAI,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
