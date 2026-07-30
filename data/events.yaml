@@ -178,6 +178,7 @@ events:
         primary: true
         retrieved_at: "2026-07-30"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260726163948/https://openai.com/index/dall-e-2/"
         quote: "became available in beta in July 2022"
         supports: ["date", "lifecycle"]
   - id: "chatgpt-launch-2022-11-30"
@@ -331,6 +332,7 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260730141633/https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
   - id: "m365-copilot-preview-gpt4-2023-03-16"
     kind: "availability"
     date:
@@ -405,6 +407,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260730164622/https://developers.openai.com/api/docs/deprecations"
         quote: "Mar 23, 2023 | code-davinci-002 | gpt-4o"
         supports: [date, lifecycle]
         note: "Announcement of 2023-03-20, 'Codex Models', shutdown 2023-03-23."
@@ -1745,6 +1748,7 @@ events:
         retrieved_at: "2026-07-30"
         published_at: "2025-04-16"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260728031511/https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf"
         quote: "OpenAI o3 and o4-mini System Card OpenAI April 16, 2025"
         supports: ["date"]
         note: "The announcement page carries no date; the system card is the dated first-party artefact for the launch."
@@ -1776,6 +1780,7 @@ events:
         retrieved_at: "2026-07-30"
         published_at: "2025-04-16"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260728031511/https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf"
         quote: "OpenAI o3 and o4-mini System Card OpenAI April 16, 2025"
         supports: ["date"]
   - id: "foundry-grok3-2025-05-19"
@@ -2008,6 +2013,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260730164622/https://developers.openai.com/api/docs/deprecations"
         quote: "July 28, 2025 | o1-preview | o3"
         supports: [date, model, lifecycle]
         note: "Announcement of 2025-04-28, shutdown 2025-07-28, replacement o3."
@@ -2556,6 +2562,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260730164622/https://developers.openai.com/api/docs/deprecations"
         quote: "Oct 27, 2025 | o1-mini | o4-mini"
         supports: [date, model, lifecycle]
         note: "Announcement of 2025-04-28, shutdown 2025-10-27, replacement o4-mini."
@@ -2580,12 +2587,14 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260623095215/https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
       - publisher: "Microsoft Learn"
         title: "What's new in Copilot Studio"
         url: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260623095215/https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
         quote: 'Between October 27 and 31, 2025, GPT-4o will be retired in Copilot Studio for agents using generative orchestration, except for GCC customers who can continue using GPT-4o. The new default model is GPT-4.1, which delivers improved performance, reliability, and consistency across experiences. GPT-4o remains available until November 26, 2025 if you turn on the "Continue using retired models" option.'
         supports: [date, exposure]
         note: "Dates the switch to the 27-31 October 2025 window, replacing the month-precision estimate this event previously carried."
@@ -2610,6 +2619,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260623095215/https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
         quote: 'Between October 27 and 31, 2025, GPT-4o will be retired in Copilot Studio for agents using generative orchestration, except for GCC customers who can continue using GPT-4o. The new default model is GPT-4.1, which delivers improved performance, reliability, and consistency across experiences. GPT-4o remains available until November 26, 2025 if you turn on the "Continue using retired models" option.'
         supports: [date, model, lifecycle]
   - id: "openai-gpt5-1-2025-11-12"
@@ -2964,6 +2974,7 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260331163933/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-dec-2025-jan-2026/"
   - id: "foundry-deepseek-v3-2-speciale-2025-12-15"
     kind: "availability"
     date:
@@ -2983,6 +2994,7 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260331163933/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-dec-2025-jan-2026/"
   - id: "github-opus4-5-ga-2025-12-18"
     kind: "availability"
     date:
@@ -3102,6 +3114,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260623095215/https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
         quote: 'ChatGPT-5 is now generally available globally (excluding GCC environments) for use in production agents.'
         supports: [date, model, lifecycle]
   - id: "studio-sonnet4-5-ga-2026-03"
@@ -3124,6 +3137,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260623095215/https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
         quote: 'Claude Sonnet 4.5, Claude Sonnet 4.6, and Claude Opus are now generally available globally (excluding GCC environments).'
         supports: [date, model, lifecycle]
   - id: "m365-gpt5-3-instant-2026-03-03"
@@ -3294,6 +3308,7 @@ events:
         primary: true
         retrieved_at: "2026-07-27"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260621221619/https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-anthropic-apps"
         supports: ["policy"]
   - id: "anthropic-opus4-7-2026-04-16"
     kind: "availability"
@@ -3373,6 +3388,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260730164622/https://developers.openai.com/api/docs/deprecations"
         quote: "Oct 23, 2026 | gpt-4.1-nano | gpt-4.1-nano-2025-04-14 | gpt-5.6-luna"
         supports: [date, model]
         note: "Announcement of 2026-04-22, shutdown 2026-10-23, listed as 'gpt-4.1-nano | gpt-4.1-nano-2025-04-14'."
@@ -3394,6 +3410,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260730164622/https://developers.openai.com/api/docs/deprecations"
         quote: "Unless safety or compliance concerns require a faster timeline, we provide the following minimum notice periods before model retirement: Generally available models: At least 6 months. Specialized variants of generally available models: At least 3 months."
         supports: [date, model]
         note: "Announcement of 2026-04-22, 'Legacy GPT Model Snapshots', shutdown 2026-10-23."
@@ -3415,6 +3432,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260730164622/https://developers.openai.com/api/docs/deprecations"
         quote: "Oct 23, 2026 | gpt-4-turbo | gpt-4-turbo-2024-04-09, gpt-4-turbo-completions | gpt-5.6-sol"
         supports: [date, model]
         note: "Announcement of 2026-04-22, shutdown 2026-10-23, listed as 'gpt-4-turbo | gpt-4-turbo-2024-04-09, gpt-4-turbo-completions'."
@@ -3436,6 +3454,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260730164622/https://developers.openai.com/api/docs/deprecations"
         quote: "Oct 23, 2026 | o1-2024-12-17 | o1 | gpt-5.6-sol"
         supports: [date, model]
         note: "Announcement of 2026-04-22, shutdown 2026-10-23, listed as 'o1-2024-12-17 | o1'."
@@ -3457,6 +3476,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260730164622/https://developers.openai.com/api/docs/deprecations"
         quote: "Oct 23, 2026 | o3-mini-2025-01-31 | o3-mini | gpt-5.6-sol"
         supports: [date, model]
         note: "Announcement of 2026-04-22, shutdown 2026-10-23, listed as 'o3-mini-2025-01-31 | o3-mini'."
@@ -3478,6 +3498,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260730164622/https://developers.openai.com/api/docs/deprecations"
         quote: "Oct 23, 2026 | o4-mini-2025-04-16 | o4-mini | gpt-5.6-terra"
         supports: [date, model]
         note: "Announcement of 2026-04-22, shutdown 2026-10-23, listed as 'o4-mini-2025-04-16 | o4-mini'."
@@ -3599,6 +3620,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260704025348/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
         quote: "grok-3-mini | 1 | Retired | 2026-05-01 | grok-4-1-fast-reasoning"
         supports: [date, model, lifecycle]
   - id: "foundry-grok3-retired-2026-05-01"
@@ -3621,6 +3643,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260704025348/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
         quote: "grok-3 | 1 | Retired | 2026-05-01 | grok-4"
         supports: [date, model, lifecycle]
   - id: "m365-anthropic-independent-processor-end-2026-05-01"
@@ -3642,6 +3665,7 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260621221619/https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-anthropic-apps"
   - id: "openai-gpt5-5-instant-2026-05-05"
     kind: "availability"
     date:
@@ -3743,6 +3767,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260730164622/https://developers.openai.com/api/docs/deprecations"
         quote: "May 12, 2026 | dall-e-2 | gpt-image-2, gpt-image-1, or gpt-image-1-mini"
         supports: [date, model, lifecycle]
         note: "Announcement of 2025-11-14, shutdown 2026-05-12."
@@ -3843,6 +3868,7 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260623095215/https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
         quote: '(General availability) Select Claude Sonnet 5 or GPT-5.5 Chat as your agent''s primary AI model for improved response quality and reasoning.'
         supports: [date, model, lifecycle]
   - id: "anthropic-fable5-2026-06-09"
@@ -3887,6 +3913,7 @@ events:
         primary: true
         retrieved_at: "2026-07-30"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260729132948/https://www.anthropic.com/claude/mythos"
         quote: "Claude Mythos 5 is available to a small set of initial testing partners for cybersecurity, and soon, biology research."
         supports: ["model", "lifecycle"]
       - publisher: "CNBC"
@@ -4066,6 +4093,7 @@ events:
         retrieved_at: "2026-07-30"
         published_at: "2026-06-13"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260718142043/https://www.kimi.com/resources/kimi-k2-7-code"
         supports: ["model"]
         note: "A resource page rather than a release announcement; it carries a publication timestamp but no release statement."
       - publisher: "Microsoft Learn"
@@ -4074,6 +4102,7 @@ events:
         primary: false
         retrieved_at: "2026-07-30"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260704025348/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
         supports: ["date"]
         note: "Lists Kimi-K2.7-Code at version 2026-06-12, which for this vendor tracks the release date."
   - id: "openai-gpt5-6-preview-2026-06-26"
@@ -4126,6 +4155,7 @@ events:
         primary: true
         retrieved_at: "2026-07-27"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260727002150/https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
         note: "Current-state catalogue. Distinguishes 'Hosted on Azure' from 'Hosted on Anthropic infrastructure' versions and lists deployment types."
   - id: "anthropic-sonnet5-2026-06-30"
     kind: "availability"
@@ -4498,6 +4528,7 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260725151342/https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash"
   - id: "anthropic-opus5-2026-07-24"
     kind: "availability"
     date:
@@ -4549,6 +4580,7 @@ events:
         primary: true
         retrieved_at: "2026-07-27"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260727002150/https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
         supports: ["exposure"]
         note: "Lists claude-opus-5 as Hosted on Azure (GA) and available for the Data Zone Standard (US) deployment type."
   - id: "github-opus5-2026-07-24"
@@ -4598,6 +4630,7 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260722230034/https://learn.microsoft.com/en-us/microsoft-365/copilot/openai-subprocessor"
   - id: "m365-opus5-2026-07-24"
     kind: "availability"
     date:
@@ -4679,10 +4712,11 @@ events:
         supports: ["date", "model", "exposure"]
       - publisher: "Microsoft Learn"
         title: "Foundry Models lifecycle and support policy"
-        url: "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/model-retirements"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirements"
         primary: false
         retrieved_at: "2026-07-30"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260727081218/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirements"
         quote: "Generally Available (GA) | Production-ready. Weights and APIs are fixed. Runtime patches for security vulnerabilities don't affect outputs. No label shown (default state)."
         supports: ["lifecycle"]
         note: "Cited only to justify reading an unlabelled catalogue entry as generally available. It does not attest to this model."
@@ -4737,10 +4771,11 @@ validation_backlog:
     sources:
       - publisher: "Microsoft Learn"
         title: "Foundry Models lifecycle and support policy"
-        url: "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/model-retirements"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirements"
         primary: true
         retrieved_at: "2026-07-30"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260727081218/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirements"
         quote: "GA models have their retirement date set programmatically at launch to 18 months out—there's no separate \"announcement.\""
         supports: ["lifecycle"]
       - publisher: "Microsoft Learn"
@@ -4808,6 +4843,7 @@ validation_backlog:
         primary: true
         retrieved_at: "2026-07-27"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260727002150/https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
   - id: "foundry-fable5-suspension-2026"
     state: "promoted"
     working_claim: "Fable 5 availability in Microsoft Foundry was suspended alongside the vendor-level action on 12 June 2026."
@@ -4846,6 +4882,7 @@ validation_backlog:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260704025348/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
   - id: "foundry-gpt5-3-chat-retirement-2026-06-29"
     state: "open"
     working_claim: "The gpt-5.3-chat model retired from Microsoft Foundry on 29 June 2026 is the model this registry calls GPT-5.3 Instant."
@@ -5020,6 +5057,13 @@ validation_backlog:
     target: "Pin Google's own dated announcement, from the Google Developers Blog or the Gemini API changelog. Note that Google has published separate preview and stable dates for earlier Gemini models, so establish which stage the 11 April Copilot arrival was drawing on rather than assuming one release date."
     model_ids: ["gemini-2-5-pro"]
     surface_ids: ["google-gemini", "google-gemini-api"]
+  - id: "devblogs-june-2025-unarchived"
+    state: "blocked"
+    working_claim: "The Microsoft Foundry what's-new post for June 2025 has no Wayback Machine snapshot, leaving the two Grok 3 Foundry arrivals citing a page that could be edited or withdrawn without trace."
+    reason: "Every other documentation and release-notes source in the dataset now carries an archived_url. This one URL has no capture at any date, and Save Page Now is unreachable from here: requests to web.archive.org/save return no response rather than a rate-limit error, so a snapshot cannot be created on demand. Blocked on infrastructure, not on research."
+    target: "Submit https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-june-2025/ to the Wayback Machine from a browser or a network where Save Page Now works, then add the resulting archived_url to foundry-grok3-2025-05-19 and foundry-grok3-mini-2025-05-19. Alternatively find a second source for the same two arrivals, which would make the unarchived page non-load-bearing. Note that devblogs.microsoft.com posts are dated retrospectives, so any snapshot will do; freshness does not matter here as it does for rolling pages."
+    model_ids: ["grok-3", "grok-3-mini"]
+    surface_ids: ["azure-ai-foundry"]
   - id: "gpt-5-5-variants-vendor-release-2026-04"
     state: "open"
     working_claim: "GPT-5.5 Thinking was released by OpenAI on 23 April 2026, the date already recorded for GPT-5.5 itself."
@@ -5147,6 +5191,7 @@ validation_backlog:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260730164622/https://developers.openai.com/api/docs/deprecations"
         quote: "Unless safety or compliance concerns require a faster timeline, we provide the following minimum notice periods before model retirement: Generally available models: At least 6 months. Specialized variants of generally available models: At least 3 months."
   - id: "openai-snapshot-only-deprecations"
     state: "open"
@@ -5162,6 +5207,7 @@ validation_backlog:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260730164622/https://developers.openai.com/api/docs/deprecations"
   - id: "openai-o3-o4mini-vendor-2025-04-16"
     state: "promoted"
     working_claim: "OpenAI released o3 and o4-mini on 16 April 2025."
@@ -5213,6 +5259,7 @@ validation_backlog:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260623095215/https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
   - id: "studio-gpt4o-default-2024-09"
     state: "open"
     working_claim: "Copilot Studio moved from GPT-3.5 Turbo to GPT-4o as its default around September 2024."

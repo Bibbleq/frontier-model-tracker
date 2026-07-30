@@ -1,7 +1,7 @@
 {
   "totals": {
     "events": 215,
-    "backlog": 56,
+    "backlog": 57,
     "sources": 246,
     "models": 67,
     "surfaces": 23,
@@ -15,31 +15,11 @@
     "policy": 6
   },
   "backlog_states": {
-    "blocked": 2,
+    "blocked": 3,
     "open": 33,
     "promoted": 21
   },
   "warnings": [
-    {
-      "code": "missing_archive",
-      "subject": "anthropic-mythos5-2026-06-09",
-      "message": "documentation source has no archived_url and may be edited in place: https://www.anthropic.com/claude/mythos"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "claude-foundry-ga-2026-06-29",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "foundry-deepseek-v3-2-2025-12-15",
-      "message": "documentation source has no archived_url and may be edited in place: https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-dec-2025-jan-2026/"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "foundry-deepseek-v3-2-speciale-2025-12-15",
-      "message": "documentation source has no archived_url and may be edited in place: https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-dec-2025-jan-2026/"
-    },
     {
       "code": "missing_archive",
       "subject": "foundry-grok3-2025-05-19",
@@ -49,151 +29,6 @@
       "code": "missing_archive",
       "subject": "foundry-grok3-mini-2025-05-19",
       "message": "documentation source has no archived_url and may be edited in place: https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-june-2025/"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "foundry-grok3-mini-retired-2026-05-01",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "foundry-grok3-retired-2026-05-01",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "foundry-kimi-k3-2026-07-28",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/model-retirements"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "foundry-opus5-availability-2026-07-24",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "google-gemini3-6-flash-2026-07-21",
-      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "m365-anthropic-eu-apps-setting-2026-04-03",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-anthropic-apps"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "m365-anthropic-independent-processor-end-2026-05-01",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-anthropic-apps"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "m365-openai-operated-policy-2026-07-24",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-365/copilot/openai-subprocessor"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "moonshot-kimi-k2-7-code-2026-06-12",
-      "message": "documentation source has no archived_url and may be edited in place: https://www.kimi.com/resources/kimi-k2-7-code"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "moonshot-kimi-k2-7-code-2026-06-12",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "openai-codex-retired-2023-03-23",
-      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "openai-dall-e-2-beta-2022-07",
-      "message": "documentation source has no archived_url and may be edited in place: https://openai.com/index/dall-e-2/"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "openai-dall-e-2-retired-2026-05-12",
-      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "openai-gpt4-1-nano-shutdown-announced-2026-04-22",
-      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "openai-gpt4-2023-03-14",
-      "message": "documentation source has no archived_url and may be edited in place: https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "openai-gpt4-shutdown-announced-2026-04-22",
-      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "openai-gpt4-turbo-shutdown-announced-2026-04-22",
-      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "openai-o1-mini-retired-2025-10-27",
-      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "openai-o1-preview-retired-2025-07-28",
-      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "openai-o1-shutdown-announced-2026-04-22",
-      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "openai-o3-2025-04-16",
-      "message": "documentation source has no archived_url and may be edited in place: https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "openai-o3-mini-shutdown-announced-2026-04-22",
-      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "openai-o4-mini-2025-04-16",
-      "message": "documentation source has no archived_url and may be edited in place: https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "openai-o4-mini-shutdown-announced-2026-04-22",
-      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "studio-gpt4-1-default-2025-10",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "studio-gpt4o-retired-2025-10-27",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "studio-gpt5-5-chat-ga-2026-06",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "studio-gpt5-ga-2026-03",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "studio-sonnet4-5-ga-2026-03",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
     },
     {
       "code": "no_vendor_baseline",
@@ -302,7 +137,7 @@
     }
   ],
   "warning_counts": {
-    "missing_archive": 35,
+    "missing_archive": 2,
     "no_vendor_baseline": 4,
     "pre_release_access": 1,
     "selectable_on_vendor_surface": 1,
@@ -315,9 +150,9 @@
   },
   "lag_certainty": {
     "exact": 297,
-    "not_recorded": 365,
+    "not_recorded": 362,
     "range": 19,
     "unknown_no_baseline": 48,
-    "unknown_open_research": 75
+    "unknown_open_research": 78
   }
 }

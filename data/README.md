@@ -95,6 +95,21 @@ Beyond publisher, title, URL, primary flag and retrieval date:
 - `note` — commentary about the source, not words taken from it
 - `archived_url` — a snapshot, for sources likely to be edited in place
 
+Do not create a snapshot before checking whether one exists. The Wayback
+availability API is read-only and is not subject to the Save Page Now rate
+limit that blocks capture:
+
+```
+https://archive.org/wayback/available?url=<URL>&timestamp=20260730
+```
+
+Choose the snapshot by what kind of page it is. A **rolling** page — a
+what's-new index, a retirement schedule, a model catalogue — must be pinned
+close to `retrieved_at`, and the quoted text should be confirmed present in that
+capture, because an older snapshot may predate the claim. A **dated** page — a
+monthly retrospective, a launch post, a PDF — has fixed content, so any snapshot
+will do. Judge freshness against the page, not the calendar.
+
 `quote` and `supports` earn their keep together. The build warns when a
 `confirmed` event rests only on `documentation` sources, because current docs
 prove a model is supported now and rarely prove when it first was. That
