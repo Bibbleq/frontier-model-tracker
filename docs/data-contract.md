@@ -1,8 +1,7 @@
 # Data contract
 
 This repository is the authoritative source for the dataset. It publishes the
-generated outputs at a stable URL so that display layers — the 365Explained
-WordPress plugin first, others later — can render the data without copying
+generated outputs at a stable URL so that display layers can render the data without copying
 historical claims into a second place.
 
 This document is the promise those consumers can rely on. It describes what is
