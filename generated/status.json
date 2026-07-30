@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 195,
-    "backlog": 53,
-    "sources": 223,
-    "models": 64,
+    "events": 197,
+    "backlog": 54,
+    "sources": 226,
+    "models": 65,
     "surfaces": 23,
-    "confirmed": 181,
-    "supported": 14
+    "confirmed": 182,
+    "supported": 15
   },
   "kinds": {
     "announcement": 10,
-    "availability": 173,
+    "availability": 175,
     "milestone": 6,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 40,
+    "open": 41,
     "promoted": 11
   },
   "warnings": [
@@ -293,8 +293,8 @@
   },
   "lag_certainty": {
     "exact": 283,
-    "not_recorded": 350,
-    "range": 16,
+    "not_recorded": 356,
+    "range": 22,
     "unknown_no_baseline": 24,
     "unknown_open_research": 95
   }
