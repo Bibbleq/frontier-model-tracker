@@ -23,7 +23,7 @@ gpt-5-2,GPT-5.2,OpenAI,,,,,3
 gpt-5-3-instant,GPT-5.3 Instant,OpenAI,,GPT-5.3 Chat,,,3
 gpt-5-4,GPT-5.4,OpenAI,,GPT-5.4 Reasoning,,,3
 gpt-5-5,GPT-5.5,OpenAI,,GPT-5.5 Reasoning,,,3
-gpt-5-5-instant,GPT-5.5 Instant,OpenAI,,GPT-5.5 Chat,,,4
+gpt-5-5-instant,GPT-5.5 Instant,OpenAI,,GPT-5.5 Chat,,,5
 gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,,,,,1
 gpt-5-6-sol,GPT-5.6 Sol,OpenAI,gpt-5-6,,,,5
 gpt-5-6-terra,GPT-5.6 Terra,OpenAI,gpt-5-6,,,,4
@@ -58,8 +58,8 @@ grok-4,Grok 4,xAI,,,,,2
 llama-2,Llama 2,Meta,,,,,2
 mistral-3,Mistral 3,Mistral AI,,,,,1
 mistral-large-3,Mistral Large 3,Mistral AI,,,,,2
-deepseek-r1,DeepSeek-R1,DeepSeek,,,,,2
-deepseek-v3,DeepSeek-V3,DeepSeek,,,,,0
-deepseek-v3-2,DeepSeek V3.2,DeepSeek,,,,,1
-deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,,,,,1
-kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,,,,,2
+deepseek-r1,DeepSeek-R1,DeepSeek,,,,,3
+deepseek-v3,DeepSeek-V3,DeepSeek,,,,,1
+deepseek-v3-2,DeepSeek V3.2,DeepSeek,,,,,2
+deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,,,,,2
+kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,,,,,3
