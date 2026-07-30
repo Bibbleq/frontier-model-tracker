@@ -287,8 +287,8 @@ deepseek-r1,DeepSeek-R1,DeepSeek,github_copilot,any_exposure,deepseek-r1-2025-01
 deepseek-r1,DeepSeek-R1,DeepSeek,github_copilot,selectable_or_default,deepseek-r1-2025-01-20,2025-01-20,ga,,,,,,,,not_recorded
 deepseek-r1,DeepSeek-R1,DeepSeek,foundry,any_exposure,deepseek-r1-2025-01-20,2025-01-20,ga,deepseek-r1-foundry-2025-01-29,2025-01-29,azure-ai-foundry,catalogue,public_preview,9,9,exact
 deepseek-r1,DeepSeek-R1,DeepSeek,foundry,selectable_or_default,deepseek-r1-2025-01-20,2025-01-20,ga,,,,,,,,unknown_open_research
-deepseek-v3,DeepSeek-V3,DeepSeek,microsoft,any_exposure,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
-deepseek-v3,DeepSeek-V3,DeepSeek,microsoft,selectable_or_default,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
+deepseek-v3,DeepSeek-V3,DeepSeek,microsoft,any_exposure,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,unknown_open_research
+deepseek-v3,DeepSeek-V3,DeepSeek,microsoft,selectable_or_default,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,unknown_open_research
 deepseek-v3,DeepSeek-V3,DeepSeek,copilot,any_exposure,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
 deepseek-v3,DeepSeek-V3,DeepSeek,copilot,selectable_or_default,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
 deepseek-v3,DeepSeek-V3,DeepSeek,m365,any_exposure,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
@@ -297,8 +297,8 @@ deepseek-v3,DeepSeek-V3,DeepSeek,studio,any_exposure,deepseek-v3-2024-12-26,2024
 deepseek-v3,DeepSeek-V3,DeepSeek,studio,selectable_or_default,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
 deepseek-v3,DeepSeek-V3,DeepSeek,github_copilot,any_exposure,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
 deepseek-v3,DeepSeek-V3,DeepSeek,github_copilot,selectable_or_default,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
-deepseek-v3,DeepSeek-V3,DeepSeek,foundry,any_exposure,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
-deepseek-v3,DeepSeek-V3,DeepSeek,foundry,selectable_or_default,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
+deepseek-v3,DeepSeek-V3,DeepSeek,foundry,any_exposure,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,unknown_open_research
+deepseek-v3,DeepSeek-V3,DeepSeek,foundry,selectable_or_default,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,unknown_open_research
 deepseek-v3-2,DeepSeek V3.2,DeepSeek,microsoft,any_exposure,deepseek-v3-2-2025-12-01,2025-12-01,ga,foundry-deepseek-v3-2-2025-12-15,2025-12-15,microsoft-foundry,catalogue,public_preview,14,14,exact
 deepseek-v3-2,DeepSeek V3.2,DeepSeek,microsoft,selectable_or_default,deepseek-v3-2-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
 deepseek-v3-2,DeepSeek V3.2,DeepSeek,copilot,any_exposure,deepseek-v3-2-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded

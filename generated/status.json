@@ -21,11 +21,6 @@
   },
   "warnings": [
     {
-      "code": "backlog_without_surface",
-      "subject": "deepseek-v3-first-microsoft-availability-2024",
-      "message": "open item names no surface, so it cannot suppress a lag answer"
-    },
-    {
       "code": "missing_archive",
       "subject": "anthropic-mythos5-2026-06-09",
       "message": "documentation source has no archived_url and may be edited in place: https://www.anthropic.com/claude/mythos"
@@ -287,7 +282,6 @@
     }
   ],
   "warning_counts": {
-    "backlog_without_surface": 1,
     "missing_archive": 35,
     "no_vendor_baseline": 2,
     "pre_release_access": 1,
@@ -303,9 +297,9 @@
   },
   "lag_certainty": {
     "exact": 283,
-    "not_recorded": 356,
+    "not_recorded": 352,
     "range": 22,
     "unknown_no_baseline": 36,
-    "unknown_open_research": 95
+    "unknown_open_research": 99
   }
 }
