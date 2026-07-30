@@ -1,12 +1,12 @@
 {
   "totals": {
     "events": 215,
-    "backlog": 57,
-    "sources": 246,
+    "backlog": 58,
+    "sources": 247,
     "models": 67,
     "surfaces": 23,
-    "confirmed": 197,
-    "supported": 18
+    "confirmed": 196,
+    "supported": 19
   },
   "kinds": {
     "announcement": 11,
@@ -16,7 +16,7 @@
   },
   "backlog_states": {
     "blocked": 3,
-    "open": 33,
+    "open": 34,
     "promoted": 21
   },
   "warnings": [
@@ -59,90 +59,13 @@
       "code": "selectable_on_vendor_surface",
       "subject": "openai-gpt5-5-instant-2026-05-05",
       "message": "selectable exposure on a vendor baseline surface"
-    },
-    {
-      "code": "suspicious_day_precision",
-      "subject": "anthropic-fable5-restoration-2026-07-01",
-      "message": "day precision on the first of the month may be an invented day"
-    },
-    {
-      "code": "suspicious_day_precision",
-      "subject": "azure-gpt4-turbo-vision-ga-2024-05-01",
-      "message": "day precision on the first of the month may be an invented day"
-    },
-    {
-      "code": "suspicious_day_precision",
-      "subject": "deepseek-v3-2-2025-12-01",
-      "message": "day precision on the first of the month may be an invented day"
-    },
-    {
-      "code": "suspicious_day_precision",
-      "subject": "deepseek-v3-2-speciale-2025-12-01",
-      "message": "day precision on the first of the month may be an invented day"
-    },
-    {
-      "code": "suspicious_day_precision",
-      "subject": "foundry-grok3-mini-retired-2026-05-01",
-      "message": "day precision on the first of the month may be an invented day"
-    },
-    {
-      "code": "suspicious_day_precision",
-      "subject": "foundry-grok3-retired-2026-05-01",
-      "message": "day precision on the first of the month may be an invented day"
-    },
-    {
-      "code": "suspicious_day_precision",
-      "subject": "github-claude3-5-sonnet-all-users-2024-11-01",
-      "message": "day precision on the first of the month may be an invented day"
-    },
-    {
-      "code": "suspicious_day_precision",
-      "subject": "github-fable5-restoration-2026-07-01",
-      "message": "day precision on the first of the month may be an invented day"
-    },
-    {
-      "code": "suspicious_day_precision",
-      "subject": "github-kimi-k2-7-code-2026-07-01",
-      "message": "day precision on the first of the month may be an invented day"
-    },
-    {
-      "code": "suspicious_day_precision",
-      "subject": "github-models-beta-2024-08-01",
-      "message": "day precision on the first of the month may be an invented day"
-    },
-    {
-      "code": "suspicious_day_precision",
-      "subject": "m365-anthropic-independent-processor-end-2026-05-01",
-      "message": "day precision on the first of the month may be an invented day"
-    },
-    {
-      "code": "suspicious_day_precision",
-      "subject": "m365-copilot-ga-2023-11-01",
-      "message": "day precision on the first of the month may be an invented day"
-    },
-    {
-      "code": "suspicious_day_precision",
-      "subject": "openai-gpt3-5-turbo-2023-03-01",
-      "message": "day precision on the first of the month may be an invented day"
-    },
-    {
-      "code": "unquoted_documentation",
-      "subject": "m365-anthropic-independent-processor-end-2026-05-01",
-      "message": "'confirmed' rests only on current documentation with no quoted attestation, which rarely proves a historical first date"
-    },
-    {
-      "code": "unquoted_documentation",
-      "subject": "m365-anthropic-subprocessor-2026-01-07",
-      "message": "'confirmed' rests only on current documentation with no quoted attestation, which rarely proves a historical first date"
     }
   ],
   "warning_counts": {
     "missing_archive": 2,
     "no_vendor_baseline": 4,
     "pre_release_access": 1,
-    "selectable_on_vendor_surface": 1,
-    "suspicious_day_precision": 13,
-    "unquoted_documentation": 2
+    "selectable_on_vendor_surface": 1
   },
   "coverage": {
     "models_without_events": [],

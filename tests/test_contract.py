@@ -143,6 +143,49 @@ class PreReleaseAccessTests(unittest.TestCase):
         self.assertEqual(tagged, ["github-copilot-preview-codex-2021-06-29"])
 
 
+class DayPrecisionTests(unittest.TestCase):
+    """A day-precision date on the first of a month is the shape a padded month
+    takes, so it is flagged. The flag clears only on evidence, never on age."""
+
+    def _attested(self, *sources: dict) -> bool:
+        return build.day_precision_is_attested(
+            {"date": {"start": "2024-05-01", "precision": "day"}, "sources": list(sources)}
+        )
+
+    def test_a_bare_first_of_month_is_not_attested(self) -> None:
+        self.assertFalse(self._attested({"url": "u"}))
+
+    def test_a_source_published_that_day_attests_it(self) -> None:
+        self.assertTrue(self._attested({"url": "u", "published_at": "2024-05-01"}))
+
+    def test_a_source_published_another_day_does_not(self) -> None:
+        self.assertFalse(self._attested({"url": "u", "published_at": "2024-05-14"}))
+
+    def test_a_quote_must_claim_to_support_the_date(self) -> None:
+        """A quote alone is not enough. Someone has to have asserted that the
+        quote attests the date, which is what `supports` records."""
+        self.assertFalse(self._attested({"url": "u", "quote": "q", "supports": ["model"]}))
+        self.assertTrue(self._attested({"url": "u", "quote": "q", "supports": ["date"]}))
+
+    def test_any_one_source_is_enough(self) -> None:
+        self.assertTrue(self._attested({"url": "a"}, {"url": "b", "published_at": "2024-05-01"}))
+
+    def test_every_remaining_first_of_month_date_is_attested(self) -> None:
+        """If this fails, a first-of-month date has been added without either a
+        same-day source or a quote asserted to support it."""
+        events = json.loads((GENERATED / "events.json").read_text(encoding="utf-8"))
+        unattested = [
+            e["id"] for e in events["events"]
+            if e["date"]["precision"] == "day" and e["date"]["start"].endswith("-01")
+            and not any(
+                s.get("published_at") == e["date"]["start"]
+                or (s.get("quote") and "date" in s.get("supports", []))
+                for s in e["sources"]
+            )
+        ]
+        self.assertEqual(unattested, [])
+
+
 class ConsumerContractTests(unittest.TestCase):
     """Guarantees docs/data-contract.md makes to display layers."""
 
