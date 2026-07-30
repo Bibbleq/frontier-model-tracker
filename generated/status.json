@@ -1,23 +1,23 @@
 {
   "totals": {
-    "events": 212,
+    "events": 214,
     "backlog": 56,
-    "sources": 242,
-    "models": 66,
+    "sources": 245,
+    "models": 67,
     "surfaces": 23,
-    "confirmed": 195,
-    "supported": 17
+    "confirmed": 196,
+    "supported": 18
   },
   "kinds": {
     "announcement": 11,
-    "availability": 187,
+    "availability": 189,
     "milestone": 8,
     "policy": 6
   },
   "backlog_states": {
-    "blocked": 3,
+    "blocked": 2,
     "open": 33,
-    "promoted": 20
+    "promoted": 21
   },
   "warnings": [
     {
@@ -286,6 +286,11 @@
       "message": "day precision on the first of the month may be an invented day"
     },
     {
+      "code": "suspicious_day_precision",
+      "subject": "openai-gpt3-5-turbo-2023-03-01",
+      "message": "day precision on the first of the month may be an invented day"
+    },
+    {
       "code": "unquoted_documentation",
       "subject": "m365-anthropic-independent-processor-end-2026-05-01",
       "message": "'confirmed' rests only on current documentation with no quoted attestation, which rarely proves a historical first date"
@@ -301,7 +306,7 @@
     "no_vendor_baseline": 4,
     "pre_release_access": 1,
     "selectable_on_vendor_surface": 1,
-    "suspicious_day_precision": 12,
+    "suspicious_day_precision": 13,
     "unquoted_documentation": 2
   },
   "coverage": {
@@ -309,10 +314,10 @@
     "surfaces_without_events": []
   },
   "lag_certainty": {
-    "exact": 295,
-    "not_recorded": 354,
+    "exact": 297,
+    "not_recorded": 365,
     "range": 19,
     "unknown_no_baseline": 48,
-    "unknown_open_research": 76
+    "unknown_open_research": 75
   }
 }

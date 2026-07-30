@@ -382,7 +382,19 @@ gpt-3-5,GPT-3.5,OpenAI,studio,selectable_or_default,chatgpt-launch-2022-11-30,20
 gpt-3-5,GPT-3.5,OpenAI,github_copilot,any_exposure,chatgpt-launch-2022-11-30,2022-11-30,ga,,,,,,,,unknown_open_research
 gpt-3-5,GPT-3.5,OpenAI,github_copilot,selectable_or_default,chatgpt-launch-2022-11-30,2022-11-30,ga,,,,,,,,unknown_open_research
 gpt-3-5,GPT-3.5,OpenAI,foundry,any_exposure,chatgpt-launch-2022-11-30,2022-11-30,ga,azure-openai-ga-2023-01-17,2023-01-17,azure-openai,catalogue,ga,48,48,exact
-gpt-3-5,GPT-3.5,OpenAI,foundry,selectable_or_default,chatgpt-launch-2022-11-30,2022-11-30,ga,,,,,,,,unknown_open_research
+gpt-3-5,GPT-3.5,OpenAI,foundry,selectable_or_default,chatgpt-launch-2022-11-30,2022-11-30,ga,,,,,,,,not_recorded
+gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,microsoft,any_exposure,openai-gpt3-5-turbo-2023-03-01,2023-03-01,ga,azure-gpt3-5-turbo-preview-2023-03-09,2023-03-09,azure-openai,catalogue,public_preview,8,8,exact
+gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,microsoft,selectable_or_default,openai-gpt3-5-turbo-2023-03-01,2023-03-01,ga,,,,,,,,not_recorded
+gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,copilot,any_exposure,openai-gpt3-5-turbo-2023-03-01,2023-03-01,ga,,,,,,,,not_recorded
+gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,copilot,selectable_or_default,openai-gpt3-5-turbo-2023-03-01,2023-03-01,ga,,,,,,,,not_recorded
+gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,m365,any_exposure,openai-gpt3-5-turbo-2023-03-01,2023-03-01,ga,,,,,,,,not_recorded
+gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,m365,selectable_or_default,openai-gpt3-5-turbo-2023-03-01,2023-03-01,ga,,,,,,,,not_recorded
+gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,studio,any_exposure,openai-gpt3-5-turbo-2023-03-01,2023-03-01,ga,,,,,,,,not_recorded
+gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,studio,selectable_or_default,openai-gpt3-5-turbo-2023-03-01,2023-03-01,ga,,,,,,,,not_recorded
+gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,github_copilot,any_exposure,openai-gpt3-5-turbo-2023-03-01,2023-03-01,ga,,,,,,,,not_recorded
+gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,github_copilot,selectable_or_default,openai-gpt3-5-turbo-2023-03-01,2023-03-01,ga,,,,,,,,not_recorded
+gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,foundry,any_exposure,openai-gpt3-5-turbo-2023-03-01,2023-03-01,ga,azure-gpt3-5-turbo-preview-2023-03-09,2023-03-09,azure-openai,catalogue,public_preview,8,8,exact
+gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,foundry,selectable_or_default,openai-gpt3-5-turbo-2023-03-01,2023-03-01,ga,,,,,,,,not_recorded
 gpt-4,GPT-4,OpenAI,microsoft,any_exposure,openai-gpt4-2023-03-14,2023-03-14,ga,m365-copilot-preview-gpt4-2023-03-16,2023-03-16,m365-copilot,underlying,private_preview,2,2,exact
 gpt-4,GPT-4,OpenAI,microsoft,selectable_or_default,openai-gpt4-2023-03-14,2023-03-14,ga,,,,,,,,unknown_open_research
 gpt-4,GPT-4,OpenAI,copilot,any_exposure,openai-gpt4-2023-03-14,2023-03-14,ga,m365-copilot-preview-gpt4-2023-03-16,2023-03-16,m365-copilot,underlying,private_preview,2,2,exact

@@ -319,6 +319,54 @@
       ]
     },
     {
+      "id": "openai-gpt3-5-turbo-2023-03-01",
+      "kind": "availability",
+      "date": {
+        "start": "2023-03-01",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "gpt-3-5-turbo"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "OpenAI released gpt-3.5-turbo through its API as the model already powering the ChatGPT product. The announcement distinguishes it from the earlier GPT-3.5 models on price and identity, which is why the dataset tracks it as a separate model rather than as the generation.",
+      "caveat": "OpenAI's announcement page carries no publication date; the day is taken from same-day press coverage.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing ChatGPT and Whisper APIs",
+          "url": "https://openai.com/index/introducing-chatgpt-and-whisper-apis/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "source_type": "announcement",
+          "quote": "The ChatGPT model family we are releasing today, gpt-3.5-turbo, is the same model used in the ChatGPT product. It is priced at $0.002 per 1k tokens, which is 10x cheaper than our existing GPT-3.5 models.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ]
+        },
+        {
+          "publisher": "TechCrunch",
+          "title": "OpenAI launches an API for ChatGPT, plus dedicated capacity for enterprise customers",
+          "url": "https://techcrunch.com/2023/03/01/openai-launches-an-api-for-chatgpt-plus-dedicated-capacity-for-enterprise-customers/",
+          "primary": false,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2023-03-01",
+          "source_type": "news",
+          "supports": [
+            "date"
+          ]
+        }
+      ]
+    },
+    {
       "id": "pva-generative-ai-preview-2023-03-06",
       "kind": "milestone",
       "date": {
@@ -340,6 +388,47 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "other"
+        }
+      ]
+    },
+    {
+      "id": "azure-gpt3-5-turbo-preview-2023-03-09",
+      "kind": "availability",
+      "date": {
+        "start": "2023-03-09",
+        "precision": "day"
+      },
+      "surface_id": "azure-openai",
+      "model_ids": [
+        "gpt-3-5-turbo"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-3.5 Turbo reached preview in Azure OpenAI Service eight days after OpenAI released it, announced under the product name ChatGPT. Azure spells the deployment gpt-35-turbo.",
+      "caveat": "A preview here does not contradict the GPT-3.5 generation already being generally available on this surface since January 2023. They are different models: the generation covers the text-davinci line, this is the Turbo model.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt3-5-turbo-2023-03-01"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Azure",
+          "title": "ChatGPT is now available in Azure OpenAI Service",
+          "url": "https://azure.microsoft.com/en-us/blog/chatgpt-is-now-available-in-azure-openai-service/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2023-03-09",
+          "source_type": "announcement",
+          "quote": "Today, we are thrilled to announce that ChatGPT is available in preview in Azure OpenAI Service.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
         }
       ]
     },
@@ -6849,10 +6938,13 @@
   "validation_backlog": [
     {
       "id": "azure-chatgpt-preview-2023-03-09",
-      "state": "blocked",
+      "state": "promoted",
       "working_claim": "ChatGPT/GPT-3.5 generation reached Azure OpenAI preview on 9 March 2023.",
       "reason": "Blocked on a registry defect rather than on evidence. Microsoft's dated announcement was located and says exactly what this item claims, but the event cannot be recorded as written: the build rejects it because azure-openai-ga-2023-01-17 already has gpt-3-5 as generally available on this surface, so a March preview would move the lifecycle backwards. The cause is that gpt-3-5 is used as a generation label, aliased 'GPT-3.5 generation', covering both text-davinci-003, which was generally available on Azure in January 2023, and ChatGPT's gpt-35-turbo, which reached preview in March. Both facts are true of different models.",
       "target": "Split the registry before recording this. Introduce gpt-3-5-turbo as a distinct model with ChatGPT as an alias, leave gpt-3-5 as the generation, then reassign the existing events and add this preview against the new id. That change also needs an OpenAI vendor baseline for gpt-3-5-turbo, since chatgpt-launch-2022-11-30 is scoped to the generation. Source already found: the Microsoft Azure blog of 9 March 2023, 'ChatGPT is now available in Azure OpenAI Service'.",
+      "resolution": "The registry defect that blocked this is fixed. gpt-3-5-turbo now exists as a distinct model, so the March preview no longer contradicts the GPT-3.5 generation being generally available on Azure since January 2023. Neither existing gpt-3-5 event needed reassigning: the ChatGPT launch of November 2022 and the Azure service GA of January 2023 both legitimately mean the generation. A vendor baseline was added at the same time, openai-gpt3-5-turbo-2023-03-01, giving an eight-day lag to Azure. The item's own title conflated ChatGPT with the generation, which is what made it look unrecordable.",
+      "resolved_on": "2026-07-30",
+      "promoted_to": "azure-gpt3-5-turbo-preview-2023-03-09",
       "model_ids": [
         "gpt-3-5"
       ],
