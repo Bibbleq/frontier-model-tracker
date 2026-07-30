@@ -71,7 +71,9 @@ gemini-3-6-flash,Gemini 3.6 Flash,Google,google-gemini-api,Gemini API,,ga,not_ap
 gpt-3,GPT-3,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,limited_preview,catalogue,false,azure-openai-preview-2021-11-02,2021-11-02,day,2026-07-28,,1
 gpt-3,GPT-3,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-api-2020-06-11,2020-06-11,day,2026-07-28,,0
 gpt-3-5,GPT-3.5,OpenAI,chatgpt,ChatGPT,,ga,not_applicable,false,chatgpt-launch-2022-11-30,2022-11-30,day,2026-07-28,,0
-gpt-3-5,GPT-3.5,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,catalogue,false,azure-openai-ga-2023-01-17,2023-01-17,day,2026-07-28,,1
+gpt-3-5,GPT-3.5,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,catalogue,false,azure-openai-ga-2023-01-17,2023-01-17,day,2026-07-28,,0
+gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,public_preview,catalogue,false,azure-gpt3-5-turbo-preview-2023-03-09,2023-03-09,day,2026-07-28,,0
+gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt3-5-turbo-2023-03-01,2023-03-01,day,2026-07-28,,0
 gpt-4,GPT-4,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,public_preview,underlying,false,github-gpt4-copilot-chat-2023-11-30,2023-11-30,day,2026-07-28,,0
 gpt-4,GPT-4,OpenAI,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,underlying,false,m365-copilot-ga-2023-11-01,2023-11-01,day,2026-07-28,,0
 gpt-4,GPT-4,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,public_preview,catalogue,false,azure-gpt4-preview-2023-03-21,2023-03-21,day,2026-07-28,,1

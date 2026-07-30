@@ -25,6 +25,12 @@ models:
     display_name: "GPT-3.5"
     vendor: OpenAI
     aliases: ["GPT-3.5 generation"]
+    note: "The generation, not a deployable model. Covers the text-davinci line that was generally available on Azure OpenAI from January 2023. GPT-3.5 Turbo is tracked separately as gpt-3-5-turbo, because OpenAI itself distinguished it from 'our existing GPT-3.5 models' when releasing it."
+  - id: gpt-3-5-turbo
+    display_name: "GPT-3.5 Turbo"
+    vendor: OpenAI
+    aliases: ["ChatGPT", "gpt-35-turbo", "gpt-3.5-turbo"]
+    note: "Microsoft and OpenAI both marketed this as 'ChatGPT' when it reached their platforms in March 2023, and Azure spells the deployment name gpt-35-turbo. Distinct from the gpt-3-5 generation: it arrived on Azure OpenAI in preview two months after the generation was already generally available there."
   - id: codex
     display_name: "Codex"
     vendor: OpenAI

@@ -1,6 +1,7 @@
 id,display_name,vendor,family,aliases,supersedes,superseded_by,event_count
 gpt-3,GPT-3,OpenAI,gpt-3,,,,3
 gpt-3-5,GPT-3.5,OpenAI,,GPT-3.5 generation,,,2
+gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,,ChatGPT | gpt-35-turbo | gpt-3.5-turbo,,,2
 codex,Codex,OpenAI,,,,,5
 dall-e-2,DALL-E 2,OpenAI,,,,,3
 gpt-4,GPT-4,OpenAI,,GPT-4 generation,,,6
