@@ -17,8 +17,8 @@
       "path": "data/events.json",
       "media_type": "application/json",
       "description": "The whole dataset: metadata, canonical events and the validation backlog",
-      "bytes": 272737,
-      "sha256": "16fd16267647ea9110d8010230463838f3a78849e93c6f6c2ce1fd1a1c4b73cb"
+      "bytes": 273299,
+      "sha256": "111aaef3f8e71b212e026d8b7a38cfbee5d3da682efc4be02d5e7689d89a3c9f"
     },
     {
       "path": "data/status.json",
@@ -31,8 +31,8 @@
       "path": "data/events.csv",
       "media_type": "text/csv",
       "description": "Flattened canonical timeline, identifiers resolved to display names",
-      "bytes": 90631,
-      "sha256": "de0118e77877a8c0e5e6d54bbf0a7c8125ab93a2bb3917d6baaf502ca82f4b93"
+      "bytes": 90923,
+      "sha256": "35dbb31ac0811babe7945663ae1c9f4289c69e47b74b698309061800b82e0053"
     },
     {
       "path": "data/validation-backlog.csv",
