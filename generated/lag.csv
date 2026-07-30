@@ -635,6 +635,18 @@ grok-4,Grok 4,xAI,github_copilot,any_exposure,xai-grok4-2025-07-09,2025-07-09,ga
 grok-4,Grok 4,xAI,github_copilot,selectable_or_default,xai-grok4-2025-07-09,2025-07-09,ga,,,,,,,,unknown_open_research
 grok-4,Grok 4,xAI,foundry,any_exposure,xai-grok4-2025-07-09,2025-07-09,ga,xai-grok4-foundry-2025-09-29,2025-09-29,azure-ai-foundry,catalogue,ga,82,82,exact
 grok-4,Grok 4,xAI,foundry,selectable_or_default,xai-grok4-2025-07-09,2025-07-09,ga,,,,,,,,not_recorded
+grok-4-5,Grok 4.5,xAI,microsoft,any_exposure,xai-grok4-5-2026-07-09,2026-07-09,ga,github-grok4-5-2026-07-28,2026-07-28,github-copilot,selectable,ga,12,19,range
+grok-4-5,Grok 4.5,xAI,microsoft,selectable_or_default,xai-grok4-5-2026-07-09,2026-07-09,ga,github-grok4-5-2026-07-28,2026-07-28,github-copilot,selectable,ga,12,19,range
+grok-4-5,Grok 4.5,xAI,copilot,any_exposure,xai-grok4-5-2026-07-09,2026-07-09,ga,github-grok4-5-2026-07-28,2026-07-28,github-copilot,selectable,ga,12,19,range
+grok-4-5,Grok 4.5,xAI,copilot,selectable_or_default,xai-grok4-5-2026-07-09,2026-07-09,ga,github-grok4-5-2026-07-28,2026-07-28,github-copilot,selectable,ga,12,19,range
+grok-4-5,Grok 4.5,xAI,m365,any_exposure,xai-grok4-5-2026-07-09,2026-07-09,ga,,,,,,,,not_recorded
+grok-4-5,Grok 4.5,xAI,m365,selectable_or_default,xai-grok4-5-2026-07-09,2026-07-09,ga,,,,,,,,not_recorded
+grok-4-5,Grok 4.5,xAI,studio,any_exposure,xai-grok4-5-2026-07-09,2026-07-09,ga,,,,,,,,not_recorded
+grok-4-5,Grok 4.5,xAI,studio,selectable_or_default,xai-grok4-5-2026-07-09,2026-07-09,ga,,,,,,,,not_recorded
+grok-4-5,Grok 4.5,xAI,github_copilot,any_exposure,xai-grok4-5-2026-07-09,2026-07-09,ga,github-grok4-5-2026-07-28,2026-07-28,github-copilot,selectable,ga,12,19,range
+grok-4-5,Grok 4.5,xAI,github_copilot,selectable_or_default,xai-grok4-5-2026-07-09,2026-07-09,ga,github-grok4-5-2026-07-28,2026-07-28,github-copilot,selectable,ga,12,19,range
+grok-4-5,Grok 4.5,xAI,foundry,any_exposure,xai-grok4-5-2026-07-09,2026-07-09,ga,,,,,,,,not_recorded
+grok-4-5,Grok 4.5,xAI,foundry,selectable_or_default,xai-grok4-5-2026-07-09,2026-07-09,ga,,,,,,,,not_recorded
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,microsoft,any_exposure,,,,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,,,unknown_no_baseline
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,microsoft,selectable_or_default,,,,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,,,unknown_no_baseline
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,copilot,any_exposure,,,,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,,,unknown_no_baseline

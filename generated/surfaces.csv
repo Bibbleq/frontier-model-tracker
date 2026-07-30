@@ -6,7 +6,7 @@ anthropic-claude,Claude,Anthropic,,,true,,,,,21
 google-gemini,Gemini,Google,,,true,,,,,1
 google-gemini-api,Gemini API,Google,,,true,,,,,1
 mistral,Mistral,Mistral AI,,,true,,,,,1
-xai-grok,Grok,xAI,,,true,,,,,2
+xai-grok,Grok,xAI,,,true,,,,,3
 deepseek,DeepSeek,DeepSeek,,,true,,,,,0
 meta,Meta,Meta,,,true,,,,,1
 moonshot,Moonshot AI,Moonshot AI,,,true,,,,,0
@@ -14,7 +14,7 @@ m365-copilot,Microsoft 365 Copilot,Microsoft,Microsoft 365,,false,microsoft | co
 m365-admin,Microsoft 365 admin centre,Microsoft,Microsoft 365,,false,microsoft,,,,3
 copilot-studio,Microsoft Copilot Studio,Microsoft,Copilot Studio,,false,microsoft | copilot | studio,power-virtual-agents,,,20
 power-virtual-agents,Power Virtual Agents,Microsoft,Copilot Studio,,false,microsoft | copilot | studio,,copilot-studio,2023-11-15,1
-github-copilot,GitHub Copilot,GitHub,GitHub Copilot,,false,microsoft | copilot | github_copilot,,,,44
+github-copilot,GitHub Copilot,GitHub,GitHub Copilot,,false,microsoft | copilot | github_copilot,,,,45
 github-models,GitHub Models,GitHub,GitHub Models,,false,microsoft,,,,5
 azure-openai,Azure OpenAI Service,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,,8
 azure-ai-catalog,Azure AI model catalogue,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,,1

@@ -1,8 +1,8 @@
 {
   "contract_version": 2,
   "dataset_version": 3,
-  "updated": "2026-07-27",
-  "research_cutoff": "2026-07-27",
+  "updated": "2026-07-28",
+  "research_cutoff": "2026-07-28",
   "base_url": "https://bibbleq.github.io/frontier-model-tracker/",
   "snapshot_url": "https://bibbleq.github.io/frontier-model-tracker/c2/v3/",
   "documentation": "https://github.com/Bibbleq/frontier-model-tracker/blob/main/docs/data-contract.md",
@@ -17,57 +17,57 @@
       "path": "data/events.json",
       "media_type": "application/json",
       "description": "The whole dataset: metadata, canonical events and the validation backlog",
-      "bytes": 254506,
-      "sha256": "175450a9097d91064bddb56efbd70dfd55abb9aa9234a67be645f374af9296c1"
+      "bytes": 259847,
+      "sha256": "ce9f1463583cf1092a3902c5bcdb20f64619ae55fca5dee92533483fdc2c4877"
     },
     {
       "path": "data/status.json",
       "media_type": "application/json",
       "description": "Totals, warning counts, coverage gaps and lag certainty distribution",
       "bytes": 12722,
-      "sha256": "115bc8c8e49c397ca129b3c2c57f875ffb5e0805bedaa7e4ec1d5db7c89c1d53"
+      "sha256": "ad386daa724ddc2147efcf867690050a0e69f1af113ce46d68d6731fe77d903d"
     },
     {
       "path": "data/events.csv",
       "media_type": "text/csv",
       "description": "Flattened canonical timeline, identifiers resolved to display names",
-      "bytes": 84801,
-      "sha256": "88525bc473e26e90c585e69a17599277557534db2f8def9971615ba56117af46"
+      "bytes": 86471,
+      "sha256": "30c15143e2a30ba08f91b81182087b4a23729f2155482020eee0a20dfd3ebbcf"
     },
     {
       "path": "data/validation-backlog.csv",
       "media_type": "text/csv",
       "description": "Open research questions with states and targets, not confirmed history",
-      "bytes": 29675,
-      "sha256": "38e2ef295aeb2fa58bcd1122950288e5586e050d6cb69e87f3f466cb4ef04f4e"
+      "bytes": 30892,
+      "sha256": "36f16792cc8d0b3457d9addfb875dadeab10b1259c16bbb73ef0b152a1fc1d54"
     },
     {
       "path": "data/lag.csv",
       "media_type": "text/csv",
       "description": "Derived adoption lag; read certainty before any number",
-      "bytes": 112054,
-      "sha256": "547c929888bb2d4fb0863a42117e32a6abc1f15324e1ef1acfe4b87d732f7f21"
+      "bytes": 113666,
+      "sha256": "29be550f9f62fd7f8b21a7fed0b3b63975b93e33e9757cec7c20e36fc62c68a3"
     },
     {
       "path": "data/current-state.csv",
       "media_type": "text/csv",
       "description": "Last known lifecycle per model and surface; read state_is_terminal before presenting it as current",
-      "bytes": 24555,
-      "sha256": "89b0f5f098b53b05002e7fe846453c0c847eeea78223827ebbfcae81976c7aee"
+      "bytes": 24832,
+      "sha256": "41495bf9487c339b5119d8238fe45312b27b5d463fd28f7b4789887f4df3c57b"
     },
     {
       "path": "data/models.csv",
       "media_type": "text/csv",
       "description": "Model registry with aliases, families and event counts",
-      "bytes": 2771,
-      "sha256": "ce7545583e66b96d033a16945f065c895c8bbde1e7f2ef948ad835053e77c695"
+      "bytes": 2799,
+      "sha256": "8f0e7e1cc464022a52a9c4a9e9d0cc27d5167773ebfcd6e5c902bcc2945e1ea4"
     },
     {
       "path": "data/surfaces.csv",
       "media_type": "text/csv",
       "description": "Surface registry with rename lineage, analytical tiers and event counts",
       "bytes": 1836,
-      "sha256": "7fb7423a41f971dad97c6cee28429e421b0f64988b4744a311a246e4aa2329b0"
+      "sha256": "900e53ae20b2db008aadb8f949389062eda2391f8947abc201f99c3809d5cfbf"
     },
     {
       "path": "schema/events.schema.json",

@@ -1,6 +1,6 @@
 version: 3
-updated: "2026-07-27"
-research_cutoff: "2026-07-27"
+updated: "2026-07-28"
+research_cutoff: "2026-07-28"
 metadata:
   project: "365Explained Frontier Model Tracker"
   purpose: "Sourced history of frontier and significant model availability across tracked Microsoft surfaces."
@@ -3920,6 +3920,42 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "xai-grok4-5-2026-07-09"
+    kind: "availability"
+    date:
+      start: "2026-07-09"
+      end: "2026-07-16"
+      precision: "day"
+    surface_id: "xai-grok"
+    model_ids: ["grok-4-5"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+    evidence_note: "xAI released Grok 4.5. The window opens on the public availability promised for 9 July and closes on the first date xAI itself confirms the model shipping, 16 July, when it reached Grok Build, Cursor and the console."
+    caveat: "Bounded because the two ends rest on different kinds of evidence. The 8 July statement is forward-looking - it says the model will be public 'tomorrow' - and a promise of availability is not availability. The 16 July page is first-party and past-tense but covers developer surfaces only, so it may postdate the consumer launch. See the xai-grok4-5-public-availability-2026-07 backlog item."
+    sources:
+      - publisher: "xAI"
+        title: "Grok 4.5"
+        url: "https://x.ai/news/grok-4-5"
+        primary: true
+        retrieved_at: "2026-07-30"
+        published_at: "2026-07-16"
+        source_type: "announcement"
+        quote: "Grok 4.5 is available today in Grok Build, in Cursor on all plans, and from the SpaceXAI console."
+        supports: ["model", "lifecycle"]
+      - publisher: "TechCrunch"
+        title: "SpaceXAI releases Grok 4.5, which Elon describes as an 'Opus-class model'"
+        url: "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/"
+        primary: false
+        retrieved_at: "2026-07-30"
+        published_at: "2026-07-08"
+        source_type: "news"
+        quote: "Based on strong positive feedback from customers in our beta test program, @SpaceXAI will make Grok 4.5 available to the public tomorrow."
+        supports: ["date"]
+        note: "Quotes a forward-looking statement, which is why the window starts the following day rather than on the date of the article."
   - id: "github-gemini3-6-flash-2026-07-21"
     kind: "availability"
     date:
@@ -4058,6 +4094,29 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "documentation"
+  - id: "github-grok4-5-2026-07-28"
+    kind: "availability"
+    date:
+      start: "2026-07-28"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["grok-4-5"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "Grok 4.5 reached the GitHub Copilot model picker across VS Code, Visual Studio, the CLI, the cloud agent, the Copilot app, JetBrains, Xcode and Eclipse, on the Pro, Pro+, Max, Business and Enterprise plans."
+    caveat: "A gradual rollout, and not on by default for every customer: Copilot Business and Enterprise administrators must enable the Grok 4.5 policy, which ships off. Users on those plans cannot select the model until an admin acts, so the selectable exposure is reached later for them than this date implies."
+    sources:
+      - publisher: "GitHub"
+        title: "Grok 4.5 is now available in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-07-28-grok-4-5-is-now-available-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-07-30"
+        published_at: "2026-07-28"
+        source_type: "changelog"
+        quote: "Grok 4.5, xAI's latest reasoning model, is now rolling out in GitHub Copilot."
+        supports: ["date", "model", "lifecycle", "exposure"]
 validation_backlog:
   - id: "azure-chatgpt-preview-2023-03-09"
     state: "open"
@@ -4528,8 +4587,15 @@ validation_backlog:
     surface_ids: ["openai", "openai-api", "chatgpt"]
   - id: "xai-github-copilot-picker"
     state: "open"
-    working_claim: "No reliable evidence yet that xAI/Grok models entered the GitHub Copilot picker."
-    reason: "Foundry catalogue availability is not GitHub Copilot availability."
-    target: "Only add if a GitHub Copilot changelog/model-picker source exists."
+    working_claim: "No reliable evidence yet that Grok 3 or Grok 4 entered the GitHub Copilot picker."
+    reason: "Foundry catalogue availability is not GitHub Copilot availability. Narrowed on 30 July 2026: xAI models do now reach the picker, since Grok 4.5 arrived there on 28 July 2026 as github-grok4-5-2026-07-28. That removes the general objection but says nothing about the earlier models, which may simply never have been offered."
+    target: "Find a GitHub changelog naming Grok 3 or Grok 4 specifically. If none exists, the honest outcome is that these models never reached Copilot, which is a finding rather than a gap - reject the item rather than leaving it open."
     model_ids: ["grok-3", "grok-4"]
     surface_ids: ["github-copilot"]
+  - id: "xai-grok4-5-public-availability-2026-07"
+    state: "open"
+    working_claim: "Grok 4.5 became publicly available on 9 July 2026, a week before xAI's own page confirms it shipping."
+    reason: "The vendor baseline is recorded as a 9 to 16 July window because the two ends rest on different evidence. On 8 July, xAI stated the model would go public 'tomorrow', which is a promise rather than a record. The first past-tense first-party confirmation is 16 July and covers Grok Build, Cursor and the console, so it may well postdate a consumer launch on grok.com, X, iOS and Android."
+    target: "Pin a first-party xAI post, changelog entry or dated console note showing Grok 4.5 live for consumers. Closing this collapses the window to a day and turns the GitHub Copilot lag from a 12 to 19 day range into an exact figure."
+    model_ids: ["grok-4-5"]
+    surface_ids: ["xai-grok"]

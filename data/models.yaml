@@ -220,6 +220,9 @@ models:
   - id: grok-4
     display_name: "Grok 4"
     vendor: xAI
+  - id: grok-4-5
+    display_name: "Grok 4.5"
+    vendor: xAI
   - id: llama-2
     display_name: "Llama 2"
     vendor: Meta
