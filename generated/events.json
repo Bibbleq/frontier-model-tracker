@@ -1475,6 +1475,73 @@
       ]
     },
     {
+      "id": "deepseek-v3-2024-12-26",
+      "kind": "availability",
+      "date": {
+        "start": "2024-12-26",
+        "precision": "day"
+      },
+      "surface_id": "deepseek",
+      "model_ids": [
+        "deepseek-v3"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "DeepSeek released V3 as an open-weight model with immediate API availability.",
+      "caveat": "No Microsoft surface is recorded for V3 itself, so this baseline currently anchors no lag. It is kept because it dates the model that V3.2 succeeds.",
+      "sources": [
+        {
+          "publisher": "DeepSeek",
+          "title": "Introducing DeepSeek-V3",
+          "url": "https://api-docs.deepseek.com/news/news1226/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2024-12-26",
+          "source_type": "announcement",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepseek-r1-2025-01-20",
+      "kind": "availability",
+      "date": {
+        "start": "2025-01-20",
+        "precision": "day"
+      },
+      "surface_id": "deepseek",
+      "model_ids": [
+        "deepseek-r1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "DeepSeek released R1 as a fully open-source reasoning model under the MIT licence, with the website and API live the same day. Microsoft added it to Foundry and GitHub Models nine days later.",
+      "sources": [
+        {
+          "publisher": "DeepSeek",
+          "title": "DeepSeek-R1 Release",
+          "url": "https://api-docs.deepseek.com/news/news250120/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2025-01-20",
+          "source_type": "announcement",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
       "id": "deepseek-r1-foundry-2025-01-29",
       "kind": "availability",
       "date": {
@@ -3560,6 +3627,73 @@
       ]
     },
     {
+      "id": "deepseek-v3-2-2025-12-01",
+      "kind": "availability",
+      "date": {
+        "start": "2025-12-01",
+        "precision": "day"
+      },
+      "surface_id": "deepseek",
+      "model_ids": [
+        "deepseek-v3-2"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "DeepSeek released V3.2 as the successor to V3.2-Exp, available across the app, web platform and API. Microsoft Foundry took it 14 days later.",
+      "sources": [
+        {
+          "publisher": "DeepSeek",
+          "title": "DeepSeek-V3.2 Release",
+          "url": "https://api-docs.deepseek.com/news/news251201/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2025-12-01",
+          "source_type": "announcement",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepseek-v3-2-speciale-2025-12-01",
+      "kind": "availability",
+      "date": {
+        "start": "2025-12-01",
+        "precision": "day"
+      },
+      "surface_id": "deepseek",
+      "model_ids": [
+        "deepseek-v3-2-speciale"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "DeepSeek released V3.2-Speciale alongside V3.2 as a reasoning variant. It shipped API-only, without tool use, on a temporary endpoint.",
+      "caveat": "Announced on the same page as V3.2 but with narrower availability: API only, no tool-use support, and a temporary endpoint due to expire on 15 December 2025. Recorded separately from V3.2 because the exposure differs.",
+      "sources": [
+        {
+          "publisher": "DeepSeek",
+          "title": "DeepSeek-V3.2 Release",
+          "url": "https://api-docs.deepseek.com/news/news251201/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2025-12-01",
+          "source_type": "announcement",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
       "id": "foundry-mistral-large3-2025-12-02",
       "kind": "availability",
       "date": {
@@ -4691,6 +4825,41 @@
       ]
     },
     {
+      "id": "openai-gpt5-5-instant-2026-05-05",
+      "kind": "availability",
+      "date": {
+        "start": "2026-05-05",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-5-instant"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "default",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI made GPT-5.5 Instant the default ChatGPT model for all users, replacing GPT-5.3 Instant. This is later than the 23 April GPT-5.5 release, so Instant is a separate arrival rather than part of that launch.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "GPT-5.5 Instant",
+          "url": "https://openai.com/index/gpt-5-5-instant/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2026-05-05",
+          "source_type": "announcement",
+          "quote": "We're updating ChatGPT's default model, available to everyone, to be smarter and more accurate, with clearer, more concise answers that feel better tailored to you.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
       "id": "foundry-gpt5-5-instant-2026-05-07",
       "kind": "availability",
       "date": {
@@ -5243,6 +5412,55 @@
           "retrieved_at": "2026-07-26",
           "source_type": "changelog",
           "note": "GitHub changelog editor notes reflect suspension/restoration."
+        }
+      ]
+    },
+    {
+      "id": "moonshot-kimi-k2-7-code-2026-06-12",
+      "kind": "availability",
+      "date": {
+        "start": "2026-06-12",
+        "end": "2026-06-15",
+        "precision": "day"
+      },
+      "surface_id": "moonshot",
+      "model_ids": [
+        "kimi-k2-7-code"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "Moonshot AI released Kimi K2.7 Code as an open-weight model distributed through Hugging Face and its own API. GitHub Copilot took it on 1 July 2026.",
+      "caveat": "Bounded, because Moonshot published no dated announcement. The window is set by its own resource page, published 13 June 2026, sitting between the Microsoft Foundry retirement schedule's version string of 2026-06-12 and the Foundry catalogue's 2026-06-15. A vendor date of 22 July 2026 appears in circulation but postdates GitHub Copilot's 1 July availability and is not used.",
+      "sources": [
+        {
+          "publisher": "Moonshot AI",
+          "title": "Kimi K2.7 Code",
+          "url": "https://www.kimi.com/resources/kimi-k2-7-code",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2026-06-13",
+          "source_type": "documentation",
+          "supports": [
+            "model"
+          ],
+          "note": "A resource page rather than a release announcement; it carries a publication timestamp but no release statement."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Foundry Models retirement schedule",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule",
+          "primary": false,
+          "retrieved_at": "2026-07-30",
+          "source_type": "documentation",
+          "supports": [
+            "date"
+          ],
+          "note": "Lists Kimi-K2.7-Code at version 2026-06-12, which for this vendor tracks the release date."
         }
       ]
     },
@@ -6021,30 +6239,36 @@
     },
     {
       "id": "deepseek-r1-vendor-2025-01-20",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "DeepSeek-R1 released 20 January 2025.",
-      "reason": "Microsoft's 29 January landing is confirmed; the vendor release row still needs a durable first-party citation. The 20 January 2025 date is corroborated by many secondary sources but none of them is DeepSeek. The obvious candidate URL under api-docs.deepseek.com was checked and is the API quickstart, not a news post.",
-      "target": "Pin the DeepSeek-R1 release commit or release tag on the deepseek-ai/DeepSeek-R1 GitHub repository, or the dated arXiv submission of the R1 technical report. Both are first-party and carry real timestamps, unlike the vendor's documentation site.",
+      "reason": "Microsoft's 29 January landing is confirmed; the vendor release row still needed a durable first-party citation.",
+      "target": "Pin the DeepSeek-R1 release announcement on DeepSeek's own documentation site.",
       "model_ids": [
         "deepseek-r1"
       ],
       "surface_ids": [
         "deepseek"
-      ]
+      ],
+      "resolution": "DeepSeek's own news page at api-docs.deepseek.com/news/news250120/ is titled 'DeepSeek-R1 Release', dated 20 January 2025, and states the website and API were live. A previous pass recorded that this URL was the API quickstart rather than a news post; that was wrong. The path resolves only with its trailing slash, and without one the site serves the quickstart instead.",
+      "resolved_on": "2026-07-30",
+      "promoted_to": "deepseek-r1-2025-01-20"
     },
     {
       "id": "deepseek-v3-2-vendor-release-2025-12",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "DeepSeek V3.2 and V3.2-Speciale were released by DeepSeek shortly before Microsoft Foundry took both on 15 December 2025.",
-      "reason": "Both models entered the Foundry catalogue on the same day with a confirmed source, but neither has a vendor release event, so the lag for both is unmeasurable rather than zero.",
-      "target": "Pin the DeepSeek release for each model. Prefer the GitHub repository release or the dated technical report over the documentation site, which carries no post dates. Note that Speciale may have shipped alongside V3.2 or separately; do not assume one date covers both.",
+      "reason": "Both models entered the Foundry catalogue on the same day with a confirmed source, but neither had a vendor release event, so the lag for both was unmeasurable rather than zero.",
+      "target": "Pin the DeepSeek release for each model, without assuming one date covers both.",
       "model_ids": [
         "deepseek-v3-2",
         "deepseek-v3-2-speciale"
       ],
       "surface_ids": [
         "deepseek"
-      ]
+      ],
+      "resolution": "DeepSeek's 'DeepSeek-V3.2 Release' page of 1 December 2025 announces both, so one date does cover both, but not one event: V3.2 shipped across the app, web and API while Speciale shipped API-only, without tool use, on a temporary endpoint. They are recorded as two events because the exposure differs. Foundry took both 14 days later. Speciale's second event is deepseek-v3-2-speciale-2025-12-01.",
+      "resolved_on": "2026-07-30",
+      "promoted_to": "deepseek-v3-2-2025-12-01"
     },
     {
       "id": "deepseek-v3-first-microsoft-availability-2024",
@@ -6058,7 +6282,7 @@
     },
     {
       "id": "deepseek-v3-vendor-2024-12-26",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "DeepSeek-V3 released 26 December 2024.",
       "reason": "Discussed in research but not promoted without a durable primary release source.",
       "target": "Use a DeepSeek official release/repository announcement with explicit date.",
@@ -6067,7 +6291,10 @@
       ],
       "surface_ids": [
         "deepseek"
-      ]
+      ],
+      "resolution": "DeepSeek's 'Introducing DeepSeek-V3' page of 26 December 2024 is the first-party announcement. The event anchors no lag yet, because no Microsoft availability is recorded for V3 itself; deepseek-v3-first-microsoft-availability-2024 remains open for that.",
+      "resolved_on": "2026-07-30",
+      "promoted_to": "deepseek-v3-2024-12-26"
     },
     {
       "id": "foundry-fable5-restoration-2026",
@@ -6439,11 +6666,10 @@
     {
       "id": "gpt-5-5-variants-vendor-release-2026-04",
       "state": "open",
-      "working_claim": "GPT-5.5 Instant and GPT-5.5 Thinking were released by OpenAI on 23 April 2026, the date already recorded for GPT-5.5 itself.",
-      "reason": "The registry tracks gpt-5-5, gpt-5-5-instant and gpt-5-5-thinking as three models, but only gpt-5-5 has a vendor release event. The two variants appear on Microsoft surfaces from late April 2026, so a baseline almost certainly exists; assuming it matches the gpt-5-5 date without checking would manufacture a zero-day lag that has not been verified.",
-      "target": "Confirm from OpenAI whether Instant and Thinking shipped on 23 April 2026 with GPT-5.5 or followed later, as the GPT-5.1 Instant and Thinking modes did. If they shipped together, record two events on that date; if not, record the actual dates.",
+      "working_claim": "GPT-5.5 Thinking was released by OpenAI on 23 April 2026, the date already recorded for GPT-5.5 itself.",
+      "reason": "The registry tracks gpt-5-5, gpt-5-5-instant and gpt-5-5-thinking as three models. Instant is now resolved and was not part of the 23 April launch at all: OpenAI shipped it on 5 May 2026 as the new ChatGPT default, recorded as openai-gpt5-5-instant-2026-05-05. That is the reason not to assume Thinking shipped with GPT-5.5 either. Microsoft 365 Copilot carries GPT-5.5 Thinking from 27 April 2026, so its vendor release is no later than that, but the OpenAI announcement for Instant does not mention Thinking and no separate Thinking announcement has been found.",
+      "target": "Find OpenAI's own dated statement for GPT-5.5 Thinking. If none exists, a bounded window between the 23 April GPT-5.5 launch and the 27 April Microsoft 365 Copilot arrival would be defensible; a single assumed day is not.",
       "model_ids": [
-        "gpt-5-5-instant",
         "gpt-5-5-thinking"
       ],
       "surface_ids": [
@@ -6468,7 +6694,7 @@
     },
     {
       "id": "kimi-k2-7-vendor-release-2026",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "Kimi K2.7 Code was released by Moonshot AI on 12 June 2026, roughly three weeks before GitHub Copilot took it.",
       "reason": "GitHub's 1 July Copilot event is confirmed; Moonshot's vendor release date remains unresolved. Trade coverage from July 2026 dates the release to 12 June 2026 and states that Moonshot published no standalone announcement post, distributing the model through a Hugging Face model card and its API instead. That leaves no first-party announcement to cite, and the working claim has been corrected from 'around the start of July' to the earlier date on secondary evidence alone.",
       "target": "Pin the Hugging Face model card commit date or a Moonshot API changelog entry. A model card is a usable primary artefact where no announcement exists, as it is published by the vendor; confirm the date it first appeared rather than its current revision.",
@@ -6477,7 +6703,10 @@
       ],
       "surface_ids": [
         "moonshot"
-      ]
+      ],
+      "resolution": "Recorded as a bounded 12 to 15 June 2026 window rather than a single day, because Moonshot still published no dated announcement. The window is set by Moonshot's own resource page, published 13 June 2026, between the Foundry retirement schedule's version string of 2026-06-12 and the Foundry catalogue's 2026-06-15. A vendor date of 22 July 2026 was offered during review and rejected: it postdates GitHub Copilot's confirmed 1 July availability, and the page cited for it carries a June publication timestamp and no release statement.",
+      "resolved_on": "2026-07-30",
+      "promoted_to": "moonshot-kimi-k2-7-code-2026-06-12"
     },
     {
       "id": "m365-anthropic-eu-setting-2026-04",
