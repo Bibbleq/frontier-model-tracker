@@ -1,23 +1,23 @@
 {
   "totals": {
-    "events": 176,
+    "events": 179,
     "backlog": 50,
-    "sources": 196,
+    "sources": 199,
     "models": 64,
     "surfaces": 23,
-    "confirmed": 168,
+    "confirmed": 171,
     "supported": 8
   },
   "kinds": {
     "announcement": 10,
-    "availability": 154,
+    "availability": 157,
     "milestone": 6,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 1,
-    "open": 45,
-    "promoted": 4
+    "open": 44,
+    "promoted": 5
   },
   "warnings": [
     {

@@ -813,6 +813,9 @@ events:
     exposure: "selectable"
     confidence: "confirmed"
     evidence_note: "Claude 3.5 Sonnet became available in public preview to all Copilot users, subject to managed-plan policy."
+    relations:
+      - type: "previews_for"
+        target: "github-claude3-5-sonnet-ga-2025-04-04"
     sources:
       - publisher: "GitHub"
         title: "Claude 3.5 Sonnet is now available to all Copilot users in public preview"
@@ -1001,6 +1004,8 @@ events:
     confidence: "confirmed"
     evidence_note: "o3-mini entered public preview in GitHub Copilot and GitHub Models on launch day."
     relations:
+      - type: "previews_for"
+        target: "github-o3-mini-ga-2025-04-04"
       - type: "announced_by"
         target: "openai-o3-mini-2025-01-31"
     sources:
@@ -1080,6 +1085,9 @@ events:
     exposure: "selectable"
     confidence: "confirmed"
     evidence_note: "Claude 3.7 Sonnet entered GitHub Copilot public preview on its release day."
+    relations:
+      - type: "previews_for"
+        target: "github-claude3-7-sonnet-ga-2025-04-04"
     sources:
       - publisher: "GitHub"
         title: "Claude 3.7 Sonnet is now available in GitHub Copilot in public preview"
@@ -1152,6 +1160,75 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "github-claude3-5-sonnet-ga-2025-04-04"
+    kind: "availability"
+    date:
+      start: "2025-04-04"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["claude-3-5-sonnet"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "GitHub made Claude 3.5 Sonnet generally available in Copilot, promoting it from preview release terms to generally available release terms. It had been in public preview in Copilot since November 2024."
+    caveat: "The same announcement covers Google Gemini Flash 2.0, which is not recorded because the registry does not carry it and the timeline holds no Copilot arrival for it either. GitHub frames general availability partly in licensing terms: the announcement describes the models as promoted from preview release terms to generally available release terms, which extends indemnification for IP infringement to code generated with them."
+    sources:
+      - publisher: "GitHub"
+        title: "Multiple new models are now generally available in GitHub Copilot"
+        url: "https://github.blog/changelog/2025-04-04-multiple-new-models-are-now-generally-available-in-github-copilot/"
+        primary: true
+        retrieved_at: "2026-07-28"
+        published_at: "2025-04-04"
+        source_type: "changelog"
+        quote: "Anthropic Claude 3.7 Sonnet, Claude 3.5 Sonnet, OpenAI o3-mini, and Google Gemini Flash 2.0 are now generally available in GitHub Copilot."
+        supports: [date, model, lifecycle]
+  - id: "github-claude3-7-sonnet-ga-2025-04-04"
+    kind: "availability"
+    date:
+      start: "2025-04-04"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["claude-3-7-sonnet"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "GitHub made Claude 3.7 Sonnet generally available in Copilot, promoting it from preview release terms to generally available release terms. It had been in public preview in Copilot since February 2025, and was withdrawn in October 2025."
+    caveat: "The same announcement covers Google Gemini Flash 2.0, which is not recorded because the registry does not carry it and the timeline holds no Copilot arrival for it either. GitHub frames general availability partly in licensing terms: the announcement describes the models as promoted from preview release terms to generally available release terms, which extends indemnification for IP infringement to code generated with them."
+    sources:
+      - publisher: "GitHub"
+        title: "Multiple new models are now generally available in GitHub Copilot"
+        url: "https://github.blog/changelog/2025-04-04-multiple-new-models-are-now-generally-available-in-github-copilot/"
+        primary: true
+        retrieved_at: "2026-07-28"
+        published_at: "2025-04-04"
+        source_type: "changelog"
+        quote: "Anthropic Claude 3.7 Sonnet, Claude 3.5 Sonnet, OpenAI o3-mini, and Google Gemini Flash 2.0 are now generally available in GitHub Copilot."
+        supports: [date, model, lifecycle]
+  - id: "github-o3-mini-ga-2025-04-04"
+    kind: "availability"
+    date:
+      start: "2025-04-04"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["o3-mini"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "GitHub made o3-mini generally available in Copilot, promoting it from preview release terms to generally available release terms. It had been in public preview in Copilot since January 2025, and was withdrawn in October 2025."
+    caveat: "The same announcement covers Google Gemini Flash 2.0, which is not recorded because the registry does not carry it and the timeline holds no Copilot arrival for it either. GitHub frames general availability partly in licensing terms: the announcement describes the models as promoted from preview release terms to generally available release terms, which extends indemnification for IP infringement to code generated with them."
+    sources:
+      - publisher: "GitHub"
+        title: "Multiple new models are now generally available in GitHub Copilot"
+        url: "https://github.blog/changelog/2025-04-04-multiple-new-models-are-now-generally-available-in-github-copilot/"
+        primary: true
+        retrieved_at: "2026-07-28"
+        published_at: "2025-04-04"
+        source_type: "changelog"
+        quote: "Anthropic Claude 3.7 Sonnet, Claude 3.5 Sonnet, OpenAI o3-mini, and Google Gemini Flash 2.0 are now generally available in GitHub Copilot."
+        supports: [date, model, lifecycle]
   - id: "azure-gpt4-1-2025-04-14"
     kind: "availability"
     date:
@@ -3928,12 +4005,15 @@ validation_backlog:
     model_ids: ["gpt-4-1"]
     surface_ids: ["github-copilot", "github-models"]
   - id: "github-o3-mini-claude3-7-ga-2025-04-04"
-    state: "open"
+    state: "promoted"
     working_claim: "o3-mini and Claude 3.7 Sonnet reached GitHub Copilot GA on 4 April 2025."
-    reason: "Discussed and likely correct, but the exact original changelog URLs were not pinned during this pass."
-    target: "Add separate model GA events from GitHub changelog."
+    reason: "Carried from the editorial master backlog without a citation."
+    target: "Pin the dated GitHub changelog entry."
     model_ids: ["o3-mini", "claude-3-7-sonnet"]
     surface_ids: ["github-copilot"]
+    resolution: "The GitHub changelog of 4 April 2025 confirms both, and also covers Claude 3.5 Sonnet, whose general availability was likewise unrecorded. All three are now events, each linked from the preview it followed. Google Gemini Flash 2.0 is named in the same announcement but is not recorded: the registry does not carry it and the timeline holds no Copilot arrival for it."
+    resolved_on: "2026-07-28"
+    promoted_to: "github-o3-mini-ga-2025-04-04"
   - id: "github-opus4-5-preview-ga-2025"
     state: "open"
     working_claim: "Claude Opus 4.5 entered GitHub paid-plan preview on 24 November 2025 and GA on 18 December 2025."
