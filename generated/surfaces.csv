@@ -1,14 +1,14 @@
 id,display_name,owner,family,lineage,vendor_baseline,counts_as,renamed_from,renamed_to,renamed_on,event_count
-openai,OpenAI,OpenAI,,,true,,,,,15
-openai-api,OpenAI API,OpenAI,,,true,,,,,10
+openai,OpenAI,OpenAI,,,true,,,,,19
+openai-api,OpenAI API,OpenAI,,,true,,,,,12
 chatgpt,ChatGPT,OpenAI,,,true,,,,,1
-anthropic-claude,Claude,Anthropic,,,true,,,,,20
+anthropic-claude,Claude,Anthropic,,,true,,,,,21
 google-gemini,Gemini,Google,,,true,,,,,1
 google-gemini-api,Gemini API,Google,,,true,,,,,1
 mistral,Mistral,Mistral AI,,,true,,,,,1
-xai-grok,Grok,xAI,,,true,,,,,1
+xai-grok,Grok,xAI,,,true,,,,,2
 deepseek,DeepSeek,DeepSeek,,,true,,,,,0
-meta,Meta,Meta,,,true,,,,,0
+meta,Meta,Meta,,,true,,,,,1
 moonshot,Moonshot AI,Moonshot AI,,,true,,,,,0
 m365-copilot,Microsoft 365 Copilot,Microsoft,Microsoft 365,,false,microsoft | copilot | m365,,,,24
 m365-admin,Microsoft 365 admin centre,Microsoft,Microsoft 365,,false,microsoft,,,,3

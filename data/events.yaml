@@ -71,7 +71,8 @@ events:
     exposure: "underlying"
     confidence: "confirmed"
     evidence_note: "GitHub introduced Copilot technical preview as an AI pair programmer powered by OpenAI Codex."
-    caveat: "Published as a technical preview."
+    caveat: "Published as a technical preview. This event predates OpenAI's own Codex release by six weeks: GitHub shipped the model before its vendor made it available to anyone else, so the lag against the vendor baseline is negative."
+    tags: ["pre_release_access"]
     relations:
       - type: "previews_for"
         target: "github-copilot-ga-2022-06-21"
@@ -82,6 +83,38 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "openai-codex-2021-08-10"
+    kind: "availability"
+    date:
+      start: "2021-08-10"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["codex"]
+    model_claim: "family"
+    lifecycle: "private_preview"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+    evidence_note: "OpenAI made Codex available in private beta through its API. This is the vendor baseline for the model that had already been powering the GitHub Copilot technical preview for six weeks, so the Microsoft surface precedes the vendor release rather than following it."
+    caveat: "OpenAI's announcement page carries no publication date; the day is taken from same-day press coverage."
+    sources:
+      - publisher: "OpenAI"
+        title: "OpenAI Codex"
+        url: "https://openai.com/index/openai-codex/"
+        primary: true
+        retrieved_at: "2026-07-30"
+        source_type: "announcement"
+        quote: "We're now making OpenAI Codex available in private beta via our API, and we are aiming to scale up as quickly as we can safely."
+        supports: ["model", "lifecycle"]
+      - publisher: "TechCrunch"
+        title: "OpenAI upgrades its natural language AI coder Codex and kicks off private beta"
+        url: "https://techcrunch.com/2021/08/10/openai-upgrades-its-natural-language-ai-coder-codex-and-kicks-off-private-beta/"
+        primary: false
+        retrieved_at: "2026-07-30"
+        published_at: "2021-08-10"
+        source_type: "news"
+        supports: ["date"]
   - id: "azure-openai-preview-2021-11-02"
     kind: "availability"
     date:
@@ -122,6 +155,31 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "openai-dall-e-2-beta-2022-07"
+    kind: "availability"
+    date:
+      start: "2022-07"
+      precision: "month"
+    surface_id: "openai"
+    model_ids: ["dall-e-2"]
+    model_claim: "specific"
+    lifecycle: "limited_preview"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      lifecycle: "supported"
+    evidence_note: "OpenAI's own DALL-E 2 page records the model entering beta in July 2022. The April 2022 unveiling was an announcement with a waitlist, not availability, and beta access was drawn from that waitlist rather than opened to all, so this is a limited preview."
+    caveat: "Month precision, and the date rests on OpenAI's retrospective wording rather than a dated launch post. The later removal of the waitlist is not recorded."
+    sources:
+      - publisher: "OpenAI"
+        title: "DALL-E 2"
+        url: "https://openai.com/index/dall-e-2/"
+        primary: true
+        retrieved_at: "2026-07-30"
+        source_type: "documentation"
+        quote: "became available in beta in July 2022"
+        supports: ["date", "lifecycle"]
   - id: "chatgpt-launch-2022-11-30"
     kind: "availability"
     date:
@@ -311,6 +369,28 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "meta-llama2-2023-07-18"
+    kind: "availability"
+    date:
+      start: "2023-07-18"
+      precision: "day"
+    surface_id: "meta"
+    model_ids: ["llama-2"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Meta released Llama 2 as an open-weight model. Microsoft announced Azure and Windows availability in the same joint announcement, so the Microsoft landing is same-day rather than lagging."
+    sources:
+      - publisher: "Meta AI"
+        title: "Meta and Microsoft Introduce the Next Generation of Llama"
+        url: "https://ai.meta.com/blog/llama-2/"
+        primary: true
+        retrieved_at: "2026-07-30"
+        published_at: "2023-07-18"
+        source_type: "announcement"
+        quote: "Today, we're introducing the availability of Llama 2, the next generation of our open source large language model."
+        supports: ["date", "model", "lifecycle"]
   - id: "meta-llama2-azure-2023-07-18"
     kind: "availability"
     date:
@@ -1331,6 +1411,67 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "changelog"
+  - id: "openai-o3-2025-04-16"
+    kind: "availability"
+    date:
+      start: "2025-04-16"
+      precision: "day"
+    surface_id: "openai"
+    model_ids: ["o3"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "OpenAI released o3 to paid ChatGPT tiers and the API. GitHub Copilot took it to preview the same day."
+    sources:
+      - publisher: "OpenAI"
+        title: "Introducing OpenAI o3 and o4-mini"
+        url: "https://openai.com/index/introducing-o3-and-o4-mini/"
+        primary: true
+        retrieved_at: "2026-07-30"
+        source_type: "announcement"
+        quote: "Today, we're releasing OpenAI o3 and o4-mini, the latest in our o-series of models trained to think for longer before responding."
+        supports: ["model", "lifecycle"]
+      - publisher: "OpenAI"
+        title: "OpenAI o3 and o4-mini System Card"
+        url: "https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf"
+        primary: true
+        retrieved_at: "2026-07-30"
+        published_at: "2025-04-16"
+        source_type: "documentation"
+        quote: "OpenAI o3 and o4-mini System Card OpenAI April 16, 2025"
+        supports: ["date"]
+        note: "The announcement page carries no date; the system card is the dated first-party artefact for the launch."
+  - id: "openai-o4-mini-2025-04-16"
+    kind: "availability"
+    date:
+      start: "2025-04-16"
+      precision: "day"
+    surface_id: "openai"
+    model_ids: ["o4-mini"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "OpenAI released o4-mini alongside o3, to paid ChatGPT tiers and the API. It reached free ChatGPT users on 24 April 2025, which is not recorded here."
+    sources:
+      - publisher: "OpenAI"
+        title: "Introducing OpenAI o3 and o4-mini"
+        url: "https://openai.com/index/introducing-o3-and-o4-mini/"
+        primary: true
+        retrieved_at: "2026-07-30"
+        source_type: "announcement"
+        quote: "Today, we're releasing OpenAI o3 and o4-mini, the latest in our o-series of models trained to think for longer before responding."
+        supports: ["model", "lifecycle"]
+      - publisher: "OpenAI"
+        title: "OpenAI o3 and o4-mini System Card"
+        url: "https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf"
+        primary: true
+        retrieved_at: "2026-07-30"
+        published_at: "2025-04-16"
+        source_type: "documentation"
+        quote: "OpenAI o3 and o4-mini System Card OpenAI April 16, 2025"
+        supports: ["date"]
   - id: "foundry-grok3-2025-05-19"
     kind: "availability"
     date:
@@ -1491,6 +1632,30 @@ events:
         source_type: "changelog"
         quote: "GitHub Copilot will deprecate the following models in github.com/copilot and Copilot IDE model pickers according to the schedule below."
         supports: [date, model, lifecycle]
+  - id: "xai-grok4-2025-07-09"
+    kind: "availability"
+    date:
+      start: "2025-07-09"
+      precision: "day"
+    surface_id: "xai-grok"
+    model_ids: ["grok-4"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      lifecycle: "supported"
+    evidence_note: "xAI launched Grok 4. This is the vendor baseline against which any later Microsoft catalogue landing is measured."
+    caveat: "The launch page describes the model's capabilities without an explicit availability sentence; GA is taken from the launch itself rather than from stated wording."
+    sources:
+      - publisher: "xAI"
+        title: "Grok 4"
+        url: "https://x.ai/news/grok-4"
+        primary: true
+        retrieved_at: "2026-07-30"
+        published_at: "2025-07-09"
+        source_type: "announcement"
+        supports: ["date", "model"]
   - id: "openai-o1-preview-retired-2025-07-28"
     kind: "availability"
     date:
@@ -1634,6 +1799,28 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "openai-gpt5-mini-2025-08-07"
+    kind: "availability"
+    date:
+      start: "2025-08-07"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-5-mini"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "OpenAI shipped GPT-5 in three API sizes on launch day and gpt-5-mini is the middle tier. Recorded separately from openai-gpt5-2025-08-07 because the registry tracks the sizes as distinct models, and GitHub Copilot took gpt-5-mini on its own schedule."
+    sources:
+      - publisher: "OpenAI"
+        title: "Introducing GPT-5 for developers"
+        url: "https://openai.com/index/introducing-gpt-5-for-developers/"
+        primary: true
+        retrieved_at: "2026-07-30"
+        source_type: "announcement"
+        quote: "GPT-5 is available now in the API platform in three sizes: gpt-5, gpt-5-mini, and gpt-5-nano."
+        supports: ["model", "lifecycle"]
+        note: "The page is undated; the day is the GPT-5 launch date already carried by openai-gpt5-2025-08-07."
   - id: "studio-gpt5-2025-08-07"
     kind: "availability"
     date:
@@ -2092,6 +2279,37 @@ events:
         source_type: "release_notes"
         quote: 'Between October 27 and 31, 2025, GPT-4o will be retired in Copilot Studio for agents using generative orchestration, except for GCC customers who can continue using GPT-4o. The new default model is GPT-4.1, which delivers improved performance, reliability, and consistency across experiences. GPT-4o remains available until November 26, 2025 if you turn on the "Continue using retired models" option.'
         supports: [date, model, lifecycle]
+  - id: "openai-gpt5-1-2025-11-12"
+    kind: "availability"
+    date:
+      start: "2025-11-12"
+      precision: "day"
+    surface_id: "openai"
+    model_ids: ["gpt-5-1"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+    evidence_note: "OpenAI released GPT-5.1 in ChatGPT as Instant and Thinking modes. The developer release followed on 13 November; Copilot Studio took it the same day as the product release."
+    caveat: "OpenAI's pages are undated, so the day rests on same-day press coverage. The 13 November API release is not recorded separately."
+    sources:
+      - publisher: "OpenAI"
+        title: "Introducing GPT-5.1 for developers"
+        url: "https://openai.com/index/gpt-5-1-for-developers/"
+        primary: true
+        retrieved_at: "2026-07-30"
+        source_type: "announcement"
+        supports: ["model", "lifecycle"]
+      - publisher: "MacRumors"
+        title: "OpenAI Launches Smarter, More Conversational ChatGPT 5.1"
+        url: "https://www.macrumors.com/2025/11/12/openai-chatgpt-5-1-launch/"
+        primary: false
+        retrieved_at: "2026-07-30"
+        published_at: "2025-11-12"
+        source_type: "news"
+        supports: ["date"]
   - id: "studio-gpt5-1-2025-11-12"
     kind: "availability"
     date:
@@ -3180,6 +3398,38 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "anthropic-mythos5-2026-06-09"
+    kind: "availability"
+    date:
+      start: "2026-06-09"
+      precision: "day"
+    surface_id: "anthropic-claude"
+    model_ids: ["claude-mythos-5"]
+    model_claim: "specific"
+    lifecycle: "limited_preview"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+    evidence_note: "Anthropic released Claude Mythos 5 on the same day as Claude Fable 5. Fable 5 went to the public; Mythos 5 went only to vetted testing partners, which is why the two share a date but not a lifecycle."
+    caveat: "Anthropic's page is undated; the day rests on same-day press coverage and on the already-recorded Fable 5 release."
+    sources:
+      - publisher: "Anthropic"
+        title: "Claude Mythos"
+        url: "https://www.anthropic.com/claude/mythos"
+        primary: true
+        retrieved_at: "2026-07-30"
+        source_type: "documentation"
+        quote: "Claude Mythos 5 is available to a small set of initial testing partners for cybersecurity, and soon, biology research."
+        supports: ["model", "lifecycle"]
+      - publisher: "CNBC"
+        title: "Anthropic releases Mythos-like AI model to the public, Claude Fable 5"
+        url: "https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html"
+        primary: false
+        retrieved_at: "2026-07-30"
+        published_at: "2026-06-09"
+        source_type: "news"
+        supports: ["date"]
   - id: "foundry-fable5-2026-06-09"
     kind: "availability"
     date:
@@ -3849,9 +4099,16 @@ validation_backlog:
   - id: "deepseek-r1-vendor-2025-01-20"
     state: "open"
     working_claim: "DeepSeek-R1 released 20 January 2025."
-    reason: "Microsoft's 29 January landing is confirmed; the vendor release row still needs a durable first-party citation."
-    target: "Pin the official DeepSeek-R1 release source."
+    reason: "Microsoft's 29 January landing is confirmed; the vendor release row still needs a durable first-party citation. The 20 January 2025 date is corroborated by many secondary sources but none of them is DeepSeek. The obvious candidate URL under api-docs.deepseek.com was checked and is the API quickstart, not a news post."
+    target: "Pin the DeepSeek-R1 release commit or release tag on the deepseek-ai/DeepSeek-R1 GitHub repository, or the dated arXiv submission of the R1 technical report. Both are first-party and carry real timestamps, unlike the vendor's documentation site."
     model_ids: ["deepseek-r1"]
+    surface_ids: ["deepseek"]
+  - id: "deepseek-v3-2-vendor-release-2025-12"
+    state: "open"
+    working_claim: "DeepSeek V3.2 and V3.2-Speciale were released by DeepSeek shortly before Microsoft Foundry took both on 15 December 2025."
+    reason: "Both models entered the Foundry catalogue on the same day with a confirmed source, but neither has a vendor release event, so the lag for both is unmeasurable rather than zero."
+    target: "Pin the DeepSeek release for each model. Prefer the GitHub repository release or the dated technical report over the documentation site, which carries no post dates. Note that Speciale may have shipped alongside V3.2 or separately; do not assume one date covers both."
+    model_ids: ["deepseek-v3-2", "deepseek-v3-2-speciale"]
     surface_ids: ["deepseek"]
   - id: "deepseek-v3-first-microsoft-availability-2024"
     state: "open"
@@ -4074,6 +4331,13 @@ validation_backlog:
     target: "Verify the Google vendor release and GitHub preview dates independently."
     model_ids: ["gemini-2-5-pro"]
     surface_ids: ["github-copilot"]
+  - id: "gpt-5-5-variants-vendor-release-2026-04"
+    state: "open"
+    working_claim: "GPT-5.5 Instant and GPT-5.5 Thinking were released by OpenAI on 23 April 2026, the date already recorded for GPT-5.5 itself."
+    reason: "The registry tracks gpt-5-5, gpt-5-5-instant and gpt-5-5-thinking as three models, but only gpt-5-5 has a vendor release event. The two variants appear on Microsoft surfaces from late April 2026, so a baseline almost certainly exists; assuming it matches the gpt-5-5 date without checking would manufacture a zero-day lag that has not been verified."
+    target: "Confirm from OpenAI whether Instant and Thinking shipped on 23 April 2026 with GPT-5.5 or followed later, as the GPT-5.1 Instant and Thinking modes did. If they shipped together, record two events on that date; if not, record the actual dates."
+    model_ids: ["gpt-5-5-instant", "gpt-5-5-thinking"]
+    surface_ids: ["openai", "openai-api"]
   - id: "gpt5-6-copilot-studio-2026"
     state: "open"
     working_claim: "No reliable Copilot Studio GPT-5.6 availability event found as of 26 July 2026."
@@ -4083,9 +4347,9 @@ validation_backlog:
     surface_ids: ["copilot-studio"]
   - id: "kimi-k2-7-vendor-release-2026"
     state: "open"
-    working_claim: "Kimi K2.7/K2.7 Code was newly released around the start of July 2026."
-    reason: "GitHub's 1 July Copilot event is confirmed; Moonshot's vendor release date remains unresolved."
-    target: "Pin a Moonshot AI primary launch source."
+    working_claim: "Kimi K2.7 Code was released by Moonshot AI on 12 June 2026, roughly three weeks before GitHub Copilot took it."
+    reason: "GitHub's 1 July Copilot event is confirmed; Moonshot's vendor release date remains unresolved. Trade coverage from July 2026 dates the release to 12 June 2026 and states that Moonshot published no standalone announcement post, distributing the model through a Hugging Face model card and its API instead. That leaves no first-party announcement to cite, and the working claim has been corrected from 'around the start of July' to the earlier date on secondary evidence alone."
+    target: "Pin the Hugging Face model card commit date or a Moonshot API changelog entry. A model card is a usable primary artefact where no announcement exists, as it is published by the vendor; confirm the date it first appeared rather than its current revision."
     model_ids: ["kimi-k2-7-code"]
     surface_ids: ["moonshot"]
   - id: "m365-anthropic-eu-setting-2026-04"
@@ -4148,19 +4412,25 @@ validation_backlog:
     model_ids: []
     surface_ids: ["microsoft-foundry"]
   - id: "openai-codex-public-release-2021-08-10"
-    state: "open"
+    state: "promoted"
     working_claim: "OpenAI publicly introduced/released Codex on 10 August 2021."
     reason: "Useful contrast with GitHub Copilot's 29 June preview, but a durable first-party OpenAI launch URL was not pinned during this pass."
     target: "Locate an archived/first-party OpenAI Codex launch announcement and verify the date convention."
     model_ids: ["codex"]
     surface_ids: ["openai"]
+    resolution: "The first-party OpenAI Codex page was pinned and states private beta rather than public release, so the event was recorded as private_preview. The page is undated, so the day rests on same-day TechCrunch coverage and the event carries confidence_detail date: supported. Recorded on openai-api to match the existing Codex retirement event rather than on openai as this item assumed."
+    resolved_on: "2026-07-30"
+    promoted_to: "openai-codex-2021-08-10"
   - id: "openai-gpt5-1-vendor-2025-11"
-    state: "open"
+    state: "promoted"
     working_claim: "GPT-5.1 had a product release on 12 November 2025 and API release around 13 November."
     reason: "The sourced pack contains Studio availability but no vendor release event."
     target: "Pin the OpenAI first-party release source and date convention."
     model_ids: ["gpt-5-1"]
     surface_ids: ["openai", "openai-api"]
+    resolution: "The 12 November product release is recorded as the vendor baseline on the openai surface. OpenAI's pages carry no publication date, so the day rests on same-day press coverage and the event carries confidence_detail date: supported. The 13 November developer release was left unrecorded: it would not change the baseline, and splitting product from API release is a convention the dataset does not yet apply consistently."
+    resolved_on: "2026-07-30"
+    promoted_to: "openai-gpt5-1-2025-11-12"
   - id: "openai-model-deprecations"
     state: "open"
     working_claim: "OpenAI publishes dated shutdown records for its models, several of which the timeline carries as vendor releases with no end."

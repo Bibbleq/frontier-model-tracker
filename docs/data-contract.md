@@ -201,6 +201,18 @@ been researched, not that the model never arrived. Rendering it identically to
 `not_recorded` — or as a gap in a chart — turns a gap in research into an
 apparent finding. Show the three unknowns distinguishably, or show none of them.
 
+**`lag_days_min` and `lag_days_max` can be negative.** A Microsoft surface can
+carry a model before its vendor releases it, because Microsoft sometimes has
+pre-release access. GitHub Copilot ran on OpenAI Codex from 29 June 2021 and
+OpenAI opened the Codex private beta on 10 August, so Codex reports **-42 days**
+against the vendor baseline. This is a fact about the relationship, not an error
+in the data.
+
+A renderer that assumes lag is non-negative will produce a negative bar width, a
+reversed axis, or a date before the origin. Clamp for layout if you must, but do
+not clamp the number you display, and do not drop the row: "arrived before the
+vendor released it" is one of the more interesting things the dataset says.
+
 Every row also has a `measure`, either `any_exposure` or
 `selectable_or_default`. Do not average or merge them. GPT-4.1 reached a
 Microsoft surface in 0 days via the Foundry catalogue and became selectable in

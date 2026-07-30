@@ -494,7 +494,19 @@ def check_relations(events: list[dict]) -> None:
 
 
 def check_vendor_baseline(events: list[dict], models: dict, surfaces: dict) -> None:
-    """A model cannot reach a Microsoft surface before its vendor released it."""
+    """A model cannot reach a Microsoft surface before its vendor released it,
+    unless the event declares pre-release access.
+
+    The usual case is an error: a partner surface dated before the vendor
+    release almost always means an announcement has been recorded as
+    availability, or a date is wrong. But it is not impossible. GitHub Copilot
+    ran on Codex from 29 June 2021, six weeks before OpenAI opened the Codex
+    private beta on 10 August, because GitHub had the model first.
+
+    So the exception is allowed but must be stated in the data, with a
+    `pre_release_access` tag on the partner event, and it is reported as a
+    warning rather than passing silently.
+    """
     baseline: dict[str, str] = {}
     for event in _availability(events):
         if surfaces[event["surface_id"]].get("vendor_baseline"):
@@ -509,10 +521,14 @@ def check_vendor_baseline(events: list[dict], models: dict, surfaces: dict) -> N
             continue
         for model_id in event["model_ids"]:
             if model_id in baseline and event["date"]["start"] < baseline[model_id]:
-                fail(
-                    f"{event['id']}: dated {event['date']['start']}, before {model_id} "
+                detail = (
+                    f"dated {event['date']['start']}, before {model_id} "
                     f"was released by its vendor on {baseline[model_id]}"
                 )
+                if "pre_release_access" in event.get("tags", []):
+                    warn("pre_release_access", event["id"], detail)
+                else:
+                    fail(f"{event['id']}: {detail}")
 
     missing = {
         model_id
