@@ -622,9 +622,9 @@ grok-3,Grok 3,xAI,studio,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,p
 grok-3,Grok 3,xAI,github_copilot,any_exposure,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,unknown_open_research
 grok-3,Grok 3,xAI,github_copilot,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,unknown_open_research
 grok-3,Grok 3,xAI,foundry,any_exposure,xai-grok3-2025-02-19,2025-02-19,public_preview,foundry-grok3-2025-05-19,2025-05-19,azure-ai-foundry,catalogue,ga,89,89,exact
-grok-3,Grok 3,xAI,foundry,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
+grok-3,Grok 3,xAI,foundry,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,unknown_open_research
 grok-3-mini,Grok 3 Mini,xAI,microsoft,any_exposure,xai-grok3-2025-02-19,2025-02-19,public_preview,foundry-grok3-mini-2025-05-19,2025-05-19,azure-ai-foundry,catalogue,ga,89,89,exact
-grok-3-mini,Grok 3 Mini,xAI,microsoft,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
+grok-3-mini,Grok 3 Mini,xAI,microsoft,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,unknown_open_research
 grok-3-mini,Grok 3 Mini,xAI,copilot,any_exposure,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
 grok-3-mini,Grok 3 Mini,xAI,copilot,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
 grok-3-mini,Grok 3 Mini,xAI,m365,any_exposure,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
@@ -634,7 +634,7 @@ grok-3-mini,Grok 3 Mini,xAI,studio,selectable_or_default,xai-grok3-2025-02-19,20
 grok-3-mini,Grok 3 Mini,xAI,github_copilot,any_exposure,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
 grok-3-mini,Grok 3 Mini,xAI,github_copilot,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
 grok-3-mini,Grok 3 Mini,xAI,foundry,any_exposure,xai-grok3-2025-02-19,2025-02-19,public_preview,foundry-grok3-mini-2025-05-19,2025-05-19,azure-ai-foundry,catalogue,ga,89,89,exact
-grok-3-mini,Grok 3 Mini,xAI,foundry,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
+grok-3-mini,Grok 3 Mini,xAI,foundry,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,unknown_open_research
 grok-4,Grok 4,xAI,microsoft,any_exposure,xai-grok4-2025-07-09,2025-07-09,ga,xai-grok4-foundry-2025-09-29,2025-09-29,azure-ai-foundry,catalogue,ga,82,82,exact
 grok-4,Grok 4,xAI,microsoft,selectable_or_default,xai-grok4-2025-07-09,2025-07-09,ga,,,,,,,,unknown_open_research
 grok-4,Grok 4,xAI,copilot,any_exposure,xai-grok4-2025-07-09,2025-07-09,ga,,,,,,,,unknown_open_research

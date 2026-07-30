@@ -133,9 +133,9 @@ gpt-5-6-terra,GPT-5.6 Terra,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft
 gpt-5-6-terra,GPT-5.6 Terra,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-gpt5-6-2026-07-09,2026-07-09,day,2026-07-28,,0
 gpt-5-mini,GPT-5 mini,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-gpt5-mini-ga-2025-09-09,2025-09-09,day,2026-07-28,,0
 gpt-5-mini,GPT-5 mini,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt5-mini-2025-08-07,2025-08-07,day,2026-07-28,,1
-grok-3,Grok 3,xAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,retired,catalogue,true,foundry-grok3-retired-2026-05-01,2026-05-01,day,2026-07-28,,0
+grok-3,Grok 3,xAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,retired,catalogue,true,foundry-grok3-retired-2026-05-01,2026-05-01,day,2026-07-28,,1
 grok-3,Grok 3,xAI,xai-grok,Grok,,public_preview,not_applicable,false,xai-grok3-2025-02-19,2025-02-19,day,2026-07-28,,0
-grok-3-mini,Grok 3 Mini,xAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,retired,catalogue,true,foundry-grok3-mini-retired-2026-05-01,2026-05-01,day,2026-07-28,,0
+grok-3-mini,Grok 3 Mini,xAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,retired,catalogue,true,foundry-grok3-mini-retired-2026-05-01,2026-05-01,day,2026-07-28,,1
 grok-3-mini,Grok 3 Mini,xAI,xai-grok,Grok,,public_preview,not_applicable,false,xai-grok3-2025-02-19,2025-02-19,day,2026-07-28,,0
 grok-4,Grok 4,xAI,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,xai-grok4-foundry-2025-09-29,2025-09-29,day,2026-07-28,,0
 grok-4,Grok 4,xAI,xai-grok,Grok,,ga,not_applicable,false,xai-grok4-2025-07-09,2025-07-09,day,2026-07-28,,0
