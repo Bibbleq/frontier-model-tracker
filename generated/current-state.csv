@@ -134,6 +134,7 @@ grok-4-5,Grok 4.5,xAI,github-copilot,GitHub Copilot,microsoft | copilot | github
 grok-4-5,Grok 4.5,xAI,xai-grok,Grok,,ga,not_applicable,false,xai-grok4-5-2026-07-09,2026-07-09,day,2026-07-28,,1
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-kimi-k2-7-enterprise-2026-07-07,2026-07-07,day,2026-07-28,,0
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,moonshot,Moonshot AI,,ga,not_applicable,false,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,day,2026-07-28,,0
+kimi-k3,Kimi K3,Moonshot AI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-kimi-k3-2026-07-28,2026-07-28,day,2026-07-28,,0
 llama-2,Llama 2,Meta,meta,Meta,,ga,not_applicable,false,meta-llama2-2023-07-18,2023-07-18,day,2026-07-28,,0
 llama-2,Llama 2,Meta,azure-ai-catalog,Azure AI model catalogue,microsoft | foundry,ga,catalogue,false,meta-llama2-azure-2023-07-18,2023-07-18,day,2026-07-28,,0
 mistral-3,Mistral 3,Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral3-2025-12-02,2025-12-02,day,2026-07-28,,0

@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 197,
-    "backlog": 54,
-    "sources": 226,
-    "models": 65,
+    "events": 198,
+    "backlog": 55,
+    "sources": 228,
+    "models": 66,
     "surfaces": 23,
     "confirmed": 182,
-    "supported": 15
+    "supported": 16
   },
   "kinds": {
     "announcement": 10,
-    "availability": 175,
+    "availability": 176,
     "milestone": 6,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 41,
+    "open": 42,
     "promoted": 11
   },
   "warnings": [
@@ -64,6 +64,11 @@
       "code": "missing_archive",
       "subject": "foundry-grok3-retired-2026-05-01",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-kimi-k3-2026-07-28",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/model-retirements"
     },
     {
       "code": "missing_archive",
@@ -201,6 +206,11 @@
       "message": "no vendor release event, so lag cannot be derived"
     },
     {
+      "code": "no_vendor_baseline",
+      "subject": "kimi-k3",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
       "code": "pre_release_access",
       "subject": "github-copilot-preview-codex-2021-06-29",
       "message": "dated 2021-06-29, before codex was released by its vendor on 2021-08-10"
@@ -278,8 +288,8 @@
   ],
   "warning_counts": {
     "backlog_without_surface": 1,
-    "missing_archive": 34,
-    "no_vendor_baseline": 1,
+    "missing_archive": 35,
+    "no_vendor_baseline": 2,
     "pre_release_access": 1,
     "selectable_on_vendor_surface": 1,
     "suspicious_day_precision": 11,
@@ -295,7 +305,7 @@
     "exact": 283,
     "not_recorded": 356,
     "range": 22,
-    "unknown_no_baseline": 24,
+    "unknown_no_baseline": 36,
     "unknown_open_research": 95
   }
 }
