@@ -1,23 +1,23 @@
 {
   "totals": {
-    "events": 191,
+    "events": 197,
     "backlog": 54,
-    "sources": 219,
+    "sources": 226,
     "models": 65,
     "surfaces": 23,
-    "confirmed": 177,
-    "supported": 14
+    "confirmed": 182,
+    "supported": 15
   },
   "kinds": {
     "announcement": 10,
-    "availability": 169,
+    "availability": 175,
     "milestone": 6,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 45,
-    "promoted": 7
+    "open": 41,
+    "promoted": 11
   },
   "warnings": [
     {
@@ -89,6 +89,16 @@
       "code": "missing_archive",
       "subject": "m365-openai-operated-policy-2026-07-24",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-365/copilot/openai-subprocessor"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "moonshot-kimi-k2-7-code-2026-06-12",
+      "message": "documentation source has no archived_url and may be edited in place: https://www.kimi.com/resources/kimi-k2-7-code"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "moonshot-kimi-k2-7-code-2026-06-12",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
     },
     {
       "code": "missing_archive",
@@ -187,38 +197,18 @@
     },
     {
       "code": "no_vendor_baseline",
-      "subject": "deepseek-r1",
-      "message": "no vendor release event, so lag cannot be derived"
-    },
-    {
-      "code": "no_vendor_baseline",
-      "subject": "deepseek-v3-2",
-      "message": "no vendor release event, so lag cannot be derived"
-    },
-    {
-      "code": "no_vendor_baseline",
-      "subject": "deepseek-v3-2-speciale",
-      "message": "no vendor release event, so lag cannot be derived"
-    },
-    {
-      "code": "no_vendor_baseline",
-      "subject": "gpt-5-5-instant",
-      "message": "no vendor release event, so lag cannot be derived"
-    },
-    {
-      "code": "no_vendor_baseline",
       "subject": "gpt-5-5-thinking",
-      "message": "no vendor release event, so lag cannot be derived"
-    },
-    {
-      "code": "no_vendor_baseline",
-      "subject": "kimi-k2-7-code",
       "message": "no vendor release event, so lag cannot be derived"
     },
     {
       "code": "pre_release_access",
       "subject": "github-copilot-preview-codex-2021-06-29",
       "message": "dated 2021-06-29, before codex was released by its vendor on 2021-08-10"
+    },
+    {
+      "code": "selectable_on_vendor_surface",
+      "subject": "openai-gpt5-5-instant-2026-05-05",
+      "message": "selectable exposure on a vendor baseline surface"
     },
     {
       "code": "suspicious_day_precision",
@@ -228,6 +218,16 @@
     {
       "code": "suspicious_day_precision",
       "subject": "azure-gpt4-turbo-vision-ga-2024-05-01",
+      "message": "day precision on the first of the month may be an invented day"
+    },
+    {
+      "code": "suspicious_day_precision",
+      "subject": "deepseek-v3-2-2025-12-01",
+      "message": "day precision on the first of the month may be an invented day"
+    },
+    {
+      "code": "suspicious_day_precision",
+      "subject": "deepseek-v3-2-speciale-2025-12-01",
       "message": "day precision on the first of the month may be an invented day"
     },
     {
@@ -278,27 +278,24 @@
   ],
   "warning_counts": {
     "backlog_without_surface": 1,
-    "missing_archive": 32,
-    "no_vendor_baseline": 6,
+    "missing_archive": 34,
+    "no_vendor_baseline": 1,
     "pre_release_access": 1,
-    "suspicious_day_precision": 9,
+    "selectable_on_vendor_surface": 1,
+    "suspicious_day_precision": 11,
     "unquoted_documentation": 2
   },
   "coverage": {
     "models_without_events": [
-      "deepseek-v3",
       "gemini-2-5-pro"
     ],
-    "surfaces_without_events": [
-      "deepseek",
-      "moonshot"
-    ]
+    "surfaces_without_events": []
   },
   "lag_certainty": {
-    "exact": 268,
-    "not_recorded": 309,
-    "range": 16,
-    "unknown_no_baseline": 92,
+    "exact": 283,
+    "not_recorded": 356,
+    "range": 22,
+    "unknown_no_baseline": 24,
     "unknown_open_research": 95
   }
 }

@@ -275,54 +275,54 @@ dall-e-2,DALL-E 2,OpenAI,github_copilot,any_exposure,openai-dall-e-2-beta-2022-0
 dall-e-2,DALL-E 2,OpenAI,github_copilot,selectable_or_default,openai-dall-e-2-beta-2022-07,2022-07-01,limited_preview,,,,,,,,not_recorded
 dall-e-2,DALL-E 2,OpenAI,foundry,any_exposure,openai-dall-e-2-beta-2022-07,2022-07-01,limited_preview,azure-openai-ga-2023-01-17,2023-01-17,azure-openai,catalogue,ga,170,200,range
 dall-e-2,DALL-E 2,OpenAI,foundry,selectable_or_default,openai-dall-e-2-beta-2022-07,2022-07-01,limited_preview,,,,,,,,not_recorded
-deepseek-r1,DeepSeek-R1,DeepSeek,microsoft,any_exposure,,,,deepseek-r1-foundry-2025-01-29,2025-01-29,azure-ai-foundry,catalogue,public_preview,,,unknown_no_baseline
-deepseek-r1,DeepSeek-R1,DeepSeek,microsoft,selectable_or_default,,,,,,,,,,,unknown_open_research
-deepseek-r1,DeepSeek-R1,DeepSeek,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-r1,DeepSeek-R1,DeepSeek,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-r1,DeepSeek-R1,DeepSeek,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-r1,DeepSeek-R1,DeepSeek,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-r1,DeepSeek-R1,DeepSeek,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-r1,DeepSeek-R1,DeepSeek,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-r1,DeepSeek-R1,DeepSeek,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-r1,DeepSeek-R1,DeepSeek,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-r1,DeepSeek-R1,DeepSeek,foundry,any_exposure,,,,deepseek-r1-foundry-2025-01-29,2025-01-29,azure-ai-foundry,catalogue,public_preview,,,unknown_no_baseline
-deepseek-r1,DeepSeek-R1,DeepSeek,foundry,selectable_or_default,,,,,,,,,,,unknown_open_research
-deepseek-v3,DeepSeek-V3,DeepSeek,microsoft,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-v3,DeepSeek-V3,DeepSeek,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3,DeepSeek-V3,DeepSeek,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-v3,DeepSeek-V3,DeepSeek,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3,DeepSeek-V3,DeepSeek,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-v3,DeepSeek-V3,DeepSeek,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3,DeepSeek-V3,DeepSeek,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-v3,DeepSeek-V3,DeepSeek,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3,DeepSeek-V3,DeepSeek,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-v3,DeepSeek-V3,DeepSeek,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3,DeepSeek-V3,DeepSeek,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-v3,DeepSeek-V3,DeepSeek,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2,DeepSeek V3.2,DeepSeek,microsoft,any_exposure,,,,foundry-deepseek-v3-2-2025-12-15,2025-12-15,microsoft-foundry,catalogue,public_preview,,,unknown_no_baseline
-deepseek-v3-2,DeepSeek V3.2,DeepSeek,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2,DeepSeek V3.2,DeepSeek,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2,DeepSeek V3.2,DeepSeek,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2,DeepSeek V3.2,DeepSeek,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2,DeepSeek V3.2,DeepSeek,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2,DeepSeek V3.2,DeepSeek,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2,DeepSeek V3.2,DeepSeek,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2,DeepSeek V3.2,DeepSeek,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2,DeepSeek V3.2,DeepSeek,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2,DeepSeek V3.2,DeepSeek,foundry,any_exposure,,,,foundry-deepseek-v3-2-2025-12-15,2025-12-15,microsoft-foundry,catalogue,public_preview,,,unknown_no_baseline
-deepseek-v3-2,DeepSeek V3.2,DeepSeek,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,microsoft,any_exposure,,,,foundry-deepseek-v3-2-speciale-2025-12-15,2025-12-15,microsoft-foundry,catalogue,public_preview,,,unknown_no_baseline
-deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,foundry,any_exposure,,,,foundry-deepseek-v3-2-speciale-2025-12-15,2025-12-15,microsoft-foundry,catalogue,public_preview,,,unknown_no_baseline
-deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+deepseek-r1,DeepSeek-R1,DeepSeek,microsoft,any_exposure,deepseek-r1-2025-01-20,2025-01-20,ga,deepseek-r1-foundry-2025-01-29,2025-01-29,azure-ai-foundry,catalogue,public_preview,9,9,exact
+deepseek-r1,DeepSeek-R1,DeepSeek,microsoft,selectable_or_default,deepseek-r1-2025-01-20,2025-01-20,ga,,,,,,,,unknown_open_research
+deepseek-r1,DeepSeek-R1,DeepSeek,copilot,any_exposure,deepseek-r1-2025-01-20,2025-01-20,ga,,,,,,,,not_recorded
+deepseek-r1,DeepSeek-R1,DeepSeek,copilot,selectable_or_default,deepseek-r1-2025-01-20,2025-01-20,ga,,,,,,,,not_recorded
+deepseek-r1,DeepSeek-R1,DeepSeek,m365,any_exposure,deepseek-r1-2025-01-20,2025-01-20,ga,,,,,,,,not_recorded
+deepseek-r1,DeepSeek-R1,DeepSeek,m365,selectable_or_default,deepseek-r1-2025-01-20,2025-01-20,ga,,,,,,,,not_recorded
+deepseek-r1,DeepSeek-R1,DeepSeek,studio,any_exposure,deepseek-r1-2025-01-20,2025-01-20,ga,,,,,,,,not_recorded
+deepseek-r1,DeepSeek-R1,DeepSeek,studio,selectable_or_default,deepseek-r1-2025-01-20,2025-01-20,ga,,,,,,,,not_recorded
+deepseek-r1,DeepSeek-R1,DeepSeek,github_copilot,any_exposure,deepseek-r1-2025-01-20,2025-01-20,ga,,,,,,,,not_recorded
+deepseek-r1,DeepSeek-R1,DeepSeek,github_copilot,selectable_or_default,deepseek-r1-2025-01-20,2025-01-20,ga,,,,,,,,not_recorded
+deepseek-r1,DeepSeek-R1,DeepSeek,foundry,any_exposure,deepseek-r1-2025-01-20,2025-01-20,ga,deepseek-r1-foundry-2025-01-29,2025-01-29,azure-ai-foundry,catalogue,public_preview,9,9,exact
+deepseek-r1,DeepSeek-R1,DeepSeek,foundry,selectable_or_default,deepseek-r1-2025-01-20,2025-01-20,ga,,,,,,,,unknown_open_research
+deepseek-v3,DeepSeek-V3,DeepSeek,microsoft,any_exposure,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
+deepseek-v3,DeepSeek-V3,DeepSeek,microsoft,selectable_or_default,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
+deepseek-v3,DeepSeek-V3,DeepSeek,copilot,any_exposure,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
+deepseek-v3,DeepSeek-V3,DeepSeek,copilot,selectable_or_default,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
+deepseek-v3,DeepSeek-V3,DeepSeek,m365,any_exposure,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
+deepseek-v3,DeepSeek-V3,DeepSeek,m365,selectable_or_default,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
+deepseek-v3,DeepSeek-V3,DeepSeek,studio,any_exposure,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
+deepseek-v3,DeepSeek-V3,DeepSeek,studio,selectable_or_default,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
+deepseek-v3,DeepSeek-V3,DeepSeek,github_copilot,any_exposure,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
+deepseek-v3,DeepSeek-V3,DeepSeek,github_copilot,selectable_or_default,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
+deepseek-v3,DeepSeek-V3,DeepSeek,foundry,any_exposure,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
+deepseek-v3,DeepSeek-V3,DeepSeek,foundry,selectable_or_default,deepseek-v3-2024-12-26,2024-12-26,ga,,,,,,,,not_recorded
+deepseek-v3-2,DeepSeek V3.2,DeepSeek,microsoft,any_exposure,deepseek-v3-2-2025-12-01,2025-12-01,ga,foundry-deepseek-v3-2-2025-12-15,2025-12-15,microsoft-foundry,catalogue,public_preview,14,14,exact
+deepseek-v3-2,DeepSeek V3.2,DeepSeek,microsoft,selectable_or_default,deepseek-v3-2-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2,DeepSeek V3.2,DeepSeek,copilot,any_exposure,deepseek-v3-2-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2,DeepSeek V3.2,DeepSeek,copilot,selectable_or_default,deepseek-v3-2-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2,DeepSeek V3.2,DeepSeek,m365,any_exposure,deepseek-v3-2-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2,DeepSeek V3.2,DeepSeek,m365,selectable_or_default,deepseek-v3-2-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2,DeepSeek V3.2,DeepSeek,studio,any_exposure,deepseek-v3-2-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2,DeepSeek V3.2,DeepSeek,studio,selectable_or_default,deepseek-v3-2-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2,DeepSeek V3.2,DeepSeek,github_copilot,any_exposure,deepseek-v3-2-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2,DeepSeek V3.2,DeepSeek,github_copilot,selectable_or_default,deepseek-v3-2-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2,DeepSeek V3.2,DeepSeek,foundry,any_exposure,deepseek-v3-2-2025-12-01,2025-12-01,ga,foundry-deepseek-v3-2-2025-12-15,2025-12-15,microsoft-foundry,catalogue,public_preview,14,14,exact
+deepseek-v3-2,DeepSeek V3.2,DeepSeek,foundry,selectable_or_default,deepseek-v3-2-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,microsoft,any_exposure,deepseek-v3-2-speciale-2025-12-01,2025-12-01,ga,foundry-deepseek-v3-2-speciale-2025-12-15,2025-12-15,microsoft-foundry,catalogue,public_preview,14,14,exact
+deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,microsoft,selectable_or_default,deepseek-v3-2-speciale-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,copilot,any_exposure,deepseek-v3-2-speciale-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,copilot,selectable_or_default,deepseek-v3-2-speciale-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,m365,any_exposure,deepseek-v3-2-speciale-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,m365,selectable_or_default,deepseek-v3-2-speciale-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,studio,any_exposure,deepseek-v3-2-speciale-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,studio,selectable_or_default,deepseek-v3-2-speciale-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,github_copilot,any_exposure,deepseek-v3-2-speciale-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,github_copilot,selectable_or_default,deepseek-v3-2-speciale-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,foundry,any_exposure,deepseek-v3-2-speciale-2025-12-01,2025-12-01,ga,foundry-deepseek-v3-2-speciale-2025-12-15,2025-12-15,microsoft-foundry,catalogue,public_preview,14,14,exact
+deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,foundry,selectable_or_default,deepseek-v3-2-speciale-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
 gemini-1-5-pro,Gemini 1.5 Pro,Google,microsoft,any_exposure,google-gemini1-5-pro-2024-02-15,2024-02-15,private_preview,,,,,,,,unknown_open_research
 gemini-1-5-pro,Gemini 1.5 Pro,Google,microsoft,selectable_or_default,google-gemini1-5-pro-2024-02-15,2024-02-15,private_preview,,,,,,,,unknown_open_research
 gemini-1-5-pro,Gemini 1.5 Pro,Google,copilot,any_exposure,google-gemini1-5-pro-2024-02-15,2024-02-15,private_preview,,,,,,,,unknown_open_research
@@ -527,18 +527,18 @@ gpt-5-5,GPT-5.5,OpenAI,github_copilot,any_exposure,openai-gpt5-5-2026-04-23,2026
 gpt-5-5,GPT-5.5,OpenAI,github_copilot,selectable_or_default,openai-gpt5-5-2026-04-23,2026-04-23,ga,github-gpt5-5-ga-2026-04-24,2026-04-24,github-copilot,selectable,ga,1,1,exact
 gpt-5-5,GPT-5.5,OpenAI,foundry,any_exposure,openai-gpt5-5-2026-04-23,2026-04-23,ga,,,,,,,,unknown_open_research
 gpt-5-5,GPT-5.5,OpenAI,foundry,selectable_or_default,openai-gpt5-5-2026-04-23,2026-04-23,ga,,,,,,,,unknown_open_research
-gpt-5-5-instant,GPT-5.5 Instant,OpenAI,microsoft,any_exposure,,,,foundry-gpt5-5-instant-2026-05-07,2026-05-07,microsoft-foundry,catalogue,ga,,,unknown_no_baseline
-gpt-5-5-instant,GPT-5.5 Instant,OpenAI,microsoft,selectable_or_default,,,,m365-gpt5-5-instant-2026-05-07,2026-05-07,m365-copilot,selectable,ga,,,unknown_no_baseline
-gpt-5-5-instant,GPT-5.5 Instant,OpenAI,copilot,any_exposure,,,,m365-gpt5-5-instant-2026-05-07,2026-05-07,m365-copilot,selectable,ga,,,unknown_no_baseline
-gpt-5-5-instant,GPT-5.5 Instant,OpenAI,copilot,selectable_or_default,,,,m365-gpt5-5-instant-2026-05-07,2026-05-07,m365-copilot,selectable,ga,,,unknown_no_baseline
-gpt-5-5-instant,GPT-5.5 Instant,OpenAI,m365,any_exposure,,,,m365-gpt5-5-instant-2026-05-07,2026-05-07,m365-copilot,selectable,ga,,,unknown_no_baseline
-gpt-5-5-instant,GPT-5.5 Instant,OpenAI,m365,selectable_or_default,,,,m365-gpt5-5-instant-2026-05-07,2026-05-07,m365-copilot,selectable,ga,,,unknown_no_baseline
-gpt-5-5-instant,GPT-5.5 Instant,OpenAI,studio,any_exposure,,,,studio-gpt5-5-chat-2026-05-07,2026-05-07,copilot-studio,selectable,public_preview,,,unknown_no_baseline
-gpt-5-5-instant,GPT-5.5 Instant,OpenAI,studio,selectable_or_default,,,,studio-gpt5-5-chat-2026-05-07,2026-05-07,copilot-studio,selectable,public_preview,,,unknown_no_baseline
-gpt-5-5-instant,GPT-5.5 Instant,OpenAI,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
-gpt-5-5-instant,GPT-5.5 Instant,OpenAI,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-gpt-5-5-instant,GPT-5.5 Instant,OpenAI,foundry,any_exposure,,,,foundry-gpt5-5-instant-2026-05-07,2026-05-07,microsoft-foundry,catalogue,ga,,,unknown_no_baseline
-gpt-5-5-instant,GPT-5.5 Instant,OpenAI,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+gpt-5-5-instant,GPT-5.5 Instant,OpenAI,microsoft,any_exposure,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,foundry-gpt5-5-instant-2026-05-07,2026-05-07,microsoft-foundry,catalogue,ga,2,2,exact
+gpt-5-5-instant,GPT-5.5 Instant,OpenAI,microsoft,selectable_or_default,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,m365-gpt5-5-instant-2026-05-07,2026-05-07,m365-copilot,selectable,ga,2,2,exact
+gpt-5-5-instant,GPT-5.5 Instant,OpenAI,copilot,any_exposure,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,m365-gpt5-5-instant-2026-05-07,2026-05-07,m365-copilot,selectable,ga,2,2,exact
+gpt-5-5-instant,GPT-5.5 Instant,OpenAI,copilot,selectable_or_default,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,m365-gpt5-5-instant-2026-05-07,2026-05-07,m365-copilot,selectable,ga,2,2,exact
+gpt-5-5-instant,GPT-5.5 Instant,OpenAI,m365,any_exposure,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,m365-gpt5-5-instant-2026-05-07,2026-05-07,m365-copilot,selectable,ga,2,2,exact
+gpt-5-5-instant,GPT-5.5 Instant,OpenAI,m365,selectable_or_default,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,m365-gpt5-5-instant-2026-05-07,2026-05-07,m365-copilot,selectable,ga,2,2,exact
+gpt-5-5-instant,GPT-5.5 Instant,OpenAI,studio,any_exposure,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,studio-gpt5-5-chat-2026-05-07,2026-05-07,copilot-studio,selectable,public_preview,2,2,exact
+gpt-5-5-instant,GPT-5.5 Instant,OpenAI,studio,selectable_or_default,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,studio-gpt5-5-chat-2026-05-07,2026-05-07,copilot-studio,selectable,public_preview,2,2,exact
+gpt-5-5-instant,GPT-5.5 Instant,OpenAI,github_copilot,any_exposure,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,,,,,,,,not_recorded
+gpt-5-5-instant,GPT-5.5 Instant,OpenAI,github_copilot,selectable_or_default,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,,,,,,,,not_recorded
+gpt-5-5-instant,GPT-5.5 Instant,OpenAI,foundry,any_exposure,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,foundry-gpt5-5-instant-2026-05-07,2026-05-07,microsoft-foundry,catalogue,ga,2,2,exact
+gpt-5-5-instant,GPT-5.5 Instant,OpenAI,foundry,selectable_or_default,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,,,,,,,,not_recorded
 gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,microsoft,any_exposure,,,,m365-gpt5-5-thinking-2026-04-27,2026-04-27,m365-copilot,selectable,ga,,,unknown_no_baseline
 gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,microsoft,selectable_or_default,,,,m365-gpt5-5-thinking-2026-04-27,2026-04-27,m365-copilot,selectable,ga,,,unknown_no_baseline
 gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,copilot,any_exposure,,,,m365-gpt5-5-thinking-2026-04-27,2026-04-27,m365-copilot,selectable,ga,,,unknown_no_baseline
@@ -647,18 +647,18 @@ grok-4-5,Grok 4.5,xAI,github_copilot,any_exposure,xai-grok4-5-2026-07-09,2026-07
 grok-4-5,Grok 4.5,xAI,github_copilot,selectable_or_default,xai-grok4-5-2026-07-09,2026-07-09,ga,github-grok4-5-2026-07-28,2026-07-28,github-copilot,selectable,ga,12,19,range
 grok-4-5,Grok 4.5,xAI,foundry,any_exposure,xai-grok4-5-2026-07-09,2026-07-09,ga,,,,,,,,not_recorded
 grok-4-5,Grok 4.5,xAI,foundry,selectable_or_default,xai-grok4-5-2026-07-09,2026-07-09,ga,,,,,,,,not_recorded
-kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,microsoft,any_exposure,,,,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,,,unknown_no_baseline
-kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,microsoft,selectable_or_default,,,,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,,,unknown_no_baseline
-kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,copilot,any_exposure,,,,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,,,unknown_no_baseline
-kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,copilot,selectable_or_default,,,,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,,,unknown_no_baseline
-kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
-kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
-kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,github_copilot,any_exposure,,,,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,,,unknown_no_baseline
-kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,github_copilot,selectable_or_default,,,,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,,,unknown_no_baseline
-kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,foundry,any_exposure,,,,,,,,,,,unknown_open_research
-kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,foundry,selectable_or_default,,,,,,,,,,,unknown_open_research
+kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,microsoft,any_exposure,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,16,19,range
+kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,microsoft,selectable_or_default,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,16,19,range
+kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,copilot,any_exposure,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,16,19,range
+kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,copilot,selectable_or_default,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,16,19,range
+kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,m365,any_exposure,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,,,,,,,,not_recorded
+kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,m365,selectable_or_default,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,,,,,,,,not_recorded
+kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,studio,any_exposure,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,,,,,,,,not_recorded
+kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,studio,selectable_or_default,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,,,,,,,,not_recorded
+kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,github_copilot,any_exposure,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,16,19,range
+kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,github_copilot,selectable_or_default,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,16,19,range
+kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,foundry,any_exposure,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,,,,,,,,unknown_open_research
+kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,foundry,selectable_or_default,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,,,,,,,,unknown_open_research
 llama-2,Llama 2,Meta,microsoft,any_exposure,meta-llama2-2023-07-18,2023-07-18,ga,meta-llama2-azure-2023-07-18,2023-07-18,azure-ai-catalog,catalogue,ga,0,0,exact
 llama-2,Llama 2,Meta,microsoft,selectable_or_default,meta-llama2-2023-07-18,2023-07-18,ga,,,,,,,,not_recorded
 llama-2,Llama 2,Meta,copilot,any_exposure,meta-llama2-2023-07-18,2023-07-18,ga,,,,,,,,not_recorded

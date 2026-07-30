@@ -53,9 +53,13 @@ codex,Codex,OpenAI,openai-api,OpenAI API,,retired,not_applicable,true,openai-cod
 dall-e-2,DALL-E 2,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,catalogue,false,azure-openai-ga-2023-01-17,2023-01-17,day,2026-07-28,,0
 dall-e-2,DALL-E 2,OpenAI,openai,OpenAI,,limited_preview,not_applicable,false,openai-dall-e-2-beta-2022-07,2022-07,month,2026-07-28,,0
 dall-e-2,DALL-E 2,OpenAI,openai-api,OpenAI API,,retired,not_applicable,true,openai-dall-e-2-retired-2026-05-12,2026-05-12,day,2026-07-28,,0
+deepseek-r1,DeepSeek-R1,DeepSeek,deepseek,DeepSeek,,ga,not_applicable,false,deepseek-r1-2025-01-20,2025-01-20,day,2026-07-28,,0
 deepseek-r1,DeepSeek-R1,DeepSeek,github-models,GitHub Models,microsoft,public_preview,catalogue,false,deepseek-r1-github-models-2025-01-29,2025-01-29,day,2026-07-28,,0
 deepseek-r1,DeepSeek-R1,DeepSeek,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,public_preview,catalogue,false,deepseek-r1-foundry-2025-01-29,2025-01-29,day,2026-07-28,,3
+deepseek-v3,DeepSeek-V3,DeepSeek,deepseek,DeepSeek,,ga,not_applicable,false,deepseek-v3-2024-12-26,2024-12-26,day,2026-07-28,,0
+deepseek-v3-2,DeepSeek V3.2,DeepSeek,deepseek,DeepSeek,,ga,not_applicable,false,deepseek-v3-2-2025-12-01,2025-12-01,day,2026-07-28,,0
 deepseek-v3-2,DeepSeek V3.2,DeepSeek,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-deepseek-v3-2-2025-12-15,2025-12-15,day,2026-07-28,,0
+deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,deepseek,DeepSeek,,ga,not_applicable,false,deepseek-v3-2-speciale-2025-12-01,2025-12-01,day,2026-07-28,,0
 deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-deepseek-v3-2-speciale-2025-12-15,2025-12-15,day,2026-07-28,,0
 gemini-1-5-pro,Gemini 1.5 Pro,Google,google-gemini,Gemini,,private_preview,not_applicable,false,google-gemini1-5-pro-2024-02-15,2024-02-15,day,2026-07-28,,1
 gemini-3-6-flash,Gemini 3.6 Flash,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-gemini3-6-flash-2026-07-21,2026-07-21,day,2026-07-28,,0
@@ -103,6 +107,7 @@ gpt-5-5,GPT-5.5,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-gpt5-5-2026
 gpt-5-5,GPT-5.5,OpenAI,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,public_preview,selectable,false,studio-gpt5-5-reasoning-2026-04-27,2026-04-27,day,2026-07-28,,0
 gpt-5-5-instant,GPT-5.5 Instant,OpenAI,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,selectable,false,m365-gpt5-5-instant-2026-05-07,2026-05-07,day,2026-07-28,,0
 gpt-5-5-instant,GPT-5.5 Instant,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt5-5-instant-2026-05-07,2026-05-07,day,2026-07-28,,0
+gpt-5-5-instant,GPT-5.5 Instant,OpenAI,openai,OpenAI,,ga,default,false,openai-gpt5-5-instant-2026-05-05,2026-05-05,day,2026-07-28,,0
 gpt-5-5-instant,GPT-5.5 Instant,OpenAI,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,ga,selectable,false,studio-gpt5-5-chat-ga-2026-06,2026-06,month,2026-07-28,,0
 gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,selectable,false,m365-gpt5-5-thinking-2026-04-27,2026-04-27,day,2026-07-28,,0
 gpt-5-6-luna,GPT-5.6 Luna,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-gpt5-6-luna-2026-07-09,2026-07-09,day,2026-07-28,,0
@@ -128,6 +133,7 @@ grok-4,Grok 4,xAI,xai-grok,Grok,,ga,not_applicable,false,xai-grok4-2025-07-09,20
 grok-4-5,Grok 4.5,xAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-grok4-5-2026-07-28,2026-07-28,day,2026-07-28,,0
 grok-4-5,Grok 4.5,xAI,xai-grok,Grok,,ga,not_applicable,false,xai-grok4-5-2026-07-09,2026-07-09,day,2026-07-28,,1
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-kimi-k2-7-enterprise-2026-07-07,2026-07-07,day,2026-07-28,,0
+kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,moonshot,Moonshot AI,,ga,not_applicable,false,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,day,2026-07-28,,0
 llama-2,Llama 2,Meta,meta,Meta,,ga,not_applicable,false,meta-llama2-2023-07-18,2023-07-18,day,2026-07-28,,0
 llama-2,Llama 2,Meta,azure-ai-catalog,Azure AI model catalogue,microsoft | foundry,ga,catalogue,false,meta-llama2-azure-2023-07-18,2023-07-18,day,2026-07-28,,0
 mistral-3,Mistral 3,Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral3-2025-12-02,2025-12-02,day,2026-07-28,,0
