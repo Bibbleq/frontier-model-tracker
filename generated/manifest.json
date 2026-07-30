@@ -17,15 +17,15 @@
       "path": "data/events.json",
       "media_type": "application/json",
       "description": "The whole dataset: metadata, canonical events and the validation backlog",
-      "bytes": 273299,
-      "sha256": "111aaef3f8e71b212e026d8b7a38cfbee5d3da682efc4be02d5e7689d89a3c9f"
+      "bytes": 276236,
+      "sha256": "3c8a8b6bf0d4533667902511a230803370d99ce859cb3d63f72d5b50e801dc8f"
     },
     {
       "path": "data/status.json",
       "media_type": "application/json",
       "description": "Totals, warning counts, coverage gaps and lag certainty distribution",
-      "bytes": 13411,
-      "sha256": "89ed48d1948c3249eb15f86393fc7a15610c179b2714c731421fa7944cbdd97b"
+      "bytes": 13175,
+      "sha256": "6c5bf655b52f8229692d9de0f0b67a961ac1cac8bc328c66fbd048db9e00e686"
     },
     {
       "path": "data/events.csv",
@@ -38,15 +38,15 @@
       "path": "data/validation-backlog.csv",
       "media_type": "text/csv",
       "description": "Open research questions with states and targets, not confirmed history",
-      "bytes": 32889,
-      "sha256": "aee049d9ee861a3425ddffdc80cf3d2122e8f64b7f734e0966e73498a5d2dad7"
+      "bytes": 35792,
+      "sha256": "e27b9806020bb20e56f8c14f20f28aa1f66ab4c36db196d2502e0b7cee3d9588"
     },
     {
       "path": "data/lag.csv",
       "media_type": "text/csv",
       "description": "Derived adoption lag; read certainty before any number",
-      "bytes": 117113,
-      "sha256": "05be97094eeec389d34a3af398d5628344051358674f59f50a3656251642db5a"
+      "bytes": 117149,
+      "sha256": "eb6babbb2eb88be0def7885855d059f52cc2b00abf22f770d9a537a796e2d2f8"
     },
     {
       "path": "data/current-state.csv",

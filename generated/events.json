@@ -6423,11 +6423,15 @@
     {
       "id": "deepseek-v3-first-microsoft-availability-2024",
       "state": "open",
-      "working_claim": "DeepSeek-V3 later entered a Microsoft developer catalogue.",
-      "reason": "The vendor date is queued separately, but first Microsoft availability is not represented.",
-      "target": "Locate the first dated Foundry or GitHub Models record.",
+      "working_claim": "A DeepSeek-V3 variant entered a Microsoft developer catalogue, but not necessarily in 2024 and not necessarily plain V3.",
+      "reason": "The vendor release is now recorded as deepseek-v3-2024-12-26, so only the Microsoft side is missing. Review indicates the model Microsoft actually carries is DeepSeek-V3-0324, a dated March 2025 revision rather than the December 2024 release, and that the Foundry retirement schedule shows it retiring on 13 July 2026. Neither fact dates a first availability, and both suggest the item's own 2024 framing is wrong.",
+      "target": "Establish whether Microsoft ever carried plain DeepSeek-V3 or only V3-0324. If only V3-0324, that is a distinct model needing its own registry entry and its own vendor baseline, and this item should be rejected rather than answered. Do not date first availability from the retirement schedule, which reports current status only.",
       "model_ids": [
         "deepseek-v3"
+      ],
+      "surface_ids": [
+        "microsoft-foundry",
+        "github-models"
       ]
     },
     {
@@ -6510,9 +6514,9 @@
     {
       "id": "foundry-kimi-k2-7-first-availability-2026-07",
       "state": "open",
-      "working_claim": "Kimi K2.7 variants appeared in Microsoft Foundry in early July 2026.",
-      "reason": "Current catalogue presence does not prove first availability.",
-      "target": "Locate a dated Foundry announcement for each Kimi variant.",
+      "working_claim": "Kimi K2.7 Code appeared in Microsoft Foundry between mid-June and early July 2026.",
+      "reason": "Current catalogue presence does not prove first availability. The vendor baseline is now recorded as moonshot-kimi-k2-7-code-2026-06-12, bounded to 12-15 June, so any Foundry arrival is no earlier than that. Review offers three further constraints, none of them a dated announcement: the Foundry retirement schedule lists the model at version 2026-06-12, the catalogue at 2026-06-15, and a republished item claims a Foundry preview began on 1 July 2026.",
+      "target": "Find Microsoft's own dated Foundry announcement. Treat the version strings as bounds rather than as the arrival date, since a version label is the model's build, not the day Microsoft listed it. The 1 July claim reaches us only through a syndicated copy and needs the first-party original before use.",
       "model_ids": [
         "kimi-k2-7-code"
       ],
@@ -6721,7 +6725,7 @@
       "state": "open",
       "working_claim": "GPT-4o became selectable in the GitHub Copilot model picker at some point between July 2024 and its removal on 6 August 2025.",
       "reason": "The June 2025 changelog deprecates GPT-4o from the Copilot model pickers, which means it was selectable there. The timeline records GPT-4o on GitHub Copilot only as an underlying model in July 2024, so the retirement now ends an exposure whose beginning was never captured. Found by harvesting the deprecation changelogs: an ending can reveal a missing arrival.",
-      "target": "Find the dated GitHub changelog entry for GPT-4o entering the Copilot model picker.",
+      "target": "Find the dated GitHub changelog entry for GPT-4o entering the Copilot model picker. Review surfaced a nearby but different fact that must not be substituted for it: GPT-4o Copilot became generally available on 27 March 2025 as the code-completion model, after a February 2025 preview. Code completion is an underlying exposure, not the chat picker, so those dates answer a different question and would understate the picker arrival if used here.",
       "model_ids": [
         "gpt-4o"
       ],
@@ -6733,8 +6737,8 @@
       "id": "github-foundry-opus4-7-2026-04-16",
       "state": "open",
       "working_claim": "Claude Opus 4.7 landed on GitHub Copilot and Microsoft Foundry at or around vendor launch.",
-      "reason": "M365 and Studio launch-day scope is sourced; separate GitHub/Foundry first-day records still need their own primary URLs.",
-      "target": "Find the GitHub changelog and Foundry model announcement.",
+      "reason": "M365 and Studio launch-day scope is sourced; separate GitHub/Foundry first-day records still need their own primary URLs. Review splits the two: Anthropic's own Opus 4.7 announcement states the model was generally available on Microsoft Foundry on 16 April 2026, and the Foundry catalogue carries it, but no GitHub Copilot source was found. The GitHub half should not inherit the Foundry date.",
+      "target": "Two separate answers are needed. For Foundry, cite Anthropic's 16 April 2026 announcement directly rather than the catalogue, which dates nothing. For GitHub Copilot, find a changelog or accept that Opus 4.7 may never have reached the picker, which would be a finding rather than a gap.",
       "model_ids": [
         "claude-opus-4-7"
       ],
@@ -6889,8 +6893,8 @@
       "id": "m365-gpt5-1-first-availability-2025",
       "state": "open",
       "working_claim": "GPT-5.1 existed in the Microsoft ecosystem, but a general M365 Copilot first-availability date is unknown.",
-      "reason": "Later migration/upgrade references do not prove core M365 launch.",
-      "target": "Only add if Microsoft published a specific M365 Copilot launch or rollout.",
+      "reason": "Later migration and upgrade references do not prove a core M365 launch. Review found two dated artefacts, neither of which is one: Foundry carries GPT-5.1 at model version 2025-11-13, and the Microsoft 365 release notes record declarative agents being upgraded to GPT-5.1 in the 27 January 2026 batch. A declarative-agent upgrade is a change to an agent-building feature, not evidence that GPT-5.1 reached Microsoft 365 Copilot's core chat experience, and the item's own 2025 framing may therefore be wrong.",
+      "target": "Only add if Microsoft published a specific M365 Copilot launch or rollout for core chat. If the 27 January 2026 declarative-agent upgrade turns out to be the only availability Microsoft ever documented, record that instead as its own event with the narrower experience, and rename this item's 2025 assumption away.",
       "model_ids": [
         "gpt-5-1"
       ],
