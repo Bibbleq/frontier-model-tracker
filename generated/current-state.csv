@@ -59,12 +59,12 @@ deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,microsoft-foundry,Microso
 gemini-1-5-pro,Gemini 1.5 Pro,Google,google-gemini,Gemini,,private_preview,not_applicable,false,google-gemini1-5-pro-2024-02-15,2024-02-15,day,2026-07-27,,1
 gemini-3-6-flash,Gemini 3.6 Flash,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-gemini3-6-flash-2026-07-21,2026-07-21,day,2026-07-27,,0
 gemini-3-6-flash,Gemini 3.6 Flash,Google,google-gemini-api,Gemini API,,ga,not_applicable,false,google-gemini3-6-flash-2026-07-21,2026-07-21,day,2026-07-27,,0
-gpt-3,GPT-3,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,limited_preview,catalogue,false,azure-openai-preview-2021-11-02,2021-11-02,day,2026-07-27,,0
+gpt-3,GPT-3,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,limited_preview,catalogue,false,azure-openai-preview-2021-11-02,2021-11-02,day,2026-07-27,,1
 gpt-3,GPT-3,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-api-2020-06-11,2020-06-11,day,2026-07-27,,0
 gpt-3-5,GPT-3.5,OpenAI,chatgpt,ChatGPT,,ga,not_applicable,false,chatgpt-launch-2022-11-30,2022-11-30,day,2026-07-27,,0
 gpt-3-5,GPT-3.5,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,catalogue,false,azure-openai-ga-2023-01-17,2023-01-17,day,2026-07-27,,1
 gpt-4,GPT-4,OpenAI,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,underlying,false,m365-copilot-ga-2023-11-01,2023-11-01,day,2026-07-27,,0
-gpt-4,GPT-4,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,public_preview,catalogue,false,azure-gpt4-preview-2023-03-21,2023-03-21,day,2026-07-27,,0
+gpt-4,GPT-4,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,public_preview,catalogue,false,azure-gpt4-preview-2023-03-21,2023-03-21,day,2026-07-27,,1
 gpt-4,GPT-4,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-gpt4-2023-03-14,2023-03-14,day,2026-07-27,,0
 gpt-4-1,GPT-4.1,OpenAI,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,azure-gpt4-1-2025-04-14,2025-04-14,day,2026-07-27,,3
 gpt-4-1,GPT-4.1,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt4-1-2025-04-14,2025-04-14,day,2026-07-27,,0
@@ -74,10 +74,11 @@ gpt-4-1-mini,GPT-4.1 mini,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,
 gpt-4-1-nano,GPT-4.1 nano,OpenAI,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,azure-gpt4-1-2025-04-14,2025-04-14,day,2026-07-27,,3
 gpt-4-1-nano,GPT-4.1 nano,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt4-1-2025-04-14,2025-04-14,day,2026-07-27,,0
 gpt-4-turbo,GPT-4 Turbo,OpenAI,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,underlying,false,m365-gpt4-turbo-2024-04-02,2024-04-02,day,2026-07-27,,0
+gpt-4-turbo,GPT-4 Turbo,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,catalogue,false,azure-gpt4-turbo-vision-ga-2024-05-01,2024-05-01,day,2026-07-27,,1
 gpt-4-turbo,GPT-4 Turbo,OpenAI,openai-api,OpenAI API,,public_preview,not_applicable,false,openai-gpt4-turbo-2023-11-06,2023-11-06,day,2026-07-27,,0
 gpt-4o,GPT-4o,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-gpt4o-retired-2025-08-06,2025-08-06,day,2026-07-27,,1
 gpt-4o,GPT-4o,OpenAI,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,underlying,false,m365-gpt4o-wave2-2024-09-16,2024-09-16,day,2026-07-27,,0
-gpt-4o,GPT-4o,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,public_preview,catalogue,false,azure-gpt4o-preview-2024-05-13,2024-05-13,day,2026-07-27,,3
+gpt-4o,GPT-4o,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,public_preview,catalogue,false,azure-gpt4o-preview-2024-05-13,2024-05-13,day,2026-07-27,,4
 gpt-4o,GPT-4o,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-gpt4o-2024-05-13,2024-05-13,day,2026-07-27,,1
 gpt-4o,GPT-4o,OpenAI,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,retired,default,true,studio-gpt4o-retired-2025-10-27,2025-10-27,day,2026-07-27,,1
 gpt-5,GPT-5,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-gpt5-ga-2025-09-09,2025-09-09,day,2026-07-27,,0
@@ -130,11 +131,11 @@ o1,o1,OpenAI,github-models,GitHub Models,microsoft,public_preview,catalogue,fals
 o1,o1,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-o1-full-2024-12-17,2024-12-17,day,2026-07-27,,0
 o1-mini,o1-mini,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-o1-mini-retired-2025-10-23,2025-10-23,day,2026-07-27,,0
 o1-mini,o1-mini,OpenAI,github-models,GitHub Models,microsoft,limited_preview,catalogue,false,github-models-o1-mini-waitlist-2024-09-19,2024-09-19,day,2026-07-27,,0
-o1-mini,o1-mini,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,limited_preview,catalogue,false,azure-o1-mini-preview-2024-09-12,2024-09-12,day,2026-07-27,,0
+o1-mini,o1-mini,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,limited_preview,catalogue,false,azure-o1-mini-preview-2024-09-12,2024-09-12,day,2026-07-27,,1
 o1-mini,o1-mini,OpenAI,openai,OpenAI,,retired,not_applicable,true,openai-o1-mini-retired-2025-10-27,2025-10-27,day,2026-07-27,,0
 o1-preview,o1-preview,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,limited_preview,selectable,false,github-o1-preview-waitlist-2024-09-19,2024-09-19,day,2026-07-27,o1,0
 o1-preview,o1-preview,OpenAI,github-models,GitHub Models,microsoft,limited_preview,catalogue,false,github-models-o1-preview-waitlist-2024-09-19,2024-09-19,day,2026-07-27,o1,0
-o1-preview,o1-preview,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,limited_preview,catalogue,false,azure-o1-preview-2024-09-12,2024-09-12,day,2026-07-27,o1,0
+o1-preview,o1-preview,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,limited_preview,catalogue,false,azure-o1-preview-2024-09-12,2024-09-12,day,2026-07-27,o1,1
 o1-preview,o1-preview,OpenAI,openai,OpenAI,,retired,not_applicable,true,openai-o1-preview-retired-2025-07-28,2025-07-28,day,2026-07-27,o1,0
 o3,o3,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-o3-retired-2025-10-23,2025-10-23,day,2026-07-27,,0
 o3-mini,o3-mini,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-o3-mini-retired-2025-10-23,2025-10-23,day,2026-07-27,,0

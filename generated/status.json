@@ -1,21 +1,21 @@
 {
   "totals": {
-    "events": 179,
-    "backlog": 50,
-    "sources": 199,
+    "events": 180,
+    "backlog": 51,
+    "sources": 202,
     "models": 64,
     "surfaces": 23,
-    "confirmed": 171,
+    "confirmed": 172,
     "supported": 8
   },
   "kinds": {
     "announcement": 10,
-    "availability": 157,
+    "availability": 158,
     "milestone": 6,
     "policy": 6
   },
   "backlog_states": {
-    "blocked": 1,
+    "blocked": 2,
     "open": 44,
     "promoted": 5
   },
@@ -247,6 +247,11 @@
     },
     {
       "code": "suspicious_day_precision",
+      "subject": "azure-gpt4-turbo-vision-ga-2024-05-01",
+      "message": "day precision on the first of the month may be an invented day"
+    },
+    {
+      "code": "suspicious_day_precision",
       "subject": "foundry-grok3-mini-retired-2026-05-01",
       "message": "day precision on the first of the month may be an invented day"
     },
@@ -295,7 +300,7 @@
     "backlog_without_surface": 1,
     "missing_archive": 28,
     "no_vendor_baseline": 15,
-    "suspicious_day_precision": 8,
+    "suspicious_day_precision": 9,
     "unquoted_documentation": 2
   },
   "coverage": {
@@ -310,10 +315,10 @@
     ]
   },
   "lag_certainty": {
-    "exact": 235,
-    "not_recorded": 245,
+    "exact": 236,
+    "not_recorded": 240,
     "range": 8,
     "unknown_no_baseline": 189,
-    "unknown_open_research": 91
+    "unknown_open_research": 95
   }
 }

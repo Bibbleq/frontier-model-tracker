@@ -503,6 +503,29 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "azure-gpt4-turbo-vision-ga-2024-05-01"
+    kind: "availability"
+    date:
+      start: "2024-05-01"
+      precision: "day"
+    surface_id: "azure-openai"
+    model_ids: ["gpt-4-turbo"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "confirmed"
+    evidence_note: "Microsoft announced general availability of GPT-4 Turbo with Vision (gpt-4-turbo-2024-04-09) on Azure OpenAI Service. This is the only per-model GA transition Azure announced separately for the GPT-4 family; see the azure-openai-ga-transitions-unannounced backlog item."
+    caveat: "The GA applies to the gpt-4-turbo-2024-04-09 version, which merged vision into the GPT-4 Turbo line. The earlier Azure availability of GPT-4 Turbo remains unrecorded."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Announcing the General Availability of GPT-4 Turbo with Vision on Azure OpenAI Service"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-services-blog/announcing-the-general-availability-of-gpt-4-turbo-with-vision-on-azure-openai-s/4127916"
+        primary: true
+        retrieved_at: "2026-07-30"
+        published_at: "2024-05-01"
+        source_type: "announcement"
+        quote: "We are excited to announce the general availability (GA) of GPT-4 Turbo with Vision on the Azure OpenAI Service."
+        supports: ["date", "model", "lifecycle"]
   - id: "azure-gpt4o-preview-2024-05-13"
     kind: "availability"
     date:
@@ -3800,6 +3823,29 @@ validation_backlog:
     target: "Locate a dated Azure model-release or deployment announcement."
     model_ids: ["gpt-4-turbo"]
     surface_ids: ["azure-openai"]
+  - id: "azure-openai-ga-transitions-unannounced"
+    state: "blocked"
+    working_claim: "GPT-3, GPT-4, GPT-4o, o1-preview and o1-mini each progressed past their recorded Azure OpenAI preview stage, but no dated transition can be sourced."
+    reason: "Microsoft documents that these dates are not published. The Foundry Models lifecycle policy states that a GA model's retirement date is set programmatically at launch and that there is no separate announcement, and that preview deployments are force-upgraded to GA rather than the GA being announced per model. The what's-new changelog announces model releases and previews, not GA transitions, and the retirement schedule reports current lifecycle status without dating the change. Searched: the Azure OpenAI what's-new changelog, the Foundry Models lifecycle and support policy, the model retirement schedule, and the Azure blog."
+    target: "Only a dated first-party announcement or a Service Health advisory would resolve this. Absent one, these pairs stay at their last recorded stage and must not be read as current state. Do not re-run a general documentation search; it has been done."
+    model_ids: ["gpt-3", "gpt-4", "gpt-4o", "o1-mini", "o1-preview"]
+    surface_ids: ["azure-openai"]
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Foundry Models lifecycle and support policy"
+        url: "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/model-retirements"
+        primary: true
+        retrieved_at: "2026-07-30"
+        source_type: "documentation"
+        quote: "GA models have their retirement date set programmatically at launch to 18 months out—there's no separate \"announcement.\""
+        supports: ["lifecycle"]
+      - publisher: "Microsoft Learn"
+        title: "What's new in Azure OpenAI in Microsoft Foundry Models? (classic)"
+        url: "https://learn.microsoft.com/en-us/azure/foundry-classic/openai/whats-new"
+        primary: true
+        retrieved_at: "2026-07-30"
+        source_type: "changelog"
+        note: "Reviewed in full. Announces model releases and preview availability; contains no per-model GA transition for the GPT-4, GPT-4o or o1 lines."
   - id: "deepseek-r1-vendor-2025-01-20"
     state: "open"
     working_claim: "DeepSeek-R1 released 20 January 2025."
