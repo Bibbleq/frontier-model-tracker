@@ -6173,8 +6173,8 @@
       "lifecycle": "ga",
       "exposure": "selectable",
       "confidence": "confirmed",
-      "evidence_note": "Claude Opus 5 became available in GitHub Copilot on release day, with admin enablement for managed plans.",
-      "caveat": "Microsoft's same-day Foundry announcement records that Claude Opus 5 is Zero Data Retention compatible, unlike Claude Fable 5. Carry that governance distinction alongside model-picker availability.",
+      "evidence_note": "Claude Opus 5 became available in GitHub Copilot on release day, on the Pro+, Max, Business and Enterprise plans.",
+      "caveat": "Not on the base Copilot Pro plan, unlike Grok 4.5 four days later, so selectable exposure here does not extend to every paying Copilot user. Business and Enterprise administrators must also enable a Claude Opus 5 policy that ships off, delaying it further on those plans. Separately, Microsoft's same-day Foundry announcement records that Claude Opus 5 is Zero Data Retention compatible, unlike Claude Fable 5; carry that governance distinction alongside model-picker availability.",
       "relations": [
         {
           "type": "announced_by",
@@ -6187,8 +6187,16 @@
           "title": "Claude Opus 5 is now available in GitHub Copilot",
           "url": "https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot/",
           "primary": true,
-          "retrieved_at": "2026-07-26",
-          "source_type": "changelog"
+          "retrieved_at": "2026-07-30",
+          "published_at": "2026-07-24",
+          "source_type": "changelog",
+          "quote": "Claude Opus 5, Anthropic's newest Opus model, is now available in GitHub Copilot.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
         }
       ]
     },
