@@ -6,7 +6,7 @@ codex,Codex,OpenAI,,,,,5
 dall-e-2,DALL-E 2,OpenAI,,,,,3
 gpt-4,GPT-4,OpenAI,,GPT-4 generation,,,6
 gpt-4-turbo,GPT-4 Turbo,OpenAI,,,,,4
-gpt-4o,GPT-4o,OpenAI,,,,,6
+gpt-4o,GPT-4o,OpenAI,,,,,7
 gpt-4-1,GPT-4.1,OpenAI,gpt-4-1,,,,5
 gpt-4-1-mini,GPT-4.1 mini,OpenAI,gpt-4-1,,,,2
 gpt-4-1-nano,GPT-4.1 nano,OpenAI,gpt-4-1,,,,3

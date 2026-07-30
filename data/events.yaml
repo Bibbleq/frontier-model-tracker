@@ -1403,6 +1403,30 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "github-gpt4o-completion-ga-2025-03-27"
+    kind: "availability"
+    date:
+      start: "2025-03-27"
+      precision: "day"
+    surface_id: "github-copilot"
+    experience_ids: ["code-completion"]
+    model_ids: ["gpt-4o"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "underlying"
+    confidence: "confirmed"
+    evidence_note: "GPT-4o became the general code-completion model for all GitHub Copilot users, replacing a GPT-3.5 Turbo based model. Distinct from github-gpt4o-underlying-2024-07-31, which is the same model on the same surface but powering Copilot Chat rather than completions."
+    caveat: "The same changelog records a public preview from February 2025, which is not recorded here. GPT-4o was already generally available on this surface as Chat's underlying model from July 2024, so a February preview would move the lifecycle backwards; the ordering check keys on model and surface without regard to experience. The preview is a real fact this dataset currently cannot hold."
+    sources:
+      - publisher: "GitHub"
+        title: "GPT-4o Copilot, your new code completion model, is now generally available"
+        url: "https://github.blog/changelog/2025-03-27-gpt-4o-copilot-your-new-code-completion-model-is-now-generally-available/"
+        primary: true
+        retrieved_at: "2026-07-30"
+        published_at: "2025-03-27"
+        source_type: "changelog"
+        quote: "The GPT-4o Copilot model released in preview last month and updated this month now provides code completions for all Copilot users."
+        supports: ["date", "model", "lifecycle", "exposure"]
   - id: "m365-analyst-frontier-2025-04"
     kind: "availability"
     date:
@@ -4839,8 +4863,8 @@ validation_backlog:
   - id: "foundry-opus4-5-first-availability-2025-11-24"
     state: "open"
     working_claim: "Claude Opus 4.5 entered Microsoft Foundry public preview around vendor launch."
-    reason: "The sourced pack contains vendor and Studio events but no Foundry event."
-    target: "Locate the dated Foundry model announcement."
+    reason: "The sourced pack contains vendor, Studio and, since this pass, GitHub events but no Foundry event. Review indicates Microsoft's 24 November 2025 Copilot Studio announcement says Opus 4.5 was available in Copilot Studio that day and separately that it was coming to public preview in Microsoft Foundry. If that wording is accurate, the Foundry half is a statement of future availability and cannot be recorded as an arrival, the same treatment given to foundry-gpt5-5-announced-2026-04-23."
+    target: "Verify the Copilot Studio announcement's exact Foundry wording, which has not been read first-hand. If it promises future availability, record it as an announcement and keep this item open for the arrival itself."
     model_ids: ["claude-opus-4-5"]
     surface_ids: ["microsoft-foundry"]
   - id: "foundry-sonnet5-2026-06-30"
@@ -4892,8 +4916,8 @@ validation_backlog:
   - id: "github-copilot-chat-gpt3-5-start-2023"
     state: "open"
     working_claim: "GitHub Copilot Chat initially used GPT-3.5."
-    reason: "Later GitHub history supports the lineage, but the exact first-production date is not pinned."
-    target: "Find the original Copilot Chat launch/changelog explicitly naming GPT-3.5."
+    reason: "Later GitHub history supports the lineage, but the exact first-production date is not pinned. A new lead: GitHub's 27 March 2025 changelog states that the code-completion model being replaced was GPT-3.5 Turbo based. That is first-party confirmation that GPT-3.5 Turbo powered a GitHub Copilot experience, though completion rather than chat, and it now has its own registry id following the gpt-3-5 split."
+    target: "Find the original Copilot Chat launch or changelog naming GPT-3.5. Note that the March 2025 lead concerns code completion, so it cannot date Chat. It does suggest a second question worth opening: when GPT-3.5 Turbo stopped powering GitHub code completion, which the same changelog dates to 27 March 2025 and which would be a recordable ending if the arrival were ever established."
     model_ids: ["gpt-3-5"]
     surface_ids: ["github-copilot"]
   - id: "github-copilot-chat-gpt4-transition-2023-11"
@@ -4931,8 +4955,8 @@ validation_backlog:
   - id: "github-gpt4o-selectable-arrival"
     state: "open"
     working_claim: "GPT-4o became selectable in the GitHub Copilot model picker at some point between July 2024 and its removal on 6 August 2025."
-    reason: "The June 2025 changelog deprecates GPT-4o from the Copilot model pickers, which means it was selectable there. The timeline records GPT-4o on GitHub Copilot only as an underlying model in July 2024, so the retirement now ends an exposure whose beginning was never captured. Found by harvesting the deprecation changelogs: an ending can reveal a missing arrival."
-    target: "Find the dated GitHub changelog entry for GPT-4o entering the Copilot model picker. Review surfaced a nearby but different fact that must not be substituted for it: GPT-4o Copilot became generally available on 27 March 2025 as the code-completion model, after a February 2025 preview. Code completion is an underlying exposure, not the chat picker, so those dates answer a different question and would understate the picker arrival if used here."
+    reason: "The June 2025 changelog deprecates GPT-4o from the Copilot model pickers, which means it was selectable there. The timeline records GPT-4o on GitHub Copilot as Chat's underlying model in July 2024 and, since this pass, as the general code-completion model from 27 March 2025, but neither is the picker. An ending still reveals a missing arrival."
+    target: "Find the dated GitHub changelog entry for GPT-4o entering the Copilot model picker. Two nearby facts must not be substituted for it: the 27 March 2025 code-completion general availability, and the public preview of that same completion model in February 2025. Both concern an underlying exposure, not user selection. The February preview is also unrecordable as things stand, because the lifecycle ordering check keys on model and surface without regard to experience, and GPT-4o was already generally available on this surface from July 2024."
     model_ids: ["gpt-4o"]
     surface_ids: ["github-copilot"]
   - id: "github-foundry-opus4-7-2026-04-16"
@@ -5054,8 +5078,8 @@ validation_backlog:
   - id: "m365-opus4-7-core-chat-picker-2026-05"
     state: "open"
     working_claim: "Opus 4.7 later reached the broader Microsoft 365 Copilot Chat picker around May 2026."
-    reason: "16 April only proves Cowork Frontier plus Excel rollout."
-    target: "Find the exact Copilot Chat picker rollout date."
+    reason: "16 April only proves Cowork Frontier plus Excel rollout. Review proposed correcting this item's date to 16 April 2026 on the strength of Anthropic's launch announcement. That correction is rejected: m365-opus4-7-2026-04-16 already carries that date and is deliberately scoped to the Cowork and Excel experiences, with a caveat forbidding it from being read as universal Copilot Chat availability. Applying the correction would collapse a Frontier-programme rollout into general availability, which is the specific error that caveat exists to prevent."
+    target: "Find a dated Microsoft source for Opus 4.7 in the general Microsoft 365 Copilot Chat model picker, outside the Frontier programme. A vendor launch announcement cannot answer this; only Microsoft can say when its own picker changed."
     model_ids: ["claude-opus-4-7"]
     surface_ids: ["m365-copilot"]
   - id: "m365-researcher-first-availability-2025"
@@ -5199,8 +5223,8 @@ validation_backlog:
   - id: "studio-sonnet5-first-date-2026"
     state: "open"
     working_claim: "Copilot Studio supports Claude Sonnet 5 in supported regions/new agent experience."
-    reason: "Current support is known, but initial rollout versus later GA date is not pinned."
-    target: "Find a dated Studio release note or announcement."
+    reason: "Current support is known, but initial rollout versus later GA date is not pinned. Attempted this pass and rejected by the build. Review dates it to June 2026 with no day, from the same Copilot Studio release-notes entry that already supports studio-gpt5-5-chat-ga-2026-06. Recorded at month precision, that resolves to 1 June and lands before Anthropic released Claude Sonnet 5 on 30 June 2026, so the vendor-baseline guard refused it. Either the release-notes month is wrong for this model, or Copilot Studio took it within a day of the vendor release, which is implausible for a primary-model general availability."
+    target: "Read the Copilot Studio release-notes entry directly rather than relying on a summary of it, and establish whether Claude Sonnet 5 appears under June or a later month. If June is correct and no day is given, the honest shape is a bounded date starting 30 June 2026, not a month-precision June."
     model_ids: ["claude-sonnet-5"]
     surface_ids: ["copilot-studio"]
   - id: "vendor-surface-consolidation"

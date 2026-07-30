@@ -17,29 +17,29 @@
       "path": "data/events.json",
       "media_type": "application/json",
       "description": "The whole dataset: metadata, canonical events and the validation backlog",
-      "bytes": 308355,
-      "sha256": "c15ca969c90c9ee40be6e78e70b57155f99d0bab64c916a28fd3138b80a50b22"
+      "bytes": 312972,
+      "sha256": "2516ee3dd86dbed497e91e323fb01105555551bc9946dda2f63bb4debe92b656"
     },
     {
       "path": "data/status.json",
       "media_type": "application/json",
       "description": "Totals, warning counts, coverage gaps and lag certainty distribution",
       "bytes": 13834,
-      "sha256": "5145ea4b0b064a7e0b72022c4ab9c7344a7382131a3f1e3ca35e59f1fb91b45b"
+      "sha256": "d2408275520dfb5ee2798129f963ba8fdf60418c8cffa52708bf9e460ef2514b"
     },
     {
       "path": "data/events.csv",
       "media_type": "text/csv",
       "description": "Flattened canonical timeline, identifiers resolved to display names",
-      "bytes": 100823,
-      "sha256": "a7a998cef5fe32c2fda22647e1d7211cf2a990f0211f6c8a4367f7d6bb5395dd"
+      "bytes": 101767,
+      "sha256": "e875790232942e4718dfbfcbeccd50650673ee4416856dd10fd6b4d19a11197e"
     },
     {
       "path": "data/validation-backlog.csv",
       "media_type": "text/csv",
       "description": "Open research questions with states and targets, not confirmed history",
-      "bytes": 42126,
-      "sha256": "a9e84d69c931672dbde1c15eae35bcae6c3af113b5c5664267c31bc0ee13b9ee"
+      "bytes": 44878,
+      "sha256": "80fd9318a563eeed47a3ebd295cd9baf805107cfc58db1983fd7c55e21bee3f0"
     },
     {
       "path": "data/lag.csv",
@@ -60,14 +60,14 @@
       "media_type": "text/csv",
       "description": "Model registry with aliases, families and event counts",
       "bytes": 2922,
-      "sha256": "2bb2f16276c8ce0b859387c99976193b56e48cb8bdcaf573e7a9d059cf91b737"
+      "sha256": "5184a4289f78516b8ab5df1eb6fc5d3e6ac1e9a10041c699e153d597324ff59a"
     },
     {
       "path": "data/surfaces.csv",
       "media_type": "text/csv",
       "description": "Surface registry with rename lineage, analytical tiers and event counts",
       "bytes": 1837,
-      "sha256": "011bf0ade9eb6ec271dba6ef7216c03266ab1ff43f5fcc94f17bdaec530107fb"
+      "sha256": "018fde7f855b9fd1064c0ebe52f94adf3d3a9e3b6e806272f6d9846708f43d7f"
     },
     {
       "path": "schema/events.schema.json",
