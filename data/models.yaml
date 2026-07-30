@@ -248,6 +248,11 @@ models:
   - id: kimi-k2-7-code
     display_name: "Kimi K2.7 Code"
     vendor: Moonshot AI
+  - id: kimi-k3
+    display_name: "Kimi K3"
+    vendor: Moonshot AI
+    aliases: ["FW Kimi K3"]
+    note: "Microsoft Foundry lists it as 'FW Kimi K3', the prefix marking it as served through Fireworks AI rather than by Microsoft."
 
 families:
   - id: gpt-3

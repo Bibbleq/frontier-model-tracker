@@ -168,6 +168,22 @@ Exceptions exist and are worth recording when a vendor does announce one — GPT
 Turbo with Vision reached GA on Azure with a dated post on 1 May 2024, and that
 is a normal `lifecycle: "ga"` event.
 
+## When Microsoft is not the one serving the model
+
+Some catalogue entries are hosted by a third party. Kimi K3 reached Microsoft
+Foundry on 28 July 2026 with Fireworks AI supplying the inference and Microsoft
+supplying only deployment and governance; the catalogue names it "FW Kimi K3"
+to say so.
+
+Record these with `tags: ["partner_hosted"]` and name the host in the caveat.
+The distinction is worth keeping because availability then depends on two
+parties rather than one, and a withdrawal by either ends it. Unlike
+`pre_release_access` this tag changes no validation behaviour — it is
+descriptive only.
+
+Keep the vendor as the model's creator, not the host. Kimi K3 is a Moonshot AI
+model served by Fireworks, so its vendor baseline is still Moonshot's release.
+
 ## When a partner ships before the vendor
 
 The build refuses an availability event on a non-vendor surface dated before
