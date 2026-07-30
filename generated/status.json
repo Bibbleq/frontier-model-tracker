@@ -1,16 +1,16 @@
 {
   "totals": {
-    "events": 214,
+    "events": 215,
     "backlog": 56,
-    "sources": 245,
+    "sources": 246,
     "models": 67,
     "surfaces": 23,
-    "confirmed": 196,
+    "confirmed": 197,
     "supported": 18
   },
   "kinds": {
     "announcement": 11,
-    "availability": 189,
+    "availability": 190,
     "milestone": 8,
     "policy": 6
   },
