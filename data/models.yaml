@@ -205,7 +205,7 @@ models:
   - id: gemini-2-5-pro
     display_name: "Gemini 2.5 Pro"
     vendor: Google
-    note: "Referenced only by an open validation-backlog item; no canonical event yet."
+    note: "Reached GitHub Copilot on 11 April 2025; no Google release event is recorded yet, so its lag is unmeasurable."
   - id: gemini-3-6-flash
     display_name: "Gemini 3.6 Flash"
     vendor: Google

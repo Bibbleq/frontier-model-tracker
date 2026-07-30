@@ -727,6 +727,47 @@
       ]
     },
     {
+      "id": "github-gpt4-copilot-chat-2023-11-30",
+      "kind": "availability",
+      "date": {
+        "start": "2023-11-30",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "experience_ids": [
+        "github-copilot-chat"
+      ],
+      "model_ids": [
+        "gpt-4"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "underlying",
+      "confidence": "supported",
+      "confidence_detail": {
+        "lifecycle": "supported"
+      },
+      "evidence_note": "GitHub upgraded the Copilot Chat experience to run on OpenAI's GPT-4. This is the first GPT-4 record on any GitHub surface; the model powered Chat invisibly, years before a model picker existed.",
+      "caveat": "The changelog states the model change without stating a release stage. Copilot Chat itself was still in beta and reached general availability the following month, so the stage is taken from the experience rather than from any statement about the model.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot November 30th update",
+          "url": "https://github.blog/changelog/2023-11-30-github-copilot-november-30th-update/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2023-11-30",
+          "source_type": "changelog",
+          "quote": "We upgraded the Copilot Chat experience, bringing more accurate and useful code suggestions with OpenAI's GPT-4 model.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
       "id": "google-gemini1-5-pro-2024-02-15",
       "kind": "availability",
       "date": {
@@ -998,6 +1039,34 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "changelog"
+        }
+      ]
+    },
+    {
+      "id": "github-models-beta-2024-08-01",
+      "kind": "milestone",
+      "date": {
+        "start": "2024-08-01",
+        "precision": "day"
+      },
+      "surface_id": "github-models",
+      "model_ids": [],
+      "confidence": "confirmed",
+      "evidence_note": "GitHub Models opened as a limited public beta, giving developers a playground and API for third-party models. This is the surface's own start date, which the dataset previously lacked, so its earliest model events had no context.",
+      "caveat": "A milestone about the surface, not a model availability event. It carries no model_ids and must not be counted as a model arriving.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Introducing GitHub Models",
+          "url": "https://github.blog/news-insights/product-news/introducing-github-models/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2024-08-01",
+          "source_type": "announcement",
+          "quote": "Today, we begin the limited public beta for GitHub Models.",
+          "supports": [
+            "date"
+          ]
         }
       ]
     },
@@ -1292,6 +1361,34 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "changelog"
+        }
+      ]
+    },
+    {
+      "id": "github-models-public-preview-2024-10-29",
+      "kind": "milestone",
+      "date": {
+        "start": "2024-10-29",
+        "precision": "day"
+      },
+      "surface_id": "github-models",
+      "model_ids": [],
+      "confidence": "confirmed",
+      "evidence_note": "GitHub Models moved from limited public beta to public preview, roughly three months after opening.",
+      "caveat": "A milestone about the surface, not a model availability event. It shares a date with the GitHub Universe multi-model announcement but is a separate fact: this is the catalogue product's own stage change, not a model reaching Copilot.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Models is now available in public preview",
+          "url": "https://github.blog/changelog/2024-10-29-github-models-is-now-available-in-public-preview/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2024-10-29",
+          "source_type": "changelog",
+          "quote": "GitHub Models has entered public preview! GitHub Models provides every GitHub developer with access to top AI models via a playground, API, and more.",
+          "supports": [
+            "date"
+          ]
         }
       ]
     },
@@ -2029,6 +2126,44 @@
       ]
     },
     {
+      "id": "github-gemini2-5-pro-preview-2025-04-11",
+      "kind": "availability",
+      "date": {
+        "start": "2025-04-11",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "experience_ids": [
+        "github-copilot-chat"
+      ],
+      "model_ids": [
+        "gemini-2-5-pro"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "Gemini 2.5 Pro became selectable in Copilot Chat in VS Code and in immersive chat on github.com. Pro and Pro+ users got it directly; Business and Enterprise required administrator enablement.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Copilot Chat users can use the Gemini 2.5 Pro model in public preview",
+          "url": "https://github.blog/changelog/2025-04-11-copilot-chat-users-can-use-the-gemini-2-5-pro-model-in-public-preview/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2025-04-11",
+          "source_type": "changelog",
+          "quote": "Gemini 2.5 Pro is now available to all GitHub Copilot customers. The latest Gemini model from Google is their most advanced model for complex tasks.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
       "id": "azure-gpt4-1-2025-04-14",
       "kind": "availability",
       "date": {
@@ -2064,6 +2199,83 @@
       ]
     },
     {
+      "id": "github-gpt4-1-preview-2025-04-14",
+      "kind": "availability",
+      "date": {
+        "start": "2025-04-14",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-4-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-4.1 became selectable in GitHub Copilot on the same day OpenAI released it, on every Copilot plan including Copilot Free.",
+      "caveat": "Reaching Copilot Free makes this broader than most model arrivals on this surface, which usually start on paid plans and often need administrator enablement.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt4-1-2025-04-14"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "OpenAI GPT-4.1 now available in public preview for GitHub Copilot and GitHub Models",
+          "url": "https://github.blog/changelog/2025-04-14-openai-gpt-4-1-now-available-in-public-preview-for-github-copilot-and-github-models/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2025-04-14",
+          "source_type": "changelog",
+          "quote": "OpenAI's latest model, GPT-4.1, is now available in GitHub Copilot and GitHub Models, bringing OpenAI's newest model to your coding workflow.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "github-models-gpt4-1-2025-04-14",
+      "kind": "availability",
+      "date": {
+        "start": "2025-04-14",
+        "precision": "day"
+      },
+      "surface_id": "github-models",
+      "model_ids": [
+        "gpt-4-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "The same announcement placed GPT-4.1 in the GitHub Models catalogue. Recorded separately from the Copilot picker because catalogue presence and user selectability are different exposures on different surfaces.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "OpenAI GPT-4.1 now available in public preview for GitHub Copilot and GitHub Models",
+          "url": "https://github.blog/changelog/2025-04-14-openai-gpt-4-1-now-available-in-public-preview-for-github-copilot-and-github-models/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2025-04-14",
+          "source_type": "changelog",
+          "quote": "OpenAI's latest model, GPT-4.1, is now available in GitHub Copilot and GitHub Models, bringing OpenAI's newest model to your coding workflow.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
       "id": "openai-gpt4-1-2025-04-14",
       "kind": "availability",
       "date": {
@@ -2089,6 +2301,76 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "announcement"
+        }
+      ]
+    },
+    {
+      "id": "github-models-o3-2025-04-16",
+      "kind": "availability",
+      "date": {
+        "start": "2025-04-16",
+        "precision": "day"
+      },
+      "surface_id": "github-models",
+      "model_ids": [
+        "o3"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "o3 entered the GitHub Models catalogue on release day. The Copilot picker arrival is recorded separately as github-o3-preview-2025-04-16.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "OpenAI o3 and o4-mini are now available in public preview for GitHub Copilot and GitHub Models",
+          "url": "https://github.blog/changelog/2025-04-16-openai-o3-and-o4-mini-are-now-available-in-public-preview-for-github-copilot-and-github-models/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2025-04-16",
+          "source_type": "changelog",
+          "quote": "OpenAI's latest reasoning models, o3 and o4-mini, are now available in GitHub Copilot and GitHub Models bringing next-generation problem-solving, structured reasoning, and coding intelligence directly into your development workflow.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "github-models-o4-mini-2025-04-16",
+      "kind": "availability",
+      "date": {
+        "start": "2025-04-16",
+        "precision": "day"
+      },
+      "surface_id": "github-models",
+      "model_ids": [
+        "o4-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "o4-mini entered the GitHub Models catalogue on release day. On the Copilot side the two models differed by plan: o4-mini reached all paid plans while o3 was limited to Enterprise and Pro+.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "OpenAI o3 and o4-mini are now available in public preview for GitHub Copilot and GitHub Models",
+          "url": "https://github.blog/changelog/2025-04-16-openai-o3-and-o4-mini-are-now-available-in-public-preview-for-github-copilot-and-github-models/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2025-04-16",
+          "source_type": "changelog",
+          "quote": "OpenAI's latest reasoning models, o3 and o4-mini, are now available in GitHub Copilot and GitHub Models bringing next-generation problem-solving, structured reasoning, and coding intelligence directly into your development workflow.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
         }
       ]
     },
@@ -3599,6 +3881,48 @@
       ]
     },
     {
+      "id": "github-opus4-5-preview-2025-11-24",
+      "kind": "availability",
+      "date": {
+        "start": "2025-11-24",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-opus-4-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "Claude Opus 4.5 entered public preview in GitHub Copilot on Pro, Pro+, Business and Enterprise, across Copilot Chat in VS Code, on github.com, in GitHub Mobile and in the CLI.",
+      "caveat": "Business and Enterprise administrators had to enable a policy first, so availability on those plans began later than this date by an unrecorded interval. Pro and Pro+ users could select it immediately.",
+      "relations": [
+        {
+          "type": "previews_for",
+          "target": "github-opus4-5-ga-2025-12-18"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Claude Opus 4.5 is in public preview for GitHub Copilot",
+          "url": "https://github.blog/changelog/2025-11-24-claude-opus-4-5-is-in-public-preview-for-github-copilot/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2025-11-24",
+          "source_type": "changelog",
+          "quote": "Claude Opus 4.5, Anthropic's latest model, is now rolling out in GitHub Copilot.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
       "id": "studio-opus4-5-2025-11-24",
       "kind": "availability",
       "date": {
@@ -3910,6 +4234,41 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "release_notes"
+        }
+      ]
+    },
+    {
+      "id": "github-opus4-5-ga-2025-12-18",
+      "kind": "availability",
+      "date": {
+        "start": "2025-12-18",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-opus-4-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "Claude Opus 4.5 reached general availability in GitHub Copilot 24 days after entering public preview, on Enterprise, Business, Pro and Pro+, across github.com, GitHub Mobile, VS Code, Visual Studio, JetBrains, Xcode and Eclipse.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Claude Opus 4.5 is now generally available in GitHub Copilot",
+          "url": "https://github.blog/changelog/2025-12-18-claude-opus-4-5-is-now-generally-available-in-github-copilot/",
+          "primary": true,
+          "retrieved_at": "2026-07-30",
+          "published_at": "2025-12-18",
+          "source_type": "changelog",
+          "quote": "Claude Opus 4.5 is generally available to Copilot Enterprise, Copilot Business, Copilot Pro, and Copilot Pro+.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
         }
       ]
     },
@@ -6627,10 +6986,13 @@
     },
     {
       "id": "github-models-launch-2024",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "GitHub Models launched as a developer model catalogue during 2024, before the o1 early-access wave in September.",
       "reason": "The surface is referenced by several sourced events but its own launch is not recorded, which makes the catalogue look newer and thinner than it is.",
       "target": "Find the GitHub Models launch announcement and record it as a milestone.",
+      "resolution": "Two milestones, not one. GitHub Models opened as a limited public beta on 1 August 2024 and entered public preview on 29 October 2024, recorded as github-models-beta-2024-08-01 and github-models-public-preview-2024-10-29. Both carry no model_ids because they are facts about the surface, not about a model arriving.",
+      "resolved_on": "2026-07-30",
+      "promoted_to": "github-models-beta-2024-08-01",
       "model_ids": [],
       "surface_ids": [
         "github-models"
@@ -6638,10 +7000,13 @@
     },
     {
       "id": "github-models-o3-o4-mini-2025-04-16",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "o3 and o4-mini reached GitHub Models at or shortly after their 16 April 2025 GitHub Copilot public preview.",
       "reason": "The GitHub changelog covering both surfaces says the models 'will also be available through GitHub Models', which is an announcement of future availability rather than a first-availability date. The GitHub Copilot leg is recorded; the GitHub Models leg is not.",
       "target": "Find a dated GitHub Models catalogue or changelog record for o3 and o4-mini.",
+      "resolution": "The 16 April 2025 changelog states both models are available in GitHub Copilot and GitHub Models in the present tense, not the future tense this item recorded, so the catalogue leg is dated the same day. Recorded as two events because the models differ by Copilot plan: o4-mini reached all paid plans while o3 was limited to Enterprise and Pro+. The second event is github-models-o4-mini-2025-04-16.",
+      "resolved_on": "2026-07-30",
+      "promoted_to": "github-models-o3-2025-04-16",
       "model_ids": [
         "o3",
         "o4-mini"
@@ -6677,10 +7042,13 @@
     },
     {
       "id": "github-copilot-chat-gpt4-transition-2023-11",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "Copilot Chat moved from GPT-3.5 to GPT-4 in late November 2023.",
       "reason": "Exact production date remains unverified.",
       "target": "Find the original GitHub changelog or archived docs for the GPT-4 transition.",
+      "resolution": "The 30 November 2023 changelog states the Copilot Chat experience was upgraded to GPT-4. Recorded as underlying exposure, since no model picker existed then, and as public_preview because Copilot Chat itself was still in beta and reached GA the following month; the changelog states the model change without stating a stage. The GPT-3.5 half remains unproven and stays with github-copilot-chat-gpt3-5-start-2023.",
+      "resolved_on": "2026-07-30",
+      "promoted_to": "github-gpt4-copilot-chat-2023-11-30",
       "model_ids": [
         "gpt-4"
       ],
@@ -6762,10 +7130,13 @@
     },
     {
       "id": "github-gpt4-1-first-availability-2025",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "GPT-4.1 entered the GitHub ecosystem around its 14 April 2025 release.",
       "reason": "GitHub Copilot and GitHub Models must be sourced independently.",
       "target": "Locate product-specific GitHub changelog records.",
+      "resolution": "Sourced independently for both surfaces from the same changelog, as the item required: github-gpt4-1-preview-2025-04-14 for the Copilot picker and github-models-gpt4-1-2025-04-14 for the catalogue. Notable for reaching Copilot Free, which is broader than most arrivals on this surface.",
+      "resolved_on": "2026-07-30",
+      "promoted_to": "github-gpt4-1-preview-2025-04-14",
       "model_ids": [
         "gpt-4-1"
       ],
@@ -6793,10 +7164,13 @@
     },
     {
       "id": "github-opus4-5-preview-ga-2025",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "Claude Opus 4.5 entered GitHub paid-plan preview on 24 November 2025 and GA on 18 December 2025.",
       "reason": "Discussed earlier; exact GitHub changelog URLs still need pinning.",
       "target": "Create preview and GA records separately after verification.",
+      "resolution": "Both dates confirmed from separate GitHub changelogs and recorded as separate events, with previews_for reading forward from the preview to the GA. The second event is github-opus4-5-ga-2025-12-18. The preview carries a caveat that Business and Enterprise administrators had to enable a policy first, so real availability on those plans began later than the recorded date.",
+      "resolved_on": "2026-07-30",
+      "promoted_to": "github-opus4-5-preview-2025-11-24",
       "model_ids": [
         "claude-opus-4-5"
       ],
@@ -6806,15 +7180,32 @@
     },
     {
       "id": "google-gemini2-5-pro-github-2025-04-11",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "Gemini 2.5 Pro entered GitHub Copilot public preview on 11 April 2025.",
       "reason": "Discussed earlier, but source URLs were not pinned in this pass.",
       "target": "Verify the Google vendor release and GitHub preview dates independently.",
+      "resolution": "The GitHub half is confirmed and recorded. The Google vendor release the item also asked for is not, so Gemini 2.5 Pro still has no vendor baseline and its lag is unmeasurable; that half is covered by gemini1-5-pro-public-preview-ga-2024 not at all, and needs its own item.",
+      "resolved_on": "2026-07-30",
+      "promoted_to": "github-gemini2-5-pro-preview-2025-04-11",
       "model_ids": [
         "gemini-2-5-pro"
       ],
       "surface_ids": [
         "github-copilot"
+      ]
+    },
+    {
+      "id": "google-gemini2-5-pro-vendor-release-2025",
+      "state": "open",
+      "working_claim": "Google released Gemini 2.5 Pro shortly before GitHub Copilot took it into public preview on 11 April 2025.",
+      "reason": "Recording the GitHub arrival created this gap rather than closing one: Gemini 2.5 Pro now has a Microsoft-side availability event and no vendor release to measure it against, so its lag is unmeasurable rather than zero. The same is true of Gemini 1.5 Pro, whose vendor dates are queued separately under gemini1-5-pro-public-preview-ga-2024.",
+      "target": "Pin Google's own dated announcement, from the Google Developers Blog or the Gemini API changelog. Note that Google has published separate preview and stable dates for earlier Gemini models, so establish which stage the 11 April Copilot arrival was drawing on rather than assuming one release date.",
+      "model_ids": [
+        "gemini-2-5-pro"
+      ],
+      "surface_ids": [
+        "google-gemini",
+        "google-gemini-api"
       ]
     },
     {

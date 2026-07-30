@@ -3,18 +3,18 @@ gpt-3,GPT-3,OpenAI,gpt-3,,,,3
 gpt-3-5,GPT-3.5,OpenAI,,GPT-3.5 generation,,,2
 codex,Codex,OpenAI,,,,,5
 dall-e-2,DALL-E 2,OpenAI,,,,,3
-gpt-4,GPT-4,OpenAI,,GPT-4 generation,,,5
+gpt-4,GPT-4,OpenAI,,GPT-4 generation,,,6
 gpt-4-turbo,GPT-4 Turbo,OpenAI,,,,,4
 gpt-4o,GPT-4o,OpenAI,,,,,6
-gpt-4-1,GPT-4.1,OpenAI,gpt-4-1,,,,3
+gpt-4-1,GPT-4.1,OpenAI,gpt-4-1,,,,5
 gpt-4-1-mini,GPT-4.1 mini,OpenAI,gpt-4-1,,,,2
 gpt-4-1-nano,GPT-4.1 nano,OpenAI,gpt-4-1,,,,3
 o1-preview,o1-preview,OpenAI,o1,,,o1,6
 o1-mini,o1-mini,OpenAI,o1,,,,7
 o1,o1,OpenAI,o1,,o1-preview,,6
-o3,o3,OpenAI,,,,,3
+o3,o3,OpenAI,,,,,4
 o3-mini,o3-mini,OpenAI,,,,,10
-o4-mini,o4-mini,OpenAI,,,,,4
+o4-mini,o4-mini,OpenAI,,,,,5
 openai-deep-research,OpenAI deep research model,OpenAI,,,,,1
 gpt-5,GPT-5,OpenAI,,,,,7
 gpt-5-mini,GPT-5 mini,OpenAI,,,,,2
@@ -41,7 +41,7 @@ claude-opus-4,Claude Opus 4,Anthropic,claude-4,,,,3
 claude-opus-4-1,Claude Opus 4.1,Anthropic,,,,,4
 claude-sonnet-4-5,Claude Sonnet 4.5,Anthropic,,,,,6
 claude-haiku-4-5,Claude Haiku 4.5,Anthropic,,,,,2
-claude-opus-4-5,Claude Opus 4.5,Anthropic,,,,,2
+claude-opus-4-5,Claude Opus 4.5,Anthropic,,,,,4
 claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,,,,,2
 claude-opus-4-7,Claude Opus 4.7,Anthropic,,,,,3
 claude-opus-4-8,Claude Opus 4.8,Anthropic,,,,,4
@@ -50,7 +50,7 @@ claude-opus-5,Claude Opus 5,Anthropic,,,,,3
 claude-fable-5,Claude Fable 5,Anthropic,,,,,9
 claude-mythos-5,Claude Mythos 5,Anthropic,,,,,3
 gemini-1-5-pro,Gemini 1.5 Pro,Google,,,,,2
-gemini-2-5-pro,Gemini 2.5 Pro,Google,,,,,0
+gemini-2-5-pro,Gemini 2.5 Pro,Google,,,,,1
 gemini-3-6-flash,Gemini 3.6 Flash,Google,,,,,2
 grok-3,Grok 3,xAI,,,,,3
 grok-3-mini,Grok 3 Mini,xAI,,Grok 3 mini,,,3

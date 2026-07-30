@@ -1,23 +1,23 @@
 {
   "totals": {
-    "events": 198,
-    "backlog": 55,
-    "sources": 228,
+    "events": 208,
+    "backlog": 56,
+    "sources": 238,
     "models": 66,
     "surfaces": 23,
-    "confirmed": 182,
-    "supported": 16
+    "confirmed": 191,
+    "supported": 17
   },
   "kinds": {
     "announcement": 10,
-    "availability": 176,
-    "milestone": 6,
+    "availability": 184,
+    "milestone": 8,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 42,
-    "promoted": 11
+    "open": 37,
+    "promoted": 17
   },
   "warnings": [
     {
@@ -197,6 +197,11 @@
     },
     {
       "code": "no_vendor_baseline",
+      "subject": "gemini-2-5-pro",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline",
       "subject": "gpt-5-5-thinking",
       "message": "no vendor release event, so lag cannot be derived"
     },
@@ -262,6 +267,11 @@
     },
     {
       "code": "suspicious_day_precision",
+      "subject": "github-models-beta-2024-08-01",
+      "message": "day precision on the first of the month may be an invented day"
+    },
+    {
+      "code": "suspicious_day_precision",
       "subject": "m365-anthropic-independent-processor-end-2026-05-01",
       "message": "day precision on the first of the month may be an invented day"
     },
@@ -283,23 +293,21 @@
   ],
   "warning_counts": {
     "missing_archive": 35,
-    "no_vendor_baseline": 2,
+    "no_vendor_baseline": 3,
     "pre_release_access": 1,
     "selectable_on_vendor_surface": 1,
-    "suspicious_day_precision": 11,
+    "suspicious_day_precision": 12,
     "unquoted_documentation": 2
   },
   "coverage": {
-    "models_without_events": [
-      "gemini-2-5-pro"
-    ],
+    "models_without_events": [],
     "surfaces_without_events": []
   },
   "lag_certainty": {
-    "exact": 283,
-    "not_recorded": 352,
-    "range": 22,
-    "unknown_no_baseline": 36,
-    "unknown_open_research": 99
+    "exact": 291,
+    "not_recorded": 354,
+    "range": 19,
+    "unknown_no_baseline": 42,
+    "unknown_open_research": 86
   }
 }
