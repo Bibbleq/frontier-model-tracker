@@ -54,18 +54,12 @@
       "code": "pre_release_access",
       "subject": "github-copilot-preview-codex-2021-06-29",
       "message": "dated 2021-06-29, before codex was released by its vendor on 2021-08-10"
-    },
-    {
-      "code": "selectable_on_vendor_surface",
-      "subject": "openai-gpt5-5-instant-2026-05-05",
-      "message": "selectable exposure on a vendor baseline surface"
     }
   ],
   "warning_counts": {
     "missing_archive": 2,
     "no_vendor_baseline": 4,
-    "pre_release_access": 1,
-    "selectable_on_vendor_surface": 1
+    "pre_release_access": 1
   },
   "coverage": {
     "models_without_events": [],

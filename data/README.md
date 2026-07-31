@@ -28,6 +28,16 @@ ever entering a timeline or a lag calculation.
 `selectable` is **derived** from `exposure` and appears only in generated
 output. It is never authored, so it cannot contradict the exposure.
 
+On a vendor-baseline surface, use `exposure: "not_applicable"`. Vendor events
+exist to anchor lag; the exposure axis describes how models reach users on the
+tracked Microsoft surfaces, and no derived output ever reads exposure from a
+vendor event. A vendor-side fact like a model becoming ChatGPT's default is
+worth keeping — in the evidence note and quote, not in the field. Encoding one
+default transition structurally would imply the dataset tracks them all, which
+it does not; if that coverage is ever wanted, it is a scope decision to take
+deliberately, not one stray row. The build warns on `selectable` or `default`
+here for exactly this reason.
+
 ## Record shape
 
 ```yaml
