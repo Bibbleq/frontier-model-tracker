@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bibbleq.github.io/frontier-model-tracker/schema/platforms.schema.json",
+  "title": "365Explained Frontier Model Tracker surface registry",
+  "type": "object",
+  "required": ["version", "surfaces", "experiences"],
+  "properties": {
+    "version": {"const": 1},
+    "surfaces": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/surface"}
+    },
+    "experiences": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/experience"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "identifier": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "tier": {
+      "type": "string",
+      "enum": ["microsoft", "copilot", "m365", "studio", "github_copilot", "foundry"]
+    },
+    "surface": {
+      "type": "object",
+      "required": ["id", "display_name", "owner", "counts_as"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "display_name": {"type": "string", "minLength": 1},
+        "owner": {"type": "string", "minLength": 1},
+        "family": {"type": "string", "minLength": 1},
+        "lineage": {"$ref": "#/$defs/identifier"},
+        "vendor_baseline": {"type": "boolean"},
+        "counts_as": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/tier"}
+        },
+        "renamed_from": {"$ref": "#/$defs/identifier"},
+        "renamed_to": {"$ref": "#/$defs/identifier"},
+        "renamed_on": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+        "note": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "experience": {
+      "type": "object",
+      "required": ["id", "display_name", "surface"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "display_name": {"type": "string", "minLength": 1},
+        "surface": {"$ref": "#/$defs/identifier"},
+        "note": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -8,7 +8,7 @@ This document is the promise those consumers can rely on. It describes what is
 stable, what may change, how change is signalled, and what a consumer must do
 to interpret the data honestly.
 
-**Contract version 2. Dataset version 3.**
+**Contract version 3. Dataset version 3.**
 
 ## Base URL
 
@@ -21,7 +21,8 @@ The live tree and immutable release snapshots are published from `main`:
 | Tree | Meaning |
 | --- | --- |
 | `/` | Latest. Receives data additions and corrections and may move to a new version pair. |
-| `/c2/v3/` | Immutable snapshot of contract version 2 and dataset version 3. Its bytes never change. |
+| `/c3/v3/` | Immutable snapshot of contract version 3 and dataset version 3. Its bytes never change. |
+| `/c2/v3/` | Earlier snapshot, retained. |
 | `/c1/v3/` | Earlier snapshot, retained. |
 
 Consumers that need current research should use `/`, inspect both version
@@ -32,7 +33,7 @@ Start at the manifest:
 
 ```
 https://bibbleq.github.io/frontier-model-tracker/manifest.json
-https://bibbleq.github.io/frontier-model-tracker/c2/v3/manifest.json
+https://bibbleq.github.io/frontier-model-tracker/c3/v3/manifest.json
 ```
 
 ## What is in the contract
@@ -82,7 +83,7 @@ consumer that reads the previous shape: a field removed or renamed, a value
 removed from an enum, or a field's meaning changed.
 
 **`contract_version`** describes this document and the publishing layout — URL
-structure, the manifest format, which files exist. It is currently `2`.
+structure, the manifest format, which files exist. It is currently `3`.
 
 Either may increment without the other. Snapshot paths therefore include both
 numbers: `/c{contract_version}/v{dataset_version}/`.
@@ -328,5 +329,6 @@ them:
 
 | Contract | Dataset | Change |
 | --- | --- | --- |
+| 3 | 3 | Declares that `lag_days_min` and `lag_days_max` in `data/lag.csv` may be negative, which has been true in the data since a partner surface with pre-release access was recorded: GitHub Copilot ran on Codex 42 days before OpenAI released it. Also marks the settlement of the publishing layout as data-only, with the informal HTML pages gone and schema `$id` values naming their published URLs. No field, file or enum changed; consumers that already tolerated the documented range need no code change. |
 | 2 | 3 | Adds `data/current-state.csv` and the obligation not to treat the latest event as the current state. Adds `legacy` to the `lifecycle` enum and states that consumers must tolerate unrecognised enum values. |
 | 1 | 3 | Initial contract. Establishes the base URL, immutable `/c1/v3/` snapshot, `manifest.json`, versioning and deprecation policy, and consumer obligations above. |

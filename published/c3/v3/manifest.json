@@ -24,8 +24,8 @@
       "path": "data/status.json",
       "media_type": "application/json",
       "description": "Totals, warning counts, coverage gaps and lag certainty distribution",
-      "bytes": 947,
-      "sha256": "d98084ff84e6d44fee2af3359e5a024a694f942b6c7a7249d30239811adb4312"
+      "bytes": 843,
+      "sha256": "520d8c4b9c6a40a7f9d8ff27b8d456694785895d0fca942c06b7d4092811b9f1"
     },
     {
       "path": "data/events.csv",
@@ -58,30 +58,9 @@
     {
       "path": "data/models.csv",
       "media_type": "text/csv",
-      "description": "Model registry with generation, model-line, family and event-count references",
-      "bytes": 4274,
-      "sha256": "83160d467cdc2d3bbdaee6929ff3aa0b4c2824e7c3f52c5a645231d8d6295395"
-    },
-    {
-      "path": "data/series.csv",
-      "media_type": "text/csv",
-      "description": "Vendor model series referenced by generations and model lines",
-      "bytes": 264,
-      "sha256": "6bbe988b88ca87590f11bb9b2c7328ae5134af156ed000079f78c92d8f90cc62"
-    },
-    {
-      "path": "data/generations.csv",
-      "media_type": "text/csv",
-      "description": "Broad numbered model generations; membership does not imply supersession",
-      "bytes": 757,
-      "sha256": "491ed730076b7a1bf1a1e7f025ada04c1fc80179bb8812640c588c25bd713a4b"
-    },
-    {
-      "path": "data/model-lines.csv",
-      "media_type": "text/csv",
-      "description": "Recurring named model lines; membership does not imply technical ancestry",
-      "bytes": 247,
-      "sha256": "90644128e9a6b626a2e2b05b7927b9d69a8a8831b4c9de265b07c6b71054156c"
+      "description": "Model registry with aliases, families and event counts",
+      "bytes": 2922,
+      "sha256": "2bcfda7a0889857189de2dc6c0ca8f5d2471356cedf80d5505e1338fb216b7a6"
     },
     {
       "path": "data/surfaces.csv",
@@ -101,8 +80,8 @@
       "path": "schema/models.schema.json",
       "media_type": "application/json",
       "description": "JSON Schema for the model registry",
-      "bytes": 3364,
-      "sha256": "f9dd63c65d2df53b3f617c6ba5a6044886706cf4c05a091a9e227de4d1c4f62a"
+      "bytes": 1715,
+      "sha256": "f1ce6b144e2e571aca4fedfeaac4c3d7cfb966aaf41a371933ded48687afc6a7"
     },
     {
       "path": "schema/platforms.schema.json",
