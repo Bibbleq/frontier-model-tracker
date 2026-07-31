@@ -4589,7 +4589,7 @@ events:
     confidence_detail:
       date: "supported"
     evidence_note: "Claude Sonnet 5 became selectable as a primary agent model in Copilot Studio, named alongside GPT-5.5 Chat in the June 2026 release notes. Same-day adoption of a vendor release, which Copilot Studio had not previously done for any Anthropic model."
-    caveat: "The release notes give only the month. The day is the intersection of two constraints rather than a published date: the entry sits under June 2026, and Anthropic did not release Claude Sonnet 5 until 30 June, leaving 30 June as the only possible day. If Microsoft's month attribution is wrong the date fails with it, which is why the day is marked supported. The release notes also warn that rollouts span several days."
+    caveat: "The release notes give only the month. The day is the intersection of two constraints rather than a published date: the entry sits under June 2026, and Anthropic did not release Claude Sonnet 5 until 30 June, leaving 30 June as the only possible day. The 23 June Wayback capture of the same page strengthens this: it has no June section at all, so the entry was added retroactively between 23 June and 15 July, ruling out a June section published early in the month about an earlier arrival. The release notes also warn that rollouts span several days."
     relations:
       - type: "announced_by"
         target: "anthropic-sonnet5-2026-06-30"
@@ -4602,6 +4602,14 @@ events:
         source_type: "release_notes"
         quote: "(General availability) Select Claude Sonnet 5 or GPT-5.5 Chat as your agent's primary AI model for improved response quality and reasoning."
         supports: ["model", "lifecycle", "exposure"]
+      - publisher: "Internet Archive"
+        title: "What's new in Copilot Studio, as captured 23 June 2026"
+        url: "https://web.archive.org/web/20260623095215/https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+        primary: false
+        retrieved_at: "2026-07-31"
+        source_type: "other"
+        supports: ["date"]
+        note: "Negative evidence: this capture's newest section is May 2026, with no June section and no Claude Sonnet 5 entry, proving the entry was added after 23 June. It cannot serve as the archive for the quoted text, which is why the primary source still needs a fresh capture."
   - id: "anthropic-fable5-restoration-2026-07-01"
     kind: "availability"
     date:
