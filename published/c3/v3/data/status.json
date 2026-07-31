@@ -1,0 +1,43 @@
+{
+  "totals": {
+    "events": 228,
+    "backlog": 59,
+    "sources": 269,
+    "models": 67,
+    "surfaces": 23,
+    "confirmed": 201,
+    "supported": 27
+  },
+  "kinds": {
+    "announcement": 12,
+    "availability": 201,
+    "milestone": 9,
+    "policy": 6
+  },
+  "backlog_states": {
+    "blocked": 2,
+    "open": 25,
+    "promoted": 31,
+    "rejected": 1
+  },
+  "warnings": [
+    {
+      "code": "pre_release_access",
+      "subject": "github-copilot-preview-codex-2021-06-29",
+      "message": "dated 2021-06-29, before codex was released by its vendor on 2021-08-10"
+    }
+  ],
+  "warning_counts": {
+    "pre_release_access": 1
+  },
+  "coverage": {
+    "models_without_events": [],
+    "surfaces_without_events": []
+  },
+  "lag_certainty": {
+    "exact": 313,
+    "not_recorded": 400,
+    "range": 24,
+    "unknown_open_research": 67
+  }
+}
