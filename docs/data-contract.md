@@ -50,12 +50,27 @@ and SHA-256. The manifest is verified separately against the committed snapshot.
 | `data/validation-backlog.csv` | Research queue with states and targets |
 | `data/lag.csv` | Derived adoption lag |
 | `data/current-state.csv` | Last known lifecycle per model and surface, with the caveats needed to read it |
-| `data/models.csv`, `data/surfaces.csv` | The registries, each with an `event_count` |
+| `data/models.csv`, `data/surfaces.csv` | Model and surface registries, each with an `event_count` |
+| `data/series.csv`, `data/generations.csv`, `data/model-lines.csv` | Model classification registries referenced by `models.csv` |
 | `schema/events.schema.json` | JSON Schema the dataset validates against |
 | `schema/models.schema.json`, `schema/platforms.schema.json` | Registry schemas |
 
 `events.json` is the complete picture. The CSVs are conveniences derived from
 it; if they ever disagree, `events.json` wins.
+
+Model classifications have deliberately different meanings:
+
+- `series` is a vendor product series such as GPT or Claude.
+- `generation` is a broad numbered era within that series. GPT-5.1 and
+  GPT-5.6 Sol are members of the GPT-5 generation.
+- `model_line` is a recurring named branch such as Claude Sonnet or Claude
+  Opus.
+- `family` remains the narrower set of models announced or marketed together.
+- `supersedes` and `superseded_by` are used only where a replacement
+  relationship is evidenced.
+
+Series, generation, model-line and family membership are classifications. None
+of them by itself asserts technical ancestry or supersession.
 
 ## Versioning
 

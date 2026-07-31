@@ -9,12 +9,18 @@ How derived analysis is computed, and what it deliberately refuses to compute.
 | `events.json` | The dataset verbatim, metadata included |
 | `events.csv` | Flattened timeline, IDs resolved to display names |
 | `validation-backlog.csv` | The research queue with states and targets |
-| `models.csv`, `surfaces.csv` | The registries, each with an `event_count` |
+| `models.csv`, `surfaces.csv` | Model and surface registries, each with an `event_count` |
+| `series.csv`, `generations.csv`, `model-lines.csv` | Model classification registries |
 | `lag.csv` | Derived adoption lag |
 
 `event_count` in the registry exports is a coverage signal. A registry entry
 with zero events is either a gap worth filling or an entry that exists only so
 a backlog item can name its target.
+
+Model grouping is descriptive, not a succession calculation. `generation`
+groups numbered releases within a vendor series, `model_line` follows recurring
+named branches, and `family` records models marketed together. Only an explicit
+`supersedes` link asserts replacement.
 
 `generated/lag.csv` is rebuilt from source on every build. Lag is never stored
 in canonical data, so it cannot drift from the events it describes and cannot

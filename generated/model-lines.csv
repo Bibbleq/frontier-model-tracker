@@ -1,0 +1,6 @@
+id,display_name,vendor,series
+claude-opus,Claude Opus,Anthropic,claude
+claude-sonnet,Claude Sonnet,Anthropic,claude
+claude-haiku,Claude Haiku,Anthropic,claude
+claude-fable,Claude Fable,Anthropic,claude
+claude-mythos,Claude Mythos,Anthropic,claude

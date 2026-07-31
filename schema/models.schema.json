@@ -14,6 +14,18 @@
     "families": {
       "type": "array",
       "items": {"$ref": "#/$defs/family"}
+    },
+    "series": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/series"}
+    },
+    "generations": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/generation"}
+    },
+    "model_lines": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/model_line"}
     }
   },
   "additionalProperties": false,
@@ -27,6 +39,8 @@
         "display_name": {"type": "string", "minLength": 1},
         "vendor": {"type": "string", "minLength": 1},
         "family": {"$ref": "#/$defs/identifier"},
+        "generation": {"$ref": "#/$defs/identifier"},
+        "model_line": {"$ref": "#/$defs/identifier"},
         "aliases": {
           "type": "array",
           "uniqueItems": true,
@@ -45,6 +59,41 @@
         "id": {"$ref": "#/$defs/identifier"},
         "display_name": {"type": "string", "minLength": 1},
         "vendor": {"type": "string", "minLength": 1},
+        "note": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "series": {
+      "type": "object",
+      "required": ["id", "display_name", "vendor"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "display_name": {"type": "string", "minLength": 1},
+        "vendor": {"type": "string", "minLength": 1},
+        "note": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "generation": {
+      "type": "object",
+      "required": ["id", "display_name", "vendor", "series"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "display_name": {"type": "string", "minLength": 1},
+        "vendor": {"type": "string", "minLength": 1},
+        "series": {"$ref": "#/$defs/identifier"},
+        "note": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "model_line": {
+      "type": "object",
+      "required": ["id", "display_name", "vendor", "series"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "display_name": {"type": "string", "minLength": 1},
+        "vendor": {"type": "string", "minLength": 1},
+        "series": {"$ref": "#/$defs/identifier"},
         "note": {"type": "string", "minLength": 1}
       },
       "additionalProperties": false
