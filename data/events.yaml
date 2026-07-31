@@ -1822,6 +1822,84 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "azure-o3-2025-04-16"
+    kind: "availability"
+    date:
+      start: "2025-04-16"
+      end: "2025-04-30"
+      precision: "day"
+    surface_id: "azure-openai"
+    model_ids: ["o3"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      lifecycle: "supported"
+    evidence_note: "o3 reached Azure OpenAI in April 2025. The classic changelog records the release in the present tense and the April Foundry retrospective covers both reasoning models; the Learn version string 2025-04-16 matches OpenAI's launch day."
+    caveat: "Bounded: the floor is OpenAI's 16 April release, which Azure cannot precede, and the ceiling is the April retrospective's month. Neither source states a release stage, so general availability is inferred from the unlabelled catalogue convention."
+    relations:
+      - type: "announced_by"
+        target: "openai-o3-2025-04-16"
+    sources:
+      - publisher: "Microsoft"
+        title: "What's new in Azure AI Foundry, April 2025"
+        url: "https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-april-2025/"
+        primary: true
+        retrieved_at: "2026-07-31"
+        published_at: "2025-04-29"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260309210046/https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-april-2025/"
+        quote: "Need faster, cheaper reasoning? The new o-series pairs GPT-4-level logical depth with lower latency and aggressive pricing, making them ideal for agent planning, re-ranking, or embedded analytics where every millisecond (and penny) counts."
+        supports: ["date", "model"]
+      - publisher: "Microsoft Learn"
+        title: "What's new in Azure OpenAI in Microsoft Foundry Models? (classic)"
+        url: "https://learn.microsoft.com/en-us/azure/foundry-classic/openai/whats-new"
+        primary: false
+        retrieved_at: "2026-07-31"
+        source_type: "changelog"
+        quote: "o4-mini and o3 models are now available. These models are the latest reasoning models from Azure OpenAI offering enhanced reasoning, quality, and performance."
+        supports: ["model", "lifecycle"]
+  - id: "azure-o4-mini-2025-04-16"
+    kind: "availability"
+    date:
+      start: "2025-04-16"
+      end: "2025-04-30"
+      precision: "day"
+    surface_id: "azure-openai"
+    model_ids: ["o4-mini"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      lifecycle: "supported"
+    evidence_note: "o4-mini reached Azure OpenAI in April 2025 alongside o3, recorded in the same classic changelog entry and April retrospective, with the Learn version string 2025-04-16 matching OpenAI's launch day."
+    caveat: "Bounded and stage-inferred on the same basis as azure-o3-2025-04-16."
+    relations:
+      - type: "announced_by"
+        target: "openai-o4-mini-2025-04-16"
+    sources:
+      - publisher: "Microsoft"
+        title: "What's new in Azure AI Foundry, April 2025"
+        url: "https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-april-2025/"
+        primary: true
+        retrieved_at: "2026-07-31"
+        published_at: "2025-04-29"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260309210046/https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-april-2025/"
+        quote: "Need faster, cheaper reasoning? The new o-series pairs GPT-4-level logical depth with lower latency and aggressive pricing, making them ideal for agent planning, re-ranking, or embedded analytics where every millisecond (and penny) counts."
+        supports: ["date", "model"]
+      - publisher: "Microsoft Learn"
+        title: "What's new in Azure OpenAI in Microsoft Foundry Models? (classic)"
+        url: "https://learn.microsoft.com/en-us/azure/foundry-classic/openai/whats-new"
+        primary: false
+        retrieved_at: "2026-07-31"
+        source_type: "changelog"
+        quote: "o4-mini and o3 models are now available. These models are the latest reasoning models from Azure OpenAI offering enhanced reasoning, quality, and performance."
+        supports: ["model", "lifecycle"]
   - id: "github-models-o3-2025-04-16"
     kind: "availability"
     date:
@@ -3298,6 +3376,77 @@ events:
         quote: "To enable this change, Anthropic has onboarded as a Microsoft subprocessor."
         supports: ["policy"]
         note: "Scoped to policy deliberately. The page attests the arrangement, not its start date."
+  - id: "anthropic-opus4-6-2026-02-05"
+    kind: "availability"
+    date:
+      start: "2026-02-05"
+      precision: "day"
+    surface_id: "anthropic-claude"
+    model_ids: ["claude-opus-4-6"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+    evidence_note: "Anthropic released Claude Opus 4.6 across claude.ai, the API and the major cloud platforms. Found by the Foundry retrospective sweep: the model had no registry entry at all despite Microsoft carrying it, the only vendor release this dataset had missed entirely."
+    caveat: "Anthropic's page is undated; the system card attests February 2026 and the day rests on launch-day press coverage. The page names no cloud individually, so the Microsoft leg is evidenced separately by Microsoft's own February retrospective."
+    sources:
+      - publisher: "Anthropic"
+        title: "Claude Opus 4.6"
+        url: "https://www.anthropic.com/news/claude-opus-4-6"
+        primary: true
+        retrieved_at: "2026-07-31"
+        source_type: "announcement"
+        quote: "Claude Opus 4.6 is available today on claude.ai, our API, and all major cloud platforms."
+        supports: ["model", "lifecycle"]
+      - publisher: "Anthropic"
+        title: "System Card: Claude Opus 4.6"
+        url: "https://www-cdn.anthropic.com/0dd865075ad3132672ee0ab40b05a53f14cf5288.pdf"
+        primary: true
+        retrieved_at: "2026-07-31"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260727194014/https://www-cdn.anthropic.com/0dd865075ad3132672ee0ab40b05a53f14cf5288.pdf"
+        quote: "System Card: Claude Opus 4.6 February 2026"
+        supports: ["date"]
+        note: "Attests the month; the specific day comes from press coverage of the launch."
+      - publisher: "Grand Pinnacle Tribune"
+        title: "Anthropic Unveils Claude Opus 4.6 Amid AI Industry Turmoil"
+        url: "https://evrimagaci.org/gpt/anthropic-unveils-claude-opus-46-amid-ai-industry-turmoil-527113"
+        primary: false
+        retrieved_at: "2026-07-31"
+        source_type: "news"
+        supports: ["date"]
+  - id: "foundry-opus4-6-2026-02-05"
+    kind: "availability"
+    date:
+      start: "2026-02-05"
+      end: "2026-02-28"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["claude-opus-4-6"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+    evidence_note: "Claude Opus 4.6 entered the Microsoft Foundry catalogue in preview during February 2026, per Microsoft's February retrospective. The retirement schedule still lists it in preview."
+    caveat: "Bounded: the floor is Anthropic's 5 February release, which Foundry cannot precede, and the ceiling is the February retrospective's coverage. Anthropic's own launch page says only 'all major cloud platforms', so Microsoft's retrospective is what places it on Foundry."
+    relations:
+      - type: "announced_by"
+        target: "anthropic-opus4-6-2026-02-05"
+    sources:
+      - publisher: "Microsoft"
+        title: "What's new in Microsoft Foundry, February 2026"
+        url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-feb-2026/"
+        primary: true
+        retrieved_at: "2026-07-31"
+        published_at: "2026-03-06"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260418110251/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-feb-2026/"
+        quote: "Claude Opus 4.6 (preview) — Anthropic's most capable reasoning model — is now available in Microsoft Foundry."
+        supports: ["date", "model", "lifecycle", "exposure"]
   - id: "anthropic-sonnet4-6-2026-02-17"
     kind: "availability"
     date:
@@ -3317,6 +3466,37 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "foundry-sonnet4-6-2026-02-17"
+    kind: "availability"
+    date:
+      start: "2026-02-17"
+      end: "2026-02-28"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["claude-sonnet-4-6"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      lifecycle: "supported"
+    evidence_note: "Claude Sonnet 4.6 entered the Microsoft Foundry catalogue during February 2026, closing the Foundry leg missing since the vendor and GitHub Copilot events were recorded."
+    caveat: "Bounded: the floor is Anthropic's 17 February release and the ceiling is the February retrospective's coverage. The retrospective's sentence carries no stage label; preview is taken from the retirement schedule, which lists the model in preview, so the lifecycle is the weaker part of this claim."
+    relations:
+      - type: "announced_by"
+        target: "anthropic-sonnet4-6-2026-02-17"
+    sources:
+      - publisher: "Microsoft"
+        title: "What's new in Microsoft Foundry, February 2026"
+        url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-feb-2026/"
+        primary: true
+        retrieved_at: "2026-07-31"
+        published_at: "2026-03-06"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260418110251/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-feb-2026/"
+        quote: "Claude Sonnet 4.6 landed in Microsoft Foundry — nearly the same intelligence tier at a substantially lower price point."
+        supports: ["date", "model", "exposure"]
   - id: "github-sonnet4-6-2026-02-17"
     kind: "availability"
     date:
@@ -5263,7 +5443,7 @@ validation_backlog:
     state: "open"
     working_claim: "Fable 5 availability in Microsoft Foundry was restored at some point after the export controls were lifted on 30 June 2026."
     reason: "The 12 June suspension is now recorded canonically at 'supported' confidence, but no restoration date is established for Foundry. CNBC reported on 30 June 2026 that Anthropic would re-enable Fable 5 on Amazon Web Services, Google Cloud and Microsoft Foundry 'as soon as possible', which is an announcement of future availability rather than a first-availability date. Microsoft Learn currently lists claude-fable-5 as an available Anthropic-hosted preview, proving the end state but not the date."
-    target: "Locate a dated Microsoft Foundry re-enablement record, or a Learn page revision, that pins when Fable 5 returned to the Foundry catalogue."
+    target: "Locate a dated Microsoft Foundry re-enablement record. The May 2026 retrospective carries no Fable 5 entry and the June and July 2026 retrospectives did not yet exist on 31 July 2026; check both when published, since the suspension falls in June's coverage and the restoration in July's."
     model_ids: ["claude-fable-5"]
     surface_ids: ["microsoft-foundry"]
     sources:
@@ -5305,7 +5485,7 @@ validation_backlog:
     state: "open"
     working_claim: "Kimi K2.7 Code appeared in Microsoft Foundry between mid-June and early July 2026."
     reason: "Current catalogue presence does not prove first availability. The vendor baseline is now recorded as moonshot-kimi-k2-7-code-2026-06-12, bounded to 12-15 June, so any Foundry arrival is no earlier than that. Review offers three further constraints, none of them a dated announcement: the Foundry retirement schedule lists the model at version 2026-06-12, the catalogue at 2026-06-15, and a republished item claims a Foundry preview began on 1 July 2026."
-    target: "Find Microsoft's own dated Foundry announcement. Treat the version strings as bounds rather than as the arrival date, since a version label is the model's build, not the day Microsoft listed it. The 1 July claim reaches us only through a syndicated copy and needs the first-party original before use."
+    target: "Find Microsoft's own dated Foundry announcement. The May 2026 retrospective, published 31 May, predates the model and carries no K2.7; the June 2026 retrospective did not yet exist on 31 July 2026. Re-check devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-jun-2026 when it appears, following the pattern that resolved the Opus 4.6 and Sonnet 4.6 arrivals. Treat the version strings as bounds, not the arrival date."
     model_ids: ["kimi-k2-7-code"]
     surface_ids: ["microsoft-foundry"]
   - id: "foundry-model-retirement-schedule"
@@ -5327,21 +5507,24 @@ validation_backlog:
     state: "open"
     working_claim: "The gpt-5.3-chat model retired from Microsoft Foundry on 29 June 2026 is the model this registry calls GPT-5.3 Instant."
     reason: "The Foundry schedule lists gpt-5.3-chat as retired on 29 June 2026. The registry carries GPT-5.3 Instant with 'GPT-5.3 Chat' as an alias because Copilot Studio uses that name, but the timeline holds no Foundry event for the model at all, so recording a Foundry retirement would be both an identity inference and an ending without a beginning."
-    target: "Confirm that Foundry's gpt-5.3-chat and the Copilot Studio GPT-5.3 Chat are the same model, and find when it first appeared in Foundry."
+    target: "Confirm that Foundry's gpt-5.3-chat and the Copilot Studio GPT-5.3 Chat are the same model, and find when it first appeared in Foundry. The February and March 2026 retrospectives are both silent on gpt-5.3-chat, and February predates its 2026-03-03 version string while March's post discusses only GPT-5.4, so the first appearance is documented nowhere but the schedule's version string. A bounded arrival from the version date would need the identity question settled first."
     model_ids: ["gpt-5-3-instant"]
     surface_ids: ["microsoft-foundry"]
   - id: "foundry-o3-o4-mini-2025-04-16"
-    state: "open"
+    state: "promoted"
     working_claim: "o3 and o4-mini reached Microsoft Foundry around the 16 April 2025 vendor release."
     reason: "The sourced pack confirms GitHub but does not include a Foundry event."
     target: "Pin a dated Microsoft Foundry announcement for each model."
+    resolution: "Recorded as two bounded events on azure-openai, 16 to 30 April 2025: the floor is OpenAI's launch day, which Azure cannot precede and which the Learn version strings match, and the ceiling is the April retrospective's coverage. The classic changelog states both models are now available in the present tense; neither source names a stage, so general availability is inferred from the unlabelled catalogue convention and marked supported. The second event is azure-o4-mini-2025-04-16."
+    resolved_on: "2026-07-31"
+    promoted_to: "azure-o3-2025-04-16"
     model_ids: ["o3", "o4-mini"]
     surface_ids: ["azure-ai-foundry"]
   - id: "foundry-opus4-5-first-availability-2025-11-24"
     state: "open"
     working_claim: "Claude Opus 4.5 entered Microsoft Foundry public preview around vendor launch."
-    reason: "The Copilot Studio announcement has now been read first-hand and its Foundry wording is future tense: Opus 4.5 is coming to public preview in Microsoft Foundry. That is recorded as the announcement foundry-opus4-5-announced-2025-11-24, which unlike the GPT-5.5 case names no target date, so the actual arrival is entirely unpinned."
-    target: "Find a source reporting Claude Opus 4.5 as actually present in the Foundry catalogue: the November or December 2025 Foundry monthly retrospective is the most likely place, following the pattern that resolved GPT-5.5 and Opus 4.7."
+    reason: "The 24 November 2025 announcement is future tense and recorded as foundry-opus4-5-announced-2025-11-24. The retrospective sweep then found sustained negative evidence: the October-November retrospective lists the Foundry Claude offering as Haiku 4.5, Sonnet 4.5 and Opus 4.1; the December-January retrospective carries no Claude entry; February announces Opus 4.6 and Sonnet 4.6 but not 4.5; March is silent on Claude, April carries only Opus 4.7 and May nothing. Opus 4.5 never received a retrospective mention, yet today's retirement schedule lists it in preview, so it did arrive at some point after the February coverage window."
+    target: "Two candidate answers remain: a quiet catalogue arrival between March and June 2026, or arrival as part of the Claude-in-Foundry general availability of 29 June 2026, which is already recorded as claude-foundry-ga-2026-06-29. Check the June 2026 retrospective when it is published; if it is also silent, record a bounded arrival ending at the schedule's 27 July observation and treat the retrospectives' silence as the caveat."
     model_ids: ["claude-opus-4-5"]
     surface_ids: ["microsoft-foundry"]
   - id: "foundry-sonnet5-2026-06-30"
@@ -5453,17 +5636,19 @@ validation_backlog:
     model_ids: ["claude-opus-4-7"]
     surface_ids: ["github-copilot", "microsoft-foundry"]
   - id: "github-opus4-7-picker"
-    state: "open"
+    state: "rejected"
     working_claim: "Claude Opus 4.7 may have reached the GitHub Copilot model picker, but no changelog has been found."
     reason: "Split from github-foundry-opus4-7-2026-04-16 when its Foundry half resolved. Every other frontier Anthropic model from Opus 4.5 onward has a dated GitHub changelog for its picker arrival; Opus 4.7 has none, which is itself informative."
     target: "Find a GitHub changelog naming Opus 4.7, or accept that it never reached the picker, which would be a finding rather than a gap: GitHub moved from Opus 4.6 to Opus 4.8 without the intermediate model. Reject the item in that case."
+    resolution: "Rejected as a finding, as the item anticipated: GitHub Copilot skipped Claude Opus 4.6 and 4.7. The April and May 2026 changelog month archives were read in full and name neither model; the next Opus entry after 4.5 is Opus 4.8 reaching general availability on 28 May 2026, which is already recorded. Anthropic's own Opus 4.6 and 4.7 pages reference GitHub only as an early-access tester, not as a Copilot surface. The absence is the answer."
+    resolved_on: "2026-07-31"
     model_ids: ["claude-opus-4-7"]
     surface_ids: ["github-copilot"]
   - id: "github-gemini1-5-pro-first-picker-date-2024"
     state: "open"
     working_claim: "Gemini 1.5 Pro became selectable in GitHub Copilot after the 29 October 2024 multi-model announcement."
     reason: "The announcement says Gemini was coming; the exact first picker date remains unresolved. The 29 October 2024 GitHub Universe keynote is recorded as an announcement rather than availability, because treating it as availability placed a GA before a later public preview on the same surface. That leaves Gemini 1.5 Pro with no GitHub Copilot availability date at all."
-    target: "Find the dated GitHub changelog for first selectable Gemini 1.5 Pro availability. The November 2024 changelog month archive has been read in full and contains no Gemini entry, so the promised follow-through was not changelogged that month; check the December 2024 archive and the VS Code release notes next. The arrival remains bounded below by 29 October 2024."
+    target: "Find the dated GitHub changelog for first selectable Gemini 1.5 Pro availability. The November and December 2024 changelog month archives have now both been read in full and contain no Gemini entry, while December does carry the o1 arrivals, so the picker rollout was simply never changelogged in 2024. Check the January 2025 archive and the VS Code release notes next. The arrival remains bounded below by 29 October 2024."
     model_ids: ["gemini-1-5-pro"]
     surface_ids: ["github-copilot"]
   - id: "github-gpt4-1-first-availability-2025"
