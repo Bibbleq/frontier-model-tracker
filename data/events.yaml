@@ -4221,7 +4221,8 @@ events:
         primary: true
         retrieved_at: "2026-07-28"
         source_type: "release_notes"
-        archived_url: "https://web.archive.org/web/20260623095215/https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+        archived_url: "https://web.archive.org/web/20260731080627/https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new?wayback=20260731"
+        note: "The capture is of the page with a cache-busting query parameter, because Save Page Now without one was served a stale CDN variant dated 14 May that lacks the June section. The quoted text is confirmed present in this capture. An earlier bulk pass attached the 23 June capture, which predates the June section and could not attest this quote; corrected here."
         quote: '(General availability) Select Claude Sonnet 5 or GPT-5.5 Chat as your agent''s primary AI model for improved response quality and reasoning.'
         supports: [date, model, lifecycle]
   - id: "anthropic-fable5-2026-06-09"
@@ -4589,7 +4590,7 @@ events:
     confidence_detail:
       date: "supported"
     evidence_note: "Claude Sonnet 5 became selectable as a primary agent model in Copilot Studio, named alongside GPT-5.5 Chat in the June 2026 release notes. Same-day adoption of a vendor release, which Copilot Studio had not previously done for any Anthropic model."
-    caveat: "The release notes give only the month. The day is the intersection of two constraints rather than a published date: the entry sits under June 2026, and Anthropic did not release Claude Sonnet 5 until 30 June, leaving 30 June as the only possible day. If Microsoft's month attribution is wrong the date fails with it, which is why the day is marked supported. The release notes also warn that rollouts span several days."
+    caveat: "The release notes give only the month. The day is the intersection of two constraints rather than a published date: the entry sits under June 2026, and Anthropic did not release Claude Sonnet 5 until 30 June, leaving 30 June as the only possible day. The 23 June Wayback capture of the same page strengthens this: it has no June section at all, so the entry was added retroactively between 23 June and 15 July, ruling out a June section published early in the month about an earlier arrival. The release notes also warn that rollouts span several days."
     relations:
       - type: "announced_by"
         target: "anthropic-sonnet5-2026-06-30"
@@ -4600,8 +4601,17 @@ events:
         primary: true
         retrieved_at: "2026-07-31"
         source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260731080627/https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new?wayback=20260731"
         quote: "(General availability) Select Claude Sonnet 5 or GPT-5.5 Chat as your agent's primary AI model for improved response quality and reasoning."
         supports: ["model", "lifecycle", "exposure"]
+      - publisher: "Internet Archive"
+        title: "What's new in Copilot Studio, as captured 23 June 2026"
+        url: "https://web.archive.org/web/20260623095215/https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+        primary: false
+        retrieved_at: "2026-07-31"
+        source_type: "other"
+        supports: ["date"]
+        note: "Negative evidence: this capture's newest section is May 2026, with no June section and no Claude Sonnet 5 entry, proving the entry was added after 23 June. It cannot serve as the archive for the quoted text, which is why the primary source still needs a fresh capture."
   - id: "anthropic-fable5-restoration-2026-07-01"
     kind: "availability"
     date:
@@ -4684,6 +4694,42 @@ events:
         retrieved_at: "2026-07-26"
         published_at: "2026-07-01"
         source_type: "changelog"
+  - id: "moonshot-kimi-k3-2026-07-01"
+    kind: "availability"
+    date:
+      start: "2026-07-01"
+      end: "2026-07-16"
+      precision: "day"
+    surface_id: "moonshot"
+    model_ids: ["kimi-k3"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+    evidence_note: "Moonshot AI launched Kimi K3 through its platform API and Playground, as a paid flagship unlocked by account top-up, with the open weights to follow by 27 July. Microsoft Foundry took it via Fireworks AI on 28 July."
+    caveat: "Bounded by observation at both ends, since Moonshot published no dated announcement, repeating the Kimi K2.7 Code pattern. The floor is trade coverage written in July describing K3 as confirmed but not yet released; the ceiling is the quickstart page for the operational API entering the Wayback index on 16 July. The floor source is itself undated and placed in July by its own content, which is why the date is marked supported. The API launch preceded the weights release, so this event records commercial availability, not open weights."
+    sources:
+      - publisher: "Moonshot AI"
+        title: "Kimi K3 quickstart"
+        url: "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart"
+        primary: true
+        retrieved_at: "2026-07-31"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260716152818/https://platform.kimi.ai/docs/guide/kimi-k3-quickstart"
+        quote: "Kimi K3 is a flagship model: it is unlocked after a successful top-up (minimum $1)."
+        supports: ["model", "lifecycle"]
+        note: "The page also states the full model weights will be released by July 27, 2026. The capture is a client-rendered application shell whose raw HTML names Kimi K3 but does not carry the quoted sentence; it is attached because its existence on 16 July is itself the date evidence, and replay may render the full text."
+      - publisher: "AIbase"
+        title: "China's Large Model Scene Faces a Major Breakthrough: Kimi K3 to Be Released This Month"
+        url: "https://news.aibase.com/news/29318"
+        primary: false
+        retrieved_at: "2026-07-31"
+        source_type: "news"
+        quote: "the new generation large model Kimi K3 from Moonshot AI, a unicorn in the field of artificial intelligence, has also been confirmed to be released within this month."
+        supports: ["date"]
+        note: "Undated, but its own content places it in July 2026. Describes K3 as confirmed but not yet released, which is what makes 1 July the window's floor: the quote attests the month, not a day, and the first of the month is the floor of that month rather than a claimed date."
   - id: "m365-sonnet5-2026-07-02"
     kind: "availability"
     date:
@@ -5514,10 +5560,13 @@ validation_backlog:
     resolved_on: "2026-07-30"
     promoted_to: "moonshot-kimi-k2-7-code-2026-06-12"
   - id: "kimi-k3-vendor-release-2026-07"
-    state: "open"
+    state: "promoted"
     working_claim: "Moonshot AI released Kimi K3 shortly before it reached Microsoft Foundry on 28 July 2026."
     reason: "Foundry availability through Fireworks AI is confirmed, but Moonshot has no recorded release event for K3, so the lag is unmeasurable rather than zero. Moonshot published no dated announcement for K2.7 Code either, which is why that baseline had to be bounded, so the same problem is expected here."
     target: "Pin a Moonshot release artefact: a Hugging Face model card first commit, an API changelog entry, or a dated resource page. If none carries a date, bound the window as moonshot-kimi-k2-7-code-2026-06-12 does rather than assuming the Foundry date."
+    resolution: "Bounded 1 to 16 July 2026, repeating the K2.7 pattern of observation at both ends: trade coverage written in July describes K3 as confirmed but not yet released, and the quickstart page for the operational paid API enters the Wayback index on 16 July. The quickstart, found during review, also states the full weights would be released by 27 July. The Hugging Face model card remains unreachable from this environment, and the Foundry retirement schedule was checked in its 23 July revision and carries no K3 row, so neither could tighten the window."
+    resolved_on: "2026-07-31"
+    promoted_to: "moonshot-kimi-k3-2026-07-01"
     sources:
       - publisher: "Hugging Face"
         title: "moonshotai/Kimi-K3 (unreachable)"

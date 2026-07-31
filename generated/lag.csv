@@ -671,18 +671,18 @@ kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,github_copilot,any_exposure,moonshot-k
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,github_copilot,selectable_or_default,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,16,19,range
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,foundry,any_exposure,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,,,,,,,,unknown_open_research
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,foundry,selectable_or_default,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,,,,,,,,unknown_open_research
-kimi-k3,Kimi K3,Moonshot AI,microsoft,any_exposure,,,,foundry-kimi-k3-2026-07-28,2026-07-28,microsoft-foundry,catalogue,ga,,,unknown_no_baseline
-kimi-k3,Kimi K3,Moonshot AI,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-kimi-k3,Kimi K3,Moonshot AI,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
-kimi-k3,Kimi K3,Moonshot AI,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-kimi-k3,Kimi K3,Moonshot AI,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
-kimi-k3,Kimi K3,Moonshot AI,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-kimi-k3,Kimi K3,Moonshot AI,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
-kimi-k3,Kimi K3,Moonshot AI,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-kimi-k3,Kimi K3,Moonshot AI,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
-kimi-k3,Kimi K3,Moonshot AI,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-kimi-k3,Kimi K3,Moonshot AI,foundry,any_exposure,,,,foundry-kimi-k3-2026-07-28,2026-07-28,microsoft-foundry,catalogue,ga,,,unknown_no_baseline
-kimi-k3,Kimi K3,Moonshot AI,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+kimi-k3,Kimi K3,Moonshot AI,microsoft,any_exposure,moonshot-kimi-k3-2026-07-01,2026-07-01,ga,foundry-kimi-k3-2026-07-28,2026-07-28,microsoft-foundry,catalogue,ga,12,27,range
+kimi-k3,Kimi K3,Moonshot AI,microsoft,selectable_or_default,moonshot-kimi-k3-2026-07-01,2026-07-01,ga,,,,,,,,not_recorded
+kimi-k3,Kimi K3,Moonshot AI,copilot,any_exposure,moonshot-kimi-k3-2026-07-01,2026-07-01,ga,,,,,,,,not_recorded
+kimi-k3,Kimi K3,Moonshot AI,copilot,selectable_or_default,moonshot-kimi-k3-2026-07-01,2026-07-01,ga,,,,,,,,not_recorded
+kimi-k3,Kimi K3,Moonshot AI,m365,any_exposure,moonshot-kimi-k3-2026-07-01,2026-07-01,ga,,,,,,,,not_recorded
+kimi-k3,Kimi K3,Moonshot AI,m365,selectable_or_default,moonshot-kimi-k3-2026-07-01,2026-07-01,ga,,,,,,,,not_recorded
+kimi-k3,Kimi K3,Moonshot AI,studio,any_exposure,moonshot-kimi-k3-2026-07-01,2026-07-01,ga,,,,,,,,not_recorded
+kimi-k3,Kimi K3,Moonshot AI,studio,selectable_or_default,moonshot-kimi-k3-2026-07-01,2026-07-01,ga,,,,,,,,not_recorded
+kimi-k3,Kimi K3,Moonshot AI,github_copilot,any_exposure,moonshot-kimi-k3-2026-07-01,2026-07-01,ga,,,,,,,,not_recorded
+kimi-k3,Kimi K3,Moonshot AI,github_copilot,selectable_or_default,moonshot-kimi-k3-2026-07-01,2026-07-01,ga,,,,,,,,not_recorded
+kimi-k3,Kimi K3,Moonshot AI,foundry,any_exposure,moonshot-kimi-k3-2026-07-01,2026-07-01,ga,foundry-kimi-k3-2026-07-28,2026-07-28,microsoft-foundry,catalogue,ga,12,27,range
+kimi-k3,Kimi K3,Moonshot AI,foundry,selectable_or_default,moonshot-kimi-k3-2026-07-01,2026-07-01,ga,,,,,,,,not_recorded
 llama-2,Llama 2,Meta,microsoft,any_exposure,meta-llama2-2023-07-18,2023-07-18,ga,meta-llama2-azure-2023-07-18,2023-07-18,azure-ai-catalog,catalogue,ga,0,0,exact
 llama-2,Llama 2,Meta,microsoft,selectable_or_default,meta-llama2-2023-07-18,2023-07-18,ga,,,,,,,,not_recorded
 llama-2,Llama 2,Meta,copilot,any_exposure,meta-llama2-2023-07-18,2023-07-18,ga,,,,,,,,not_recorded

@@ -1,36 +1,26 @@
 {
   "totals": {
-    "events": 227,
+    "events": 228,
     "backlog": 59,
-    "sources": 266,
+    "sources": 269,
     "models": 67,
     "surfaces": 23,
     "confirmed": 201,
-    "supported": 26
+    "supported": 27
   },
   "kinds": {
     "announcement": 12,
-    "availability": 200,
+    "availability": 201,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 26,
-    "promoted": 30,
+    "open": 25,
+    "promoted": 31,
     "rejected": 1
   },
   "warnings": [
-    {
-      "code": "missing_archive",
-      "subject": "studio-sonnet5-ga-2026-06-30",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
-    },
-    {
-      "code": "no_vendor_baseline",
-      "subject": "kimi-k3",
-      "message": "no vendor release event, so lag cannot be derived"
-    },
     {
       "code": "pre_release_access",
       "subject": "github-copilot-preview-codex-2021-06-29",
@@ -38,8 +28,6 @@
     }
   ],
   "warning_counts": {
-    "missing_archive": 1,
-    "no_vendor_baseline": 1,
     "pre_release_access": 1
   },
   "coverage": {
@@ -48,9 +36,8 @@
   },
   "lag_certainty": {
     "exact": 313,
-    "not_recorded": 390,
-    "range": 22,
-    "unknown_no_baseline": 12,
+    "not_recorded": 400,
+    "range": 24,
     "unknown_open_research": 67
   }
 }
