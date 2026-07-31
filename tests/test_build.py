@@ -110,6 +110,28 @@ class RegistryInvariantTests(unittest.TestCase):
         with self.assertRaises(SystemExit):
             build.validate_registry_semantics(models, copy.deepcopy(self.platforms))
 
+    def test_generation_and_model_line_must_share_a_series(self) -> None:
+        models = copy.deepcopy(self.models)
+        target = next(model for model in models["models"] if model.get("model_line"))
+        target["generation"] = "gpt-5"
+        with self.assertRaises(SystemExit):
+            build.validate_registry_semantics(models, copy.deepcopy(self.platforms))
+
+    def test_classification_vendor_must_match_model_vendor(self) -> None:
+        models = copy.deepcopy(self.models)
+        target = next(model for model in models["models"] if model.get("generation"))
+        models["generations"].append(
+            {
+                "id": "wrong-vendor",
+                "display_name": "Wrong vendor",
+                "vendor": "Someone else",
+                "series": "openai-gpt",
+            }
+        )
+        target["generation"] = "wrong-vendor"
+        with self.assertRaises(SystemExit):
+            build.validate_registry_semantics(models, copy.deepcopy(self.platforms))
+
     def test_lineage_mismatch_is_caught_in_either_direction(self) -> None:
         """The edge may be declared from either end, and the target may appear
         first in the file. Checking while the graph is still being built misses

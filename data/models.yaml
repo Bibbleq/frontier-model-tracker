@@ -12,8 +12,161 @@
 # family sets `model_claim: family` and lists the member IDs, which keeps
 # family announcements queryable without pretending each member was
 # individually sourced.
+#
+# `generations` are the broader numbered eras within a vendor series: GPT-5.1
+# is part of the GPT-5 generation, for example. `model_lines` are recurring
+# named branches within a series, such as Claude Sonnet or Claude Opus. Neither
+# field implies technical ancestry or supersession.
 
 version: 1
+
+series:
+  - id: openai-gpt
+    display_name: "GPT"
+    vendor: OpenAI
+  - id: openai-o
+    display_name: "OpenAI o-series"
+    vendor: OpenAI
+  - id: claude
+    display_name: "Claude"
+    vendor: Anthropic
+  - id: gemini
+    display_name: "Gemini"
+    vendor: Google
+  - id: grok
+    display_name: "Grok"
+    vendor: xAI
+  - id: llama
+    display_name: "Llama"
+    vendor: Meta
+  - id: mistral
+    display_name: "Mistral"
+    vendor: Mistral AI
+  - id: deepseek-r
+    display_name: "DeepSeek R"
+    vendor: DeepSeek
+  - id: deepseek-v
+    display_name: "DeepSeek V"
+    vendor: DeepSeek
+  - id: kimi
+    display_name: "Kimi"
+    vendor: Moonshot AI
+
+generations:
+  - id: gpt-3
+    display_name: "GPT-3"
+    vendor: OpenAI
+    series: openai-gpt
+  - id: gpt-3-5
+    display_name: "GPT-3.5"
+    vendor: OpenAI
+    series: openai-gpt
+  - id: gpt-4
+    display_name: "GPT-4"
+    vendor: OpenAI
+    series: openai-gpt
+  - id: gpt-5
+    display_name: "GPT-5"
+    vendor: OpenAI
+    series: openai-gpt
+  - id: o1
+    display_name: "o1"
+    vendor: OpenAI
+    series: openai-o
+  - id: o3
+    display_name: "o3"
+    vendor: OpenAI
+    series: openai-o
+  - id: o4
+    display_name: "o4"
+    vendor: OpenAI
+    series: openai-o
+  - id: claude-1
+    display_name: "Claude 1"
+    vendor: Anthropic
+    series: claude
+  - id: claude-2
+    display_name: "Claude 2"
+    vendor: Anthropic
+    series: claude
+  - id: claude-3
+    display_name: "Claude 3"
+    vendor: Anthropic
+    series: claude
+  - id: claude-4
+    display_name: "Claude 4"
+    vendor: Anthropic
+    series: claude
+  - id: claude-5
+    display_name: "Claude 5"
+    vendor: Anthropic
+    series: claude
+  - id: gemini-1
+    display_name: "Gemini 1"
+    vendor: Google
+    series: gemini
+  - id: gemini-2
+    display_name: "Gemini 2"
+    vendor: Google
+    series: gemini
+  - id: gemini-3
+    display_name: "Gemini 3"
+    vendor: Google
+    series: gemini
+  - id: grok-3
+    display_name: "Grok 3"
+    vendor: xAI
+    series: grok
+  - id: grok-4
+    display_name: "Grok 4"
+    vendor: xAI
+    series: grok
+  - id: llama-2
+    display_name: "Llama 2"
+    vendor: Meta
+    series: llama
+  - id: mistral-3
+    display_name: "Mistral 3"
+    vendor: Mistral AI
+    series: mistral
+  - id: deepseek-r1
+    display_name: "DeepSeek R1"
+    vendor: DeepSeek
+    series: deepseek-r
+  - id: deepseek-v3
+    display_name: "DeepSeek V3"
+    vendor: DeepSeek
+    series: deepseek-v
+  - id: kimi-k2
+    display_name: "Kimi K2"
+    vendor: Moonshot AI
+    series: kimi
+  - id: kimi-k3
+    display_name: "Kimi K3"
+    vendor: Moonshot AI
+    series: kimi
+
+model_lines:
+  - id: claude-opus
+    display_name: "Claude Opus"
+    vendor: Anthropic
+    series: claude
+  - id: claude-sonnet
+    display_name: "Claude Sonnet"
+    vendor: Anthropic
+    series: claude
+  - id: claude-haiku
+    display_name: "Claude Haiku"
+    vendor: Anthropic
+    series: claude
+  - id: claude-fable
+    display_name: "Claude Fable"
+    vendor: Anthropic
+    series: claude
+  - id: claude-mythos
+    display_name: "Claude Mythos"
+    vendor: Anthropic
+    series: claude
 
 models:
   # ---------------------------------------------------------------- OpenAI
@@ -21,14 +174,17 @@ models:
     display_name: "GPT-3"
     vendor: OpenAI
     family: gpt-3
+    generation: gpt-3
   - id: gpt-3-5
     display_name: "GPT-3.5"
     vendor: OpenAI
+    generation: gpt-3-5
     aliases: ["GPT-3.5 generation"]
     note: "The generation, not a deployable model. Covers the text-davinci line that was generally available on Azure OpenAI from January 2023. GPT-3.5 Turbo is tracked separately as gpt-3-5-turbo, because OpenAI itself distinguished it from 'our existing GPT-3.5 models' when releasing it."
   - id: gpt-3-5-turbo
     display_name: "GPT-3.5 Turbo"
     vendor: OpenAI
+    generation: gpt-3-5
     aliases: ["ChatGPT", "gpt-35-turbo", "gpt-3.5-turbo"]
     note: "Microsoft and OpenAI both marketed this as 'ChatGPT' when it reached their platforms in March 2023, and Azure spells the deployment name gpt-35-turbo. Distinct from the gpt-3-5 generation: it arrived on Azure OpenAI in preview two months after the generation was already generally available there."
   - id: codex
@@ -40,48 +196,60 @@ models:
   - id: gpt-4
     display_name: "GPT-4"
     vendor: OpenAI
+    generation: gpt-4
     aliases: ["GPT-4 generation"]
   - id: gpt-4-turbo
     display_name: "GPT-4 Turbo"
     vendor: OpenAI
+    generation: gpt-4
   - id: gpt-4o
     display_name: "GPT-4o"
     vendor: OpenAI
+    generation: gpt-4
   - id: gpt-4-1
     display_name: "GPT-4.1"
     vendor: OpenAI
     family: gpt-4-1
+    generation: gpt-4
   - id: gpt-4-1-mini
     display_name: "GPT-4.1 mini"
     vendor: OpenAI
     family: gpt-4-1
+    generation: gpt-4
   - id: gpt-4-1-nano
     display_name: "GPT-4.1 nano"
     vendor: OpenAI
     family: gpt-4-1
+    generation: gpt-4
   - id: o1-preview
     display_name: "o1-preview"
     vendor: OpenAI
     family: o1
+    generation: o1
     superseded_by: o1
   - id: o1-mini
     display_name: "o1-mini"
     vendor: OpenAI
     family: o1
+    generation: o1
   - id: o1
     display_name: "o1"
     vendor: OpenAI
     family: o1
+    generation: o1
     supersedes: o1-preview
   - id: o3
     display_name: "o3"
     vendor: OpenAI
+    generation: o3
   - id: o3-mini
     display_name: "o3-mini"
     vendor: OpenAI
+    generation: o3
   - id: o4-mini
     display_name: "o4-mini"
     vendor: OpenAI
+    generation: o4
   - id: openai-deep-research
     display_name: "OpenAI deep research model"
     vendor: OpenAI
@@ -89,174 +257,241 @@ models:
   - id: gpt-5
     display_name: "GPT-5"
     vendor: OpenAI
+    generation: gpt-5
   - id: gpt-5-mini
     display_name: "GPT-5 mini"
     vendor: OpenAI
+    generation: gpt-5
   - id: gpt-5-1
     display_name: "GPT-5.1"
     vendor: OpenAI
+    generation: gpt-5
   - id: gpt-5-2
     display_name: "GPT-5.2"
     vendor: OpenAI
+    generation: gpt-5
   - id: gpt-5-3-instant
     display_name: "GPT-5.3 Instant"
     vendor: OpenAI
+    generation: gpt-5
     aliases: ["GPT-5.3 Chat"]
     note: "Copilot Studio surfaces this model as 'GPT-5.3 Chat'."
   - id: gpt-5-4
     display_name: "GPT-5.4"
     vendor: OpenAI
+    generation: gpt-5
     aliases: ["GPT-5.4 Reasoning"]
     note: "Copilot Studio surfaces this model as 'GPT-5.4 Reasoning'."
   - id: gpt-5-5
     display_name: "GPT-5.5"
     vendor: OpenAI
+    generation: gpt-5
     aliases: ["GPT-5.5 Reasoning"]
     note: "Copilot Studio surfaces this model as 'GPT-5.5 Reasoning'."
   - id: gpt-5-5-instant
     display_name: "GPT-5.5 Instant"
     vendor: OpenAI
+    generation: gpt-5
     aliases: ["GPT-5.5 Chat"]
     note: "Copilot Studio surfaces this model as 'GPT-5.5 Chat'."
   - id: gpt-5-5-thinking
     display_name: "GPT-5.5 Thinking"
     vendor: OpenAI
+    generation: gpt-5
   - id: gpt-5-6-sol
     display_name: "GPT-5.6 Sol"
     vendor: OpenAI
     family: gpt-5-6
+    generation: gpt-5
   - id: gpt-5-6-terra
     display_name: "GPT-5.6 Terra"
     vendor: OpenAI
     family: gpt-5-6
+    generation: gpt-5
   - id: gpt-5-6-luna
     display_name: "GPT-5.6 Luna"
     vendor: OpenAI
     family: gpt-5-6
+    generation: gpt-5
 
   # ------------------------------------------------------------- Anthropic
   - id: claude-1
     display_name: "Claude 1"
     vendor: Anthropic
+    generation: claude-1
   - id: claude-2
     display_name: "Claude 2"
     vendor: Anthropic
+    generation: claude-2
   - id: claude-2-1
     display_name: "Claude 2.1"
     vendor: Anthropic
+    generation: claude-2
   - id: claude-3-opus
     display_name: "Claude 3 Opus"
     vendor: Anthropic
     family: claude-3
+    generation: claude-3
+    model_line: claude-opus
   - id: claude-3-sonnet
     display_name: "Claude 3 Sonnet"
     vendor: Anthropic
     family: claude-3
+    generation: claude-3
+    model_line: claude-sonnet
   - id: claude-3-haiku
     display_name: "Claude 3 Haiku"
     vendor: Anthropic
     family: claude-3
+    generation: claude-3
+    model_line: claude-haiku
   - id: claude-3-5-sonnet
     display_name: "Claude 3.5 Sonnet"
     vendor: Anthropic
+    generation: claude-3
+    model_line: claude-sonnet
   - id: claude-3-7-sonnet
     display_name: "Claude 3.7 Sonnet"
     vendor: Anthropic
+    generation: claude-3
+    model_line: claude-sonnet
   - id: claude-sonnet-4
     display_name: "Claude Sonnet 4"
     vendor: Anthropic
     family: claude-4
+    generation: claude-4
+    model_line: claude-sonnet
   - id: claude-opus-4
     display_name: "Claude Opus 4"
     vendor: Anthropic
     family: claude-4
+    generation: claude-4
+    model_line: claude-opus
   - id: claude-opus-4-1
     display_name: "Claude Opus 4.1"
     vendor: Anthropic
+    generation: claude-4
+    model_line: claude-opus
   - id: claude-sonnet-4-5
     display_name: "Claude Sonnet 4.5"
     vendor: Anthropic
+    generation: claude-4
+    model_line: claude-sonnet
   - id: claude-haiku-4-5
     display_name: "Claude Haiku 4.5"
     vendor: Anthropic
+    generation: claude-4
+    model_line: claude-haiku
   - id: claude-opus-4-5
     display_name: "Claude Opus 4.5"
     vendor: Anthropic
+    generation: claude-4
+    model_line: claude-opus
   - id: claude-sonnet-4-6
     display_name: "Claude Sonnet 4.6"
     vendor: Anthropic
+    generation: claude-4
+    model_line: claude-sonnet
   - id: claude-opus-4-7
     display_name: "Claude Opus 4.7"
     vendor: Anthropic
+    generation: claude-4
+    model_line: claude-opus
   - id: claude-opus-4-8
     display_name: "Claude Opus 4.8"
     vendor: Anthropic
+    generation: claude-4
+    model_line: claude-opus
   - id: claude-sonnet-5
     display_name: "Claude Sonnet 5"
     vendor: Anthropic
+    generation: claude-5
+    model_line: claude-sonnet
   - id: claude-opus-5
     display_name: "Claude Opus 5"
     vendor: Anthropic
+    generation: claude-5
+    model_line: claude-opus
   - id: claude-fable-5
     display_name: "Claude Fable 5"
     vendor: Anthropic
+    generation: claude-5
+    model_line: claude-fable
   - id: claude-mythos-5
     display_name: "Claude Mythos 5"
     vendor: Anthropic
+    generation: claude-5
+    model_line: claude-mythos
 
   # ---------------------------------------------------------------- others
   - id: gemini-1-5-pro
     display_name: "Gemini 1.5 Pro"
     vendor: Google
+    generation: gemini-1
   - id: gemini-2-5-pro
     display_name: "Gemini 2.5 Pro"
     vendor: Google
+    generation: gemini-2
     note: "Reached GitHub Copilot on 11 April 2025; no Google release event is recorded yet, so its lag is unmeasurable."
   - id: gemini-3-6-flash
     display_name: "Gemini 3.6 Flash"
     vendor: Google
+    generation: gemini-3
   - id: grok-3
     display_name: "Grok 3"
     vendor: xAI
+    generation: grok-3
   - id: grok-3-mini
     display_name: "Grok 3 Mini"
     vendor: xAI
+    generation: grok-3
     aliases: ["Grok 3 mini"]
     note: "Recorded under two spellings in the source data; 'Grok 3 Mini' is canonical here."
   - id: grok-4
     display_name: "Grok 4"
     vendor: xAI
+    generation: grok-4
   - id: grok-4-5
     display_name: "Grok 4.5"
     vendor: xAI
+    generation: grok-4
   - id: llama-2
     display_name: "Llama 2"
     vendor: Meta
+    generation: llama-2
   - id: mistral-3
     display_name: "Mistral 3"
     vendor: Mistral AI
+    generation: mistral-3
   - id: mistral-large-3
     display_name: "Mistral Large 3"
     vendor: Mistral AI
+    generation: mistral-3
   - id: deepseek-r1
     display_name: "DeepSeek-R1"
     vendor: DeepSeek
+    generation: deepseek-r1
   - id: deepseek-v3
     display_name: "DeepSeek-V3"
     vendor: DeepSeek
+    generation: deepseek-v3
     note: "Distinct from DeepSeek V3.2. The vendor release is recorded; no Microsoft availability is, so this model anchors no lag yet."
   - id: deepseek-v3-2
     display_name: "DeepSeek V3.2"
     vendor: DeepSeek
+    generation: deepseek-v3
   - id: deepseek-v3-2-speciale
     display_name: "DeepSeek V3.2-Speciale"
     vendor: DeepSeek
+    generation: deepseek-v3
   - id: kimi-k2-7-code
     display_name: "Kimi K2.7 Code"
     vendor: Moonshot AI
+    generation: kimi-k2
   - id: kimi-k3
     display_name: "Kimi K3"
     vendor: Moonshot AI
+    generation: kimi-k3
     aliases: ["FW Kimi K3"]
     note: "Microsoft Foundry lists it as 'FW Kimi K3', the prefix marking it as served through Fireworks AI rather than by Microsoft."
 

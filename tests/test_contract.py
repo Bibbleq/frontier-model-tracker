@@ -57,6 +57,25 @@ class ManifestTests(unittest.TestCase):
         self.assertTrue(licence["attribution"])
         self.assertIn("not official product documentation", licence["notice"])
 
+    def test_model_classification_exports_are_joinable(self) -> None:
+        def rows(name: str) -> list[dict[str, str]]:
+            with (GENERATED / name).open(encoding="utf-8", newline="") as handle:
+                return list(csv.DictReader(handle))
+
+        series = {row["id"] for row in rows("series.csv")}
+        generations = {row["id"]: row for row in rows("generations.csv")}
+        model_lines = {row["id"]: row for row in rows("model-lines.csv")}
+        models = rows("models.csv")
+
+        self.assertTrue(all(row["series"] in series for row in generations.values()))
+        self.assertTrue(all(row["series"] in series for row in model_lines.values()))
+        self.assertTrue(
+            all(not row["generation"] or row["generation"] in generations for row in models)
+        )
+        self.assertTrue(
+            all(not row["model_line"] or row["model_line"] in model_lines for row in models)
+        )
+
     def test_manifest_has_no_build_timestamp(self) -> None:
         """A timestamp would make the build irreproducible, which CI enforces
         with `git diff --exit-code`. Only data dates belong here."""

@@ -49,7 +49,7 @@ A model may have several events on the same surface: vendor release, limited/pub
 
 This prevents a catalogue listing from being mistaken for GitHub Copilot availability, or a specialist Microsoft 365 agent from being mistaken for general Copilot Chat model selection.
 
-Schema v3 separates three orthogonal axes: `kind` (is this an availability fact, an announcement, a policy change or a milestone), `lifecycle` (where in the release cycle) and `exposure` (underlying, specialist, catalogue, selectable or default). Models and surfaces are referenced by stable IDs from `data/models.yaml` and `data/platforms.yaml`, so a model cannot appear under two spellings and a product rename does not fragment its history. Unresolved claims live in `validation_backlog` rather than being assigned invented dates or scopes.
+Schema v3 separates three orthogonal axes: `kind` (is this an availability fact, an announcement, a policy change or a milestone), `lifecycle` (where in the release cycle) and `exposure` (underlying, specialist, catalogue, selectable or default). Models and surfaces are referenced by stable IDs from `data/models.yaml` and `data/platforms.yaml`, so a model cannot appear under two spellings and a product rename does not fragment its history. The model registry also distinguishes broad numbered `generation`, recurring `model_line`, narrower marketed `family`, and evidenced `supersedes` links; membership in the first three never implies technical ancestry or replacement. Unresolved claims live in `validation_backlog` rather than being assigned invented dates or scopes.
 
 ## Evidence policy
 

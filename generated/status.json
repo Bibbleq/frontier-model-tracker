@@ -32,6 +32,11 @@
   },
   "coverage": {
     "models_without_events": [],
+    "models_without_generation": [
+      "codex",
+      "dall-e-2",
+      "openai-deep-research"
+    ],
     "surfaces_without_events": []
   },
   "lag_certainty": {

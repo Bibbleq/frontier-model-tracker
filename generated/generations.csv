@@ -1,0 +1,24 @@
+id,display_name,vendor,series
+gpt-3,GPT-3,OpenAI,openai-gpt
+gpt-3-5,GPT-3.5,OpenAI,openai-gpt
+gpt-4,GPT-4,OpenAI,openai-gpt
+gpt-5,GPT-5,OpenAI,openai-gpt
+o1,o1,OpenAI,openai-o
+o3,o3,OpenAI,openai-o
+o4,o4,OpenAI,openai-o
+claude-1,Claude 1,Anthropic,claude
+claude-2,Claude 2,Anthropic,claude
+claude-3,Claude 3,Anthropic,claude
+claude-4,Claude 4,Anthropic,claude
+claude-5,Claude 5,Anthropic,claude
+gemini-1,Gemini 1,Google,gemini
+gemini-2,Gemini 2,Google,gemini
+gemini-3,Gemini 3,Google,gemini
+grok-3,Grok 3,xAI,grok
+grok-4,Grok 4,xAI,grok
+llama-2,Llama 2,Meta,llama
+mistral-3,Mistral 3,Mistral AI,mistral
+deepseek-r1,DeepSeek R1,DeepSeek,deepseek-r
+deepseek-v3,DeepSeek V3,DeepSeek,deepseek-v
+kimi-k2,Kimi K2,Moonshot AI,kimi
+kimi-k3,Kimi K3,Moonshot AI,kimi

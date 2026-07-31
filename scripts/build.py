@@ -33,7 +33,10 @@ PUBLISHED_FILES = {
     "data/validation-backlog.csv": "Open research questions with states and targets, not confirmed history",
     "data/lag.csv": "Derived adoption lag; read certainty before any number",
     "data/current-state.csv": "Last known lifecycle per model and surface; read state_is_terminal before presenting it as current",
-    "data/models.csv": "Model registry with aliases, families and event counts",
+    "data/models.csv": "Model registry with generation, model-line, family and event-count references",
+    "data/series.csv": "Vendor model series referenced by generations and model lines",
+    "data/generations.csv": "Broad numbered model generations; membership does not imply supersession",
+    "data/model-lines.csv": "Recurring named model lines; membership does not imply technical ancestry",
     "data/surfaces.csv": "Surface registry with rename lineage, analytical tiers and event counts",
     "schema/events.schema.json": "JSON Schema the dataset validates against",
     "schema/models.schema.json": "JSON Schema for the model registry",
@@ -120,11 +123,53 @@ def validate_registry_semantics(models: dict, platforms: dict) -> None:
     if len(family_ids_list) != len(set(family_ids_list)):
         fail("duplicate family id in models.yaml")
     family_ids = set(family_ids_list)
+    registry_specs = (
+        ("series", "series"),
+        ("generations", "generation"),
+        ("model_lines", "model line"),
+    )
+    registries: dict[str, dict[str, dict]] = {}
+    for key, label in registry_specs:
+        entries = models.get(key, [])
+        ids = [entry["id"] for entry in entries]
+        if len(ids) != len(set(ids)):
+            fail(f"duplicate {label} id in models.yaml")
+        registries[key] = {entry["id"]: entry for entry in entries}
+
+    series_by_id = registries["series"]
+    for key in ("generations", "model_lines"):
+        for entry in registries[key].values():
+            series = series_by_id.get(entry["series"])
+            if not series:
+                fail(f"{entry['id']}: unknown series {entry['series']}")
+            if series["vendor"] != entry["vendor"]:
+                fail(
+                    f"{entry['id']}: vendor {entry['vendor']} does not match "
+                    f"series {series['id']} vendor {series['vendor']}"
+                )
+
     known_models = set(model_ids)
     names: dict[str, str] = {}
     for entry in models["models"]:
         if entry.get("family") and entry["family"] not in family_ids:
             fail(f"{entry['id']}: unknown family {entry['family']}")
+        generation = registries["generations"].get(entry.get("generation", ""))
+        model_line = registries["model_lines"].get(entry.get("model_line", ""))
+        if entry.get("generation") and not generation:
+            fail(f"{entry['id']}: unknown generation {entry['generation']}")
+        if entry.get("model_line") and not model_line:
+            fail(f"{entry['id']}: unknown model line {entry['model_line']}")
+        for label, classification in (("generation", generation), ("model line", model_line)):
+            if classification and classification["vendor"] != entry["vendor"]:
+                fail(
+                    f"{entry['id']}: vendor {entry['vendor']} does not match "
+                    f"{label} {classification['id']} vendor {classification['vendor']}"
+                )
+        if generation and model_line and generation["series"] != model_line["series"]:
+            fail(
+                f"{entry['id']}: generation {generation['id']} and model line "
+                f"{model_line['id']} belong to different series"
+            )
         for name in [entry["display_name"], *entry.get("aliases", [])]:
             key = name.casefold()
             if key in names and names[key] != entry["id"]:
@@ -813,7 +858,13 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
 
     # Registry exports, so a consumer can resolve ids and tiers without
     # parsing YAML or hardcoding the vocabulary.
-    model_fields = ["id", "display_name", "vendor", "family", "aliases", "supersedes", "superseded_by", "event_count"]
+    generation_by_id = {
+        entry["id"]: entry for entry in models.get("generations", [])
+    }
+    model_fields = [
+        "id", "display_name", "vendor", "series", "generation", "model_line",
+        "family", "aliases", "supersedes", "superseded_by", "event_count",
+    ]
     model_use = collections.Counter(m for event in data["events"] for m in event["model_ids"])
     with (OUTPUT_DIR / "models.csv").open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=model_fields, lineterminator="\n")
@@ -823,12 +874,46 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
                 "id": entry["id"],
                 "display_name": entry["display_name"],
                 "vendor": entry["vendor"],
+                "series": (
+                    generation_by_id[entry["generation"]]["series"]
+                    if entry.get("generation")
+                    else next(
+                        (
+                            model_line["series"]
+                            for model_line in models.get("model_lines", [])
+                            if model_line["id"] == entry.get("model_line")
+                        ),
+                        "",
+                    )
+                ),
+                "generation": entry.get("generation", ""),
+                "model_line": entry.get("model_line", ""),
                 "family": entry.get("family", ""),
                 "aliases": " | ".join(entry.get("aliases", [])),
                 "supersedes": entry.get("supersedes", ""),
                 "superseded_by": entry.get("superseded_by", ""),
                 "event_count": model_use.get(entry["id"], 0),
             })
+
+    registry_exports = (
+        ("series.csv", models.get("series", []), ["id", "display_name", "vendor"]),
+        (
+            "generations.csv",
+            models.get("generations", []),
+            ["id", "display_name", "vendor", "series"],
+        ),
+        (
+            "model-lines.csv",
+            models.get("model_lines", []),
+            ["id", "display_name", "vendor", "series"],
+        ),
+    )
+    for filename, entries, fields in registry_exports:
+        with (OUTPUT_DIR / filename).open("w", encoding="utf-8", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
+            writer.writeheader()
+            for entry in entries:
+                writer.writerow({field: entry.get(field, "") for field in fields})
 
     surface_fields = ["id", "display_name", "owner", "family", "lineage", "vendor_baseline",
                       "counts_as", "renamed_from", "renamed_to", "renamed_on", "event_count"]
@@ -873,6 +958,9 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
         "coverage": {
             "models_without_events": sorted(
                 entry["id"] for entry in models["models"] if not model_use.get(entry["id"])
+            ),
+            "models_without_generation": sorted(
+                entry["id"] for entry in models["models"] if not entry.get("generation")
             ),
             "surfaces_without_events": sorted(
                 entry["id"] for entry in platforms["surfaces"] if not surface_use.get(entry["id"])
