@@ -1,10 +1,10 @@
 id,display_name,owner,family,lineage,vendor_baseline,counts_as,renamed_from,renamed_to,renamed_on,event_count
-openai,OpenAI,OpenAI,,,true,,,,,20
+openai,OpenAI,OpenAI,,,true,,,,,21
 openai-api,OpenAI API,OpenAI,,,true,,,,,13
-chatgpt,ChatGPT,OpenAI,,,true,,,,,1
+chatgpt,ChatGPT,OpenAI,,,true,,,,,2
 anthropic-claude,Claude,Anthropic,,,true,,,,,21
-google-gemini,Gemini,Google,,,true,,,,,1
-google-gemini-api,Gemini API,Google,,,true,,,,,1
+google-gemini,Gemini,Google,,,true,,,,,2
+google-gemini-api,Gemini API,Google,,,true,,,,,3
 mistral,Mistral,Mistral AI,,,true,,,,,1
 xai-grok,Grok,xAI,,,true,,,,,3
 deepseek,DeepSeek,DeepSeek,,,true,,,,,4
@@ -20,5 +20,5 @@ azure-openai,Azure OpenAI Service,Microsoft,Microsoft Foundry,foundry,false,micr
 azure-ai-catalog,Azure AI model catalogue,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,,1
 azure-ai-studio,Azure AI Studio,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,2024-11-19,1
 azure-ai-foundry,Azure AI Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-studio,microsoft-foundry,,7
-microsoft-foundry,Microsoft Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-foundry,,,17
+microsoft-foundry,Microsoft Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-foundry,,,18
 microsoft-corporate,Microsoft,Microsoft,,,false,,,,,1
