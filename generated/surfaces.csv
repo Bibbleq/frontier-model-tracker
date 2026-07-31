@@ -9,7 +9,7 @@ mistral,Mistral,Mistral AI,,,true,,,,,1
 xai-grok,Grok,xAI,,,true,,,,,3
 deepseek,DeepSeek,DeepSeek,,,true,,,,,4
 meta,Meta,Meta,,,true,,,,,1
-moonshot,Moonshot AI,Moonshot AI,,,true,,,,,1
+moonshot,Moonshot AI,Moonshot AI,,,true,,,,,2
 m365-copilot,Microsoft 365 Copilot,Microsoft,Microsoft 365,,false,microsoft | copilot | m365,,,,26
 m365-admin,Microsoft 365 admin centre,Microsoft,Microsoft 365,,false,microsoft,,,,3
 copilot-studio,Microsoft Copilot Studio,Microsoft,Copilot Studio,,false,microsoft | copilot | studio,power-virtual-agents,,,22
