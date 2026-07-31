@@ -64,8 +64,10 @@ deepseek-v3-2,DeepSeek V3.2,DeepSeek,deepseek,DeepSeek,,ga,not_applicable,false,
 deepseek-v3-2,DeepSeek V3.2,DeepSeek,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-deepseek-v3-2-2025-12-15,2025-12-15,day,2026-07-28,,0
 deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,deepseek,DeepSeek,,ga,not_applicable,false,deepseek-v3-2-speciale-2025-12-01,2025-12-01,day,2026-07-28,,0
 deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-deepseek-v3-2-speciale-2025-12-15,2025-12-15,day,2026-07-28,,0
-gemini-1-5-pro,Gemini 1.5 Pro,Google,google-gemini,Gemini,,private_preview,not_applicable,false,google-gemini1-5-pro-2024-02-15,2024-02-15,day,2026-07-28,,1
+gemini-1-5-pro,Gemini 1.5 Pro,Google,google-gemini,Gemini,,private_preview,not_applicable,false,google-gemini1-5-pro-2024-02-15,2024-02-15,day,2026-07-28,,0
+gemini-1-5-pro,Gemini 1.5 Pro,Google,google-gemini-api,Gemini API,,ga,not_applicable,false,google-gemini1-5-pro-ga-2024-05-30,2024-05-30,day,2026-07-28,,0
 gemini-2-5-pro,Gemini 2.5 Pro,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,public_preview,selectable,false,github-gemini2-5-pro-preview-2025-04-11,2025-04-11,day,2026-07-28,,0
+gemini-2-5-pro,Gemini 2.5 Pro,Google,google-gemini,Gemini,,public_preview,not_applicable,false,google-gemini2-5-pro-2025-03-25,2025-03-25,day,2026-07-28,,0
 gemini-3-6-flash,Gemini 3.6 Flash,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-gemini3-6-flash-2026-07-21,2026-07-21,day,2026-07-28,,0
 gemini-3-6-flash,Gemini 3.6 Flash,Google,google-gemini-api,Gemini API,,ga,not_applicable,false,google-gemini3-6-flash-2026-07-21,2026-07-21,day,2026-07-28,,0
 gpt-3,GPT-3,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,limited_preview,catalogue,false,azure-openai-preview-2021-11-02,2021-11-02,day,2026-07-28,,1
@@ -119,6 +121,7 @@ gpt-5-5-instant,GPT-5.5 Instant,OpenAI,microsoft-foundry,Microsoft Foundry,micro
 gpt-5-5-instant,GPT-5.5 Instant,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-gpt5-5-instant-2026-05-05,2026-05-05,day,2026-07-28,,0
 gpt-5-5-instant,GPT-5.5 Instant,OpenAI,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,ga,selectable,false,studio-gpt5-5-chat-ga-2026-06,2026-06,month,2026-07-28,,0
 gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,selectable,false,m365-gpt5-5-thinking-2026-04-27,2026-04-27,day,2026-07-28,,0
+gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-gpt5-5-thinking-2026-04-23,2026-04-23,day,2026-07-28,,0
 gpt-5-6-luna,GPT-5.6 Luna,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-gpt5-6-luna-2026-07-09,2026-07-09,day,2026-07-28,,0
 gpt-5-6-luna,GPT-5.6 Luna,OpenAI,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,selectable,false,m365-gpt5-6-2026-07-09,2026-07-09,day,2026-07-28,,0
 gpt-5-6-luna,GPT-5.6 Luna,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt5-6-2026-07-09,2026-07-09,day,2026-07-28,,0
@@ -171,4 +174,5 @@ o3-mini,o3-mini,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-o3-mini-202
 o4-mini,o4-mini,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-o4-mini-retired-2025-10-23,2025-10-23,day,2026-07-28,,0
 o4-mini,o4-mini,OpenAI,github-models,GitHub Models,microsoft,public_preview,catalogue,false,github-models-o4-mini-2025-04-16,2025-04-16,day,2026-07-28,,0
 o4-mini,o4-mini,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-o4-mini-2025-04-16,2025-04-16,day,2026-07-28,,0
+openai-deep-research,OpenAI deep research model,OpenAI,chatgpt,ChatGPT,,ga,not_applicable,false,openai-deep-research-2025-02-02,2025-02-02,day,2026-07-28,,0
 openai-deep-research,OpenAI deep research model,OpenAI,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,specialist,false,m365-researcher-ga-2025-06-02,2025-06-02,day,2026-07-28,,0

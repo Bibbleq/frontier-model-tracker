@@ -1,23 +1,23 @@
 {
   "totals": {
-    "events": 215,
+    "events": 221,
     "backlog": 58,
-    "sources": 247,
+    "sources": 257,
     "models": 67,
     "surfaces": 23,
-    "confirmed": 196,
-    "supported": 19
+    "confirmed": 199,
+    "supported": 22
   },
   "kinds": {
     "announcement": 11,
-    "availability": 190,
-    "milestone": 8,
+    "availability": 195,
+    "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 3,
-    "open": 34,
-    "promoted": 21
+    "open": 30,
+    "promoted": 25
   },
   "warnings": [
     {
@@ -32,22 +32,7 @@
     },
     {
       "code": "no_vendor_baseline",
-      "subject": "gemini-2-5-pro",
-      "message": "no vendor release event, so lag cannot be derived"
-    },
-    {
-      "code": "no_vendor_baseline",
-      "subject": "gpt-5-5-thinking",
-      "message": "no vendor release event, so lag cannot be derived"
-    },
-    {
-      "code": "no_vendor_baseline",
       "subject": "kimi-k3",
-      "message": "no vendor release event, so lag cannot be derived"
-    },
-    {
-      "code": "no_vendor_baseline",
-      "subject": "openai-deep-research",
       "message": "no vendor release event, so lag cannot be derived"
     },
     {
@@ -58,7 +43,7 @@
   ],
   "warning_counts": {
     "missing_archive": 2,
-    "no_vendor_baseline": 4,
+    "no_vendor_baseline": 1,
     "pre_release_access": 1
   },
   "coverage": {
@@ -66,10 +51,10 @@
     "surfaces_without_events": []
   },
   "lag_certainty": {
-    "exact": 297,
-    "not_recorded": 362,
+    "exact": 312,
+    "not_recorded": 383,
     "range": 19,
-    "unknown_no_baseline": 48,
+    "unknown_no_baseline": 12,
     "unknown_open_research": 78
   }
 }

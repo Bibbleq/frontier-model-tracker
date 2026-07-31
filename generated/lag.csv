@@ -335,18 +335,18 @@ gemini-1-5-pro,Gemini 1.5 Pro,Google,github_copilot,any_exposure,google-gemini1-
 gemini-1-5-pro,Gemini 1.5 Pro,Google,github_copilot,selectable_or_default,google-gemini1-5-pro-2024-02-15,2024-02-15,private_preview,,,,,,,,unknown_open_research
 gemini-1-5-pro,Gemini 1.5 Pro,Google,foundry,any_exposure,google-gemini1-5-pro-2024-02-15,2024-02-15,private_preview,,,,,,,,not_recorded
 gemini-1-5-pro,Gemini 1.5 Pro,Google,foundry,selectable_or_default,google-gemini1-5-pro-2024-02-15,2024-02-15,private_preview,,,,,,,,not_recorded
-gemini-2-5-pro,Gemini 2.5 Pro,Google,microsoft,any_exposure,,,,github-gemini2-5-pro-preview-2025-04-11,2025-04-11,github-copilot,selectable,public_preview,,,unknown_no_baseline
-gemini-2-5-pro,Gemini 2.5 Pro,Google,microsoft,selectable_or_default,,,,github-gemini2-5-pro-preview-2025-04-11,2025-04-11,github-copilot,selectable,public_preview,,,unknown_no_baseline
-gemini-2-5-pro,Gemini 2.5 Pro,Google,copilot,any_exposure,,,,github-gemini2-5-pro-preview-2025-04-11,2025-04-11,github-copilot,selectable,public_preview,,,unknown_no_baseline
-gemini-2-5-pro,Gemini 2.5 Pro,Google,copilot,selectable_or_default,,,,github-gemini2-5-pro-preview-2025-04-11,2025-04-11,github-copilot,selectable,public_preview,,,unknown_no_baseline
-gemini-2-5-pro,Gemini 2.5 Pro,Google,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
-gemini-2-5-pro,Gemini 2.5 Pro,Google,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-gemini-2-5-pro,Gemini 2.5 Pro,Google,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
-gemini-2-5-pro,Gemini 2.5 Pro,Google,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-gemini-2-5-pro,Gemini 2.5 Pro,Google,github_copilot,any_exposure,,,,github-gemini2-5-pro-preview-2025-04-11,2025-04-11,github-copilot,selectable,public_preview,,,unknown_no_baseline
-gemini-2-5-pro,Gemini 2.5 Pro,Google,github_copilot,selectable_or_default,,,,github-gemini2-5-pro-preview-2025-04-11,2025-04-11,github-copilot,selectable,public_preview,,,unknown_no_baseline
-gemini-2-5-pro,Gemini 2.5 Pro,Google,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
-gemini-2-5-pro,Gemini 2.5 Pro,Google,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+gemini-2-5-pro,Gemini 2.5 Pro,Google,microsoft,any_exposure,google-gemini2-5-pro-2025-03-25,2025-03-25,public_preview,github-gemini2-5-pro-preview-2025-04-11,2025-04-11,github-copilot,selectable,public_preview,17,17,exact
+gemini-2-5-pro,Gemini 2.5 Pro,Google,microsoft,selectable_or_default,google-gemini2-5-pro-2025-03-25,2025-03-25,public_preview,github-gemini2-5-pro-preview-2025-04-11,2025-04-11,github-copilot,selectable,public_preview,17,17,exact
+gemini-2-5-pro,Gemini 2.5 Pro,Google,copilot,any_exposure,google-gemini2-5-pro-2025-03-25,2025-03-25,public_preview,github-gemini2-5-pro-preview-2025-04-11,2025-04-11,github-copilot,selectable,public_preview,17,17,exact
+gemini-2-5-pro,Gemini 2.5 Pro,Google,copilot,selectable_or_default,google-gemini2-5-pro-2025-03-25,2025-03-25,public_preview,github-gemini2-5-pro-preview-2025-04-11,2025-04-11,github-copilot,selectable,public_preview,17,17,exact
+gemini-2-5-pro,Gemini 2.5 Pro,Google,m365,any_exposure,google-gemini2-5-pro-2025-03-25,2025-03-25,public_preview,,,,,,,,not_recorded
+gemini-2-5-pro,Gemini 2.5 Pro,Google,m365,selectable_or_default,google-gemini2-5-pro-2025-03-25,2025-03-25,public_preview,,,,,,,,not_recorded
+gemini-2-5-pro,Gemini 2.5 Pro,Google,studio,any_exposure,google-gemini2-5-pro-2025-03-25,2025-03-25,public_preview,,,,,,,,not_recorded
+gemini-2-5-pro,Gemini 2.5 Pro,Google,studio,selectable_or_default,google-gemini2-5-pro-2025-03-25,2025-03-25,public_preview,,,,,,,,not_recorded
+gemini-2-5-pro,Gemini 2.5 Pro,Google,github_copilot,any_exposure,google-gemini2-5-pro-2025-03-25,2025-03-25,public_preview,github-gemini2-5-pro-preview-2025-04-11,2025-04-11,github-copilot,selectable,public_preview,17,17,exact
+gemini-2-5-pro,Gemini 2.5 Pro,Google,github_copilot,selectable_or_default,google-gemini2-5-pro-2025-03-25,2025-03-25,public_preview,github-gemini2-5-pro-preview-2025-04-11,2025-04-11,github-copilot,selectable,public_preview,17,17,exact
+gemini-2-5-pro,Gemini 2.5 Pro,Google,foundry,any_exposure,google-gemini2-5-pro-2025-03-25,2025-03-25,public_preview,,,,,,,,not_recorded
+gemini-2-5-pro,Gemini 2.5 Pro,Google,foundry,selectable_or_default,google-gemini2-5-pro-2025-03-25,2025-03-25,public_preview,,,,,,,,not_recorded
 gemini-3-6-flash,Gemini 3.6 Flash,Google,microsoft,any_exposure,google-gemini3-6-flash-2026-07-21,2026-07-21,ga,github-gemini3-6-flash-2026-07-21,2026-07-21,github-copilot,selectable,ga,0,0,exact
 gemini-3-6-flash,Gemini 3.6 Flash,Google,microsoft,selectable_or_default,google-gemini3-6-flash-2026-07-21,2026-07-21,ga,github-gemini3-6-flash-2026-07-21,2026-07-21,github-copilot,selectable,ga,0,0,exact
 gemini-3-6-flash,Gemini 3.6 Flash,Google,copilot,any_exposure,google-gemini3-6-flash-2026-07-21,2026-07-21,ga,github-gemini3-6-flash-2026-07-21,2026-07-21,github-copilot,selectable,ga,0,0,exact
@@ -551,18 +551,18 @@ gpt-5-5-instant,GPT-5.5 Instant,OpenAI,github_copilot,any_exposure,openai-gpt5-5
 gpt-5-5-instant,GPT-5.5 Instant,OpenAI,github_copilot,selectable_or_default,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,,,,,,,,not_recorded
 gpt-5-5-instant,GPT-5.5 Instant,OpenAI,foundry,any_exposure,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,foundry-gpt5-5-instant-2026-05-07,2026-05-07,microsoft-foundry,catalogue,ga,2,2,exact
 gpt-5-5-instant,GPT-5.5 Instant,OpenAI,foundry,selectable_or_default,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,,,,,,,,not_recorded
-gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,microsoft,any_exposure,,,,m365-gpt5-5-thinking-2026-04-27,2026-04-27,m365-copilot,selectable,ga,,,unknown_no_baseline
-gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,microsoft,selectable_or_default,,,,m365-gpt5-5-thinking-2026-04-27,2026-04-27,m365-copilot,selectable,ga,,,unknown_no_baseline
-gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,copilot,any_exposure,,,,m365-gpt5-5-thinking-2026-04-27,2026-04-27,m365-copilot,selectable,ga,,,unknown_no_baseline
-gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,copilot,selectable_or_default,,,,m365-gpt5-5-thinking-2026-04-27,2026-04-27,m365-copilot,selectable,ga,,,unknown_no_baseline
-gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,m365,any_exposure,,,,m365-gpt5-5-thinking-2026-04-27,2026-04-27,m365-copilot,selectable,ga,,,unknown_no_baseline
-gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,m365,selectable_or_default,,,,m365-gpt5-5-thinking-2026-04-27,2026-04-27,m365-copilot,selectable,ga,,,unknown_no_baseline
-gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
-gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
-gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
-gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,microsoft,any_exposure,openai-gpt5-5-thinking-2026-04-23,2026-04-23,ga,m365-gpt5-5-thinking-2026-04-27,2026-04-27,m365-copilot,selectable,ga,4,4,exact
+gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,microsoft,selectable_or_default,openai-gpt5-5-thinking-2026-04-23,2026-04-23,ga,m365-gpt5-5-thinking-2026-04-27,2026-04-27,m365-copilot,selectable,ga,4,4,exact
+gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,copilot,any_exposure,openai-gpt5-5-thinking-2026-04-23,2026-04-23,ga,m365-gpt5-5-thinking-2026-04-27,2026-04-27,m365-copilot,selectable,ga,4,4,exact
+gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,copilot,selectable_or_default,openai-gpt5-5-thinking-2026-04-23,2026-04-23,ga,m365-gpt5-5-thinking-2026-04-27,2026-04-27,m365-copilot,selectable,ga,4,4,exact
+gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,m365,any_exposure,openai-gpt5-5-thinking-2026-04-23,2026-04-23,ga,m365-gpt5-5-thinking-2026-04-27,2026-04-27,m365-copilot,selectable,ga,4,4,exact
+gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,m365,selectable_or_default,openai-gpt5-5-thinking-2026-04-23,2026-04-23,ga,m365-gpt5-5-thinking-2026-04-27,2026-04-27,m365-copilot,selectable,ga,4,4,exact
+gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,studio,any_exposure,openai-gpt5-5-thinking-2026-04-23,2026-04-23,ga,,,,,,,,not_recorded
+gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,studio,selectable_or_default,openai-gpt5-5-thinking-2026-04-23,2026-04-23,ga,,,,,,,,not_recorded
+gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,github_copilot,any_exposure,openai-gpt5-5-thinking-2026-04-23,2026-04-23,ga,,,,,,,,not_recorded
+gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,github_copilot,selectable_or_default,openai-gpt5-5-thinking-2026-04-23,2026-04-23,ga,,,,,,,,not_recorded
+gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,foundry,any_exposure,openai-gpt5-5-thinking-2026-04-23,2026-04-23,ga,,,,,,,,not_recorded
+gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,foundry,selectable_or_default,openai-gpt5-5-thinking-2026-04-23,2026-04-23,ga,,,,,,,,not_recorded
 gpt-5-6-luna,GPT-5.6 Luna,OpenAI,microsoft,any_exposure,openai-gpt5-6-2026-07-09,2026-07-09,ga,foundry-gpt5-6-2026-07-09,2026-07-09,microsoft-foundry,catalogue,ga,0,0,exact
 gpt-5-6-luna,GPT-5.6 Luna,OpenAI,microsoft,selectable_or_default,openai-gpt5-6-2026-07-09,2026-07-09,ga,github-gpt5-6-luna-2026-07-09,2026-07-09,github-copilot,selectable,ga,0,0,exact
 gpt-5-6-luna,GPT-5.6 Luna,OpenAI,copilot,any_exposure,openai-gpt5-6-2026-07-09,2026-07-09,ga,github-gpt5-6-luna-2026-07-09,2026-07-09,github-copilot,selectable,ga,0,0,exact
@@ -791,15 +791,15 @@ o4-mini,o4-mini,OpenAI,github_copilot,any_exposure,openai-o4-mini-2025-04-16,202
 o4-mini,o4-mini,OpenAI,github_copilot,selectable_or_default,openai-o4-mini-2025-04-16,2025-04-16,ga,github-o4-mini-preview-2025-04-16,2025-04-16,github-copilot,selectable,public_preview,0,0,exact
 o4-mini,o4-mini,OpenAI,foundry,any_exposure,openai-o4-mini-2025-04-16,2025-04-16,ga,,,,,,,,unknown_open_research
 o4-mini,o4-mini,OpenAI,foundry,selectable_or_default,openai-o4-mini-2025-04-16,2025-04-16,ga,,,,,,,,unknown_open_research
-openai-deep-research,OpenAI deep research model,OpenAI,microsoft,any_exposure,,,,m365-researcher-ga-2025-06-02,2025-06-02,m365-copilot,specialist,ga,,,unknown_no_baseline
-openai-deep-research,OpenAI deep research model,OpenAI,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-openai-deep-research,OpenAI deep research model,OpenAI,copilot,any_exposure,,,,m365-researcher-ga-2025-06-02,2025-06-02,m365-copilot,specialist,ga,,,unknown_no_baseline
-openai-deep-research,OpenAI deep research model,OpenAI,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-openai-deep-research,OpenAI deep research model,OpenAI,m365,any_exposure,,,,m365-researcher-ga-2025-06-02,2025-06-02,m365-copilot,specialist,ga,,,unknown_no_baseline
-openai-deep-research,OpenAI deep research model,OpenAI,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-openai-deep-research,OpenAI deep research model,OpenAI,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
-openai-deep-research,OpenAI deep research model,OpenAI,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-openai-deep-research,OpenAI deep research model,OpenAI,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
-openai-deep-research,OpenAI deep research model,OpenAI,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-openai-deep-research,OpenAI deep research model,OpenAI,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
-openai-deep-research,OpenAI deep research model,OpenAI,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+openai-deep-research,OpenAI deep research model,OpenAI,microsoft,any_exposure,openai-deep-research-2025-02-02,2025-02-02,ga,m365-researcher-ga-2025-06-02,2025-06-02,m365-copilot,specialist,ga,120,120,exact
+openai-deep-research,OpenAI deep research model,OpenAI,microsoft,selectable_or_default,openai-deep-research-2025-02-02,2025-02-02,ga,,,,,,,,not_recorded
+openai-deep-research,OpenAI deep research model,OpenAI,copilot,any_exposure,openai-deep-research-2025-02-02,2025-02-02,ga,m365-researcher-ga-2025-06-02,2025-06-02,m365-copilot,specialist,ga,120,120,exact
+openai-deep-research,OpenAI deep research model,OpenAI,copilot,selectable_or_default,openai-deep-research-2025-02-02,2025-02-02,ga,,,,,,,,not_recorded
+openai-deep-research,OpenAI deep research model,OpenAI,m365,any_exposure,openai-deep-research-2025-02-02,2025-02-02,ga,m365-researcher-ga-2025-06-02,2025-06-02,m365-copilot,specialist,ga,120,120,exact
+openai-deep-research,OpenAI deep research model,OpenAI,m365,selectable_or_default,openai-deep-research-2025-02-02,2025-02-02,ga,,,,,,,,not_recorded
+openai-deep-research,OpenAI deep research model,OpenAI,studio,any_exposure,openai-deep-research-2025-02-02,2025-02-02,ga,,,,,,,,not_recorded
+openai-deep-research,OpenAI deep research model,OpenAI,studio,selectable_or_default,openai-deep-research-2025-02-02,2025-02-02,ga,,,,,,,,not_recorded
+openai-deep-research,OpenAI deep research model,OpenAI,github_copilot,any_exposure,openai-deep-research-2025-02-02,2025-02-02,ga,,,,,,,,not_recorded
+openai-deep-research,OpenAI deep research model,OpenAI,github_copilot,selectable_or_default,openai-deep-research-2025-02-02,2025-02-02,ga,,,,,,,,not_recorded
+openai-deep-research,OpenAI deep research model,OpenAI,foundry,any_exposure,openai-deep-research-2025-02-02,2025-02-02,ga,,,,,,,,not_recorded
+openai-deep-research,OpenAI deep research model,OpenAI,foundry,selectable_or_default,openai-deep-research-2025-02-02,2025-02-02,ga,,,,,,,,not_recorded
