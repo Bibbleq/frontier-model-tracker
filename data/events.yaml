@@ -3694,9 +3694,10 @@ events:
     model_ids: ["gpt-5-5-instant"]
     model_claim: "specific"
     lifecycle: "ga"
-    exposure: "default"
+    exposure: "not_applicable"
     confidence: "confirmed"
     evidence_note: "OpenAI made GPT-5.5 Instant the default ChatGPT model for all users, replacing GPT-5.3 Instant. This is later than the 23 April GPT-5.5 release, so Instant is a separate arrival rather than part of that launch."
+    caveat: "The source attests the model becoming ChatGPT's default, which this dataset keeps in prose rather than in the exposure field. Vendor surfaces anchor lag; the exposure axis describes the tracked Microsoft surfaces, is never consumed from vendor events by any derived output, and the dataset does not track vendor-side default transitions, so encoding this one would imply a coverage it does not have."
     sources:
       - publisher: "OpenAI"
         title: "GPT-5.5 Instant"
@@ -3706,7 +3707,7 @@ events:
         published_at: "2026-05-05"
         source_type: "announcement"
         quote: "We're updating ChatGPT's default model, available to everyone, to be smarter and more accurate, with clearer, more concise answers that feel better tailored to you."
-        supports: ["date", "model", "lifecycle", "exposure"]
+        supports: ["date", "model", "lifecycle"]
   - id: "foundry-gpt5-5-instant-2026-05-07"
     kind: "availability"
     date:
