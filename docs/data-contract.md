@@ -1,12 +1,12 @@
 # Data contract
 
 This repository is the authoritative source for the dataset. It publishes the
-generated outputs at a stable URL so that display layers can render the data without copying
-historical claims into a second place.
+generated outputs at a stable URL as a standalone source for independent
+consumers.
 
 This document is the promise those consumers can rely on. It describes what is
 stable, what may change, how change is signalled, and what a consumer must do
-to render the data honestly.
+to interpret the data honestly.
 
 **Contract version 2. Dataset version 3.**
 
@@ -120,9 +120,10 @@ future snapshot.
 
 ## Obligations on a consumer
 
-The dataset exists to avoid false precision and false equivalence. A renderer
-can undo that work by flattening distinctions the data keeps. These are the
-rules a display layer must respect; they are not stylistic preferences.
+The dataset exists to avoid false precision and false equivalence. A consumer
+can undo that work by flattening distinctions the data keeps. These are
+interpretation rules every consumer must respect; they are not stylistic
+preferences.
 
 ### 1. Only `kind: availability` belongs on a timeline
 
@@ -207,10 +208,10 @@ OpenAI opened the Codex private beta on 10 August, so Codex reports **-42 days**
 against the vendor baseline. This is a fact about the relationship, not an error
 in the data.
 
-A renderer that assumes lag is non-negative will produce a negative bar width, a
-reversed axis, or a date before the origin. Clamp for layout if you must, but do
-not clamp the number you display, and do not drop the row: "arrived before the
-vendor released it" is one of the more interesting things the dataset says.
+A consumer that assumes lag is non-negative can produce an invalid calculation
+or misleading result. Do not clamp the published number or drop the row:
+"arrived before the vendor released it" is one of the more interesting things
+the dataset says.
 
 Every row also has a `measure`, either `any_exposure` or
 `selectable_or_default`. Do not average or merge them. GPT-4.1 reached a
@@ -223,8 +224,8 @@ is misleading.
 `validation-backlog.csv` and the `validation_backlog` array are open research
 questions. Items have a `state`: `open`, `promoted`, `rejected`, `blocked`.
 
-They must never be rendered as timeline events, and `rejected` items must not
-be presented as claims. If you surface the backlog at all, label it as
+They must never be treated as canonical events, and `rejected` items must not
+be presented as claims. If you expose the backlog at all, label it as
 unresolved research.
 
 ### 7. The latest event is not the current state
@@ -239,8 +240,8 @@ tense produces claims the data never made — that GPT-4 is still in public
 preview on Azure OpenAI, for example, because its arrival was recorded and its
 progression was not.
 
-Use `data/current-state.csv`, which derives this once so that every renderer
-does not derive it differently. Two columns carry the caveat:
+Use `data/current-state.csv`, which derives this once so that consumers do not
+derive it differently. Two columns carry the caveat:
 
 | Column | Meaning |
 | --- | --- |
@@ -259,9 +260,9 @@ Every event has `confidence`, either `confirmed` or `supported`, and may carry
 `confidence_detail` naming which part of the claim is soft. `supported` means
 the exact first date rests on retrospective or current documentation.
 
-A renderer need not show this on every row, but it must be reachable. Do not
-present `supported` claims with the same visual authority as `confirmed` ones
-without any way to tell them apart.
+A consumer need not expose confidence beside every record, but it must preserve
+the distinction. Do not present `supported` claims with the same authority as
+`confirmed` ones without any way to tell them apart.
 
 ## Caching and polite use
 
@@ -272,27 +273,25 @@ max-age=600`.
 - Send `If-None-Match` with the stored ETag and handle `304 Not Modified`.
 - Do not poll more than once an hour. The dataset changes at most a few times
   a week.
-- Cache server-side where you can. A WordPress consumer should hold the
-  response in a transient rather than fetching per page view.
+- Cache at the appropriate application boundary rather than fetching the same
+  payload separately for every request.
 - `manifest.json` is small. Fetch it first to decide whether the larger files
   are worth re-fetching, and to verify checksums.
 
 ## Licence and attribution
 
 The dataset and generated representations are licensed **CC BY 4.0**. The code
-in this repository is **MIT**. Display layers are separate works and may carry
-their own licence; a WordPress plugin distributed through wordpress.org will be
-GPLv2-or-later. Fetching the data at runtime keeps those licences apart: the
-plugin is GPL code, the data remains CC BY and is consumed rather than bundled.
+in this repository is **MIT**. Downstream projects are independent works and are
+responsible for complying with the dataset licence when they use or redistribute
+the data.
 
-Any published rendering must attribute the source. The minimum is a visible
-credit naming **365Explained Frontier Model Tracker** and linking to the
-repository or the published site. `manifest.json` carries the exact attribution
-string.
+Any published use must attribute the source. The minimum is a credit naming
+**365Explained Frontier Model Tracker** and linking to the repository or the
+published data endpoint. `manifest.json` carries the exact attribution string.
 
 The dataset records publicly documented availability. It is a sourced research
 project, not official product documentation, and is not affiliated with
-Microsoft, OpenAI, Anthropic or GitHub. A renderer should not imply otherwise.
+Microsoft, OpenAI, Anthropic or GitHub. A consumer should not imply otherwise.
 
 ## What is not in the contract
 
@@ -308,13 +307,11 @@ them:
   the `message` is not
 - the ordering of arrays, other than `events`, which is sorted by
   `(date.start, id)` and will stay so
-- the HTML pages at `/` and `/dashboard.html`, which are a viewer and not an
-  interface
 - the repository's branch names, workflow names and internal scripts
 
 ## Change log
 
 | Contract | Dataset | Change |
 | --- | --- | --- |
-| 2 | 3 | Adds `data/current-state.csv` and the obligation not to render the latest event as the current state. Adds `legacy` to the `lifecycle` enum and states that consumers must tolerate unrecognised enum values. |
+| 2 | 3 | Adds `data/current-state.csv` and the obligation not to treat the latest event as the current state. Adds `legacy` to the `lifecycle` enum and states that consumers must tolerate unrecognised enum values. |
 | 1 | 3 | Initial contract. Establishes the base URL, immutable `/c1/v3/` snapshot, `manifest.json`, versioning and deprecation policy, and consumer obligations above. |

@@ -73,22 +73,22 @@
       "path": "schema/events.schema.json",
       "media_type": "application/json",
       "description": "JSON Schema the dataset validates against",
-      "bytes": 11001,
-      "sha256": "2c6fc144b5718a22801e22aaa19f716c4c3b82fbcf9c7207c2f23514daea404e"
+      "bytes": 11295,
+      "sha256": "b1506795399b458af1e41de3b92cc1566ca83e8d54bce5f0998647155ab2334e"
     },
     {
       "path": "schema/models.schema.json",
       "media_type": "application/json",
       "description": "JSON Schema for the model registry",
-      "bytes": 1695,
-      "sha256": "95c1b840973aaac511874a17066519e764dc0700e86ba2505d658661db070873"
+      "bytes": 1767,
+      "sha256": "7bd94d3ff7bedd0d751c8265101b2a878a86ea9af59fb4cdba738a1ce54edf35"
     },
     {
       "path": "schema/platforms.schema.json",
       "media_type": "application/json",
       "description": "JSON Schema for the surface registry",
-      "bytes": 2035,
-      "sha256": "485653162dc226aa36d9330358d1655fe4ff78bcb73f588ba76f5a5dbc07738e"
+      "bytes": 2114,
+      "sha256": "abc8c05add8d0f61eeed12b0c37f9088c3dc511c04cb031e62f7ce63f5635dcb"
     }
   ]
 }

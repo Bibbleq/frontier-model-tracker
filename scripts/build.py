@@ -64,7 +64,7 @@ LIFECYCLE_ORDER = [
     "ga", "legacy", "deprecated", "retired",
 ]
 
-# Stages from which a model does not return. A renderer may treat these as an
+# Stages from which a model does not return. A consumer may treat these as an
 # end state; anything else is only the last thing we know, not the current one.
 TERMINAL_LIFECYCLES = {"retired"}
 
@@ -86,7 +86,7 @@ def fail(message: str) -> None:
 
 def warn(code: str, subject: str, message: str) -> None:
     """Record a non-fatal finding. Warnings are a work queue, not noise, so
-    they are emitted as structured data for the dashboard as well as text."""
+    they are emitted in the machine-readable status report as well as text."""
     entry = {"code": code, "subject": subject, "message": message}
     if entry not in warnings:
         warnings.append(entry)
@@ -611,7 +611,7 @@ def derive_current_state(data: dict, models: dict, platforms: dict) -> list[dict
     and the dataset simply does not know it yet because model withdrawal is
     published far less consistently than model arrival.
 
-    This exists so that every renderer does not re-derive it, and re-derive it
+    This exists so that every consumer does not re-derive it, and re-derive it
     wrongly, by treating the latest lifecycle as present tense. Two columns
     carry the caveat:
 
@@ -851,9 +851,9 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
                 "event_count": surface_use.get(entry["id"], 0),
             })
 
-    # A single document the editorial dashboard can read. Deliberately carries
-    # no timestamp: generated output must stay byte-identical on rebuild so the
-    # CI check that generated files are committed keeps working.
+    # A single machine-readable status document. Deliberately carries no
+    # timestamp: generated output must stay byte-identical on rebuild so the CI
+    # check that generated files are committed keeps working.
     lag_rows = derive_lag(data, models, platforms)
     status = {
         "totals": {

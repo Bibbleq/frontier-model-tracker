@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import copy
+import tempfile
 import unittest
+from pathlib import Path
 
-from scripts import build
+from scripts import assemble_site, build
 
 
 def availability(
@@ -160,6 +162,19 @@ class DatasetContractTests(unittest.TestCase):
         microsoft = [row for row in rows if row["tier"] == "microsoft"]
         self.assertTrue(microsoft)
         self.assertTrue(all(row["certainty"] == "unknown_open_research" for row in microsoft))
+
+
+class PublishedArtifactTests(unittest.TestCase):
+    def test_artifact_contains_data_but_no_presentation_files(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            site = Path(directory) / "_site"
+            assemble_site.assemble(site)
+
+            self.assertTrue((site / "manifest.json").is_file())
+            self.assertTrue((site / "data" / "events.json").is_file())
+            self.assertTrue((site / "schema" / "events.schema.json").is_file())
+            self.assertEqual(list(site.rglob("*.html")), [])
+            self.assertEqual(list(site.rglob("*.css")), [])
 
 
 if __name__ == "__main__":

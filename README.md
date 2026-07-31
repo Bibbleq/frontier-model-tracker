@@ -14,7 +14,7 @@ The aim is to distinguish *what happened* from *how it was exposed*: underlying 
 
 ## Project status
 
-The structured dataset is the source of truth. It contains **over 140 canonical events** spanning June 2020 onward, alongside dozens of validation targets undergoing further research. Exact current totals, warning counts and coverage gaps are published in [`generated/status.json`](generated/status.json). Presentation layers such as the 365Explained web timeline consume generated representations of that data.
+The structured dataset is the source of truth. It contains **over 140 canonical events** spanning June 2020 onward, alongside dozens of validation targets undergoing further research. Exact current totals, warning counts and coverage gaps are published in [`generated/status.json`](generated/status.json).
 
 Treat the dataset as a sourced research project rather than official product documentation.
 
@@ -24,25 +24,24 @@ Treat the dataset as a sourced research project rather than official product doc
 data/              Human-maintained source data: model and surface registries, events
 docs/              Data contract, methodology and research provenance
 generated/         Machine-generated JSON/CSV outputs
+published/         Immutable contract and dataset snapshots
 schema/            JSON Schema for event validation
 scripts/           Build and validation tooling
-web/               Reusable timeline renderer / demo
-wordpress/         Pointer to the separate display-layer repositories
 .github/           Contribution and validation workflows
 ```
 
 ## Consuming the data
 
 The generated outputs are published to a stable URL on every change to `main`.
-Display layers — the 365Explained WordPress plugin first, others later — live in
-their own repositories and consume that endpoint rather than this one.
+They are a standalone data source: downstream applications decide independently
+how to query, analyse or present them.
 
 Start at the manifest: <https://bibbleq.github.io/frontier-model-tracker/manifest.json>
 
 [`docs/data-contract.md`](docs/data-contract.md) is the promise consumers can
 rely on: which paths are stable, how versioning and deprecation work, and the
-obligations a renderer has to meet so the distinctions the dataset keeps are not
-flattened in the rendering.
+interpretation rules consumers must preserve so the distinctions in the data are
+not flattened or misrepresented.
 
 ## Event model
 

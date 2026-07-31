@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://365explained.example/schema/models.schema.json",
+  "$id": "https://bibbleq.github.io/frontier-model-tracker/schema/models.schema.json",
   "title": "365Explained Frontier Model Tracker model registry",
   "type": "object",
   "required": ["version", "models", "families"],

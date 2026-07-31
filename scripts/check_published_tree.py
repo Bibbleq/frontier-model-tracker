@@ -71,10 +71,6 @@ def main() -> None:
     if snapshots == 0:
         fail("no immutable contract snapshots were assembled")
 
-    for page in ("index.html", "dashboard.html", "style.css"):
-        if not (site / page).exists():
-            fail(f"{page} is missing from the assembled site")
-
     print(
         f"Published tree verified: latest contract v{latest['contract_version']}, "
         f"dataset v{latest['dataset_version']}, {count} payload files, "

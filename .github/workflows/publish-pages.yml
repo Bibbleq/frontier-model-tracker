@@ -1,8 +1,7 @@
-name: Publish data and dashboard
+name: Publish data
 
-# The repository is authoritative. This publishes the generated outputs to a
-# stable URL so presentation layers, including the 365Explained WordPress site,
-# can consume them without copying historical claims into a second place.
+# The repository is authoritative. This publishes the generated outputs and
+# immutable snapshots to a stable, independently consumable URL.
 
 on:
   push:
@@ -14,7 +13,6 @@ on:
       - "requirements.txt"
       - "generated/**"
       - "published/**"
-      - "web/**"
       - ".github/workflows/publish-pages.yml"
   workflow_dispatch:
 

@@ -2,8 +2,5 @@ __pycache__/
 *.py[cod]
 .venv/
 
-# local preview copy of generated/ ; the published copy is assembled by CI
-web/data/
-
 # machine-specific dev server config
 .claude/

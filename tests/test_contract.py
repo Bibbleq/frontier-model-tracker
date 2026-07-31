@@ -1,6 +1,6 @@
 """The published data contract is a promise to consumers in other repositories.
 
-These tests guard the parts a display layer depends on. A change that breaks
+These tests guard the parts external consumers depend on. A change that breaks
 one of them is a breaking change under docs/data-contract.md and needs a
 version bump, not a green build.
 """
@@ -31,6 +31,14 @@ class ManifestTests(unittest.TestCase):
     def test_manifest_lists_every_promised_file(self) -> None:
         listed = [entry["path"] for entry in self.manifest["files"]]
         self.assertEqual(listed, list(build.PUBLISHED_FILES))
+
+    def test_schema_ids_are_their_published_urls(self) -> None:
+        for entry in self.manifest["files"]:
+            if not entry["path"].startswith("schema/"):
+                continue
+            with self.subTest(entry["path"]):
+                schema = json.loads((ROOT / entry["path"]).read_text(encoding="utf-8"))
+                self.assertEqual(schema["$id"], self.manifest["base_url"] + entry["path"])
 
     def test_every_promised_file_exists_with_a_matching_checksum(self) -> None:
         source = {"data": GENERATED, "schema": ROOT / "schema"}
@@ -187,7 +195,7 @@ class DayPrecisionTests(unittest.TestCase):
 
 
 class ConsumerContractTests(unittest.TestCase):
-    """Guarantees docs/data-contract.md makes to display layers."""
+    """Guarantees docs/data-contract.md makes to external consumers."""
 
     @classmethod
     def setUpClass(cls) -> None:
@@ -212,7 +220,7 @@ class ConsumerContractTests(unittest.TestCase):
                     self.assertEqual(event["model_ids"], [])
 
     def test_events_are_sorted_by_date_then_id(self) -> None:
-        """The contract promises this ordering; a renderer may rely on it."""
+        """The contract promises this ordering; a consumer may rely on it."""
         ids = [event["id"] for event in self.events["events"]]
         expected = [
             event["id"]
@@ -221,7 +229,7 @@ class ConsumerContractTests(unittest.TestCase):
         self.assertEqual(ids, expected)
 
     def test_every_event_date_declares_its_precision(self) -> None:
-        """A renderer formats from precision. Without it, a month-only date
+        """A consumer interprets precision. Without it, a month-only date
         gets displayed as an exact day."""
         for event in self.events["events"]:
             with self.subTest(event["id"]):
@@ -261,7 +269,7 @@ class ConsumerContractTests(unittest.TestCase):
 
 
 class CurrentStateTests(unittest.TestCase):
-    """current-state.csv exists so renderers do not each re-derive "is it still
+    """current-state.csv exists so consumers do not each re-derive "is it still
     available" and each get it wrong the same way."""
 
     @classmethod
