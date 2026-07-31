@@ -6238,7 +6238,8 @@
           "primary": true,
           "retrieved_at": "2026-07-28",
           "source_type": "release_notes",
-          "archived_url": "https://web.archive.org/web/20260623095215/https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
+          "archived_url": "https://web.archive.org/web/20260731080627/https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new?wayback=20260731",
+          "note": "The capture is of the page with a cache-busting query parameter, because Save Page Now without one was served a stale CDN variant dated 14 May that lacks the June section. The quoted text is confirmed present in this capture. An earlier bulk pass attached the 23 June capture, which predates the June section and could not attest this quote; corrected here.",
           "quote": "(General availability) Select Claude Sonnet 5 or GPT-5.5 Chat as your agent's primary AI model for improved response quality and reasoning.",
           "supports": [
             "date",
@@ -6792,6 +6793,7 @@
           "primary": true,
           "retrieved_at": "2026-07-31",
           "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260731080627/https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new?wayback=20260731",
           "quote": "(General availability) Select Claude Sonnet 5 or GPT-5.5 Chat as your agent's primary AI model for improved response quality and reasoning.",
           "supports": [
             "model",

@@ -22,11 +22,6 @@
   },
   "warnings": [
     {
-      "code": "missing_archive",
-      "subject": "studio-sonnet5-ga-2026-06-30",
-      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
-    },
-    {
       "code": "no_vendor_baseline",
       "subject": "kimi-k3",
       "message": "no vendor release event, so lag cannot be derived"
@@ -38,7 +33,6 @@
     }
   ],
   "warning_counts": {
-    "missing_archive": 1,
     "no_vendor_baseline": 1,
     "pre_release_access": 1
   },
