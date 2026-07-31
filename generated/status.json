@@ -1,34 +1,30 @@
 {
   "totals": {
-    "events": 221,
-    "backlog": 58,
-    "sources": 257,
+    "events": 227,
+    "backlog": 59,
+    "sources": 266,
     "models": 67,
     "surfaces": 23,
-    "confirmed": 199,
-    "supported": 22
+    "confirmed": 201,
+    "supported": 26
   },
   "kinds": {
-    "announcement": 11,
-    "availability": 195,
+    "announcement": 12,
+    "availability": 200,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
-    "blocked": 3,
-    "open": 30,
-    "promoted": 25
+    "blocked": 2,
+    "open": 26,
+    "promoted": 30,
+    "rejected": 1
   },
   "warnings": [
     {
       "code": "missing_archive",
-      "subject": "foundry-grok3-2025-05-19",
-      "message": "documentation source has no archived_url and may be edited in place: https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-june-2025/"
-    },
-    {
-      "code": "missing_archive",
-      "subject": "foundry-grok3-mini-2025-05-19",
-      "message": "documentation source has no archived_url and may be edited in place: https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-june-2025/"
+      "subject": "studio-sonnet5-ga-2026-06-30",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
     },
     {
       "code": "no_vendor_baseline",
@@ -42,7 +38,7 @@
     }
   ],
   "warning_counts": {
-    "missing_archive": 2,
+    "missing_archive": 1,
     "no_vendor_baseline": 1,
     "pre_release_access": 1
   },
@@ -51,10 +47,10 @@
     "surfaces_without_events": []
   },
   "lag_certainty": {
-    "exact": 312,
-    "not_recorded": 383,
-    "range": 19,
+    "exact": 313,
+    "not_recorded": 390,
+    "range": 22,
     "unknown_no_baseline": 12,
-    "unknown_open_research": 78
+    "unknown_open_research": 67
   }
 }
