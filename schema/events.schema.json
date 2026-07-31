@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://365explained.example/schema/events.schema.json",
+  "$id": "https://bibbleq.github.io/frontier-model-tracker/schema/events.schema.json",
   "title": "365Explained Frontier Model Tracker dataset",
   "type": "object",
   "required": ["version", "updated", "research_cutoff", "metadata", "events", "validation_backlog"],

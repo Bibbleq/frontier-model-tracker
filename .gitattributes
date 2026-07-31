@@ -1,0 +1,4 @@
+generated/*.csv text eol=lf
+generated/*.json text eol=lf
+published/** text eol=lf
+schema/*.json text eol=lf

@@ -145,8 +145,8 @@ attests the date rather than merely the capability.
 
 The dataset was built by tracking arrivals, and endings are published far less
 consistently. Record them anyway: without a terminal event a model sits at the
-last stage anyone recorded, and a renderer will show it as though nothing has
-changed since.
+last stage anyone recorded, and downstream use may treat it as though nothing
+has changed since.
 
 The lifecycle runs `private_preview` -> `limited_preview` -> `public_preview`
 -> `ga` -> `legacy` -> `deprecated` -> `retired`. The last three matter here:

@@ -9,7 +9,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 GENERATED = ROOT / "generated"
 SCHEMA = ROOT / "schema"
-WEB = ROOT / "web"
 SNAPSHOTS = ROOT / "published"
 
 
@@ -21,9 +20,6 @@ def assemble(site: Path) -> None:
     schema_target = site / "schema"
     data_target.mkdir(parents=True)
     schema_target.mkdir()
-
-    for name in ("index.html", "dashboard.html", "style.css"):
-        shutil.copy2(WEB / name, site / name)
 
     for name in ("events.json", "status.json"):
         shutil.copy2(GENERATED / name, data_target / name)
