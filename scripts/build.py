@@ -20,7 +20,7 @@ from jsonschema import Draft202012Validator
 # CONTRACT_VERSION describes the publishing layout: the URL structure, the
 # manifest format and which files exist. The dataset's own `version` describes
 # the shape of the records. They move independently.
-CONTRACT_VERSION = 2
+CONTRACT_VERSION = 3
 BASE_URL = "https://bibbleq.github.io/frontier-model-tracker/"
 ATTRIBUTION = "365Explained Frontier Model Tracker"
 
