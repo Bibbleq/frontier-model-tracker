@@ -167,7 +167,7 @@ claude-opus-4-5,Claude Opus 4.5,Anthropic,github_copilot,any_exposure,anthropic-
 claude-opus-4-5,Claude Opus 4.5,Anthropic,github_copilot,selectable_or_default,anthropic-opus4-5-2025-11-24,2025-11-24,ga,github-opus4-5-preview-2025-11-24,2025-11-24,github-copilot,selectable,public_preview,0,0,exact
 claude-opus-4-5,Claude Opus 4.5,Anthropic,foundry,any_exposure,anthropic-opus4-5-2025-11-24,2025-11-24,ga,,,,,,,,unknown_open_research
 claude-opus-4-5,Claude Opus 4.5,Anthropic,foundry,selectable_or_default,anthropic-opus4-5-2025-11-24,2025-11-24,ga,,,,,,,,unknown_open_research
-claude-opus-4-7,Claude Opus 4.7,Anthropic,microsoft,any_exposure,anthropic-opus4-7-2026-04-16,2026-04-16,ga,m365-opus4-7-2026-04-16,2026-04-16,m365-copilot,selectable,ga,0,0,exact
+claude-opus-4-7,Claude Opus 4.7,Anthropic,microsoft,any_exposure,anthropic-opus4-7-2026-04-16,2026-04-16,ga,foundry-opus4-7-2026-04-16,2026-04-16,microsoft-foundry,catalogue,ga,0,0,exact
 claude-opus-4-7,Claude Opus 4.7,Anthropic,microsoft,selectable_or_default,anthropic-opus4-7-2026-04-16,2026-04-16,ga,m365-opus4-7-2026-04-16,2026-04-16,m365-copilot,selectable,ga,0,0,exact
 claude-opus-4-7,Claude Opus 4.7,Anthropic,copilot,any_exposure,anthropic-opus4-7-2026-04-16,2026-04-16,ga,m365-opus4-7-2026-04-16,2026-04-16,m365-copilot,selectable,ga,0,0,exact
 claude-opus-4-7,Claude Opus 4.7,Anthropic,copilot,selectable_or_default,anthropic-opus4-7-2026-04-16,2026-04-16,ga,m365-opus4-7-2026-04-16,2026-04-16,m365-copilot,selectable,ga,0,0,exact
@@ -177,8 +177,8 @@ claude-opus-4-7,Claude Opus 4.7,Anthropic,studio,any_exposure,anthropic-opus4-7-
 claude-opus-4-7,Claude Opus 4.7,Anthropic,studio,selectable_or_default,anthropic-opus4-7-2026-04-16,2026-04-16,ga,studio-opus4-7-2026-04-16,2026-04-16,copilot-studio,selectable,public_preview,0,0,exact
 claude-opus-4-7,Claude Opus 4.7,Anthropic,github_copilot,any_exposure,anthropic-opus4-7-2026-04-16,2026-04-16,ga,,,,,,,,unknown_open_research
 claude-opus-4-7,Claude Opus 4.7,Anthropic,github_copilot,selectable_or_default,anthropic-opus4-7-2026-04-16,2026-04-16,ga,,,,,,,,unknown_open_research
-claude-opus-4-7,Claude Opus 4.7,Anthropic,foundry,any_exposure,anthropic-opus4-7-2026-04-16,2026-04-16,ga,,,,,,,,unknown_open_research
-claude-opus-4-7,Claude Opus 4.7,Anthropic,foundry,selectable_or_default,anthropic-opus4-7-2026-04-16,2026-04-16,ga,,,,,,,,unknown_open_research
+claude-opus-4-7,Claude Opus 4.7,Anthropic,foundry,any_exposure,anthropic-opus4-7-2026-04-16,2026-04-16,ga,foundry-opus4-7-2026-04-16,2026-04-16,microsoft-foundry,catalogue,ga,0,0,exact
+claude-opus-4-7,Claude Opus 4.7,Anthropic,foundry,selectable_or_default,anthropic-opus4-7-2026-04-16,2026-04-16,ga,,,,,,,,not_recorded
 claude-opus-4-8,Claude Opus 4.8,Anthropic,microsoft,any_exposure,anthropic-opus4-8-2026-05-28,2026-05-28,ga,github-opus4-8-ga-2026-05-28,2026-05-28,github-copilot,selectable,ga,0,0,exact
 claude-opus-4-8,Claude Opus 4.8,Anthropic,microsoft,selectable_or_default,anthropic-opus4-8-2026-05-28,2026-05-28,ga,github-opus4-8-ga-2026-05-28,2026-05-28,github-copilot,selectable,ga,0,0,exact
 claude-opus-4-8,Claude Opus 4.8,Anthropic,copilot,any_exposure,anthropic-opus4-8-2026-05-28,2026-05-28,ga,github-opus4-8-ga-2026-05-28,2026-05-28,github-copilot,selectable,ga,0,0,exact
@@ -245,8 +245,8 @@ claude-sonnet-5,Claude Sonnet 5,Anthropic,copilot,any_exposure,anthropic-sonnet5
 claude-sonnet-5,Claude Sonnet 5,Anthropic,copilot,selectable_or_default,anthropic-sonnet5-2026-06-30,2026-06-30,ga,github-sonnet5-ga-2026-06-30,2026-06-30,github-copilot,selectable,ga,0,0,exact
 claude-sonnet-5,Claude Sonnet 5,Anthropic,m365,any_exposure,anthropic-sonnet5-2026-06-30,2026-06-30,ga,m365-sonnet5-2026-07-02,2026-07-02,m365-copilot,selectable,ga,2,2,exact
 claude-sonnet-5,Claude Sonnet 5,Anthropic,m365,selectable_or_default,anthropic-sonnet5-2026-06-30,2026-06-30,ga,m365-sonnet5-2026-07-02,2026-07-02,m365-copilot,selectable,ga,2,2,exact
-claude-sonnet-5,Claude Sonnet 5,Anthropic,studio,any_exposure,anthropic-sonnet5-2026-06-30,2026-06-30,ga,,,,,,,,unknown_open_research
-claude-sonnet-5,Claude Sonnet 5,Anthropic,studio,selectable_or_default,anthropic-sonnet5-2026-06-30,2026-06-30,ga,,,,,,,,unknown_open_research
+claude-sonnet-5,Claude Sonnet 5,Anthropic,studio,any_exposure,anthropic-sonnet5-2026-06-30,2026-06-30,ga,studio-sonnet5-ga-2026-06-30,2026-06-30,copilot-studio,selectable,ga,0,0,exact
+claude-sonnet-5,Claude Sonnet 5,Anthropic,studio,selectable_or_default,anthropic-sonnet5-2026-06-30,2026-06-30,ga,studio-sonnet5-ga-2026-06-30,2026-06-30,copilot-studio,selectable,ga,0,0,exact
 claude-sonnet-5,Claude Sonnet 5,Anthropic,github_copilot,any_exposure,anthropic-sonnet5-2026-06-30,2026-06-30,ga,github-sonnet5-ga-2026-06-30,2026-06-30,github-copilot,selectable,ga,0,0,exact
 claude-sonnet-5,Claude Sonnet 5,Anthropic,github_copilot,selectable_or_default,anthropic-sonnet5-2026-06-30,2026-06-30,ga,github-sonnet5-ga-2026-06-30,2026-06-30,github-copilot,selectable,ga,0,0,exact
 claude-sonnet-5,Claude Sonnet 5,Anthropic,foundry,any_exposure,anthropic-sonnet5-2026-06-30,2026-06-30,ga,foundry-sonnet5-ga-2026-06-30,2026-06-30,microsoft-foundry,catalogue,ga,0,0,exact
@@ -443,8 +443,8 @@ gpt-4-1-nano,GPT-4.1 nano,OpenAI,github_copilot,any_exposure,openai-gpt4-1-2025-
 gpt-4-1-nano,GPT-4.1 nano,OpenAI,github_copilot,selectable_or_default,openai-gpt4-1-2025-04-14,2025-04-14,ga,,,,,,,,not_recorded
 gpt-4-1-nano,GPT-4.1 nano,OpenAI,foundry,any_exposure,openai-gpt4-1-2025-04-14,2025-04-14,ga,azure-gpt4-1-2025-04-14,2025-04-14,azure-ai-foundry,catalogue,ga,0,0,exact
 gpt-4-1-nano,GPT-4.1 nano,OpenAI,foundry,selectable_or_default,openai-gpt4-1-2025-04-14,2025-04-14,ga,,,,,,,,unknown_open_research
-gpt-4-turbo,GPT-4 Turbo,OpenAI,microsoft,any_exposure,openai-gpt4-turbo-2023-11-06,2023-11-06,public_preview,m365-gpt4-turbo-2024-04-02,2024-04-02,m365-copilot,underlying,ga,148,148,exact
-gpt-4-turbo,GPT-4 Turbo,OpenAI,microsoft,selectable_or_default,openai-gpt4-turbo-2023-11-06,2023-11-06,public_preview,,,,,,,,unknown_open_research
+gpt-4-turbo,GPT-4 Turbo,OpenAI,microsoft,any_exposure,openai-gpt4-turbo-2023-11-06,2023-11-06,public_preview,azure-gpt4-turbo-preview-2023-11-17,2023-11-17,azure-openai,catalogue,public_preview,11,11,exact
+gpt-4-turbo,GPT-4 Turbo,OpenAI,microsoft,selectable_or_default,openai-gpt4-turbo-2023-11-06,2023-11-06,public_preview,,,,,,,,not_recorded
 gpt-4-turbo,GPT-4 Turbo,OpenAI,copilot,any_exposure,openai-gpt4-turbo-2023-11-06,2023-11-06,public_preview,m365-gpt4-turbo-2024-04-02,2024-04-02,m365-copilot,underlying,ga,148,148,exact
 gpt-4-turbo,GPT-4 Turbo,OpenAI,copilot,selectable_or_default,openai-gpt4-turbo-2023-11-06,2023-11-06,public_preview,,,,,,,,not_recorded
 gpt-4-turbo,GPT-4 Turbo,OpenAI,m365,any_exposure,openai-gpt4-turbo-2023-11-06,2023-11-06,public_preview,m365-gpt4-turbo-2024-04-02,2024-04-02,m365-copilot,underlying,ga,148,148,exact
@@ -453,18 +453,18 @@ gpt-4-turbo,GPT-4 Turbo,OpenAI,studio,any_exposure,openai-gpt4-turbo-2023-11-06,
 gpt-4-turbo,GPT-4 Turbo,OpenAI,studio,selectable_or_default,openai-gpt4-turbo-2023-11-06,2023-11-06,public_preview,,,,,,,,not_recorded
 gpt-4-turbo,GPT-4 Turbo,OpenAI,github_copilot,any_exposure,openai-gpt4-turbo-2023-11-06,2023-11-06,public_preview,,,,,,,,not_recorded
 gpt-4-turbo,GPT-4 Turbo,OpenAI,github_copilot,selectable_or_default,openai-gpt4-turbo-2023-11-06,2023-11-06,public_preview,,,,,,,,not_recorded
-gpt-4-turbo,GPT-4 Turbo,OpenAI,foundry,any_exposure,openai-gpt4-turbo-2023-11-06,2023-11-06,public_preview,azure-gpt4-turbo-vision-ga-2024-05-01,2024-05-01,azure-openai,catalogue,ga,177,177,exact
-gpt-4-turbo,GPT-4 Turbo,OpenAI,foundry,selectable_or_default,openai-gpt4-turbo-2023-11-06,2023-11-06,public_preview,,,,,,,,unknown_open_research
+gpt-4-turbo,GPT-4 Turbo,OpenAI,foundry,any_exposure,openai-gpt4-turbo-2023-11-06,2023-11-06,public_preview,azure-gpt4-turbo-preview-2023-11-17,2023-11-17,azure-openai,catalogue,public_preview,11,11,exact
+gpt-4-turbo,GPT-4 Turbo,OpenAI,foundry,selectable_or_default,openai-gpt4-turbo-2023-11-06,2023-11-06,public_preview,,,,,,,,not_recorded
 gpt-4o,GPT-4o,OpenAI,microsoft,any_exposure,openai-gpt4o-2024-05-13,2024-05-13,ga,azure-gpt4o-preview-2024-05-13,2024-05-13,azure-openai,catalogue,public_preview,0,0,exact
-gpt-4o,GPT-4o,OpenAI,microsoft,selectable_or_default,openai-gpt4o-2024-05-13,2024-05-13,ga,github-gpt4o-retired-2025-08-06,2025-08-06,github-copilot,selectable,retired,450,450,exact
+gpt-4o,GPT-4o,OpenAI,microsoft,selectable_or_default,openai-gpt4o-2024-05-13,2024-05-13,ga,github-gpt4o-selectable-2024-10-29,2024-10-29,github-copilot,selectable,ga,169,172,range
 gpt-4o,GPT-4o,OpenAI,copilot,any_exposure,openai-gpt4o-2024-05-13,2024-05-13,ga,github-gpt4o-underlying-2024-07-31,2024-07-31,github-copilot,underlying,ga,79,79,exact
-gpt-4o,GPT-4o,OpenAI,copilot,selectable_or_default,openai-gpt4o-2024-05-13,2024-05-13,ga,github-gpt4o-retired-2025-08-06,2025-08-06,github-copilot,selectable,retired,450,450,exact
+gpt-4o,GPT-4o,OpenAI,copilot,selectable_or_default,openai-gpt4o-2024-05-13,2024-05-13,ga,github-gpt4o-selectable-2024-10-29,2024-10-29,github-copilot,selectable,ga,169,172,range
 gpt-4o,GPT-4o,OpenAI,m365,any_exposure,openai-gpt4o-2024-05-13,2024-05-13,ga,m365-gpt4o-wave2-2024-09-16,2024-09-16,m365-copilot,underlying,ga,126,126,exact
 gpt-4o,GPT-4o,OpenAI,m365,selectable_or_default,openai-gpt4o-2024-05-13,2024-05-13,ga,,,,,,,,not_recorded
 gpt-4o,GPT-4o,OpenAI,studio,any_exposure,openai-gpt4o-2024-05-13,2024-05-13,ga,studio-gpt4o-retired-2025-10-27,2025-10-27,copilot-studio,default,retired,532,536,range
 gpt-4o,GPT-4o,OpenAI,studio,selectable_or_default,openai-gpt4o-2024-05-13,2024-05-13,ga,studio-gpt4o-retired-2025-10-27,2025-10-27,copilot-studio,default,retired,532,536,range
 gpt-4o,GPT-4o,OpenAI,github_copilot,any_exposure,openai-gpt4o-2024-05-13,2024-05-13,ga,github-gpt4o-underlying-2024-07-31,2024-07-31,github-copilot,underlying,ga,79,79,exact
-gpt-4o,GPT-4o,OpenAI,github_copilot,selectable_or_default,openai-gpt4o-2024-05-13,2024-05-13,ga,github-gpt4o-retired-2025-08-06,2025-08-06,github-copilot,selectable,retired,450,450,exact
+gpt-4o,GPT-4o,OpenAI,github_copilot,selectable_or_default,openai-gpt4o-2024-05-13,2024-05-13,ga,github-gpt4o-selectable-2024-10-29,2024-10-29,github-copilot,selectable,ga,169,172,range
 gpt-4o,GPT-4o,OpenAI,foundry,any_exposure,openai-gpt4o-2024-05-13,2024-05-13,ga,azure-gpt4o-preview-2024-05-13,2024-05-13,azure-openai,catalogue,public_preview,0,0,exact
 gpt-4o,GPT-4o,OpenAI,foundry,selectable_or_default,openai-gpt4o-2024-05-13,2024-05-13,ga,,,,,,,,unknown_open_research
 gpt-5,GPT-5,OpenAI,microsoft,any_exposure,openai-gpt5-2025-08-07,2025-08-07,ga,foundry-gpt5-2025-08-07,2025-08-07,azure-ai-foundry,catalogue,ga,0,0,exact
@@ -527,7 +527,7 @@ gpt-5-4,GPT-5.4,OpenAI,github_copilot,any_exposure,openai-gpt5-4-2026-03-05,2026
 gpt-5-4,GPT-5.4,OpenAI,github_copilot,selectable_or_default,openai-gpt5-4-2026-03-05,2026-03-05,ga,,,,,,,,not_recorded
 gpt-5-4,GPT-5.4,OpenAI,foundry,any_exposure,openai-gpt5-4-2026-03-05,2026-03-05,ga,,,,,,,,not_recorded
 gpt-5-4,GPT-5.4,OpenAI,foundry,selectable_or_default,openai-gpt5-4-2026-03-05,2026-03-05,ga,,,,,,,,not_recorded
-gpt-5-5,GPT-5.5,OpenAI,microsoft,any_exposure,openai-gpt5-5-2026-04-23,2026-04-23,ga,github-gpt5-5-ga-2026-04-24,2026-04-24,github-copilot,selectable,ga,1,1,exact
+gpt-5-5,GPT-5.5,OpenAI,microsoft,any_exposure,openai-gpt5-5-2026-04-23,2026-04-23,ga,foundry-gpt5-5-2026-04-24,2026-04-24,microsoft-foundry,catalogue,ga,1,1,exact
 gpt-5-5,GPT-5.5,OpenAI,microsoft,selectable_or_default,openai-gpt5-5-2026-04-23,2026-04-23,ga,github-gpt5-5-ga-2026-04-24,2026-04-24,github-copilot,selectable,ga,1,1,exact
 gpt-5-5,GPT-5.5,OpenAI,copilot,any_exposure,openai-gpt5-5-2026-04-23,2026-04-23,ga,github-gpt5-5-ga-2026-04-24,2026-04-24,github-copilot,selectable,ga,1,1,exact
 gpt-5-5,GPT-5.5,OpenAI,copilot,selectable_or_default,openai-gpt5-5-2026-04-23,2026-04-23,ga,github-gpt5-5-ga-2026-04-24,2026-04-24,github-copilot,selectable,ga,1,1,exact
@@ -537,8 +537,8 @@ gpt-5-5,GPT-5.5,OpenAI,studio,any_exposure,openai-gpt5-5-2026-04-23,2026-04-23,g
 gpt-5-5,GPT-5.5,OpenAI,studio,selectable_or_default,openai-gpt5-5-2026-04-23,2026-04-23,ga,studio-gpt5-5-reasoning-2026-04-27,2026-04-27,copilot-studio,selectable,public_preview,4,4,exact
 gpt-5-5,GPT-5.5,OpenAI,github_copilot,any_exposure,openai-gpt5-5-2026-04-23,2026-04-23,ga,github-gpt5-5-ga-2026-04-24,2026-04-24,github-copilot,selectable,ga,1,1,exact
 gpt-5-5,GPT-5.5,OpenAI,github_copilot,selectable_or_default,openai-gpt5-5-2026-04-23,2026-04-23,ga,github-gpt5-5-ga-2026-04-24,2026-04-24,github-copilot,selectable,ga,1,1,exact
-gpt-5-5,GPT-5.5,OpenAI,foundry,any_exposure,openai-gpt5-5-2026-04-23,2026-04-23,ga,,,,,,,,unknown_open_research
-gpt-5-5,GPT-5.5,OpenAI,foundry,selectable_or_default,openai-gpt5-5-2026-04-23,2026-04-23,ga,,,,,,,,unknown_open_research
+gpt-5-5,GPT-5.5,OpenAI,foundry,any_exposure,openai-gpt5-5-2026-04-23,2026-04-23,ga,foundry-gpt5-5-2026-04-24,2026-04-24,microsoft-foundry,catalogue,ga,1,1,exact
+gpt-5-5,GPT-5.5,OpenAI,foundry,selectable_or_default,openai-gpt5-5-2026-04-23,2026-04-23,ga,,,,,,,,not_recorded
 gpt-5-5-instant,GPT-5.5 Instant,OpenAI,microsoft,any_exposure,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,foundry-gpt5-5-instant-2026-05-07,2026-05-07,microsoft-foundry,catalogue,ga,2,2,exact
 gpt-5-5-instant,GPT-5.5 Instant,OpenAI,microsoft,selectable_or_default,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,m365-gpt5-5-instant-2026-05-07,2026-05-07,m365-copilot,selectable,ga,2,2,exact
 gpt-5-5-instant,GPT-5.5 Instant,OpenAI,copilot,any_exposure,openai-gpt5-5-instant-2026-05-05,2026-05-05,ga,m365-gpt5-5-instant-2026-05-07,2026-05-07,m365-copilot,selectable,ga,2,2,exact
@@ -622,9 +622,9 @@ grok-3,Grok 3,xAI,studio,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,p
 grok-3,Grok 3,xAI,github_copilot,any_exposure,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,unknown_open_research
 grok-3,Grok 3,xAI,github_copilot,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,unknown_open_research
 grok-3,Grok 3,xAI,foundry,any_exposure,xai-grok3-2025-02-19,2025-02-19,public_preview,foundry-grok3-2025-05-19,2025-05-19,azure-ai-foundry,catalogue,ga,89,89,exact
-grok-3,Grok 3,xAI,foundry,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,unknown_open_research
+grok-3,Grok 3,xAI,foundry,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
 grok-3-mini,Grok 3 Mini,xAI,microsoft,any_exposure,xai-grok3-2025-02-19,2025-02-19,public_preview,foundry-grok3-mini-2025-05-19,2025-05-19,azure-ai-foundry,catalogue,ga,89,89,exact
-grok-3-mini,Grok 3 Mini,xAI,microsoft,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,unknown_open_research
+grok-3-mini,Grok 3 Mini,xAI,microsoft,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
 grok-3-mini,Grok 3 Mini,xAI,copilot,any_exposure,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
 grok-3-mini,Grok 3 Mini,xAI,copilot,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
 grok-3-mini,Grok 3 Mini,xAI,m365,any_exposure,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
@@ -634,7 +634,7 @@ grok-3-mini,Grok 3 Mini,xAI,studio,selectable_or_default,xai-grok3-2025-02-19,20
 grok-3-mini,Grok 3 Mini,xAI,github_copilot,any_exposure,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
 grok-3-mini,Grok 3 Mini,xAI,github_copilot,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
 grok-3-mini,Grok 3 Mini,xAI,foundry,any_exposure,xai-grok3-2025-02-19,2025-02-19,public_preview,foundry-grok3-mini-2025-05-19,2025-05-19,azure-ai-foundry,catalogue,ga,89,89,exact
-grok-3-mini,Grok 3 Mini,xAI,foundry,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,unknown_open_research
+grok-3-mini,Grok 3 Mini,xAI,foundry,selectable_or_default,xai-grok3-2025-02-19,2025-02-19,public_preview,,,,,,,,not_recorded
 grok-4,Grok 4,xAI,microsoft,any_exposure,xai-grok4-2025-07-09,2025-07-09,ga,xai-grok4-foundry-2025-09-29,2025-09-29,azure-ai-foundry,catalogue,ga,82,82,exact
 grok-4,Grok 4,xAI,microsoft,selectable_or_default,xai-grok4-2025-07-09,2025-07-09,ga,,,,,,,,unknown_open_research
 grok-4,Grok 4,xAI,copilot,any_exposure,xai-grok4-2025-07-09,2025-07-09,ga,,,,,,,,unknown_open_research

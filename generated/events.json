@@ -807,6 +807,51 @@
       ]
     },
     {
+      "id": "azure-gpt4-turbo-preview-2023-11-17",
+      "kind": "availability",
+      "date": {
+        "start": "2023-11-17",
+        "precision": "day"
+      },
+      "surface_id": "azure-openai",
+      "model_ids": [
+        "gpt-4-turbo"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-4 Turbo reached Azure OpenAI as gpt-4-1106-preview eleven days after OpenAI's release, available to all Azure OpenAI customers immediately. This is the arrival whose absence the May 2024 Turbo-with-Vision GA event has carried as a caveat since it was recorded.",
+      "caveat": "Microsoft's post says availability is immediate while naming the model a preview build to be replaced by a production version, so this is a public preview despite the unrestricted access. GPT-3.5 Turbo 1106 reached general availability in the same post and is not recorded here.",
+      "relations": [
+        {
+          "type": "previews_for",
+          "target": "azure-gpt4-turbo-vision-ga-2024-05-01"
+        },
+        {
+          "type": "announced_by",
+          "target": "openai-gpt4-turbo-2023-11-06"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Azure OpenAI Service Launches GPT-4 Turbo and GPT-3.5-Turbo-1106 Models",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/azure-openai-service-launches-gpt-4-turbo-and-gpt-3-5-turbo-1106-models/3985962",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2023-11-17",
+          "source_type": "announcement",
+          "quote": "GPT-4 Turbo is available to all Azure OpenAI customers immediately.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
       "id": "anthropic-claude2-1-2023-11-21",
       "kind": "availability",
       "date": {
@@ -1543,6 +1588,63 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "changelog"
+        }
+      ]
+    },
+    {
+      "id": "github-gpt4o-selectable-2024-10-29",
+      "kind": "availability",
+      "date": {
+        "start": "2024-10-29",
+        "end": "2024-11-01",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-4o"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "GPT-4o entered the GitHub Copilot model picker when the picker itself launched. The GitHub Universe multi-model announcement names GPT-4o among the models developers can choose, and the 1 November Claude changelog proves the picker live on github.com by then. The June 2025 deprecation notice that removed GPT-4o from the pickers is what revealed this arrival was never recorded.",
+      "caveat": "Bounded because the picker rolled out rather than switching on: the window runs from the Universe announcement to the first changelog that shows the picker in service. GPT-4o was already the underlying Chat model, so this event records a change of exposure, not of lifecycle.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "github-multimodel-announcement-2024-10-29"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Bringing developer choice to Copilot with Anthropic's Claude 3.5 Sonnet, Google's Gemini 1.5 Pro, and OpenAI's o1-preview",
+          "url": "https://github.blog/news-insights/product-news/bringing-developer-choice-to-copilot/",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2024-10-29",
+          "source_type": "announcement",
+          "quote": "Soon, developers will be able to choose between Anthropic's Claude 3.5 Sonnet, Google's Gemini 1.5 Pro, and OpenAI's GPT-4o, o1-preview, and o1-mini.",
+          "supports": [
+            "model",
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "GitHub",
+          "title": "Anthropic's Claude 3.5 Sonnet is now available to all Copilot users",
+          "url": "https://github.blog/changelog/2024-11-01-claude-3-5-sonnet-is-now-available-to-all-copilot-users/",
+          "primary": false,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2024-11-01",
+          "source_type": "changelog",
+          "supports": [
+            "date"
+          ],
+          "note": "Bounds the window's end: the model picker this changelog describes was in service on github.com by 1 November."
         }
       ]
     },
@@ -2867,6 +2969,7 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260730201223/https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-june-2025/",
           "note": "Primary Microsoft recap confirms availability but is not the first-day announcement."
         }
       ]
@@ -2908,6 +3011,7 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260730201223/https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-june-2025/",
           "note": "Primary Microsoft recap confirms availability but is not the first-day announcement."
         }
       ]
@@ -4283,6 +4387,38 @@
       ]
     },
     {
+      "id": "foundry-opus4-5-announced-2025-11-24",
+      "kind": "announcement",
+      "date": {
+        "start": "2025-11-24",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "claude-opus-4-5"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft stated that Claude Opus 4.5 was coming to public preview in Microsoft Foundry, in the same launch-day post that made it available in Copilot Studio.",
+      "caveat": "An announcement of future availability, not an arrival, and it must not be drawn on a timeline as one. The wording gives no target date, so unlike the GPT-5.5 one-day-ahead commitment this leaves the actual Foundry arrival entirely open. foundry-opus4-5-first-availability-2025-11-24 remains open for a source reporting the model as actually present.",
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "Announcing Claude Opus 4.5 in Copilot Studio",
+          "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/announcing-claude-opus-4-5-in-copilot-studio/",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2025-11-24",
+          "source_type": "announcement",
+          "quote": "Opus 4.5 is coming to public preview in Microsoft Foundry.",
+          "supports": [
+            "date",
+            "model"
+          ]
+        }
+      ]
+    },
+    {
       "id": "github-opus4-5-preview-2025-11-24",
       "kind": "availability",
       "date": {
@@ -5145,6 +5281,62 @@
       ]
     },
     {
+      "id": "foundry-opus4-7-2026-04-16",
+      "kind": "availability",
+      "date": {
+        "start": "2026-04-16",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "claude-opus-4-7"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Claude Opus 4.7 reached the Microsoft Foundry catalogue on its launch day. Anthropic's announcement places Foundry in the day-one platform list in the present tense, and Microsoft's April retrospective confirms the model in the catalogue with Claude Code available through the Foundry endpoint.",
+      "caveat": "Neither source labels the Foundry stage; general availability is inferred from the unlabelled catalogue convention, so the lifecycle is the weaker part of this claim. Anthropic's page is undated but says 'today', inheriting the launch date already recorded as anthropic-opus4-7-2026-04-16.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-opus4-7-2026-04-16"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Anthropic",
+          "title": "Introducing Claude Opus 4.7",
+          "url": "https://www.anthropic.com/news/claude-opus-4-7",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "source_type": "announcement",
+          "quote": "Opus 4.7 is available today across all Claude products and our API, Amazon Bedrock, Google Cloud's Vertex AI, and Microsoft Foundry.",
+          "supports": [
+            "date",
+            "model"
+          ]
+        },
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, April 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/",
+          "primary": false,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2026-05-12",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260517214300/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/",
+          "quote": "Claude Opus 4.7, Anthropic's most capable generally available model, is available in the Microsoft Foundry model catalog.",
+          "supports": [
+            "model"
+          ]
+        }
+      ]
+    },
+    {
       "id": "m365-opus4-7-2026-04-16",
       "kind": "availability",
       "date": {
@@ -5503,6 +5695,64 @@
           "retrieved_at": "2026-07-31",
           "published_at": "2026-04-23",
           "source_type": "news",
+          "supports": [
+            "date"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt5-5-2026-04-24",
+      "kind": "availability",
+      "date": {
+        "start": "2026-04-24",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "GPT-5.5 entered the Microsoft Foundry model lineup as promised by the previous day's announcement, confirmed by Microsoft's April retrospective. Default quota exists only for Tier 5 and Tier 6 subscriptions, with lower tiers at zero requests per minute until granted.",
+      "caveat": "The exact day rests on the 23 April statement that the model would be generally available tomorrow; the retrospective proves the arrival happened in April without naming the day. Generally available here does not mean broadly usable: tiers one to four have no default quota, which is a narrower launch than the catalogue exposure alone suggests.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "foundry-gpt5-5-announced-2026-04-23"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, April 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2026-05-12",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260517214300/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/",
+          "quote": "GPT-5.5 is now part of the Microsoft Foundry model lineup, but it is not broadly available by default. It has default quota only for Tier 5 and Tier 6 subscriptions.",
+          "supports": [
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "Microsoft Azure",
+          "title": "OpenAI's GPT-5.5 in Microsoft Foundry: frontier intelligence on an enterprise-ready platform",
+          "url": "https://azure.microsoft.com/en-us/blog/openais-gpt-5-5-in-microsoft-foundry-frontier-intelligence-on-an-enterprise-ready-platform/",
+          "primary": false,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2026-04-23",
+          "source_type": "announcement",
+          "quote": "OpenAI's GPT-5.5 will be generally available tomorrow in Microsoft Foundry",
           "supports": [
             "date"
           ]
@@ -6509,6 +6759,49 @@
       ]
     },
     {
+      "id": "studio-sonnet5-ga-2026-06-30",
+      "kind": "availability",
+      "date": {
+        "start": "2026-06-30",
+        "precision": "day"
+      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "claude-sonnet-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "Claude Sonnet 5 became selectable as a primary agent model in Copilot Studio, named alongside GPT-5.5 Chat in the June 2026 release notes. Same-day adoption of a vendor release, which Copilot Studio had not previously done for any Anthropic model.",
+      "caveat": "The release notes give only the month. The day is the intersection of two constraints rather than a published date: the entry sits under June 2026, and Anthropic did not release Claude Sonnet 5 until 30 June, leaving 30 June as the only possible day. If Microsoft's month attribution is wrong the date fails with it, which is why the day is marked supported. The release notes also warn that rollouts span several days.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-sonnet5-2026-06-30"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "What's new in Copilot Studio",
+          "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "source_type": "release_notes",
+          "quote": "(General availability) Select Claude Sonnet 5 or GPT-5.5 Chat as your agent's primary AI model for improved response quality and reasoning.",
+          "supports": [
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
       "id": "anthropic-fable5-restoration-2026-07-01",
       "kind": "availability",
       "date": {
@@ -7323,10 +7616,13 @@
     },
     {
       "id": "azure-gpt4-turbo-first-availability-2023",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "GPT-4 Turbo became available in Azure OpenAI after the November 2023 vendor release.",
       "reason": "The exact first Azure availability date was not preserved in the sourced pack.",
       "target": "Locate a dated Azure model-release or deployment announcement.",
+      "resolution": "Microsoft's dated 17 November 2023 post: GPT-4 Turbo available to all Azure OpenAI customers immediately, as the gpt-4-1106-preview build. Recorded as public preview despite the unrestricted access because Microsoft names it a preview build to be replaced by a production version. Eleven days after OpenAI. The May 2024 Turbo-with-Vision GA event's caveat about this missing arrival is now satisfied by the previews_for relation.",
+      "resolved_on": "2026-07-31",
+      "promoted_to": "azure-gpt4-turbo-preview-2023-11-17",
       "model_ids": [
         "gpt-4-turbo"
       ],
@@ -7489,10 +7785,13 @@
     },
     {
       "id": "foundry-gpt5-5-first-availability-2026-04-24",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "GPT-5.5 entered Microsoft Foundry around 24 April 2026.",
       "reason": "The sourced pack contains vendor, GitHub, M365 and Studio events but no Foundry availability record. Microsoft's 23 April 2026 Azure blog states GPT-5.5 'will be generally available tomorrow in Microsoft Foundry', which is now recorded as the announcement foundry-gpt5-5-announced-2026-04-23. That is a statement of future availability and the dataset does not convert those into arrivals, however short the interval.",
       "target": "Find a source reporting GPT-5.5 as actually present in Foundry, such as a catalogue release note or a what's-new entry dated 24 April 2026 or later. The announcement makes a 24 April arrival very likely but does not evidence it.",
+      "resolution": "Microsoft's April retrospective states GPT-5.5 is part of the Foundry lineup, proving the arrival happened; the 23 April announcement pins the day. Recorded with the day marked supported since no source names 24 April directly, and with the tier restriction carried in the caveat: default quota exists only for Tier 5 and Tier 6 subscriptions, so generally available did not mean broadly usable.",
+      "resolved_on": "2026-07-31",
+      "promoted_to": "foundry-gpt5-5-2026-04-24",
       "model_ids": [
         "gpt-5-5"
       ],
@@ -7577,8 +7876,8 @@
       "id": "foundry-opus4-5-first-availability-2025-11-24",
       "state": "open",
       "working_claim": "Claude Opus 4.5 entered Microsoft Foundry public preview around vendor launch.",
-      "reason": "The sourced pack contains vendor, Studio and, since this pass, GitHub events but no Foundry event. Review indicates Microsoft's 24 November 2025 Copilot Studio announcement says Opus 4.5 was available in Copilot Studio that day and separately that it was coming to public preview in Microsoft Foundry. If that wording is accurate, the Foundry half is a statement of future availability and cannot be recorded as an arrival, the same treatment given to foundry-gpt5-5-announced-2026-04-23.",
-      "target": "Verify the Copilot Studio announcement's exact Foundry wording, which has not been read first-hand. If it promises future availability, record it as an announcement and keep this item open for the arrival itself.",
+      "reason": "The Copilot Studio announcement has now been read first-hand and its Foundry wording is future tense: Opus 4.5 is coming to public preview in Microsoft Foundry. That is recorded as the announcement foundry-opus4-5-announced-2025-11-24, which unlike the GPT-5.5 case names no target date, so the actual arrival is entirely unpinned.",
+      "target": "Find a source reporting Claude Opus 4.5 as actually present in the Foundry catalogue: the November or December 2025 Foundry monthly retrospective is the most likely place, following the pattern that resolved GPT-5.5 and Opus 4.7.",
       "model_ids": [
         "claude-opus-4-5"
       ],
@@ -7724,10 +8023,13 @@
     },
     {
       "id": "github-gpt4o-selectable-arrival",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "GPT-4o became selectable in the GitHub Copilot model picker at some point between July 2024 and its removal on 6 August 2025.",
       "reason": "The June 2025 changelog deprecates GPT-4o from the Copilot model pickers, which means it was selectable there. The timeline records GPT-4o on GitHub Copilot as Chat's underlying model in July 2024 and, since this pass, as the general code-completion model from 27 March 2025, but neither is the picker. An ending still reveals a missing arrival.",
       "target": "Find the dated GitHub changelog entry for GPT-4o entering the Copilot model picker. Two nearby facts must not be substituted for it: the 27 March 2025 code-completion general availability, and the public preview of that same completion model in February 2025. Both concern an underlying exposure, not user selection. The February preview is also unrecordable as things stand, because the lifecycle ordering check keys on model and surface without regard to experience, and GPT-4o was already generally available on this surface from July 2024.",
+      "resolution": "Bounded to 29 October to 1 November 2024: GPT-4o entered the picker when the picker itself launched. The Universe announcement names GPT-4o among the choices and the 1 November Claude changelog proves the picker in service on github.com. No GPT-4o-specific changelog exists because the model was already the underlying default; only its exposure changed.",
+      "resolved_on": "2026-07-31",
+      "promoted_to": "github-gpt4o-selectable-2024-10-29",
       "model_ids": [
         "gpt-4o"
       ],
@@ -7737,10 +8039,13 @@
     },
     {
       "id": "github-foundry-opus4-7-2026-04-16",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "Claude Opus 4.7 landed on GitHub Copilot and Microsoft Foundry at or around vendor launch.",
       "reason": "M365 and Studio launch-day scope is sourced; separate GitHub/Foundry first-day records still need their own primary URLs. Review splits the two: Anthropic's own Opus 4.7 announcement states the model was generally available on Microsoft Foundry on 16 April 2026, and the Foundry catalogue carries it, but no GitHub Copilot source was found. The GitHub half should not inherit the Foundry date.",
       "target": "Two separate answers are needed. For Foundry, cite Anthropic's 16 April 2026 announcement directly rather than the catalogue, which dates nothing. For GitHub Copilot, find a changelog or accept that Opus 4.7 may never have reached the picker, which would be a finding rather than a gap.",
+      "resolution": "The Foundry half is resolved: Anthropic's launch page lists Microsoft Foundry in the day-one platform list in the present tense, and Microsoft's April retrospective confirms the catalogue entry, recorded as foundry-opus4-7-2026-04-16 with the unlabelled stage marked supported. The GitHub half found nothing and continues as github-opus4-7-picker.",
+      "resolved_on": "2026-07-31",
+      "promoted_to": "foundry-opus4-7-2026-04-16",
       "model_ids": [
         "claude-opus-4-7"
       ],
@@ -7750,11 +8055,24 @@
       ]
     },
     {
+      "id": "github-opus4-7-picker",
+      "state": "open",
+      "working_claim": "Claude Opus 4.7 may have reached the GitHub Copilot model picker, but no changelog has been found.",
+      "reason": "Split from github-foundry-opus4-7-2026-04-16 when its Foundry half resolved. Every other frontier Anthropic model from Opus 4.5 onward has a dated GitHub changelog for its picker arrival; Opus 4.7 has none, which is itself informative.",
+      "target": "Find a GitHub changelog naming Opus 4.7, or accept that it never reached the picker, which would be a finding rather than a gap: GitHub moved from Opus 4.6 to Opus 4.8 without the intermediate model. Reject the item in that case.",
+      "model_ids": [
+        "claude-opus-4-7"
+      ],
+      "surface_ids": [
+        "github-copilot"
+      ]
+    },
+    {
       "id": "github-gemini1-5-pro-first-picker-date-2024",
       "state": "open",
       "working_claim": "Gemini 1.5 Pro became selectable in GitHub Copilot after the 29 October 2024 multi-model announcement.",
       "reason": "The announcement says Gemini was coming; the exact first picker date remains unresolved. The 29 October 2024 GitHub Universe keynote is recorded as an announcement rather than availability, because treating it as availability placed a GA before a later public preview on the same surface. That leaves Gemini 1.5 Pro with no GitHub Copilot availability date at all.",
-      "target": "Find the GitHub changelog for first selectable Gemini 1.5 Pro availability.",
+      "target": "Find the dated GitHub changelog for first selectable Gemini 1.5 Pro availability. The November 2024 changelog month archive has been read in full and contains no Gemini entry, so the promised follow-through was not changelogged that month; check the December 2024 archive and the VS Code release notes next. The arrival remains bounded below by 29 October 2024.",
       "model_ids": [
         "gemini-1-5-pro"
       ],
@@ -7847,10 +8165,12 @@
     },
     {
       "id": "devblogs-june-2025-unarchived",
-      "state": "blocked",
+      "state": "rejected",
       "working_claim": "The Microsoft Foundry what's-new post for June 2025 has no Wayback Machine snapshot, leaving the two Grok 3 Foundry arrivals citing a page that could be edited or withdrawn without trace.",
       "reason": "Every other documentation and release-notes source in the dataset now carries an archived_url. This one URL has no capture at any date, and Save Page Now is unreachable from here: requests to web.archive.org/save return no response rather than a rate-limit error, so a snapshot cannot be created on demand. Blocked on infrastructure, not on research.",
       "target": "Submit https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-june-2025/ to the Wayback Machine from a browser or a network where Save Page Now works, then add the resulting archived_url to foundry-grok3-2025-05-19 and foundry-grok3-mini-2025-05-19. Alternatively find a second source for the same two arrivals, which would make the unarchived page non-load-bearing. Note that devblogs.microsoft.com posts are dated retrospectives, so any snapshot will do; freshness does not matter here as it does for rolling pages.",
+      "resolution": "No longer true. The snapshot was created from a browser on 30 July 2026, since Save Page Now is unreachable from the research environment, and both Grok 3 events now carry it as archived_url. The last missing_archive warnings clear with it.",
+      "resolved_on": "2026-07-31",
       "model_ids": [
         "grok-3",
         "grok-3-mini"
@@ -8237,10 +8557,13 @@
     },
     {
       "id": "studio-sonnet5-first-date-2026",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "Copilot Studio supports Claude Sonnet 5 in supported regions/new agent experience.",
       "reason": "Current support is known, but initial rollout versus later GA date is not pinned. Attempted this pass and rejected by the build. Review dates it to June 2026 with no day, from the same Copilot Studio release-notes entry that already supports studio-gpt5-5-chat-ga-2026-06. Recorded at month precision, that resolves to 1 June and lands before Anthropic released Claude Sonnet 5 on 30 June 2026, so the vendor-baseline guard refused it. Either the release-notes month is wrong for this model, or Copilot Studio took it within a day of the vendor release, which is implausible for a primary-model general availability.",
       "target": "Read the Copilot Studio release-notes entry directly rather than relying on a summary of it, and establish whether Claude Sonnet 5 appears under June or a later month. If June is correct and no day is given, the honest shape is a bounded date starting 30 June 2026, not a month-precision June.",
+      "resolution": "The release notes were read first-hand and the entry is genuinely under June 2026, resolving the contradiction this item recorded: squeezed against Anthropic's 30 June release, the only possible June day is 30 June itself, so the event carries day precision with the date marked supported and the squeeze explained. Same-day adoption of a vendor release, which Copilot Studio had not previously done for an Anthropic model.",
+      "resolved_on": "2026-07-31",
+      "promoted_to": "studio-sonnet5-ga-2026-06-30",
       "model_ids": [
         "claude-sonnet-5"
       ],
@@ -8280,7 +8603,7 @@
       "state": "open",
       "working_claim": "Grok 4.5 became publicly available on 9 July 2026, a week before xAI's own page confirms it shipping.",
       "reason": "The vendor baseline is recorded as a 9 to 16 July window because the two ends rest on different evidence. On 8 July, xAI stated the model would go public 'tomorrow', which is a promise rather than a record. The first past-tense first-party confirmation is 16 July and covers Grok Build, Cursor and the console, so it may well postdate a consumer launch on grok.com, X, iOS and Android.",
-      "target": "Pin a first-party xAI post, changelog entry or dated console note showing Grok 4.5 live for consumers. Closing this collapses the window to a day and turns the GitHub Copilot lag from a 12 to 19 day range into an exact figure.",
+      "target": "Pin a first-party xAI post, changelog entry or dated console note showing Grok 4.5 live for consumers. Checked this pass: xAI's own launch page is dated 16 July and says available today in Grok Build, Cursor and the console, which confirms the window's end but nothing earlier. The 9 July start still rests on press coverage alone, so the bounded event stands.",
       "model_ids": [
         "grok-4-5"
       ],

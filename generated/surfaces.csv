@@ -12,13 +12,13 @@ meta,Meta,Meta,,,true,,,,,1
 moonshot,Moonshot AI,Moonshot AI,,,true,,,,,1
 m365-copilot,Microsoft 365 Copilot,Microsoft,Microsoft 365,,false,microsoft | copilot | m365,,,,26
 m365-admin,Microsoft 365 admin centre,Microsoft,Microsoft 365,,false,microsoft,,,,3
-copilot-studio,Microsoft Copilot Studio,Microsoft,Copilot Studio,,false,microsoft | copilot | studio,power-virtual-agents,,,21
+copilot-studio,Microsoft Copilot Studio,Microsoft,Copilot Studio,,false,microsoft | copilot | studio,power-virtual-agents,,,22
 power-virtual-agents,Power Virtual Agents,Microsoft,Copilot Studio,,false,microsoft | copilot | studio,,copilot-studio,2023-11-15,1
-github-copilot,GitHub Copilot,GitHub,GitHub Copilot,,false,microsoft | copilot | github_copilot,,,,51
+github-copilot,GitHub Copilot,GitHub,GitHub Copilot,,false,microsoft | copilot | github_copilot,,,,52
 github-models,GitHub Models,GitHub,GitHub Models,,false,microsoft,,,,10
-azure-openai,Azure OpenAI Service,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,,9
+azure-openai,Azure OpenAI Service,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,,10
 azure-ai-catalog,Azure AI model catalogue,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,,1
 azure-ai-studio,Azure AI Studio,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,2024-11-19,1
 azure-ai-foundry,Azure AI Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-studio,microsoft-foundry,,7
-microsoft-foundry,Microsoft Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-foundry,,,18
+microsoft-foundry,Microsoft Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-foundry,,,21
 microsoft-corporate,Microsoft,Microsoft,,,false,,,,,1
