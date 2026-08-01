@@ -24,8 +24,8 @@
       "path": "data/status.json",
       "media_type": "application/json",
       "description": "Totals, warning counts, coverage gaps and lag certainty distribution",
-      "bytes": 2272,
-      "sha256": "78b3505fe9991c43308e8017e41603bf92e4b34b48ced1b4d6b6d2fc0101ae42"
+      "bytes": 2153,
+      "sha256": "6a842f3e414e76bed1b169be49a1a8b3eb14eab9c34fa68396be8b466d743b8a"
     },
     {
       "path": "data/events.csv",
@@ -59,29 +59,29 @@
       "path": "data/models.csv",
       "media_type": "text/csv",
       "description": "Model registry with generation, model-line, family and event-count references",
-      "bytes": 5284,
-      "sha256": "6baebbc7bbcac2357ab9d373576ab5455ddb72fdf52c5e81449bd61f143e6f2b"
+      "bytes": 5584,
+      "sha256": "c331ae7fe620266d127dbc6124bd072bdb1c7e386a3ded83934ccf244964bb2e"
     },
     {
       "path": "data/series.csv",
       "media_type": "text/csv",
       "description": "Vendor model series referenced by generations and model lines",
-      "bytes": 264,
-      "sha256": "6bbe988b88ca87590f11bb9b2c7328ae5134af156ed000079f78c92d8f90cc62"
+      "bytes": 402,
+      "sha256": "f6a8223c0c5d6559aae5759cd178319af26757312ff66763107c46d160c9f665"
     },
     {
       "path": "data/generations.csv",
       "media_type": "text/csv",
-      "description": "Broad numbered model generations; membership does not imply supersession",
-      "bytes": 801,
-      "sha256": "15acb8d05df31e9edebab06567af31773818191b82cad523b6a1379b6eab9a21"
+      "description": "Broad named or numbered model generations; membership does not imply supersession",
+      "bytes": 981,
+      "sha256": "c75799316a16fbaa8ae21fbbc2e70c4988abd02e47a923340bdc2a5a7253d298"
     },
     {
       "path": "data/model-lines.csv",
       "media_type": "text/csv",
       "description": "Recurring named model lines; membership does not imply technical ancestry",
-      "bytes": 247,
-      "sha256": "90644128e9a6b626a2e2b05b7927b9d69a8a8831b4c9de265b07c6b71054156c"
+      "bytes": 359,
+      "sha256": "1940a16c54ee9aac2dddbba64d77cb358952b0081f1cc57a0a611c1c8c1aa7f0"
     },
     {
       "path": "data/surfaces.csv",

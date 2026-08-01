@@ -156,9 +156,16 @@ models, under a scope decision taken in July 2026. The inclusion rule:
   endings; Sora 2's consumer app discontinuation is a channel ending
   carried in a caveat, not a lifecycle event
 
-Generation and model-line classifications are deliberately unassigned
-for modality models until the taxonomy question is taken up; they appear
-in the models_without_generation coverage list meanwhile.
+Modality models are classified like text models. OpenAI's image line is
+one series with two generation eras, DALL-E giving way to GPT-image, as
+Microsoft's own changelog frames it; its audio line likewise runs from
+the Whisper era to the GPT-branded audio era. MAI is a series of named
+model lines, Image, Voice and Transcribe, which is the Claude shape
+rather than the GPT shape. A generation is a named or numbered era;
+DALL-E and Whisper are eras without numbers. Deliberately unclassified
+models, currently Codex, the deep research model and Mythos Preview,
+appear in the models_without_classification coverage list with notes
+saying why.
 
 ## Recording an ending
 

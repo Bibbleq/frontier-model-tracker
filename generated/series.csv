@@ -9,3 +9,7 @@ mistral,Mistral,Mistral AI
 deepseek-r,DeepSeek R,DeepSeek
 deepseek-v,DeepSeek V,DeepSeek
 kimi,Kimi,Moonshot AI
+openai-image,OpenAI image generation,OpenAI
+openai-audio,OpenAI audio,OpenAI
+openai-video,OpenAI video,OpenAI
+mai,Microsoft MAI,Microsoft

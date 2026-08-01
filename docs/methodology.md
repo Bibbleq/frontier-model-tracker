@@ -18,7 +18,7 @@ with zero events is either a gap worth filling or an entry that exists only so
 a backlog item can name its target.
 
 Model grouping is descriptive, not a succession calculation. `generation`
-groups numbered releases within a vendor series, `model_line` follows recurring
+groups named or numbered eras within a vendor series, `model_line` follows recurring
 named branches, and `family` records models marketed together. Only an explicit
 `supersedes` link asserts replacement.
 
