@@ -102,7 +102,7 @@ surfaces:
     owner: Microsoft
     vendor_baseline: true
     counts_as: []
-    note: "Microsoft as a model vendor: the MAI first-party models. Its own Foundry catalogue is its vendor channel, so MAI launches are recorded here as vendor releases rather than as catalogue arrivals measured against some other baseline; first-party models have no adoption lag by construction."
+    note: "Microsoft as a model vendor: the MAI first-party models. Its own Foundry catalogue is its vendor channel, so MAI launches are recorded here as vendor releases rather than as catalogue arrivals measured against some other baseline. Vendor-to-Foundry lag does not exist for first-party models by construction, but lag from here to the consumer surfaces is real and measurable: MAI-Image-2e reached Copilot in PowerPoint twelve weeks after its Foundry preview."
   - id: m365-copilot
     display_name: "Microsoft 365 Copilot"
     owner: Microsoft

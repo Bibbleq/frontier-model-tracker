@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 255,
-    "backlog": 63,
-    "sources": 302,
-    "models": 86,
+    "events": 256,
+    "backlog": 65,
+    "sources": 304,
+    "models": 92,
     "surfaces": 24,
-    "confirmed": 215,
+    "confirmed": 216,
     "supported": 40
   },
   "kinds": {
     "announcement": 12,
-    "availability": 228,
+    "availability": 229,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 24,
+    "open": 26,
     "promoted": 33,
     "rejected": 4
   },
@@ -63,15 +63,27 @@
   },
   "coverage": {
     "models_without_events": [
-      "claude-mythos-preview"
+      "claude-mythos-preview",
+      "mai-code-1-flash",
+      "mai-cyber-1-flash",
+      "mai-image-2-5",
+      "mai-thinking-1",
+      "mai-transcribe-1-5",
+      "mai-voice-2"
     ],
     "models_without_generation": [
       "claude-mythos-preview",
       "codex",
+      "mai-code-1-flash",
+      "mai-cyber-1-flash",
       "mai-image-2",
+      "mai-image-2-5",
       "mai-image-2e",
+      "mai-thinking-1",
       "mai-transcribe-1",
+      "mai-transcribe-1-5",
       "mai-voice-1",
+      "mai-voice-2",
       "openai-deep-research"
     ],
     "models_without_classification": [
@@ -82,9 +94,9 @@
   },
   "lag_certainty": {
     "exact": 318,
-    "not_recorded": 524,
-    "range": 36,
-    "unknown_no_baseline": 68,
+    "not_recorded": 521,
+    "range": 39,
+    "unknown_no_baseline": 140,
     "unknown_open_research": 86
   }
 }

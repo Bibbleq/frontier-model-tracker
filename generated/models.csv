@@ -82,6 +82,12 @@ deepseek-v4-pro,DeepSeek V4 Pro,DeepSeek,deepseek-v,deepseek-v4,,,,,,2
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,kimi,kimi-k2,,,,,,3
 kimi-k3,Kimi K3,Moonshot AI,kimi,kimi-k3,,,FW Kimi K3,,,2
 mai-image-2,MAI-Image-2,Microsoft,mai,,mai-image,mai-image-2,,,,1
-mai-image-2e,MAI-Image-2e,Microsoft,mai,,mai-image,mai-image-2,MAI-Image-2-Efficient,,,1
+mai-image-2e,MAI-Image-2e,Microsoft,mai,,mai-image,mai-image-2,MAI-Image-2-Efficient,,,2
 mai-voice-1,MAI-Voice-1,Microsoft,mai,,mai-voice,,,,,1
 mai-transcribe-1,MAI-Transcribe-1,Microsoft,mai,,mai-transcribe,,,,,1
+mai-image-2-5,MAI-Image-2.5,Microsoft,mai,,mai-image,,,,,0
+mai-voice-2,MAI-Voice-2,Microsoft,mai,,mai-voice,,,,,0
+mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,mai,,mai-transcribe,,,,,0
+mai-thinking-1,MAI-Thinking-1,Microsoft,mai,,mai-thinking,,,,,0
+mai-code-1-flash,MAI-Code-1-Flash,Microsoft,mai,,mai-code,,,,,0
+mai-cyber-1-flash,MAI-Cyber-1-Flash,Microsoft,mai,,mai-cyber,,,,,0

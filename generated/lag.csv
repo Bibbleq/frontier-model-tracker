@@ -851,6 +851,30 @@ llama-2,Llama 2,Meta,github_copilot,any_exposure,meta-llama2-2023-07-18,2023-07-
 llama-2,Llama 2,Meta,github_copilot,selectable_or_default,meta-llama2-2023-07-18,2023-07-18,ga,,,,,,,,not_recorded
 llama-2,Llama 2,Meta,foundry,any_exposure,meta-llama2-2023-07-18,2023-07-18,ga,meta-llama2-azure-2023-07-18,2023-07-18,azure-ai-catalog,catalogue,ga,0,0,exact
 llama-2,Llama 2,Meta,foundry,selectable_or_default,meta-llama2-2023-07-18,2023-07-18,ga,,,,,,,,not_recorded
+mai-code-1-flash,MAI-Code-1-Flash,Microsoft,microsoft,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-code-1-flash,MAI-Code-1-Flash,Microsoft,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-code-1-flash,MAI-Code-1-Flash,Microsoft,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-code-1-flash,MAI-Code-1-Flash,Microsoft,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-code-1-flash,MAI-Code-1-Flash,Microsoft,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-code-1-flash,MAI-Code-1-Flash,Microsoft,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-code-1-flash,MAI-Code-1-Flash,Microsoft,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-code-1-flash,MAI-Code-1-Flash,Microsoft,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-code-1-flash,MAI-Code-1-Flash,Microsoft,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-code-1-flash,MAI-Code-1-Flash,Microsoft,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-code-1-flash,MAI-Code-1-Flash,Microsoft,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-code-1-flash,MAI-Code-1-Flash,Microsoft,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-cyber-1-flash,MAI-Cyber-1-Flash,Microsoft,microsoft,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-cyber-1-flash,MAI-Cyber-1-Flash,Microsoft,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-cyber-1-flash,MAI-Cyber-1-Flash,Microsoft,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-cyber-1-flash,MAI-Cyber-1-Flash,Microsoft,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-cyber-1-flash,MAI-Cyber-1-Flash,Microsoft,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-cyber-1-flash,MAI-Cyber-1-Flash,Microsoft,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-cyber-1-flash,MAI-Cyber-1-Flash,Microsoft,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-cyber-1-flash,MAI-Cyber-1-Flash,Microsoft,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-cyber-1-flash,MAI-Cyber-1-Flash,Microsoft,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-cyber-1-flash,MAI-Cyber-1-Flash,Microsoft,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-cyber-1-flash,MAI-Cyber-1-Flash,Microsoft,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-cyber-1-flash,MAI-Cyber-1-Flash,Microsoft,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 mai-image-2,MAI-Image-2,Microsoft,microsoft,any_exposure,microsoft-mai-image-2-2026-02-20,2026-02-20,public_preview,,,,,,,,not_recorded
 mai-image-2,MAI-Image-2,Microsoft,microsoft,selectable_or_default,microsoft-mai-image-2-2026-02-20,2026-02-20,public_preview,,,,,,,,not_recorded
 mai-image-2,MAI-Image-2,Microsoft,copilot,any_exposure,microsoft-mai-image-2-2026-02-20,2026-02-20,public_preview,,,,,,,,not_recorded
@@ -863,11 +887,23 @@ mai-image-2,MAI-Image-2,Microsoft,github_copilot,any_exposure,microsoft-mai-imag
 mai-image-2,MAI-Image-2,Microsoft,github_copilot,selectable_or_default,microsoft-mai-image-2-2026-02-20,2026-02-20,public_preview,,,,,,,,not_recorded
 mai-image-2,MAI-Image-2,Microsoft,foundry,any_exposure,microsoft-mai-image-2-2026-02-20,2026-02-20,public_preview,,,,,,,,not_recorded
 mai-image-2,MAI-Image-2,Microsoft,foundry,selectable_or_default,microsoft-mai-image-2-2026-02-20,2026-02-20,public_preview,,,,,,,,not_recorded
-mai-image-2e,MAI-Image-2e,Microsoft,microsoft,any_exposure,microsoft-mai-image-2e-2026-04-09,2026-04-09,public_preview,,,,,,,,not_recorded
+mai-image-2-5,MAI-Image-2.5,Microsoft,microsoft,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5,MAI-Image-2.5,Microsoft,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5,MAI-Image-2.5,Microsoft,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5,MAI-Image-2.5,Microsoft,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5,MAI-Image-2.5,Microsoft,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5,MAI-Image-2.5,Microsoft,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5,MAI-Image-2.5,Microsoft,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5,MAI-Image-2.5,Microsoft,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5,MAI-Image-2.5,Microsoft,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5,MAI-Image-2.5,Microsoft,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5,MAI-Image-2.5,Microsoft,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5,MAI-Image-2.5,Microsoft,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-image-2e,MAI-Image-2e,Microsoft,microsoft,any_exposure,microsoft-mai-image-2e-2026-04-09,2026-04-09,public_preview,m365-mai-image-2e-2026-07-01,2026-07-01,m365-copilot,specialist,ga,62,83,range
 mai-image-2e,MAI-Image-2e,Microsoft,microsoft,selectable_or_default,microsoft-mai-image-2e-2026-04-09,2026-04-09,public_preview,,,,,,,,not_recorded
-mai-image-2e,MAI-Image-2e,Microsoft,copilot,any_exposure,microsoft-mai-image-2e-2026-04-09,2026-04-09,public_preview,,,,,,,,not_recorded
+mai-image-2e,MAI-Image-2e,Microsoft,copilot,any_exposure,microsoft-mai-image-2e-2026-04-09,2026-04-09,public_preview,m365-mai-image-2e-2026-07-01,2026-07-01,m365-copilot,specialist,ga,62,83,range
 mai-image-2e,MAI-Image-2e,Microsoft,copilot,selectable_or_default,microsoft-mai-image-2e-2026-04-09,2026-04-09,public_preview,,,,,,,,not_recorded
-mai-image-2e,MAI-Image-2e,Microsoft,m365,any_exposure,microsoft-mai-image-2e-2026-04-09,2026-04-09,public_preview,,,,,,,,not_recorded
+mai-image-2e,MAI-Image-2e,Microsoft,m365,any_exposure,microsoft-mai-image-2e-2026-04-09,2026-04-09,public_preview,m365-mai-image-2e-2026-07-01,2026-07-01,m365-copilot,specialist,ga,62,83,range
 mai-image-2e,MAI-Image-2e,Microsoft,m365,selectable_or_default,microsoft-mai-image-2e-2026-04-09,2026-04-09,public_preview,,,,,,,,not_recorded
 mai-image-2e,MAI-Image-2e,Microsoft,studio,any_exposure,microsoft-mai-image-2e-2026-04-09,2026-04-09,public_preview,,,,,,,,not_recorded
 mai-image-2e,MAI-Image-2e,Microsoft,studio,selectable_or_default,microsoft-mai-image-2e-2026-04-09,2026-04-09,public_preview,,,,,,,,not_recorded
@@ -875,6 +911,18 @@ mai-image-2e,MAI-Image-2e,Microsoft,github_copilot,any_exposure,microsoft-mai-im
 mai-image-2e,MAI-Image-2e,Microsoft,github_copilot,selectable_or_default,microsoft-mai-image-2e-2026-04-09,2026-04-09,public_preview,,,,,,,,not_recorded
 mai-image-2e,MAI-Image-2e,Microsoft,foundry,any_exposure,microsoft-mai-image-2e-2026-04-09,2026-04-09,public_preview,,,,,,,,not_recorded
 mai-image-2e,MAI-Image-2e,Microsoft,foundry,selectable_or_default,microsoft-mai-image-2e-2026-04-09,2026-04-09,public_preview,,,,,,,,not_recorded
+mai-thinking-1,MAI-Thinking-1,Microsoft,microsoft,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-thinking-1,MAI-Thinking-1,Microsoft,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-thinking-1,MAI-Thinking-1,Microsoft,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-thinking-1,MAI-Thinking-1,Microsoft,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-thinking-1,MAI-Thinking-1,Microsoft,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-thinking-1,MAI-Thinking-1,Microsoft,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-thinking-1,MAI-Thinking-1,Microsoft,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-thinking-1,MAI-Thinking-1,Microsoft,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-thinking-1,MAI-Thinking-1,Microsoft,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-thinking-1,MAI-Thinking-1,Microsoft,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-thinking-1,MAI-Thinking-1,Microsoft,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-thinking-1,MAI-Thinking-1,Microsoft,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 mai-transcribe-1,MAI-Transcribe-1,Microsoft,microsoft,any_exposure,microsoft-mai-transcribe-1-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
 mai-transcribe-1,MAI-Transcribe-1,Microsoft,microsoft,selectable_or_default,microsoft-mai-transcribe-1-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
 mai-transcribe-1,MAI-Transcribe-1,Microsoft,copilot,any_exposure,microsoft-mai-transcribe-1-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
@@ -887,6 +935,18 @@ mai-transcribe-1,MAI-Transcribe-1,Microsoft,github_copilot,any_exposure,microsof
 mai-transcribe-1,MAI-Transcribe-1,Microsoft,github_copilot,selectable_or_default,microsoft-mai-transcribe-1-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
 mai-transcribe-1,MAI-Transcribe-1,Microsoft,foundry,any_exposure,microsoft-mai-transcribe-1-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
 mai-transcribe-1,MAI-Transcribe-1,Microsoft,foundry,selectable_or_default,microsoft-mai-transcribe-1-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
+mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,microsoft,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 mai-voice-1,MAI-Voice-1,Microsoft,microsoft,any_exposure,microsoft-mai-voice-1-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
 mai-voice-1,MAI-Voice-1,Microsoft,microsoft,selectable_or_default,microsoft-mai-voice-1-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
 mai-voice-1,MAI-Voice-1,Microsoft,copilot,any_exposure,microsoft-mai-voice-1-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
@@ -899,6 +959,18 @@ mai-voice-1,MAI-Voice-1,Microsoft,github_copilot,any_exposure,microsoft-mai-voic
 mai-voice-1,MAI-Voice-1,Microsoft,github_copilot,selectable_or_default,microsoft-mai-voice-1-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
 mai-voice-1,MAI-Voice-1,Microsoft,foundry,any_exposure,microsoft-mai-voice-1-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
 mai-voice-1,MAI-Voice-1,Microsoft,foundry,selectable_or_default,microsoft-mai-voice-1-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
+mai-voice-2,MAI-Voice-2,Microsoft,microsoft,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-voice-2,MAI-Voice-2,Microsoft,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-voice-2,MAI-Voice-2,Microsoft,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-voice-2,MAI-Voice-2,Microsoft,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-voice-2,MAI-Voice-2,Microsoft,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-voice-2,MAI-Voice-2,Microsoft,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-voice-2,MAI-Voice-2,Microsoft,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-voice-2,MAI-Voice-2,Microsoft,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-voice-2,MAI-Voice-2,Microsoft,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-voice-2,MAI-Voice-2,Microsoft,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-voice-2,MAI-Voice-2,Microsoft,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-voice-2,MAI-Voice-2,Microsoft,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 mistral-3,Mistral 3,Mistral AI,microsoft,any_exposure,mistral3-2025-12-02,2025-12-02,ga,,,,,,,,not_recorded
 mistral-3,Mistral 3,Mistral AI,microsoft,selectable_or_default,mistral3-2025-12-02,2025-12-02,ga,,,,,,,,not_recorded
 mistral-3,Mistral 3,Mistral AI,copilot,any_exposure,mistral3-2025-12-02,2025-12-02,ga,,,,,,,,not_recorded
