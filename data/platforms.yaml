@@ -97,6 +97,12 @@ surfaces:
     counts_as: []
 
   # ----------------------------------------------------------- microsoft 365
+  - id: microsoft-ai
+    display_name: "Microsoft AI"
+    owner: Microsoft
+    vendor_baseline: true
+    counts_as: []
+    note: "Microsoft as a model vendor: the MAI first-party models. Its own Foundry catalogue is its vendor channel, so MAI launches are recorded here as vendor releases rather than as catalogue arrivals measured against some other baseline; first-party models have no adoption lag by construction."
   - id: m365-copilot
     display_name: "Microsoft 365 Copilot"
     owner: Microsoft

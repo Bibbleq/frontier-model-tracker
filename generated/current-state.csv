@@ -60,6 +60,7 @@ codex,Codex,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,cata
 codex,Codex,OpenAI,openai-api,OpenAI API,,retired,not_applicable,true,openai-codex-retired-2023-03-23,2023-03-23,day,2026-07-28,,0
 dall-e-2,DALL-E 2,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,catalogue,false,azure-openai-ga-2023-01-17,2023-01-17,day,2026-07-28,,0
 dall-e-2,DALL-E 2,OpenAI,openai,OpenAI,,retired,not_applicable,true,openai-dall-e-2-retired-2026-05-12,2026-05-12,day,2026-07-28,,0
+dall-e-3,DALL-E 3,OpenAI,chatgpt,ChatGPT,,ga,not_applicable,false,chatgpt-dall-e-3-2023-10-19,2023-10-19,day,2026-07-28,,0
 deepseek-r1,DeepSeek-R1,DeepSeek,deepseek,DeepSeek,,ga,not_applicable,false,deepseek-r1-2025-01-20,2025-01-20,day,2026-07-28,,0
 deepseek-r1,DeepSeek-R1,DeepSeek,github-models,GitHub Models,microsoft,public_preview,catalogue,false,deepseek-r1-github-models-2025-01-29,2025-01-29,day,2026-07-28,,0
 deepseek-r1,DeepSeek-R1,DeepSeek,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,public_preview,catalogue,false,deepseek-r1-foundry-2025-01-29,2025-01-29,day,2026-07-28,,3
@@ -148,6 +149,13 @@ gpt-5-6-terra,GPT-5.6 Terra,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft
 gpt-5-6-terra,GPT-5.6 Terra,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-gpt5-6-2026-07-09,2026-07-09,day,2026-07-28,,0
 gpt-5-mini,GPT-5 mini,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-gpt5-mini-ga-2025-09-09,2025-09-09,day,2026-07-28,,0
 gpt-5-mini,GPT-5 mini,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt5-mini-2025-08-07,2025-08-07,day,2026-07-28,,1
+gpt-image-1,GPT-image-1,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,limited_preview,catalogue,false,azure-gpt-image-1-2025-04,2025-04,month,2026-07-28,,2
+gpt-image-1-5,GPT-image-1.5,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,limited_preview,catalogue,false,azure-gpt-image-1-5-2025-12,2025-12,month,2026-07-28,,2
+gpt-image-2,GPT-image-2,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-gpt-image-2-2026-04-21,2026-04-21,day,2026-07-28,,2
+gpt-live-transcribe,GPT-live-transcribe,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt-live-transcribe-2026-07-29,2026-07-29,day,2026-07-28,,2
+gpt-realtime,gpt-realtime,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,catalogue,false,azure-gpt-realtime-2025-08-28,2025-08-28,day,2026-07-28,,0
+gpt-realtime,gpt-realtime,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt-realtime-2025-08-28,2025-08-28,day,2026-07-28,,0
+gpt-transcribe,GPT-transcribe,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt-transcribe-2026-07-29,2026-07-29,day,2026-07-28,,2
 grok-3,Grok 3,xAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,retired,catalogue,true,foundry-grok3-retired-2026-05-01,2026-05-01,day,2026-07-28,,0
 grok-3,Grok 3,xAI,xai-grok,Grok,,public_preview,not_applicable,false,xai-grok3-2025-02-19,2025-02-19,day,2026-07-28,,0
 grok-3-mini,Grok 3 Mini,xAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,retired,catalogue,true,foundry-grok3-mini-retired-2026-05-01,2026-05-01,day,2026-07-28,,0
@@ -162,6 +170,10 @@ kimi-k3,Kimi K3,Moonshot AI,microsoft-foundry,Microsoft Foundry,microsoft | foun
 kimi-k3,Kimi K3,Moonshot AI,moonshot,Moonshot AI,,ga,not_applicable,false,moonshot-kimi-k3-2026-07-01,2026-07-16,day,2026-07-28,,0
 llama-2,Llama 2,Meta,meta,Meta,,ga,not_applicable,false,meta-llama2-2023-07-18,2023-07-18,day,2026-07-28,,0
 llama-2,Llama 2,Meta,azure-ai-catalog,Azure AI model catalogue,microsoft | foundry,ga,catalogue,false,meta-llama2-azure-2023-07-18,2023-07-18,day,2026-07-28,,0
+mai-image-2,MAI-Image-2,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-mai-image-2-2026-02-20,2026-02-20,day,2026-07-28,,0
+mai-image-2e,MAI-Image-2e,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-mai-image-2e-2026-04-09,2026-04-09,day,2026-07-28,,0
+mai-transcribe-1,MAI-Transcribe-1,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-mai-transcribe-1-2026-04,2026-04,month,2026-07-28,,0
+mai-voice-1,MAI-Voice-1,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-mai-voice-1-2026-04,2026-04,month,2026-07-28,,0
 mistral-3,Mistral 3,Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral3-2025-12-02,2025-12-02,day,2026-07-28,,0
 mistral-large-3,Mistral Large 3,Mistral AI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-mistral-large3-2025-12-02,2025-12-02,day,2026-07-28,,0
 mistral-large-3,Mistral Large 3,Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral3-2025-12-02,2025-12-02,day,2026-07-28,,0
@@ -191,3 +203,5 @@ o4-mini,o4-mini,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,
 o4-mini,o4-mini,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-o4-mini-2025-04-16,2025-04-16,day,2026-07-28,,0
 openai-deep-research,OpenAI deep research model,OpenAI,chatgpt,ChatGPT,,ga,not_applicable,false,openai-deep-research-2025-02-02,2025-02-02,day,2026-07-28,,0
 openai-deep-research,OpenAI deep research model,OpenAI,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,specialist,false,m365-researcher-ga-2025-06-02,2025-06-02,day,2026-07-28,,0
+sora-2,Sora 2,OpenAI,openai,OpenAI,,limited_preview,not_applicable,false,openai-sora-2-2025-09-30,2025-09-30,day,2026-07-28,,1
+whisper,Whisper,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-whisper-2022-09-21,2022-09-21,day,2026-07-28,,1
