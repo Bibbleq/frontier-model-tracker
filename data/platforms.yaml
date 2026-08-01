@@ -18,6 +18,23 @@
 # `vendor_baseline: true` marks a vendor's own surface. The earliest
 # availability event on a vendor baseline surface is the lag origin for that
 # model. Vendor surfaces never appear in `counts_as`.
+#
+# Some vendors have more than one baseline surface: OpenAI has an umbrella
+# surface plus product and API surfaces, Google a product and an API surface,
+# while Anthropic's single surface covers everything because its releases land
+# on every channel at once. The assignment rule:
+#
+#   - the umbrella surface (`openai`) takes vendor-level facts where the
+#     channels moved together or the source does not distinguish them
+#   - the product or API surface takes facts true of that channel
+#     specifically: an API-only launch, a product default switch
+#   - an ending lives on the surface that holds the model's arrival,
+#     whatever channel published the shutdown notice; the build warns
+#     (`vendor_ending_split`) when it does not
+#
+# Lag is unaffected either way, since the baseline takes the earliest arrival
+# on any of a vendor's surfaces. The rule exists for current-state coherence
+# and lifecycle validation, which are per-surface.
 
 version: 1
 

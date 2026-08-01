@@ -201,3 +201,59 @@ class PublishedArtifactTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class VendorEndingSurfaceTests(unittest.TestCase):
+    """An ending on a different vendor surface than the arrival splits the
+    lifecycle across surfaces the ordering check treats as unrelated. DALL-E 2
+    showed a live beta on one surface and a retirement on another."""
+
+    surfaces = {
+        "umbrella": {"vendor_baseline": True, "owner": "V"},
+        "api": {"vendor_baseline": True, "owner": "V"},
+        "solo": {"vendor_baseline": True, "owner": "W"},
+        "partner": {"counts_as": ["microsoft"]},
+    }
+
+    @staticmethod
+    def _event(eid, surface, lifecycle, date):
+        return {
+            "id": eid, "kind": "availability", "surface_id": surface,
+            "model_ids": ["m"], "lifecycle": lifecycle,
+            "date": {"start": date, "precision": "day"},
+        }
+
+    def _warnings_for(self, events):
+        before = len(build.warnings)
+        build.check_vendor_ending_surface(events, self.surfaces)
+        return [w for w in build.warnings[before:] if w["code"] == "vendor_ending_split"]
+
+    def test_ending_away_from_the_arrival_warns(self) -> None:
+        raised = self._warnings_for([
+            self._event("arrive", "umbrella", "ga", "2022-07-01"),
+            self._event("gone", "api", "retired", "2026-05-12"),
+        ])
+        self.assertEqual([w["subject"] for w in raised], ["gone"])
+
+    def test_ending_beside_the_arrival_is_quiet(self) -> None:
+        self.assertEqual(self._warnings_for([
+            self._event("arrive", "umbrella", "ga", "2022-07-01"),
+            self._event("gone", "umbrella", "retired", "2026-05-12"),
+        ]), [])
+
+    def test_single_surface_vendors_are_exempt(self) -> None:
+        self.assertEqual(self._warnings_for([
+            self._event("arrive", "solo", "ga", "2022-07-01"),
+            self._event("gone", "solo", "retired", "2026-05-12"),
+        ]), [])
+
+    def test_the_live_dataset_is_clean(self) -> None:
+        """If this fails, an ending has strayed from its model's arrival
+        surface; move the ending, do not silence the warning."""
+        import json
+        from pathlib import Path
+        generated = Path(__file__).resolve().parents[1] / "generated"
+        status = json.loads((generated / "status.json").read_text(encoding="utf-8"))
+        self.assertEqual(
+            [w for w in status["warnings"] if w["code"] == "vendor_ending_split"], [],
+        )

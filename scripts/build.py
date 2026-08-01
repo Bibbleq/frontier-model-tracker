@@ -402,6 +402,7 @@ def validate_semantics(data: dict, models: dict, platforms: dict) -> None:
     check_lifecycle_ordering(events, groups)
     check_suspension_pairs(events)
     check_vendor_baseline(events, known_models, known_surfaces)
+    check_vendor_ending_surface(events, known_surfaces)
     check_relations(events)
 
 
@@ -584,6 +585,55 @@ def check_vendor_baseline(events: list[dict], models: dict, surfaces: dict) -> N
     }
     for model_id in sorted(missing):
         warn("no_vendor_baseline", model_id, "no vendor release event, so lag cannot be derived")
+
+
+def check_vendor_ending_surface(events: list[dict], surfaces: dict) -> None:
+    """An ending lives on the surface that holds the model's arrival.
+
+    Where a vendor runs more than one baseline surface — OpenAI's product,
+    API and umbrella surfaces, Google's product and API — channel-specific
+    arrivals may legitimately sit on different surfaces. But recording a
+    model's ending on a different surface than its arrival splits the
+    lifecycle across surfaces the ordering check treats as unrelated, and
+    current-state then shows the model both alive and dead. DALL-E 2 did
+    exactly this: a 2022 beta on the umbrella surface and a 2026 retirement
+    on the API surface, leaving a non-terminal row for a dead model.
+    """
+    owner_of = {
+        surface_id: surface.get("owner")
+        for surface_id, surface in surfaces.items()
+        if surface.get("vendor_baseline")
+    }
+    owner_surface_counts = collections.Counter(owner_of.values())
+
+    arrival_surface: dict[tuple[str, str], tuple[str, str]] = {}
+    for event in _availability(events):
+        owner = owner_of.get(event["surface_id"])
+        if not owner or event["lifecycle"] not in ARRIVAL_LIFECYCLES:
+            continue
+        for model_id in event["model_ids"]:
+            key = (model_id, owner)
+            candidate = (event["date"]["start"], event["surface_id"])
+            if key not in arrival_surface or candidate < arrival_surface[key]:
+                arrival_surface[key] = candidate
+
+    ending_lifecycles = set(LIFECYCLE_ORDER) - ARRIVAL_LIFECYCLES
+    for event in _availability(events):
+        owner = owner_of.get(event["surface_id"])
+        if not owner or owner_surface_counts[owner] < 2:
+            continue
+        if event["lifecycle"] not in ending_lifecycles:
+            continue
+        for model_id in event["model_ids"]:
+            arrived = arrival_surface.get((model_id, owner))
+            if arrived and arrived[1] != event["surface_id"]:
+                warn(
+                    "vendor_ending_split",
+                    event["id"],
+                    f"{model_id} ends on {event['surface_id']} but its "
+                    f"{owner} arrival lives on {arrived[1]}; record the ending "
+                    "beside the arrival",
+                )
 
 
 def day_precision_is_attested(event: dict) -> bool:
