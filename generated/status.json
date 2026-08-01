@@ -1,26 +1,31 @@
 {
   "totals": {
-    "events": 233,
-    "backlog": 59,
-    "sources": 278,
-    "models": 68,
+    "events": 241,
+    "backlog": 62,
+    "sources": 287,
+    "models": 73,
     "surfaces": 23,
-    "confirmed": 201,
-    "supported": 32
+    "confirmed": 207,
+    "supported": 34
   },
   "kinds": {
     "announcement": 12,
-    "availability": 206,
+    "availability": 214,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 22,
-    "promoted": 32,
-    "rejected": 3
+    "open": 23,
+    "promoted": 33,
+    "rejected": 4
   },
   "warnings": [
+    {
+      "code": "no_vendor_baseline",
+      "subject": "deepseek-v3-0324",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
     {
       "code": "pre_release_access",
       "subject": "github-copilot-preview-codex-2021-06-29",
@@ -28,11 +33,15 @@
     }
   ],
   "warning_counts": {
+    "no_vendor_baseline": 1,
     "pre_release_access": 1
   },
   "coverage": {
-    "models_without_events": [],
+    "models_without_events": [
+      "claude-mythos-preview"
+    ],
     "models_without_generation": [
+      "claude-mythos-preview",
       "codex",
       "dall-e-2",
       "openai-deep-research"
@@ -40,9 +49,10 @@
     "surfaces_without_events": []
   },
   "lag_certainty": {
-    "exact": 310,
-    "not_recorded": 412,
-    "range": 32,
-    "unknown_open_research": 62
+    "exact": 318,
+    "not_recorded": 442,
+    "range": 34,
+    "unknown_no_baseline": 18,
+    "unknown_open_research": 64
   }
 }

@@ -1466,6 +1466,30 @@ events:
         quote: "February 2, 2025 Release Introducing deep research"
         supports: ["date"]
         note: "The announcement page is undated; the archived release PDF carries the date in its own header."
+  - id: "google-gemini2-0-flash-2025-02-05"
+    kind: "availability"
+    date:
+      start: "2025-02-05"
+      precision: "day"
+    surface_id: "google-gemini-api"
+    model_ids: ["gemini-2-0-flash"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Gemini 2.0 Flash reached general availability through the Gemini API. Registered because GitHub Copilot carried the model in its picker until October 2025; its removal was recorded before its existence was."
+    caveat: "Wikipedia reports a 30 January 2025 availability in the Gemini app; only the 5 February API general availability is first-party sourced, so the app date is not recorded."
+    sources:
+      - publisher: "Google Developers Blog"
+        title: "Gemini 2.0 is now available to everyone"
+        url: "https://developers.googleblog.com/en/gemini-2-family-expands/"
+        primary: true
+        retrieved_at: "2026-07-31"
+        published_at: "2025-02-05"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20260704081416/https://developers.googleblog.com/en/gemini-2-family-expands/"
+        quote: "Gemini 2.0 Flash is now generally available, with higher rate limits, stronger performance, and simplified pricing."
+        supports: ["date", "model", "lifecycle"]
   - id: "xai-grok3-2025-02-19"
     kind: "availability"
     date:
@@ -2707,6 +2731,30 @@ events:
         source_type: "changelog"
         quote: "We will deprecate the following models across all GitHub Copilot experiences."
         supports: [date, model, lifecycle]
+  - id: "github-gemini2-0-flash-retired-2025-10-23"
+    kind: "availability"
+    date:
+      start: "2025-10-23"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["gemini-2-0-flash"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "Gemini 2.0 Flash was removed from the GitHub Copilot model pickers in the October 2025 deprecation wave, with Gemini 2.5 Pro named as its replacement. Its removal proves a picker presence whose arrival was never changelogged and remains unrecorded."
+    caveat: "A retirement without a recorded arrival, the DALL-E 2 shape: an ending revealing a missing beginning. The arrival question is tracked separately."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of select Copilot models from Claude, OpenAI, and Gemini"
+        url: "https://github.blog/changelog/2025-09-23-upcoming-deprecation-of-select-copilot-models-from-claude-openai-and-gemini/"
+        primary: true
+        retrieved_at: "2026-07-31"
+        published_at: "2025-09-23"
+        source_type: "changelog"
+        quote: "We will deprecate the following models across all GitHub Copilot experiences...on October 23, 2025"
+        supports: ["date", "model", "lifecycle"]
+        note: "The deprecation table maps Gemini 2.0 Flash to Gemini 2.5 Pro as its replacement."
   - id: "github-o1-mini-retired-2025-10-23"
     kind: "availability"
     date:
@@ -4034,6 +4082,116 @@ events:
         published_at: "2026-04-23"
         source_type: "news"
         supports: ["date"]
+  - id: "deepseek-v4-flash-2026-04-24"
+    kind: "availability"
+    date:
+      start: "2026-04-24"
+      precision: "day"
+    surface_id: "deepseek"
+    model_ids: ["deepseek-v4-flash"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "DeepSeek released the V4 preview as open-sourced models live on chat.deepseek.com and the API, with deepseek-v4-flash as the smaller variant. Found by the Wikipedia sweep: the entire V4 family was absent from this dataset despite Microsoft carrying both variants and naming them as replacements for the retiring R1 and V3-0324."
+    caveat: "DeepSeek's own page calls this a preview despite full open-source release and API availability, so preview is recorded rather than inferred general availability. The deepseek-v4-flash endpoint was updated to a 0731 build at the end of July, which is not separately recorded."
+    sources:
+      - publisher: "DeepSeek"
+        title: "DeepSeek V4 Preview Release"
+        url: "https://api-docs.deepseek.com/news/news260424/"
+        primary: true
+        retrieved_at: "2026-07-31"
+        published_at: "2026-04-24"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20260721135200/https://api-docs.deepseek.com/news/news260424/"
+        quote: "DeepSeek-V4 Preview is officially live & open-sourced!"
+        supports: ["date", "model", "lifecycle"]
+  - id: "deepseek-v4-pro-2026-04-24"
+    kind: "availability"
+    date:
+      start: "2026-04-24"
+      precision: "day"
+    surface_id: "deepseek"
+    model_ids: ["deepseek-v4-pro"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "The larger V4 variant, released in the same preview announcement with its own API model name."
+    caveat: "Recorded separately from deepseek-v4-flash because Microsoft carries and retires the two variants independently."
+    sources:
+      - publisher: "DeepSeek"
+        title: "DeepSeek V4 Preview Release"
+        url: "https://api-docs.deepseek.com/news/news260424/"
+        primary: true
+        retrieved_at: "2026-07-31"
+        published_at: "2026-04-24"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20260721135200/https://api-docs.deepseek.com/news/news260424/"
+        quote: "Keep base_url, just update model to deepseek-v4-pro or deepseek-v4-flash."
+        supports: ["date", "model", "lifecycle"]
+  - id: "foundry-deepseek-v4-flash-2026-04-24"
+    kind: "availability"
+    date:
+      start: "2026-04-24"
+      end: "2026-05-31"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["deepseek-v4-flash"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      lifecycle: "supported"
+    evidence_note: "DeepSeek V4 variants entered the Microsoft Foundry catalogue between the vendor preview and the May retrospective. The retirement schedule carries both at version 2026-04-23 with general availability and 2028 retirement dates, named as replacements for DeepSeek-R1 and V3-0324."
+    caveat: "Bounded: the floor is the 24 April vendor release, which Foundry cannot precede, and the ceiling is the May retrospective's coverage. The retrospective sentence carries no stage label; general availability is taken from the retirement schedule."
+    relations:
+      - type: "announced_by"
+        target: "deepseek-v4-flash-2026-04-24"
+    sources:
+      - publisher: "Microsoft"
+        title: "What's new in Microsoft Foundry, May 2026"
+        url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-may-2026/"
+        primary: true
+        retrieved_at: "2026-07-31"
+        published_at: "2026-05-31"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260601155642/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-may-2026/"
+        quote: "DeepSeek V4 variants are now available in Microsoft Foundry."
+        supports: ["date", "model", "exposure"]
+  - id: "foundry-deepseek-v4-pro-2026-04-24"
+    kind: "availability"
+    date:
+      start: "2026-04-24"
+      end: "2026-05-31"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["deepseek-v4-pro"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      lifecycle: "supported"
+    evidence_note: "The Pro variant's catalogue arrival, on the same bounded window and sources as V4-Flash. The May retrospective also records it arriving through Fireworks AI for high-performance open-model inference, alongside the direct catalogue listing."
+    caveat: "Bounded and stage-inferred on the same basis as foundry-deepseek-v4-flash-2026-04-24. The Fireworks route is noted rather than separately recorded, since the schedule's direct listing is what anchors the catalogue claim."
+    relations:
+      - type: "announced_by"
+        target: "deepseek-v4-pro-2026-04-24"
+    sources:
+      - publisher: "Microsoft"
+        title: "What's new in Microsoft Foundry, May 2026"
+        url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-may-2026/"
+        primary: true
+        retrieved_at: "2026-07-31"
+        published_at: "2026-05-31"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260601155642/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-may-2026/"
+        quote: "DeepSeek V4 variants are now available in Microsoft Foundry."
+        supports: ["date", "model", "exposure"]
   - id: "foundry-gpt5-5-2026-04-24"
     kind: "availability"
     date:
@@ -4639,6 +4797,32 @@ events:
         archived_url: "https://web.archive.org/web/20260704025348/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
         supports: ["date"]
         note: "Lists Kimi-K2.7-Code at version 2026-06-12, which for this vendor tracks the release date."
+  - id: "m365-claude-chat-2026-06-16"
+    kind: "availability"
+    date:
+      start: "2026-06-16"
+      precision: "day"
+    surface_id: "m365-copilot"
+    experience_ids: ["m365-copilot-chat"]
+    model_ids: []
+    applies_to:
+      vendor: Anthropic
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "Anthropic's Claude reached the core Microsoft 365 Copilot Chat model picker across Android, Windows, iOS, Mac and Web. Microsoft's release note names no model version, only Claude, so this is recorded at vendor level rather than pinned to a model."
+    caveat: "Which Claude model this exposed is unknowable from the source: on 16 June the current lineup had Fable 5 suspended and Opus 4.8 newest. Earlier version-specific arrivals on this surface were narrower experiences: Opus 4.7 reached Cowork and Excel in April through the Frontier programme. This event is the general Chat picker."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Microsoft 365 Copilot release notes"
+        url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
+        primary: true
+        retrieved_at: "2026-07-31"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260728065751/https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
+        quote: "Anthropic's Claude is now available in Copilot Chat, giving users more flexibility in how they work."
+        supports: ["date", "lifecycle", "exposure"]
+        note: "The release note is dated 16 June 2026 in the page's own entry listing."
   - id: "openai-gpt5-6-preview-2026-06-26"
     kind: "availability"
     date:
@@ -4874,42 +5058,6 @@ events:
         retrieved_at: "2026-07-26"
         published_at: "2026-07-01"
         source_type: "changelog"
-  - id: "moonshot-kimi-k3-2026-07-01"
-    kind: "availability"
-    date:
-      start: "2026-07-01"
-      end: "2026-07-16"
-      precision: "day"
-    surface_id: "moonshot"
-    model_ids: ["kimi-k3"]
-    model_claim: "specific"
-    lifecycle: "ga"
-    exposure: "not_applicable"
-    confidence: "supported"
-    confidence_detail:
-      date: "supported"
-    evidence_note: "Moonshot AI launched Kimi K3 through its platform API and Playground, as a paid flagship unlocked by account top-up, with the open weights to follow by 27 July. Microsoft Foundry took it via Fireworks AI on 28 July."
-    caveat: "Bounded by observation at both ends, since Moonshot published no dated announcement, repeating the Kimi K2.7 Code pattern. The floor is trade coverage written in July describing K3 as confirmed but not yet released; the ceiling is the quickstart page for the operational API entering the Wayback index on 16 July. The floor source is itself undated and placed in July by its own content, which is why the date is marked supported. The API launch preceded the weights release, so this event records commercial availability, not open weights."
-    sources:
-      - publisher: "Moonshot AI"
-        title: "Kimi K3 quickstart"
-        url: "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart"
-        primary: true
-        retrieved_at: "2026-07-31"
-        source_type: "documentation"
-        archived_url: "https://web.archive.org/web/20260716152818/https://platform.kimi.ai/docs/guide/kimi-k3-quickstart"
-        quote: "Kimi K3 is a flagship model: it is unlocked after a successful top-up (minimum $1)."
-        supports: ["model", "lifecycle"]
-        note: "The page also states the full model weights will be released by July 27, 2026. The capture is a client-rendered application shell whose raw HTML names Kimi K3 but does not carry the quoted sentence; it is attached because its existence on 16 July is itself the date evidence, and replay may render the full text."
-      - publisher: "AIbase"
-        title: "China's Large Model Scene Faces a Major Breakthrough: Kimi K3 to Be Released This Month"
-        url: "https://news.aibase.com/news/29318"
-        primary: false
-        retrieved_at: "2026-07-31"
-        source_type: "news"
-        quote: "the new generation large model Kimi K3 from Moonshot AI, a unicorn in the field of artificial intelligence, has also been confirmed to be released within this month."
-        supports: ["date"]
-        note: "Undated, but its own content places it in July 2026. Describes K3 as confirmed but not yet released, which is what makes 1 July the window's floor: the quote attests the month, not a day, and the first of the month is the floor of that month rather than a claimed date."
   - id: "m365-sonnet5-2026-07-02"
     kind: "availability"
     date:
@@ -4950,6 +5098,50 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "changelog"
+  - id: "xai-grok4-5-2026-07-09"
+    kind: "availability"
+    date:
+      start: "2026-07-08"
+      end: "2026-07-16"
+      precision: "day"
+    surface_id: "xai-grok"
+    model_ids: ["grok-4-5"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+    evidence_note: "xAI released Grok 4.5. The window opens on the public availability promised for 9 July and closes on the first date xAI itself confirms the model shipping, 16 July, when it reached Grok Build, Cursor and the console."
+    caveat: "Bounded: launch-day press dated 8 July reports the public release, initially through Grok Build, while xAI's own launch page is dated 16 July and says available today, so the vendor confirms only the window's end. An earlier revision of this event floored the window at 9 July; the dated TechCrunch URL corrects the floor by one day."
+    sources:
+      - publisher: "xAI"
+        title: "Grok 4.5"
+        url: "https://x.ai/news/grok-4-5"
+        primary: true
+        retrieved_at: "2026-07-30"
+        published_at: "2026-07-16"
+        source_type: "announcement"
+        quote: "Grok 4.5 is available today in Grok Build, in Cursor on all plans, and from the SpaceXAI console."
+        supports: ["model", "lifecycle"]
+      - publisher: "TechCrunch"
+        title: "SpaceXAI releases Grok 4.5, which Elon describes as an 'Opus-class model'"
+        url: "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/"
+        primary: false
+        retrieved_at: "2026-07-30"
+        published_at: "2026-07-08"
+        source_type: "news"
+        quote: "Based on strong positive feedback from customers in our beta test program, @SpaceXAI will make Grok 4.5 available to the public tomorrow."
+        supports: ["date"]
+        note: "Quotes a forward-looking statement, which is why the window starts the following day rather than on the date of the article."
+      - publisher: "TechCrunch"
+        title: "SpaceXAI releases Grok 4.5, which Elon describes as an 'Opus-class model'"
+        url: "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/"
+        primary: false
+        retrieved_at: "2026-07-31"
+        published_at: "2026-07-08"
+        source_type: "news"
+        supports: ["date"]
   - id: "foundry-gpt5-6-2026-07-09"
     kind: "availability"
     date:
@@ -5065,42 +5257,65 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
-  - id: "xai-grok4-5-2026-07-09"
+  - id: "foundry-deepseek-v3-0324-retired-2026-07-13"
     kind: "availability"
     date:
-      start: "2026-07-09"
-      end: "2026-07-16"
+      start: "2026-07-13"
       precision: "day"
-    surface_id: "xai-grok"
-    model_ids: ["grok-4-5"]
+    surface_id: "microsoft-foundry"
+    model_ids: ["deepseek-v3-0324"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "catalogue"
+    confidence: "confirmed"
+    evidence_note: "DeepSeek-V3-0324 retired from Microsoft Foundry with DeepSeek-V4-Flash named as its replacement, in the same wave that retired R1-0528 and V3.1. This is the model Microsoft actually carried from the V3 line; plain DeepSeek-V3 has no recorded Microsoft presence."
+    caveat: "A retirement without a recorded arrival, and the model's vendor release is also unrecorded; both are tracked as an open item. Recorded because a terminal state is the only lifecycle a consumer may present as current, and this model's Foundry story would otherwise be invisible."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-07-31"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260704025348/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        quote: "DeepSeek-V3-0324 | 1 | Retired | 2026-07-13 | DeepSeek-V4-Flash"
+        supports: ["date", "model", "lifecycle"]
+        note: "The capture predates the retirement date passing and shows it as scheduled; the live page's 23 July revision shows the row as Retired. Foundry sets retirement dates in advance, so the date is the commitment and the passage of time is the rest."
+  - id: "moonshot-kimi-k3-2026-07-01"
+    kind: "availability"
+    date:
+      start: "2026-07-16"
+      precision: "day"
+    surface_id: "moonshot"
+    model_ids: ["kimi-k3"]
     model_claim: "specific"
     lifecycle: "ga"
     exposure: "not_applicable"
     confidence: "supported"
     confidence_detail:
       date: "supported"
-    evidence_note: "xAI released Grok 4.5. The window opens on the public availability promised for 9 July and closes on the first date xAI itself confirms the model shipping, 16 July, when it reached Grok Build, Cursor and the console."
-    caveat: "Bounded because the two ends rest on different kinds of evidence. The 8 July statement is forward-looking - it says the model will be public 'tomorrow' - and a promise of availability is not availability. The 16 July page is first-party and past-tense but covers developer surfaces only, so it may postdate the consumer launch. See the xai-grok4-5-public-availability-2026-07 backlog item."
+    evidence_note: "Moonshot AI launched Kimi K3 through its platform API and Playground, as a paid flagship unlocked by account top-up, with the open weights to follow by 27 July. Microsoft Foundry took it via Fireworks AI on 28 July."
+    caveat: "Originally bounded 1 to 16 July from trade coverage and the quickstart page's first Wayback capture. Press now dates the launch to 16 July itself, on the website and app, which is also the day the quickstart entered the Wayback index, so the window collapses to that day; the id keeps its original date and is retained as a stable identifier. The open weights followed on 27 July, matching the page's commitment, and are not separately recorded."
     sources:
-      - publisher: "xAI"
-        title: "Grok 4.5"
-        url: "https://x.ai/news/grok-4-5"
+      - publisher: "Moonshot AI"
+        title: "Kimi K3 quickstart"
+        url: "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart"
         primary: true
-        retrieved_at: "2026-07-30"
-        published_at: "2026-07-16"
-        source_type: "announcement"
-        quote: "Grok 4.5 is available today in Grok Build, in Cursor on all plans, and from the SpaceXAI console."
+        retrieved_at: "2026-07-31"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260716152818/https://platform.kimi.ai/docs/guide/kimi-k3-quickstart"
+        quote: "Kimi K3 is a flagship model: it is unlocked after a successful top-up (minimum $1)."
         supports: ["model", "lifecycle"]
-      - publisher: "TechCrunch"
-        title: "SpaceXAI releases Grok 4.5, which Elon describes as an 'Opus-class model'"
-        url: "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/"
+        note: "The page also states the full model weights will be released by July 27, 2026. The capture is a client-rendered application shell whose raw HTML names Kimi K3 but does not carry the quoted sentence; it is attached because its existence on 16 July is itself the date evidence, and replay may render the full text."
+      - publisher: "AIbase"
+        title: "China's Large Model Scene Faces a Major Breakthrough: Kimi K3 to Be Released This Month"
+        url: "https://news.aibase.com/news/29318"
         primary: false
-        retrieved_at: "2026-07-30"
-        published_at: "2026-07-08"
+        retrieved_at: "2026-07-31"
         source_type: "news"
-        quote: "Based on strong positive feedback from customers in our beta test program, @SpaceXAI will make Grok 4.5 available to the public tomorrow."
+        quote: "the new generation large model Kimi K3 from Moonshot AI, a unicorn in the field of artificial intelligence, has also been confirmed to be released within this month."
         supports: ["date"]
-        note: "Quotes a forward-looking statement, which is why the window starts the following day rather than on the date of the article."
+        note: "Undated, but its own content places it in July 2026. Describes K3 as confirmed but not yet released, which is what makes 1 July the window's floor: the quote attests the month, not a day, and the first of the month is the floor of that month rather than a claimed date."
   - id: "github-gemini3-6-flash-2026-07-21"
     kind: "availability"
     date:
@@ -5412,6 +5627,20 @@ validation_backlog:
     resolution: "DeepSeek's own news page at api-docs.deepseek.com/news/news250120/ is titled 'DeepSeek-R1 Release', dated 20 January 2025, and states the website and API were live. A previous pass recorded that this URL was the API quickstart rather than a news post; that was wrong. The path resolves only with its trailing slash, and without one the site serves the quickstart instead."
     resolved_on: "2026-07-30"
     promoted_to: "deepseek-r1-2025-01-20"
+  - id: "claude-mythos-preview-dates"
+    state: "open"
+    working_claim: "Claude Mythos Preview, the gated research preview preceding Mythos 5, launched around 7 April 2026 and sits on the Foundry retirement schedule as a preview retiring 2 April 2027."
+    reason: "The model is registered because Microsoft carries it, but both dates rest on tertiary or schedule evidence: Wikipedia gives 7 April 2026 for the limited launch and the schedule row proves current Foundry presence without dating the arrival."
+    target: "Pin Anthropic's own Mythos Preview announcement for the vendor date, and treat the schedule row as presence only. The Mythos 5 events of 9 June 2026 already record the successor."
+    model_ids: ["claude-mythos-preview"]
+    surface_ids: ["anthropic-claude", "microsoft-foundry"]
+  - id: "deepseek-v3-0324-dates"
+    state: "open"
+    working_claim: "DeepSeek-V3-0324 was released by DeepSeek around 24 March 2025 and entered Microsoft Foundry at an unrecorded date before its 13 July 2026 retirement."
+    reason: "The Foundry retirement is recorded from the schedule; the vendor release and the Foundry arrival are not. DeepSeek's news index has no entry for the 0324 revision, unlike R1, V3.2 and V4, so the release may only be documented by the Hugging Face model card."
+    target: "Pin the Hugging Face deepseek-ai/DeepSeek-V3-0324 card's first commit date for the vendor release, and check the 2025 Foundry retrospectives for the catalogue arrival."
+    model_ids: ["deepseek-v3-0324"]
+    surface_ids: ["deepseek", "microsoft-foundry"]
   - id: "deepseek-v3-2-vendor-release-2025-12"
     state: "promoted"
     working_claim: "DeepSeek V3.2 and V3.2-Speciale were released by DeepSeek shortly before Microsoft Foundry took both on 15 December 2025."
@@ -5423,10 +5652,12 @@ validation_backlog:
     resolved_on: "2026-07-30"
     promoted_to: "deepseek-v3-2-2025-12-01"
   - id: "deepseek-v3-first-microsoft-availability-2024"
-    state: "open"
+    state: "rejected"
     working_claim: "A DeepSeek-V3 variant entered a Microsoft developer catalogue, but not necessarily in 2024 and not necessarily plain V3."
     reason: "The vendor release is now recorded as deepseek-v3-2024-12-26, so only the Microsoft side is missing. Review indicates the model Microsoft actually carries is DeepSeek-V3-0324, a dated March 2025 revision rather than the December 2024 release, and that the Foundry retirement schedule shows it retiring on 13 July 2026. Neither fact dates a first availability, and both suggest the item's own 2024 framing is wrong."
     target: "Establish whether Microsoft ever carried plain DeepSeek-V3 or only V3-0324. If only V3-0324, that is a distinct model needing its own registry entry and its own vendor baseline, and this item should be rejected rather than answered. Do not date first availability from the retirement schedule, which reports current status only."
+    resolution: "The premise was wrong twice over: the model Microsoft carried was DeepSeek-V3-0324, the dated March 2025 revision, and nothing arrived in 2024. V3-0324 is now a registry model with its Foundry retirement of 13 July 2026 recorded from the schedule, DeepSeek-V4-Flash named as replacement. Its arrival and vendor release continue as deepseek-v3-0324-dates."
+    resolved_on: "2026-07-31"
     model_ids: ["deepseek-v3"]
     surface_ids: ["microsoft-foundry", "github-models"]
   - id: "deepseek-v3-vendor-2024-12-26"
@@ -5507,7 +5738,7 @@ validation_backlog:
     state: "open"
     working_claim: "The gpt-5.3-chat model retired from Microsoft Foundry on 29 June 2026 is the model this registry calls GPT-5.3 Instant."
     reason: "The Foundry schedule lists gpt-5.3-chat as retired on 29 June 2026. The registry carries GPT-5.3 Instant with 'GPT-5.3 Chat' as an alias because Copilot Studio uses that name, but the timeline holds no Foundry event for the model at all, so recording a Foundry retirement would be both an identity inference and an ending without a beginning."
-    target: "Confirm that Foundry's gpt-5.3-chat and the Copilot Studio GPT-5.3 Chat are the same model, and find when it first appeared in Foundry. The February and March 2026 retrospectives are both silent on gpt-5.3-chat, and February predates its 2026-03-03 version string while March's post discusses only GPT-5.4, so the first appearance is documented nowhere but the schedule's version string. A bounded arrival from the version date would need the identity question settled first."
+    target: "Confirm the identity, then the arrival. Checked this pass: Wikipedia documents only GPT-5.3-Codex and Codex-Spark from the 5.3 era, with no chat or instant variant, so no tertiary confirmation exists either way. The February and March 2026 Foundry retrospectives are silent on gpt-5.3-chat and its first appearance is documented nowhere but the schedule version string 2026-03-03, which matches GPT-5.3 Instant's vendor release date exactly; suggestive, not sufficient."
     model_ids: ["gpt-5-3-instant"]
     surface_ids: ["microsoft-foundry"]
   - id: "foundry-o3-o4-mini-2025-04-16"
@@ -5576,11 +5807,18 @@ validation_backlog:
         published_at: "2025-04-16"
         source_type: "changelog"
         quote: "Both o3 and o4-mini will also be available through GitHub Models, enabling developers to experiment, build, and deploy AI-powered features faster than ever."
+  - id: "gemini-2-0-flash-github-arrival"
+    state: "open"
+    working_claim: "Gemini 2.0 Flash entered the GitHub Copilot model picker between its 5 February 2025 vendor general availability and the 23 September 2025 deprecation notice that removed it."
+    reason: "Its retirement is recorded from the dated deprecation changelog, which proves picker presence, but no arrival changelog has been found; the January and February-adjacent month archives were not searched beyond January during this pass."
+    target: "Check the February and March 2025 GitHub changelog month archives for a Gemini 2.0 Flash picker entry; failing that, record a bounded arrival between the vendor GA and the deprecation notice."
+    model_ids: ["gemini-2-0-flash"]
+    surface_ids: ["github-copilot"]
   - id: "github-copilot-chat-gpt3-5-start-2023"
     state: "open"
     working_claim: "GitHub Copilot Chat initially used GPT-3.5."
     reason: "Later GitHub history supports the lineage, but the exact first-production date is not pinned. A new lead: GitHub's 27 March 2025 changelog states that the code-completion model being replaced was GPT-3.5 Turbo based. That is first-party confirmation that GPT-3.5 Turbo powered a GitHub Copilot experience, though completion rather than chat, and it now has its own registry id following the gpt-3-5 split."
-    target: "Find the original Copilot Chat launch or changelog naming GPT-3.5. Note that the March 2025 lead concerns code completion, so it cannot date Chat. It does suggest a second question worth opening: when GPT-3.5 Turbo stopped powering GitHub code completion, which the same changelog dates to 27 March 2025 and which would be a recordable ending if the arrival were ever established."
+    target: "Find the original Copilot Chat launch or changelog naming GPT-3.5. Checked this pass: the GitHub Copilot Wikipedia article confirms the November 2023 GPT-4 upgrade but says nothing about the launch model, so the tertiary route is exhausted. Remaining: the July 2023 Copilot Chat beta announcement and contemporaneous Microsoft Build 2023 coverage. The March 2025 lead about code completion being GPT-3.5 Turbo based still cannot date Chat."
     model_ids: ["gpt-3-5"]
     surface_ids: ["github-copilot"]
   - id: "github-copilot-chat-gpt4-transition-2023-11"
@@ -5597,7 +5835,7 @@ validation_backlog:
     state: "open"
     working_claim: "GitHub announces Copilot model deprecations in dated changelog entries, most of which the timeline now records."
     reason: "First pass complete on 28 July 2026. Both known changelogs were read and eight retirements recorded, all with dates that have already passed. Three models named in them are outside the registry and were not added, because the timeline holds no arrival for them either: GPT-4.5, Gemini 2.0 Flash and Claude Sonnet 3.7 Thinking. GitHub publishes these as individual posts rather than a maintained schedule, so there is no single page to re-read."
-    target: "Watch the GitHub changelog for further deprecation posts. Decide separately whether GPT-4.5, Gemini 2.0 Flash and Claude Sonnet 3.7 Thinking belong in the registry, which requires finding their arrivals first."
+    target: "Watch the GitHub changelog for further deprecation posts. Passes so far: the September 2025 wave was re-read in full this pass and cross-checks exactly against the six recorded 23 October retirements, plus Gemini 2.0 Flash whose removal is now recorded following its registry addition; Sonnet 3.7 Thinking remains outside the registry by choice. The 20 May 2026 update removed all Gemini models, GPT-5.2 Codex and GPT-5.4 nano from Copilot on the web only, which is scoped narrower than the surface and is logged here rather than recorded as retirements."
     model_ids: []
     surface_ids: ["github-copilot", "github-models"]
     sources:
@@ -5648,7 +5886,7 @@ validation_backlog:
     state: "open"
     working_claim: "Gemini 1.5 Pro became selectable in GitHub Copilot after the 29 October 2024 multi-model announcement."
     reason: "The announcement says Gemini was coming; the exact first picker date remains unresolved. The 29 October 2024 GitHub Universe keynote is recorded as an announcement rather than availability, because treating it as availability placed a GA before a later public preview on the same surface. That leaves Gemini 1.5 Pro with no GitHub Copilot availability date at all."
-    target: "Find the dated GitHub changelog for first selectable Gemini 1.5 Pro availability. The November and December 2024 changelog month archives have now both been read in full and contain no Gemini entry, while December does carry the o1 arrivals, so the picker rollout was simply never changelogged in 2024. Check the January 2025 archive and the VS Code release notes next. The arrival remains bounded below by 29 October 2024."
+    target: "The changelog wall is now fully mapped: November 2024 through January 2025 archives contain no Gemini entry, the September 2025 deprecation wave names Gemini 2.0 Flash but not 1.5 Pro, and the May 2026 removal covers all Gemini models from Copilot on web collectively. So 1.5 Pro was neither changelogged in nor individually changelogged out, and by September 2025 it had likely already been superseded by 2.0 Flash without record. Remaining sources: VS Code release notes from November-December 2024. If those are also silent, record a bounded arrival from the 29 October announcement to the first third-party sighting, or reject as unrecordable."
     model_ids: ["gemini-1-5-pro"]
     surface_ids: ["github-copilot"]
   - id: "github-gpt4-1-first-availability-2025"
@@ -5787,10 +6025,13 @@ validation_backlog:
     model_ids: ["o1"]
     surface_ids: ["m365-copilot"]
   - id: "m365-opus4-7-core-chat-picker-2026-05"
-    state: "open"
+    state: "promoted"
     working_claim: "Opus 4.7 later reached the broader Microsoft 365 Copilot Chat picker around May 2026."
     reason: "16 April only proves Cowork Frontier plus Excel rollout. Review proposed correcting this item's date to 16 April 2026 on the strength of Anthropic's launch announcement. That correction is rejected: m365-opus4-7-2026-04-16 already carries that date and is deliberately scoped to the Cowork and Excel experiences, with a caveat forbidding it from being read as universal Copilot Chat availability. Applying the correction would collapse a Frontier-programme rollout into general availability, which is the specific error that caveat exists to prevent."
     target: "Find a dated Microsoft source for Opus 4.7 in the general Microsoft 365 Copilot Chat model picker, outside the Frontier programme. A vendor launch announcement cannot answer this; only Microsoft can say when its own picker changed."
+    resolution: "Microsoft's own dated record is the 16 June 2026 release note: Anthropic's Claude is now available in Copilot Chat, across all clients. It names no model version, so the event is recorded at vendor level with applies_to rather than pinned to Opus 4.7, and the May version-specific claim, which rested on third-party blogs, is not recorded. Whichever Claude model the picker exposed, this is the dated arrival of Claude in core chat."
+    resolved_on: "2026-07-31"
+    promoted_to: "m365-claude-chat-2026-06-16"
     model_ids: ["claude-opus-4-7"]
     surface_ids: ["m365-copilot"]
   - id: "m365-researcher-first-availability-2025"
@@ -5813,7 +6054,7 @@ validation_backlog:
   - id: "meta-cohere-flux-mai-foundry-history"
     state: "open"
     working_claim: "Meta Llama 3.x, Cohere, FLUX and Microsoft MAI have catalogue milestones worth tracking."
-    reason: "These broader catalogue candidates remain outside the current sourced pack. The same scope question now covers audio models: Microsoft announced OpenAI's GPT-transcribe and GPT-live-transcribe as generally available in Foundry on 29 July 2026, alongside GPT-realtime-2.1 and GPT-realtime-mini-2.1, at techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-gpt-transcribe-and-gpt-live-transcribe-in-microsoft/ba-p/4541740. The registry carries no audio model of any kind, so recording that post would open a category, not add an event: Whisper, the gpt-4o transcribe and TTS families and the realtime line would all be implied. Held here until the scope decision is taken deliberately."
+    reason: "These broader catalogue candidates remain outside the current sourced pack. The same scope question now covers audio models: Microsoft announced OpenAI's GPT-transcribe and GPT-live-transcribe as generally available in Foundry on 29 July 2026, alongside GPT-realtime-2.1 and GPT-realtime-mini-2.1, at techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-gpt-transcribe-and-gpt-live-transcribe-in-microsoft/ba-p/4541740. The registry carries no audio model of any kind, so recording that post would open a category, not add an event: Whisper, the gpt-4o transcribe and TTS families and the realtime line would all be implied. Held here until the scope decision is taken deliberately. The July 2026 sweep adds further parked candidates, all Microsoft-carried or vendor-adjacent but unrecorded: Grok 4.1, 4.20 and 4.3, the last confirmed in the Foundry catalogue by the May 2026 retrospective; Kimi K2.5 and K2.6, the latter on the schedule at version 2026-04-20 and arriving via Fireworks in May; the wider Gemini line, 2.0 Pro, 2.5 Flash, 3 Pro, 3.1 Pro, 3.5 Flash and Flash-Lite, and 3 Deep Think; Claude Instant 1.2, Claude 3.5 Haiku and the announced Claude Science; the GPT-5.x Codex line including GPT-5.3-Codex of 5 February 2026; and from the May retrospective, Qwen 3.5 Vision on-device and the Nemotron ASR streaming model. Recording any of these is a scope decision parked for review."
     target: "Add only material frontier/significant events with dated primary Foundry sources."
     model_ids: []
     surface_ids: ["microsoft-foundry"]
@@ -5967,6 +6208,6 @@ validation_backlog:
     state: "open"
     working_claim: "Grok 4.5 became publicly available on 9 July 2026, a week before xAI's own page confirms it shipping."
     reason: "The vendor baseline is recorded as a 9 to 16 July window because the two ends rest on different evidence. On 8 July, xAI stated the model would go public 'tomorrow', which is a promise rather than a record. The first past-tense first-party confirmation is 16 July and covers Grok Build, Cursor and the console, so it may well postdate a consumer launch on grok.com, X, iOS and Android."
-    target: "Pin a first-party xAI post, changelog entry or dated console note showing Grok 4.5 live for consumers. Checked this pass: xAI's own launch page is dated 16 July and says available today in Grok Build, Cursor and the console, which confirms the window's end but nothing earlier. The 9 July start still rests on press coverage alone, so the bounded event stands."
+    target: "Resolved to the extent the sources allow: the dated TechCrunch URL of 8 July 2026 reports the public release through Grok Build, correcting the window's floor from 9 to 8 July on the event, and Wikipedia concurs. xAI's own page remains dated 16 July, so a single first-party day still does not exist; the bounded event stands at 8 to 16 July. Close this item if xAI ever publishes a dated launch note; otherwise the window is as tight as the evidence gets."
     model_ids: ["grok-4-5"]
     surface_ids: ["xai-grok"]

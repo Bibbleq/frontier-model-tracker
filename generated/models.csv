@@ -51,7 +51,9 @@ claude-sonnet-5,Claude Sonnet 5,Anthropic,claude,claude-5,claude-sonnet,,,,,5
 claude-opus-5,Claude Opus 5,Anthropic,claude,claude-5,claude-opus,,,,,5
 claude-fable-5,Claude Fable 5,Anthropic,claude,claude-5,claude-fable,,,,,9
 claude-mythos-5,Claude Mythos 5,Anthropic,claude,claude-5,claude-mythos,,,,,3
+claude-mythos-preview,Claude Mythos Preview,Anthropic,claude,,claude-mythos,,,,,0
 gemini-1-5-pro,Gemini 1.5 Pro,Google,gemini,gemini-1,,,,,,4
+gemini-2-0-flash,Gemini 2.0 Flash,Google,gemini,gemini-2,,,,,,2
 gemini-2-5-pro,Gemini 2.5 Pro,Google,gemini,gemini-2,,,,,,2
 gemini-3-6-flash,Gemini 3.6 Flash,Google,gemini,gemini-3,,,,,,2
 grok-3,Grok 3,xAI,grok,grok-3,,,,,,3
@@ -63,7 +65,10 @@ mistral-3,Mistral 3,Mistral AI,mistral,mistral-3,,,,,,1
 mistral-large-3,Mistral Large 3,Mistral AI,mistral,mistral-3,,,,,,2
 deepseek-r1,DeepSeek-R1,DeepSeek,deepseek-r,deepseek-r1,,,,,,3
 deepseek-v3,DeepSeek-V3,DeepSeek,deepseek-v,deepseek-v3,,,,,,1
+deepseek-v3-0324,DeepSeek-V3-0324,DeepSeek,deepseek-v,deepseek-v3,,,,,,1
 deepseek-v3-2,DeepSeek V3.2,DeepSeek,deepseek-v,deepseek-v3,,,,,,2
 deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,deepseek-v,deepseek-v3,,,,,,2
+deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,deepseek-v,deepseek-v4,,,,,,2
+deepseek-v4-pro,DeepSeek V4 Pro,DeepSeek,deepseek-v,deepseek-v4,,,,,,2
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,kimi,kimi-k2,,,,,,3
 kimi-k3,Kimi K3,Moonshot AI,kimi,kimi-k3,,,FW Kimi K3,,,2
