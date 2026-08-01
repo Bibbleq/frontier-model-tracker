@@ -76,6 +76,16 @@ class ManifestTests(unittest.TestCase):
             all(not row["model_line"] or row["model_line"] in model_lines for row in models)
         )
 
+    def test_every_model_row_carries_a_resolved_modality(self) -> None:
+        """The text default is resolved at build time so consumers never
+        apply it themselves; every row must carry a valid value."""
+        with (GENERATED / "models.csv").open(encoding="utf-8", newline="") as handle:
+            rows = list(csv.DictReader(handle))
+        allowed = {"text", "image", "audio", "voice", "video"}
+        for row in rows:
+            with self.subTest(row["id"]):
+                self.assertIn(row["modality"], allowed)
+
     def test_manifest_has_no_build_timestamp(self) -> None:
         """A timestamp would make the build irreproducible, which CI enforces
         with `git diff --exit-code`. Only data dates belong here."""

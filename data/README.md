@@ -156,7 +156,10 @@ models, under a scope decision taken in July 2026. The inclusion rule:
   endings; Sora 2's consumer app discontinuation is a channel ending
   carried in a caveat, not a lifecycle event
 
-Modality models are classified like text models. OpenAI's image line is
+Every model carries a `modality`: text, image, audio, voice or video,
+with text as the default when the field is absent in the registry; the
+generated models.csv always emits the resolved value. Modality models
+are classified like text models. OpenAI's image line is
 one series with two generation eras, DALL-E giving way to GPT-image, as
 Microsoft's own changelog frames it; its audio line likewise runs from
 the Whisper era to the GPT-branded audio era. MAI is a series of named

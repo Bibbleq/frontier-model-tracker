@@ -17,6 +17,10 @@
 # is part of the GPT-5 generation, for example. `model_lines` are recurring
 # named branches within a series, such as Claude Sonnet or Claude Opus. Neither
 # field implies technical ancestry or supersession.
+#
+# `modality` says what a model produces or processes: text, image, audio,
+# voice or video. Absent means text, and the generated models.csv resolves
+# the default so consumers never apply it themselves.
 
 version: 1
 
@@ -257,6 +261,7 @@ models:
   - id: dall-e-2
     display_name: "DALL-E 2"
     vendor: OpenAI
+    modality: image
     generation: dall-e
   - id: gpt-4
     display_name: "GPT-4"
@@ -322,41 +327,50 @@ models:
   - id: dall-e-3
     display_name: "DALL-E 3"
     vendor: OpenAI
+    modality: image
     generation: dall-e
   - id: gpt-image-1
     display_name: "GPT-image-1"
     vendor: OpenAI
+    modality: image
     generation: gpt-image
   - id: gpt-image-1-5
     display_name: "GPT-image-1.5"
     vendor: OpenAI
+    modality: image
     generation: gpt-image
   - id: gpt-image-2
     display_name: "GPT-image-2"
     vendor: OpenAI
+    modality: image
     generation: gpt-image
   - id: whisper
     display_name: "Whisper"
     vendor: OpenAI
+    modality: audio
     generation: whisper
   - id: sora-2
     display_name: "Sora 2"
     vendor: OpenAI
+    modality: video
     generation: sora
     note: "The consumer Sora product was discontinued on 26 April 2026 per OpenAI's own launch page; the model continued serving through the API and Microsoft Foundry."
   - id: gpt-realtime
     display_name: "gpt-realtime"
     vendor: OpenAI
+    modality: voice
     generation: gpt-audio
   - id: gpt-transcribe
     display_name: "GPT-transcribe"
     vendor: OpenAI
+    modality: audio
     generation: gpt-audio
     family: gpt-transcribe
     note: "Announced by Microsoft as an OpenAI ASR model in Foundry; no OpenAI-side release under this name has been found, so the vendor identity of the naming is tracked in the backlog."
   - id: gpt-live-transcribe
     display_name: "GPT-live-transcribe"
     vendor: OpenAI
+    modality: audio
     generation: gpt-audio
     family: gpt-transcribe
     note: "Streaming counterpart to GPT-transcribe, same naming caveat."
@@ -635,35 +649,42 @@ models:
   - id: mai-image-2
     display_name: "MAI-Image-2"
     vendor: Microsoft
+    modality: image
     model_line: mai-image
     family: mai-image-2
   - id: mai-image-2e
     display_name: "MAI-Image-2e"
     vendor: Microsoft
+    modality: image
     model_line: mai-image
     family: mai-image-2
     aliases: ["MAI-Image-2-Efficient"]
   - id: mai-voice-1
     display_name: "MAI-Voice-1"
     vendor: Microsoft
+    modality: voice
     model_line: mai-voice
   - id: mai-transcribe-1
     display_name: "MAI-Transcribe-1"
     vendor: Microsoft
+    modality: audio
     model_line: mai-transcribe
 
   - id: mai-image-2-5
     display_name: "MAI-Image-2.5"
     vendor: Microsoft
+    modality: image
     model_line: mai-image
     note: "Named by the Foundry retirement schedule as MAI-Image-2's replacement; a 2.5-Flash sibling is named as MAI-Image-2e's replacement but is not yet listed on microsoft.ai and is not registered."
   - id: mai-voice-2
     display_name: "MAI-Voice-2"
     vendor: Microsoft
+    modality: voice
     model_line: mai-voice
   - id: mai-transcribe-1-5
     display_name: "MAI-Transcribe-1.5"
     vendor: Microsoft
+    modality: audio
     model_line: mai-transcribe
   - id: mai-thinking-1
     display_name: "MAI-Thinking-1"
