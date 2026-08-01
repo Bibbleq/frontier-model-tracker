@@ -33,7 +33,7 @@ PUBLISHED_FILES = {
     "data/validation-backlog.csv": "Open research questions with states and targets, not confirmed history",
     "data/lag.csv": "Derived adoption lag; read certainty before any number",
     "data/current-state.csv": "Last known lifecycle per model and surface; read state_is_terminal before presenting it as current",
-    "data/models.csv": "Model registry with generation, model-line, family and event-count references",
+    "data/models.csv": "Model registry with modality, generation, model-line, family and event-count references",
     "data/series.csv": "Vendor model series referenced by generations and model lines",
     "data/generations.csv": "Broad named or numbered model generations; membership does not imply supersession",
     "data/model-lines.csv": "Recurring named model lines; membership does not imply technical ancestry",
@@ -912,7 +912,7 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
         entry["id"]: entry for entry in models.get("generations", [])
     }
     model_fields = [
-        "id", "display_name", "vendor", "series", "generation", "model_line",
+        "id", "display_name", "vendor", "modality", "series", "generation", "model_line",
         "family", "aliases", "supersedes", "superseded_by", "event_count",
     ]
     model_use = collections.Counter(m for event in data["events"] for m in event["model_ids"])
@@ -924,6 +924,7 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
                 "id": entry["id"],
                 "display_name": entry["display_name"],
                 "vendor": entry["vendor"],
+                "modality": entry.get("modality", "text"),
                 "series": (
                     generation_by_id[entry["generation"]]["series"]
                     if entry.get("generation")

@@ -41,6 +41,10 @@
         "family": {"$ref": "#/$defs/identifier"},
         "generation": {"$ref": "#/$defs/identifier"},
         "model_line": {"$ref": "#/$defs/identifier"},
+        "modality": {
+          "type": "string",
+          "enum": ["text", "image", "audio", "voice", "video"]
+        },
         "aliases": {
           "type": "array",
           "uniqueItems": true,

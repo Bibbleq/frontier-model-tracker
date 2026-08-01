@@ -67,6 +67,9 @@ Model classifications have deliberately different meanings:
   is a member of the DALL-E generation within OpenAI's image series.
 - `model_line` is a recurring named branch such as Claude Sonnet or Claude
   Opus.
+- `modality` says what a model produces or processes: `text`, `image`,
+  `audio`, `voice` or `video`. `models.csv` always carries a resolved value,
+  so a consumer never applies the text default itself.
 - `family` remains the narrower set of models announced or marketed together.
 - `supersedes` and `superseded_by` are used only where a replacement
   relationship is evidenced.
