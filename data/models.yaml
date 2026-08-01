@@ -392,6 +392,12 @@ models:
     vendor: Anthropic
     generation: claude-4
     model_line: claude-sonnet
+  - id: claude-opus-4-6
+    display_name: "Claude Opus 4.6"
+    vendor: Anthropic
+    generation: claude-4
+    model_line: claude-opus
+    note: "Absent from this registry until the July 2026 retrospective sweep found Microsoft carrying it: the only vendor release the dataset had missed entirely. GitHub Copilot appears to have skipped it, going from Opus 4.5 to 4.8."
   - id: claude-opus-4-7
     display_name: "Claude Opus 4.7"
     vendor: Anthropic

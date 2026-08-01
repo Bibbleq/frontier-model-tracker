@@ -1,24 +1,24 @@
 {
   "totals": {
-    "events": 228,
+    "events": 233,
     "backlog": 59,
-    "sources": 269,
-    "models": 67,
+    "sources": 278,
+    "models": 68,
     "surfaces": 23,
     "confirmed": 201,
-    "supported": 27
+    "supported": 32
   },
   "kinds": {
     "announcement": 12,
-    "availability": 201,
+    "availability": 206,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 25,
-    "promoted": 31,
-    "rejected": 1
+    "open": 23,
+    "promoted": 32,
+    "rejected": 2
   },
   "warnings": [
     {
@@ -40,9 +40,9 @@
     "surfaces_without_events": []
   },
   "lag_certainty": {
-    "exact": 313,
-    "not_recorded": 400,
-    "range": 24,
-    "unknown_open_research": 67
+    "exact": 310,
+    "not_recorded": 412,
+    "range": 32,
+    "unknown_open_research": 62
   }
 }

@@ -25,6 +25,8 @@ claude-opus-4-1,Claude Opus 4.1,Anthropic,copilot-studio,Microsoft Copilot Studi
 claude-opus-4-5,Claude Opus 4.5,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-opus4-5-2025-11-24,2025-11-24,day,2026-07-28,,0
 claude-opus-4-5,Claude Opus 4.5,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-opus4-5-ga-2025-12-18,2025-12-18,day,2026-07-28,,0
 claude-opus-4-5,Claude Opus 4.5,Anthropic,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,public_preview,selectable,false,studio-opus4-5-2025-11-24,2025-11-24,day,2026-07-28,,0
+claude-opus-4-6,Claude Opus 4.6,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-opus4-6-2026-02-05,2026-02-05,day,2026-07-28,,0
+claude-opus-4-6,Claude Opus 4.6,Anthropic,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-opus4-6-2026-02-05,2026-02-05,day,2026-07-28,,0
 claude-opus-4-7,Claude Opus 4.7,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-opus4-7-2026-04-16,2026-04-16,day,2026-07-28,,0
 claude-opus-4-7,Claude Opus 4.7,Anthropic,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,selectable,false,m365-opus4-7-2026-04-16,2026-04-16,day,2026-07-28,,1
 claude-opus-4-7,Claude Opus 4.7,Anthropic,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-opus4-7-2026-04-16,2026-04-16,day,2026-07-28,,0
@@ -47,6 +49,7 @@ claude-sonnet-4-5,Claude Sonnet 4.5,Anthropic,microsoft-foundry,Microsoft Foundr
 claude-sonnet-4-5,Claude Sonnet 4.5,Anthropic,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,ga,selectable,false,studio-sonnet4-5-ga-2026-03,2026-03,month,2026-07-28,,0
 claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-sonnet4-6-2026-02-17,2026-02-17,day,2026-07-28,,0
 claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-sonnet4-6-2026-02-17,2026-02-17,day,2026-07-28,,0
+claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-sonnet4-6-2026-02-17,2026-02-17,day,2026-07-28,,0
 claude-sonnet-5,Claude Sonnet 5,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-sonnet5-2026-06-30,2026-06-30,day,2026-07-28,,0
 claude-sonnet-5,Claude Sonnet 5,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-sonnet5-ga-2026-06-30,2026-06-30,day,2026-07-28,,0
 claude-sonnet-5,Claude Sonnet 5,Anthropic,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,selectable,false,m365-sonnet5-2026-07-02,2026-07-02,day,2026-07-28,,0
@@ -169,6 +172,7 @@ o1-preview,o1-preview,OpenAI,azure-openai,Azure OpenAI Service,microsoft | found
 o1-preview,o1-preview,OpenAI,openai,OpenAI,,retired,not_applicable,true,openai-o1-preview-retired-2025-07-28,2025-07-28,day,2026-07-28,o1,0
 o3,o3,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-o3-retired-2025-10-23,2025-10-23,day,2026-07-28,,0
 o3,o3,OpenAI,github-models,GitHub Models,microsoft,public_preview,catalogue,false,github-models-o3-2025-04-16,2025-04-16,day,2026-07-28,,0
+o3,o3,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,catalogue,false,azure-o3-2025-04-16,2025-04-16,day,2026-07-28,,0
 o3,o3,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-o3-2025-04-16,2025-04-16,day,2026-07-28,,1
 o3-mini,o3-mini,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-o3-mini-retired-2025-10-23,2025-10-23,day,2026-07-28,,0
 o3-mini,o3-mini,OpenAI,github-models,GitHub Models,microsoft,public_preview,catalogue,false,github-models-o3-mini-2025-01-31,2025-01-31,day,2026-07-28,,0
@@ -177,6 +181,7 @@ o3-mini,o3-mini,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,
 o3-mini,o3-mini,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-o3-mini-2025-01-31,2025-01-31,day,2026-07-28,,0
 o4-mini,o4-mini,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-o4-mini-retired-2025-10-23,2025-10-23,day,2026-07-28,,0
 o4-mini,o4-mini,OpenAI,github-models,GitHub Models,microsoft,public_preview,catalogue,false,github-models-o4-mini-2025-04-16,2025-04-16,day,2026-07-28,,0
+o4-mini,o4-mini,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,catalogue,false,azure-o4-mini-2025-04-16,2025-04-16,day,2026-07-28,,3
 o4-mini,o4-mini,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-o4-mini-2025-04-16,2025-04-16,day,2026-07-28,,0
 openai-deep-research,OpenAI deep research model,OpenAI,chatgpt,ChatGPT,,ga,not_applicable,false,openai-deep-research-2025-02-02,2025-02-02,day,2026-07-28,,0
 openai-deep-research,OpenAI deep research model,OpenAI,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,specialist,false,m365-researcher-ga-2025-06-02,2025-06-02,day,2026-07-28,,0
