@@ -3738,33 +3738,6 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "changelog"
-  - id: "microsoft-mai-image-2-2026-02-20"
-    kind: "availability"
-    date:
-      start: "2026-02-20"
-      end: "2026-04-30"
-      precision: "day"
-    surface_id: "microsoft-ai"
-    model_ids: ["mai-image-2"]
-    model_claim: "specific"
-    lifecycle: "public_preview"
-    exposure: "not_applicable"
-    confidence: "supported"
-    confidence_detail:
-      date: "supported"
-    evidence_note: "Microsoft's first-party text-to-image model entered preview, announced in the April 2026 Foundry retrospective. Recorded on the Microsoft AI vendor surface: for first-party models the Foundry catalogue is the vendor channel."
-    caveat: "Bounded: the floor is the retirement schedule's version string 2026-02-20 and the ceiling is the April retrospective's coverage. The version-string floor is the model's build date, not necessarily its listing day."
-    sources:
-      - publisher: "Microsoft"
-        title: "What's new in Microsoft Foundry, April 2026"
-        url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/"
-        primary: true
-        retrieved_at: "2026-07-31"
-        published_at: "2026-05-12"
-        source_type: "release_notes"
-        archived_url: "https://web.archive.org/web/20260517214300/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/"
-        quote: "MAI-Image-2 is a text-to-image generation model that uses a diffusion-based approach to create high-quality, visually rich images from natural language prompts."
-        supports: ["date", "model", "lifecycle"]
   - id: "studio-gpt5-ga-2026-03"
     kind: "availability"
     date:
@@ -3945,6 +3918,54 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "microsoft-mai-image-2-2026-04"
+    kind: "availability"
+    date:
+      start: "2026-04"
+      precision: "month"
+    surface_id: "microsoft-ai"
+    model_ids: ["mai-image-2"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Microsoft's first-party text-to-image model entered preview, announced in the April 2026 Foundry retrospective. Recorded on the Microsoft AI vendor surface: for first-party models the Foundry catalogue is the vendor channel."
+    caveat: "Month precision from the April retrospective's coverage, matching the other MAI previews it announced. The Foundry retirement schedule carries the version string 2026-02-20, but that is the model's build date, not availability evidence, so it does not move the event earlier."
+    sources:
+      - publisher: "Microsoft"
+        title: "What's new in Microsoft Foundry, April 2026"
+        url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/"
+        primary: true
+        retrieved_at: "2026-07-31"
+        published_at: "2026-05-12"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260517214300/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/"
+        quote: "MAI-Image-2 is a text-to-image generation model that uses a diffusion-based approach to create high-quality, visually rich images from natural language prompts."
+        supports: ["date", "model", "lifecycle"]
+  - id: "microsoft-mai-image-2e-2026-04"
+    kind: "availability"
+    date:
+      start: "2026-04"
+      precision: "month"
+    surface_id: "microsoft-ai"
+    model_ids: ["mai-image-2e"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "The efficiency variant of MAI-Image-2, delivering the same quality up to 22 percent faster, entered preview alongside the April retrospective's coverage."
+    caveat: "Month precision on the same basis as microsoft-mai-image-2-2026-04. The retirement schedule's version string 2026-04-09 is a build date, not availability evidence."
+    sources:
+      - publisher: "Microsoft"
+        title: "What's new in Microsoft Foundry, April 2026"
+        url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/"
+        primary: true
+        retrieved_at: "2026-07-31"
+        published_at: "2026-05-12"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260517214300/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/"
+        quote: "MAI-Image-2e delivers the same image quality up to 22% faster and four times more efficiently, making it the better choice for high-volume, fast-turnaround scenarios."
+        supports: ["date", "model", "lifecycle"]
   - id: "microsoft-mai-transcribe-1-2026-04"
     kind: "availability"
     date:
@@ -3957,7 +3978,7 @@ events:
     exposure: "not_applicable"
     confidence: "confirmed"
     evidence_note: "Microsoft's first-party speech recognition model entered preview through the LLM Speech API, from the Microsoft AI Superintelligence team."
-    caveat: "Month precision from the April retrospective's coverage; unlike the MAI image models it carries no schedule version string to bound the floor."
+    caveat: "Month precision from the April retrospective's coverage."
     sources:
       - publisher: "Microsoft"
         title: "What's new in Microsoft Foundry, April 2026"
@@ -4029,33 +4050,6 @@ events:
         source_type: "documentation"
         archived_url: "https://web.archive.org/web/20260621221619/https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-anthropic-apps"
         supports: ["policy"]
-  - id: "microsoft-mai-image-2e-2026-04-09"
-    kind: "availability"
-    date:
-      start: "2026-04-09"
-      end: "2026-04-30"
-      precision: "day"
-    surface_id: "microsoft-ai"
-    model_ids: ["mai-image-2e"]
-    model_claim: "specific"
-    lifecycle: "public_preview"
-    exposure: "not_applicable"
-    confidence: "supported"
-    confidence_detail:
-      date: "supported"
-    evidence_note: "The efficiency variant of MAI-Image-2, delivering the same quality up to 22 percent faster, entered preview alongside the April retrospective's coverage."
-    caveat: "Bounded on the same basis as microsoft-mai-image-2-2026-02-20, with the schedule's version string 2026-04-09 as the floor."
-    sources:
-      - publisher: "Microsoft"
-        title: "What's new in Microsoft Foundry, April 2026"
-        url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/"
-        primary: true
-        retrieved_at: "2026-07-31"
-        published_at: "2026-05-12"
-        source_type: "release_notes"
-        archived_url: "https://web.archive.org/web/20260517214300/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/"
-        quote: "MAI-Image-2e delivers the same image quality up to 22% faster and four times more efficiently, making it the better choice for high-volume, fast-turnaround scenarios."
-        supports: ["date", "model", "lifecycle"]
   - id: "anthropic-opus4-7-2026-04-16"
     kind: "availability"
     date:
@@ -5372,7 +5366,7 @@ events:
     lifecycle: "ga"
     exposure: "specialist"
     confidence: "confirmed"
-    evidence_note: "MAI-Image-2e became the image generation model in Copilot in PowerPoint across Windows, Mac and Web: the first MAI model recorded on a consumer Copilot surface, twelve weeks after its Foundry preview."
+    evidence_note: "MAI-Image-2e became the image generation model in Copilot in PowerPoint across Windows, Mac and Web: the first MAI model recorded on a consumer Copilot surface, around three months after its Foundry preview."
     caveat: "Specialist exposure: the model powers slide image generation rather than appearing in a model picker. The Foundry retirement schedule lists the MAI-Image-2 pair retiring on 15 August 2026 in favour of the 2.5 line, so this consumer deployment may outlive or migrate past its catalogue listing; the watch item covers the turnover."
     sources:
       - publisher: "Microsoft Learn"
