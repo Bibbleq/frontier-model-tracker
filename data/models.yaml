@@ -137,6 +137,10 @@ generations:
     display_name: "DeepSeek V3"
     vendor: DeepSeek
     series: deepseek-v
+  - id: deepseek-v4
+    display_name: "DeepSeek V4"
+    vendor: DeepSeek
+    series: deepseek-v
   - id: kimi-k2
     display_name: "Kimi K2"
     vendor: Moonshot AI
@@ -428,12 +432,23 @@ models:
     vendor: Anthropic
     generation: claude-5
     model_line: claude-mythos
+  - id: claude-mythos-preview
+    display_name: "Claude Mythos Preview"
+    vendor: Anthropic
+    model_line: claude-mythos
+    note: "The gated research preview preceding Mythos 5, reportedly from April 2026; carried on the Foundry retirement schedule as a preview. No generation is assigned because it predates the Claude 5 naming and Anthropic published no generation for it. Dates are tracked in the backlog."
+
 
   # ---------------------------------------------------------------- others
   - id: gemini-1-5-pro
     display_name: "Gemini 1.5 Pro"
     vendor: Google
     generation: gemini-1
+  - id: gemini-2-0-flash
+    display_name: "Gemini 2.0 Flash"
+    vendor: Google
+    generation: gemini-2
+    note: "Registered when its October 2025 GitHub Copilot picker removal was recorded; its picker arrival was never changelogged and remains open."
   - id: gemini-2-5-pro
     display_name: "Gemini 2.5 Pro"
     vendor: Google
@@ -482,6 +497,11 @@ models:
     vendor: DeepSeek
     generation: deepseek-v3
     note: "Distinct from DeepSeek V3.2. The vendor release is recorded; no Microsoft availability is, so this model anchors no lag yet."
+  - id: deepseek-v3-0324
+    display_name: "DeepSeek-V3-0324"
+    vendor: DeepSeek
+    generation: deepseek-v3
+    note: "The dated March 2025 revision of V3, and the model Microsoft actually carried from that line until its July 2026 Foundry retirement. Distinct from plain DeepSeek-V3, which has no recorded Microsoft presence."
   - id: deepseek-v3-2
     display_name: "DeepSeek V3.2"
     vendor: DeepSeek
@@ -490,6 +510,14 @@ models:
     display_name: "DeepSeek V3.2-Speciale"
     vendor: DeepSeek
     generation: deepseek-v3
+  - id: deepseek-v4-flash
+    display_name: "DeepSeek V4 Flash"
+    vendor: DeepSeek
+    generation: deepseek-v4
+  - id: deepseek-v4-pro
+    display_name: "DeepSeek V4 Pro"
+    vendor: DeepSeek
+    generation: deepseek-v4
   - id: kimi-k2-7-code
     display_name: "Kimi K2.7 Code"
     vendor: Moonshot AI
