@@ -13,7 +13,7 @@
 # family announcements queryable without pretending each member was
 # individually sourced.
 #
-# `generations` are the broader numbered eras within a vendor series: GPT-5.1
+# `generations` are the broader named or numbered eras within a vendor series: GPT-5.1
 # is part of the GPT-5 generation, for example. `model_lines` are recurring
 # named branches within a series, such as Claude Sonnet or Claude Opus. Neither
 # field implies technical ancestry or supersession.
@@ -51,6 +51,19 @@ series:
   - id: kimi
     display_name: "Kimi"
     vendor: Moonshot AI
+
+  - id: openai-image
+    display_name: "OpenAI image generation"
+    vendor: OpenAI
+  - id: openai-audio
+    display_name: "OpenAI audio"
+    vendor: OpenAI
+  - id: openai-video
+    display_name: "OpenAI video"
+    vendor: OpenAI
+  - id: mai
+    display_name: "Microsoft MAI"
+    vendor: Microsoft
 
 generations:
   - id: gpt-3
@@ -150,6 +163,29 @@ generations:
     vendor: Moonshot AI
     series: kimi
 
+  - id: dall-e
+    display_name: "DALL-E"
+    vendor: OpenAI
+    series: openai-image
+  - id: gpt-image
+    display_name: "GPT-image"
+    vendor: OpenAI
+    series: openai-image
+    note: "Succeeded the DALL-E era as OpenAI's image line; the DALL-E 2 retirement directed users to the gpt-image models."
+  - id: whisper
+    display_name: "Whisper"
+    vendor: OpenAI
+    series: openai-audio
+  - id: gpt-audio
+    display_name: "GPT audio"
+    vendor: OpenAI
+    series: openai-audio
+    note: "The GPT-branded audio era: realtime speech-to-speech and the transcribe pair."
+  - id: sora
+    display_name: "Sora"
+    vendor: OpenAI
+    series: openai-video
+
 model_lines:
   - id: claude-opus
     display_name: "Claude Opus"
@@ -171,6 +207,18 @@ model_lines:
     display_name: "Claude Mythos"
     vendor: Anthropic
     series: claude
+  - id: mai-image
+    display_name: "MAI Image"
+    vendor: Microsoft
+    series: mai
+  - id: mai-voice
+    display_name: "MAI Voice"
+    vendor: Microsoft
+    series: mai
+  - id: mai-transcribe
+    display_name: "MAI Transcribe"
+    vendor: Microsoft
+    series: mai
 
 models:
   # ---------------------------------------------------------------- OpenAI
@@ -197,6 +245,7 @@ models:
   - id: dall-e-2
     display_name: "DALL-E 2"
     vendor: OpenAI
+    generation: dall-e
   - id: gpt-4
     display_name: "GPT-4"
     vendor: OpenAI
@@ -261,32 +310,43 @@ models:
   - id: dall-e-3
     display_name: "DALL-E 3"
     vendor: OpenAI
+    generation: dall-e
   - id: gpt-image-1
     display_name: "GPT-image-1"
     vendor: OpenAI
+    generation: gpt-image
   - id: gpt-image-1-5
     display_name: "GPT-image-1.5"
     vendor: OpenAI
+    generation: gpt-image
   - id: gpt-image-2
     display_name: "GPT-image-2"
     vendor: OpenAI
+    generation: gpt-image
   - id: whisper
     display_name: "Whisper"
     vendor: OpenAI
+    generation: whisper
   - id: sora-2
     display_name: "Sora 2"
     vendor: OpenAI
+    generation: sora
     note: "The consumer Sora product was discontinued on 26 April 2026 per OpenAI's own launch page; the model continued serving through the API and Microsoft Foundry."
   - id: gpt-realtime
     display_name: "gpt-realtime"
     vendor: OpenAI
+    generation: gpt-audio
   - id: gpt-transcribe
     display_name: "GPT-transcribe"
     vendor: OpenAI
+    generation: gpt-audio
+    family: gpt-transcribe
     note: "Announced by Microsoft as an OpenAI ASR model in Foundry; no OpenAI-side release under this name has been found, so the vendor identity of the naming is tracked in the backlog."
   - id: gpt-live-transcribe
     display_name: "GPT-live-transcribe"
     vendor: OpenAI
+    generation: gpt-audio
+    family: gpt-transcribe
     note: "Streaming counterpart to GPT-transcribe, same naming caveat."
   - id: gpt-5
     display_name: "GPT-5"
@@ -563,18 +623,30 @@ models:
   - id: mai-image-2
     display_name: "MAI-Image-2"
     vendor: Microsoft
+    model_line: mai-image
+    family: mai-image-2
   - id: mai-image-2e
     display_name: "MAI-Image-2e"
     vendor: Microsoft
+    model_line: mai-image
+    family: mai-image-2
     aliases: ["MAI-Image-2-Efficient"]
   - id: mai-voice-1
     display_name: "MAI-Voice-1"
     vendor: Microsoft
+    model_line: mai-voice
   - id: mai-transcribe-1
     display_name: "MAI-Transcribe-1"
     vendor: Microsoft
+    model_line: mai-transcribe
 
 families:
+  - id: gpt-transcribe
+    display_name: "GPT-transcribe pair"
+    vendor: OpenAI
+  - id: mai-image-2
+    display_name: "MAI-Image-2 pair"
+    vendor: Microsoft
   - id: gpt-3
     display_name: "GPT-3 family"
     vendor: OpenAI

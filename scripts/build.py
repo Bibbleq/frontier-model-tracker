@@ -35,7 +35,7 @@ PUBLISHED_FILES = {
     "data/current-state.csv": "Last known lifecycle per model and surface; read state_is_terminal before presenting it as current",
     "data/models.csv": "Model registry with generation, model-line, family and event-count references",
     "data/series.csv": "Vendor model series referenced by generations and model lines",
-    "data/generations.csv": "Broad numbered model generations; membership does not imply supersession",
+    "data/generations.csv": "Broad named or numbered model generations; membership does not imply supersession",
     "data/model-lines.csv": "Recurring named model lines; membership does not imply technical ancestry",
     "data/surfaces.csv": "Surface registry with rename lineage, analytical tiers and event counts",
     "schema/events.schema.json": "JSON Schema the dataset validates against",
@@ -1011,6 +1011,10 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
             ),
             "models_without_generation": sorted(
                 entry["id"] for entry in models["models"] if not entry.get("generation")
+            ),
+            "models_without_classification": sorted(
+                entry["id"] for entry in models["models"]
+                if not entry.get("generation") and not entry.get("model_line")
             ),
             "surfaces_without_events": sorted(
                 entry["id"] for entry in platforms["surfaces"] if not surface_use.get(entry["id"])

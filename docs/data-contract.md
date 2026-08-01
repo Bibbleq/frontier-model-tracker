@@ -62,8 +62,9 @@ it; if they ever disagree, `events.json` wins.
 Model classifications have deliberately different meanings:
 
 - `series` is a vendor product series such as GPT or Claude.
-- `generation` is a broad numbered era within that series. GPT-5.1 and
-  GPT-5.6 Sol are members of the GPT-5 generation.
+- `generation` is a broad named or numbered era within that series.
+  GPT-5.1 and GPT-5.6 Sol are members of the GPT-5 generation; DALL-E 3
+  is a member of the DALL-E generation within OpenAI's image series.
 - `model_line` is a recurring named branch such as Claude Sonnet or Claude
   Opus.
 - `family` remains the narrower set of models announced or marketed together.

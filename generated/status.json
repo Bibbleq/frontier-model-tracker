@@ -68,21 +68,15 @@
     "models_without_generation": [
       "claude-mythos-preview",
       "codex",
-      "dall-e-2",
-      "dall-e-3",
-      "gpt-image-1",
-      "gpt-image-1-5",
-      "gpt-image-2",
-      "gpt-live-transcribe",
-      "gpt-realtime",
-      "gpt-transcribe",
       "mai-image-2",
       "mai-image-2e",
       "mai-transcribe-1",
       "mai-voice-1",
-      "openai-deep-research",
-      "sora-2",
-      "whisper"
+      "openai-deep-research"
+    ],
+    "models_without_classification": [
+      "codex",
+      "openai-deep-research"
     ],
     "surfaces_without_events": []
   },

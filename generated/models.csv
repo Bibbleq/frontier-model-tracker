@@ -3,7 +3,7 @@ gpt-3,GPT-3,OpenAI,openai-gpt,gpt-3,,gpt-3,,,,3
 gpt-3-5,GPT-3.5,OpenAI,openai-gpt,gpt-3-5,,,GPT-3.5 generation,,,2
 gpt-3-5-turbo,GPT-3.5 Turbo,OpenAI,openai-gpt,gpt-3-5,,,ChatGPT | gpt-35-turbo | gpt-3.5-turbo,,,2
 codex,Codex,OpenAI,,,,,,,,5
-dall-e-2,DALL-E 2,OpenAI,,,,,,,,3
+dall-e-2,DALL-E 2,OpenAI,openai-image,dall-e,,,,,,3
 gpt-4,GPT-4,OpenAI,openai-gpt,gpt-4,,,GPT-4 generation,,,6
 gpt-4-turbo,GPT-4 Turbo,OpenAI,openai-gpt,gpt-4,,,,,,5
 gpt-4o,GPT-4o,OpenAI,openai-gpt,gpt-4,,,,,,8
@@ -17,15 +17,15 @@ o3,o3,OpenAI,openai-o,o3,,,,,,5
 o3-mini,o3-mini,OpenAI,openai-o,o3,,,,,,10
 o4-mini,o4-mini,OpenAI,openai-o,o4,,,,,,6
 openai-deep-research,OpenAI deep research model,OpenAI,,,,,,,,3
-dall-e-3,DALL-E 3,OpenAI,,,,,,,,1
-gpt-image-1,GPT-image-1,OpenAI,,,,,,,,1
-gpt-image-1-5,GPT-image-1.5,OpenAI,,,,,,,,1
-gpt-image-2,GPT-image-2,OpenAI,,,,,,,,1
-whisper,Whisper,OpenAI,,,,,,,,1
-sora-2,Sora 2,OpenAI,,,,,,,,1
-gpt-realtime,gpt-realtime,OpenAI,,,,,,,,2
-gpt-transcribe,GPT-transcribe,OpenAI,,,,,,,,1
-gpt-live-transcribe,GPT-live-transcribe,OpenAI,,,,,,,,1
+dall-e-3,DALL-E 3,OpenAI,openai-image,dall-e,,,,,,1
+gpt-image-1,GPT-image-1,OpenAI,openai-image,gpt-image,,,,,,1
+gpt-image-1-5,GPT-image-1.5,OpenAI,openai-image,gpt-image,,,,,,1
+gpt-image-2,GPT-image-2,OpenAI,openai-image,gpt-image,,,,,,1
+whisper,Whisper,OpenAI,openai-audio,whisper,,,,,,1
+sora-2,Sora 2,OpenAI,openai-video,sora,,,,,,1
+gpt-realtime,gpt-realtime,OpenAI,openai-audio,gpt-audio,,,,,,2
+gpt-transcribe,GPT-transcribe,OpenAI,openai-audio,gpt-audio,,gpt-transcribe,,,,1
+gpt-live-transcribe,GPT-live-transcribe,OpenAI,openai-audio,gpt-audio,,gpt-transcribe,,,,1
 gpt-5,GPT-5,OpenAI,openai-gpt,gpt-5,,,,,,7
 gpt-5-mini,GPT-5 mini,OpenAI,openai-gpt,gpt-5,,,,,,2
 gpt-5-1,GPT-5.1,OpenAI,openai-gpt,gpt-5,,,,,,2
@@ -81,7 +81,7 @@ deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,deepseek-v,deepseek-v4,,,,,,2
 deepseek-v4-pro,DeepSeek V4 Pro,DeepSeek,deepseek-v,deepseek-v4,,,,,,2
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,kimi,kimi-k2,,,,,,3
 kimi-k3,Kimi K3,Moonshot AI,kimi,kimi-k3,,,FW Kimi K3,,,2
-mai-image-2,MAI-Image-2,Microsoft,,,,,,,,1
-mai-image-2e,MAI-Image-2e,Microsoft,,,,,MAI-Image-2-Efficient,,,1
-mai-voice-1,MAI-Voice-1,Microsoft,,,,,,,,1
-mai-transcribe-1,MAI-Transcribe-1,Microsoft,,,,,,,,1
+mai-image-2,MAI-Image-2,Microsoft,mai,,mai-image,mai-image-2,,,,1
+mai-image-2e,MAI-Image-2e,Microsoft,mai,,mai-image,mai-image-2,MAI-Image-2-Efficient,,,1
+mai-voice-1,MAI-Voice-1,Microsoft,mai,,mai-voice,,,,,1
+mai-transcribe-1,MAI-Transcribe-1,Microsoft,mai,,mai-transcribe,,,,,1

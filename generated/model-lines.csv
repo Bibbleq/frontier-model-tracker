@@ -4,3 +4,6 @@ claude-sonnet,Claude Sonnet,Anthropic,claude
 claude-haiku,Claude Haiku,Anthropic,claude
 claude-fable,Claude Fable,Anthropic,claude
 claude-mythos,Claude Mythos,Anthropic,claude
+mai-image,MAI Image,Microsoft,mai
+mai-voice,MAI Voice,Microsoft,mai
+mai-transcribe,MAI Transcribe,Microsoft,mai
