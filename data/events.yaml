@@ -5360,6 +5360,31 @@ events:
         retrieved_at: "2026-07-26"
         published_at: "2026-07-01"
         source_type: "changelog"
+  - id: "m365-mai-image-2e-2026-07-01"
+    kind: "availability"
+    date:
+      start: "2026-07-01"
+      precision: "day"
+    surface_id: "m365-copilot"
+    experience_ids: ["powerpoint"]
+    model_ids: ["mai-image-2e"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "specialist"
+    confidence: "confirmed"
+    evidence_note: "MAI-Image-2e became the image generation model in Copilot in PowerPoint across Windows, Mac and Web: the first MAI model recorded on a consumer Copilot surface, twelve weeks after its Foundry preview."
+    caveat: "Specialist exposure: the model powers slide image generation rather than appearing in a model picker. The Foundry retirement schedule lists the MAI-Image-2 pair retiring on 15 August 2026 in favour of the 2.5 line, so this consumer deployment may outlive or migrate past its catalogue listing; the watch item covers the turnover."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Microsoft 365 Copilot release notes"
+        url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
+        primary: true
+        retrieved_at: "2026-07-31"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260728065751/https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes"
+        quote: "Copilot in PowerPoint now includes the MAI-Image-2-Efficient model for image generation. This model is optimized for speed and efficiency, allowing users to rapidly iterate on visual ideas, create real-time slide content, and update visuals across presentations more easily than before."
+        supports: ["date", "model", "lifecycle", "exposure"]
+        note: "The release note is dated 1 July 2026 in the page's entry listing, which also satisfies the first-of-month check: the day is the entry's own date, not a padded month."
   - id: "m365-sonnet5-2026-07-02"
     kind: "availability"
     date:
@@ -6400,6 +6425,29 @@ validation_backlog:
     target: "Recorded as blocked rather than open so the question is not repeatedly reopened. Revisit only if Microsoft begins publishing underlying-model lifecycle information for Microsoft 365 Copilot."
     model_ids: []
     surface_ids: ["m365-copilot"]
+  - id: "mai-lineup-dates"
+    state: "open"
+    working_claim: "Microsoft's current MAI lineup is MAI-Image-2.5, MAI-Voice-2, MAI-Transcribe-1.5, MAI-Thinking-1, MAI-Code-1-Flash and MAI-Cyber-1-Flash, all listed generally available on microsoft.ai, with no dated releases recorded."
+    reason: "The microsoft.ai models page is current-state marketing and dates nothing. Its 12 July 2026 Wayback capture already lists five of the six, so those were live by then; MAI-Cyber-1-Flash appears only in the live page, so it surfaced between 12 and 31 July. The first-generation MAI models were recorded from the April retrospective; this second wave has no retrospective coverage yet."
+    target: "Date each model from the June, July and August Foundry retrospectives as they publish, and from schedule version strings as floors. MAI-Image-2.5 should also close the loop with the 15 August retirement of the Image-2 pair, which names it as replacement. Microsoft Frontier Tuning is a fine-tuning service, not a model, and stays out of the registry."
+    model_ids: ["mai-image-2-5", "mai-voice-2", "mai-transcribe-1-5", "mai-thinking-1", "mai-code-1-flash", "mai-cyber-1-flash"]
+    surface_ids: ["microsoft-ai"]
+    sources:
+      - publisher: "Microsoft AI"
+        title: "Models"
+        url: "https://microsoft.ai/models/"
+        primary: true
+        retrieved_at: "2026-07-31"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260712151226/https://microsoft.ai/models/"
+        note: "Current-state evidence only. The capture attests five models by 12 July; the live page adds MAI-Cyber-1-Flash."
+  - id: "mai-image-2-retirement-2026-08-15"
+    state: "open"
+    working_claim: "MAI-Image-2 and MAI-Image-2e retire from Microsoft Foundry on 15 August 2026, replaced by MAI-Image-2.5 and MAI-Image-2.5-Flash."
+    reason: "A dated future commitment from the retirement schedule, not yet a fact: the date has not passed. This will be the first MAI generational turnover, and MAI-Image-2e is simultaneously deployed in Copilot in PowerPoint as of 1 July, so the consumer deployment may migrate or outlive the catalogue listing."
+    target: "After 15 August 2026, record both retirements from the schedule, record the 2.5 arrivals if the retrospectives or schedule date them, register MAI-Image-2.5-Flash if it materialises, and check whether the PowerPoint deployment switched models."
+    model_ids: ["mai-image-2", "mai-image-2e", "mai-image-2-5"]
+    surface_ids: ["microsoft-ai"]
   - id: "meta-cohere-flux-mai-foundry-history"
     state: "open"
     working_claim: "Meta Llama 3.x, Cohere, FLUX and Microsoft MAI have catalogue milestones worth tracking."

@@ -219,6 +219,18 @@ model_lines:
     display_name: "MAI Transcribe"
     vendor: Microsoft
     series: mai
+  - id: mai-thinking
+    display_name: "MAI Thinking"
+    vendor: Microsoft
+    series: mai
+  - id: mai-code
+    display_name: "MAI Code"
+    vendor: Microsoft
+    series: mai
+  - id: mai-cyber
+    display_name: "MAI Cyber"
+    vendor: Microsoft
+    series: mai
 
 models:
   # ---------------------------------------------------------------- OpenAI
@@ -639,6 +651,34 @@ models:
     display_name: "MAI-Transcribe-1"
     vendor: Microsoft
     model_line: mai-transcribe
+
+  - id: mai-image-2-5
+    display_name: "MAI-Image-2.5"
+    vendor: Microsoft
+    model_line: mai-image
+    note: "Named by the Foundry retirement schedule as MAI-Image-2's replacement; a 2.5-Flash sibling is named as MAI-Image-2e's replacement but is not yet listed on microsoft.ai and is not registered."
+  - id: mai-voice-2
+    display_name: "MAI-Voice-2"
+    vendor: Microsoft
+    model_line: mai-voice
+  - id: mai-transcribe-1-5
+    display_name: "MAI-Transcribe-1.5"
+    vendor: Microsoft
+    model_line: mai-transcribe
+  - id: mai-thinking-1
+    display_name: "MAI-Thinking-1"
+    vendor: Microsoft
+    model_line: mai-thinking
+    note: "Microsoft's first-party reasoning text model, listed generally available on microsoft.ai; no dated release source yet."
+  - id: mai-code-1-flash
+    display_name: "MAI-Code-1-Flash"
+    vendor: Microsoft
+    model_line: mai-code
+  - id: mai-cyber-1-flash
+    display_name: "MAI-Cyber-1-Flash"
+    vendor: Microsoft
+    model_line: mai-cyber
+    note: "A cybersecurity model described as built into MDASH rather than catalogue-served; absent from the 12 July capture of microsoft.ai/models and present by 31 July, so it surfaced in that window. Microsoft Frontier Tuning, listed alongside these, is a fine-tuning service rather than a model and is deliberately not registered."
 
 families:
   - id: gpt-transcribe
