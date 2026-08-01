@@ -264,6 +264,41 @@
       ]
     },
     {
+      "id": "openai-whisper-2022-09-21",
+      "kind": "availability",
+      "date": {
+        "start": "2022-09-21",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "whisper"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI open-sourced Whisper, its speech-recognition model, with models and inference code released for building applications. The earliest modality baseline in the dataset; Azure still carries a whisper deployment on the retirement schedule.",
+      "caveat": "The open-source release is recorded, not the later Whisper API of March 2023. The Azure arrival is not yet recorded and is tracked with the modality backlog.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing Whisper",
+          "url": "https://openai.com/index/whisper/",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2022-09-21",
+          "source_type": "announcement",
+          "quote": "We are open-sourcing models and inference code to serve as a foundation for building useful applications and for further research on robust speech processing.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
       "id": "chatgpt-launch-2022-11-30",
       "kind": "availability",
       "date": {
@@ -688,6 +723,53 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "announcement"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-dall-e-3-2023-10-19",
+      "kind": "availability",
+      "date": {
+        "start": "2023-10-19",
+        "precision": "day"
+      },
+      "surface_id": "chatgpt",
+      "model_ids": [
+        "dall-e-3"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "DALL-E 3 reached ChatGPT Plus and Enterprise users, a month after its 20 September announcement. Recorded on the chatgpt surface as a channel-specific product fact under the vendor-surface rule.",
+      "caveat": "OpenAI's pages are undated; the day rests on launch-day press coverage. The later API availability and the earlier Bing Image Creator integration, a Microsoft surface the dataset does not track, are not recorded.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "DALL-E 3 is now available in ChatGPT Plus and Enterprise",
+          "url": "https://openai.com/index/dall-e-3-is-now-available-in-chatgpt-plus-and-enterprise/",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "source_type": "announcement",
+          "supports": [
+            "model",
+            "lifecycle"
+          ]
+        },
+        {
+          "publisher": "Search Engine Journal",
+          "title": "DALL-E 3 Image Generator Now Accessible In ChatGPT Plus",
+          "url": "https://www.searchenginejournal.com/dall-e-3-image-generator-now-accessible-in-chatgpt-plus/498919/",
+          "primary": false,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2023-10-19",
+          "source_type": "news",
+          "supports": [
+            "date"
+          ]
         }
       ]
     },
@@ -2427,6 +2509,40 @@
       ]
     },
     {
+      "id": "azure-gpt-image-1-2025-04",
+      "kind": "availability",
+      "date": {
+        "start": "2025-04",
+        "precision": "month"
+      },
+      "surface_id": "azure-openai",
+      "model_ids": [
+        "gpt-image-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "limited_preview",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-image-1 reached Azure OpenAI in preview with access gated behind a limited access application, replacing the DALL-E line as the image generation model.",
+      "caveat": "Month precision from the changelog's section heading; the Learn version string is 2025-04-15. The OpenAI vendor release of gpt-image-1 is not yet recorded and is tracked with the modality backlog.",
+      "sources": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "What's new in Azure OpenAI in Microsoft Foundry Models? (classic)",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry-classic/openai/whats-new",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "source_type": "changelog",
+          "quote": "GPT-image-1 (2025-04-15) is the latest image generation model from Azure OpenAI. It features major improvements over DALL-E, including: Better at responding to precise instructions.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
       "id": "m365-analyst-frontier-2025-04",
       "kind": "availability",
       "date": {
@@ -3670,6 +3786,86 @@
       ]
     },
     {
+      "id": "azure-gpt-realtime-2025-08-28",
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-28",
+        "end": "2025-08-31",
+        "precision": "day"
+      },
+      "surface_id": "azure-openai",
+      "model_ids": [
+        "gpt-realtime"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "OpenAI's GPT RealTime and Audio models reached general availability in Microsoft Foundry Models, per the classic changelog's August 2025 entry.",
+      "caveat": "Bounded: the floor is the Learn version string 2025-08-28, which matches OpenAI's own release, and the ceiling is the changelog's August section.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt-realtime-2025-08-28"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "What's new in Azure OpenAI in Microsoft Foundry Models? (classic)",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry-classic/openai/whats-new",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "source_type": "changelog",
+          "quote": "OpenAI's GPT RealTime and Audio models are now generally available in Microsoft Foundry Models.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt-realtime-2025-08-28",
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-28",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "gpt-realtime"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "OpenAI made the Realtime API generally available with gpt-realtime as its speech-to-speech model. Recorded on the API surface as a channel-specific fact under the vendor-surface rule.",
+      "caveat": "OpenAI's page is undated; the day rests on the Foundry version string 2025-08-28, which for OpenAI models has consistently matched launch day, corroborated by the same-window Azure general availability.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing gpt-realtime",
+          "url": "https://openai.com/index/introducing-gpt-realtime/",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "source_type": "announcement",
+          "quote": "The generally available Realtime API and new gpt-realtime model are available to all developers starting today.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
       "id": "github-gpt5-ga-2025-09-09",
       "kind": "availability",
       "date": {
@@ -3922,6 +4118,41 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "announcement"
+        }
+      ]
+    },
+    {
+      "id": "openai-sora-2-2025-09-30",
+      "kind": "availability",
+      "date": {
+        "start": "2025-09-30",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "sora-2"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "limited_preview",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI launched Sora 2 through the Sora iOS app and sora.com, rolling out in the US and Canada with in-app signup for access.",
+      "caveat": "A limited preview: an invite-style regional rollout rather than open availability. The same page now carries a dated notice that the Sora product was discontinued on 26 April 2026; that ended the consumer app, while the model continued through the API and remains on the Foundry retirement schedule, so no model-level ending is recorded. The Foundry arrival is tracked with the modality backlog.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Sora 2 is here",
+          "url": "https://openai.com/index/sora-2/",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2025-09-30",
+          "source_type": "announcement",
+          "quote": "The Sora iOS app is available to download now. You can sign up in-app for a push notification when access opens for your account. We're starting the initial rollout in the U.S. and Canada today with the intent to quickly expand to additional countries.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
         }
       ]
     },
@@ -4679,6 +4910,40 @@
       ]
     },
     {
+      "id": "azure-gpt-image-1-5-2025-12",
+      "kind": "availability",
+      "date": {
+        "start": "2025-12",
+        "precision": "month"
+      },
+      "surface_id": "azure-openai",
+      "model_ids": [
+        "gpt-image-1-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "limited_preview",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-image-1.5 reached Azure OpenAI with access gated behind a limited access application, bringing higher quality, editing controls and face preservation over GPT-image-1.",
+      "caveat": "Month precision from the changelog's December 2025 section; the Learn version string is 2025-12-16. The retirement schedule now lists the model as generally available; the promotion date is not recorded. The OpenAI vendor release is tracked with the modality backlog.",
+      "sources": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "What's new in Azure OpenAI in Microsoft Foundry Models? (classic)",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry-classic/openai/whats-new",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "source_type": "changelog",
+          "quote": "GPT-image-1.5 is OpenAI's latest cutting-edge image generation model. It features improved performance, quality, editing controls, and face preservation.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
       "id": "deepseek-v3-2-2025-12-01",
       "kind": "availability",
       "date": {
@@ -5274,6 +5539,46 @@
       ]
     },
     {
+      "id": "microsoft-mai-image-2-2026-02-20",
+      "kind": "availability",
+      "date": {
+        "start": "2026-02-20",
+        "end": "2026-04-30",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-ai",
+      "model_ids": [
+        "mai-image-2"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "Microsoft's first-party text-to-image model entered preview, announced in the April 2026 Foundry retrospective. Recorded on the Microsoft AI vendor surface: for first-party models the Foundry catalogue is the vendor channel.",
+      "caveat": "Bounded: the floor is the retirement schedule's version string 2026-02-20 and the ceiling is the April retrospective's coverage. The version-string floor is the model's build date, not necessarily its listing day.",
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, April 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2026-05-12",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260517214300/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/",
+          "quote": "MAI-Image-2 is a text-to-image generation model that uses a diffusion-based approach to create high-quality, visually rich images from natural language prompts.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
       "id": "studio-gpt5-ga-2026-03",
       "kind": "availability",
       "date": {
@@ -5536,6 +5841,78 @@
       ]
     },
     {
+      "id": "microsoft-mai-transcribe-1-2026-04",
+      "kind": "availability",
+      "date": {
+        "start": "2026-04",
+        "precision": "month"
+      },
+      "surface_id": "microsoft-ai",
+      "model_ids": [
+        "mai-transcribe-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft's first-party speech recognition model entered preview through the LLM Speech API, from the Microsoft AI Superintelligence team.",
+      "caveat": "Month precision from the April retrospective's coverage; unlike the MAI image models it carries no schedule version string to bound the floor.",
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, April 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2026-05-12",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260517214300/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/",
+          "quote": "MAI-Transcribe-1 is a speech recognition model from the Microsoft AI Superintelligence team. It focuses on high accuracy and high efficiency through the LLM Speech API, supports WAV, MP3, and FLAC input up to 300 MB.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "microsoft-mai-voice-1-2026-04",
+      "kind": "availability",
+      "date": {
+        "start": "2026-04",
+        "precision": "month"
+      },
+      "surface_id": "microsoft-ai",
+      "model_ids": [
+        "mai-voice-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft's first-party neural text-to-speech model entered preview through Azure Speech in Foundry, shipping six prebuilt English voices.",
+      "caveat": "Month precision from the April retrospective's coverage.",
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, April 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2026-05-12",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260517214300/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/",
+          "quote": "MAI-Voice-1 is a neural text-to-speech model available through Azure Speech in Foundry. It ships with six prebuilt English (US) voices that produce emotionally rich, conversational speech.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
       "id": "m365-anthropic-eu-apps-setting-2026-04-03",
       "kind": "policy",
       "date": {
@@ -5594,6 +5971,46 @@
           "archived_url": "https://web.archive.org/web/20260621221619/https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-anthropic-apps",
           "supports": [
             "policy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "microsoft-mai-image-2e-2026-04-09",
+      "kind": "availability",
+      "date": {
+        "start": "2026-04-09",
+        "end": "2026-04-30",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-ai",
+      "model_ids": [
+        "mai-image-2e"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "The efficiency variant of MAI-Image-2, delivering the same quality up to 22 percent faster, entered preview alongside the April retrospective's coverage.",
+      "caveat": "Bounded on the same basis as microsoft-mai-image-2-2026-02-20, with the schedule's version string 2026-04-09 as the floor.",
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, April 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2026-05-12",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260517214300/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/",
+          "quote": "MAI-Image-2e delivers the same image quality up to 22% faster and four times more efficiently, making it the better choice for high-volume, fast-turnaround scenarios.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
           ]
         }
       ]
@@ -5738,6 +6155,47 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "announcement"
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt-image-2-2026-04-21",
+      "kind": "availability",
+      "date": {
+        "start": "2026-04-21",
+        "end": "2026-04-30",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-image-2"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "OpenAI's most capable image model entered public preview in Microsoft Foundry with 4K output, inpainting and face preservation.",
+      "caveat": "Bounded: the schedule's version string 2026-04-21 floors the window and the April retrospective's coverage is the ceiling. The retrospective says public preview while today's schedule lists the model as generally available; the arrival stage is recorded from the contemporaneous source and the promotion date is unrecorded. The OpenAI vendor release is tracked with the modality backlog.",
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, April 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2026-05-12",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260517214300/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/",
+          "quote": "GPT-image-2 is available in public preview in Microsoft Foundry. It is OpenAI's most capable image generation model, supporting arbitrary resolutions up to 4K (3,840 px long edge), editing with inpainting and variations, face preservation, and up to 10 images per request.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
         }
       ]
     },
@@ -8258,6 +8716,76 @@
           ]
         }
       ]
+    },
+    {
+      "id": "foundry-gpt-live-transcribe-2026-07-29",
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-29",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-live-transcribe"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "The streaming half of OpenAI's new ASR pair reached Microsoft Foundry as a Global Standard deployment, taking real-time audio in and text out.",
+      "caveat": "No OpenAI-side release under this name has been found; the naming may be Foundry-first, which the backlog tracks.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Introducing GPT-transcribe and GPT-live-transcribe in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-gpt-transcribe-and-gpt-live-transcribe-in-microsoft/ba-p/4541740",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2026-07-29",
+          "source_type": "announcement",
+          "quote": "GPT-transcribe and GPT-live-transcribe do just that and are available in Microsoft Foundry today.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt-transcribe-2026-07-29",
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-29",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-transcribe"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft describes GPT-transcribe as the highest accuracy ASR model from OpenAI, for asynchronous transcription of completed audio, available in Foundry alongside its streaming counterpart. This was the parked lead that opened the modality scope question, now recorded under the expanded scope.",
+      "caveat": "Same naming caveat as GPT-live-transcribe.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Introducing GPT-transcribe and GPT-live-transcribe in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-gpt-transcribe-and-gpt-live-transcribe-in-microsoft/ba-p/4541740",
+          "primary": true,
+          "retrieved_at": "2026-07-31",
+          "published_at": "2026-07-29",
+          "source_type": "announcement",
+          "quote": "GPT-transcribe is the highest accuracy ASR model from Open AI, designed for asynchronous speech-to-text transcription of completed audio files",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
     }
   ],
   "validation_backlog": [
@@ -9116,6 +9644,29 @@
       "resolution": "The 12 November product release is recorded as the vendor baseline on the openai surface. OpenAI's pages carry no publication date, so the day rests on same-day press coverage and the event carries confidence_detail date: supported. The 13 November developer release was left unrecorded: it would not change the baseline, and splitting product from API release is a convention the dataset does not yet apply consistently.",
       "resolved_on": "2026-07-30",
       "promoted_to": "openai-gpt5-1-2025-11-12"
+    },
+    {
+      "id": "modality-vendor-baselines",
+      "state": "open",
+      "working_claim": "The image and audio models recorded under the expanded modality scope are missing several OpenAI vendor releases and two Microsoft-surface arrivals.",
+      "reason": "The July 2026 modality expansion recorded models where dated Microsoft-surface or vendor sources were in hand. The gaps: OpenAI vendor releases for gpt-image-1 (around April 2025), gpt-image-1.5 (around December 2025), gpt-image-2 (around April 2026) and the GPT-transcribe pair, whose very naming may be Foundry-first since no OpenAI release under those names exists; the Azure or Foundry arrivals for Whisper and Sora 2, both present on the retirement schedule without dated arrivals; and the DALL-E 3 Azure arrival. Until the vendor releases are pinned, the lag for these models reads as open research rather than absence.",
+      "target": "Pin OpenAI vendor dates from the API changelog or dated launch pages, one model at a time; treat Foundry version strings as corroboration, not sources. For Whisper and Sora 2 arrivals, the 2023 and 2025 classic-changelog sections and Foundry retrospectives are the likely homes. If OpenAI never published GPT-transcribe under that name, record the naming finding on the events and close that half.",
+      "model_ids": [
+        "gpt-image-1",
+        "gpt-image-1-5",
+        "gpt-image-2",
+        "gpt-transcribe",
+        "gpt-live-transcribe",
+        "dall-e-3",
+        "whisper",
+        "sora-2"
+      ],
+      "surface_ids": [
+        "openai",
+        "openai-api",
+        "azure-openai",
+        "microsoft-foundry"
+      ]
     },
     {
       "id": "openai-model-deprecations",

@@ -141,6 +141,25 @@ warning is suppressed when a documentation source carries a `quote` that
 `supports` the date, since that means someone has checked the page actually
 attests the date rather than merely the capability.
 
+## Modality models
+
+The dataset records image, audio, voice and video models alongside text
+models, under a scope decision taken in July 2026. The inclusion rule:
+
+- a modality model is recorded when it appears on a tracked Microsoft
+  surface with a dated source, or is a frontier vendor's flagship for
+  that modality
+- Microsoft's own MAI models live on the `microsoft-ai` vendor surface,
+  where the Foundry catalogue is the vendor channel and no adoption lag
+  exists by construction
+- snapshot-level retirements of a still-serving model are not model
+  endings; Sora 2's consumer app discontinuation is a channel ending
+  carried in a caveat, not a lifecycle event
+
+Generation and model-line classifications are deliberately unassigned
+for modality models until the taxonomy question is taken up; they appear
+in the models_without_generation coverage list meanwhile.
+
 ## Recording an ending
 
 The dataset was built by tracking arrivals, and endings are published far less

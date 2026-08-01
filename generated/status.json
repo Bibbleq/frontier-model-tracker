@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 241,
-    "backlog": 62,
-    "sources": 287,
-    "models": 73,
-    "surfaces": 23,
-    "confirmed": 207,
-    "supported": 34
+    "events": 255,
+    "backlog": 63,
+    "sources": 302,
+    "models": 86,
+    "surfaces": 24,
+    "confirmed": 215,
+    "supported": 40
   },
   "kinds": {
     "announcement": 12,
-    "availability": 214,
+    "availability": 228,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 23,
+    "open": 24,
     "promoted": 33,
     "rejected": 4
   },
@@ -27,13 +27,38 @@
       "message": "no vendor release event, so lag cannot be derived"
     },
     {
+      "code": "no_vendor_baseline",
+      "subject": "gpt-image-1",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline",
+      "subject": "gpt-image-1-5",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline",
+      "subject": "gpt-image-2",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline",
+      "subject": "gpt-live-transcribe",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline",
+      "subject": "gpt-transcribe",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
       "code": "pre_release_access",
       "subject": "github-copilot-preview-codex-2021-06-29",
       "message": "dated 2021-06-29, before codex was released by its vendor on 2021-08-10"
     }
   ],
   "warning_counts": {
-    "no_vendor_baseline": 1,
+    "no_vendor_baseline": 6,
     "pre_release_access": 1
   },
   "coverage": {
@@ -44,15 +69,28 @@
       "claude-mythos-preview",
       "codex",
       "dall-e-2",
-      "openai-deep-research"
+      "dall-e-3",
+      "gpt-image-1",
+      "gpt-image-1-5",
+      "gpt-image-2",
+      "gpt-live-transcribe",
+      "gpt-realtime",
+      "gpt-transcribe",
+      "mai-image-2",
+      "mai-image-2e",
+      "mai-transcribe-1",
+      "mai-voice-1",
+      "openai-deep-research",
+      "sora-2",
+      "whisper"
     ],
     "surfaces_without_events": []
   },
   "lag_certainty": {
     "exact": 318,
-    "not_recorded": 442,
-    "range": 34,
-    "unknown_no_baseline": 18,
-    "unknown_open_research": 64
+    "not_recorded": 524,
+    "range": 36,
+    "unknown_no_baseline": 68,
+    "unknown_open_research": 86
   }
 }

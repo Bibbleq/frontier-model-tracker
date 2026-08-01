@@ -258,6 +258,36 @@ models:
     display_name: "OpenAI deep research model"
     vendor: OpenAI
     note: "Named only generically in the source; kept as a distinct model because Microsoft documented it as the basis for Researcher."
+  - id: dall-e-3
+    display_name: "DALL-E 3"
+    vendor: OpenAI
+  - id: gpt-image-1
+    display_name: "GPT-image-1"
+    vendor: OpenAI
+  - id: gpt-image-1-5
+    display_name: "GPT-image-1.5"
+    vendor: OpenAI
+  - id: gpt-image-2
+    display_name: "GPT-image-2"
+    vendor: OpenAI
+  - id: whisper
+    display_name: "Whisper"
+    vendor: OpenAI
+  - id: sora-2
+    display_name: "Sora 2"
+    vendor: OpenAI
+    note: "The consumer Sora product was discontinued on 26 April 2026 per OpenAI's own launch page; the model continued serving through the API and Microsoft Foundry."
+  - id: gpt-realtime
+    display_name: "gpt-realtime"
+    vendor: OpenAI
+  - id: gpt-transcribe
+    display_name: "GPT-transcribe"
+    vendor: OpenAI
+    note: "Announced by Microsoft as an OpenAI ASR model in Foundry; no OpenAI-side release under this name has been found, so the vendor identity of the naming is tracked in the backlog."
+  - id: gpt-live-transcribe
+    display_name: "GPT-live-transcribe"
+    vendor: OpenAI
+    note: "Streaming counterpart to GPT-transcribe, same naming caveat."
   - id: gpt-5
     display_name: "GPT-5"
     vendor: OpenAI
@@ -528,6 +558,21 @@ models:
     generation: kimi-k3
     aliases: ["FW Kimi K3"]
     note: "Microsoft Foundry lists it as 'FW Kimi K3', the prefix marking it as served through Fireworks AI rather than by Microsoft."
+
+  # ------------------------------------------------------------- Microsoft
+  - id: mai-image-2
+    display_name: "MAI-Image-2"
+    vendor: Microsoft
+  - id: mai-image-2e
+    display_name: "MAI-Image-2e"
+    vendor: Microsoft
+    aliases: ["MAI-Image-2-Efficient"]
+  - id: mai-voice-1
+    display_name: "MAI-Voice-1"
+    vendor: Microsoft
+  - id: mai-transcribe-1
+    display_name: "MAI-Transcribe-1"
+    vendor: Microsoft
 
 families:
   - id: gpt-3
