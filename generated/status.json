@@ -16,9 +16,9 @@
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 23,
+    "open": 22,
     "promoted": 32,
-    "rejected": 2
+    "rejected": 3
   },
   "warnings": [
     {

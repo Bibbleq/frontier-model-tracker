@@ -223,6 +223,27 @@ descriptive only.
 Keep the vendor as the model's creator, not the host. Kimi K3 is a Moonshot AI
 model served by Fireworks, so its vendor baseline is still Moonshot's release.
 
+## Choosing a vendor surface
+
+Some vendors have more than one baseline surface — OpenAI's umbrella, product
+and API surfaces; Google's product and API. Pick by what the fact is true of:
+
+- the umbrella surface for vendor-level facts where the channels moved
+  together or the source does not distinguish them, which is most launches
+- the product or API surface only when the fact is channel-specific: GPT-4.1's
+  API-only launch, ChatGPT's default-model switches, the API deprecations table
+- **an ending lives on the surface that holds the model's arrival**, whatever
+  channel published the shutdown notice. DALL-E 2's API shutdown notice ended a
+  model whose recorded arrival was its consumer beta; recording the ending on
+  the API surface left current-state showing the model both alive and dead.
+  The build warns (`vendor_ending_split`) when an ending strays.
+
+Do not force a channel the source does not support: "available in ChatGPT and
+the API today" is one fact and belongs on the umbrella surface, not duplicated
+onto both channels. Lag is indifferent to the choice — the baseline takes a
+vendor's earliest arrival across all its surfaces — so the rule serves
+current-state coherence and lifecycle validation, not the numbers.
+
 ## When a partner ships before the vendor
 
 The build refuses an availability event on a non-vendor surface dated before

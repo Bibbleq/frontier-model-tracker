@@ -6223,7 +6223,7 @@
         "start": "2026-05-05",
         "precision": "day"
       },
-      "surface_id": "openai",
+      "surface_id": "chatgpt",
       "model_ids": [
         "gpt-5-5-instant"
       ],
@@ -6343,7 +6343,7 @@
         "start": "2026-05-12",
         "precision": "day"
       },
-      "surface_id": "openai-api",
+      "surface_id": "openai",
       "model_ids": [
         "dall-e-2"
       ],
@@ -6352,7 +6352,7 @@
       "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "OpenAI shut down DALL-E 2 in the API alongside DALL-E 3, directing users to the gpt-image models.",
-      "caveat": "The dataset holds no OpenAI release record for DALL-E 2; it enters the timeline through the January 2023 Azure OpenAI availability. Its retirement is therefore recorded without a matching vendor arrival.",
+      "caveat": "Recorded on the openai surface beside the model's 2022 beta arrival, following the rule that an ending lives where the model's history lives; the provenance is the API deprecations table, the API being the last surviving channel. An earlier caveat claiming no vendor release record predates the July 2022 beta event and was stale.",
       "sources": [
         {
           "publisher": "OpenAI",
@@ -8920,10 +8920,12 @@
     },
     {
       "id": "vendor-surface-consolidation",
-      "state": "open",
+      "state": "rejected",
       "working_claim": "The three OpenAI vendor surfaces are applied inconsistently, so one model's history can be split across them.",
       "reason": "openai, openai-api and chatgpt were assigned per event during the import rather than by a rule. GPT-4's release sits on openai, GPT-4 Turbo's on openai-api, and GPT-3.5's on chatgpt. The deprecations harvest made this visible: the source is the API, but retirements were recorded on whichever surface already held each model so the lifecycle stayed coherent, which means an API-sourced fact now sits on a non-API surface for some models.",
       "target": "Decide whether these are genuinely separate surfaces or one vendor surface with product labels, then migrate consistently. Until then current-state may show a model twice under different vendor surfaces.",
+      "resolution": "Settled as a decision rather than a migration. Reading every event on the three surfaces showed the assignments already followed a coherent unwritten rule: the umbrella surface for launches where product and API moved together, the API and product surfaces for channel-specific facts. The rule is now written into platforms.yaml and the README, and consolidation was rejected because the channel distinction carries real recorded history, ChatGPT shipping 91 days before its API and GPT-4.1 launching API-only among it, while lag is indifferent to the split since the baseline takes the earliest arrival across a vendor's surfaces. Two events moved: the DALL-E 2 retirement to the umbrella surface beside its arrival, healing the one incoherent current-state pair this item observed, and the GPT-5.5 Instant default switch to the chatgpt surface as a channel-specific fact. A new build warning, vendor_ending_split, enforces the rule that an ending lives on the surface holding the model's arrival, and a test pins the live dataset clean.",
+      "resolved_on": "2026-07-31",
       "model_ids": [],
       "surface_ids": [
         "openai",
