@@ -170,9 +170,9 @@ kimi-k3,Kimi K3,Moonshot AI,microsoft-foundry,Microsoft Foundry,microsoft | foun
 kimi-k3,Kimi K3,Moonshot AI,moonshot,Moonshot AI,,ga,not_applicable,false,moonshot-kimi-k3-2026-07-01,2026-07-16,day,2026-07-28,,0
 llama-2,Llama 2,Meta,meta,Meta,,ga,not_applicable,false,meta-llama2-2023-07-18,2023-07-18,day,2026-07-28,,0
 llama-2,Llama 2,Meta,azure-ai-catalog,Azure AI model catalogue,microsoft | foundry,ga,catalogue,false,meta-llama2-azure-2023-07-18,2023-07-18,day,2026-07-28,,0
-mai-image-2,MAI-Image-2,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-mai-image-2-2026-02-20,2026-02-20,day,2026-07-28,,1
+mai-image-2,MAI-Image-2,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-mai-image-2-2026-04,2026-04,month,2026-07-28,,1
 mai-image-2e,MAI-Image-2e,Microsoft,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,specialist,false,m365-mai-image-2e-2026-07-01,2026-07-01,day,2026-07-28,,0
-mai-image-2e,MAI-Image-2e,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-mai-image-2e-2026-04-09,2026-04-09,day,2026-07-28,,1
+mai-image-2e,MAI-Image-2e,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-mai-image-2e-2026-04,2026-04,month,2026-07-28,,1
 mai-transcribe-1,MAI-Transcribe-1,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-mai-transcribe-1-2026-04,2026-04,month,2026-07-28,,0
 mai-voice-1,MAI-Voice-1,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-mai-voice-1-2026-04,2026-04,month,2026-07-28,,0
 mistral-3,Mistral 3,Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral3-2025-12-02,2025-12-02,day,2026-07-28,,0
