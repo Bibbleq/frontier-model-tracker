@@ -184,6 +184,12 @@ surfaces:
     lineage: foundry
     renamed_from: azure-ai-foundry
     counts_as: [microsoft, foundry]
+  - id: foundry-local
+    display_name: "Foundry Local"
+    owner: Microsoft
+    family: Microsoft Foundry
+    counts_as: [microsoft]
+    note: "On-device inference runtime in the Foundry product family. Deliberately outside the foundry analytical tier: a model shipping in the local runtime says nothing about the Azure catalogue, and counting it there would mask exactly that gap."
 
   # ------------------------------------------------------------- corporate
   - id: microsoft-corporate

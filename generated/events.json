@@ -5539,6 +5539,46 @@
       ]
     },
     {
+      "id": "foundry-fw-kimi-k2-5-2026-03",
+      "kind": "availability",
+      "date": {
+        "start": "2026-03",
+        "precision": "month"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "kimi-k2-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Kimi K2.5 was one of the four launch models when Fireworks AI inference arrived on Microsoft Foundry in public preview, per Microsoft's March retrospective.",
+      "caveat": "Month precision from the retrospective's coverage; the Fireworks launch day is not stated. The retirement schedule also lists a Kimi-K2.5 sold by Azure in preview alongside the FW-prefixed Fireworks listing; this event records the Fireworks launch the retrospective dates.",
+      "tags": [
+        "partner_hosted"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, March 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-mar-2026/",
+          "primary": true,
+          "retrieved_at": "2026-08-02",
+          "published_at": "2026-04-09",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260522100639/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-mar-2026/",
+          "quote": "Fireworks AI on Foundry (Preview): High-performance open model inference — DeepSeek V3.2, gpt-oss-120b, Kimi K2.5, and MiniMax M2.5 with bring-your-own-weights support.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
       "id": "studio-gpt5-ga-2026-03",
       "kind": "availability",
       "date": {
@@ -5694,6 +5734,42 @@
       ]
     },
     {
+      "id": "foundry-gpt5-4-ga-2026-03-05",
+      "kind": "availability",
+      "date": {
+        "start": "2026-03-05",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-5-4"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-5.4 went generally available on Microsoft Foundry on 5 March 2026, the same day as OpenAI's release — a zero-day lag. The retirement schedule carries it at version 2026-03-05, matching.",
+      "caveat": "The retrospective that dates it was published on 9 April, so the day rests on Microsoft's own retrospective statement rather than a same-day post. GPT-5.4 Pro is covered by the same section but is not separately registered.",
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, March 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-mar-2026/",
+          "primary": true,
+          "retrieved_at": "2026-08-02",
+          "published_at": "2026-04-09",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260522100639/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-mar-2026/",
+          "quote": "GPT-5.4 went generally available on March 5",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
       "id": "openai-gpt5-4-2026-03-05",
       "kind": "availability",
       "date": {
@@ -5797,6 +5873,42 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "announcement"
+        }
+      ]
+    },
+    {
+      "id": "foundry-grok4-20-ga-2026-03-30",
+      "kind": "availability",
+      "date": {
+        "start": "2026-03-30",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "grok-4-20"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Grok 4.20 graduated from public beta to general availability on Microsoft Foundry on 30 March 2026, available through serverless or provisioned throughput deployments.",
+      "caveat": "The retrospective's prose writes Grok 4.2 while the retirement schedule's version strings write grok-4-20; recorded as one model under the schedule's spelling. The schedule lists the reasoning and non-reasoning deployments in preview with a 2027 retirement, which sits oddly against the GA sentence; the dated first-party statement is what this event records. The earlier public beta the sentence mentions is unrecorded for want of a dated source.",
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, March 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-mar-2026/",
+          "primary": true,
+          "retrieved_at": "2026-08-02",
+          "published_at": "2026-04-09",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260522100639/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-mar-2026/",
+          "quote": "Grok 4.2 from xAI graduated to general availability on March 30, following its public beta earlier this year.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
         }
       ]
     },
@@ -6799,6 +6911,150 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "announcement"
+        }
+      ]
+    },
+    {
+      "id": "foundry-fw-kimi-k2-6-2026-05",
+      "kind": "availability",
+      "date": {
+        "start": "2026-05",
+        "precision": "month"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "kimi-k2-6"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Kimi K2.6 arrived on Microsoft Foundry via Fireworks AI in May 2026, per the May retrospective's Fireworks update.",
+      "caveat": "Month precision from the retrospective's coverage. The stage is taken from the retirement schedule, which lists Kimi-K2.6 in preview at version 2026-04-20 — a version string that bounds the build, not the arrival — and sold by Azure rather than under the Fireworks FW prefix; the two listings are noted rather than reconciled.",
+      "tags": [
+        "partner_hosted"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, May 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-may-2026/",
+          "primary": true,
+          "retrieved_at": "2026-08-02",
+          "published_at": "2026-05-31",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260601155642/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-may-2026/",
+          "quote": "Fireworks AI — May update: DeepSeek V4 Pro and Kimi 2.6 arrive via Fireworks for high-performance open-model inference.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-grok4-3-2026-05",
+      "kind": "availability",
+      "date": {
+        "start": "2026-05",
+        "precision": "month"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "grok-4-3"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Grok 4.3 entered the Microsoft Foundry model catalogue in May 2026, positioned for advanced agentic and domain-specific workloads, with the catalogue flagging higher safety and jailbreak risk than other Azure Direct models.",
+      "caveat": "Month precision from the May retrospective's coverage. The sentence carries no stage label; general availability is inferred from the catalogue convention under which preview models are labelled and generally available ones are not. Absent from the July retirement schedule capture, so no version string corroborates the window.",
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, May 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-may-2026/",
+          "primary": true,
+          "retrieved_at": "2026-08-02",
+          "published_at": "2026-05-31",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260601155642/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-may-2026/",
+          "quote": "Grok 4.3 from xAI is available in the Microsoft Foundry model catalog.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-local-nemotron-asr-2026-05",
+      "kind": "availability",
+      "date": {
+        "start": "2026-05",
+        "precision": "month"
+      },
+      "surface_id": "foundry-local",
+      "model_ids": [
+        "nemotron-speech-streaming-en"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Foundry Local 1.1 shipped in May 2026 with live audio transcription built on NVIDIA's Nemotron ASR streaming model, exposed through an OpenAI Realtime-compatible API across the Python, JavaScript, C# and Rust SDKs.",
+      "caveat": "Month precision: the retrospective says 1.1 shipped in May without naming the day. The release carries no stage label; general availability is inferred from shipped.",
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, May 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-may-2026/",
+          "primary": true,
+          "retrieved_at": "2026-08-02",
+          "published_at": "2026-05-31",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260601155642/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-may-2026/",
+          "quote": "Live audio transcription — real-time speech-to-text streaming using the Nemotron ASR model (`nemotron-speech-streaming-en-0.6b`), with an OpenAI Realtime-compatible API surface.",
+          "supports": [
+            "model",
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-local-qwen3-5-vision-2026-05",
+      "kind": "availability",
+      "date": {
+        "start": "2026-05",
+        "precision": "month"
+      },
+      "surface_id": "foundry-local",
+      "model_ids": [
+        "qwen-3-5-vision"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Qwen 3.5 Vision shipped in Foundry Local 1.1 in May 2026, bringing on-device vision-language inference; the SDK sample loads it from the local catalogue as qwen3-vl-2b-instruct.",
+      "caveat": "Month precision: the retrospective says 1.1 shipped in May without naming the day. The release carries no stage label; general availability is inferred from shipped.",
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, May 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-may-2026/",
+          "primary": true,
+          "retrieved_at": "2026-08-02",
+          "published_at": "2026-05-31",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260601155642/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-may-2026/",
+          "quote": "Qwen 3.5 Vision — multimodal vision-language model running fully on-device.",
+          "supports": [
+            "model"
+          ]
         }
       ]
     },
@@ -9668,8 +9924,8 @@
       "id": "meta-cohere-flux-mai-foundry-history",
       "state": "open",
       "working_claim": "Meta Llama 3.x, Cohere, FLUX and Microsoft MAI have catalogue milestones worth tracking.",
-      "reason": "These broader catalogue candidates remain outside the current sourced pack. The same scope question now covers audio models: Microsoft announced OpenAI's GPT-transcribe and GPT-live-transcribe as generally available in Foundry on 29 July 2026, alongside GPT-realtime-2.1 and GPT-realtime-mini-2.1, at techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-gpt-transcribe-and-gpt-live-transcribe-in-microsoft/ba-p/4541740. The registry carries no audio model of any kind, so recording that post would open a category, not add an event: Whisper, the gpt-4o transcribe and TTS families and the realtime line would all be implied. Held here until the scope decision is taken deliberately. The July 2026 sweep adds further parked candidates, all Microsoft-carried or vendor-adjacent but unrecorded: Grok 4.1, 4.20 and 4.3, the last confirmed in the Foundry catalogue by the May 2026 retrospective; Kimi K2.5 and K2.6, the latter on the schedule at version 2026-04-20 and arriving via Fireworks in May; the wider Gemini line, 2.0 Pro, 2.5 Flash, 3 Pro, 3.1 Pro, 3.5 Flash and Flash-Lite, and 3 Deep Think; Claude Instant 1.2, Claude 3.5 Haiku and the announced Claude Science; the GPT-5.x Codex line including GPT-5.3-Codex of 5 February 2026; and from the May retrospective, Qwen 3.5 Vision on-device and the Nemotron ASR streaming model. Recording any of these is a scope decision parked for review.",
-      "target": "Add only material frontier/significant events with dated primary Foundry sources.",
+      "reason": "These broader catalogue candidates remain outside the current sourced pack. The same scope question now covers audio models: Microsoft announced OpenAI's GPT-transcribe and GPT-live-transcribe as generally available in Foundry on 29 July 2026, alongside GPT-realtime-2.1 and GPT-realtime-mini-2.1, at techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-gpt-transcribe-and-gpt-live-transcribe-in-microsoft/ba-p/4541740. The registry carries no audio model of any kind, so recording that post would open a category, not add an event: Whisper, the gpt-4o transcribe and TTS families and the realtime line would all be implied. Held here until the scope decision is taken deliberately. The July 2026 sweep adds further parked candidates, all Microsoft-carried or vendor-adjacent but unrecorded: Grok 4.1, 4.20 and 4.3, the last confirmed in the Foundry catalogue by the May 2026 retrospective; Kimi K2.5 and K2.6, the latter on the schedule at version 2026-04-20 and arriving via Fireworks in May; the wider Gemini line, 2.0 Pro, 2.5 Flash, 3 Pro, 3.1 Pro, 3.5 Flash and Flash-Lite, and 3 Deep Think; Claude Instant 1.2, Claude 3.5 Haiku and the announced Claude Science; the GPT-5.x Codex line including GPT-5.3-Codex of 5 February 2026; and from the May retrospective, Qwen 3.5 Vision on-device and the Nemotron ASR streaming model. Recording any of these was a scope decision parked for review, and the decision was taken in August 2026: record everything at the same evidence bar, with point releases and catalogue entries marked scope: extended so default presentations can hide them.",
+      "target": "Wave 1 recorded in August 2026 under scope: extended — Grok 4.20 GA, Grok 4.3, Kimi K2.5 and K2.6 via Fireworks, Qwen 3.5 Vision and Nemotron ASR on the new foundry-local surface, plus the missing frontier GPT-5.4 Foundry GA; Grok 4.1 Fast is registered without an event pending a dated arrival source. Remaining for later waves: the wider Gemini line; Claude Instant 1.2, Claude 3.5 Haiku and Claude Science; the GPT-5.x-Codex line and the GPT-5.4 Mini and Pro variants; FLUX, four models GA in the retirement schedule; Llama 3.x and Cohere catalogue history; DeepSeek V3.2, V3.2-Speciale, gpt-oss-120b and MiniMax M2.5 from the March Fireworks launch; the Phi-4 family; grok-code-fast-1; the NVIDIA Nemotron catalogue family arrival dated 16 March 2026; and the schedule's naming of claude-opus-4-8 as claude-opus-4-1's replacement at its 5 August 2026 retirement.",
       "model_ids": [],
       "surface_ids": [
         "microsoft-foundry"
