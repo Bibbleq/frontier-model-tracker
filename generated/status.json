@@ -1,16 +1,16 @@
 {
   "totals": {
-    "events": 256,
+    "events": 263,
     "backlog": 65,
-    "sources": 304,
-    "models": 92,
-    "surfaces": 24,
-    "confirmed": 218,
+    "sources": 311,
+    "models": 99,
+    "surfaces": 25,
+    "confirmed": 225,
     "supported": 38
   },
   "kinds": {
     "announcement": 12,
-    "availability": 229,
+    "availability": 236,
     "milestone": 9,
     "policy": 6
   },
@@ -52,6 +52,36 @@
       "message": "no vendor release event, so lag cannot be derived"
     },
     {
+      "code": "no_vendor_baseline_extended",
+      "subject": "grok-4-20",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline_extended",
+      "subject": "grok-4-3",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline_extended",
+      "subject": "kimi-k2-5",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline_extended",
+      "subject": "kimi-k2-6",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline_extended",
+      "subject": "nemotron-speech-streaming-en",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline_extended",
+      "subject": "qwen-3-5-vision",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
       "code": "pre_release_access",
       "subject": "github-copilot-preview-codex-2021-06-29",
       "message": "dated 2021-06-29, before codex was released by its vendor on 2021-08-10"
@@ -59,11 +89,13 @@
   ],
   "warning_counts": {
     "no_vendor_baseline": 6,
+    "no_vendor_baseline_extended": 6,
     "pre_release_access": 1
   },
   "coverage": {
     "models_without_events": [
       "claude-mythos-preview",
+      "grok-4-1-fast",
       "mai-code-1-flash",
       "mai-cyber-1-flash",
       "mai-image-2-5",
@@ -91,13 +123,21 @@
       "openai-deep-research"
     ],
     "surfaces_without_events": [],
-    "extended_scope_models": []
+    "extended_scope_models": [
+      "grok-4-1-fast",
+      "grok-4-20",
+      "grok-4-3",
+      "kimi-k2-5",
+      "kimi-k2-6",
+      "nemotron-speech-streaming-en",
+      "qwen-3-5-vision"
+    ]
   },
   "lag_certainty": {
-    "exact": 318,
-    "not_recorded": 521,
+    "exact": 319,
+    "not_recorded": 520,
     "range": 39,
-    "unknown_no_baseline": 140,
+    "unknown_no_baseline": 224,
     "unknown_open_research": 86
   }
 }

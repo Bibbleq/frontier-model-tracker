@@ -9,6 +9,8 @@ mistral,Mistral,Mistral AI
 deepseek-r,DeepSeek R,DeepSeek
 deepseek-v,DeepSeek V,DeepSeek
 kimi,Kimi,Moonshot AI
+qwen,Qwen,Alibaba
+nemotron,Nemotron,NVIDIA
 openai-image,OpenAI image generation,OpenAI
 openai-audio,OpenAI audio,OpenAI
 openai-video,OpenAI video,OpenAI
