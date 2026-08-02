@@ -33,7 +33,7 @@ PUBLISHED_FILES = {
     "data/validation-backlog.csv": "Open research questions with states and targets, not confirmed history",
     "data/lag.csv": "Derived adoption lag; read certainty before any number",
     "data/current-state.csv": "Last known lifecycle per model and surface; read state_is_terminal before presenting it as current",
-    "data/models.csv": "Model registry with modality, generation, model-line, family and event-count references",
+    "data/models.csv": "Model registry with modality, scope, generation, model-line, family and event-count references",
     "data/series.csv": "Vendor model series referenced by generations and model lines",
     "data/generations.csv": "Broad named or numbered model generations; membership does not imply supersession",
     "data/model-lines.csv": "Recurring named model lines; membership does not imply technical ancestry",
@@ -583,8 +583,13 @@ def check_vendor_baseline(events: list[dict], models: dict, surfaces: dict) -> N
         for model_id in event["model_ids"]
         if model_id not in baseline
     }
+    # Extended-scope models get their own warning code so the deep catalogue
+    # cannot drown the frontier work queue: both remain visible, but a reader
+    # of warning_counts can tell a frontier gap from a catalogue gap.
     for model_id in sorted(missing):
-        warn("no_vendor_baseline", model_id, "no vendor release event, so lag cannot be derived")
+        scope = (models.get(model_id) or {}).get("scope", "frontier")
+        code = "no_vendor_baseline_extended" if scope == "extended" else "no_vendor_baseline"
+        warn(code, model_id, "no vendor release event, so lag cannot be derived")
 
 
 def check_vendor_ending_surface(events: list[dict], surfaces: dict) -> None:
@@ -912,8 +917,8 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
         entry["id"]: entry for entry in models.get("generations", [])
     }
     model_fields = [
-        "id", "display_name", "vendor", "modality", "series", "generation", "model_line",
-        "family", "aliases", "supersedes", "superseded_by", "event_count",
+        "id", "display_name", "vendor", "modality", "scope", "series", "generation",
+        "model_line", "family", "aliases", "supersedes", "superseded_by", "event_count",
     ]
     model_use = collections.Counter(m for event in data["events"] for m in event["model_ids"])
     with (OUTPUT_DIR / "models.csv").open("w", encoding="utf-8", newline="") as handle:
@@ -925,6 +930,7 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
                 "display_name": entry["display_name"],
                 "vendor": entry["vendor"],
                 "modality": entry.get("modality", "text"),
+                "scope": entry.get("scope", "frontier"),
                 "series": (
                     generation_by_id[entry["generation"]]["series"]
                     if entry.get("generation")
@@ -1019,6 +1025,9 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
             ),
             "surfaces_without_events": sorted(
                 entry["id"] for entry in platforms["surfaces"] if not surface_use.get(entry["id"])
+            ),
+            "extended_scope_models": sorted(
+                entry["id"] for entry in models["models"] if entry.get("scope") == "extended"
             ),
         },
         "lag_certainty": dict(sorted(collections.Counter(r["certainty"] for r in lag_rows).items())),

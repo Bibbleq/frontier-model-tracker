@@ -90,7 +90,8 @@
       "codex",
       "openai-deep-research"
     ],
-    "surfaces_without_events": []
+    "surfaces_without_events": [],
+    "extended_scope_models": []
   },
   "lag_certainty": {
     "exact": 318,

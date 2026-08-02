@@ -170,6 +170,32 @@ models, currently Codex, the deep research model and Mythos Preview,
 appear in the models_without_classification coverage list with notes
 saying why.
 
+## Registry scope: frontier and extended
+
+The registry answers two tensions at once: never lose a Microsoft-carried
+fact, and never let point releases bury the frontier story. The `scope`
+field resolves it. Absent or `frontier` means the model belongs in the
+default view. `extended` marks the deep catalogue — point releases such as
+Grok 4.1 or Gemini 3.5 Flash-Lite, and catalogue entries recorded because
+they appeared on a tracked surface — captured now because relevance is
+easier to grant later than evidence is to reconstruct.
+
+Rules of use:
+
+- Scope is presentation guidance, never an evidence tier. An extended
+  model's events carry the same sources, quotes and archives as a frontier
+  model's.
+- Extended models with no vendor release event surface under the
+  `no_vendor_baseline_extended` warning code, keeping the frontier work
+  queue legible; the ids are also listed in the `extended_scope_models`
+  coverage list.
+- A model moves from `extended` to frontier by deleting the field, which is
+  a data correction, not a contract change. Moving a model the other way
+  needs the same care as any reclassification: check what published views
+  would silently lose.
+- When in doubt, a vendor's flagship for a modality is frontier; a dated
+  point release between flagships is extended.
+
 ## Recording an ending
 
 The dataset was built by tracking arrivals, and endings are published far less

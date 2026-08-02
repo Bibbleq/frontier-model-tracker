@@ -24,8 +24,8 @@
       "path": "data/status.json",
       "media_type": "application/json",
       "description": "Totals, warning counts, coverage gaps and lag certainty distribution",
-      "bytes": 2452,
-      "sha256": "6a890b647f36d27ac27951a625a67f14a91eacb7e415109ee55de10cf55d64a8"
+      "bytes": 2485,
+      "sha256": "637cdb3b357c8c85fd990ce3a96729ed70c9a8a10e22245fcdbab92d71467ad5"
     },
     {
       "path": "data/events.csv",
@@ -58,9 +58,9 @@
     {
       "path": "data/models.csv",
       "media_type": "text/csv",
-      "description": "Model registry with modality, generation, model-line, family and event-count references",
-      "bytes": 6453,
-      "sha256": "8e2657671ae31abddc251dd1b3e005d4b8d261bd2151478ef6d2c805a80231ad"
+      "description": "Model registry with modality, scope, generation, model-line, family and event-count references",
+      "bytes": 7287,
+      "sha256": "960bd36d9ae645a827c7e55bc67ff0cac8d21d70eea119ee6386af4c801d794e"
     },
     {
       "path": "data/series.csv",
@@ -101,8 +101,8 @@
       "path": "schema/models.schema.json",
       "media_type": "application/json",
       "description": "JSON Schema for the model registry",
-      "bytes": 3488,
-      "sha256": "1b499ae2892ebed8013573e7ee360f03e40804acaec109c64a0343561e8fb785"
+      "bytes": 3589,
+      "sha256": "030fd72a464ab4aaee4052c9182c3c422836f8a5db89ae93154cea20885fca91"
     },
     {
       "path": "schema/platforms.schema.json",
