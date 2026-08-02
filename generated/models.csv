@@ -31,7 +31,7 @@ gpt-5-mini,GPT-5 mini,OpenAI,text,frontier,openai-gpt,gpt-5,,,,,,2
 gpt-5-1,GPT-5.1,OpenAI,text,frontier,openai-gpt,gpt-5,,,,,,2
 gpt-5-2,GPT-5.2,OpenAI,text,frontier,openai-gpt,gpt-5,,,,,,3
 gpt-5-3-instant,GPT-5.3 Instant,OpenAI,text,frontier,openai-gpt,gpt-5,,,GPT-5.3 Chat,,,3
-gpt-5-4,GPT-5.4,OpenAI,text,frontier,openai-gpt,gpt-5,,,GPT-5.4 Reasoning,,,3
+gpt-5-4,GPT-5.4,OpenAI,text,frontier,openai-gpt,gpt-5,,,GPT-5.4 Reasoning,,,4
 gpt-5-5,GPT-5.5,OpenAI,text,frontier,openai-gpt,gpt-5,,,GPT-5.5 Reasoning,,,5
 gpt-5-5-instant,GPT-5.5 Instant,OpenAI,text,frontier,openai-gpt,gpt-5,,,GPT-5.5 Chat,,,5
 gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,text,frontier,openai-gpt,gpt-5,,,,,,2
@@ -68,6 +68,9 @@ gemini-3-6-flash,Gemini 3.6 Flash,Google,text,frontier,gemini,gemini-3,,,,,,2
 grok-3,Grok 3,xAI,text,frontier,grok,grok-3,,,,,,3
 grok-3-mini,Grok 3 Mini,xAI,text,frontier,grok,grok-3,,,Grok 3 mini,,,3
 grok-4,Grok 4,xAI,text,frontier,grok,grok-4,,,,,,2
+grok-4-1-fast,Grok 4.1 Fast,xAI,text,extended,grok,grok-4,,,grok-4-1-fast-reasoning | grok-4-1-fast-non-reasoning,,,0
+grok-4-20,Grok 4.20,xAI,text,extended,grok,grok-4,,,Grok 4.2 | grok-4-20-reasoning | grok-4-20-non-reasoning,,,1
+grok-4-3,Grok 4.3,xAI,text,extended,grok,grok-4,,,grok-4.3,,,1
 grok-4-5,Grok 4.5,xAI,text,frontier,grok,grok-4,,,,,,2
 llama-2,Llama 2,Meta,text,frontier,llama,llama-2,,,,,,2
 mistral-3,Mistral 3,Mistral AI,text,frontier,mistral,mistral-3,,,,,,1
@@ -79,8 +82,12 @@ deepseek-v3-2,DeepSeek V3.2,DeepSeek,text,frontier,deepseek-v,deepseek-v3,,,,,,2
 deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,text,frontier,deepseek-v,deepseek-v3,,,,,,2
 deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,text,frontier,deepseek-v,deepseek-v4,,,,,,2
 deepseek-v4-pro,DeepSeek V4 Pro,DeepSeek,text,frontier,deepseek-v,deepseek-v4,,,,,,2
+kimi-k2-5,Kimi K2.5,Moonshot AI,text,extended,kimi,kimi-k2,,,FW-Kimi-K2.5 | Kimi-K2.5,,,1
+kimi-k2-6,Kimi K2.6,Moonshot AI,text,extended,kimi,kimi-k2,,,Kimi 2.6 | Kimi-K2.6,,,1
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,text,frontier,kimi,kimi-k2,,,,,,3
 kimi-k3,Kimi K3,Moonshot AI,text,frontier,kimi,kimi-k3,,,FW Kimi K3,,,2
+qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,image,extended,qwen,qwen-3-5,,,qwen3-vl-2b-instruct,,,1
+nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,audio,extended,nemotron,nemotron,,,nemotron-speech-streaming-en-0.6b | Nemotron ASR,,,1
 mai-image-2,MAI-Image-2,Microsoft,image,frontier,mai,,mai-image,mai-image-2,,,,1
 mai-image-2e,MAI-Image-2e,Microsoft,image,frontier,mai,,mai-image,mai-image-2,MAI-Image-2-Efficient,,,2
 mai-voice-1,MAI-Voice-1,Microsoft,voice,frontier,mai,,mai-voice,,,,,1

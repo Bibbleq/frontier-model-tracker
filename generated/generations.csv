@@ -23,6 +23,8 @@ deepseek-v3,DeepSeek V3,DeepSeek,deepseek-v
 deepseek-v4,DeepSeek V4,DeepSeek,deepseek-v
 kimi-k2,Kimi K2,Moonshot AI,kimi
 kimi-k3,Kimi K3,Moonshot AI,kimi
+qwen-3-5,Qwen 3.5,Alibaba,qwen
+nemotron,Nemotron,NVIDIA,nemotron
 dall-e,DALL-E,OpenAI,openai-image
 gpt-image,GPT-image,OpenAI,openai-image
 whisper,Whisper,OpenAI,openai-audio

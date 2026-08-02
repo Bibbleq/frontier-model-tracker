@@ -599,7 +599,7 @@ gpt-5-3-instant,GPT-5.3 Instant,OpenAI,github_copilot,any_exposure,openai-gpt5-3
 gpt-5-3-instant,GPT-5.3 Instant,OpenAI,github_copilot,selectable_or_default,openai-gpt5-3-instant-2026-03-03,2026-03-03,ga,,,,,,,,not_recorded
 gpt-5-3-instant,GPT-5.3 Instant,OpenAI,foundry,any_exposure,openai-gpt5-3-instant-2026-03-03,2026-03-03,ga,,,,,,,,unknown_open_research
 gpt-5-3-instant,GPT-5.3 Instant,OpenAI,foundry,selectable_or_default,openai-gpt5-3-instant-2026-03-03,2026-03-03,ga,,,,,,,,unknown_open_research
-gpt-5-4,GPT-5.4,OpenAI,microsoft,any_exposure,openai-gpt5-4-2026-03-05,2026-03-05,ga,m365-gpt5-4-thinking-2026-03-06,2026-03-06,m365-copilot,selectable,ga,1,1,exact
+gpt-5-4,GPT-5.4,OpenAI,microsoft,any_exposure,openai-gpt5-4-2026-03-05,2026-03-05,ga,foundry-gpt5-4-ga-2026-03-05,2026-03-05,microsoft-foundry,catalogue,ga,0,0,exact
 gpt-5-4,GPT-5.4,OpenAI,microsoft,selectable_or_default,openai-gpt5-4-2026-03-05,2026-03-05,ga,m365-gpt5-4-thinking-2026-03-06,2026-03-06,m365-copilot,selectable,ga,1,1,exact
 gpt-5-4,GPT-5.4,OpenAI,copilot,any_exposure,openai-gpt5-4-2026-03-05,2026-03-05,ga,m365-gpt5-4-thinking-2026-03-06,2026-03-06,m365-copilot,selectable,ga,1,1,exact
 gpt-5-4,GPT-5.4,OpenAI,copilot,selectable_or_default,openai-gpt5-4-2026-03-05,2026-03-05,ga,m365-gpt5-4-thinking-2026-03-06,2026-03-06,m365-copilot,selectable,ga,1,1,exact
@@ -609,7 +609,7 @@ gpt-5-4,GPT-5.4,OpenAI,studio,any_exposure,openai-gpt5-4-2026-03-05,2026-03-05,g
 gpt-5-4,GPT-5.4,OpenAI,studio,selectable_or_default,openai-gpt5-4-2026-03-05,2026-03-05,ga,studio-gpt5-4-reasoning-2026-03-06,2026-03-06,copilot-studio,selectable,public_preview,1,1,exact
 gpt-5-4,GPT-5.4,OpenAI,github_copilot,any_exposure,openai-gpt5-4-2026-03-05,2026-03-05,ga,,,,,,,,not_recorded
 gpt-5-4,GPT-5.4,OpenAI,github_copilot,selectable_or_default,openai-gpt5-4-2026-03-05,2026-03-05,ga,,,,,,,,not_recorded
-gpt-5-4,GPT-5.4,OpenAI,foundry,any_exposure,openai-gpt5-4-2026-03-05,2026-03-05,ga,,,,,,,,not_recorded
+gpt-5-4,GPT-5.4,OpenAI,foundry,any_exposure,openai-gpt5-4-2026-03-05,2026-03-05,ga,foundry-gpt5-4-ga-2026-03-05,2026-03-05,microsoft-foundry,catalogue,ga,0,0,exact
 gpt-5-4,GPT-5.4,OpenAI,foundry,selectable_or_default,openai-gpt5-4-2026-03-05,2026-03-05,ga,,,,,,,,not_recorded
 gpt-5-5,GPT-5.5,OpenAI,microsoft,any_exposure,openai-gpt5-5-2026-04-23,2026-04-23,ga,foundry-gpt5-5-2026-04-24,2026-04-24,microsoft-foundry,catalogue,ga,1,1,exact
 gpt-5-5,GPT-5.5,OpenAI,microsoft,selectable_or_default,openai-gpt5-5-2026-04-23,2026-04-23,ga,github-gpt5-5-ga-2026-04-24,2026-04-24,github-copilot,selectable,ga,1,1,exact
@@ -803,6 +803,42 @@ grok-4,Grok 4,xAI,github_copilot,any_exposure,xai-grok4-2025-07-09,2025-07-09,ga
 grok-4,Grok 4,xAI,github_copilot,selectable_or_default,xai-grok4-2025-07-09,2025-07-09,ga,,,,,,,,unknown_open_research
 grok-4,Grok 4,xAI,foundry,any_exposure,xai-grok4-2025-07-09,2025-07-09,ga,xai-grok4-foundry-2025-09-29,2025-09-29,azure-ai-foundry,catalogue,ga,82,82,exact
 grok-4,Grok 4,xAI,foundry,selectable_or_default,xai-grok4-2025-07-09,2025-07-09,ga,,,,,,,,not_recorded
+grok-4-1-fast,Grok 4.1 Fast,xAI,microsoft,any_exposure,,,,,,,,,,,unknown_no_baseline
+grok-4-1-fast,Grok 4.1 Fast,xAI,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-1-fast,Grok 4.1 Fast,xAI,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+grok-4-1-fast,Grok 4.1 Fast,xAI,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-1-fast,Grok 4.1 Fast,xAI,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+grok-4-1-fast,Grok 4.1 Fast,xAI,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-1-fast,Grok 4.1 Fast,xAI,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+grok-4-1-fast,Grok 4.1 Fast,xAI,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-1-fast,Grok 4.1 Fast,xAI,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+grok-4-1-fast,Grok 4.1 Fast,xAI,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-1-fast,Grok 4.1 Fast,xAI,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
+grok-4-1-fast,Grok 4.1 Fast,xAI,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-20,Grok 4.20,xAI,microsoft,any_exposure,,,,foundry-grok4-20-ga-2026-03-30,2026-03-30,microsoft-foundry,catalogue,ga,,,unknown_no_baseline
+grok-4-20,Grok 4.20,xAI,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-20,Grok 4.20,xAI,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+grok-4-20,Grok 4.20,xAI,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-20,Grok 4.20,xAI,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+grok-4-20,Grok 4.20,xAI,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-20,Grok 4.20,xAI,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+grok-4-20,Grok 4.20,xAI,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-20,Grok 4.20,xAI,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+grok-4-20,Grok 4.20,xAI,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-20,Grok 4.20,xAI,foundry,any_exposure,,,,foundry-grok4-20-ga-2026-03-30,2026-03-30,microsoft-foundry,catalogue,ga,,,unknown_no_baseline
+grok-4-20,Grok 4.20,xAI,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-3,Grok 4.3,xAI,microsoft,any_exposure,,,,foundry-grok4-3-2026-05,2026-05,microsoft-foundry,catalogue,ga,,,unknown_no_baseline
+grok-4-3,Grok 4.3,xAI,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-3,Grok 4.3,xAI,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+grok-4-3,Grok 4.3,xAI,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-3,Grok 4.3,xAI,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+grok-4-3,Grok 4.3,xAI,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-3,Grok 4.3,xAI,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+grok-4-3,Grok 4.3,xAI,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-3,Grok 4.3,xAI,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+grok-4-3,Grok 4.3,xAI,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-3,Grok 4.3,xAI,foundry,any_exposure,,,,foundry-grok4-3-2026-05,2026-05,microsoft-foundry,catalogue,ga,,,unknown_no_baseline
+grok-4-3,Grok 4.3,xAI,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 grok-4-5,Grok 4.5,xAI,microsoft,any_exposure,xai-grok4-5-2026-07-09,2026-07-08,ga,github-grok4-5-2026-07-28,2026-07-28,github-copilot,selectable,ga,12,20,range
 grok-4-5,Grok 4.5,xAI,microsoft,selectable_or_default,xai-grok4-5-2026-07-09,2026-07-08,ga,github-grok4-5-2026-07-28,2026-07-28,github-copilot,selectable,ga,12,20,range
 grok-4-5,Grok 4.5,xAI,copilot,any_exposure,xai-grok4-5-2026-07-09,2026-07-08,ga,github-grok4-5-2026-07-28,2026-07-28,github-copilot,selectable,ga,12,20,range
@@ -815,6 +851,30 @@ grok-4-5,Grok 4.5,xAI,github_copilot,any_exposure,xai-grok4-5-2026-07-09,2026-07
 grok-4-5,Grok 4.5,xAI,github_copilot,selectable_or_default,xai-grok4-5-2026-07-09,2026-07-08,ga,github-grok4-5-2026-07-28,2026-07-28,github-copilot,selectable,ga,12,20,range
 grok-4-5,Grok 4.5,xAI,foundry,any_exposure,xai-grok4-5-2026-07-09,2026-07-08,ga,,,,,,,,not_recorded
 grok-4-5,Grok 4.5,xAI,foundry,selectable_or_default,xai-grok4-5-2026-07-09,2026-07-08,ga,,,,,,,,not_recorded
+kimi-k2-5,Kimi K2.5,Moonshot AI,microsoft,any_exposure,,,,foundry-fw-kimi-k2-5-2026-03,2026-03,microsoft-foundry,catalogue,public_preview,,,unknown_no_baseline
+kimi-k2-5,Kimi K2.5,Moonshot AI,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+kimi-k2-5,Kimi K2.5,Moonshot AI,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+kimi-k2-5,Kimi K2.5,Moonshot AI,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+kimi-k2-5,Kimi K2.5,Moonshot AI,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+kimi-k2-5,Kimi K2.5,Moonshot AI,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+kimi-k2-5,Kimi K2.5,Moonshot AI,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+kimi-k2-5,Kimi K2.5,Moonshot AI,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+kimi-k2-5,Kimi K2.5,Moonshot AI,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+kimi-k2-5,Kimi K2.5,Moonshot AI,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+kimi-k2-5,Kimi K2.5,Moonshot AI,foundry,any_exposure,,,,foundry-fw-kimi-k2-5-2026-03,2026-03,microsoft-foundry,catalogue,public_preview,,,unknown_no_baseline
+kimi-k2-5,Kimi K2.5,Moonshot AI,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+kimi-k2-6,Kimi K2.6,Moonshot AI,microsoft,any_exposure,,,,foundry-fw-kimi-k2-6-2026-05,2026-05,microsoft-foundry,catalogue,public_preview,,,unknown_no_baseline
+kimi-k2-6,Kimi K2.6,Moonshot AI,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+kimi-k2-6,Kimi K2.6,Moonshot AI,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+kimi-k2-6,Kimi K2.6,Moonshot AI,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+kimi-k2-6,Kimi K2.6,Moonshot AI,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+kimi-k2-6,Kimi K2.6,Moonshot AI,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+kimi-k2-6,Kimi K2.6,Moonshot AI,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+kimi-k2-6,Kimi K2.6,Moonshot AI,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+kimi-k2-6,Kimi K2.6,Moonshot AI,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+kimi-k2-6,Kimi K2.6,Moonshot AI,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+kimi-k2-6,Kimi K2.6,Moonshot AI,foundry,any_exposure,,,,foundry-fw-kimi-k2-6-2026-05,2026-05,microsoft-foundry,catalogue,public_preview,,,unknown_no_baseline
+kimi-k2-6,Kimi K2.6,Moonshot AI,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,microsoft,any_exposure,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,16,19,range
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,microsoft,selectable_or_default,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,16,19,range
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,copilot,any_exposure,moonshot-kimi-k2-7-code-2026-06-12,2026-06-12,ga,github-kimi-k2-7-code-2026-07-01,2026-07-01,github-copilot,selectable,ga,16,19,range
@@ -995,6 +1055,18 @@ mistral-large-3,Mistral Large 3,Mistral AI,github_copilot,any_exposure,mistral3-
 mistral-large-3,Mistral Large 3,Mistral AI,github_copilot,selectable_or_default,mistral3-2025-12-02,2025-12-02,ga,,,,,,,,not_recorded
 mistral-large-3,Mistral Large 3,Mistral AI,foundry,any_exposure,mistral3-2025-12-02,2025-12-02,ga,foundry-mistral-large3-2025-12-02,2025-12-02,microsoft-foundry,catalogue,ga,0,0,exact
 mistral-large-3,Mistral Large 3,Mistral AI,foundry,selectable_or_default,mistral3-2025-12-02,2025-12-02,ga,,,,,,,,not_recorded
+nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,microsoft,any_exposure,,,,foundry-local-nemotron-asr-2026-05,2026-05,foundry-local,catalogue,ga,,,unknown_no_baseline
+nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
+nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 o1,o1,OpenAI,microsoft,any_exposure,openai-o1-full-2024-12-17,2024-12-17,ga,github-models-o1-2024-12-20,2024-12-20,github-models,catalogue,public_preview,3,3,exact
 o1,o1,OpenAI,microsoft,selectable_or_default,openai-o1-full-2024-12-17,2024-12-17,ga,github-o1-full-preview-2024-12-20,2024-12-20,github-copilot,selectable,public_preview,3,3,exact
 o1,o1,OpenAI,copilot,any_exposure,openai-o1-full-2024-12-17,2024-12-17,ga,github-o1-full-preview-2024-12-20,2024-12-20,github-copilot,selectable,public_preview,3,3,exact
@@ -1079,6 +1151,18 @@ openai-deep-research,OpenAI deep research model,OpenAI,github_copilot,any_exposu
 openai-deep-research,OpenAI deep research model,OpenAI,github_copilot,selectable_or_default,openai-deep-research-2025-02-02,2025-02-02,ga,,,,,,,,not_recorded
 openai-deep-research,OpenAI deep research model,OpenAI,foundry,any_exposure,openai-deep-research-2025-02-02,2025-02-02,ga,,,,,,,,not_recorded
 openai-deep-research,OpenAI deep research model,OpenAI,foundry,selectable_or_default,openai-deep-research-2025-02-02,2025-02-02,ga,,,,,,,,not_recorded
+qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,microsoft,any_exposure,,,,foundry-local-qwen3-5-vision-2026-05,2026-05,foundry-local,catalogue,ga,,,unknown_no_baseline
+qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
+qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 sora-2,Sora 2,OpenAI,microsoft,any_exposure,openai-sora-2-2025-09-30,2025-09-30,limited_preview,,,,,,,,unknown_open_research
 sora-2,Sora 2,OpenAI,microsoft,selectable_or_default,openai-sora-2-2025-09-30,2025-09-30,limited_preview,,,,,,,,unknown_open_research
 sora-2,Sora 2,OpenAI,copilot,any_exposure,openai-sora-2-2025-09-30,2025-09-30,limited_preview,,,,,,,,not_recorded

@@ -61,6 +61,12 @@ series:
   - id: kimi
     display_name: "Kimi"
     vendor: Moonshot AI
+  - id: qwen
+    display_name: "Qwen"
+    vendor: Alibaba
+  - id: nemotron
+    display_name: "Nemotron"
+    vendor: NVIDIA
 
   - id: openai-image
     display_name: "OpenAI image generation"
@@ -172,6 +178,15 @@ generations:
     display_name: "Kimi K3"
     vendor: Moonshot AI
     series: kimi
+  - id: qwen-3-5
+    display_name: "Qwen 3.5"
+    vendor: Alibaba
+    series: qwen
+  - id: nemotron
+    display_name: "Nemotron"
+    vendor: NVIDIA
+    series: nemotron
+    note: "An unnumbered era, like DALL-E and Whisper: NVIDIA publishes Nemotron models under the family name without a numbered generation."
 
   - id: dall-e
     display_name: "DALL-E"
@@ -594,6 +609,27 @@ models:
     display_name: "Grok 4"
     vendor: xAI
     generation: grok-4
+  - id: grok-4-1-fast
+    display_name: "Grok 4.1 Fast"
+    vendor: xAI
+    generation: grok-4
+    scope: extended
+    aliases: ["grok-4-1-fast-reasoning", "grok-4-1-fast-non-reasoning"]
+    note: "The reasoning and non-reasoning deployments are one model with two catalogue names. The Foundry retirement schedule lists both as generally available and names the reasoning variant as Grok 3 Mini's replacement at its 1 May 2026 retirement; no dated arrival source has been found, so the model carries no event yet."
+  - id: grok-4-20
+    display_name: "Grok 4.20"
+    vendor: xAI
+    generation: grok-4
+    scope: extended
+    aliases: ["Grok 4.2", "grok-4-20-reasoning", "grok-4-20-non-reasoning"]
+    note: "The Foundry retirement schedule's version strings say 4.20; Microsoft's retrospective prose writes Grok 4.2. One model under two spellings, with the schedule's form taken as canonical."
+  - id: grok-4-3
+    display_name: "Grok 4.3"
+    vendor: xAI
+    generation: grok-4
+    scope: extended
+    aliases: ["grok-4.3"]
+    note: "Absent from the July 2026 retirement schedule capture despite the May retrospective's catalogue listing, so no version string bounds its arrival."
   - id: grok-4-5
     display_name: "Grok 4.5"
     vendor: xAI
@@ -640,6 +676,20 @@ models:
     display_name: "DeepSeek V4 Pro"
     vendor: DeepSeek
     generation: deepseek-v4
+  - id: kimi-k2-5
+    display_name: "Kimi K2.5"
+    vendor: Moonshot AI
+    generation: kimi-k2
+    scope: extended
+    aliases: ["FW-Kimi-K2.5", "Kimi-K2.5"]
+    note: "One of the four launch models when Fireworks AI inference arrived on Foundry in March 2026. The retirement schedule also lists a Kimi-K2.5 sold by Azure in preview alongside the Fireworks FW-prefixed listing."
+  - id: kimi-k2-6
+    display_name: "Kimi K2.6"
+    vendor: Moonshot AI
+    generation: kimi-k2
+    scope: extended
+    aliases: ["Kimi 2.6", "Kimi-K2.6"]
+    note: "The retirement schedule lists it sold by Azure at version 2026-04-20 in preview, while the May retrospective announces its arrival via Fireworks; both listings are noted on the arrival event rather than reconciled."
   - id: kimi-k2-7-code
     display_name: "Kimi K2.7 Code"
     vendor: Moonshot AI
@@ -650,6 +700,26 @@ models:
     generation: kimi-k3
     aliases: ["FW Kimi K3"]
     note: "Microsoft Foundry lists it as 'FW Kimi K3', the prefix marking it as served through Fireworks AI rather than by Microsoft."
+
+  # ------------------------------------------------------------- Alibaba
+  - id: qwen-3-5-vision
+    display_name: "Qwen 3.5 Vision"
+    vendor: Alibaba
+    generation: qwen-3-5
+    modality: image
+    scope: extended
+    aliases: ["qwen3-vl-2b-instruct"]
+    note: "A vision-language model recorded under the image modality because modality covers what a model processes as well as what it produces: it reads images and writes text, and generates no images. The catalogue id in Foundry Local's SDK sample is qwen3-vl-2b-instruct."
+
+  # ------------------------------------------------------------- NVIDIA
+  - id: nemotron-speech-streaming-en
+    display_name: "Nemotron Speech Streaming"
+    vendor: NVIDIA
+    generation: nemotron
+    modality: audio
+    scope: extended
+    aliases: ["nemotron-speech-streaming-en-0.6b", "Nemotron ASR"]
+    note: "The streaming speech-to-text model behind Foundry Local's live audio transcription. Recorded under the audio modality as a processor of speech, not a generator of it."
 
   # ------------------------------------------------------------- Microsoft
   - id: mai-image-2
