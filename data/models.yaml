@@ -21,6 +21,12 @@
 # `modality` says what a model produces or processes: text, image, audio,
 # voice or video. Absent means text, and the generated models.csv resolves
 # the default so consumers never apply it themselves.
+#
+# `scope` separates the frontier record from the deep catalogue. Absent means
+# frontier. `extended` marks models recorded for completeness — point releases
+# and catalogue entries a default view should hide — so breadth of capture
+# never has to trade against clutter. Scope is presentation guidance only; an
+# extended model's events meet the same evidence bar as any other.
 
 version: 1
 

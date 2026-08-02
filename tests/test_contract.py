@@ -405,5 +405,55 @@ class LifecycleOrderTests(unittest.TestCase):
         build.check_lifecycle_ordering(events)
 
 
+class RegistryScopeTests(unittest.TestCase):
+    """`scope` separates the frontier record from the deep catalogue. It is
+    presentation guidance, not an evidence tier, so the contract promises are
+    narrow: models.csv always carries a resolved value, and a missing vendor
+    baseline is reported under a code that says which work queue it belongs
+    to, so the deep catalogue cannot drown the frontier queue."""
+
+    def test_models_csv_always_resolves_scope(self) -> None:
+        with (GENERATED / "models.csv").open(encoding="utf-8", newline="") as handle:
+            rows = list(csv.DictReader(handle))
+        self.assertTrue(rows)
+        for row in rows:
+            with self.subTest(row["id"]):
+                self.assertIn(row["scope"], {"frontier", "extended"})
+
+    def test_status_lists_extended_models_in_coverage(self) -> None:
+        status = json.loads((GENERATED / "status.json").read_text(encoding="utf-8"))
+        self.assertIn("extended_scope_models", status["coverage"])
+
+    def _fixture(self, scope: str | None) -> tuple[list[dict], dict, dict]:
+        model = {"id": "m", "display_name": "M", "vendor": "V"}
+        if scope:
+            model["scope"] = scope
+        models = {"m": model}
+        surfaces = {
+            "vendor": {"id": "vendor", "display_name": "V", "vendor_baseline": True, "counts_as": []},
+            "partner": {"id": "partner", "display_name": "P", "counts_as": ["microsoft"]},
+        }
+        events = [
+            {"id": "partner-arrival", "kind": "availability",
+             "date": {"start": "2026-01-05", "precision": "day"}, "surface_id": "partner",
+             "model_ids": ["m"], "lifecycle": "ga", "exposure": "catalogue"},
+        ]
+        return events, models, surfaces
+
+    def test_a_frontier_model_missing_its_baseline_keeps_the_original_code(self) -> None:
+        events, models, surfaces = self._fixture(scope=None)
+        before = len(build.warnings)
+        build.check_vendor_baseline(events, models, surfaces)
+        raised = build.warnings[before:]
+        self.assertEqual([w["code"] for w in raised], ["no_vendor_baseline"])
+
+    def test_an_extended_model_missing_its_baseline_gets_its_own_code(self) -> None:
+        events, models, surfaces = self._fixture(scope="extended")
+        before = len(build.warnings)
+        build.check_vendor_baseline(events, models, surfaces)
+        raised = build.warnings[before:]
+        self.assertEqual([w["code"] for w in raised], ["no_vendor_baseline_extended"])
+
+
 if __name__ == "__main__":
     unittest.main()

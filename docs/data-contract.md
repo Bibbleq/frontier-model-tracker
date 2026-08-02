@@ -70,6 +70,14 @@ Model classifications have deliberately different meanings:
 - `modality` says what a model produces or processes: `text`, `image`,
   `audio`, `voice` or `video`. `models.csv` always carries a resolved value,
   so a consumer never applies the text default itself.
+- `scope` separates the frontier record from the deep catalogue: `frontier`
+  (the default, always resolved in `models.csv`) or `extended`. Extended
+  models are recorded for completeness — point releases and catalogue
+  entries — and a default presentation should hide them behind an explicit
+  control. Scope is presentation guidance only: extended models' events meet
+  the same evidence bar, and their missing vendor baselines are reported
+  under the separate `no_vendor_baseline_extended` warning code so they do
+  not drown the frontier work queue.
 - `family` remains the narrower set of models announced or marketed together.
 - `supersedes` and `superseded_by` are used only where a replacement
   relationship is evidenced.
@@ -333,6 +341,7 @@ them:
 
 | Contract | Dataset | Change |
 | --- | --- | --- |
+| 3 | 3 | Adds the optional model `scope` field (`frontier`/`extended`), a `scope` column in `data/models.csv`, the `no_vendor_baseline_extended` warning code and the `extended_scope_models` coverage list. Additive only — an optional field, a new column, a new warning code and a new coverage key — so no version bump; consumers that ignore unrecognised fields need no change. |
 | 3 | 3 | Declares that `lag_days_min` and `lag_days_max` in `data/lag.csv` may be negative, which has been true in the data since a partner surface with pre-release access was recorded: GitHub Copilot ran on Codex 42 days before OpenAI released it. Also marks the settlement of the publishing layout as data-only, with the informal HTML pages gone and schema `$id` values naming their published URLs. No field, file or enum changed; consumers that already tolerated the documented range need no code change. |
 | 2 | 3 | Adds `data/current-state.csv` and the obligation not to treat the latest event as the current state. Adds `legacy` to the `lifecycle` enum and states that consumers must tolerate unrecognised enum values. |
 | 1 | 3 | Initial contract. Establishes the base URL, immutable `/c1/v3/` snapshot, `manifest.json`, versioning and deprecation policy, and consumer obligations above. |

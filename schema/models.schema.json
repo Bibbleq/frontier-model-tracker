@@ -45,6 +45,10 @@
           "type": "string",
           "enum": ["text", "image", "audio", "voice", "video"]
         },
+        "scope": {
+          "type": "string",
+          "enum": ["frontier", "extended"]
+        },
         "aliases": {
           "type": "array",
           "uniqueItems": true,
