@@ -757,7 +757,13 @@ models:
     vendor: Microsoft
     modality: image
     model_line: mai-image
-    note: "Named by the Foundry retirement schedule as MAI-Image-2's replacement; a 2.5-Flash sibling is named as MAI-Image-2e's replacement but is not yet listed on microsoft.ai and is not registered."
+    note: "Named by the Foundry retirement schedule as MAI-Image-2's replacement, and again by the Foundry model-wave post of 6 August 2026. Neither dates it."
+  - id: mai-image-2-5-flash
+    display_name: "MAI-Image-2.5 Flash"
+    vendor: Microsoft
+    modality: image
+    model_line: mai-image
+    note: "Registered on identity, not availability. Two Microsoft artefacts now name it — the Foundry retirement schedule, as MAI-Image-2e's replacement, and the Foundry model-wave post of 6 August 2026 — which supersedes the earlier reason for leaving it out, that it was named only once and absent from microsoft.ai. No release date, no catalogue listing and no arrival event; it exists as a name Microsoft uses."
   - id: mai-voice-2
     display_name: "MAI-Voice-2"
     vendor: Microsoft
