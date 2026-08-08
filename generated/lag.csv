@@ -971,6 +971,18 @@ mai-image-2-5,MAI-Image-2.5,Microsoft,github_copilot,any_exposure,,,,,,,,,,,unkn
 mai-image-2-5,MAI-Image-2.5,Microsoft,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 mai-image-2-5,MAI-Image-2.5,Microsoft,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
 mai-image-2-5,MAI-Image-2.5,Microsoft,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,microsoft,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 mai-image-2e,MAI-Image-2e,Microsoft,microsoft,any_exposure,microsoft-mai-image-2e-2026-04,2026-04-01,public_preview,m365-mai-image-2e-2026-07-01,2026-07-01,m365-copilot,specialist,ga,62,91,range
 mai-image-2e,MAI-Image-2e,Microsoft,microsoft,selectable_or_default,microsoft-mai-image-2e-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
 mai-image-2e,MAI-Image-2e,Microsoft,copilot,any_exposure,microsoft-mai-image-2e-2026-04,2026-04-01,public_preview,m365-mai-image-2e-2026-07-01,2026-07-01,m365-copilot,specialist,ga,62,91,range
