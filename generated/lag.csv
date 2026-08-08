@@ -383,6 +383,18 @@ deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,github_copilot,any_exposure,deepsee
 deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,github_copilot,selectable_or_default,deepseek-v4-flash-2026-04-24,2026-04-24,public_preview,,,,,,,,not_recorded
 deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,foundry,any_exposure,deepseek-v4-flash-2026-04-24,2026-04-24,public_preview,foundry-deepseek-v4-flash-2026-04-24,2026-04-24,microsoft-foundry,catalogue,ga,0,37,range
 deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,foundry,selectable_or_default,deepseek-v4-flash-2026-04-24,2026-04-24,public_preview,,,,,,,,not_recorded
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,microsoft,any_exposure,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,microsoft,selectable_or_default,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,copilot,any_exposure,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,copilot,selectable_or_default,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,m365,any_exposure,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,m365,selectable_or_default,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,studio,any_exposure,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,studio,selectable_or_default,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,github_copilot,any_exposure,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,github_copilot,selectable_or_default,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,foundry,any_exposure,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,foundry,selectable_or_default,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
 deepseek-v4-pro,DeepSeek V4 Pro,DeepSeek,microsoft,any_exposure,deepseek-v4-pro-2026-04-24,2026-04-24,public_preview,foundry-deepseek-v4-pro-2026-04-24,2026-04-24,microsoft-foundry,catalogue,ga,0,37,range
 deepseek-v4-pro,DeepSeek V4 Pro,DeepSeek,microsoft,selectable_or_default,deepseek-v4-pro-2026-04-24,2026-04-24,public_preview,,,,,,,,not_recorded
 deepseek-v4-pro,DeepSeek V4 Pro,DeepSeek,copilot,any_exposure,deepseek-v4-pro-2026-04-24,2026-04-24,public_preview,,,,,,,,not_recorded
