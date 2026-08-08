@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 264,
-    "backlog": 66,
-    "sources": 312,
-    "models": 99,
+    "events": 265,
+    "backlog": 67,
+    "sources": 314,
+    "models": 100,
     "surfaces": 25,
-    "confirmed": 226,
+    "confirmed": 227,
     "supported": 38
   },
   "kinds": {
     "announcement": 12,
-    "availability": 237,
+    "availability": 238,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 27,
+    "open": 28,
     "promoted": 33,
     "rejected": 4
   },
@@ -25,6 +25,11 @@
       "code": "backlog_without_surface",
       "subject": "sweep-2026-07-29-to-08-06",
       "message": "open item names no surface, so it cannot suppress a lag answer"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "deepseek-v4-flash-0731-2026-07-31",
+      "message": "documentation source has no archived_url and may be edited in place: https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
     },
     {
       "code": "no_vendor_baseline",
@@ -94,6 +99,7 @@
   ],
   "warning_counts": {
     "backlog_without_surface": 1,
+    "missing_archive": 1,
     "no_vendor_baseline": 6,
     "no_vendor_baseline_extended": 6,
     "pre_release_access": 1
@@ -141,7 +147,7 @@
   },
   "lag_certainty": {
     "exact": 324,
-    "not_recorded": 515,
+    "not_recorded": 527,
     "range": 39,
     "unknown_no_baseline": 224,
     "unknown_open_research": 86

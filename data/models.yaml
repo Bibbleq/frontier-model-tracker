@@ -672,6 +672,12 @@ models:
     display_name: "DeepSeek V4 Flash"
     vendor: DeepSeek
     generation: deepseek-v4
+  - id: deepseek-v4-flash-0731
+    display_name: "DeepSeek-V4-Flash-0731"
+    vendor: DeepSeek
+    generation: deepseek-v4
+    aliases: ["DeepSeek V4 Flash 0731"]
+    note: "The dated July 2026 revision of V4 Flash, following the same convention as deepseek-v3-0324. Registered separately because DeepSeek ships it as its own weights repository and because Microsoft has historically carried a dated revision rather than the base model. No Microsoft presence recorded yet."
   - id: deepseek-v4-pro
     display_name: "DeepSeek V4 Pro"
     vendor: DeepSeek

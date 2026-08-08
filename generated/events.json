@@ -6624,7 +6624,7 @@
       "exposure": "not_applicable",
       "confidence": "confirmed",
       "evidence_note": "DeepSeek released the V4 preview as open-sourced models live on chat.deepseek.com and the API, with deepseek-v4-flash as the smaller variant. Found by the Wikipedia sweep: the entire V4 family was absent from this dataset despite Microsoft carrying both variants and naming them as replacements for the retiring R1 and V3-0324.",
-      "caveat": "DeepSeek's own page calls this a preview despite full open-source release and API availability, so preview is recorded rather than inferred general availability. The deepseek-v4-flash endpoint was updated to a 0731 build at the end of July, which is not separately recorded.",
+      "caveat": "DeepSeek's own page calls this a preview despite full open-source release and API availability, so preview is recorded rather than inferred general availability. The deepseek-v4-flash endpoint was updated to a 0731 build at the end of July; that revision is now recorded separately as deepseek-v4-flash-0731-2026-07-31.",
       "sources": [
         {
           "publisher": "DeepSeek",
@@ -9076,6 +9076,47 @@
       ]
     },
     {
+      "id": "deepseek-v4-flash-0731-2026-07-31",
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-31",
+        "precision": "day"
+      },
+      "surface_id": "deepseek",
+      "model_ids": [
+        "deepseek-v4-flash-0731"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "DeepSeek published the 0731 revision of V4 Flash as an open-weights release under MIT: a 304B mixture-of-experts model with a speculative-decoding module, described on the card as the official release with substantially enhanced agentic capabilities. Servable through vLLM and SGLang, and carried by third-party inference providers.",
+      "caveat": "Dated from the weights repository's own creation timestamp (2026-07-31T07:30:24Z via the Hugging Face API), not from the 0731 in the name — the card states no release date, and reading a date out of a model name would be inference rather than evidence. The two happen to agree. No Microsoft surface carries this revision yet; the base deepseek-v4-flash reached Foundry in April, so a later arrival here would be measurable against this baseline.",
+      "relations": [
+        {
+          "type": "supersedes",
+          "target": "deepseek-v4-flash-2026-04-24"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Hugging Face",
+          "title": "deepseek-ai/DeepSeek-V4-Flash-0731",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+          "primary": true,
+          "retrieved_at": "2026-08-08",
+          "published_at": "2026-07-31",
+          "source_type": "documentation",
+          "quote": "the official release of DeepSeek-V4-Flash-0731...with substantially enhanced agentic capabilities",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
       "id": "github-kimi-k3-2026-08-06",
       "kind": "availability",
       "date": {
@@ -9119,6 +9160,29 @@
     }
   ],
   "validation_backlog": [
+    {
+      "id": "mai-realtime-voice-unreleased",
+      "state": "open",
+      "working_claim": "Microsoft is preparing a first-party real-time voice model, MAI Realtime, seen as a hidden early-access entry in the MAI Playground.",
+      "reason": "Deliberately not a canonical event. The only evidence is a TestingCatalog scoop of 2 August 2026 built on playground screenshots and a debug panel, with no Microsoft statement, no release stage and no timeline. It fails both confidence thresholds: nothing primary supports it, and it is not merely undated availability but availability that has not happened. It is not an announcement either, since Microsoft has announced nothing — a third party found an unreleased listing. Recording it on the timeline would turn a leak into a rollout.",
+      "target": "Watch for a Microsoft artefact: a Foundry retrospective entry, an Azure Speech or MAI Playground release note, a microsoft.ai listing, or a Foundry retirement-schedule row. Register mai-realtime in the model registry and record a vendor-surface arrival only when one of those dates it. If it ships under a different name, close this item and link to whatever replaces it.",
+      "model_ids": [],
+      "surface_ids": [
+        "microsoft-ai"
+      ],
+      "sources": [
+        {
+          "publisher": "TestingCatalog",
+          "title": "Exclusive: Microsoft tests new MAI realtime voice model",
+          "url": "https://www.testingcatalog.com/exclusive-microsoft-tests-new-mai-realtime-voice-model/",
+          "primary": false,
+          "retrieved_at": "2026-08-08",
+          "published_at": "2026-08-02",
+          "source_type": "news",
+          "quote": "Microsoft appears to be preparing its first native real-time voice model, referred to as MAI Realtime, which has surfaced as a hidden early-access entry in the company's MAI Playground."
+        }
+      ]
+    },
     {
       "id": "sweep-2026-07-29-to-08-06",
       "state": "open",

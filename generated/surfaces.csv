@@ -7,7 +7,7 @@ google-gemini,Gemini,Google,,,true,,,,,2
 google-gemini-api,Gemini API,Google,,,true,,,,,4
 mistral,Mistral,Mistral AI,,,true,,,,,1
 xai-grok,Grok,xAI,,,true,,,,,3
-deepseek,DeepSeek,DeepSeek,,,true,,,,,6
+deepseek,DeepSeek,DeepSeek,,,true,,,,,7
 meta,Meta,Meta,,,true,,,,,1
 moonshot,Moonshot AI,Moonshot AI,,,true,,,,,2
 microsoft-ai,Microsoft AI,Microsoft,,,true,,,,,4
