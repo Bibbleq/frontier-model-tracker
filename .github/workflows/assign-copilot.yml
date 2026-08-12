@@ -2,16 +2,23 @@
 # "coding agent") so it drafts either a data PR or a reasoned rejection.
 #
 # ---------------------------------------------------------------------------
-# SETUP REQUIRED BEFORE THIS WORKFLOW CAN WORK
+# THIS WORKFLOW IS DORMANT BY DESIGN UNTIL A SECRET EXISTS
 # ---------------------------------------------------------------------------
-# 1. A repository secret named COPILOT_ASSIGN_TOKEN.
+# Ben's standing decision (2026-08-11): assign Copilot MANUALLY per issue, and
+# keep the repo free of personal access tokens. Without the secret below, every
+# run skips cleanly with a notice — that is the intended steady state, not a
+# misconfiguration. Mint the secret only if manual assignment becomes a chore,
+# or if GitHub ever allows app installation tokens to assign the agent.
+#
+# 1. A repository secret named COPILOT_ASSIGN_TOKEN (only to activate auto-assign).
 #
 #    The default GITHUB_TOKEN CANNOT assign an issue to Copilot. GitHub's API
 #    documentation is explicit that the assignment mutation needs "a user token,
 #    for example a personal access token or a GitHub App user-to-server token",
-#    because the agent runs against a Copilot licence held by a user. With
-#    GITHUB_TOKEN the mutation fails, so this workflow asks for the token
-#    up front and stops with a clear message rather than 403-ing later.
+#    because the agent runs against a Copilot licence held by a user. An app
+#    installation token (e.g. Bibble Envoy's) has no user and no licence behind
+#    it, so it cannot do this either — that is why this is a PAT and why the
+#    default is to go without.
 #
 #    Create a fine-grained personal access token scoped to this repository with:
 #      - Metadata: Read
@@ -83,18 +90,25 @@ jobs:
       && contains(fromJSON('["bibble-envoy", "Bibbleq"]'), github.event.issue.user.login)
     runs-on: ubuntu-latest
     steps:
-      - name: Require the assignment token
+      # No secret = dormant mode (the current, deliberate state): skip cleanly
+      # so candidate issues don't collect red ✗ runs while assignment is manual.
+      - name: Check for the assignment token
+        id: token
         env:
           COPILOT_ASSIGN_TOKEN: ${{ secrets.COPILOT_ASSIGN_TOKEN }}
         run: |
           set -euo pipefail
           if [ -z "${COPILOT_ASSIGN_TOKEN}" ]; then
-            echo "::error title=COPILOT_ASSIGN_TOKEN is not set::Assigning an issue to Copilot needs a user token; the default GITHUB_TOKEN cannot do it. See the header comment in .github/workflows/assign-copilot.yml for the exact fine-grained token scopes and where to save the secret."
-            exit 1
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Auto-assign is dormant::COPILOT_ASSIGN_TOKEN is not set, so this candidate stays unassigned for manual handover to Copilot — the intended default. See the workflow header to activate auto-assignment."
+            echo "Auto-assign dormant (no COPILOT_ASSIGN_TOKEN) — assign Copilot manually on the issue." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "present=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Skip if Copilot is already assigned
         id: existing
+        if: steps.token.outputs.present == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
@@ -115,7 +129,7 @@ jobs:
       # as the enablement check.
       - name: Resolve the Copilot actor and repository ids
         id: actor
-        if: steps.existing.outputs.already == 'false'
+        if: steps.token.outputs.present == 'true' && steps.existing.outputs.already == 'false'
         env:
           GH_TOKEN: ${{ secrets.COPILOT_ASSIGN_TOKEN }}
           OWNER: ${{ github.repository_owner }}
@@ -159,7 +173,7 @@ jobs:
       # reasoning model over a flash-tier one.
       - name: Assign the issue to Copilot
         id: assign
-        if: steps.existing.outputs.already == 'false'
+        if: steps.token.outputs.present == 'true' && steps.existing.outputs.already == 'false'
         env:
           GH_TOKEN: ${{ secrets.COPILOT_ASSIGN_TOKEN }}
           ISSUE_ID: ${{ github.event.issue.node_id }}
