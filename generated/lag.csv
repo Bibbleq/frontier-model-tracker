@@ -923,6 +923,18 @@ llama-2,Llama 2,Meta,github_copilot,any_exposure,meta-llama2-2023-07-18,2023-07-
 llama-2,Llama 2,Meta,github_copilot,selectable_or_default,meta-llama2-2023-07-18,2023-07-18,ga,,,,,,,,not_recorded
 llama-2,Llama 2,Meta,foundry,any_exposure,meta-llama2-2023-07-18,2023-07-18,ga,meta-llama2-azure-2023-07-18,2023-07-18,azure-ai-catalog,catalogue,ga,0,0,exact
 llama-2,Llama 2,Meta,foundry,selectable_or_default,meta-llama2-2023-07-18,2023-07-18,ga,,,,,,,,not_recorded
+mai-code-1-1-flash,MAI-Code-1.1-Flash,Microsoft,microsoft,any_exposure,,,,,,,,,,,unknown_open_research
+mai-code-1-1-flash,MAI-Code-1.1-Flash,Microsoft,microsoft,selectable_or_default,,,,,,,,,,,unknown_open_research
+mai-code-1-1-flash,MAI-Code-1.1-Flash,Microsoft,copilot,any_exposure,,,,,,,,,,,unknown_open_research
+mai-code-1-1-flash,MAI-Code-1.1-Flash,Microsoft,copilot,selectable_or_default,,,,,,,,,,,unknown_open_research
+mai-code-1-1-flash,MAI-Code-1.1-Flash,Microsoft,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-code-1-1-flash,MAI-Code-1.1-Flash,Microsoft,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-code-1-1-flash,MAI-Code-1.1-Flash,Microsoft,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-code-1-1-flash,MAI-Code-1.1-Flash,Microsoft,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-code-1-1-flash,MAI-Code-1.1-Flash,Microsoft,github_copilot,any_exposure,,,,,,,,,,,unknown_open_research
+mai-code-1-1-flash,MAI-Code-1.1-Flash,Microsoft,github_copilot,selectable_or_default,,,,,,,,,,,unknown_open_research
+mai-code-1-1-flash,MAI-Code-1.1-Flash,Microsoft,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
+mai-code-1-1-flash,MAI-Code-1.1-Flash,Microsoft,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 mai-code-1-flash,MAI-Code-1-Flash,Microsoft,microsoft,any_exposure,,,,,,,,,,,unknown_no_baseline
 mai-code-1-flash,MAI-Code-1-Flash,Microsoft,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 mai-code-1-flash,MAI-Code-1-Flash,Microsoft,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline

@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updated": "2026-08-08",
+  "updated": "2026-08-12",
   "research_cutoff": "2026-08-06",
   "metadata": {
     "project": "365Explained Frontier Model Tracker",
@@ -10017,6 +10017,32 @@
           "source_type": "documentation",
           "archived_url": "https://web.archive.org/web/20260712151226/https://microsoft.ai/models/",
           "note": "Current-state evidence only. The capture attests five models by 12 July; the live page adds MAI-Cyber-1-Flash."
+        }
+      ]
+    },
+    {
+      "id": "github-copilot-mai-code-1-1-flash-rollout-2026-08-11",
+      "state": "open",
+      "working_claim": "MAI-Code-1.1-Flash started rolling out in GitHub Copilot on 11 August 2026.",
+      "reason": "The cited first-party changelog is not fetchable from this environment, so the issue excerpt is the only available evidence in this pass. That excerpt supports a rollout claim but does not, by itself, fix canonical lifecycle scope for the tracker: it says 'rolling out' rather than a fully completed availability stage.",
+      "target": "Refetch and quote the GitHub changelog directly, including plan/client scope and any explicit lifecycle wording (for example public preview or generally available), then promote to a canonical GitHub Copilot availability event if date and scope are explicit.",
+      "model_ids": [
+        "mai-code-1-1-flash"
+      ],
+      "surface_ids": [
+        "github-copilot"
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "MAI-Code-1.1-Flash available in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot",
+          "primary": true,
+          "retrieved_at": "2026-08-12",
+          "published_at": "2026-08-11",
+          "source_type": "changelog",
+          "quote": "MAI-Code-1.1-Flash, Microsoft's latest small-tier coding model, is now rolling out in GitHub Copilot.",
+          "note": "Quote carried from the candidate issue excerpt; direct page fetch failed in this environment (DNS lookup failure)."
         }
       ]
     },

@@ -1,7 +1,7 @@
 {
   "contract_version": 3,
   "dataset_version": 3,
-  "updated": "2026-08-08",
+  "updated": "2026-08-12",
   "research_cutoff": "2026-08-06",
   "base_url": "https://bibbleq.github.io/frontier-model-tracker/",
   "snapshot_url": "https://bibbleq.github.io/frontier-model-tracker/c3/v3/",
@@ -17,15 +17,15 @@
       "path": "data/events.json",
       "media_type": "application/json",
       "description": "The whole dataset: metadata, canonical events and the validation backlog",
-      "bytes": 444395,
-      "sha256": "12c65033f7aa63fe45baec8423e2cbf8f64b07fcc16f24a1cc91139dbec0c23c"
+      "bytes": 445995,
+      "sha256": "f03a8572daaa761b4928663b8febbcaaf343fb4915f837511c323de3f08729c3"
     },
     {
       "path": "data/status.json",
       "media_type": "application/json",
       "description": "Totals, warning counts, coverage gaps and lag certainty distribution",
-      "bytes": 4224,
-      "sha256": "9254f2a2ae8262302c6fef76e2ddda41a0cc0c2dc52840a420f1d9f8a976407b"
+      "bytes": 4280,
+      "sha256": "6f93e9b48e4145a30729261aacb67c211af9d7112f5515f5bbca9d83b8cbd431"
     },
     {
       "path": "data/events.csv",
@@ -38,15 +38,15 @@
       "path": "data/validation-backlog.csv",
       "media_type": "text/csv",
       "description": "Open research questions with states and targets, not confirmed history",
-      "bytes": 68253,
-      "sha256": "4e39f217d65c698f969345bf5505e55f0cb3485297b1ce0f3c091b6279f8c7d9"
+      "bytes": 69114,
+      "sha256": "8c94fccb6bdd16a3455627ec2edf609c249c333fdff35818e098171f253d95e7"
     },
     {
       "path": "data/lag.csv",
       "media_type": "text/csv",
       "description": "Derived adoption lag; read certainty before any number",
-      "bytes": 170232,
-      "sha256": "662ede863ceb3fbf280587c32e5204db41662993ef07baa906bfff0a7d775ace"
+      "bytes": 171496,
+      "sha256": "bdb2f476d06ec7c0ba969aebdb60248b6a5129c259565a506246d548ccf0129e"
     },
     {
       "path": "data/current-state.csv",
@@ -59,8 +59,8 @@
       "path": "data/models.csv",
       "media_type": "text/csv",
       "description": "Model registry with modality, scope, generation, model-line, family and event-count references",
-      "bytes": 8210,
-      "sha256": "5539377a288d6aeeae4052c9d896decf234501ec810b49ad9fa8c7d0b1edf797"
+      "bytes": 8292,
+      "sha256": "d0c98d02c9484bd140997be082e4cb0a88b035277faf1ac17f187dfc556d8e8f"
     },
     {
       "path": "data/series.csv",
