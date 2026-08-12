@@ -783,6 +783,10 @@ models:
     display_name: "MAI-Code-1-Flash"
     vendor: Microsoft
     model_line: mai-code
+  - id: mai-code-1-1-flash
+    display_name: "MAI-Code-1.1-Flash"
+    vendor: Microsoft
+    model_line: mai-code
   - id: mai-cyber-1-flash
     display_name: "MAI-Cyber-1-Flash"
     vendor: Microsoft
