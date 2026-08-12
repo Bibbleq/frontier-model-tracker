@@ -126,3 +126,27 @@ and exposure. Cross-platform inference is never sufficient on its own.
 A useful PR explains what changed, why, and links the strongest public source.
 Where a correction changes an availability or lag claim, note the previous and
 new interpretation explicitly.
+
+## Automated triage
+
+Candidate events reach this repository automatically. An upstream watcher,
+Steward, files them as issues through the Bibble Envoy bot account, labelled
+`candidate`, with the headline, the source URL, the publication and an excerpt
+from the primary source in the body. A workflow
+(`.github/workflows/assign-copilot.yml`) hands each one to the GitHub Copilot
+cloud agent, which works to the brief in `.github/copilot-instructions.md`. That
+brief is the same standard this document sets: the agent either promotes the
+candidate to a schema-valid event, adds it to `validation_backlog` when the claim
+is real but underdated or underscoped, or comments explaining why it is a
+duplicate, out of scope or not a model event at all. It is told, in as many words,
+never to invent a date and that "I could not verify this" is a successful
+outcome.
+
+Nothing merges itself. The agent opens an ordinary pull request that a human
+reads and merges, and everything the automated path produces is validated the
+same way a hand-written contribution is: `python scripts/build.py` and the
+invariant tests run in CI, the build fails on unknown identifiers, unsorted
+events, date/precision mismatches, impossible lifecycle orderings and
+`confirmed` without a primary source, and the workflow refuses any pull request
+whose `generated/` tree is stale. Automation changes who drafts the diff; it does
+not change the evidence bar or who is accountable for what the dataset claims.
