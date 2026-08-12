@@ -6186,6 +6186,21 @@ validation_backlog:
     target: "Sweep the usual sources across 29 July to 6 August 2026 — GitHub Copilot changelog, Microsoft Foundry blog and retirement schedule, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms for OpenAI, Anthropic, Google, xAI, Moonshot and Mistral — then either record what is found or close this item as confirming nothing else landed."
     model_ids: []
     surface_ids: []
+  - id: "meta-muse-glimmer-release-evidence"
+    state: "open"
+    working_claim: "Meta announced Muse Glimmer as an open-source, open-weight model based on Muse Spark."
+    reason: "The candidate source is third-party coverage and the cited Thurrott URL was not fetchable from this environment at triage time (DNS lookup failure). No first-party Meta artefact was found in this pass to attest a release date, lifecycle scope, or whether Muse Glimmer and Muse Spark are durable product names that belong in the registry."
+    target: "Pin a first-party Meta source (for example ai.meta.com or about.fb.com) that names Muse Glimmer, states a dated release fact, and clarifies model scope. If only undated/current-state references are available, keep this as backlog rather than promoting an inferred event."
+    model_ids: []
+    surface_ids: ["meta"]
+    sources:
+      - publisher: "Thurrott"
+        title: "Meta Releases Open Source, Open Weight Version of its Most Powerful AI Model"
+        url: "https://www.thurrott.com/a-i/340267/meta-releases-open-source-open-weight-version-of-its-most-powerful-ai-model"
+        primary: false
+        retrieved_at: "2026-08-12"
+        source_type: "news"
+        note: "The source URL was not fetchable from this environment during triage (DNS lookup failure), so this item records the candidate claim pending first-party verification."
   - id: "azure-chatgpt-preview-2023-03-09"
     state: "promoted"
     working_claim: "ChatGPT/GPT-3.5 generation reached Azure OpenAI preview on 9 March 2023."
