@@ -294,10 +294,12 @@ Work in this order. The order matters.
   does not belong in the diff or the description.
 - State the previous and the new interpretation explicitly where you change an
   availability or lag claim.
-- Reference the triggering issue. `Closes #N` **only** when you are promoting the
-  candidate to a canonical event. When you are adding a backlog item instead,
-  link the issue without closing it (`Refs #N`) — the research question is still
-  open and the issue is its handle.
+- Reference the triggering issue with a closing keyword (`Fixes #N` / `Closes #N`)
+  whether you are promoting to a canonical event **or** adding a backlog item:
+  either way the candidate has been triaged and the issue's job is done. For a
+  backlog add, the `validation_backlog` entry becomes the open handle for the
+  research question — one tracker per claim, not two. Only a pure rejection
+  needs no linkage keyword; close the issue with the explanatory comment instead.
 - Tick the checklist in `.github/pull_request_template.md` honestly.
 - Note anything you could not verify and what a human should check.
 
