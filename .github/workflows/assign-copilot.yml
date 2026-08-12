@@ -1,0 +1,209 @@
+# Hand a freshly filed `candidate` issue to the Copilot cloud agent (previously
+# "coding agent") so it drafts either a data PR or a reasoned rejection.
+#
+# ---------------------------------------------------------------------------
+# SETUP REQUIRED BEFORE THIS WORKFLOW CAN WORK
+# ---------------------------------------------------------------------------
+# 1. A repository secret named COPILOT_ASSIGN_TOKEN.
+#
+#    The default GITHUB_TOKEN CANNOT assign an issue to Copilot. GitHub's API
+#    documentation is explicit that the assignment mutation needs "a user token,
+#    for example a personal access token or a GitHub App user-to-server token",
+#    because the agent runs against a Copilot licence held by a user. With
+#    GITHUB_TOKEN the mutation fails, so this workflow asks for the token
+#    up front and stops with a clear message rather than 403-ing later.
+#
+#    Create a fine-grained personal access token scoped to this repository with:
+#      - Metadata: Read
+#      - Actions: Read and write
+#      - Contents: Read and write
+#      - Issues: Read and write
+#      - Pull requests: Read and write
+#    (a classic token needs the `repo` scope instead), then save it as
+#    Settings -> Secrets and variables -> Actions -> New repository secret,
+#    named COPILOT_ASSIGN_TOKEN. The token's owner must hold a paid Copilot plan
+#    with cloud agent access, since that is the licence the agent consumes.
+#
+# 2. Copilot cloud agent enabled for this repository. It is available on the
+#    paid Copilot plans and repository owners can opt a repository out, so check
+#    it is on. The `suggestedActors` query below only returns the
+#    `copilot-swe-agent` actor when the agent is enabled both for the repository
+#    and for the token's owner; if it is missing, this workflow says so and stops.
+#
+# 3. Expect to approve the agent's workflow runs. GitHub requires a user with
+#    write access to press "Approve and run workflows" on a pull request raised
+#    by Copilot before Actions will run, so `validate-data` sits pending on the
+#    agent's PR until Ben approves it. A repository setting can skip that
+#    approval; leaving it on is the safer default for a public dataset.
+#
+# 4. Suggested agent firewall allow-list (Copilot settings -> Coding agent), so
+#    the agent can actually read the primary sources it is asked to verify:
+#      microsoft.com, learn.microsoft.com, techcommunity.microsoft.com,
+#      devblogs.microsoft.com, blogs.microsoft.com, microsoft.ai, github.blog,
+#      openai.com, anthropic.com, web.archive.org, archive.org
+#
+# The agent's brief lives in .github/copilot-instructions.md.
+
+name: Assign candidate issues to Copilot
+
+on:
+  issues:
+    types: [opened, labeled]
+
+# Reading the issue and, on failure, leaving a comment on it. The assignment
+# itself deliberately does not use this token — see the header.
+permissions:
+  contents: read
+  issues: write
+
+# An issue opened with the label already applied fires `opened` and `labeled`.
+# Serialise per issue so the two runs cannot both assign.
+concurrency:
+  group: assign-copilot-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  assign:
+    # The guard, in plain terms:
+    #   - the issue is still open;
+    #   - it carries the label `candidate`, matched exactly and
+    #     case-sensitively (labels.*.name compares whole strings, so
+    #     `candidate-review` does not match);
+    #   - on a `labeled` event, `candidate` is the label that was just added,
+    #     so re-labelling an old issue with something else does not re-trigger;
+    #   - and the issue was filed by the Bibble Envoy bot, which is what
+    #     Steward files candidates through, or by Ben by hand. Anyone else
+    #     opening a `candidate` issue gets no agent time. Add logins to this
+    #     list only deliberately: assignment spends Copilot licence quota and
+    #     hands an untrusted issue body to an agent.
+    if: >-
+      github.event.issue.state == 'open'
+      && contains(github.event.issue.labels.*.name, 'candidate')
+      && (github.event.action != 'labeled' || github.event.label.name == 'candidate')
+      && contains(fromJSON('["bibble-envoy", "Bibbleq"]'), github.event.issue.user.login)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require the assignment token
+        env:
+          COPILOT_ASSIGN_TOKEN: ${{ secrets.COPILOT_ASSIGN_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${COPILOT_ASSIGN_TOKEN}" ]; then
+            echo "::error title=COPILOT_ASSIGN_TOKEN is not set::Assigning an issue to Copilot needs a user token; the default GITHUB_TOKEN cannot do it. See the header comment in .github/workflows/assign-copilot.yml for the exact fine-grained token scopes and where to save the secret."
+            exit 1
+          fi
+
+      - name: Skip if Copilot is already assigned
+        id: existing
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          set -euo pipefail
+          assignees=$(gh api "repos/${REPO}/issues/${ISSUE_NUMBER}" --jq '[.assignees[].login] | join(",")')
+          echo "Current assignees: ${assignees:-none}"
+          if printf '%s' "$assignees" | grep -qiE '(^|,)(copilot-swe-agent|copilot)(,|$)'; then
+            echo "already=true" >> "$GITHUB_OUTPUT"
+            echo "Copilot is already assigned; nothing to do."
+          else
+            echo "already=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # `suggestedActors` returns the agent only when Copilot cloud agent is
+      # enabled for this repository and for the token's owner, so this doubles
+      # as the enablement check.
+      - name: Resolve the Copilot actor and repository ids
+        id: actor
+        if: steps.existing.outputs.already == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.COPILOT_ASSIGN_TOKEN }}
+          OWNER: ${{ github.repository_owner }}
+          NAME: ${{ github.event.repository.name }}
+        run: |
+          set -euo pipefail
+          response=$(gh api graphql \
+            -H 'GraphQL-Features: issues_copilot_assignment_api_support' \
+            -f owner="$OWNER" \
+            -f name="$NAME" \
+            -f query='
+              query($owner: String!, $name: String!) {
+                repository(owner: $owner, name: $name) {
+                  id
+                  suggestedActors(capabilities: [CAN_BE_ASSIGNED], first: 100) {
+                    nodes {
+                      login
+                      __typename
+                      ... on Bot { id }
+                      ... on User { id }
+                    }
+                  }
+                }
+              }')
+          repo_id=$(printf '%s' "$response" | jq -r '.data.repository.id')
+          bot_id=$(printf '%s' "$response" | jq -r '
+            .data.repository.suggestedActors.nodes[]
+            | select(.login == "copilot-swe-agent")
+            | .id')
+          if [ -z "$bot_id" ] || [ "$bot_id" = "null" ]; then
+            echo "::error title=copilot-swe-agent is not assignable here::The suggestedActors query returned no copilot-swe-agent actor. Enable Copilot cloud agent for this repository, and check that the owner of COPILOT_ASSIGN_TOKEN has a paid Copilot plan with cloud agent access."
+            exit 1
+          fi
+          echo "repo_id=$repo_id" >> "$GITHUB_OUTPUT"
+          echo "bot_id=$bot_id" >> "$GITHUB_OUTPUT"
+
+      # Every variable here is a scalar, so the whole call stays inside the
+      # documented `gh api graphql -f` form. To pin a specific model instead of
+      # letting Copilot choose, add `model: "<model-id>"` inside
+      # `agentAssignment` below — triage is judgement work, so prefer a frontier
+      # reasoning model over a flash-tier one.
+      - name: Assign the issue to Copilot
+        id: assign
+        if: steps.existing.outputs.already == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.COPILOT_ASSIGN_TOKEN }}
+          ISSUE_ID: ${{ github.event.issue.node_id }}
+          REPO_ID: ${{ steps.actor.outputs.repo_id }}
+          BOT_ID: ${{ steps.actor.outputs.bot_id }}
+          BASE_REF: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+          gh api graphql \
+            -H 'GraphQL-Features: issues_copilot_assignment_api_support,coding_agent_model_selection' \
+            -f issue="$ISSUE_ID" \
+            -f bot="$BOT_ID" \
+            -f repo="$REPO_ID" \
+            -f base="$BASE_REF" \
+            -f query='
+              mutation($issue: ID!, $bot: ID!, $repo: ID!, $base: String!) {
+                replaceActorsForAssignable(input: {
+                  assignableId: $issue,
+                  actorIds: [$bot],
+                  agentAssignment: {
+                    targetRepositoryId: $repo,
+                    baseRef: $base
+                  }
+                }) {
+                  assignable {
+                    ... on Issue {
+                      number
+                      assignees(first: 10) { nodes { login } }
+                    }
+                  }
+                }
+              }'
+          echo "Assigned issue #${{ github.event.issue.number }} to copilot-swe-agent." >> "$GITHUB_STEP_SUMMARY"
+
+      # Never fail silently: a candidate that was never picked up should say so
+      # on the issue, where Ben will see it.
+      - name: Report a failed handover on the issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          gh issue comment "$ISSUE_NUMBER" --repo "$REPO" --body \
+            "Automatic handover to the Copilot cloud agent failed, so this candidate is unassigned and needs triaging by hand. See the [workflow run](${RUN_URL}) for the reason — the usual causes are a missing or expired \`COPILOT_ASSIGN_TOKEN\` secret and the cloud agent not being enabled for this repository."
