@@ -1,7 +1,7 @@
 {
   "totals": {
     "events": 266,
-    "backlog": 69,
+    "backlog": 70,
     "sources": 317,
     "models": 102,
     "surfaces": 25,
@@ -16,7 +16,7 @@
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 29,
+    "open": 30,
     "promoted": 34,
     "rejected": 4
   },
@@ -24,6 +24,11 @@
     {
       "code": "backlog_without_surface",
       "subject": "sweep-2026-07-29-to-08-06",
+      "message": "open item names no surface, so it cannot suppress a lag answer"
+    },
+    {
+      "code": "backlog_without_surface",
+      "subject": "sweep-2026-08-07-to-08-11",
       "message": "open item names no surface, so it cannot suppress a lag answer"
     },
     {
@@ -103,7 +108,7 @@
     }
   ],
   "warning_counts": {
-    "backlog_without_surface": 1,
+    "backlog_without_surface": 2,
     "missing_archive": 1,
     "no_vendor_baseline": 7,
     "no_vendor_baseline_extended": 6,

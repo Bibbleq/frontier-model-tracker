@@ -9223,6 +9223,15 @@
       ]
     },
     {
+      "id": "sweep-2026-08-07-to-08-11",
+      "state": "open",
+      "working_claim": "The window from 7 August to 11 August 2026 has not been swept; the cutoff was moved for a single targeted addition.",
+      "reason": "github-copilot-mai-code-1-1-flash-2026-08-11 was added from a directly supplied source, and research_cutoff moved from 2026-08-06 to 2026-08-11 so the dataset does not carry an event beyond its own stated reach. That move is bookkeeping, not evidence: no vendor, GitHub changelog, Foundry retrospective or Copilot release note between 7 August and 11 August has been reviewed, so absence of other events in that window means nothing.",
+      "target": "Sweep the usual sources across 7 August to 11 August 2026 — GitHub Copilot changelog, Microsoft Foundry blog and retirement schedule, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms for OpenAI, Anthropic, Google, xAI, Moonshot and Mistral — then either record what is found or close this item as confirming nothing else landed.",
+      "model_ids": [],
+      "surface_ids": []
+    },
+    {
       "id": "sweep-2026-07-29-to-08-06",
       "state": "open",
       "working_claim": "The window from 29 July to 6 August 2026 has not been swept; the cutoff was moved for a single targeted addition.",
