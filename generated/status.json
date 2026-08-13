@@ -1,23 +1,23 @@
 {
   "totals": {
-    "events": 265,
+    "events": 266,
     "backlog": 69,
-    "sources": 316,
+    "sources": 317,
     "models": 102,
     "surfaces": 25,
-    "confirmed": 227,
+    "confirmed": 228,
     "supported": 38
   },
   "kinds": {
     "announcement": 12,
-    "availability": 238,
+    "availability": 239,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 30,
-    "promoted": 33,
+    "open": 29,
+    "promoted": 34,
     "rejected": 4
   },
   "warnings": [
@@ -62,6 +62,11 @@
       "message": "no vendor release event, so lag cannot be derived"
     },
     {
+      "code": "no_vendor_baseline",
+      "subject": "mai-code-1-1-flash",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
       "code": "no_vendor_baseline_extended",
       "subject": "grok-4-20",
       "message": "no vendor release event, so lag cannot be derived"
@@ -100,7 +105,7 @@
   "warning_counts": {
     "backlog_without_surface": 1,
     "missing_archive": 1,
-    "no_vendor_baseline": 6,
+    "no_vendor_baseline": 7,
     "no_vendor_baseline_extended": 6,
     "pre_release_access": 1
   },
@@ -108,7 +113,6 @@
     "models_without_events": [
       "claude-mythos-preview",
       "grok-4-1-fast",
-      "mai-code-1-1-flash",
       "mai-code-1-flash",
       "mai-cyber-1-flash",
       "mai-image-2-5",
@@ -153,7 +157,7 @@
     "exact": 324,
     "not_recorded": 527,
     "range": 39,
-    "unknown_no_baseline": 242,
-    "unknown_open_research": 92
+    "unknown_no_baseline": 248,
+    "unknown_open_research": 86
   }
 }
