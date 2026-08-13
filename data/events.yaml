@@ -6171,7 +6171,10 @@ events:
     model_claim: "specific"
     lifecycle: "ga"
     exposure: "selectable"
-    confidence: "confirmed"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      lifecycle: "supported"
     evidence_note: "MAI-Code-1.1-Flash began rolling out in GitHub Copilot on 11 August 2026. Free and Student plan users receive it through auto model selection; Pro, Pro+, Max, Business, and Enterprise users can manually select it in the model picker across Copilot CLI, cloud agent, GitHub Copilot app, Copilot Chat on GitHub, VS Code, Visual Studio, GitHub Mobile, JetBrains, Eclipse, and Xcode. Copilot Business and Enterprise administrators must enable the MAI-Code-1.1-Flash policy, which ships off by default."
     caveat: "The changelog uses 'is now rolling out' rather than an explicit generally-available declaration, so the announcement date is not the date every eligible user could select it. Business and Enterprise availability additionally requires an administrator to enable the policy, meaning users on those plans reach selectable exposure later."
     sources:
