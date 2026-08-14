@@ -12,4 +12,6 @@ Link the strongest public primary source(s), and quote/paraphrase the specific a
 - [ ] Preview / GA / default / retirement are separate events where known
 - [ ] Embedded or specialist model use is not presented as general model-picker availability
 - [ ] Dates describe publicly documented availability, not inferred internal deployment dates
+- [ ] If `research_cutoff` moved: the companion unswept-window sweep item is added
+- [ ] Each claim cluster (date / model / scope / lifecycle) has a verbatim quote where the source provides one
 - [ ] `python scripts/build.py` passes and generated outputs are committed

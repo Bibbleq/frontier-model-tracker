@@ -153,6 +153,16 @@ Take this path only when *all* of the following hold:
 
 Add the event to `data/events.yaml`. See the mechanical steps below.
 
+For a complete worked promotion, read `github-copilot-mai-code-1-1-flash-2026-08-11`
+in `data/events.yaml` (PR #57): a `ga` lifecycle call on "rolling out" wording made
+honest by an explicit `caveat`, a `confidence_detail` split (`date: confirmed`,
+`lifecycle: supported`) resolving to overall `supported` under the weakest-part
+rule, per-plan access differences captured in `evidence_note`, and the paired
+backlog transition (`state: promoted`, `resolution`, `promoted_to`) with its
+unswept-window sweep item. When the evidence meets the five conditions above,
+**promotion is the correct outcome** — do not choose the backlog because it is
+easier to defend; an under-promoted dataset is wrong in a quieter way.
+
 ### (b) Real but underdated or underscoped → add a validation backlog item
 
 This is the *common* outcome, and it is a success, not a fallback. Take it when
@@ -254,10 +264,16 @@ Work in this order. The order matters.
    month is flagged unless a source's `published_at` is that exact day or a
    `quote` lists `date` in its `supports`; a test enforces this over the whole
    dataset, so an unattested first-of-month date will fail CI.
-5. **Cite properly.** Every source needs `publisher`, `title`, `url` (https),
-   `primary`, `retrieved_at`. Add `published_at`, `source_type`, `quote` and
+5. **Cite properly.** Every source needs `publisher`, `title`, `url` (https) and
+   `primary`. Set `retrieved_at` **only when you actually fetched the URL in this
+   session** — a quote carried from an issue excerpt or another document gets a
+   `note` saying so and no `retrieved_at`; the field is a retrieval attestation,
+   not a timestamp of convenience. Add `published_at`, `source_type`, `quote` and
    `supports` wherever you can — a verbatim `quote` with `supports: ["date"]` is
-   what turns current documentation into date evidence. For `documentation` and
+   what turns current documentation into date evidence. **Each claim cluster the
+   event asserts (date, model, scope/plans, lifecycle) should have its own
+   verbatim quote where the source provides one** — a scope claim resting only on
+   your paraphrase is the weakest link in the diff. For `documentation` and
    `release_notes` sources, look up an existing Wayback snapshot and set
    `archived_url`; use the read-only availability API
    (`https://archive.org/wayback/available?url=<url>&timestamp=YYYYMMDD`) and do
@@ -265,10 +281,13 @@ Work in this order. The order matters.
    failure, and the queue is meant to shrink.
 6. **Mind `research_cutoff`.** `data/events.yaml` declares `updated` and
    `research_cutoff` at the top. If your event is dated after the current
-   `research_cutoff`, move the cutoff to cover it **and** open an `open` backlog
-   item recording that the intervening window is unswept, so absence of other
-   events in that window is not read as evidence. That is exactly what
-   `sweep-2026-07-29-to-08-06` does. Update `updated` to the date of the change.
+   `research_cutoff`, that is **always two changes, never one** — a PR that moves
+   the cutoff without its companion item is incomplete and will be sent back:
+   1. move the cutoff to cover the event's date, and
+   2. open an `open` backlog item recording that the intervening window is
+      unswept, so absence of other events in that window is not read as evidence.
+   `sweep-2026-07-29-to-08-06` and `sweep-2026-08-07-to-08-11` are the shapes to
+   follow. Update `updated` to the date of the change.
 7. **Rebuild.** `python -m pip install -r requirements.txt` then
    `python scripts/build.py`. It validates all three files against their schemas,
    resolves every id, checks relations, lifecycle ordering, suspension pairs and
@@ -294,6 +313,11 @@ Work in this order. The order matters.
   does not belong in the diff or the description.
 - State the previous and the new interpretation explicitly where you change an
   availability or lag claim.
+- When a source splits access by plan or tier (auto model selection for some
+  plans, manual selection for others, an admin policy gate), state your
+  flattening decision explicitly: one event with the differences in
+  `evidence_note`/`caveat`, or separate events per exposure — and why. The axes
+  exist to prevent silent flattening; a deliberate, argued flattening is fine.
 - Reference the triggering issue with a closing keyword (`Fixes #N` / `Closes #N`)
   whether you are promoting to a canonical event **or** adding a backlog item:
   either way the candidate has been triaged and the issue's job is done. For a
