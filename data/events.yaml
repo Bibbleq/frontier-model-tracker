@@ -1,6 +1,6 @@
 version: 3
-updated: "2026-08-12"
-research_cutoff: "2026-08-06"
+updated: "2026-08-13"
+research_cutoff: "2026-08-11"
 metadata:
   project: "365Explained Frontier Model Tracker"
   purpose: "Sourced history of frontier and significant model availability across tracked Microsoft surfaces."
@@ -6161,6 +6161,33 @@ events:
         source_type: "changelog"
         quote: "Kimi K3, an open-weight model, is now generally available in GitHub Copilot."
         supports: ["date", "model", "lifecycle", "exposure"]
+  - id: "github-copilot-mai-code-1-1-flash-2026-08-11"
+    kind: "availability"
+    date:
+      start: "2026-08-11"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["mai-code-1-1-flash"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "MAI-Code-1.1-Flash began rolling out in GitHub Copilot on 11 August 2026. Free and Student plan users receive it through auto model selection; Pro, Pro+, Max, Business, and Enterprise users can manually select it in the model picker across Copilot CLI, cloud agent, GitHub Copilot app, Copilot Chat on GitHub, VS Code, Visual Studio, GitHub Mobile, JetBrains, Eclipse, and Xcode. Copilot Business and Enterprise administrators must enable the MAI-Code-1.1-Flash policy, which ships off by default."
+    caveat: "The changelog uses 'is now rolling out' rather than an explicit generally-available declaration, so the announcement date is not the date every eligible user could select it. Business and Enterprise availability additionally requires an administrator to enable the policy, meaning users on those plans reach selectable exposure later."
+    sources:
+      - publisher: "GitHub"
+        title: "MAI-Code-1.1-Flash available in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-08-13"
+        published_at: "2026-08-11"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20260812011544/https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/"
+        quote: "MAI-Code-1.1-Flash, Microsoft's latest small-tier coding model, is now rolling out in GitHub Copilot."
+        supports: ["date", "model"]
 
 validation_backlog:
   - id: "mai-realtime-voice-unreleased"
@@ -6179,6 +6206,13 @@ validation_backlog:
         published_at: "2026-08-02"
         source_type: "news"
         quote: "Microsoft appears to be preparing its first native real-time voice model, referred to as MAI Realtime, which has surfaced as a hidden early-access entry in the company's MAI Playground."
+  - id: "sweep-2026-08-07-to-08-11"
+    state: "open"
+    working_claim: "The window from 7 August to 11 August 2026 has not been swept; the cutoff was moved for a single targeted addition."
+    reason: "github-copilot-mai-code-1-1-flash-2026-08-11 was added from a directly supplied source, and research_cutoff moved from 2026-08-06 to 2026-08-11 so the dataset does not carry an event beyond its own stated reach. That move is bookkeeping, not evidence: no vendor, GitHub changelog, Foundry retrospective or Copilot release note between 7 August and 11 August has been reviewed, so absence of other events in that window means nothing."
+    target: "Sweep the usual sources across 7 August to 11 August 2026 — GitHub Copilot changelog, Microsoft Foundry blog and retirement schedule, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms for OpenAI, Anthropic, Google, xAI, Moonshot and Mistral — then either record what is found or close this item as confirming nothing else landed."
+    model_ids: []
+    surface_ids: []
   - id: "sweep-2026-07-29-to-08-06"
     state: "open"
     working_claim: "The window from 29 July to 6 August 2026 has not been swept; the cutoff was moved for a single targeted addition."
@@ -6696,10 +6730,13 @@ validation_backlog:
         archived_url: "https://web.archive.org/web/20260712151226/https://microsoft.ai/models/"
         note: "Current-state evidence only. The capture attests five models by 12 July; the live page adds MAI-Cyber-1-Flash."
   - id: "github-copilot-mai-code-1-1-flash-rollout-2026-08-11"
-    state: "open"
+    state: "promoted"
     working_claim: "MAI-Code-1.1-Flash started rolling out in GitHub Copilot on 11 August 2026."
     reason: "The cited first-party changelog is not fetchable from this environment, so the issue excerpt is the only available evidence in this pass. That excerpt supports a rollout claim but does not, by itself, fix canonical lifecycle scope for the tracker: it says 'rolling out' rather than a fully completed availability stage."
     target: "Refetch and quote the GitHub changelog directly, including plan/client scope and any explicit lifecycle wording (for example public preview or generally available), then promote to a canonical GitHub Copilot availability event if date and scope are explicit."
+    resolution: "Changelog fetched directly. The page confirms 11 August 2026 as the rollout date and lists per-SKU scope: Free and Student via auto model selection; Pro, Pro+, Max, Business, and Enterprise manually selectable in the model picker across Copilot CLI, cloud agent, app, github.com, VS Code, Visual Studio, GitHub Mobile, JetBrains, Eclipse, and Xcode. Business and Enterprise require an administrator policy enable; the policy defaults to off. No explicit 'generally available' wording; recorded as ga with a caveat."
+    resolved_on: "2026-08-13"
+    promoted_to: "github-copilot-mai-code-1-1-flash-2026-08-11"
     model_ids: ["mai-code-1-1-flash"]
     surface_ids: ["github-copilot"]
     sources:
