@@ -65,6 +65,7 @@ gemini-1-5-pro,Gemini 1.5 Pro,Google,text,frontier,gemini,gemini-1,,,,,,4
 gemini-2-0-flash,Gemini 2.0 Flash,Google,text,frontier,gemini,gemini-2,,,,,,2
 gemini-2-5-pro,Gemini 2.5 Pro,Google,text,frontier,gemini,gemini-2,,,,,,2
 gemini-3-6-flash,Gemini 3.6 Flash,Google,text,frontier,gemini,gemini-3,,,,,,2
+gemini-3-7-flash,Gemini 3.7 Flash,Google,text,frontier,gemini,gemini-3,,,,,,1
 grok-3,Grok 3,xAI,text,frontier,grok,grok-3,,,,,,3
 grok-3-mini,Grok 3 Mini,xAI,text,frontier,grok,grok-3,,,Grok 3 mini,,,3
 grok-4,Grok 4,xAI,text,frontier,grok,grok-4,,,,,,2
