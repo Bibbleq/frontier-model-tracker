@@ -1,8 +1,8 @@
 {
   "totals": {
     "events": 266,
-    "backlog": 70,
-    "sources": 317,
+    "backlog": 71,
+    "sources": 318,
     "models": 102,
     "surfaces": 25,
     "confirmed": 227,
@@ -16,7 +16,7 @@
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 30,
+    "open": 31,
     "promoted": 34,
     "rejected": 4
   },
@@ -160,9 +160,9 @@
   },
   "lag_certainty": {
     "exact": 324,
-    "not_recorded": 527,
+    "not_recorded": 526,
     "range": 39,
     "unknown_no_baseline": 248,
-    "unknown_open_research": 86
+    "unknown_open_research": 87
   }
 }

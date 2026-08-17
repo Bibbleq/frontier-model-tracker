@@ -17,15 +17,15 @@
       "path": "data/events.json",
       "media_type": "application/json",
       "description": "The whole dataset: metadata, canonical events and the validation backlog",
-      "bytes": 451406,
-      "sha256": "392ad0a8eafde0211fa309461d0a3b723aa1aec50161aaf30791568dd9051212"
+      "bytes": 453673,
+      "sha256": "f675b23589efe1ea9020d442d415be9c33de1d39128650cc6bf3eec94ee808b6"
     },
     {
       "path": "data/status.json",
       "media_type": "application/json",
       "description": "Totals, warning counts, coverage gaps and lag certainty distribution",
       "bytes": 4591,
-      "sha256": "2466bdf9a926d570166fe2a2a57a7f245614c2cce20e9880c0d62341ab606fe7"
+      "sha256": "b7fe54085fc6672eb3fd613d13b3b7e3273c317b5994044f673e21a530811538"
     },
     {
       "path": "data/events.csv",
@@ -38,22 +38,22 @@
       "path": "data/validation-backlog.csv",
       "media_type": "text/csv",
       "description": "Open research questions with states and targets, not confirmed history",
-      "bytes": 71508,
-      "sha256": "ba593f0debaec8be662f53534b6a045b0688c3d33df74412621c39dfb3ca84aa"
+      "bytes": 73027,
+      "sha256": "16aab22e3b93df6e43d4a85f58f2bab41c6ff1500c67dbb2088eeecaed658b24"
     },
     {
       "path": "data/lag.csv",
       "media_type": "text/csv",
       "description": "Derived adoption lag; read certainty before any number",
-      "bytes": 171964,
-      "sha256": "44c1eb7b68cf259d375306a37f4e23cef514f42c1c3035e7d0003c182871262c"
+      "bytes": 171973,
+      "sha256": "ad1f25079f8e3669ed6fa57688a05d360c0f0c40877bc966a6f00f4ef02df7a1"
     },
     {
       "path": "data/current-state.csv",
       "media_type": "text/csv",
       "description": "Last known lifecycle per model and surface; read state_is_terminal before presenting it as current",
       "bytes": 35151,
-      "sha256": "4f9f77655a38be35e0161996c45692a07abe00871d0c156afbf129bf124e5516"
+      "sha256": "19aad1ecf0ac2c20dd4ae8b80260fffbdf7a207f7e96804aa2850a1426ade126"
     },
     {
       "path": "data/models.csv",

@@ -10427,6 +10427,31 @@
       "surface_ids": [
         "xai-grok"
       ]
+    },
+    {
+      "id": "foundry-gpt-chat-latest-gpt5-6-sol-2026-08",
+      "state": "open",
+      "working_claim": "The gpt-chat-latest alias endpoint in Microsoft Foundry was updated to route to GPT-5.6 Sol around 14 August 2026.",
+      "reason": "The candidate blog post (MS Foundry Blog, 14 August 2026) states that gpt-chat-latest is 'built on GPT-5.6 Sol', but the source URL returned a 403 at triage time, so no verbatim quote or exact publication date has been independently verified. gpt-chat-latest is a routing alias, not a distinct model: GPT-5.6 Sol's arrival in Microsoft Foundry is already recorded as foundry-gpt5-6-2026-07-09. An alias pointer update may constitute a milestone or policy event, but the date, scope, and whether this is a durable routing guarantee or a rolling change cannot be established from an unverified excerpt alone.",
+      "target": "Fetch the MS Foundry Blog post at https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/updates-to-gpt-chat-latest-in-microsoft-foundry/ba-p/4546815 and confirm the publication date, the exact claim about the alias pointing to GPT-5.6 Sol, and whether a versioned endpoint (e.g. gpt-chat-latest-YYYY-MM-DD) is named. If the update is a rolling alias with no stable date, the correct outcome is a note on the existing foundry-gpt5-6-2026-07-09 event rather than a new record. If a dated, stable routing commitment is documented, it may be recordable as kind: milestone.",
+      "model_ids": [
+        "gpt-5-6-sol"
+      ],
+      "surface_ids": [
+        "microsoft-foundry"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Tech Community / Foundry Blog",
+          "title": "Updates to GPT-chat-latest in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/updates-to-gpt-chat-latest-in-microsoft-foundry/ba-p/4546815",
+          "primary": true,
+          "retrieved_at": "2026-08-17",
+          "published_at": "2026-08-14",
+          "source_type": "announcement",
+          "note": "Source URL returned 403 at triage time; publication date inferred from the candidate flagging timestamp. The excerpt states gpt-chat-latest is 'built on GPT-5.6 Sol' but the full article was not fetched."
+        }
+      ]
     }
   ]
 }
