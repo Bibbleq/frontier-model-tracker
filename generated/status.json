@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 266,
-    "backlog": 70,
-    "sources": 317,
-    "models": 102,
+    "events": 267,
+    "backlog": 71,
+    "sources": 318,
+    "models": 103,
     "surfaces": 25,
     "confirmed": 227,
-    "supported": 39
+    "supported": 40
   },
   "kinds": {
     "announcement": 12,
-    "availability": 239,
+    "availability": 240,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 30,
+    "open": 31,
     "promoted": 34,
     "rejected": 4
   },
@@ -29,6 +29,11 @@
     {
       "code": "backlog_without_surface",
       "subject": "sweep-2026-08-07-to-08-11",
+      "message": "open item names no surface, so it cannot suppress a lag answer"
+    },
+    {
+      "code": "backlog_without_surface",
+      "subject": "sweep-2026-08-12-to-08-14",
       "message": "open item names no surface, so it cannot suppress a lag answer"
     },
     {
@@ -64,6 +69,11 @@
     {
       "code": "no_vendor_baseline",
       "subject": "gpt-transcribe",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline",
+      "subject": "grok-4-6",
       "message": "no vendor release event, so lag cannot be derived"
     },
     {
@@ -108,9 +118,9 @@
     }
   ],
   "warning_counts": {
-    "backlog_without_surface": 2,
+    "backlog_without_surface": 3,
     "missing_archive": 1,
-    "no_vendor_baseline": 7,
+    "no_vendor_baseline": 8,
     "no_vendor_baseline_extended": 6,
     "pre_release_access": 1
   },
@@ -162,7 +172,7 @@
     "exact": 324,
     "not_recorded": 527,
     "range": 39,
-    "unknown_no_baseline": 248,
+    "unknown_no_baseline": 260,
     "unknown_open_research": 86
   }
 }
