@@ -10427,6 +10427,59 @@
       "surface_ids": [
         "xai-grok"
       ]
+    },
+    {
+      "id": "xai-grok4-6-vendor-baseline-2026-08",
+      "state": "open",
+      "working_claim": "xAI released Grok 4.6 on 17 August 2026, available in Grok Build and Cursor.",
+      "reason": "The TLDR newsletter excerpt carries a clear release statement ('Today we are releasing Grok 4.6') and confirms availability in Grok Build and Cursor. However, the canonical first-party source at x.ai/news/grok-4-6 was unreachable at triage time (DNS lookup failure), so no verbatim quote attesting the date and scope from a fetchable first-party page has been obtained.",
+      "target": "Fetch x.ai/news/grok-4-6 and confirm the release date, GA lifecycle, and that 'available today' covers Grok Build and the xAI consumer surface. If the page is dated 17 August 2026 and carries the availability statement, promote this to a vendor-baseline event on xai-grok with confidence: supported and the bounded-date caveat pattern used for Grok 4.5.",
+      "model_ids": [
+        "grok-4-6"
+      ],
+      "surface_ids": [
+        "xai-grok"
+      ],
+      "sources": [
+        {
+          "publisher": "TLDR Newsletters",
+          "title": "Introducing Grok 4.6",
+          "url": "https://links.tldrnewsletter.com/h8t9zs",
+          "primary": false,
+          "retrieved_at": "2026-08-17",
+          "published_at": "2026-08-17",
+          "source_type": "news",
+          "quote": "Today we are releasing Grok 4.6. Grok 4.6 builds on Grok 4.5 with a particular focus on long-running agents and more ambitious interactive and visual work. Grok 4.6 is available today in Cursor and Grok Build.",
+          "note": "Newsletter redirect to x.ai/news/grok-4-6, which was not fetchable from this environment. The quote reproduces the excerpt provided with the candidate issue; it has not been independently verified against the live xAI page."
+        }
+      ]
+    },
+    {
+      "id": "xai-grok4-6-microsoft-surfaces-2026",
+      "state": "open",
+      "working_claim": "Grok 4.6 will arrive on tracked Microsoft surfaces (Microsoft Foundry, GitHub Copilot) following its xAI vendor release on 17 August 2026.",
+      "reason": "Grok 4.5 reached GitHub Copilot on 28 July 2026 and Microsoft Foundry within days of its vendor release, so arrival of Grok 4.6 on those surfaces is plausible but not yet evidenced. No GitHub changelog, Foundry blog, or Foundry retirement schedule entry naming Grok 4.6 was found at triage time. Cross-platform inference from Grok 4.5's path is not sufficient evidence under the dataset's rules.",
+      "target": "Check the GitHub Copilot changelog (github.blog/changelog), the Microsoft Foundry model catalogue and retirement schedule, and the Microsoft Foundry blog for any entry naming Grok 4.6. Separately check whether the xAI Foundry page lists Grok 4.6 with a version string and dated retirement entry, as that has been the primary evidence source for earlier Grok-4 generations on Foundry.",
+      "model_ids": [
+        "grok-4-6"
+      ],
+      "surface_ids": [
+        "microsoft-foundry",
+        "github-copilot"
+      ],
+      "sources": [
+        {
+          "publisher": "TLDR Newsletters",
+          "title": "Introducing Grok 4.6",
+          "url": "https://links.tldrnewsletter.com/h8t9zs",
+          "primary": false,
+          "retrieved_at": "2026-08-17",
+          "published_at": "2026-08-17",
+          "source_type": "news",
+          "quote": "Grok 4.6 is available today in Cursor and Grok Build.",
+          "note": "Confirms vendor availability only; no mention of Microsoft surfaces."
+        }
+      ]
     }
   ]
 }

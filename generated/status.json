@@ -1,9 +1,9 @@
 {
   "totals": {
     "events": 266,
-    "backlog": 70,
-    "sources": 317,
-    "models": 102,
+    "backlog": 72,
+    "sources": 319,
+    "models": 103,
     "surfaces": 25,
     "confirmed": 227,
     "supported": 39
@@ -16,7 +16,7 @@
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 30,
+    "open": 32,
     "promoted": 34,
     "rejected": 4
   },
@@ -118,6 +118,7 @@
     "models_without_events": [
       "claude-mythos-preview",
       "grok-4-1-fast",
+      "grok-4-6",
       "mai-code-1-flash",
       "mai-cyber-1-flash",
       "mai-image-2-5",
@@ -162,7 +163,7 @@
     "exact": 324,
     "not_recorded": 527,
     "range": 39,
-    "unknown_no_baseline": 248,
-    "unknown_open_research": 86
+    "unknown_no_baseline": 252,
+    "unknown_open_research": 94
   }
 }
