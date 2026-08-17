@@ -170,6 +170,7 @@ grok-4-3,Grok 4.3,xAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga
 grok-4-5,Grok 4.5,xAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-grok4-5-2026-07-28,2026-07-28,day,2026-08-14,,0
 grok-4-5,Grok 4.5,xAI,xai-grok,Grok,,ga,not_applicable,false,xai-grok4-5-2026-07-09,2026-07-08,day,2026-08-14,,1
 grok-4-6,Grok 4.6,xAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-grok4-6-2026-08-14,2026-08-14,day,2026-08-14,,0
+grok-4-6,Grok 4.6,xAI,xai-grok,Grok,,ga,not_applicable,false,xai-grok4-6-2026-08-12,2026-08-12,day,2026-08-14,,0
 kimi-k2-5,Kimi K2.5,Moonshot AI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-fw-kimi-k2-5-2026-03,2026-03,month,2026-08-14,,0
 kimi-k2-6,Kimi K2.6,Moonshot AI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-fw-kimi-k2-6-2026-05,2026-05,month,2026-08-14,,0
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-kimi-k2-7-enterprise-2026-07-07,2026-07-07,day,2026-08-14,,0

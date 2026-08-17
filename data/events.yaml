@@ -6188,6 +6188,39 @@ events:
         archived_url: "https://web.archive.org/web/20260812011544/https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/"
         quote: "MAI-Code-1.1-Flash, Microsoft's latest small-tier coding model, is now rolling out in GitHub Copilot."
         supports: ["date", "model"]
+  - id: "xai-grok4-6-2026-08-12"
+    kind: "availability"
+    date:
+      start: "2026-08-12"
+      precision: "day"
+    surface_id: "xai-grok"
+    model_ids: ["grok-4-6"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "xAI released Grok 4.6 on 12 August 2026, available on release day in Grok Build, in Cursor, and through the API and partner platforms. The launch page carries a visible dateline of 12 August 2026 alongside a present-tense release statement, and the GitHub Copilot changelog of 14 August independently corroborates the model being public by then."
+    caveat: "Single-source day: the date rests on the launch page's own dateline. Grok 4.5's launch page carried a dateline that postdated the model's actual public availability by up to eight days, which is why that event is a bounded window; no earlier press has surfaced for 4.6, so the dateline stands as the day. The original triage ran where x.ai was unreachable and proposed a backlog item dating the release from a newsletter's 17 August coverage; the dated first-party page supersedes that, and the 14 August Copilot changelog had already made a 17 August vendor date impossible."
+    sources:
+      - publisher: "xAI"
+        title: "Introducing Grok 4.6"
+        url: "https://x.ai/news/grok-4-6"
+        primary: true
+        retrieved_at: "2026-08-17"
+        published_at: "2026-08-12"
+        source_type: "announcement"
+        quote: "Today we are releasing Grok 4.6."
+        supports: ["date", "model"]
+        note: "The page dateline reads 'Aug 12, 2026'."
+      - publisher: "xAI"
+        title: "Introducing Grok 4.6"
+        url: "https://x.ai/news/grok-4-6"
+        primary: true
+        retrieved_at: "2026-08-17"
+        published_at: "2026-08-12"
+        source_type: "announcement"
+        quote: "Grok 4.6 is available today in Cursor and Grok Build."
+        supports: ["lifecycle"]
   - id: "github-gemini3-7-flash-public-preview-2026-08-13"
     kind: "availability"
     date:
@@ -7031,3 +7064,20 @@ validation_backlog:
         quote: "GPT-chat-latest in Microsoft Foundry is built on GPT-5.6 Sol, bringing focused responses, improved factual reliability, and consistent behavior to conversational applications without requiring developers to select a newly named model endpoint."
         supports: ["model"]
         note: "Direct fetches returned 403; retrieved on 2026-08-17 through the r.jina.ai read-only mirror, which returned the full article body. Publication timestamp 2026-08-13T14:14:26-07:00 from the page metadata. Quote markup stripped; source spelling retained."
+  - id: "foundry-grok4-6-arrival-2026"
+    state: "open"
+    working_claim: "Grok 4.6 will arrive in Microsoft Foundry following its xAI release of 12 August 2026."
+    reason: "Grok 4.5 reached Microsoft Foundry within days of its vendor release, so an arrival is plausible but unevidenced: no Foundry blog entry, catalogue listing or retirement-schedule row naming Grok 4.6 had been found at triage. Cross-platform inference is never sufficient. The GitHub Copilot arrival needs no item: it is recorded as github-grok4-6-2026-08-14."
+    target: "Check the Microsoft Foundry model catalogue, the Foundry blog and the retirement schedule for an entry naming Grok 4.6; version strings and dated retirement rows on the xAI Foundry pages have been the primary evidence for earlier Grok generations there. Record a catalogue arrival when one of those dates it."
+    model_ids: ["grok-4-6"]
+    surface_ids: ["microsoft-foundry"]
+    sources:
+      - publisher: "xAI"
+        title: "Introducing Grok 4.6"
+        url: "https://x.ai/news/grok-4-6"
+        primary: true
+        retrieved_at: "2026-08-17"
+        published_at: "2026-08-12"
+        source_type: "announcement"
+        quote: "Grok 4.6 is available today in Cursor and Grok Build."
+        note: "Names only xAI's own distribution and partner platforms; no mention of any Microsoft surface."

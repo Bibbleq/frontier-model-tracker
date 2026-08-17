@@ -887,18 +887,18 @@ grok-4-5,Grok 4.5,xAI,github_copilot,any_exposure,xai-grok4-5-2026-07-09,2026-07
 grok-4-5,Grok 4.5,xAI,github_copilot,selectable_or_default,xai-grok4-5-2026-07-09,2026-07-08,ga,github-grok4-5-2026-07-28,2026-07-28,github-copilot,selectable,ga,12,20,range
 grok-4-5,Grok 4.5,xAI,foundry,any_exposure,xai-grok4-5-2026-07-09,2026-07-08,ga,,,,,,,,not_recorded
 grok-4-5,Grok 4.5,xAI,foundry,selectable_or_default,xai-grok4-5-2026-07-09,2026-07-08,ga,,,,,,,,not_recorded
-grok-4-6,Grok 4.6,xAI,microsoft,any_exposure,,,,github-grok4-6-2026-08-14,2026-08-14,github-copilot,selectable,ga,,,unknown_no_baseline
-grok-4-6,Grok 4.6,xAI,microsoft,selectable_or_default,,,,github-grok4-6-2026-08-14,2026-08-14,github-copilot,selectable,ga,,,unknown_no_baseline
-grok-4-6,Grok 4.6,xAI,copilot,any_exposure,,,,github-grok4-6-2026-08-14,2026-08-14,github-copilot,selectable,ga,,,unknown_no_baseline
-grok-4-6,Grok 4.6,xAI,copilot,selectable_or_default,,,,github-grok4-6-2026-08-14,2026-08-14,github-copilot,selectable,ga,,,unknown_no_baseline
-grok-4-6,Grok 4.6,xAI,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
-grok-4-6,Grok 4.6,xAI,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-grok-4-6,Grok 4.6,xAI,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
-grok-4-6,Grok 4.6,xAI,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
-grok-4-6,Grok 4.6,xAI,github_copilot,any_exposure,,,,github-grok4-6-2026-08-14,2026-08-14,github-copilot,selectable,ga,,,unknown_no_baseline
-grok-4-6,Grok 4.6,xAI,github_copilot,selectable_or_default,,,,github-grok4-6-2026-08-14,2026-08-14,github-copilot,selectable,ga,,,unknown_no_baseline
-grok-4-6,Grok 4.6,xAI,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
-grok-4-6,Grok 4.6,xAI,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+grok-4-6,Grok 4.6,xAI,microsoft,any_exposure,xai-grok4-6-2026-08-12,2026-08-12,ga,github-grok4-6-2026-08-14,2026-08-14,github-copilot,selectable,ga,2,2,exact
+grok-4-6,Grok 4.6,xAI,microsoft,selectable_or_default,xai-grok4-6-2026-08-12,2026-08-12,ga,github-grok4-6-2026-08-14,2026-08-14,github-copilot,selectable,ga,2,2,exact
+grok-4-6,Grok 4.6,xAI,copilot,any_exposure,xai-grok4-6-2026-08-12,2026-08-12,ga,github-grok4-6-2026-08-14,2026-08-14,github-copilot,selectable,ga,2,2,exact
+grok-4-6,Grok 4.6,xAI,copilot,selectable_or_default,xai-grok4-6-2026-08-12,2026-08-12,ga,github-grok4-6-2026-08-14,2026-08-14,github-copilot,selectable,ga,2,2,exact
+grok-4-6,Grok 4.6,xAI,m365,any_exposure,xai-grok4-6-2026-08-12,2026-08-12,ga,,,,,,,,not_recorded
+grok-4-6,Grok 4.6,xAI,m365,selectable_or_default,xai-grok4-6-2026-08-12,2026-08-12,ga,,,,,,,,not_recorded
+grok-4-6,Grok 4.6,xAI,studio,any_exposure,xai-grok4-6-2026-08-12,2026-08-12,ga,,,,,,,,not_recorded
+grok-4-6,Grok 4.6,xAI,studio,selectable_or_default,xai-grok4-6-2026-08-12,2026-08-12,ga,,,,,,,,not_recorded
+grok-4-6,Grok 4.6,xAI,github_copilot,any_exposure,xai-grok4-6-2026-08-12,2026-08-12,ga,github-grok4-6-2026-08-14,2026-08-14,github-copilot,selectable,ga,2,2,exact
+grok-4-6,Grok 4.6,xAI,github_copilot,selectable_or_default,xai-grok4-6-2026-08-12,2026-08-12,ga,github-grok4-6-2026-08-14,2026-08-14,github-copilot,selectable,ga,2,2,exact
+grok-4-6,Grok 4.6,xAI,foundry,any_exposure,xai-grok4-6-2026-08-12,2026-08-12,ga,,,,,,,,unknown_open_research
+grok-4-6,Grok 4.6,xAI,foundry,selectable_or_default,xai-grok4-6-2026-08-12,2026-08-12,ga,,,,,,,,unknown_open_research
 kimi-k2-5,Kimi K2.5,Moonshot AI,microsoft,any_exposure,,,,foundry-fw-kimi-k2-5-2026-03,2026-03,microsoft-foundry,catalogue,public_preview,,,unknown_no_baseline
 kimi-k2-5,Kimi K2.5,Moonshot AI,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 kimi-k2-5,Kimi K2.5,Moonshot AI,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
