@@ -6,7 +6,7 @@ anthropic-claude,Claude,Anthropic,,,true,,,,,22
 google-gemini,Gemini,Google,,,true,,,,,2
 google-gemini-api,Gemini API,Google,,,true,,,,,4
 mistral,Mistral,Mistral AI,,,true,,,,,1
-xai-grok,Grok,xAI,,,true,,,,,3
+xai-grok,Grok,xAI,,,true,,,,,4
 deepseek,DeepSeek,DeepSeek,,,true,,,,,7
 meta,Meta,Meta,,,true,,,,,1
 moonshot,Moonshot AI,Moonshot AI,,,true,,,,,2
