@@ -10146,7 +10146,7 @@
       "state": "open",
       "working_claim": "Microsoft's current MAI lineup is MAI-Image-2.5, MAI-Voice-2, MAI-Transcribe-1.5, MAI-Thinking-1, MAI-Code-1-Flash and MAI-Cyber-1-Flash, all listed generally available on microsoft.ai, with no dated releases recorded.",
       "reason": "The microsoft.ai models page is current-state marketing and dates nothing. Its 12 July 2026 Wayback capture already lists five of the six, so those were live by then; MAI-Cyber-1-Flash appears only in the live page, so it surfaced between 12 and 31 July. The first-generation MAI models were recorded from the April retrospective; this second wave has no retrospective coverage yet.",
-      "target": "Checked against the Foundry model-wave post of 6 August 2026, which names MAI-Thinking-1, MAI-Image-2.5, MAI-Image-2.5 Flash, MAI-Voice-2 and MAI-Transcribe-1.5 in one sentence and dates none of them — it says Microsoft 'has announced' them, in the past tense, without stating Foundry availability. That post is a positioning piece rather than a monthly retrospective, so it does not close this item; it does confirm the lineup and it did register MAI-Image-2.5 Flash. Still to do: date each model from the June, July and August Foundry retrospectives as they publish, and from schedule version strings as floors. MAI-Image-2.5 should also close the loop with the 15 August retirement of the Image-2 pair, which names it as replacement. Microsoft Frontier Tuning is a fine-tuning service, not a model, and stays out of the registry.",
+      "target": "Checked against the Foundry model-wave post of 6 August 2026, which names MAI-Thinking-1, MAI-Image-2.5, MAI-Image-2.5 Flash, MAI-Voice-2 and MAI-Transcribe-1.5 in one sentence and dates none of them — it says Microsoft 'has announced' them, in the past tense, without stating Foundry availability. That post is a positioning piece rather than a monthly retrospective, so it does not close this item; it does confirm the lineup and it did register MAI-Image-2.5 Flash. MAI-Thinking-1 now has a specific item (mai-thinking-1-public-preview-2026-08) tracking its announcement page, which states public preview is available and carries a page update date of 12 August 2026. Still to do: date each remaining model from the June, July and August Foundry retrospectives as they publish, and from schedule version strings as floors. MAI-Image-2.5 should also close the loop with the 15 August retirement of the Image-2 pair, which names it as replacement. Microsoft Frontier Tuning is a fine-tuning service, not a model, and stays out of the registry.",
       "model_ids": [
         "mai-image-2-5",
         "mai-voice-2",
@@ -10168,6 +10168,32 @@
           "source_type": "documentation",
           "archived_url": "https://web.archive.org/web/20260712151226/https://microsoft.ai/models/",
           "note": "Current-state evidence only. The capture attests five models by 12 July; the live page adds MAI-Cyber-1-Flash."
+        }
+      ]
+    },
+    {
+      "id": "mai-thinking-1-public-preview-2026-08",
+      "state": "open",
+      "working_claim": "MAI-Thinking-1 entered public preview in Microsoft Foundry on or around 12 August 2026.",
+      "reason": "The microsoft.ai announcement page carries the banner 'Updated as of August 12, 2026 MAI-Thinking-1 is now available in public preview. Try it now in Microsoft Foundry', but this text was absent from the 13 August 2026 Wayback Machine capture of the same page, suggesting the banner is dynamically rendered and was not archived. August 12 is therefore a strong candidate from a page revision timestamp rather than a verified body statement; the date cannot be taken as confirmed.",
+      "target": "Fetch the live announcement page directly and confirm the 'now available in public preview' banner and its stated update date. If August 12 is confirmed as the preview start, promote as a microsoft-ai public_preview event at day precision with confidence supported, citing the revision timestamp in a caveat. Also check the August 2026 Foundry retrospective when it is published.",
+      "model_ids": [
+        "mai-thinking-1"
+      ],
+      "surface_ids": [
+        "microsoft-ai"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft AI",
+          "title": "Introducing MAI-Thinking-1",
+          "url": "https://microsoft.ai/news/introducing-mai-thinking-1",
+          "primary": true,
+          "retrieved_at": "2026-08-17",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260813185533/https://microsoft.ai/news/introducing-mai-thinking-1/",
+          "quote": "MAI-Thinking-1 is now available in public preview. Try it now in Microsoft Foundry",
+          "note": "The page fetch on 2026-08-17 returned the article body but not the 'now available in public preview' banner, consistent with the 13 August Wayback capture; the banner appears to be dynamically rendered. The quote is from the candidate issue excerpt, which carries the banner text that was not visible in either the live fetch or the Wayback archive."
         }
       ]
     },
