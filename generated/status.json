@@ -1,8 +1,8 @@
 {
   "totals": {
     "events": 268,
-    "backlog": 71,
-    "sources": 319,
+    "backlog": 72,
+    "sources": 320,
     "models": 104,
     "surfaces": 25,
     "confirmed": 228,
@@ -16,7 +16,7 @@
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 31,
+    "open": 32,
     "promoted": 34,
     "rejected": 4
   },
