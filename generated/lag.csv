@@ -706,7 +706,7 @@ gpt-5-6-sol,GPT-5.6 Sol,OpenAI,studio,selectable_or_default,openai-gpt5-6-previe
 gpt-5-6-sol,GPT-5.6 Sol,OpenAI,github_copilot,any_exposure,openai-gpt5-6-preview-2026-06-26,2026-06-26,limited_preview,github-gpt5-6-sol-2026-07-09,2026-07-09,github-copilot,selectable,ga,13,13,exact
 gpt-5-6-sol,GPT-5.6 Sol,OpenAI,github_copilot,selectable_or_default,openai-gpt5-6-preview-2026-06-26,2026-06-26,limited_preview,github-gpt5-6-sol-2026-07-09,2026-07-09,github-copilot,selectable,ga,13,13,exact
 gpt-5-6-sol,GPT-5.6 Sol,OpenAI,foundry,any_exposure,openai-gpt5-6-preview-2026-06-26,2026-06-26,limited_preview,foundry-gpt5-6-2026-07-09,2026-07-09,microsoft-foundry,catalogue,ga,13,13,exact
-gpt-5-6-sol,GPT-5.6 Sol,OpenAI,foundry,selectable_or_default,openai-gpt5-6-preview-2026-06-26,2026-06-26,limited_preview,,,,,,,,not_recorded
+gpt-5-6-sol,GPT-5.6 Sol,OpenAI,foundry,selectable_or_default,openai-gpt5-6-preview-2026-06-26,2026-06-26,limited_preview,,,,,,,,unknown_open_research
 gpt-5-6-terra,GPT-5.6 Terra,OpenAI,microsoft,any_exposure,openai-gpt5-6-2026-07-09,2026-07-09,ga,foundry-gpt5-6-2026-07-09,2026-07-09,microsoft-foundry,catalogue,ga,0,0,exact
 gpt-5-6-terra,GPT-5.6 Terra,OpenAI,microsoft,selectable_or_default,openai-gpt5-6-2026-07-09,2026-07-09,ga,github-gpt5-6-terra-2026-07-09,2026-07-09,github-copilot,selectable,ga,0,0,exact
 gpt-5-6-terra,GPT-5.6 Terra,OpenAI,copilot,any_exposure,openai-gpt5-6-2026-07-09,2026-07-09,ga,github-gpt5-6-terra-2026-07-09,2026-07-09,github-copilot,selectable,ga,0,0,exact
