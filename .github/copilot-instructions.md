@@ -98,6 +98,18 @@ Work through all of these before you write a line of YAML.
 - **A date in a model's name is not a date.** `DeepSeek-V4-Flash-0731` was dated
   from the weights repository's creation timestamp; the `0731` was treated as a
   coincidence that agreed, not as the source.
+- **A coverage date is not an event date.** An aggregator or newsletter reprints
+  the vendor's present tense: "today we are releasing" means the day the vendor
+  published, not the day the newsletter sent it, and never the day the candidate
+  was flagged. The Grok 4.6 candidate reached triage on 17 August carrying
+  "Today we are releasing Grok 4.6"; the release was the 12th, and a sibling
+  changelog in the same batch had already proved the model public by the 14th.
+  Do the weekday arithmetic too: "on Monday" in an article published Friday
+  14 August is the 10th, not "around the 11th". If the vendor page is
+  unreachable, bound the date from dated corroborating artefacts — never from
+  when the news reached you. The same applies to `published_at`: the flagging
+  timestamp in the issue is not a publication date, and inferring one from it
+  put a wrong date on a primary source in the 17 August batch.
 - **On a vendor-baseline surface, `exposure` is `not_applicable`.** Vendor events
   exist only to anchor lag. The build warns on `selectable` or `default` there.
 
@@ -232,6 +244,15 @@ Take this path when the candidate is:
 Comment with the reasoning and the rule it rests on, then close. Do not open an
 empty PR to say nothing changed.
 
+If your harness can only answer with a pull request, open a no-change PR that
+carries the comment you would have left: title it
+`Triage #N: … — close as <duplicate|out of scope|rejected>`, state the outcome,
+the rule it rests on and the covering event or backlog id in the body, and use
+**no** closing keyword — a human closes the PR and the candidate issue together.
+Tick **only** the checklist lines for steps you actually ran, which for a
+no-change PR is usually none of them. A ticked build step that never ran is a
+false attestation, and it is the first thing a reviewer checks.
+
 ## Mechanical steps for a data PR
 
 Work in this order. The order matters.
@@ -265,10 +286,14 @@ Work in this order. The order matters.
    `quote` lists `date` in its `supports`; a test enforces this over the whole
    dataset, so an unattested first-of-month date will fail CI.
 5. **Cite properly.** Every source needs `publisher`, `title`, `url` (https) and
-   `primary`. Set `retrieved_at` **only when you actually fetched the URL in this
-   session** — a quote carried from an issue excerpt or another document gets a
-   `note` saying so and no `retrieved_at`; the field is a retrieval attestation,
-   not a timestamp of convenience. Add `published_at`, `source_type`, `quote` and
+   `primary`. `retrieved_at` is schema-required on every source and the build
+   fails without it, so never omit it — omitting it for an unfetched source is
+   how PR #66 broke. When you fetched the URL in this session, the field attests
+   the retrieval. When the fetch failed or was never attempted, set it to the
+   date of the attempt and put the honesty in `note`: that the fetch 403ed or
+   the host would not resolve, and where any `quote` actually came from — an
+   issue excerpt is not the page. A `retrieved_at` whose note discloses a failed
+   fetch is honest; a bare one on a page you never saw is not. Add `published_at`, `source_type`, `quote` and
    `supports` wherever you can — a verbatim `quote` with `supports: ["date"]` is
    what turns current documentation into date evidence. **Each claim cluster the
    event asserts (date, model, scope/plans, lifecycle) should have its own
@@ -288,6 +313,12 @@ Work in this order. The order matters.
       unswept, so absence of other events in that window is not read as evidence.
    `sweep-2026-07-29-to-08-06` and `sweep-2026-08-07-to-08-11` are the shapes to
    follow. Update `updated` to the date of the change.
+
+   Before moving the cutoff, look at the other open triage PRs. If a sibling PR
+   already moves it to or past your event's date, leave the cutoff alone and say
+   so in your PR body — whoever moves it furthest carries the sweep item. Two
+   PRs in the 17 August batch each moved it independently and opened overlapping
+   sweep items, which cost a human a manual reconciliation of both.
 7. **Rebuild.** `python -m pip install -r requirements.txt` then
    `python scripts/build.py`. It validates all three files against their schemas,
    resolves every id, checks relations, lifecycle ordering, suspension pairs and
@@ -335,6 +366,13 @@ what was deliberately *not* recorded.
 
 - The excerpt in the issue body is a starting point, not the evidence. Fetch the
   source URL and read the page.
+- **The batch is evidence.** Before you write a date claim, look at the other
+  open candidate issues and triage PRs for the same model, using whatever GitHub
+  access you have; a sibling source may bound or refute your date. A changelog
+  showing a model on a Microsoft surface on the 14th makes any later vendor
+  release date impossible — that contradiction shipped in the 17 August batch
+  because each candidate was triaged blind to its siblings. If you cannot list
+  the open candidates, say so in the PR body.
 - Cross-verify against the official domain where one exists and is reachable:
   `microsoft.com`, `learn.microsoft.com`, `techcommunity.microsoft.com`,
   `devblogs.microsoft.com`, `blogs.microsoft.com`, `microsoft.ai`, `github.blog`,
