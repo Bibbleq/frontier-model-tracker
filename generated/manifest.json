@@ -17,15 +17,15 @@
       "path": "data/events.json",
       "media_type": "application/json",
       "description": "The whole dataset: metadata, canonical events and the validation backlog",
-      "bytes": 458611,
-      "sha256": "fbb5c0e2ec226e6c9dac4e4bc2ed00d0ab43e2b478d1a5bc97a2d66714b76b71"
+      "bytes": 461366,
+      "sha256": "7308c05887e785d81e48370c81cceaac0612de18a28379cc1ebb4eb571ed716c"
     },
     {
       "path": "data/status.json",
       "media_type": "application/json",
       "description": "Totals, warning counts, coverage gaps and lag certainty distribution",
-      "bytes": 5075,
-      "sha256": "c5729f6630a788af69037f09fa5fa399b5f474674dae4521b590f65f1c21ff74"
+      "bytes": 5098,
+      "sha256": "dbf99aa71d675d07907a878585c7740e1fc15faddeee1670199edadf852dc4c9"
     },
     {
       "path": "data/events.csv",
@@ -38,15 +38,15 @@
       "path": "data/validation-backlog.csv",
       "media_type": "text/csv",
       "description": "Open research questions with states and targets, not confirmed history",
-      "bytes": 73755,
-      "sha256": "9705d0cebb41b904b3a3778456dfef6520df1b95c45431e1a7b55a52350bb88c"
+      "bytes": 75515,
+      "sha256": "2dc7b6416090ddf619abef9e67a79739eaabb89391b935986901235feb92c1eb"
     },
     {
       "path": "data/lag.csv",
       "media_type": "text/csv",
       "description": "Derived adoption lag; read certainty before any number",
-      "bytes": 175014,
-      "sha256": "ad1b487afa1c2540fd0aafa7547d7ef3dc30d2bfa300837e962e007402489f8e"
+      "bytes": 176110,
+      "sha256": "d88cdc770ae29a00b89ed2b7bf772e7cfeb4a5ab72eab88221ca59b1e4750fc3"
     },
     {
       "path": "data/current-state.csv",
@@ -59,8 +59,8 @@
       "path": "data/models.csv",
       "media_type": "text/csv",
       "description": "Model registry with modality, scope, generation, model-line, family and event-count references",
-      "bytes": 8425,
-      "sha256": "f767f3949fd74e404359cb59666c2f02060b0ff62898c7ba26a92c0c6a1b2a60"
+      "bytes": 8505,
+      "sha256": "a11ee77cc1f026bad6bd99e056b69cb127f3cf4d7c231f74e2336725f8fe1ea5"
     },
     {
       "path": "data/series.csv",

@@ -671,6 +671,18 @@ gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,github_copilot,any_exposure,openai-gpt5
 gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,github_copilot,selectable_or_default,openai-gpt5-5-thinking-2026-04-23,2026-04-23,ga,,,,,,,,not_recorded
 gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,foundry,any_exposure,openai-gpt5-5-thinking-2026-04-23,2026-04-23,ga,,,,,,,,not_recorded
 gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,foundry,selectable_or_default,openai-gpt5-5-thinking-2026-04-23,2026-04-23,ga,,,,,,,,not_recorded
+gpt-5-6-cyber,GPT-5.6-Cyber,OpenAI,microsoft,any_exposure,,,,,,,,,,,unknown_no_baseline
+gpt-5-6-cyber,GPT-5.6-Cyber,OpenAI,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+gpt-5-6-cyber,GPT-5.6-Cyber,OpenAI,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+gpt-5-6-cyber,GPT-5.6-Cyber,OpenAI,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+gpt-5-6-cyber,GPT-5.6-Cyber,OpenAI,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+gpt-5-6-cyber,GPT-5.6-Cyber,OpenAI,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+gpt-5-6-cyber,GPT-5.6-Cyber,OpenAI,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+gpt-5-6-cyber,GPT-5.6-Cyber,OpenAI,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+gpt-5-6-cyber,GPT-5.6-Cyber,OpenAI,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+gpt-5-6-cyber,GPT-5.6-Cyber,OpenAI,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+gpt-5-6-cyber,GPT-5.6-Cyber,OpenAI,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
+gpt-5-6-cyber,GPT-5.6-Cyber,OpenAI,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 gpt-5-6-luna,GPT-5.6 Luna,OpenAI,microsoft,any_exposure,openai-gpt5-6-2026-07-09,2026-07-09,ga,foundry-gpt5-6-2026-07-09,2026-07-09,microsoft-foundry,catalogue,ga,0,0,exact
 gpt-5-6-luna,GPT-5.6 Luna,OpenAI,microsoft,selectable_or_default,openai-gpt5-6-2026-07-09,2026-07-09,ga,github-gpt5-6-luna-2026-07-09,2026-07-09,github-copilot,selectable,ga,0,0,exact
 gpt-5-6-luna,GPT-5.6 Luna,OpenAI,copilot,any_exposure,openai-gpt5-6-2026-07-09,2026-07-09,ga,github-gpt5-6-luna-2026-07-09,2026-07-09,github-copilot,selectable,ga,0,0,exact
