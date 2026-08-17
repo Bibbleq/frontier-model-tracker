@@ -1,7 +1,7 @@
 {
   "contract_version": 3,
   "dataset_version": 3,
-  "updated": "2026-08-13",
+  "updated": "2026-08-17",
   "research_cutoff": "2026-08-11",
   "base_url": "https://bibbleq.github.io/frontier-model-tracker/",
   "snapshot_url": "https://bibbleq.github.io/frontier-model-tracker/c3/v3/",
@@ -17,15 +17,15 @@
       "path": "data/events.json",
       "media_type": "application/json",
       "description": "The whole dataset: metadata, canonical events and the validation backlog",
-      "bytes": 451406,
-      "sha256": "392ad0a8eafde0211fa309461d0a3b723aa1aec50161aaf30791568dd9051212"
+      "bytes": 453746,
+      "sha256": "64750a971332ca5f4e2ad065565e1e4593c2121a8099466ec57c894fffebfd40"
     },
     {
       "path": "data/status.json",
       "media_type": "application/json",
       "description": "Totals, warning counts, coverage gaps and lag certainty distribution",
       "bytes": 4591,
-      "sha256": "2466bdf9a926d570166fe2a2a57a7f245614c2cce20e9880c0d62341ab606fe7"
+      "sha256": "6ddc05e61c17132508a6d36c6148dc219bcc9dba07d832e957578bf69f470f47"
     },
     {
       "path": "data/events.csv",
@@ -38,8 +38,8 @@
       "path": "data/validation-backlog.csv",
       "media_type": "text/csv",
       "description": "Open research questions with states and targets, not confirmed history",
-      "bytes": 71508,
-      "sha256": "ba593f0debaec8be662f53534b6a045b0688c3d33df74412621c39dfb3ca84aa"
+      "bytes": 72814,
+      "sha256": "4cda880ac76b9acb5138a2979081d219ab0fb1f9b9d84382ee01996ac31cc6a2"
     },
     {
       "path": "data/lag.csv",
