@@ -6935,7 +6935,6 @@ validation_backlog:
         title: "Updates to GPT-chat-latest in Microsoft Foundry"
         url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/updates-to-gpt-chat-latest-in-microsoft-foundry/ba-p/4546815"
         primary: true
-        retrieved_at: "2026-08-17"
         published_at: "2026-08-14"
         source_type: "announcement"
         note: "Source URL returned 403 at triage time; publication date inferred from the candidate flagging timestamp. The excerpt states gpt-chat-latest is 'built on GPT-5.6 Sol' but the full article was not fetched."
