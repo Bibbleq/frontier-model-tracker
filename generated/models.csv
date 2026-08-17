@@ -38,6 +38,7 @@ gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,text,frontier,openai-gpt,gpt-5,,,,,,2
 gpt-5-6-sol,GPT-5.6 Sol,OpenAI,text,frontier,openai-gpt,gpt-5,,gpt-5-6,,,,5
 gpt-5-6-terra,GPT-5.6 Terra,OpenAI,text,frontier,openai-gpt,gpt-5,,gpt-5-6,,,,4
 gpt-5-6-luna,GPT-5.6 Luna,OpenAI,text,frontier,openai-gpt,gpt-5,,gpt-5-6,,,,4
+gpt-5-6-cyber,GPT-5.6-Cyber,OpenAI,text,frontier,openai-gpt,gpt-5,,gpt-5-6,,,,0
 claude-1,Claude 1,Anthropic,text,frontier,claude,claude-1,,,,,,1
 claude-2,Claude 2,Anthropic,text,frontier,claude,claude-2,,,,,,1
 claude-2-1,Claude 2.1,Anthropic,text,frontier,claude,claude-2,,,,,,1
