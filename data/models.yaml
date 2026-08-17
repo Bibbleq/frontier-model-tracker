@@ -634,6 +634,10 @@ models:
     display_name: "Grok 4.5"
     vendor: xAI
     generation: grok-4
+  - id: grok-4-6
+    display_name: "Grok 4.6"
+    vendor: xAI
+    generation: grok-4
   - id: llama-2
     display_name: "Llama 2"
     vendor: Meta
