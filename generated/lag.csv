@@ -455,6 +455,18 @@ gemini-3-6-flash,Gemini 3.6 Flash,Google,github_copilot,any_exposure,google-gemi
 gemini-3-6-flash,Gemini 3.6 Flash,Google,github_copilot,selectable_or_default,google-gemini3-6-flash-2026-07-21,2026-07-21,ga,github-gemini3-6-flash-2026-07-21,2026-07-21,github-copilot,selectable,ga,0,0,exact
 gemini-3-6-flash,Gemini 3.6 Flash,Google,foundry,any_exposure,google-gemini3-6-flash-2026-07-21,2026-07-21,ga,,,,,,,,not_recorded
 gemini-3-6-flash,Gemini 3.6 Flash,Google,foundry,selectable_or_default,google-gemini3-6-flash-2026-07-21,2026-07-21,ga,,,,,,,,not_recorded
+gemini-3-7-flash,Gemini 3.7 Flash,Google,microsoft,any_exposure,,,,github-gemini3-7-flash-public-preview-2026-08-13,2026-08-13,github-copilot,selectable,public_preview,,,unknown_no_baseline
+gemini-3-7-flash,Gemini 3.7 Flash,Google,microsoft,selectable_or_default,,,,github-gemini3-7-flash-public-preview-2026-08-13,2026-08-13,github-copilot,selectable,public_preview,,,unknown_no_baseline
+gemini-3-7-flash,Gemini 3.7 Flash,Google,copilot,any_exposure,,,,github-gemini3-7-flash-public-preview-2026-08-13,2026-08-13,github-copilot,selectable,public_preview,,,unknown_no_baseline
+gemini-3-7-flash,Gemini 3.7 Flash,Google,copilot,selectable_or_default,,,,github-gemini3-7-flash-public-preview-2026-08-13,2026-08-13,github-copilot,selectable,public_preview,,,unknown_no_baseline
+gemini-3-7-flash,Gemini 3.7 Flash,Google,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+gemini-3-7-flash,Gemini 3.7 Flash,Google,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+gemini-3-7-flash,Gemini 3.7 Flash,Google,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+gemini-3-7-flash,Gemini 3.7 Flash,Google,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+gemini-3-7-flash,Gemini 3.7 Flash,Google,github_copilot,any_exposure,,,,github-gemini3-7-flash-public-preview-2026-08-13,2026-08-13,github-copilot,selectable,public_preview,,,unknown_no_baseline
+gemini-3-7-flash,Gemini 3.7 Flash,Google,github_copilot,selectable_or_default,,,,github-gemini3-7-flash-public-preview-2026-08-13,2026-08-13,github-copilot,selectable,public_preview,,,unknown_no_baseline
+gemini-3-7-flash,Gemini 3.7 Flash,Google,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
+gemini-3-7-flash,Gemini 3.7 Flash,Google,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 gpt-3,GPT-3,OpenAI,microsoft,any_exposure,openai-api-2020-06-11,2020-06-11,ga,azure-openai-preview-2021-11-02,2021-11-02,azure-openai,catalogue,limited_preview,509,509,exact
 gpt-3,GPT-3,OpenAI,microsoft,selectable_or_default,openai-api-2020-06-11,2020-06-11,ga,,,,,,,,unknown_open_research
 gpt-3,GPT-3,OpenAI,copilot,any_exposure,openai-api-2020-06-11,2020-06-11,ga,,,,,,,,not_recorded

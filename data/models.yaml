@@ -595,6 +595,11 @@ models:
     display_name: "Gemini 3.6 Flash"
     vendor: Google
     generation: gemini-3
+  - id: gemini-3-7-flash
+    display_name: "Gemini 3.7 Flash"
+    vendor: Google
+    generation: gemini-3
+    note: "Launched in GitHub Copilot as a public preview on 13 August 2026; no Google vendor baseline has been sourced yet."
   - id: grok-3
     display_name: "Grok 3"
     vendor: xAI
