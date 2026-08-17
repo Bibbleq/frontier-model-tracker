@@ -10560,6 +10560,35 @@
           "quote": "OpenAI launched GPT-5.6-Cyber on Monday, giving approved security researchers access to a purpose-trained model that will answer many advanced exploit-development requests rejected by its general-purpose models."
         }
       ]
+    },
+    {
+      "id": "foundry-gpt-chat-latest-gpt5-6-sol-2026-08",
+      "state": "open",
+      "working_claim": "The gpt-chat-latest alias endpoint in Microsoft Foundry was updated to route to GPT-5.6 Sol on or around 13 August 2026.",
+      "reason": "gpt-chat-latest is a routing alias, not a distinct model: GPT-5.6 Sol's arrival in Microsoft Foundry is already recorded as foundry-gpt5-6-2026-07-09. The blog post, published 13 August 2026, confirms the alias is 'built on GPT-5.6 Sol' but names no versioned endpoint and states no effective date for the routing change — it is current-state documentation of a rolling alias. Without a dated, durable routing commitment there is no availability change to record; whether an alias re-point should ever be a milestone event is unsettled.",
+      "target": "The post has now been read: published 2026-08-13, it confirms the 'built on GPT-5.6 Sol' claim verbatim, names no versioned endpoint (e.g. gpt-chat-latest-YYYY-MM-DD), and gives no effective date for the routing change. Remaining question: whether a rolling alias re-point is worth a kind: milestone event at month precision, or only a note on the existing foundry-gpt5-6-2026-07-09 event. If Microsoft later documents a dated, stable routing commitment for the alias, that would settle it.",
+      "model_ids": [
+        "gpt-5-6-sol"
+      ],
+      "surface_ids": [
+        "microsoft-foundry"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Tech Community / Foundry Blog",
+          "title": "Updates to GPT-chat-latest in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/updates-to-gpt-chat-latest-in-microsoft-foundry/ba-p/4546815",
+          "primary": true,
+          "retrieved_at": "2026-08-17",
+          "published_at": "2026-08-13",
+          "source_type": "announcement",
+          "quote": "GPT-chat-latest in Microsoft Foundry is built on GPT-5.6 Sol, bringing focused responses, improved factual reliability, and consistent behavior to conversational applications without requiring developers to select a newly named model endpoint.",
+          "supports": [
+            "model"
+          ],
+          "note": "Direct fetches returned 403; retrieved on 2026-08-17 through the r.jina.ai read-only mirror, which returned the full article body. Publication timestamp 2026-08-13T14:14:26-07:00 from the page metadata. Quote markup stripped; source spelling retained."
+        }
+      ]
     }
   ]
 }

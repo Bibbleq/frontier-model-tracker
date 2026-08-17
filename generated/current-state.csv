@@ -144,7 +144,7 @@ gpt-5-6-luna,GPT-5.6 Luna,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft |
 gpt-5-6-luna,GPT-5.6 Luna,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-gpt5-6-2026-07-09,2026-07-09,day,2026-08-14,,0
 gpt-5-6-sol,GPT-5.6 Sol,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-gpt5-6-sol-2026-07-09,2026-07-09,day,2026-08-14,,0
 gpt-5-6-sol,GPT-5.6 Sol,OpenAI,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,selectable,false,m365-gpt5-6-2026-07-09,2026-07-09,day,2026-08-14,,0
-gpt-5-6-sol,GPT-5.6 Sol,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt5-6-2026-07-09,2026-07-09,day,2026-08-14,,0
+gpt-5-6-sol,GPT-5.6 Sol,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt5-6-2026-07-09,2026-07-09,day,2026-08-14,,1
 gpt-5-6-sol,GPT-5.6 Sol,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-gpt5-6-2026-07-09,2026-07-09,day,2026-08-14,,0
 gpt-5-6-terra,GPT-5.6 Terra,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-gpt5-6-terra-2026-07-09,2026-07-09,day,2026-08-14,,0
 gpt-5-6-terra,GPT-5.6 Terra,OpenAI,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,selectable,false,m365-gpt5-6-2026-07-09,2026-07-09,day,2026-08-14,,0
