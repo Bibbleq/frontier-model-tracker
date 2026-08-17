@@ -1,16 +1,16 @@
 {
   "totals": {
-    "events": 267,
+    "events": 268,
     "backlog": 71,
-    "sources": 318,
-    "models": 103,
+    "sources": 319,
+    "models": 104,
     "surfaces": 25,
-    "confirmed": 227,
+    "confirmed": 228,
     "supported": 40
   },
   "kinds": {
     "announcement": 12,
-    "availability": 240,
+    "availability": 241,
     "milestone": 9,
     "policy": 6
   },
@@ -44,6 +44,11 @@
     {
       "code": "no_vendor_baseline",
       "subject": "deepseek-v3-0324",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline",
+      "subject": "gemini-3-7-flash",
       "message": "no vendor release event, so lag cannot be derived"
     },
     {
@@ -120,7 +125,7 @@
   "warning_counts": {
     "backlog_without_surface": 3,
     "missing_archive": 1,
-    "no_vendor_baseline": 8,
+    "no_vendor_baseline": 9,
     "no_vendor_baseline_extended": 6,
     "pre_release_access": 1
   },
@@ -172,7 +177,7 @@
     "exact": 324,
     "not_recorded": 527,
     "range": 39,
-    "unknown_no_baseline": 260,
+    "unknown_no_baseline": 272,
     "unknown_open_research": 86
   }
 }

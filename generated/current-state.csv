@@ -83,6 +83,7 @@ gemini-2-5-pro,Gemini 2.5 Pro,Google,github-copilot,GitHub Copilot,microsoft | c
 gemini-2-5-pro,Gemini 2.5 Pro,Google,google-gemini,Gemini,,public_preview,not_applicable,false,google-gemini2-5-pro-2025-03-25,2025-03-25,day,2026-08-14,,0
 gemini-3-6-flash,Gemini 3.6 Flash,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-gemini3-6-flash-2026-07-21,2026-07-21,day,2026-08-14,,0
 gemini-3-6-flash,Gemini 3.6 Flash,Google,google-gemini-api,Gemini API,,ga,not_applicable,false,google-gemini3-6-flash-2026-07-21,2026-07-21,day,2026-08-14,,0
+gemini-3-7-flash,Gemini 3.7 Flash,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,public_preview,selectable,false,github-gemini3-7-flash-public-preview-2026-08-13,2026-08-13,day,2026-08-14,,0
 gpt-3,GPT-3,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,limited_preview,catalogue,false,azure-openai-preview-2021-11-02,2021-11-02,day,2026-08-14,,1
 gpt-3,GPT-3,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-api-2020-06-11,2020-06-11,day,2026-08-14,,0
 gpt-3-5,GPT-3.5,OpenAI,chatgpt,ChatGPT,,ga,not_applicable,false,chatgpt-launch-2022-11-30,2022-11-30,day,2026-08-14,,0

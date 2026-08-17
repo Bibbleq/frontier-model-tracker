@@ -9198,6 +9198,40 @@
       ]
     },
     {
+      "id": "github-gemini3-7-flash-public-preview-2026-08-13",
+      "kind": "availability",
+      "date": {
+        "start": "2026-08-13",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gemini-3-7-flash"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "Gemini 3.7 Flash began rolling out as a public preview in GitHub Copilot on 13 August 2026. It is available to Copilot Pro, Pro+, Max, Business, and Enterprise users and can be selected in the model picker across VS Code, Visual Studio, Copilot CLI, the GitHub Copilot cloud agent, the GitHub Copilot app, JetBrains, Xcode, and Eclipse. Business and Enterprise plan administrators must enable the Gemini 3.7 Flash Preview policy before users on those plans can select it. No Google vendor baseline has been sourced yet, so no lag can be computed.",
+      "caveat": "The changelog names the admin-toggle 'Gemini 3.7 Flash Preview', confirming this is a public preview rather than GA. Rollout is gradual; the changelog states 'Check back soon if you don't see it yet', so 13 August is the start of the rollout window, not the date every eligible user had access. Business and Enterprise access additionally requires an administrator to enable the policy.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Gemini 3.7 Flash is now available in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-08-13-gemini-3-7-flash-is-now-available-in-github-copilot",
+          "primary": true,
+          "retrieved_at": "2026-08-17",
+          "published_at": "2026-08-13",
+          "source_type": "changelog",
+          "quote": "Gemini 3.7 Flash, Google's latest Flash model, is now rolling out in GitHub Copilot.",
+          "supports": [
+            "date",
+            "model"
+          ]
+        }
+      ]
+    },
+    {
       "id": "github-grok4-6-2026-08-14",
       "kind": "availability",
       "date": {
