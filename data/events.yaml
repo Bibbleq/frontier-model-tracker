@@ -1,6 +1,6 @@
 version: 3
-updated: "2026-08-13"
-research_cutoff: "2026-08-11"
+updated: "2026-08-17"
+research_cutoff: "2026-08-14"
 metadata:
   project: "365Explained Frontier Model Tracker"
   purpose: "Sourced history of frontier and significant model availability across tracked Microsoft surfaces."
@@ -6188,6 +6188,32 @@ events:
         archived_url: "https://web.archive.org/web/20260812011544/https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/"
         quote: "MAI-Code-1.1-Flash, Microsoft's latest small-tier coding model, is now rolling out in GitHub Copilot."
         supports: ["date", "model"]
+  - id: "github-grok4-6-2026-08-14"
+    kind: "availability"
+    date:
+      start: "2026-08-14"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["grok-4-6"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Grok 4.6 began rolling out in GitHub Copilot on 14 August 2026, selectable in the model picker across VS Code, Visual Studio, Copilot CLI, the GitHub Copilot cloud agent, the Copilot app, JetBrains, Xcode and Eclipse. Available on the Pro, Pro+, Max, Business and Enterprise plans. Billed at provider list pricing under usage-based billing."
+    caveat: "The changelog states 'rolling out' and warns that it may not be visible immediately; the gradual rollout means not every eligible user could select the model on this date. Copilot Business and Enterprise administrators must also enable the Grok 4.6 policy, which ships off by default, further deferring selectable exposure for users on those plans."
+    sources:
+      - publisher: "GitHub"
+        title: "Grok 4.6 is now available in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-08-14-grok-4-6-is-now-available-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-08-17"
+        published_at: "2026-08-14"
+        source_type: "changelog"
+        quote: "Grok 4.6, xAI's latest reasoning model, is now rolling out in GitHub Copilot."
+        supports: ["date", "model"]
 
 validation_backlog:
   - id: "mai-realtime-voice-unreleased"
@@ -6206,6 +6232,13 @@ validation_backlog:
         published_at: "2026-08-02"
         source_type: "news"
         quote: "Microsoft appears to be preparing its first native real-time voice model, referred to as MAI Realtime, which has surfaced as a hidden early-access entry in the company's MAI Playground."
+  - id: "sweep-2026-08-12-to-08-14"
+    state: "open"
+    working_claim: "The window from 12 August to 14 August 2026 has not been swept; the cutoff was moved for a single targeted addition."
+    reason: "github-grok4-6-2026-08-14 was added from a directly supplied source, and research_cutoff moved from 2026-08-11 to 2026-08-14 so the dataset does not carry an event beyond its own stated reach. That move is bookkeeping, not evidence: no vendor, GitHub changelog, Foundry retrospective or Copilot release note between 12 August and 14 August has been reviewed, so absence of other events in that window means nothing."
+    target: "Sweep the usual sources across 12 August to 14 August 2026 — GitHub Copilot changelog, Microsoft Foundry blog and retirement schedule, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms for OpenAI, Anthropic, Google, xAI, Moonshot and Mistral — then either record what is found or close this item as confirming nothing else landed."
+    model_ids: []
+    surface_ids: []
   - id: "sweep-2026-08-07-to-08-11"
     state: "open"
     working_claim: "The window from 7 August to 11 August 2026 has not been swept; the cutoff was moved for a single targeted addition."
