@@ -300,10 +300,14 @@ Work in this order. The order matters.
    verbatim quote where the source provides one** — a scope claim resting only on
    your paraphrase is the weakest link in the diff. For `documentation` and
    `release_notes` sources, look up an existing Wayback snapshot and set
-   `archived_url`; use the read-only availability API
-   (`https://archive.org/wayback/available?url=<url>&timestamp=YYYYMMDD`) and do
-   **not** try to create snapshots. Missing archives are a warning, not a
-   failure, and the queue is meant to shrink.
+   `archived_url`; use the read-only CDX API
+   (`https://web.archive.org/cdx/search/cdx?url=<url>&filter=statuscode:200&limit=5`),
+   build the link as `https://web.archive.org/web/<timestamp>/<original>`, and
+   do **not** try to create snapshots. Avoid the availability API
+   (`archive.org/wayback/available`): from some networks it 429s every request
+   regardless of volume, and an instant 429 on a first request is the endpoint
+   refusing you, not a rate limit to wait out. Missing archives are a warning,
+   not a failure, and the queue is meant to shrink.
 6. **Mind `research_cutoff`.** `data/events.yaml` declares `updated` and
    `research_cutoff` at the top. If your event is dated after the current
    `research_cutoff`, that is **always two changes, never one** — a PR that moves
