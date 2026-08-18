@@ -1,7 +1,7 @@
 {
   "contract_version": 3,
   "dataset_version": 3,
-  "updated": "2026-08-17",
+  "updated": "2026-08-18",
   "research_cutoff": "2026-08-14",
   "base_url": "https://bibbleq.github.io/frontier-model-tracker/",
   "snapshot_url": "https://bibbleq.github.io/frontier-model-tracker/c3/v3/",
@@ -17,8 +17,8 @@
       "path": "data/events.json",
       "media_type": "application/json",
       "description": "The whole dataset: metadata, canonical events and the validation backlog",
-      "bytes": 467638,
-      "sha256": "b9e53f550f736ac5e359938681412d68a88583c32252aa3793f1cf9ad985c43e"
+      "bytes": 468381,
+      "sha256": "d402dc2e0598fe36cc5a65a6723ffd9f88981308109f90972cd0614ddfc1edf3"
     },
     {
       "path": "data/status.json",
