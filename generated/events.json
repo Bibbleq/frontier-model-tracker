@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updated": "2026-08-17",
+  "updated": "2026-08-18",
   "research_cutoff": "2026-08-14",
   "metadata": {
     "project": "365Explained Frontier Model Tracker",
@@ -9228,7 +9228,8 @@
             "date",
             "model"
           ],
-          "note": "The page dateline reads 'Aug 12, 2026'."
+          "archived_url": "https://web.archive.org/web/20260812153731/https://x.ai/news/grok-4-6",
+          "note": "The page dateline reads 'Aug 12, 2026'. The Wayback Machine's first capture of the page is itself dated 12 August 2026, independently corroborating the dateline."
         },
         {
           "publisher": "xAI",
@@ -9241,7 +9242,8 @@
           "quote": "Grok 4.6 is available today in Cursor and Grok Build.",
           "supports": [
             "lifecycle"
-          ]
+          ],
+          "archived_url": "https://web.archive.org/web/20260812153731/https://x.ai/news/grok-4-6"
         }
       ]
     },
@@ -9271,6 +9273,7 @@
           "retrieved_at": "2026-08-17",
           "published_at": "2026-08-13",
           "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20260814001603/https://github.blog/changelog/2026-08-13-gemini-3-7-flash-is-now-available-in-github-copilot/",
           "quote": "Gemini 3.7 Flash, Google's latest Flash model, is now rolling out in GitHub Copilot.",
           "supports": [
             "date",
@@ -9309,6 +9312,7 @@
           "retrieved_at": "2026-08-17",
           "published_at": "2026-08-14",
           "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20260814231557/https://github.blog/changelog/2026-08-14-grok-4-6-is-now-available-in-github-copilot/",
           "quote": "Grok 4.6, xAI's latest reasoning model, is now rolling out in GitHub Copilot.",
           "supports": [
             "date",
@@ -10660,6 +10664,7 @@
           "published_at": "2026-08-12",
           "source_type": "announcement",
           "quote": "Grok 4.6 is available today in Cursor and Grok Build.",
+          "archived_url": "https://web.archive.org/web/20260812153731/https://x.ai/news/grok-4-6",
           "note": "Names only xAI's own distribution and partner platforms; no mention of any Microsoft surface."
         }
       ]
