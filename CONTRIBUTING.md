@@ -61,16 +61,24 @@ Living documentation is edited in place. A Microsoft Learn page that states a
 date today may be rewritten next year, leaving a citation that no longer
 attests what it was cited for.
 
-When you add a `documentation` or `release_notes` source, capture a snapshot
-and record it in `archived_url`:
+When you add a `documentation` or `release_notes` source, look up an existing
+snapshot with the read-only CDX API and record it in `archived_url`:
 
 ```
-https://archive.org/wayback/available?url=<url-without-scheme>
+https://web.archive.org/cdx/search/cdx?url=<url-without-scheme>&filter=statuscode:200&limit=5
 ```
+
+Build the `archived_url` as
+`https://web.archive.org/web/<timestamp>/<original>` from a returned row.
+
+Do not use the older availability API
+(`https://archive.org/wayback/available`): from some networks it returns 429
+to every request regardless of volume. An instant 429 on a first request is
+the endpoint refusing you, not a rate limit to wait out — the CDX lookup on
+the same infrastructure answers normally.
 
 The build warns for every such source without one. The warning count is meant
-to fall over time; it is a queue, not noise. Archive.org rate-limits hard, so
-work through them a few at a time rather than in a loop.
+to fall over time; it is a queue, not noise.
 
 ## Identifier stability
 
