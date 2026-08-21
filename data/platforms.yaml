@@ -108,6 +108,12 @@ surfaces:
     owner: Microsoft
     family: Microsoft 365
     counts_as: [microsoft, copilot, m365]
+  - id: m365-cowork
+    display_name: "Microsoft Copilot Cowork"
+    owner: Microsoft
+    family: Microsoft 365
+    note: "The Cowork app has its own model picker, and models reach it on dates the rest of Microsoft 365 Copilot does not share: Opus 4.7 two months before Claude reached the core Chat picker, Fable 5 in Cowork alone. It counts as Copilot availability but deliberately not as `m365`, which continues to mean the Microsoft 365 Copilot surface — Chat and the app experiences. Counting Cowork there would collapse the distinction this surface exists to record, and access is gated behind the Frontier programme rather than general to Microsoft 365 Copilot."
+    counts_as: [microsoft, copilot]
   - id: m365-admin
     display_name: "Microsoft 365 admin centre"
     owner: Microsoft
@@ -216,9 +222,6 @@ experiences:
     surface: m365-copilot
   - id: analyst
     display_name: "Analyst"
-    surface: m365-copilot
-  - id: cowork
-    display_name: "Cowork"
     surface: m365-copilot
   - id: word
     display_name: "Word"

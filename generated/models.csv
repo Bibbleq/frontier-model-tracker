@@ -35,9 +35,9 @@ gpt-5-4,GPT-5.4,OpenAI,text,frontier,openai-gpt,gpt-5,,,GPT-5.4 Reasoning,,,4
 gpt-5-5,GPT-5.5,OpenAI,text,frontier,openai-gpt,gpt-5,,,GPT-5.5 Reasoning,,,5
 gpt-5-5-instant,GPT-5.5 Instant,OpenAI,text,frontier,openai-gpt,gpt-5,,,GPT-5.5 Chat,,,5
 gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,text,frontier,openai-gpt,gpt-5,,,,,,2
-gpt-5-6-sol,GPT-5.6 Sol,OpenAI,text,frontier,openai-gpt,gpt-5,,gpt-5-6,,,,5
-gpt-5-6-terra,GPT-5.6 Terra,OpenAI,text,frontier,openai-gpt,gpt-5,,gpt-5-6,,,,4
-gpt-5-6-luna,GPT-5.6 Luna,OpenAI,text,frontier,openai-gpt,gpt-5,,gpt-5-6,,,,4
+gpt-5-6-sol,GPT-5.6 Sol,OpenAI,text,frontier,openai-gpt,gpt-5,,gpt-5-6,,,,6
+gpt-5-6-terra,GPT-5.6 Terra,OpenAI,text,frontier,openai-gpt,gpt-5,,gpt-5-6,,,,5
+gpt-5-6-luna,GPT-5.6 Luna,OpenAI,text,frontier,openai-gpt,gpt-5,,gpt-5-6,,,,5
 gpt-5-6-cyber,GPT-5.6-Cyber,OpenAI,text,frontier,openai-gpt,gpt-5,,gpt-5-6,,,,0
 claude-1,Claude 1,Anthropic,text,frontier,claude,claude-1,,,,,,1
 claude-2,Claude 2,Anthropic,text,frontier,claude,claude-2,,,,,,1
@@ -55,11 +55,11 @@ claude-haiku-4-5,Claude Haiku 4.5,Anthropic,text,frontier,claude,claude-4,claude
 claude-opus-4-5,Claude Opus 4.5,Anthropic,text,frontier,claude,claude-4,claude-opus,,,,,5
 claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,text,frontier,claude,claude-4,claude-sonnet,,,,,3
 claude-opus-4-6,Claude Opus 4.6,Anthropic,text,frontier,claude,claude-4,claude-opus,,,,,2
-claude-opus-4-7,Claude Opus 4.7,Anthropic,text,frontier,claude,claude-4,claude-opus,,,,,4
-claude-opus-4-8,Claude Opus 4.8,Anthropic,text,frontier,claude,claude-4,claude-opus,,,,,4
-claude-sonnet-5,Claude Sonnet 5,Anthropic,text,frontier,claude,claude-5,claude-sonnet,,,,,5
-claude-opus-5,Claude Opus 5,Anthropic,text,frontier,claude,claude-5,claude-opus,,,,,5
-claude-fable-5,Claude Fable 5,Anthropic,text,frontier,claude,claude-5,claude-fable,,,,,9
+claude-opus-4-7,Claude Opus 4.7,Anthropic,text,frontier,claude,claude-4,claude-opus,,,,,5
+claude-opus-4-8,Claude Opus 4.8,Anthropic,text,frontier,claude,claude-4,claude-opus,,,,,5
+claude-sonnet-5,Claude Sonnet 5,Anthropic,text,frontier,claude,claude-5,claude-sonnet,,,,,6
+claude-opus-5,Claude Opus 5,Anthropic,text,frontier,claude,claude-5,claude-opus,,,,,6
+claude-fable-5,Claude Fable 5,Anthropic,text,frontier,claude,claude-5,claude-fable,,,,,12
 claude-mythos-5,Claude Mythos 5,Anthropic,text,frontier,claude,claude-5,claude-mythos,,,,,3
 claude-mythos-preview,Claude Mythos Preview,Anthropic,text,frontier,claude,,claude-mythos,,,,,0
 gemini-1-5-pro,Gemini 1.5 Pro,Google,text,frontier,gemini,gemini-1,,,,,,4

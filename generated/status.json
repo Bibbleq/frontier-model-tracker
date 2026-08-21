@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 269,
-    "backlog": 75,
-    "sources": 325,
+    "events": 277,
+    "backlog": 82,
+    "sources": 340,
     "models": 105,
-    "surfaces": 25,
-    "confirmed": 229,
-    "supported": 40
+    "surfaces": 26,
+    "confirmed": 235,
+    "supported": 42
   },
   "kinds": {
     "announcement": 12,
-    "availability": 242,
+    "availability": 250,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 35,
+    "open": 42,
     "promoted": 34,
     "rejected": 4
   },
@@ -34,6 +34,11 @@
     {
       "code": "backlog_without_surface",
       "subject": "sweep-2026-08-12-to-08-14",
+      "message": "open item names no surface, so it cannot suppress a lag answer"
+    },
+    {
+      "code": "backlog_without_surface",
+      "subject": "sweep-2026-08-15-to-08-20",
       "message": "open item names no surface, so it cannot suppress a lag answer"
     },
     {
@@ -118,7 +123,7 @@
     }
   ],
   "warning_counts": {
-    "backlog_without_surface": 3,
+    "backlog_without_surface": 4,
     "missing_archive": 1,
     "no_vendor_baseline": 8,
     "no_vendor_baseline_extended": 6,

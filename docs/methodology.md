@@ -86,6 +86,15 @@ model catalogue that happens to share a brand prefix with GitHub Copilot.
 **The Microsoft 365 admin centre counts as Microsoft but never as Copilot.**
 An admin control appearing is not a model reaching users.
 
+**Copilot Cowork counts as Copilot but never as `m365`.** Cowork is a distinct
+product with its own model picker, reached through the Microsoft 365 Copilot
+Frontier programme, and models arrive there on dates the rest of Microsoft 365
+Copilot does not share. The `m365` tier continues to mean the Microsoft 365
+Copilot surface — Copilot Chat and the app experiences — so a model that has
+only reached Cowork reports no `m365` availability. That is the narrower
+reading: a later ruling can widen the tier without rewriting history, while
+removing a tier from a surface would be a breaking change.
+
 ## Measures
 
 Every model and tier produces two rows, because "available" is ambiguous and
