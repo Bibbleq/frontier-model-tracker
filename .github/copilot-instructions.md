@@ -396,8 +396,8 @@ what was deliberately *not* recorded.
 - **Smallest possible diff.** One candidate, one decision, the minimum lines that
   express it, plus the regenerated `generated/` tree.
 - **No refactors.** Do not reformat YAML, reorder keys, rewrap prose, or tidy
-  files you did not need to change. Do not touch `scripts/`, `tests/` or `web/`
-  unless the task is explicitly about them.
+  files you did not need to change. Do not touch `scripts/` or `tests/` unless
+  the task is explicitly about them.
 - **Never change a schema, the data contract, or the interpretation rules.** The
   files under `schema/`, `docs/data-contract.md` and the `metadata` block of
   `data/events.yaml` encode versioned human decisions. If a candidate seems to
