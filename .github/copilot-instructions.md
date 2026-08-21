@@ -92,7 +92,35 @@ Work through all of these before you write a line of YAML.
   Researcher, Analyst, Word, Think Deeper are `experience_ids` with
   `exposure: specialist` or `underlying` — not `selectable`.
 - **Current documentation proves current support, not a first date.** A Learn
-  page listing a model today says nothing about when it arrived.
+  page listing a model today says nothing about when it arrived. But a living
+  page has *revisions*, and the revisions can date a change: pull every CDX
+  capture, read `ms.date` / `updated_at` from the captured HTML, and if one
+  revision lacks the model and a later one lists it, you have a bounded window
+  (`date.start` to `date.end`) with a primary source at each end. That is how
+  `cowork-fable5-restoration-2026-07` was dated. The negative form is the
+  trap: a listing proves an end state, not a change, unless an earlier capture
+  shows it absent — the Foundry Claude page lists Fable 5 from 10 July, but
+  with no capture inside the suspension window that proves nothing about when
+  it came back, and the item stayed in the backlog.
+- **A model missing from a current table is not a published withdrawal.** When
+  a picker page stops listing a model, record the observation as a backlog item
+  naming the surface, never as a `retired` event. Opus 4.7 and 4.8 vanished
+  from the Cowork picker between revisions; both stay non-terminal with an
+  `open_questions` count until Microsoft publishes a removal. Vendors publish
+  arrivals far more consistently than departures, and a dataset that manufactures
+  retirements from silence is the one this project must not become.
+- **Vendors banner existing posts rather than publishing notices.** Microsoft
+  recorded the Fable 5 suspension as a banner on its own Foundry *launch*
+  announcement, not as a separate page, so a search for "a suspension notice"
+  found nothing for six weeks. When an event's only gap is a missing first-party
+  record, pull the CDX captures of the vendor's launch post for that model and
+  diff them: the banner is absent on 10 June and present from 14 June.
+- **Cowork is a surface, not an experience.** `m365-cowork` has its own picker
+  and its own dates, counts as `[microsoft, copilot]` and deliberately not
+  `m365`. An announcement covering Cowork *and* Chat or the apps is two events,
+  split the way `cowork-opus5-2026-07-24` and `m365-opus5-2026-07-24` are, each
+  citing the same source. Do not put `cowork` in `experience_ids`; the build
+  will reject it.
 - **Cross-platform inference is never sufficient.** That a model appeared on one
   surface is not evidence it appeared on another the same day, however plausible.
 - **A date in a model's name is not a date.** `DeepSeek-V4-Flash-0731` was dated
@@ -390,6 +418,14 @@ what was deliberately *not* recorded.
   rule.
 - Where the source is undated or client-rendered, say so in a source `note`
   rather than silently trusting it.
+
+Some search results are wrong in a way that looks authoritative. On the
+June 2026 Fable 5 suspension in particular, a cluster of SEO blogs asserts a
+cause (an Amazon jailbreak finding, a hard re-suspension date) that no primary
+source supports; the sourced cause is the US export-control directive in
+Anthropic's own statement. If a candidate or a search result contradicts an
+event that already cites a primary source, the burden is on the new claim, and a
+non-primary source never meets it on its own.
 
 ## Guardrails
 
