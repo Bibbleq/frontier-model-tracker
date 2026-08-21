@@ -2,11 +2,11 @@
   "totals": {
     "events": 277,
     "backlog": 82,
-    "sources": 340,
+    "sources": 343,
     "models": 105,
     "surfaces": 26,
-    "confirmed": 235,
-    "supported": 42
+    "confirmed": 236,
+    "supported": 41
   },
   "kinds": {
     "announcement": 12,
