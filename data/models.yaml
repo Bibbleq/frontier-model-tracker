@@ -686,12 +686,14 @@ models:
     display_name: "DeepSeek V4 Flash"
     vendor: DeepSeek
     generation: deepseek-v4
+    superseded_by: deepseek-v4-flash-0731
   - id: deepseek-v4-flash-0731
     display_name: "DeepSeek-V4-Flash-0731"
     vendor: DeepSeek
     generation: deepseek-v4
+    supersedes: deepseek-v4-flash
     aliases: ["DeepSeek V4 Flash 0731"]
-    note: "The dated July 2026 revision of V4 Flash, following the same convention as deepseek-v3-0324. Registered separately because DeepSeek ships it as its own weights repository and because Microsoft has historically carried a dated revision rather than the base model. No Microsoft presence recorded yet."
+    note: "The dated July 2026 revision of V4 Flash, following the same convention as deepseek-v3-0324. Registered separately because DeepSeek ships it as its own weights repository and because Microsoft has historically carried a dated revision rather than the base model. Microsoft Foundry's retirement schedule names it as the replacement for DeepSeek-V4-Flash, which is the basis for the supersedes link."
   - id: deepseek-v4-pro
     display_name: "DeepSeek V4 Pro"
     vendor: DeepSeek
@@ -740,6 +742,12 @@ models:
     scope: extended
     aliases: ["nemotron-speech-streaming-en-0.6b", "Nemotron ASR"]
     note: "The streaming speech-to-text model behind Foundry Local's live audio transcription. Recorded under the audio modality as a processor of speech, not a generator of it."
+  - id: nemotron-3-5-lightning
+    display_name: "NVIDIA Nemotron 3.5 Lightning"
+    vendor: NVIDIA
+    generation: nemotron
+    aliases: ["Nemotron 3.5 Lightning", "nvidia-nemotron-3.5-lightning-30b-a3b"]
+    note: "A 30B-A3B open-weight agentic model, per the Foundry catalogue identifiers. Reached Microsoft Foundry through Fireworks AI and the Hugging Face collection rather than as a model sold by Azure; no NVIDIA vendor-surface release is recorded, so lag from NVIDIA cannot be derived."
 
   # ------------------------------------------------------------- Microsoft
   - id: mai-image-2

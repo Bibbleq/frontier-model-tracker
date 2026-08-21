@@ -6492,6 +6492,85 @@ events:
         quote: "Grok 4.6, xAI's latest reasoning model, is now rolling out in GitHub Copilot."
         supports: ["date", "model"]
 
+  - id: "foundry-deepseek-v4-flash-0731-2026-08-19"
+    kind: "availability"
+    date:
+      start: "2026-08-19"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["deepseek-v4-flash-0731"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      exposure: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Microsoft added DeepSeek-V4-Flash-0731 to the Foundry catalogue as a model sold directly by Azure, billed through the Azure subscription and covered by Azure service-level agreements, and in parallel through Fireworks on Foundry. The retirement schedule lists it at version 2026-07-31 in Preview with a not-sooner-than retirement of 3 December 2026, and names it as the replacement for DeepSeek-V4-Flash."
+    caveat: "The announcement states no release stage; Preview is taken from the retirement schedule's row, which is current documentation and is why the stage is the weaker part of the claim. The Fireworks route (US Data Zone Standard, Global Provisioned and US Data Zone Provisioned deployment types) is noted rather than separately recorded, following foundry-deepseek-v4-pro-2026-04-24: the direct listing anchors the catalogue claim. The vendor published this revision on 31 July, so its Foundry lag is 19 days; the base V4 Flash model arrived in April."
+    relations:
+      - type: "supersedes"
+        target: "foundry-deepseek-v4-flash-2026-04-24"
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Expanding Open Model Choice in Microsoft Foundry with New DeepSeek and NVIDIA Nemotron Models"
+        url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/expanding-open-model-choice-in-microsoft-foundry-with-new/ba-p/4547926"
+        primary: true
+        retrieved_at: "2026-08-21"
+        published_at: "2026-08-19"
+        source_type: "announcement"
+        quote: "Today we're announcing several additions to the Foundry models catalog: DeepSeek-V4-Flash-0731 as a Direct from Azure model and through Fireworks on Foundry"
+        supports: ["date", "model", "exposure"]
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: false
+        retrieved_at: "2026-08-21"
+        published_at: "2026-08-19"
+        source_type: "documentation"
+        quote: "DeepSeek-V4-Flash-0731 | 2026-07-31 | Preview | 2026-12-03"
+        supports: ["lifecycle"]
+        note: "Page revision of 19 August 2026. The Wayback Machine's latest capture is 11 August, which predates the row, so no archived_url is recorded: a snapshot that does not carry the cited row would not attest it. The same revision lists DeepSeek-V4-Flash-0731 as the replacement for DeepSeek-V4-Flash, retiring 2028-02-20."
+  - id: "foundry-nemotron-3-5-lightning-2026-08-19"
+    kind: "availability"
+    date:
+      start: "2026-08-19"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["nemotron-3-5-lightning"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      exposure: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "NVIDIA Nemotron 3.5 Lightning became deployable on Microsoft Foundry through Fireworks on Foundry, with US Data Zone Standard deployment, and in parallel through the Hugging Face collection on Foundry in BF16 and NVFP4 formats for managed compute. Fireworks AI supplies the inference; Microsoft supplies deployment and governance."
+    caveat: "Partner-hosted, on the pattern of foundry-kimi-k3-2026-07-28. The announcement states no release stage. GA is inferred from two things: Microsoft documents Fireworks on Foundry as generally available, and every Fireworks-served model in the retirement schedule is listed GA; but neither the schedule nor the Fireworks catalogue page carried a row for this model at their 19 August revisions, so the stage is paired evidence rather than an attested fact and is the weaker part of the claim. The Hugging Face collection route is documented as preview and is noted rather than separately recorded; it is a different delivery path for the same catalogue arrival. No NVIDIA vendor release is recorded, so lag for this model is unknown_no_baseline by construction."
+    tags: ["partner_hosted"]
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Expanding Open Model Choice in Microsoft Foundry with New DeepSeek and NVIDIA Nemotron Models"
+        url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/expanding-open-model-choice-in-microsoft-foundry-with-new/ba-p/4547926"
+        primary: true
+        retrieved_at: "2026-08-21"
+        published_at: "2026-08-19"
+        source_type: "announcement"
+        quote: "Available through Fireworks on Foundry starting today: DeepSeek-V4-Flash-0731; NVIDIA Nemotron 3.5 Lightning"
+        supports: ["date", "model", "exposure"]
+      - publisher: "Microsoft Learn"
+        title: "Fireworks models on Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/how-to/fireworks/enable-fireworks-models"
+        primary: false
+        retrieved_at: "2026-08-21"
+        source_type: "documentation"
+        quote: "While Fireworks on Foundry is generally available, an administrator must enable the service within your Azure subscription."
+        supports: ["lifecycle"]
+        note: "Cited for the offering's stage, not for this model: the page's catalogue table at 21 August did not yet list Nemotron 3.5 Lightning. No archived_url because the only Wayback capture (21 May, of the 29 April revision) predates the change and says the opposite: Fireworks on Foundry was then in preview, which bounds the offering's own move to GA to between 29 April and 21 August 2026. Feature enablement still runs through the Azure portal's Preview features blade."
 validation_backlog:
   - id: "m365-apps-fable5-suspension-window"
     state: "open"

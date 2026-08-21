@@ -83,8 +83,8 @@ deepseek-v3,DeepSeek-V3,DeepSeek,text,frontier,deepseek-v,deepseek-v3,,,,,,1
 deepseek-v3-0324,DeepSeek-V3-0324,DeepSeek,text,frontier,deepseek-v,deepseek-v3,,,,,,1
 deepseek-v3-2,DeepSeek V3.2,DeepSeek,text,frontier,deepseek-v,deepseek-v3,,,,,,2
 deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,text,frontier,deepseek-v,deepseek-v3,,,,,,2
-deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,text,frontier,deepseek-v,deepseek-v4,,,,,,2
-deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,text,frontier,deepseek-v,deepseek-v4,,,DeepSeek V4 Flash 0731,,,1
+deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,text,frontier,deepseek-v,deepseek-v4,,,,,deepseek-v4-flash-0731,2
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,text,frontier,deepseek-v,deepseek-v4,,,DeepSeek V4 Flash 0731,deepseek-v4-flash,,2
 deepseek-v4-pro,DeepSeek V4 Pro,DeepSeek,text,frontier,deepseek-v,deepseek-v4,,,,,,2
 kimi-k2-5,Kimi K2.5,Moonshot AI,text,extended,kimi,kimi-k2,,,FW-Kimi-K2.5 | Kimi-K2.5,,,1
 kimi-k2-6,Kimi K2.6,Moonshot AI,text,extended,kimi,kimi-k2,,,Kimi 2.6 | Kimi-K2.6,,,1
@@ -92,6 +92,7 @@ kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,text,frontier,kimi,kimi-k2,,,,,,3
 kimi-k3,Kimi K3,Moonshot AI,text,frontier,kimi,kimi-k3,,,FW Kimi K3,,,3
 qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,image,extended,qwen,qwen-3-5,,,qwen3-vl-2b-instruct,,,1
 nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,audio,extended,nemotron,nemotron,,,nemotron-speech-streaming-en-0.6b | Nemotron ASR,,,1
+nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,text,frontier,nemotron,nemotron,,,Nemotron 3.5 Lightning | nvidia-nemotron-3.5-lightning-30b-a3b,,,1
 mai-image-2,MAI-Image-2,Microsoft,image,frontier,mai,,mai-image,mai-image-2,,,,1
 mai-image-2e,MAI-Image-2e,Microsoft,image,frontier,mai,,mai-image,mai-image-2,MAI-Image-2-Efficient,,,2
 mai-voice-1,MAI-Voice-1,Microsoft,voice,frontier,mai,,mai-voice,,,,,1
