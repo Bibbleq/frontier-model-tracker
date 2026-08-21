@@ -1,6 +1,6 @@
 version: 3
-updated: "2026-08-18"
-research_cutoff: "2026-08-14"
+updated: "2026-08-21"
+research_cutoff: "2026-08-20"
 metadata:
   project: "365Explained Frontier Model Tracker"
   purpose: "Sourced history of frontier and significant model availability across tracked Microsoft surfaces."
@@ -4142,6 +4142,26 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "cowork-opus4-7-2026-04-16"
+    kind: "availability"
+    date:
+      start: "2026-04-16"
+      precision: "day"
+    surface_id: "m365-cowork"
+    model_ids: ["claude-opus-4-7"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "Microsoft announced Claude Opus 4.7 in Copilot Cowork for Frontier users; the same announcement covered a rollout to Excel."
+    caveat: "Recorded separately from m365-opus4-7-2026-04-16 because Cowork is a distinct surface with its own model picker, not an experience within Microsoft 365 Copilot. Both events cite the same announcement. Delivered through the Microsoft 365 Copilot Frontier programme, so it is not evidence of general Copilot Chat availability on 16 April."
+    sources:
+      - publisher: "Microsoft"
+        title: "Available today: Anthropic Claude Opus 4.7 in Microsoft 365 Copilot"
+        url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-anthropic-claude-opus-4-7-in-microsoft-365-copilot/4511666"
+        primary: true
+        retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "foundry-opus4-7-2026-04-16"
     kind: "availability"
     date:
@@ -4185,7 +4205,7 @@ events:
       start: "2026-04-16"
       precision: "day"
     surface_id: "m365-copilot"
-    experience_ids: ["cowork", "excel"]
+    experience_ids: ["excel"]
     model_ids: ["claude-opus-4-7"]
     model_claim: "specific"
     lifecycle: "ga"
@@ -4947,6 +4967,26 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "cowork-opus4-8-2026-05-28"
+    kind: "availability"
+    date:
+      start: "2026-05-28"
+      precision: "day"
+    surface_id: "m365-cowork"
+    model_ids: ["claude-opus-4-8"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "Microsoft announced Claude Opus 4.8 in Cowork under the Frontier programme; the same announcement covered Copilot Chat, Excel and PowerPoint."
+    caveat: "Recorded separately from m365-opus4-8-2026-05-28 because Cowork is a distinct surface with its own model picker, not an experience within Microsoft 365 Copilot. Both events cite the same announcement."
+    sources:
+      - publisher: "Microsoft"
+        title: "Available today: Anthropic Claude Opus 4.8 in Microsoft 365 Copilot"
+        url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-anthropic-claude-opus-4-8-in-microsoft-365-copilot/4523405"
+        primary: true
+        retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "github-opus4-8-ga-2026-05-28"
     kind: "availability"
     date:
@@ -4972,7 +5012,7 @@ events:
       start: "2026-05-28"
       precision: "day"
     surface_id: "m365-copilot"
-    experience_ids: ["cowork", "m365-copilot-chat", "excel", "powerpoint"]
+    experience_ids: ["m365-copilot-chat", "excel", "powerpoint"]
     model_ids: ["claude-opus-4-8"]
     model_claim: "specific"
     lifecycle: "ga"
@@ -5120,13 +5160,33 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "changelog"
+  - id: "cowork-fable5-preview-2026-06-10"
+    kind: "availability"
+    date:
+      start: "2026-06-10"
+      precision: "day"
+    surface_id: "m365-cowork"
+    model_ids: ["claude-fable-5"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "Microsoft announced Claude Fable 5 in Copilot Cowork under the Frontier programme, off by default; the same announcement covered private preview in Excel and PowerPoint."
+    caveat: "Recorded separately from m365-fable5-preview-2026-06-10 because Cowork is a distinct surface with its own model picker, not an experience within Microsoft 365 Copilot. Both events cite the same announcement. Exposure is selectable only after an administrator enables the model: Microsoft documents Fable 5 as off by default, admin-enabled, and requiring data retention. Retain those governance caveats in product detail metadata."
+    sources:
+      - publisher: "Microsoft"
+        title: "Available today: Anthropic Claude Fable 5 in Microsoft 365 Copilot"
+        url: "https://techcommunity.microsoft.com/blog/Microsoft365CopilotBlog/available-today-anthropic-claude-fable-5-in-microsoft-365-copilot/4526832"
+        primary: true
+        retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "m365-fable5-preview-2026-06-10"
     kind: "availability"
     date:
       start: "2026-06-10"
       precision: "day"
     surface_id: "m365-copilot"
-    experience_ids: ["cowork", "excel", "powerpoint"]
+    experience_ids: ["excel", "powerpoint"]
     model_ids: ["claude-fable-5"]
     model_claim: "specific"
     lifecycle: "public_preview"
@@ -5167,6 +5227,47 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "cowork-fable5-suspension-2026-06-12"
+    kind: "availability"
+    date:
+      start: "2026-06-12"
+      precision: "day"
+    surface_id: "m365-cowork"
+    model_ids: ["claude-fable-5"]
+    model_claim: "specific"
+    lifecycle: "suspended"
+    exposure: "selectable"
+    confidence: "supported"
+    confidence_detail:
+      model: "confirmed"
+      date: "confirmed"
+      lifecycle: "confirmed"
+      exposure: "supported"
+    evidence_note: "Anthropic disabled Fable 5 for all customers from 5:21pm ET on 12 June 2026 to comply with a US Commerce Department export-control directive barring access by any foreign national. The action was global, and Microsoft's Cowork model documentation no longer listed Fable 5 in the picker at its 16 June revision, two days later."
+    caveat: "Confidence is supported rather than confirmed because no Microsoft notice of a Cowork suspension was located. The date is Anthropic's global compliance action; that Cowork was affected rests on the model's absence from the 16 June revision of Microsoft's Cowork picker documentation, which is retrospective evidence of effect rather than a first-party suspension notice."
+    relations:
+      - type: "announced_by"
+        target: "anthropic-fable5-suspension-2026-06-12"
+    sources:
+      - publisher: "Anthropic"
+        title: "Statement on the US government directive to suspend access to Fable 5 and Mythos 5"
+        url: "https://www.anthropic.com/news/fable-mythos-access"
+        primary: true
+        retrieved_at: "2026-07-27"
+        published_at: "2026-06-12"
+        source_type: "announcement"
+        quote: "The net effect of this order is that we must abruptly disable Fable 5 and Mythos 5 for all our customers."
+        supports: ["date", "model", "lifecycle"]
+      - publisher: "Microsoft"
+        title: "Choose a model for Copilot Cowork"
+        url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-models"
+        primary: true
+        retrieved_at: "2026-08-21"
+        published_at: "2026-06-16"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260618001102/https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-models"
+        supports: ["exposure"]
+        note: "Page revision of 16 June 2026, captured 18 June. The available-models table lists Auto, Claude Opus 4.8, Claude Sonnet 4.6, Sonnet + Opus Advisor and GPT 5.5 (Frontier); Fable 5, announced for Cowork on 10 June, is absent."
   - id: "foundry-fable5-suspension-2026-06-12"
     kind: "availability"
     date:
@@ -5477,6 +5578,49 @@ events:
         published_at: "2026-06-30"
         source_type: "news"
         quote: "Anthropic also said it has restored access to Mythos 5 for some U.S. organizations, following government approval granted on June 26."
+  - id: "cowork-fable5-restoration-2026-07"
+    kind: "availability"
+    date:
+      start: "2026-07-01"
+      end: "2026-07-17"
+      precision: "day"
+    surface_id: "m365-cowork"
+    model_ids: ["claude-fable-5"]
+    model_claim: "specific"
+    lifecycle: "restored"
+    exposure: "selectable"
+    confidence: "supported"
+    confidence_detail:
+      model: "confirmed"
+      date: "supported"
+      lifecycle: "supported"
+      exposure: "supported"
+    evidence_note: "Claude Fable 5 (Preview) returned to the Copilot Cowork model picker after Anthropic's 1 July redeployment. Microsoft's Cowork model documentation lists it again at its 17 July revision, still off by default and admin-enabled."
+    caveat: "The date is a bounded window, not a known day: restoration cannot precede Anthropic's 1 July redeployment and is documented by the 17 July page revision. No Microsoft notice naming a Cowork restoration was located. The equivalent Microsoft Foundry restoration remains a validation target because no comparable document has been found placing Fable 5 back in that catalogue; here a dated page revision does the work Foundry lacks."
+    relations:
+      - type: "restores"
+        target: "cowork-fable5-suspension-2026-06-12"
+    sources:
+      - publisher: "Anthropic"
+        title: "Redeploying Fable 5"
+        url: "https://www.anthropic.com/news/redeploying-fable-5"
+        primary: true
+        retrieved_at: "2026-07-30"
+        published_at: "2026-06-30"
+        source_type: "announcement"
+        supports: ["lifecycle"]
+        note: "Establishes the earliest possible date for any downstream restoration. Anthropic names Claude Cowork, its own product, not Microsoft Copilot Cowork."
+      - publisher: "Microsoft"
+        title: "Choose a model for Copilot Cowork"
+        url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-models"
+        primary: true
+        retrieved_at: "2026-08-21"
+        published_at: "2026-07-17"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260728022232/https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-models"
+        supports: ["date", "model", "exposure"]
+        quote: "In preview and off by default. An admin must turn it on in the Microsoft 365 admin center under Copilot settings before it appears in your picker."
+        note: "Page revision of 17 July 2026, captured 28 July. Closes the window: Fable 5 is listed in the available-models table again."
   - id: "github-fable5-restoration-2026-07-01"
     kind: "availability"
     date:
@@ -5549,13 +5693,33 @@ events:
         quote: "Copilot in PowerPoint now includes the MAI-Image-2-Efficient model for image generation. This model is optimized for speed and efficiency, allowing users to rapidly iterate on visual ideas, create real-time slide content, and update visuals across presentations more easily than before."
         supports: ["date", "model", "lifecycle", "exposure"]
         note: "The release note is dated 1 July 2026 in the page's entry listing, which also satisfies the first-of-month check: the day is the entry's own date, not a padded month."
+  - id: "cowork-sonnet5-2026-07-02"
+    kind: "availability"
+    date:
+      start: "2026-07-02"
+      precision: "day"
+    surface_id: "m365-cowork"
+    model_ids: ["claude-sonnet-5"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "Microsoft announced Claude Sonnet 5 rolling out to Copilot Cowork; the same announcement covered PowerPoint."
+    caveat: "Recorded separately from m365-sonnet5-2026-07-02 because Cowork is a distinct surface with its own model picker, not an experience within Microsoft 365 Copilot. Both events cite the same announcement."
+    sources:
+      - publisher: "Microsoft"
+        title: "Available today: Anthropic’s Claude Sonnet 5 in Microsoft 365 Copilot"
+        url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-anthropic%E2%80%99s-claude-sonnet-5-in-microsoft-365-copilot/4532188"
+        primary: true
+        retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "m365-sonnet5-2026-07-02"
     kind: "availability"
     date:
       start: "2026-07-02"
       precision: "day"
     surface_id: "m365-copilot"
-    experience_ids: ["cowork", "powerpoint"]
+    experience_ids: ["powerpoint"]
     model_ids: ["claude-sonnet-5"]
     model_claim: "specific"
     lifecycle: "ga"
@@ -5633,6 +5797,26 @@ events:
         published_at: "2026-07-08"
         source_type: "news"
         supports: ["date"]
+  - id: "cowork-gpt5-6-2026-07-09"
+    kind: "availability"
+    date:
+      start: "2026-07-09"
+      precision: "day"
+    surface_id: "m365-cowork"
+    model_ids: ["gpt-5-6-sol", "gpt-5-6-terra", "gpt-5-6-luna"]
+    model_claim: "family"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "Microsoft's GPT-5.6 announcement names Cowork among the surfaces receiving the model, describing GPT-5.6 as the preferred model."
+    caveat: "Recorded separately from m365-gpt5-6-2026-07-09 because Cowork is a distinct surface with its own model picker, not an experience within Microsoft 365 Copilot. Both events cite the same announcement. The announcement is a family claim and does not say which variants reach Cowork: Microsoft's Cowork picker documentation lists no GPT-5.6 variant at its 17 July revision and lists Sol and Terra, but not Luna, at its 19 August revision. See cowork-gpt5-6-variant-scope. Use Microsoft's wording preferred model; do not infer all default traffic is routed to GPT-5.6."
+    sources:
+      - publisher: "Microsoft"
+        title: "Available today: OpenAI’s GPT-5.6 in Microsoft 365 Copilot"
+        url: "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-openai%E2%80%99s-gpt-5-6-in-microsoft-365-copilot/4533152"
+        primary: true
+        retrieved_at: "2026-07-26"
+        source_type: "announcement"
   - id: "foundry-gpt5-6-2026-07-09"
     kind: "availability"
     date:
@@ -5715,6 +5899,7 @@ events:
       start: "2026-07-09"
       precision: "day"
     surface_id: "m365-copilot"
+    experience_ids: ["word", "excel", "powerpoint", "m365-copilot-chat"]
     model_ids: ["gpt-5-6-sol", "gpt-5-6-terra", "gpt-5-6-luna"]
     model_claim: "family"
     lifecycle: "ga"
@@ -5868,6 +6053,32 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "cowork-opus5-2026-07-24"
+    kind: "availability"
+    date:
+      start: "2026-07-24"
+      precision: "day"
+    surface_id: "m365-cowork"
+    model_ids: ["claude-opus-5"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "Claude Opus 5 reached Copilot Cowork on release day, in the same announcement that added it to the Microsoft 365 Copilot model selector."
+    caveat: "Recorded separately from m365-opus5-2026-07-24 because Cowork is a distinct surface with its own model picker, not an experience within Microsoft 365 Copilot. Both events cite the same announcement. Microsoft states that availability may vary by region and tenant configuration, so the picker did not necessarily offer it to every tenant on this date."
+    relations:
+      - type: "announced_by"
+        target: "anthropic-opus5-2026-07-24"
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Available today: Anthropic Claude Opus 5 in Microsoft 365 Copilot"
+        url: "https://techcommunity.microsoft.com/blog/Microsoft365CopilotBlog/available-today-anthropic-claude-opus-5-in-microsoft-365-copilot/4540524"
+        primary: true
+        retrieved_at: "2026-07-30"
+        published_at: "2026-07-24"
+        source_type: "announcement"
+        quote: "Today we're expanding model choice in Microsoft 365 Copilot with the addition of Anthropic's latest model—Claude Opus 5."
+        supports: ["date", "model", "lifecycle", "exposure"]
   - id: "foundry-opus5-availability-2026-07-24"
     kind: "availability"
     date:
@@ -5957,7 +6168,7 @@ events:
       start: "2026-07-24"
       precision: "day"
     surface_id: "m365-copilot"
-    experience_ids: ["word", "excel", "powerpoint", "m365-copilot-chat", "cowork"]
+    experience_ids: ["word", "excel", "powerpoint", "m365-copilot-chat"]
     model_ids: ["claude-opus-5"]
     model_claim: "specific"
     lifecycle: "ga"
@@ -6276,6 +6487,105 @@ events:
         supports: ["date", "model"]
 
 validation_backlog:
+  - id: "m365-apps-fable5-suspension-window"
+    state: "open"
+    working_claim: "Claude Fable 5's private preview in Excel and PowerPoint was interrupted by the same June 2026 export-control suspension that removed it from Cowork."
+    reason: "cowork-fable5-suspension-2026-06-12 and cowork-fable5-restoration-2026-07 record the interruption on the Cowork surface, where a dated revision of Microsoft's picker documentation shows the model leaving and returning. Nothing equivalent has been found for the Excel and PowerPoint private preview announced on the same day, so m365-fable5-preview-2026-06-10 remains the last recorded event on that surface and current-state still reads public_preview as of 10 June. Anthropic's directive was global, but inferring an app-side interruption from that alone would be the cross-platform inference this project refuses elsewhere."
+    target: "Find a Microsoft 365 Copilot Message Center post, admin-centre notice or documentation revision covering Fable 5 in Excel and PowerPoint across June and July 2026. If one exists, record the suspension and restoration on m365-copilot the way Cowork now carries them; if none does, say so and close this item."
+    model_ids: ["claude-fable-5"]
+    surface_ids: ["m365-copilot"]
+  - id: "cowork-gpt5-5-first-date"
+    state: "open"
+    working_claim: "GPT-5.5 has been selectable in Copilot Cowork since no later than 16 June 2026, under the picker label GPT 5.5 (Frontier)."
+    reason: "The only evidence is Microsoft's Cowork picker documentation, which lists GPT 5.5 (Frontier) at every revision captured so far - 16 June, 17 July and 19 August 2026 - with the note that it is hosted in Azure AI Foundry. Current documentation proves present support and not a first date, and no Microsoft 365 Copilot announcement covering GPT-5.5 in Cowork has been found. Recording an arrival on the date a page was read would turn a documentation timestamp into a deployment date. The label is a second question: Frontier is the name of the Microsoft 365 Copilot early-access programme, but it appears here inside the model name, so it is not established whether the picker is naming the programme or a distinct model variant."
+    target: "Find a Microsoft 365 Copilot announcement, Message Center post or release note dating GPT-5.5 in Cowork, and a Microsoft statement resolving whether GPT 5.5 (Frontier) denotes gpt-5-5 delivered through the Frontier programme or a separate variant. Register the alias against gpt-5-5 only once that is stated rather than inferred. CDX captures of the same page earlier than 18 June 2026 would tighten the upper bound."
+    model_ids: ["gpt-5-5"]
+    surface_ids: ["m365-cowork"]
+    sources:
+      - publisher: "Microsoft"
+        title: "Choose a model for Copilot Cowork"
+        url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-models"
+        primary: true
+        retrieved_at: "2026-08-21"
+        published_at: "2026-06-16"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260618001102/https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-models"
+        quote: "GPT 5.5 (Frontier)"
+        note: "Earliest capture found. The model is already listed, so the arrival predates this revision."
+  - id: "cowork-sonnet4-6-window"
+    state: "open"
+    working_claim: "Claude Sonnet 4.6 was selectable in Copilot Cowork by 16 June 2026 and had been replaced by Claude Sonnet 5 by 17 July 2026."
+    reason: "Both ends rest on revisions of the same Microsoft picker documentation rather than on any announcement. The 16 June revision lists Claude Sonnet 4.6; the 17 July revision lists Claude Sonnet 5 in its place. The dataset holds no Cowork arrival for Sonnet 4.6 and no removal event, and a model vanishing from a documentation table is not a published withdrawal."
+    target: "Find the Microsoft 365 Copilot announcement or release note that put Sonnet 4.6 into Cowork, and any Microsoft statement on its removal. If no removal notice exists, the absence stays absence - do not derive a retirement from the picker table."
+    model_ids: ["claude-sonnet-4-6"]
+    surface_ids: ["m365-cowork"]
+    sources:
+      - publisher: "Microsoft"
+        title: "Choose a model for Copilot Cowork"
+        url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-models"
+        primary: true
+        retrieved_at: "2026-08-21"
+        published_at: "2026-06-16"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260618001102/https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-models"
+        quote: "Claude Sonnet 4.6"
+  - id: "cowork-opus4-lineup-departures"
+    state: "open"
+    working_claim: "Claude Opus 4.7 and Claude Opus 4.8 are no longer offered in the Copilot Cowork model picker."
+    reason: "Opus 4.7 was announced for Cowork on 16 April 2026 but appears in none of the three captured revisions of the picker documentation. Opus 4.8 is listed on 16 June and 17 July and is absent on 19 August, where Opus 5 and Sonnet 5 stand in its place. Neither absence is a published withdrawal: the dataset's own rule is that a model missing from current documentation may have gone or may simply be undocumented, and Microsoft publishes model removals far less consistently than arrivals. Recording retirements from a table that stopped mentioning them would manufacture dates no source states."
+    target: "Find a Microsoft 365 Copilot Message Center post, release note or model-lifecycle page recording the removal of Opus 4.7 and Opus 4.8 from Cowork, and record retirement events only from that. Until then current-state for both models on this surface stays non-terminal, which is the honest reading."
+    model_ids: ["claude-opus-4-7", "claude-opus-4-8"]
+    surface_ids: ["m365-cowork"]
+    sources:
+      - publisher: "Microsoft"
+        title: "Choose a model for Copilot Cowork"
+        url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-models"
+        primary: true
+        retrieved_at: "2026-08-21"
+        published_at: "2026-08-19"
+        source_type: "documentation"
+        note: "The 19 August revision lists Auto, GPT 5.5 (Frontier), GPT 5.6 Sol, GPT 5.6 Terra, Opus 5, Claude Sonnet 5 and Claude Fable 5 (Preview). No Opus 4.x entry remains."
+  - id: "cowork-gpt5-6-variant-scope"
+    state: "open"
+    working_claim: "Only GPT-5.6 Sol and GPT-5.6 Terra are selectable in Copilot Cowork; GPT-5.6 Luna is not."
+    reason: "cowork-gpt5-6-2026-07-09 carries the family claim Microsoft's 9 July announcement actually made, naming Cowork among the surfaces without breaking the release down by variant. The picker documentation disagrees in both directions: its 17 July revision lists no GPT-5.6 variant at all, and its 19 August revision lists Sol and Terra but not Luna. Narrowing the canonical event to two variants on the strength of a documentation table would replace what Microsoft announced with what a page happens to list."
+    target: "Find a Microsoft source stating the Cowork variant lineup - a Message Center post, a release note or a Copilot model-availability page broken down by variant. If Luna was never in Cowork, correct cowork-gpt5-6-2026-07-09 to the variants the source supports and record why in its caveat."
+    model_ids: ["gpt-5-6-luna"]
+    surface_ids: ["m365-cowork"]
+    sources:
+      - publisher: "Microsoft"
+        title: "Choose a model for Copilot Cowork"
+        url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-models"
+        primary: true
+        retrieved_at: "2026-08-21"
+        published_at: "2026-08-19"
+        source_type: "documentation"
+        quote: "GPT 5.6 Sol"
+        note: "Sol and Terra each have a row; Luna has none."
+  - id: "cowork-paired-mode-scope"
+    state: "open"
+    working_claim: "Copilot Cowork offered a paired Sonnet + Opus Advisor mode, documented from 16 June to 17 July 2026 and absent by 19 August."
+    reason: "This is a scope question before it is a research question. Sonnet + Opus Advisor is a routing mode in which, per Microsoft, one model handles the turn and another reviews the result - closer to Auto than to a model arrival, and the dataset tracks models rather than orchestration modes. Recording it as an availability event would put a composite entry in the model registry; ignoring it loses a real change in what the picker offered."
+    target: "Decide whether composite or paired modes belong in this dataset at all. If they do, they need a representation that does not imply a new model - most likely an availability event over the existing model ids with a caveat naming the pairing. Cowork's Auto entry raises the same question and would be settled by the same ruling."
+    model_ids: []
+    surface_ids: ["m365-cowork"]
+    sources:
+      - publisher: "Microsoft"
+        title: "Choose a model for Copilot Cowork"
+        url: "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-models"
+        primary: true
+        retrieved_at: "2026-08-21"
+        published_at: "2026-07-17"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260728022232/https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-models"
+        quote: "A paired mode where Sonnet handles the main turn and Opus reviews the result for accuracy and completeness."
+  - id: "sweep-2026-08-15-to-08-20"
+    state: "open"
+    working_claim: "The window from 15 August to 20 August 2026 has not been swept; the cutoff was moved for a single targeted addition."
+    reason: "The Copilot Cowork picker documentation was read at its 19 August 2026 revision, and research_cutoff moved from 2026-08-14 to 2026-08-20 so the dataset does not carry evidence beyond its own stated reach. That move is bookkeeping, not evidence: no vendor, GitHub changelog, Foundry retrospective or Copilot release note between 15 August and 20 August has been reviewed, so absence of other events in that window means nothing."
+    target: "Sweep the usual sources across 15 August to 20 August 2026 - GitHub Copilot changelog, Microsoft Foundry blog and retirement schedule, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms for OpenAI, Anthropic, Google, xAI, Moonshot and Mistral - then either record what is found or close this item as confirming nothing else landed."
+    model_ids: []
+    surface_ids: []
   - id: "mai-realtime-voice-unreleased"
     state: "open"
     working_claim: "Microsoft is preparing a first-party real-time voice model, MAI Realtime, seen as a hidden early-access entry in the MAI Playground."

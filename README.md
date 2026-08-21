@@ -5,6 +5,7 @@ An independent, community-maintained history of frontier and significant AI mode
 The project tracks when models are released by their vendors and when they become available across Microsoft surfaces including:
 
 - Microsoft 365 Copilot
+- Microsoft Copilot Cowork
 - Microsoft Copilot Studio
 - GitHub Copilot
 - GitHub Models

@@ -197,6 +197,12 @@ In particular:
   surfaces count as `microsoft` and `foundry`, never `copilot`.
 - **The Microsoft 365 admin centre is not a Copilot surface.** An admin control
   appearing is not a model reaching users.
+- **Copilot Cowork is a Copilot surface but not the Microsoft 365 Copilot
+  surface.** It counts as `microsoft` and `copilot`, never `m365`. Cowork has
+  its own model picker and its own arrival dates — Opus 4.7 was selectable
+  there two months before Claude reached the core Copilot Chat picker — so
+  counting it as Microsoft 365 Copilot availability would collapse the
+  distinction the surface exists to record.
 
 A surface that has been renamed keeps its history through `renamed_from` and
 `renamed_to`. Group by `lineage` when you want the product's whole history;
