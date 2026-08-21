@@ -75,9 +75,10 @@ deepseek-v3-2,DeepSeek V3.2,DeepSeek,deepseek,DeepSeek,,ga,not_applicable,false,
 deepseek-v3-2,DeepSeek V3.2,DeepSeek,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-deepseek-v3-2-2025-12-15,2025-12-15,day,2026-08-20,,0
 deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,deepseek,DeepSeek,,ga,not_applicable,false,deepseek-v3-2-speciale-2025-12-01,2025-12-01,day,2026-08-20,,0
 deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-deepseek-v3-2-speciale-2025-12-15,2025-12-15,day,2026-08-20,,0
-deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,deepseek,DeepSeek,,public_preview,not_applicable,false,deepseek-v4-flash-2026-04-24,2026-04-24,day,2026-08-20,,0
-deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-deepseek-v4-flash-2026-04-24,2026-04-24,day,2026-08-20,,0
+deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,deepseek,DeepSeek,,public_preview,not_applicable,false,deepseek-v4-flash-2026-04-24,2026-04-24,day,2026-08-20,deepseek-v4-flash-0731,0
+deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-deepseek-v4-flash-2026-04-24,2026-04-24,day,2026-08-20,deepseek-v4-flash-0731,0
 deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,deepseek,DeepSeek,,ga,not_applicable,false,deepseek-v4-flash-0731-2026-07-31,2026-07-31,day,2026-08-20,,0
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-deepseek-v4-flash-0731-2026-08-19,2026-08-19,day,2026-08-20,,0
 deepseek-v4-pro,DeepSeek V4 Pro,DeepSeek,deepseek,DeepSeek,,public_preview,not_applicable,false,deepseek-v4-pro-2026-04-24,2026-04-24,day,2026-08-20,,0
 deepseek-v4-pro,DeepSeek V4 Pro,DeepSeek,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-deepseek-v4-pro-2026-04-24,2026-04-24,day,2026-08-20,,0
 gemini-1-5-pro,Gemini 1.5 Pro,Google,google-gemini,Gemini,,private_preview,not_applicable,false,google-gemini1-5-pro-2024-02-15,2024-02-15,day,2026-08-20,,0
@@ -197,6 +198,7 @@ mai-voice-1,MAI-Voice-1,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_
 mistral-3,Mistral 3,Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral3-2025-12-02,2025-12-02,day,2026-08-20,,0
 mistral-large-3,Mistral Large 3,Mistral AI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-mistral-large3-2025-12-02,2025-12-02,day,2026-08-20,,0
 mistral-large-3,Mistral Large 3,Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral3-2025-12-02,2025-12-02,day,2026-08-20,,0
+nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-nemotron-3-5-lightning-2026-08-19,2026-08-19,day,2026-08-20,,0
 nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,foundry-local,Foundry Local,microsoft,ga,catalogue,false,foundry-local-nemotron-asr-2026-05,2026-05,month,2026-08-20,,0
 o1,o1,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-o1-retired-2025-07-07,2025-07-07,day,2026-08-20,,0
 o1,o1,OpenAI,github-models,GitHub Models,microsoft,public_preview,catalogue,false,github-models-o1-2024-12-20,2024-12-20,day,2026-08-20,,0

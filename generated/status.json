@@ -1,16 +1,16 @@
 {
   "totals": {
-    "events": 277,
+    "events": 279,
     "backlog": 82,
-    "sources": 343,
-    "models": 105,
+    "sources": 347,
+    "models": 106,
     "surfaces": 26,
     "confirmed": 236,
-    "supported": 41
+    "supported": 43
   },
   "kinds": {
     "announcement": 12,
-    "availability": 250,
+    "availability": 252,
     "milestone": 9,
     "policy": 6
   },
@@ -45,6 +45,16 @@
       "code": "missing_archive",
       "subject": "deepseek-v4-flash-0731-2026-07-31",
       "message": "documentation source has no archived_url and may be edited in place: https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-deepseek-v4-flash-0731-2026-08-19",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-nemotron-3-5-lightning-2026-08-19",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/how-to/fireworks/enable-fireworks-models"
     },
     {
       "code": "no_vendor_baseline",
@@ -87,6 +97,11 @@
       "message": "no vendor release event, so lag cannot be derived"
     },
     {
+      "code": "no_vendor_baseline",
+      "subject": "nemotron-3-5-lightning",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
       "code": "no_vendor_baseline_extended",
       "subject": "grok-4-20",
       "message": "no vendor release event, so lag cannot be derived"
@@ -124,8 +139,8 @@
   ],
   "warning_counts": {
     "backlog_without_surface": 4,
-    "missing_archive": 1,
-    "no_vendor_baseline": 8,
+    "missing_archive": 3,
+    "no_vendor_baseline": 9,
     "no_vendor_baseline_extended": 6,
     "pre_release_access": 1
   },
@@ -175,10 +190,10 @@
     ]
   },
   "lag_certainty": {
-    "exact": 330,
-    "not_recorded": 530,
+    "exact": 332,
+    "not_recorded": 528,
     "range": 39,
-    "unknown_no_baseline": 272,
+    "unknown_no_baseline": 284,
     "unknown_open_research": 89
   }
 }

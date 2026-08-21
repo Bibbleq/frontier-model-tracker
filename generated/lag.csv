@@ -383,7 +383,7 @@ deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,github_copilot,any_exposure,deepsee
 deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,github_copilot,selectable_or_default,deepseek-v4-flash-2026-04-24,2026-04-24,public_preview,,,,,,,,not_recorded
 deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,foundry,any_exposure,deepseek-v4-flash-2026-04-24,2026-04-24,public_preview,foundry-deepseek-v4-flash-2026-04-24,2026-04-24,microsoft-foundry,catalogue,ga,0,37,range
 deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,foundry,selectable_or_default,deepseek-v4-flash-2026-04-24,2026-04-24,public_preview,,,,,,,,not_recorded
-deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,microsoft,any_exposure,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,microsoft,any_exposure,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,foundry-deepseek-v4-flash-0731-2026-08-19,2026-08-19,microsoft-foundry,catalogue,public_preview,19,19,exact
 deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,microsoft,selectable_or_default,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
 deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,copilot,any_exposure,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
 deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,copilot,selectable_or_default,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
@@ -393,7 +393,7 @@ deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,studio,any_exposure,deeps
 deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,studio,selectable_or_default,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
 deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,github_copilot,any_exposure,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
 deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,github_copilot,selectable_or_default,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
-deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,foundry,any_exposure,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
+deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,foundry,any_exposure,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,foundry-deepseek-v4-flash-0731-2026-08-19,2026-08-19,microsoft-foundry,catalogue,public_preview,19,19,exact
 deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,foundry,selectable_or_default,deepseek-v4-flash-0731-2026-07-31,2026-07-31,ga,,,,,,,,not_recorded
 deepseek-v4-pro,DeepSeek V4 Pro,DeepSeek,microsoft,any_exposure,deepseek-v4-pro-2026-04-24,2026-04-24,public_preview,foundry-deepseek-v4-pro-2026-04-24,2026-04-24,microsoft-foundry,catalogue,ga,0,37,range
 deepseek-v4-pro,DeepSeek V4 Pro,DeepSeek,microsoft,selectable_or_default,deepseek-v4-pro-2026-04-24,2026-04-24,public_preview,,,,,,,,not_recorded
@@ -1127,6 +1127,18 @@ mistral-large-3,Mistral Large 3,Mistral AI,github_copilot,any_exposure,mistral3-
 mistral-large-3,Mistral Large 3,Mistral AI,github_copilot,selectable_or_default,mistral3-2025-12-02,2025-12-02,ga,,,,,,,,not_recorded
 mistral-large-3,Mistral Large 3,Mistral AI,foundry,any_exposure,mistral3-2025-12-02,2025-12-02,ga,foundry-mistral-large3-2025-12-02,2025-12-02,microsoft-foundry,catalogue,ga,0,0,exact
 mistral-large-3,Mistral Large 3,Mistral AI,foundry,selectable_or_default,mistral3-2025-12-02,2025-12-02,ga,,,,,,,,not_recorded
+nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,microsoft,any_exposure,,,,foundry-nemotron-3-5-lightning-2026-08-19,2026-08-19,microsoft-foundry,catalogue,ga,,,unknown_no_baseline
+nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,foundry,any_exposure,,,,foundry-nemotron-3-5-lightning-2026-08-19,2026-08-19,microsoft-foundry,catalogue,ga,,,unknown_no_baseline
+nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,microsoft,any_exposure,,,,foundry-local-nemotron-asr-2026-05,2026-05,foundry-local,catalogue,ga,,,unknown_no_baseline
 nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
