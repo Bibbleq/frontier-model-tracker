@@ -59,8 +59,10 @@ claude-opus-4-7,Claude Opus 4.7,Anthropic,text,frontier,claude,claude-4,claude-o
 claude-opus-4-8,Claude Opus 4.8,Anthropic,text,frontier,claude,claude-4,claude-opus,,,,,5
 claude-sonnet-5,Claude Sonnet 5,Anthropic,text,frontier,claude,claude-5,claude-sonnet,,,,,6
 claude-opus-5,Claude Opus 5,Anthropic,text,frontier,claude,claude-5,claude-opus,,,,,6
-claude-fable-5,Claude Fable 5,Anthropic,text,frontier,claude,claude-5,claude-fable,,,,,12
-claude-mythos-5,Claude Mythos 5,Anthropic,text,frontier,claude,claude-5,claude-mythos,,,,,3
+claude-fable-5,Claude Fable 5,Anthropic,text,frontier,claude,claude-5,claude-fable,,,,claude-fable-5-1,12
+claude-mythos-5,Claude Mythos 5,Anthropic,text,frontier,claude,claude-5,claude-mythos,,,,claude-mythos-5-1,3
+claude-fable-5-1,Claude Fable 5.1,Anthropic,text,frontier,claude,claude-5,claude-fable,,,claude-fable-5,,5
+claude-mythos-5-1,Claude Mythos 5.1,Anthropic,text,frontier,claude,claude-5,claude-mythos,,,claude-mythos-5,,1
 claude-mythos-preview,Claude Mythos Preview,Anthropic,text,frontier,claude,,claude-mythos,,,,,0
 gemini-1-5-pro,Gemini 1.5 Pro,Google,text,frontier,gemini,gemini-1,,,,,,4
 gemini-2-0-flash,Gemini 2.0 Flash,Google,text,frontier,gemini,gemini-2,,,,,,2
@@ -74,7 +76,7 @@ grok-4-1-fast,Grok 4.1 Fast,xAI,text,extended,grok,grok-4,,,grok-4-1-fast-reason
 grok-4-20,Grok 4.20,xAI,text,extended,grok,grok-4,,,Grok 4.2 | grok-4-20-reasoning | grok-4-20-non-reasoning,,,1
 grok-4-3,Grok 4.3,xAI,text,extended,grok,grok-4,,,grok-4.3,,,1
 grok-4-5,Grok 4.5,xAI,text,frontier,grok,grok-4,,,,,,2
-grok-4-6,Grok 4.6,xAI,text,frontier,grok,grok-4,,,,,,2
+grok-4-6,Grok 4.6,xAI,text,frontier,grok,grok-4,,,,,,3
 llama-2,Llama 2,Meta,text,frontier,llama,llama-2,,,,,,2
 mistral-3,Mistral 3,Mistral AI,text,frontier,mistral,mistral-3,,,,,,1
 mistral-large-3,Mistral Large 3,Mistral AI,text,frontier,mistral,mistral-3,,,,,,2
@@ -91,6 +93,7 @@ kimi-k2-6,Kimi K2.6,Moonshot AI,text,extended,kimi,kimi-k2,,,Kimi 2.6 | Kimi-K2.
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,text,frontier,kimi,kimi-k2,,,,,,3
 kimi-k3,Kimi K3,Moonshot AI,text,frontier,kimi,kimi-k3,,,FW Kimi K3,,,3
 qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,image,extended,qwen,qwen-3-5,,,qwen3-vl-2b-instruct,,,1
+cohere-parse-v5,Cohere Parse v5,Cohere,image,extended,,,,,Cohere-parse-v5 | Cohere Parse,,,1
 nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,audio,extended,nemotron,nemotron,,,nemotron-speech-streaming-en-0.6b | Nemotron ASR,,,1
 nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,text,frontier,nemotron,nemotron,,,Nemotron 3.5 Lightning | nvidia-nemotron-3.5-lightning-30b-a3b,,,1
 mai-image-2,MAI-Image-2,Microsoft,image,frontier,mai,,mai-image,mai-image-2,,,,1

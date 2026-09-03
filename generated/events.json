@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updated": "2026-08-21",
-  "research_cutoff": "2026-08-20",
+  "updated": "2026-09-03",
+  "research_cutoff": "2026-09-01",
   "metadata": {
     "project": "365Explained Frontier Model Tracker",
     "purpose": "Sourced history of frontier and significant model availability across tracked Microsoft surfaces.",
@@ -9757,6 +9757,478 @@
           "note": "Cited for the offering's stage, not for this model: the page's catalogue table at 21 August did not yet list Nemotron 3.5 Lightning. No archived_url because the only Wayback capture (21 May, of the 29 April revision) predates the change and says the opposite: Fireworks on Foundry was then in preview, which bounds the offering's own move to GA to between 29 April and 21 August 2026. Feature enablement still runs through the Azure portal's Preview features blade."
         }
       ]
+    },
+    {
+      "id": "foundry-grok4-6-preview-2026-08-26",
+      "kind": "availability",
+      "date": {
+        "start": "2026-08-26",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "grok-4-6"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft announced Grok 4.6 in Microsoft Foundry Models as a public preview, fourteen days after xAI's own release and twelve days after the model reached GitHub Copilot. Microsoft's Grok documentation lists grok-4.6 as a preview Global Standard deployment, which corroborates the stage without dating it.",
+      "caveat": "Promoted from foundry-grok4-6-arrival-2026. Microsoft's post names the vendor as SpaceXAI, the name xAI has used since mid-2026; the registry keeps the vendor as xAI so the Grok line's history is not split. The Foundry retirement schedule had no grok-4.6 row at its 3 September revision, so no retirement date is recorded.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "xai-grok4-6-2026-08-12"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Grok 4.6 comes to Microsoft Foundry Models: Built for long-horizon reasoning and complex workflows",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/grok-4-6-comes-to-microsoft-foundry-models-built-for-long/ba-p/4547578",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-08-26",
+          "source_type": "announcement",
+          "quote": "Today, Grok 4.6 from SpaceXAI is available in Microsoft Foundry Models through public preview, bringing SpaceXAI's latest frontier model to developers through a unified platform for model discovery, evaluation, deployment, and governance.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Deploy and use Grok models in Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/how-to/use-foundry-models-grok",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "source_type": "documentation",
+          "quote": "grok-4.6 (preview) | 1 | Global Standard | Chat Completions, Responses",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Current-state documentation: it proves the preview stage at 3 September 2026, not the arrival date. No Wayback capture of the page exists."
+        }
+      ]
+    },
+    {
+      "id": "foundry-cohere-parse-v5-preview-2026-08-27",
+      "kind": "availability",
+      "date": {
+        "start": "2026-08-27",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "cohere-parse-v5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced Cohere Parse v5 as available in the Microsoft Foundry model catalogue, sold directly by Azure and deployed into the customer's own Foundry environment. The announcement states no release stage; Microsoft's catalogue documentation and the retirement schedule both list Cohere-parse-v5 as Preview, the latter with a 15 December 2026 retirement date.",
+      "caveat": "The stage rests on current-state documentation read a week after the arrival, which is why lifecycle is supported rather than confirmed. Recorded under extended scope as a catalogue entry: it is a document-parsing model rather than a frontier chat model, and no Cohere vendor surface exists, so lag is unknown_no_baseline by construction. Cohere's Embed and Rerank catalogue history is not recorded and remains parked.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Cohere Parse v5 is now available in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/cohere-parse-v5-is-now-available-in-microsoft-foundry/ba-p/4550954",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-08-27",
+          "source_type": "announcement",
+          "quote": "Cohere Parse, a vision language model built for converting enterprise documents into structured, machine-readable data, is now available in the Microsoft Foundry model . Parse joins Cohere's Embed and Rerank models in Foundry.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Foundry Models sold by Azure",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "source_type": "documentation",
+          "quote": "Cohere-parse-v5 Preview | image-to-text",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "archived_url": "https://web.archive.org/web/20260830011157/https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure",
+          "note": "Current-state documentation: it proves the preview stage, not the arrival date. The Wayback capture of 30 August 2026, of the 26 August revision, already lists Cohere-parse-v5 as Preview, three days after the announcement."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Model retirement schedule",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "source_type": "documentation",
+          "quote": "Cohere-parse-v5 | 1 | Preview | 2026-12-15",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "The schedule row proves current presence and stage; its version string is 1 and carries no build date. The latest Wayback capture, 24 August 2026 of the 19 August revision, carries no Cohere-parse-v5 row, so the row appeared between 19 August and 3 September; no capture of the current revision exists, hence no archived_url."
+        }
+      ]
+    },
+    {
+      "id": "anthropic-fable5-1-2026-09-01",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-01",
+        "precision": "day"
+      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-fable-5-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Anthropic released Claude Fable 5.1 as generally available on all platforms, including the Claude API, Amazon Web Services, Google Cloud and Microsoft Azure, on the same day as Claude Mythos 5.1. Anthropic states the two are the same model with different safeguards.",
+      "caveat": "Anthropic's announcement page is undated in its body; the day rests on Anthropic's own news index listing, the dated GitHub changelog and same-day press coverage. Fable 5.1 keeps Fable 5's data-retention posture by default, with zero data retention available to eligible customers until Enterprise Frontier Safeguards arrive; that governance detail is product metadata, not lifecycle.",
+      "sources": [
+        {
+          "publisher": "Anthropic",
+          "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-09-01",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260903114140/https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "quote": "Claude Fable 5.1 and Claude Mythos 5.1 are the same model, but with different levels of safeguards. Fable 5.1 is generally available, while Mythos 5.1 is available only through our trusted access programs",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "The page body carries no date; published_at is taken from Anthropic's news index, which lists the post under 1 September 2026."
+        },
+        {
+          "publisher": "Thurrott",
+          "title": "Anthropic Releases Claude Fable 5.1 and Mythos 5.1",
+          "url": "https://www.thurrott.com/a-i/anthropic/340951/anthropic-releases-claude-fable-5-1-and-mythos-5-1",
+          "primary": false,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-09-01",
+          "source_type": "news",
+          "supports": [
+            "date"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anthropic-mythos5-1-2026-09-01",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-01",
+        "precision": "day"
+      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-mythos-5-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "limited_preview",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Anthropic released Claude Mythos 5.1 on the same day as Claude Fable 5.1, available only through its trusted access programmes for vetted cyberdefenders and life scientists, and at launch only to a set of US organisations.",
+      "caveat": "Recorded as limited_preview on the precedent of anthropic-mythos5-2026-06-09: access is gated by Anthropic rather than open, and Anthropic does not call it a preview. Microsoft's Foundry documentation lists claude-mythos-5-1 as a gated research preview, but no dated Foundry arrival has been found; that is tracked as foundry-mythos5-1-arrival-2026.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-fable5-1-2026-09-01"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Anthropic",
+          "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-09-01",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260903114140/https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "quote": "As discussed above, Claude Mythos 5.1 is available to vetted cyberdefenders and life scientists. Currently, it is only available to a set of US organizations",
+          "supports": [
+            "model",
+            "lifecycle"
+          ]
+        },
+        {
+          "publisher": "Thurrott",
+          "title": "Anthropic Releases Claude Fable 5.1 and Mythos 5.1",
+          "url": "https://www.thurrott.com/a-i/anthropic/340951/anthropic-releases-claude-fable-5-1-and-mythos-5-1",
+          "primary": false,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-09-01",
+          "source_type": "news",
+          "supports": [
+            "date"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cowork-fable5-1-2026-09-01",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-01",
+        "precision": "day"
+      },
+      "surface_id": "m365-cowork",
+      "model_ids": [
+        "claude-fable-5-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced Claude Fable 5.1 rolling out to eligible users in Copilot Cowork on release day, the same announcement that covers Copilot Studio.",
+      "caveat": "Recorded separately from studio-fable5-1-2026-09-01 because Cowork is a distinct surface with its own model picker; both events cite the same announcement. Neither the announcement nor Microsoft's Message Center notice MC1465748 states a release stage, and neither carries a preview label, which Microsoft's own documentation defines as the generally available reading; the Fable 5 notice three months earlier, MC1387806, did label that model '(preview)', opt-in and admin-controlled, so Microsoft's own notices distinguish the two. ga is therefore recorded, with lifecycle supported rather than confirmed because the word is never used, the Message Center text reaches the dataset through a mirror, and the Cowork picker documentation had not yet been revised to list Fable 5.1 at its 3 September 2026 reading. The stage is tracked as cowork-studio-fable5-1-stage-2026. A tenant observation on 3 September 2026, which the evidence policy does not allow as a source, agreed: the picker listed Fable 5.1 with no preview tag and no opt-in beyond the Anthropic family setting. Microsoft states availability may vary by region and organisation and that admins manage access through the Microsoft 365 admin center; its subprocessor documentation says Fable 5.1 is available to eligible organisations without data retention, unlike Fable 5. Retain those governance caveats in product detail metadata.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-fable5-1-2026-09-01"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Available today: Anthropic Claude Fable 5.1 in Microsoft Copilot",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/available-today-anthropic-claude-fable-5-1-in-microsoft-copilot/ba-p/4551974",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-09-01",
+          "source_type": "announcement",
+          "quote": "Claude Fable 5.1 is rolling out today to eligible users in Copilot Cowork and Copilot Studio.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "Microsoft 365 Message Center, mirrored by pupuweb.com",
+          "title": "MC1465748: Claude Fable 5.1 is now available in Copilot Cowork and Copilot Studio with Microsoft's enterprise data protection",
+          "url": "https://pupuweb.com/mc1465748-claude-fable-5-1-is-now-available-in-copilot-cowork-and-copilot-studio-with-microsofts-enterprise-data-protection/",
+          "primary": false,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-09-01",
+          "source_type": "release_notes",
+          "quote": "Fable 5.1 is available to your organization in Copilot Cowork and Copilot Studio with Anthropic operating as a Microsoft subprocessor",
+          "supports": [
+            "date",
+            "model",
+            "exposure",
+            "lifecycle"
+          ],
+          "note": "Microsoft's tenant-targeted Message Center notice, category 'Plan for change', published 1 September 2026 and updated 2 September, reproduced by a third-party mirror because Message Center is not public; a tenant administrator can verify the text in the Microsoft 365 admin center. It states 'Rollout will begin on September 1, 2026 and is expected to complete by September 2, 2026' and that prompts and outputs are not retained by Anthropic. It carries no preview label, where the equivalent notice for Fable 5, MC1387806 of 14 June 2026, read 'Claude Fable 5 (preview) is now available as an opt-in, admin-controlled model'; that contrast is the basis for lifecycle. No Wayback capture of the mirror exists."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Anthropic models in Microsoft Online Services",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "source_type": "documentation",
+          "quote": "For example, for certain organizations, Fable 5.1 is available with Anthropic acting as a subprocessor and Microsoft's Product Terms and Data Protection Addendum (DPA) apply.",
+          "supports": [
+            "model"
+          ],
+          "note": "Cited for the governance posture only; the page names no surface, stage or date. The latest Wayback capture, 28 August 2026 of the 22 July revision, predates the Fable-class section; no capture of the current revision exists, hence no archived_url."
+        }
+      ]
+    },
+    {
+      "id": "foundry-fable5-1-preview-2026-09-01",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-01",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "claude-fable-5-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced Claude Fable 5.1 in Microsoft Foundry on release day, hosted on Anthropic infrastructure. Microsoft's Claude documentation lists claude-fable-5-1 as Preview, and the announcement in its current revision calls Fable 5.1 a public preview version.",
+      "caveat": "The stage is the weaker part of the claim. The announcement was revised after publication: the excerpt captured by the candidate watcher at 08:50 UTC on 2 September 2026 read 'Claude Fable 5.1 is the generally available version, with safeguards that fallback for cyber and bio capability queries', while the text read on 3 September says 'a public preview version'. The later wording agrees with Microsoft's Claude models page, which lists Fable 5.1 as 'Hosted on Anthropic infrastructure: Preview' alongside Fable 5, so public_preview is recorded with lifecycle supported. Note the same page lists Fable 5 as Preview while foundry-fable5-2026-06-09 records GA from Microsoft's launch post; that is a pre-existing inconsistency, left for a separate review. Anthropic says Fable 5.1 is generally available on Microsoft Azure; that describes Anthropic's release stage, not Foundry's catalogue label.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-fable5-1-2026-09-01"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Claude Fable 5.1 is now available in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/claude-fable-5-1-is-now-available-in-microsoft-foundry/ba-p/4550175",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-09-01",
+          "source_type": "announcement",
+          "quote": "Claude Fable 5.1 is a public preview version with safeguards that fallback for cyber and bio capability queries; Claude Mythos 5.1 is Anthropic's most capable model for cybersecurity and biology research",
+          "supports": [
+            "date",
+            "model",
+            "exposure",
+            "lifecycle"
+          ],
+          "note": "Wording as read on 3 September 2026; an earlier revision called Fable 5.1 'the generally available version'. No Wayback capture of either revision exists."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Claude models in Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "source_type": "documentation",
+          "quote": "claude-fable-5-1 | Hosted on Anthropic infrastructure: Preview | 1M / 128K",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Current-state documentation: it proves the preview stage at 3 September 2026, not the arrival date. The latest Wayback capture, 28 August 2026 of the 17 August revision, does not list claude-fable-5-1, so the page changed between 28 August and 3 September; no capture of the current revision exists, hence no archived_url."
+        }
+      ]
+    },
+    {
+      "id": "github-fable5-1-ga-2026-09-01",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-01",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-fable-5-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "Claude Fable 5.1 became generally available in the GitHub Copilot model picker on release day, for Copilot Pro+, Max, Business and Enterprise users across VS Code, Visual Studio, Copilot CLI, the coding agent, github.com, mobile, JetBrains, Xcode and Eclipse.",
+      "caveat": "GitHub describes the rollout as gradual. The model is off by default for Business and Enterprise until an administrator enables its policy, and, like Fable 5, it requires data retention by Anthropic unless the enterprise is approved for zero data retention; exposure is selectable once enabled. Retain those governance caveats in product detail metadata.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-fable5-1-2026-09-01"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Claude Fable 5.1 is generally available in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-09-01-claude-fable-5-1-generally-available-in-github-copilot",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-09-01",
+          "source_type": "changelog",
+          "quote": "Claude Fable 5.1 from Anthropic is now available in GitHub Copilot.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "studio-fable5-1-2026-09-01",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-01",
+        "precision": "day"
+      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "claude-fable-5-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "The same announcement names Copilot Studio alongside Copilot Cowork as receiving Claude Fable 5.1 on release day, the first Fable-class model recorded on the Studio surface.",
+      "caveat": "Recorded separately from cowork-fable5-1-2026-09-01 because Copilot Studio is a distinct surface with its own analytical tier. Neither the announcement nor Message Center notice MC1465748, which names Copilot Studio explicitly, states a release stage or carries a preview label, so ga is recorded with lifecycle supported on the same reasoning as the Cowork event. Copilot Studio's primary-model documentation did not list Fable 5.1 at its 3 September 2026 reading, and external Anthropic models there need both a Power Platform environment setting and a Microsoft 365 admin center opt-in before makers can select them. The stage is tracked as cowork-studio-fable5-1-stage-2026; the 3 September tenant observation that supports the Cowork reading was of the Cowork picker and applies here only by extension.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-fable5-1-2026-09-01"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Available today: Anthropic Claude Fable 5.1 in Microsoft Copilot",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/available-today-anthropic-claude-fable-5-1-in-microsoft-copilot/ba-p/4551974",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-09-01",
+          "source_type": "announcement",
+          "quote": "Claude Fable 5.1 is rolling out today to eligible users in Copilot Cowork and Copilot Studio.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "Microsoft 365 Message Center, mirrored by pupuweb.com",
+          "title": "MC1465748: Claude Fable 5.1 is now available in Copilot Cowork and Copilot Studio with Microsoft's enterprise data protection",
+          "url": "https://pupuweb.com/mc1465748-claude-fable-5-1-is-now-available-in-copilot-cowork-and-copilot-studio-with-microsofts-enterprise-data-protection/",
+          "primary": false,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-09-01",
+          "source_type": "release_notes",
+          "quote": "Fable 5.1 is available to your organization in Copilot Cowork and Copilot Studio with Anthropic operating as a Microsoft subprocessor",
+          "supports": [
+            "date",
+            "model",
+            "exposure",
+            "lifecycle"
+          ],
+          "note": "Microsoft's tenant-targeted Message Center notice, category 'Plan for change', published 1 September 2026 and updated 2 September, reproduced by a third-party mirror because Message Center is not public; a tenant administrator can verify the text in the Microsoft 365 admin center. It states 'Rollout will begin on September 1, 2026 and is expected to complete by September 2, 2026' and that prompts and outputs are not retained by Anthropic. It carries no preview label, where the equivalent notice for Fable 5, MC1387806 of 14 June 2026, read 'Claude Fable 5 (preview) is now available as an opt-in, admin-controlled model'; that contrast is the basis for lifecycle. No Wayback capture of the mirror exists."
+        }
+      ]
     }
   ],
   "validation_backlog": [
@@ -10911,7 +11383,7 @@
       "state": "open",
       "working_claim": "Meta Llama 3.x, Cohere, FLUX and Microsoft MAI have catalogue milestones worth tracking.",
       "reason": "These broader catalogue candidates remain outside the current sourced pack. The same scope question now covers audio models: Microsoft announced OpenAI's GPT-transcribe and GPT-live-transcribe as generally available in Foundry on 29 July 2026, alongside GPT-realtime-2.1 and GPT-realtime-mini-2.1, at techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-gpt-transcribe-and-gpt-live-transcribe-in-microsoft/ba-p/4541740. The registry carries no audio model of any kind, so recording that post would open a category, not add an event: Whisper, the gpt-4o transcribe and TTS families and the realtime line would all be implied. Held here until the scope decision is taken deliberately. The July 2026 sweep adds further parked candidates, all Microsoft-carried or vendor-adjacent but unrecorded: Grok 4.1, 4.20 and 4.3, the last confirmed in the Foundry catalogue by the May 2026 retrospective; Kimi K2.5 and K2.6, the latter on the schedule at version 2026-04-20 and arriving via Fireworks in May; the wider Gemini line, 2.0 Pro, 2.5 Flash, 3 Pro, 3.1 Pro, 3.5 Flash and Flash-Lite, and 3 Deep Think; Claude Instant 1.2, Claude 3.5 Haiku and the announced Claude Science; the GPT-5.x Codex line including GPT-5.3-Codex of 5 February 2026; and from the May retrospective, Qwen 3.5 Vision on-device and the Nemotron ASR streaming model. Recording any of these was a scope decision parked for review, and the decision was taken in August 2026: record everything at the same evidence bar, with point releases and catalogue entries marked scope: extended so default presentations can hide them.",
-      "target": "Wave 1 recorded in August 2026 under scope: extended — Grok 4.20 GA, Grok 4.3, Kimi K2.5 and K2.6 via Fireworks, Qwen 3.5 Vision and Nemotron ASR on the new foundry-local surface, plus the missing frontier GPT-5.4 Foundry GA; Grok 4.1 Fast is registered without an event pending a dated arrival source. Remaining for later waves: the wider Gemini line; Claude Instant 1.2, Claude 3.5 Haiku and Claude Science; the GPT-5.x-Codex line and the GPT-5.4 Mini and Pro variants; FLUX, four models GA in the retirement schedule; Llama 3.x and Cohere catalogue history; DeepSeek V3.2, V3.2-Speciale, gpt-oss-120b and MiniMax M2.5 from the March Fireworks launch; the Phi-4 family; grok-code-fast-1; the NVIDIA Nemotron catalogue family arrival dated 16 March 2026; and the schedule's naming of claude-opus-4-8 as claude-opus-4-1's replacement at its 5 August 2026 retirement.",
+      "target": "Wave 1 recorded in August 2026 under scope: extended — Grok 4.20 GA, Grok 4.3, Kimi K2.5 and K2.6 via Fireworks, Qwen 3.5 Vision and Nemotron ASR on the new foundry-local surface, plus the missing frontier GPT-5.4 Foundry GA; Grok 4.1 Fast is registered without an event pending a dated arrival source. Remaining for later waves: the wider Gemini line; Claude Instant 1.2, Claude 3.5 Haiku and Claude Science; the GPT-5.x-Codex line and the GPT-5.4 Mini and Pro variants; FLUX, four models GA in the retirement schedule; Llama 3.x and Cohere catalogue history; DeepSeek V3.2, V3.2-Speciale, gpt-oss-120b and MiniMax M2.5 from the March Fireworks launch; the Phi-4 family; grok-code-fast-1; the NVIDIA Nemotron catalogue family arrival dated 16 March 2026; and the schedule's naming of claude-opus-4-8 as claude-opus-4-1's replacement at its 5 August 2026 retirement. Cohere Parse v5 was recorded from a dated Foundry announcement in September 2026 as foundry-cohere-parse-v5-preview-2026-08-27; the Embed and Rerank history it joined stays parked here.",
       "model_ids": [],
       "surface_ids": [
         "microsoft-foundry"
@@ -11257,7 +11729,7 @@
     },
     {
       "id": "foundry-grok4-6-arrival-2026",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "Grok 4.6 will arrive in Microsoft Foundry following its xAI release of 12 August 2026.",
       "reason": "Grok 4.5 reached Microsoft Foundry within days of its vendor release, so an arrival is plausible but unevidenced: no Foundry blog entry, catalogue listing or retirement-schedule row naming Grok 4.6 had been found at triage. Cross-platform inference is never sufficient. The GitHub Copilot arrival needs no item: it is recorded as github-grok4-6-2026-08-14.",
       "target": "Check the Microsoft Foundry model catalogue, the Foundry blog and the retirement schedule for an entry naming Grok 4.6; version strings and dated retirement rows on the xAI Foundry pages have been the primary evidence for earlier Grok generations there. Record a catalogue arrival when one of those dates it.",
@@ -11267,6 +11739,9 @@
       "surface_ids": [
         "microsoft-foundry"
       ],
+      "resolution": "Microsoft's Foundry blog post of 26 August 2026 announces Grok 4.6 in Microsoft Foundry Models 'through public preview' with 'today' in the first paragraph, and the Grok deployment documentation lists grok-4.6 as a preview Global Standard deployment. Promoted at confirmed confidence as foundry-grok4-6-preview-2026-08-26. The retirement schedule still carried no grok-4.6 row at its 3 September revision.",
+      "resolved_on": "2026-09-03",
+      "promoted_to": "foundry-grok4-6-preview-2026-08-26",
       "sources": [
         {
           "publisher": "xAI",
@@ -11281,6 +11756,132 @@
           "note": "Names only xAI's own distribution and partner platforms; no mention of any Microsoft surface."
         }
       ]
+    },
+    {
+      "id": "foundry-mythos5-1-arrival-2026",
+      "state": "open",
+      "working_claim": "Claude Mythos 5.1 is carried in Microsoft Foundry as a gated research preview, hosted on Anthropic infrastructure, from around its 1 September 2026 release.",
+      "reason": "Microsoft's Claude models documentation lists claude-mythos-5-1 as 'Hosted on Anthropic infrastructure: Gated research preview' with Microsoft Entra ID authentication only, and Microsoft's Fable 5.1 launch post of 1 September 2026 describes Mythos 5.1 in its first paragraph. Neither dates the Foundry arrival: the post announces Fable 5.1 and mentions Mythos 5.1 as the same model with limited access, and the documentation is current-state. The latest Wayback capture of the page, 28 August 2026 of the 17 August revision, lists neither claude-mythos-5-1 nor claude-fable-5-1, which bounds both listings to between 28 August and 3 September 2026 but no tighter. The same gap exists for Mythos 5 and Mythos Preview, which are listed on the same page and have no Foundry event either; claude-mythos-preview-dates covers the earliest of them.",
+      "target": "Watch for the next Wayback capture of the Claude models page and read its ms.date: with the 28 August capture lacking the row, the first capture that lists it closes a bounded window. A Foundry blog or retrospective naming Mythos 5.1's arrival, or a retirement-schedule row, would date it directly. Decide at the same time whether Mythos 5 and Mythos Preview should be recorded on the Foundry surface from the same page, since the three rows stand or fall together.",
+      "model_ids": [
+        "claude-mythos-5-1"
+      ],
+      "surface_ids": [
+        "microsoft-foundry"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Claude models in Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "source_type": "documentation",
+          "quote": "claude-mythos-5-1 | Hosted on Anthropic infrastructure: Gated research preview | 1M / 128K",
+          "note": "Read on 3 September 2026. The 28 August 2026 capture at https://web.archive.org/web/20260828200445/https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models is the pre-change revision and lacks the row."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Claude Fable 5.1 is now available in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/claude-fable-5-1-is-now-available-in-microsoft-foundry/ba-p/4550175",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-09-01",
+          "source_type": "announcement",
+          "quote": "Claude Mythos 5.1 is Anthropic's most capable model for cybersecurity and biology research, keeping its full cyber and bio capabilities as Claude Mythos 5 did, with access limited.",
+          "note": "Names the model without stating that it is available in Foundry."
+        }
+      ]
+    },
+    {
+      "id": "cowork-studio-fable5-1-stage-2026",
+      "state": "open",
+      "working_claim": "Claude Fable 5.1 reached Copilot Cowork and Copilot Studio on 1 September 2026 at a release stage Microsoft has not yet labelled.",
+      "reason": "cowork-fable5-1-2026-09-01 and studio-fable5-1-2026-09-01 record the arrivals at ga with lifecycle supported. The basis: Microsoft's announcement and its Message Center notice MC1465748 carry no preview label, Microsoft's documentation defines an untagged model as generally available, and the Fable 5 notice MC1387806 did say '(preview)', so the omission looks deliberate; a tenant observation on 3 September 2026 agreed, with the picker showing Fable 5.1 untagged. What keeps this open: no Microsoft text says 'generally available', the Message Center wording reaches the dataset only through a third-party mirror, and neither the Cowork picker documentation nor Copilot Studio's model pages listed Fable 5.1 at their 3 September readings. If a Microsoft page labels Fable 5.1 as preview on either surface, the recorded lifecycle overstates the stage.",
+      "target": "Watch the Cowork picker documentation, the Cowork what's-new page and the Copilot Studio primary-model and external-model pages for a Fable 5.1 row; read ms.date on the first revision that lists it. If the row says preview, correct the lifecycle on the affected event and note the revision; if it carries no tag, promote lifecycle to confirmed and close this item. The Microsoft 365 Copilot release notes, whose 25 August 2026 edition was the latest at triage, may carry the same fact earlier.",
+      "model_ids": [
+        "claude-fable-5-1"
+      ],
+      "surface_ids": [
+        "m365-cowork",
+        "copilot-studio"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Choose a model for Copilot Cowork",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-models",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "source_type": "documentation",
+          "quote": "Claude Fable 5 (Preview) | For your toughest, most demanding challenges. | In preview and off by default.",
+          "note": "Read on 3 September 2026; the available-models table lists Fable 5 and not Fable 5.1. The latest Wayback capture is the 28 July 2026 one already cited elsewhere in the backlog; no capture of the current revision exists."
+        },
+        {
+          "publisher": "M365 Admin, mirroring the Microsoft 365 Message Center",
+          "title": "MC1387806: Anthropic Claude Fable 5 available in Copilot Cowork (Frontier)",
+          "url": "https://m365admin.handsontek.net/anthropic-claude-fable-5-available-copilot-cowork-frontier/",
+          "primary": false,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-06-14",
+          "source_type": "release_notes",
+          "quote": "Claude Fable 5 (preview) is now available as an opt-in, admin-controlled model",
+          "note": "The Fable 5 notice, cited for contrast: Microsoft labelled that model preview in the same channel where the Fable 5.1 notice carries no label. No Wayback capture of the mirror exists."
+        }
+      ]
+    },
+    {
+      "id": "zai-glm-5-3-foundry-fireworks-2026",
+      "state": "open",
+      "working_claim": "Z.ai's GLM-5.3, announced on 14 August 2026, is served in Microsoft Foundry through Fireworks as FW-GLM-5.3 on pay-per-token, following GLM-5, 5.1 and 5.2 on the same route; GLM-5.3-Flash followed on 26 August 2026.",
+      "reason": "Two candidates arrived as secondary coverage: an Interconnects post of 14 August 2026 opening 'Today, Z.ai announced their GLM-5.3 model', and newsletter coverage of Z.ai's 26 August GLM-5.3-Flash post. Microsoft's Fireworks documentation lists FW-GLM-5.3 as 'GLM-5.2 successor with improved complex coding and long-horizon task performance' on pay-per-token, and lists GLM-4.7, 5, 5.1 and 5.2 beside it; the retirement schedule carries FW-GLM-4.7, 5 and 5.1 as GA retiring 1 July 2027 but no 5.2 or 5.3 row. Z.ai is not in the registry and no Z.ai model is recorded, so this is a registry decision as much as an event: recording GLM-5.3 implies the GLM-5 line on Foundry, the way the Kimi wave did for Moonshot. Z.ai's own announcements could not be read at triage: z.ai/blog pages are client-rendered applications that yield no text without executing scripts, and their Wayback captures (28 August for GLM-5.3, 31 August for GLM-5.3-Flash) are the same empty shells, so even the vendor date rests on a dated secondary source.",
+      "target": "Read Z.ai's GLM-5.3 and GLM-5.3-Flash announcements for the vendor dates and archive them. Then date the Foundry arrival: pull CDX captures of the Fireworks catalogue page and find the first revision listing FW-GLM-5.3, or a Foundry retrospective naming it. Register Z.ai's GLM-5 line under scope: extended in the same wave, on the Kimi precedent, and record each Fireworks arrival that can be dated; GLM-5.3-Flash has no Foundry listing found and needs none until one appears.",
+      "model_ids": [],
+      "surface_ids": [
+        "microsoft-foundry"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Fireworks models on Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/how-to/fireworks/enable-fireworks-models",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "source_type": "documentation",
+          "quote": "Z.ai | GLM-5.3 | FW-GLM-5.3 | Chat completions | Pay-per-token | GLM-5.2 successor with improved complex coding and long-horizon task performance.",
+          "note": "Read on 3 September 2026. The latest Wayback capture is 21 May 2026 and predates GLM-5.3, so no archived_url."
+        },
+        {
+          "publisher": "Interconnects",
+          "title": "GLM-5.3: How Chinese labs keep stride with the frontier",
+          "url": "https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride",
+          "primary": false,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-08-14",
+          "source_type": "news",
+          "quote": "Today, Z.ai announced their GLM-5.3 model, currently only available in the coding plan, coming soon to their API and in two weeks' time to Hugging Face (open weights).",
+          "archived_url": "https://web.archive.org/web/20260826030944/https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride"
+        },
+        {
+          "publisher": "Z.ai",
+          "title": "Ox-Alpha Revealed as GLM-5.3-Flash",
+          "url": "https://z.ai/blog/glm-5.3-flash",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260831104706/https://z.ai/blog/glm-5.3-flash",
+          "note": "Filed by the candidate watcher on 28 August 2026 from newsletter coverage. The page is a client-rendered application and neither it nor its capture yields readable text without executing scripts, so no quote or date is recorded from it; the GLM-5.3 post at https://z.ai/blog/glm-5.3 has a 28 August capture with the same limitation."
+        }
+      ]
+    },
+    {
+      "id": "sweep-2026-08-21-to-09-01",
+      "state": "open",
+      "working_claim": "The window from 21 August to 1 September 2026 has been covered only by the candidate watcher's filings; research_cutoff was moved for the 3 September triage batch.",
+      "reason": "Eight dated events were added from candidate issues #85, #86, #88, #89, #90 and #91 and research_cutoff moved from 2026-08-20 to 2026-09-01 so the dataset does not carry evidence beyond its own stated reach. That move is bookkeeping, not evidence: the watcher files what its feeds surface, and no systematic pass over the GitHub Copilot changelog, the Foundry retirement schedule, the Microsoft 365 Copilot and Copilot Studio release notes or the vendor newsrooms has been made for the window, so absence of other events in it means nothing.",
+      "target": "Sweep the usual sources across 21 August to 1 September 2026 - GitHub Copilot changelog, Microsoft Foundry blog, retirement schedule and August retrospective when published, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms for OpenAI, Anthropic, Google, xAI, Moonshot and Mistral - then either record what is found or close this item as confirming nothing else landed. Wayback captures were looked up for every source added in the 3 September batch: the announcements on techcommunity.microsoft.com, github.blog and thurrott.com and the Grok deployment page have no capture at all, and the Claude models, retirement schedule, subprocessor and Cowork picker pages have only pre-change captures. Those need snapshots taken from a browser and backfilled as archived_url.",
+      "model_ids": [],
+      "surface_ids": []
     }
   ]
 }
