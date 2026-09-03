@@ -1,23 +1,23 @@
 {
   "totals": {
-    "events": 279,
-    "backlog": 82,
-    "sources": 347,
-    "models": 106,
+    "events": 287,
+    "backlog": 86,
+    "sources": 371,
+    "models": 109,
     "surfaces": 26,
-    "confirmed": 236,
-    "supported": 43
+    "confirmed": 240,
+    "supported": 47
   },
   "kinds": {
     "announcement": 12,
-    "availability": 252,
+    "availability": 260,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 42,
-    "promoted": 34,
+    "open": 45,
+    "promoted": 35,
     "rejected": 4
   },
   "warnings": [
@@ -42,9 +42,29 @@
       "message": "open item names no surface, so it cannot suppress a lag answer"
     },
     {
+      "code": "backlog_without_surface",
+      "subject": "sweep-2026-08-21-to-09-01",
+      "message": "open item names no surface, so it cannot suppress a lag answer"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "cowork-fable5-1-2026-09-01",
+      "message": "documentation source has no archived_url and may be edited in place: https://pupuweb.com/mc1465748-claude-fable-5-1-is-now-available-in-copilot-cowork-and-copilot-studio-with-microsofts-enterprise-data-protection/"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "cowork-fable5-1-2026-09-01",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor"
+    },
+    {
       "code": "missing_archive",
       "subject": "deepseek-v4-flash-0731-2026-07-31",
       "message": "documentation source has no archived_url and may be edited in place: https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-cohere-parse-v5-preview-2026-08-27",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
     },
     {
       "code": "missing_archive",
@@ -53,8 +73,23 @@
     },
     {
       "code": "missing_archive",
+      "subject": "foundry-fable5-1-preview-2026-09-01",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-grok4-6-preview-2026-08-26",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/how-to/use-foundry-models-grok"
+    },
+    {
+      "code": "missing_archive",
       "subject": "foundry-nemotron-3-5-lightning-2026-08-19",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/how-to/fireworks/enable-fireworks-models"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "studio-fable5-1-2026-09-01",
+      "message": "documentation source has no archived_url and may be edited in place: https://pupuweb.com/mc1465748-claude-fable-5-1-is-now-available-in-copilot-cowork-and-copilot-studio-with-microsofts-enterprise-data-protection/"
     },
     {
       "code": "no_vendor_baseline",
@@ -103,6 +138,11 @@
     },
     {
       "code": "no_vendor_baseline_extended",
+      "subject": "cohere-parse-v5",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline_extended",
       "subject": "grok-4-20",
       "message": "no vendor release event, so lag cannot be derived"
     },
@@ -138,10 +178,10 @@
     }
   ],
   "warning_counts": {
-    "backlog_without_surface": 4,
-    "missing_archive": 3,
+    "backlog_without_surface": 5,
+    "missing_archive": 9,
     "no_vendor_baseline": 9,
-    "no_vendor_baseline_extended": 6,
+    "no_vendor_baseline_extended": 7,
     "pre_release_access": 1
   },
   "coverage": {
@@ -160,6 +200,7 @@
     "models_without_generation": [
       "claude-mythos-preview",
       "codex",
+      "cohere-parse-v5",
       "mai-code-1-1-flash",
       "mai-code-1-flash",
       "mai-cyber-1-flash",
@@ -176,10 +217,12 @@
     ],
     "models_without_classification": [
       "codex",
+      "cohere-parse-v5",
       "openai-deep-research"
     ],
     "surfaces_without_events": [],
     "extended_scope_models": [
+      "cohere-parse-v5",
       "grok-4-1-fast",
       "grok-4-20",
       "grok-4-3",
@@ -190,10 +233,10 @@
     ]
   },
   "lag_certainty": {
-    "exact": 332,
-    "not_recorded": 528,
+    "exact": 342,
+    "not_recorded": 540,
     "range": 39,
-    "unknown_no_baseline": 284,
-    "unknown_open_research": 89
+    "unknown_no_baseline": 296,
+    "unknown_open_research": 91
   }
 }

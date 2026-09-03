@@ -569,11 +569,27 @@ models:
     vendor: Anthropic
     generation: claude-5
     model_line: claude-fable
+    superseded_by: claude-fable-5-1
   - id: claude-mythos-5
     display_name: "Claude Mythos 5"
     vendor: Anthropic
     generation: claude-5
     model_line: claude-mythos
+    superseded_by: claude-mythos-5-1
+  - id: claude-fable-5-1
+    display_name: "Claude Fable 5.1"
+    vendor: Anthropic
+    generation: claude-5
+    model_line: claude-fable
+    supersedes: claude-fable-5
+    note: "Anthropic presents Fable 5.1 as the successor to Fable 5 and Microsoft publishes a Fable 5 migration section in its Foundry announcement, which is the basis for the supersedes link; the two remain listed side by side in Foundry and GitHub Copilot."
+  - id: claude-mythos-5-1
+    display_name: "Claude Mythos 5.1"
+    vendor: Anthropic
+    generation: claude-5
+    model_line: claude-mythos
+    supersedes: claude-mythos-5
+    note: "The same model as Fable 5.1 with its full cyber and biology capabilities, offered only through Anthropic's trusted access programmes. Registered separately, as Mythos 5 is from Fable 5, because the two ship under different lifecycles."
   - id: claude-mythos-preview
     display_name: "Claude Mythos Preview"
     vendor: Anthropic
@@ -732,6 +748,15 @@ models:
     scope: extended
     aliases: ["qwen3-vl-2b-instruct"]
     note: "A vision-language model recorded under the image modality because modality covers what a model processes as well as what it produces: it reads images and writes text, and generates no images. The catalogue id in Foundry Local's SDK sample is qwen3-vl-2b-instruct."
+
+  # ------------------------------------------------------------- Cohere
+  - id: cohere-parse-v5
+    display_name: "Cohere Parse v5"
+    vendor: Cohere
+    modality: image
+    scope: extended
+    aliases: ["Cohere-parse-v5", "Cohere Parse"]
+    note: "A vision-language document-parsing model: it reads images, tables and forms and writes Markdown, so it is recorded under the image modality on the same reasoning as qwen-3-5-vision. Registered under extended scope as a catalogue entry. Cohere's earlier Embed and Rerank models in Foundry remain unrecorded and stay parked in meta-cohere-flux-mai-foundry-history; no Cohere vendor surface exists, so lag for this model is unknown_no_baseline by construction."
 
   # ------------------------------------------------------------- NVIDIA
   - id: nemotron-speech-streaming-en

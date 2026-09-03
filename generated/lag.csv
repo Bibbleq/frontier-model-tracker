@@ -107,6 +107,18 @@ claude-fable-5,Claude Fable 5,Anthropic,github_copilot,any_exposure,anthropic-fa
 claude-fable-5,Claude Fable 5,Anthropic,github_copilot,selectable_or_default,anthropic-fable5-2026-06-09,2026-06-09,ga,github-fable5-ga-2026-06-09,2026-06-09,github-copilot,selectable,ga,0,0,exact
 claude-fable-5,Claude Fable 5,Anthropic,foundry,any_exposure,anthropic-fable5-2026-06-09,2026-06-09,ga,foundry-fable5-2026-06-09,2026-06-09,microsoft-foundry,catalogue,ga,0,0,exact
 claude-fable-5,Claude Fable 5,Anthropic,foundry,selectable_or_default,anthropic-fable5-2026-06-09,2026-06-09,ga,,,,,,,,unknown_open_research
+claude-fable-5-1,Claude Fable 5.1,Anthropic,microsoft,any_exposure,anthropic-fable5-1-2026-09-01,2026-09-01,ga,cowork-fable5-1-2026-09-01,2026-09-01,m365-cowork,selectable,ga,0,0,exact
+claude-fable-5-1,Claude Fable 5.1,Anthropic,microsoft,selectable_or_default,anthropic-fable5-1-2026-09-01,2026-09-01,ga,cowork-fable5-1-2026-09-01,2026-09-01,m365-cowork,selectable,ga,0,0,exact
+claude-fable-5-1,Claude Fable 5.1,Anthropic,copilot,any_exposure,anthropic-fable5-1-2026-09-01,2026-09-01,ga,cowork-fable5-1-2026-09-01,2026-09-01,m365-cowork,selectable,ga,0,0,exact
+claude-fable-5-1,Claude Fable 5.1,Anthropic,copilot,selectable_or_default,anthropic-fable5-1-2026-09-01,2026-09-01,ga,cowork-fable5-1-2026-09-01,2026-09-01,m365-cowork,selectable,ga,0,0,exact
+claude-fable-5-1,Claude Fable 5.1,Anthropic,m365,any_exposure,anthropic-fable5-1-2026-09-01,2026-09-01,ga,,,,,,,,not_recorded
+claude-fable-5-1,Claude Fable 5.1,Anthropic,m365,selectable_or_default,anthropic-fable5-1-2026-09-01,2026-09-01,ga,,,,,,,,not_recorded
+claude-fable-5-1,Claude Fable 5.1,Anthropic,studio,any_exposure,anthropic-fable5-1-2026-09-01,2026-09-01,ga,studio-fable5-1-2026-09-01,2026-09-01,copilot-studio,selectable,ga,0,0,exact
+claude-fable-5-1,Claude Fable 5.1,Anthropic,studio,selectable_or_default,anthropic-fable5-1-2026-09-01,2026-09-01,ga,studio-fable5-1-2026-09-01,2026-09-01,copilot-studio,selectable,ga,0,0,exact
+claude-fable-5-1,Claude Fable 5.1,Anthropic,github_copilot,any_exposure,anthropic-fable5-1-2026-09-01,2026-09-01,ga,github-fable5-1-ga-2026-09-01,2026-09-01,github-copilot,selectable,ga,0,0,exact
+claude-fable-5-1,Claude Fable 5.1,Anthropic,github_copilot,selectable_or_default,anthropic-fable5-1-2026-09-01,2026-09-01,ga,github-fable5-1-ga-2026-09-01,2026-09-01,github-copilot,selectable,ga,0,0,exact
+claude-fable-5-1,Claude Fable 5.1,Anthropic,foundry,any_exposure,anthropic-fable5-1-2026-09-01,2026-09-01,ga,foundry-fable5-1-preview-2026-09-01,2026-09-01,microsoft-foundry,catalogue,public_preview,0,0,exact
+claude-fable-5-1,Claude Fable 5.1,Anthropic,foundry,selectable_or_default,anthropic-fable5-1-2026-09-01,2026-09-01,ga,,,,,,,,not_recorded
 claude-haiku-4-5,Claude Haiku 4.5,Anthropic,microsoft,any_exposure,anthropic-haiku4-5-2025-10-15,2025-10-15,ga,foundry-haiku4-5-2025-11-18,2025-11-18,microsoft-foundry,catalogue,public_preview,34,34,exact
 claude-haiku-4-5,Claude Haiku 4.5,Anthropic,microsoft,selectable_or_default,anthropic-haiku4-5-2025-10-15,2025-10-15,ga,,,,,,,,not_recorded
 claude-haiku-4-5,Claude Haiku 4.5,Anthropic,copilot,any_exposure,anthropic-haiku4-5-2025-10-15,2025-10-15,ga,,,,,,,,not_recorded
@@ -131,6 +143,18 @@ claude-mythos-5,Claude Mythos 5,Anthropic,github_copilot,any_exposure,anthropic-
 claude-mythos-5,Claude Mythos 5,Anthropic,github_copilot,selectable_or_default,anthropic-mythos5-2026-06-09,2026-06-09,limited_preview,,,,,,,,not_recorded
 claude-mythos-5,Claude Mythos 5,Anthropic,foundry,any_exposure,anthropic-mythos5-2026-06-09,2026-06-09,limited_preview,,,,,,,,not_recorded
 claude-mythos-5,Claude Mythos 5,Anthropic,foundry,selectable_or_default,anthropic-mythos5-2026-06-09,2026-06-09,limited_preview,,,,,,,,not_recorded
+claude-mythos-5-1,Claude Mythos 5.1,Anthropic,microsoft,any_exposure,anthropic-mythos5-1-2026-09-01,2026-09-01,limited_preview,,,,,,,,unknown_open_research
+claude-mythos-5-1,Claude Mythos 5.1,Anthropic,microsoft,selectable_or_default,anthropic-mythos5-1-2026-09-01,2026-09-01,limited_preview,,,,,,,,unknown_open_research
+claude-mythos-5-1,Claude Mythos 5.1,Anthropic,copilot,any_exposure,anthropic-mythos5-1-2026-09-01,2026-09-01,limited_preview,,,,,,,,not_recorded
+claude-mythos-5-1,Claude Mythos 5.1,Anthropic,copilot,selectable_or_default,anthropic-mythos5-1-2026-09-01,2026-09-01,limited_preview,,,,,,,,not_recorded
+claude-mythos-5-1,Claude Mythos 5.1,Anthropic,m365,any_exposure,anthropic-mythos5-1-2026-09-01,2026-09-01,limited_preview,,,,,,,,not_recorded
+claude-mythos-5-1,Claude Mythos 5.1,Anthropic,m365,selectable_or_default,anthropic-mythos5-1-2026-09-01,2026-09-01,limited_preview,,,,,,,,not_recorded
+claude-mythos-5-1,Claude Mythos 5.1,Anthropic,studio,any_exposure,anthropic-mythos5-1-2026-09-01,2026-09-01,limited_preview,,,,,,,,not_recorded
+claude-mythos-5-1,Claude Mythos 5.1,Anthropic,studio,selectable_or_default,anthropic-mythos5-1-2026-09-01,2026-09-01,limited_preview,,,,,,,,not_recorded
+claude-mythos-5-1,Claude Mythos 5.1,Anthropic,github_copilot,any_exposure,anthropic-mythos5-1-2026-09-01,2026-09-01,limited_preview,,,,,,,,not_recorded
+claude-mythos-5-1,Claude Mythos 5.1,Anthropic,github_copilot,selectable_or_default,anthropic-mythos5-1-2026-09-01,2026-09-01,limited_preview,,,,,,,,not_recorded
+claude-mythos-5-1,Claude Mythos 5.1,Anthropic,foundry,any_exposure,anthropic-mythos5-1-2026-09-01,2026-09-01,limited_preview,,,,,,,,unknown_open_research
+claude-mythos-5-1,Claude Mythos 5.1,Anthropic,foundry,selectable_or_default,anthropic-mythos5-1-2026-09-01,2026-09-01,limited_preview,,,,,,,,unknown_open_research
 claude-mythos-preview,Claude Mythos Preview,Anthropic,microsoft,any_exposure,,,,,,,,,,,unknown_open_research
 claude-mythos-preview,Claude Mythos Preview,Anthropic,microsoft,selectable_or_default,,,,,,,,,,,unknown_open_research
 claude-mythos-preview,Claude Mythos Preview,Anthropic,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
@@ -287,6 +311,18 @@ codex,Codex,OpenAI,github_copilot,any_exposure,openai-codex-2021-08-10,2021-08-1
 codex,Codex,OpenAI,github_copilot,selectable_or_default,openai-codex-2021-08-10,2021-08-10,private_preview,,,,,,,,not_recorded
 codex,Codex,OpenAI,foundry,any_exposure,openai-codex-2021-08-10,2021-08-10,private_preview,azure-openai-ga-2023-01-17,2023-01-17,azure-openai,catalogue,ga,525,525,exact
 codex,Codex,OpenAI,foundry,selectable_or_default,openai-codex-2021-08-10,2021-08-10,private_preview,,,,,,,,not_recorded
+cohere-parse-v5,Cohere Parse v5,Cohere,microsoft,any_exposure,,,,foundry-cohere-parse-v5-preview-2026-08-27,2026-08-27,microsoft-foundry,catalogue,public_preview,,,unknown_no_baseline
+cohere-parse-v5,Cohere Parse v5,Cohere,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+cohere-parse-v5,Cohere Parse v5,Cohere,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+cohere-parse-v5,Cohere Parse v5,Cohere,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+cohere-parse-v5,Cohere Parse v5,Cohere,m365,any_exposure,,,,,,,,,,,unknown_no_baseline
+cohere-parse-v5,Cohere Parse v5,Cohere,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+cohere-parse-v5,Cohere Parse v5,Cohere,studio,any_exposure,,,,,,,,,,,unknown_no_baseline
+cohere-parse-v5,Cohere Parse v5,Cohere,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+cohere-parse-v5,Cohere Parse v5,Cohere,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
+cohere-parse-v5,Cohere Parse v5,Cohere,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+cohere-parse-v5,Cohere Parse v5,Cohere,foundry,any_exposure,,,,foundry-cohere-parse-v5-preview-2026-08-27,2026-08-27,microsoft-foundry,catalogue,public_preview,,,unknown_no_baseline
+cohere-parse-v5,Cohere Parse v5,Cohere,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 dall-e-2,DALL-E 2,OpenAI,microsoft,any_exposure,openai-dall-e-2-beta-2022-07,2022-07-01,limited_preview,azure-openai-ga-2023-01-17,2023-01-17,azure-openai,catalogue,ga,170,200,range
 dall-e-2,DALL-E 2,OpenAI,microsoft,selectable_or_default,openai-dall-e-2-beta-2022-07,2022-07-01,limited_preview,,,,,,,,not_recorded
 dall-e-2,DALL-E 2,OpenAI,copilot,any_exposure,openai-dall-e-2-beta-2022-07,2022-07-01,limited_preview,,,,,,,,not_recorded
@@ -897,8 +933,8 @@ grok-4-6,Grok 4.6,xAI,studio,any_exposure,xai-grok4-6-2026-08-12,2026-08-12,ga,,
 grok-4-6,Grok 4.6,xAI,studio,selectable_or_default,xai-grok4-6-2026-08-12,2026-08-12,ga,,,,,,,,not_recorded
 grok-4-6,Grok 4.6,xAI,github_copilot,any_exposure,xai-grok4-6-2026-08-12,2026-08-12,ga,github-grok4-6-2026-08-14,2026-08-14,github-copilot,selectable,ga,2,2,exact
 grok-4-6,Grok 4.6,xAI,github_copilot,selectable_or_default,xai-grok4-6-2026-08-12,2026-08-12,ga,github-grok4-6-2026-08-14,2026-08-14,github-copilot,selectable,ga,2,2,exact
-grok-4-6,Grok 4.6,xAI,foundry,any_exposure,xai-grok4-6-2026-08-12,2026-08-12,ga,,,,,,,,unknown_open_research
-grok-4-6,Grok 4.6,xAI,foundry,selectable_or_default,xai-grok4-6-2026-08-12,2026-08-12,ga,,,,,,,,unknown_open_research
+grok-4-6,Grok 4.6,xAI,foundry,any_exposure,xai-grok4-6-2026-08-12,2026-08-12,ga,foundry-grok4-6-preview-2026-08-26,2026-08-26,microsoft-foundry,catalogue,public_preview,14,14,exact
+grok-4-6,Grok 4.6,xAI,foundry,selectable_or_default,xai-grok4-6-2026-08-12,2026-08-12,ga,,,,,,,,not_recorded
 kimi-k2-5,Kimi K2.5,Moonshot AI,microsoft,any_exposure,,,,foundry-fw-kimi-k2-5-2026-03,2026-03,microsoft-foundry,catalogue,public_preview,,,unknown_no_baseline
 kimi-k2-5,Kimi K2.5,Moonshot AI,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 kimi-k2-5,Kimi K2.5,Moonshot AI,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
