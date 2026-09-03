@@ -95,7 +95,7 @@ claude-3-sonnet,Claude 3 Sonnet,Anthropic,github_copilot,any_exposure,anthropic-
 claude-3-sonnet,Claude 3 Sonnet,Anthropic,github_copilot,selectable_or_default,anthropic-claude3-family-2024-03-04,2024-03-04,ga,,,,,,,,not_recorded
 claude-3-sonnet,Claude 3 Sonnet,Anthropic,foundry,any_exposure,anthropic-claude3-family-2024-03-04,2024-03-04,ga,,,,,,,,not_recorded
 claude-3-sonnet,Claude 3 Sonnet,Anthropic,foundry,selectable_or_default,anthropic-claude3-family-2024-03-04,2024-03-04,ga,,,,,,,,not_recorded
-claude-fable-5,Claude Fable 5,Anthropic,microsoft,any_exposure,anthropic-fable5-2026-06-09,2026-06-09,ga,foundry-fable5-2026-06-09,2026-06-09,microsoft-foundry,catalogue,ga,0,0,exact
+claude-fable-5,Claude Fable 5,Anthropic,microsoft,any_exposure,anthropic-fable5-2026-06-09,2026-06-09,ga,foundry-fable5-2026-06-09,2026-06-09,microsoft-foundry,catalogue,public_preview,0,0,exact
 claude-fable-5,Claude Fable 5,Anthropic,microsoft,selectable_or_default,anthropic-fable5-2026-06-09,2026-06-09,ga,github-fable5-ga-2026-06-09,2026-06-09,github-copilot,selectable,ga,0,0,exact
 claude-fable-5,Claude Fable 5,Anthropic,copilot,any_exposure,anthropic-fable5-2026-06-09,2026-06-09,ga,github-fable5-ga-2026-06-09,2026-06-09,github-copilot,selectable,ga,0,0,exact
 claude-fable-5,Claude Fable 5,Anthropic,copilot,selectable_or_default,anthropic-fable5-2026-06-09,2026-06-09,ga,github-fable5-ga-2026-06-09,2026-06-09,github-copilot,selectable,ga,0,0,exact
@@ -105,7 +105,7 @@ claude-fable-5,Claude Fable 5,Anthropic,studio,any_exposure,anthropic-fable5-202
 claude-fable-5,Claude Fable 5,Anthropic,studio,selectable_or_default,anthropic-fable5-2026-06-09,2026-06-09,ga,,,,,,,,not_recorded
 claude-fable-5,Claude Fable 5,Anthropic,github_copilot,any_exposure,anthropic-fable5-2026-06-09,2026-06-09,ga,github-fable5-ga-2026-06-09,2026-06-09,github-copilot,selectable,ga,0,0,exact
 claude-fable-5,Claude Fable 5,Anthropic,github_copilot,selectable_or_default,anthropic-fable5-2026-06-09,2026-06-09,ga,github-fable5-ga-2026-06-09,2026-06-09,github-copilot,selectable,ga,0,0,exact
-claude-fable-5,Claude Fable 5,Anthropic,foundry,any_exposure,anthropic-fable5-2026-06-09,2026-06-09,ga,foundry-fable5-2026-06-09,2026-06-09,microsoft-foundry,catalogue,ga,0,0,exact
+claude-fable-5,Claude Fable 5,Anthropic,foundry,any_exposure,anthropic-fable5-2026-06-09,2026-06-09,ga,foundry-fable5-2026-06-09,2026-06-09,microsoft-foundry,catalogue,public_preview,0,0,exact
 claude-fable-5,Claude Fable 5,Anthropic,foundry,selectable_or_default,anthropic-fable5-2026-06-09,2026-06-09,ga,,,,,,,,unknown_open_research
 claude-fable-5-1,Claude Fable 5.1,Anthropic,microsoft,any_exposure,anthropic-fable5-1-2026-09-01,2026-09-01,ga,cowork-fable5-1-2026-09-01,2026-09-01,m365-cowork,selectable,ga,0,0,exact
 claude-fable-5-1,Claude Fable 5.1,Anthropic,microsoft,selectable_or_default,anthropic-fable5-1-2026-09-01,2026-09-01,ga,cowork-fable5-1-2026-09-01,2026-09-01,m365-cowork,selectable,ga,0,0,exact

@@ -17,22 +17,22 @@
       "path": "data/events.json",
       "media_type": "application/json",
       "description": "The whole dataset: metadata, canonical events and the validation backlog",
-      "bytes": 545385,
-      "sha256": "fd89c15cfaa3b035d1eb93bbaadf734213c239057ee48ff1d07d974e4c2876ec"
+      "bytes": 549626,
+      "sha256": "7028f979c92d45be5ef897a88c5e06b05063c635833506225e31abe51ae647fb"
     },
     {
       "path": "data/status.json",
       "media_type": "application/json",
       "description": "Totals, warning counts, coverage gaps and lag certainty distribution",
-      "bytes": 8047,
-      "sha256": "c2a0ce71f4c93f5746c4a67f6a4d81743a8cd7a47ab9f04282be58dc23ab67e3"
+      "bytes": 8318,
+      "sha256": "0884bf1324e634d3ac4c0411f6bd6e73b0fe8145485033202732219b035eb637"
     },
     {
       "path": "data/events.csv",
       "media_type": "text/csv",
       "description": "Flattened canonical timeline, identifiers resolved to display names",
-      "bytes": 166793,
-      "sha256": "fb01cea413ac959300d9d252ef0301568c014809dfae4e5a7082e0dea81c917e"
+      "bytes": 168303,
+      "sha256": "d877d86e8010772bb3fb58db2fa347983049623cd4036e145f949880c4558afe"
     },
     {
       "path": "data/validation-backlog.csv",
@@ -45,8 +45,8 @@
       "path": "data/lag.csv",
       "media_type": "text/csv",
       "description": "Derived adoption lag; read certainty before any number",
-      "bytes": 183389,
-      "sha256": "3660aff196e0ffd9187025dd2a6bffd03d73badbc98057f051b54626e82f44c1"
+      "bytes": 183413,
+      "sha256": "2ab8900ae1a485dbf4c575aabdad96416cd562661e77de98071592500620f18e"
     },
     {
       "path": "data/current-state.csv",

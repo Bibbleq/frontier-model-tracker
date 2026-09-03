@@ -7609,18 +7609,72 @@
         "claude-fable-5"
       ],
       "model_claim": "specific",
-      "lifecycle": "ga",
+      "lifecycle": "public_preview",
       "exposure": "catalogue",
-      "confidence": "confirmed",
-      "evidence_note": "Microsoft announced Fable 5 availability in Microsoft Foundry on release day.",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced Fable 5 as available in Microsoft Foundry on release day, hosted on Anthropic infrastructure. The announcement states no release stage. Microsoft's Claude documentation has listed claude-fable-5 as 'Hosted on Anthropic: Preview' at every captured revision from 10 July 2026 onward, and the retirement schedule lists it as a preview model retiring 5 December 2027.",
+      "caveat": "Corrected in September 2026. This event was first recorded as ga on the strength of 'available today' in the launch post, which never states a stage; the project's own rule is that an announcement is not GA, and no Microsoft source has ever called Fable 5 generally available in Foundry. The Claude in Microsoft Foundry GA announcement of 29 June 2026 does not mention Fable 5, and the June 2026 retrospective covering that GA does not either. No capture of the Claude models page exists between 9 June and 10 July 2026, so the stage at launch is attested only by the earliest revision that lists the model, a month later; lifecycle is therefore supported rather than confirmed. Fable 5.1 followed the same pattern on 1 September 2026, recorded as foundry-fable5-1-preview-2026-09-01. The suspension of 12 June and the unresolved restoration are unaffected.",
       "sources": [
         {
           "publisher": "Microsoft Azure",
           "title": "Claude Fable 5 is now available in Microsoft Foundry",
           "url": "https://azure.microsoft.com/en-us/blog/claude-fable-5-is-now-available-in-microsoft-foundry-powering-the-next-era-of-autonomous-agents/",
           "primary": true,
-          "retrieved_at": "2026-07-26",
-          "source_type": "announcement"
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-06-09",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260610132238/https://azure.microsoft.com/en-us/blog/claude-fable-5-is-now-available-in-microsoft-foundry-powering-the-next-era-of-autonomous-agents/",
+          "quote": "Claude Fable 5, Anthropic's latest frontier model, is available today in Microsoft Foundry, powering agents in GitHub Copilot and Foundry Agent Service.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "The earliest capture, 10 June 2026, before the suspension banner was added. Neither this capture nor the live page uses the words preview, generally available or GA."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Claude models in Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-07-10",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20260715105150/https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models",
+          "quote": "claude-fable-5 | Hosted on Anthropic: Preview | 1M / 128K",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "Revision of 10 July 2026, captured 15 July: the earliest capture of the page and the earliest documented stage. The 27 July, 17 August and 3 September readings say the same, the last as 'Hosted on Anthropic infrastructure: Preview'."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Model retirement schedule",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "source_type": "documentation",
+          "quote": "claude-fable-5 | 1 | Preview | 2027-12-05",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "Current-state schedule read on 3 September 2026. The latest Wayback capture, 24 August 2026 of the 19 August revision, carries a different Anthropic table without this row, so no archived_url attests the quote."
+        },
+        {
+          "publisher": "Microsoft Azure",
+          "title": "Claude in Microsoft Foundry is now generally available",
+          "url": "https://azure.microsoft.com/en-us/blog/claude-in-microsoft-foundry-is-now-generally-available/",
+          "primary": true,
+          "retrieved_at": "2026-09-03",
+          "published_at": "2026-06-29",
+          "source_type": "announcement",
+          "note": "Checked and negative: the GA announcement for the Claude offering in Foundry does not mention Fable 5, consistent with the model staying in preview while the offering went GA."
         }
       ]
     },
@@ -10083,7 +10137,7 @@
         "lifecycle": "supported"
       },
       "evidence_note": "Microsoft announced Claude Fable 5.1 in Microsoft Foundry on release day, hosted on Anthropic infrastructure. Microsoft's Claude documentation lists claude-fable-5-1 as Preview, and the announcement in its current revision calls Fable 5.1 a public preview version.",
-      "caveat": "The stage is the weaker part of the claim. The announcement was revised after publication: the excerpt captured by the candidate watcher at 08:50 UTC on 2 September 2026 read 'Claude Fable 5.1 is the generally available version, with safeguards that fallback for cyber and bio capability queries', while the text read on 3 September says 'a public preview version'. The later wording agrees with Microsoft's Claude models page, which lists Fable 5.1 as 'Hosted on Anthropic infrastructure: Preview' alongside Fable 5, so public_preview is recorded with lifecycle supported. Note the same page lists Fable 5 as Preview while foundry-fable5-2026-06-09 records GA from Microsoft's launch post; that is a pre-existing inconsistency, left for a separate review. Anthropic says Fable 5.1 is generally available on Microsoft Azure; that describes Anthropic's release stage, not Foundry's catalogue label.",
+      "caveat": "The stage is the weaker part of the claim. The announcement was revised after publication: the excerpt captured by the candidate watcher at 08:50 UTC on 2 September 2026 read 'Claude Fable 5.1 is the generally available version, with safeguards that fallback for cyber and bio capability queries', while the text read on 3 September says 'a public preview version'. The later wording agrees with Microsoft's Claude models page, which lists Fable 5.1 as 'Hosted on Anthropic infrastructure: Preview' alongside Fable 5, so public_preview is recorded with lifecycle supported. The same page lists Fable 5 as Preview, and foundry-fable5-2026-06-09 was corrected from ga to public_preview in September 2026 on that basis. Anthropic says Fable 5.1 is generally available on Microsoft Azure; that describes Anthropic's release stage, not Foundry's catalogue label.",
       "relations": [
         {
           "type": "announced_by",
