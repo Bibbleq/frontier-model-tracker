@@ -2,11 +2,11 @@
   "totals": {
     "events": 287,
     "backlog": 86,
-    "sources": 371,
+    "sources": 374,
     "models": 109,
     "surfaces": 26,
-    "confirmed": 240,
-    "supported": 47
+    "confirmed": 239,
+    "supported": 48
   },
   "kinds": {
     "announcement": 12,
@@ -75,6 +75,11 @@
       "code": "missing_archive",
       "subject": "foundry-fable5-1-preview-2026-09-01",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-fable5-2026-06-09",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
     },
     {
       "code": "missing_archive",
@@ -179,7 +184,7 @@
   ],
   "warning_counts": {
     "backlog_without_surface": 5,
-    "missing_archive": 9,
+    "missing_archive": 10,
     "no_vendor_baseline": 9,
     "no_vendor_baseline_extended": 7,
     "pre_release_access": 1
