@@ -35,8 +35,8 @@ common package managers**, and list the hosts below one per line in
 **Allowed domains**. Documentation:
 <https://code.claude.com/docs/en/cloud-environments#allow-specific-domains>.
 
-Hosts this dataset cites, all confirmed refused on 2026-09-19 under the
-default level unless marked:
+Hosts this dataset cites. They were all refused under **Trusted** on
+2026-09-19 and were added to the Default environment on 2026-09-24:
 
 ```
 web.archive.org
@@ -46,7 +46,6 @@ docs.github.com
 techcommunity.microsoft.com
 learn.microsoft.com
 microsoft.ai
-www.microsoft.com          (reachable at the default level)
 openai.com
 community.openai.com
 deploymentsafety.openai.com
@@ -61,17 +60,31 @@ api-docs.deepseek.com
 qwen.ai
 ```
 
+`www.microsoft.com` is reachable under Trusted and does not need listing.
+
 Check reachability in one pass before starting a batch, and add any new
-publisher a candidate cites to the list above when you find it refused:
+publisher a candidate cites to the list above when you find it refused.
+Probe over **HTTPS**. The proxy only tunnels HTTPS, so a plain `http://`
+request returns "Host not in allowlist" even for an allowed host:
 
 ```bash
 for h in web.archive.org github.blog techcommunity.microsoft.com openai.com; do
-  printf '%-32s ' "$h"; curl -sS -m 15 "http://$h/" -o /dev/null -w '%{http_code}\n'
+  printf '%-32s ' "$h"
+  curl -sS -m 15 "https://$h/" -o /dev/null -w '%{http_code}\n' 2>&1 | tail -1
 done
 ```
 
-A `403` with the "Host not in allowlist" body is the allowlist. Anything else is
-the site.
+Read the result like this:
+
+- `curl: (56) CONNECT tunnel failed, response 403` is the allowlist. Report
+  the host.
+- Any HTTP status, including `403`, means the tunnel opened and the site
+  answered. openai.com and x.ai answer `403` with `cf-mitigated: challenge`
+  or a Cloudflare page: that is the site's bot wall, not the proxy. Read
+  those pages through the archive, below.
+- The Wayback CDX API can take 10 to 30 seconds and sometimes returns a
+  `503` "Temporarily Offline" page. Use a timeout of at least 90 seconds and
+  retry once before treating a lookup as empty.
 
 ## Snapshots: the CDX API is the lookup, and it doubles as the reader
 
