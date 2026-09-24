@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 287,
-    "backlog": 86,
-    "sources": 374,
-    "models": 109,
+    "events": 309,
+    "backlog": 89,
+    "sources": 409,
+    "models": 119,
     "surfaces": 26,
-    "confirmed": 239,
-    "supported": 48
+    "confirmed": 255,
+    "supported": 54
   },
   "kinds": {
-    "announcement": 12,
-    "availability": 260,
+    "announcement": 20,
+    "availability": 274,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 45,
+    "open": 48,
     "promoted": 35,
     "rejected": 4
   },
@@ -44,6 +44,11 @@
     {
       "code": "backlog_without_surface",
       "subject": "sweep-2026-08-21-to-09-01",
+      "message": "open item names no surface, so it cannot suppress a lag answer"
+    },
+    {
+      "code": "backlog_without_surface",
+      "subject": "sweep-2026-09-02-to-09-18",
       "message": "open item names no surface, so it cannot suppress a lag answer"
     },
     {
@@ -95,6 +100,11 @@
       "code": "missing_archive",
       "subject": "studio-fable5-1-2026-09-01",
       "message": "documentation source has no archived_url and may be edited in place: https://pupuweb.com/mc1465748-claude-fable-5-1-is-now-available-in-copilot-cowork-and-copilot-studio-with-microsofts-enterprise-data-protection/"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "studio-mistral-medium3-5-2026-05-28",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-select-agent-model"
     },
     {
       "code": "no_vendor_baseline",
@@ -183,8 +193,8 @@
     }
   ],
   "warning_counts": {
-    "backlog_without_surface": 5,
-    "missing_archive": 10,
+    "backlog_without_surface": 6,
+    "missing_archive": 11,
     "no_vendor_baseline": 9,
     "no_vendor_baseline_extended": 7,
     "pre_release_access": 1
@@ -212,10 +222,13 @@
       "mai-image-2",
       "mai-image-2-5",
       "mai-image-2-5-flash",
+      "mai-image-2-6",
+      "mai-image-2-6-flash",
       "mai-image-2e",
       "mai-thinking-1",
       "mai-transcribe-1",
       "mai-transcribe-1-5",
+      "mai-transcribe-2",
       "mai-voice-1",
       "mai-voice-2",
       "openai-deep-research"
@@ -238,9 +251,10 @@
     ]
   },
   "lag_certainty": {
-    "exact": 342,
-    "not_recorded": 540,
-    "range": 39,
+    "exact": 302,
+    "not_recorded": 639,
+    "range": 27,
+    "rollout_start": 73,
     "unknown_no_baseline": 296,
     "unknown_open_research": 91
   }

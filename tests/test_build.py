@@ -186,6 +186,73 @@ class DatasetContractTests(unittest.TestCase):
         self.assertTrue(all(row["certainty"] == "unknown_open_research" for row in microsoft))
 
 
+class RolloutStartTests(unittest.TestCase):
+    """A 'rolling out today' source dates the first day of availability, not
+    the day every user had it. Lag measured from or to such a day must say so
+    instead of claiming to be exact."""
+
+    models = {"models": [{"id": "model", "display_name": "Model", "vendor": "Vendor"}]}
+    platforms = {
+        "surfaces": [
+            {"id": "vendor", "display_name": "Vendor", "vendor_baseline": True, "counts_as": []},
+            {"id": "product", "display_name": "Product", "counts_as": ["microsoft"]},
+        ]
+    }
+
+    def lag(self, baseline: dict, partner: dict) -> dict:
+        for event in (baseline, partner):
+            event.setdefault("confidence", "confirmed")
+        rows = build.derive_lag(
+            {"events": [baseline, partner], "validation_backlog": []}, self.models, self.platforms
+        )
+        return next(r for r in rows if r["tier"] == "microsoft" and r["measure"] == "any_exposure")
+
+    def test_partner_rollout_start_is_not_exact(self) -> None:
+        partner = availability("partner", "2025-01-03", "ga", surface="product")
+        partner["date"]["rollout_start"] = True
+        row = self.lag(availability("release", "2025-01-01", "ga", surface="vendor"), partner)
+        self.assertEqual(row["certainty"], "rollout_start")
+        self.assertEqual((row["lag_days_min"], row["lag_days_max"]), (2, 2))
+
+    def test_vendor_rollout_start_is_not_exact(self) -> None:
+        release = availability("release", "2025-01-01", "ga", surface="vendor")
+        release["date"]["rollout_start"] = True
+        row = self.lag(release, availability("partner", "2025-01-03", "ga", surface="product"))
+        self.assertEqual(row["certainty"], "rollout_start")
+
+    def test_without_rollouts_a_day_pair_stays_exact(self) -> None:
+        row = self.lag(
+            availability("release", "2025-01-01", "ga", surface="vendor"),
+            availability("partner", "2025-01-03", "ga", surface="product"),
+        )
+        self.assertEqual(row["certainty"], "exact")
+        self.assertEqual(row["date_confidence"], "confirmed")
+
+    def test_a_supported_date_on_either_side_makes_the_lag_supported(self) -> None:
+        release = availability("release", "2025-01-01", "ga", surface="vendor")
+        release.update(confidence="supported", confidence_detail={"date": "supported"})
+        row = self.lag(release, availability("partner", "2025-01-03", "ga", surface="product"))
+        self.assertEqual(row["date_confidence"], "supported")
+
+    def test_date_confidence_reads_only_the_date(self) -> None:
+        soft_stage = {"confidence": "supported", "confidence_detail": {"lifecycle": "supported"}}
+        self.assertEqual(build.date_confidence(soft_stage), "confirmed")
+        self.assertEqual(build.date_confidence({"confidence": "supported"}), "supported")
+        self.assertEqual(build.date_confidence({"confidence": "confirmed"}), "confirmed")
+
+    def test_rollout_start_is_rejected_with_an_end(self) -> None:
+        event = availability("windowed", "2025-01-01", "ga")
+        event["date"].update(end="2025-01-05", rollout_start=True)
+        with self.assertRaises(SystemExit):
+            build.check_rollout_start(event)
+
+    def test_rollout_start_is_rejected_off_availability(self) -> None:
+        event = {"id": "notice", "kind": "announcement",
+                 "date": {"start": "2025-01-01", "precision": "day", "rollout_start": True}}
+        with self.assertRaises(SystemExit):
+            build.check_rollout_start(event)
+
+
 class PublishedArtifactTests(unittest.TestCase):
     def test_artifact_contains_data_but_no_presentation_files(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

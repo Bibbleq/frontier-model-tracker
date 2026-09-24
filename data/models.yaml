@@ -98,6 +98,10 @@ generations:
     display_name: "GPT-5"
     vendor: OpenAI
     series: openai-gpt
+  - id: gpt-6
+    display_name: "GPT-6"
+    vendor: OpenAI
+    series: openai-gpt
   - id: o1
     display_name: "o1"
     vendor: OpenAI
@@ -395,6 +399,13 @@ models:
     generation: gpt-audio
     family: gpt-transcribe
     note: "Streaming counterpart to GPT-transcribe, same naming caveat."
+  - id: gpt-live-1
+    display_name: "GPT-Live-1"
+    vendor: OpenAI
+    modality: voice
+    generation: gpt-audio
+    aliases: ["GPT-Live 1", "gpt-live-1"]
+    note: "OpenAI's full-duplex voice model, recorded as the vendor's flagship for the voice modality. OpenAI says it was first introduced in ChatGPT before reaching the API; that ChatGPT arrival is undated in the sources read so far."
   - id: gpt-5
     display_name: "GPT-5"
     vendor: OpenAI
@@ -459,6 +470,11 @@ models:
     vendor: OpenAI
     family: gpt-5-6
     generation: gpt-5
+  - id: gpt-6-astra
+    display_name: "GPT-6 Astra"
+    vendor: OpenAI
+    generation: gpt-6
+    note: "The first GPT-6 model, released 3 September 2026. GPT-6 Sol and GPT-6 Luna followed on 22 September and are tracked in the backlog, not yet registered."
 
   # ------------------------------------------------------------- Anthropic
   - id: claude-1
@@ -621,6 +637,22 @@ models:
     vendor: Google
     generation: gemini-3
     note: "Launched in GitHub Copilot as a public preview on 13 August 2026; no Google vendor baseline has been sourced yet."
+  - id: gemini-3-8-flash
+    display_name: "Gemini 3.8 Flash"
+    vendor: Google
+    generation: gemini-3
+  - id: gemini-3-8-live
+    display_name: "Gemini 3.8 Live"
+    vendor: Google
+    modality: voice
+    generation: gemini-3
+    note: "Google's default Live API model for real-time voice, recorded as the vendor's flagship for the voice modality."
+  - id: gemini-3-8-live-extended-thinking
+    display_name: "Gemini 3.8 Live Extended Thinking"
+    vendor: Google
+    modality: voice
+    generation: gemini-3
+    note: "The high-reasoning variant of Gemini 3.8 Live, released alongside it."
   - id: grok-3
     display_name: "Grok 3"
     vendor: xAI
@@ -676,6 +708,12 @@ models:
     display_name: "Mistral Large 3"
     vendor: Mistral AI
     generation: mistral-3
+  - id: mistral-medium-3-5
+    display_name: "Mistral Medium 3.5"
+    vendor: Mistral AI
+    generation: mistral-3
+    aliases: ["Medium 3.5"]
+    note: "Released in public preview on 28 April 2026 per Mistral's model card; the card now labels it GA, a transition not yet dated."
   - id: deepseek-r1
     display_name: "DeepSeek-R1"
     vendor: DeepSeek
@@ -714,6 +752,12 @@ models:
     display_name: "DeepSeek V4 Pro"
     vendor: DeepSeek
     generation: deepseek-v4
+  - id: deepseek-v4-1-flash
+    display_name: "DeepSeek V4.1 Flash"
+    vendor: DeepSeek
+    generation: deepseek-v4
+    aliases: ["DeepSeek-V4.1-Flash"]
+    note: "A 552B-parameter multimodal mixture-of-experts model taking image and text input, the first of DeepSeek's V4.1 architecture. No Microsoft surface carries it yet."
   - id: kimi-k2-5
     display_name: "Kimi K2.5"
     vendor: Moonshot AI
@@ -839,6 +883,22 @@ models:
     vendor: Microsoft
     model_line: mai-cyber
     note: "A cybersecurity model described as built into MDASH rather than catalogue-served; absent from the 12 July capture of microsoft.ai/models and present by 31 July, so it surfaced in that window. Microsoft Frontier Tuning, listed alongside these, is a fine-tuning service rather than a model and is deliberately not registered."
+  - id: mai-transcribe-2
+    display_name: "MAI-Transcribe-2"
+    vendor: Microsoft
+    modality: audio
+    model_line: mai-transcribe
+  - id: mai-image-2-6
+    display_name: "MAI-Image-2.6"
+    vendor: Microsoft
+    modality: image
+    model_line: mai-image
+    note: "Announced on microsoft.ai on 10 August 2026 as testable on Arena, with Foundry to follow; the Foundry public preview on 4 September is its first recorded arrival."
+  - id: mai-image-2-6-flash
+    display_name: "MAI-Image-2.6-Flash"
+    vendor: Microsoft
+    modality: image
+    model_line: mai-image
 
 families:
   - id: gpt-transcribe

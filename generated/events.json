@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updated": "2026-09-03",
-  "research_cutoff": "2026-09-01",
+  "updated": "2026-09-24",
+  "research_cutoff": "2026-09-18",
   "metadata": {
     "project": "365Explained Frontier Model Tracker",
     "purpose": "Sourced history of frontier and significant model availability across tracked Microsoft surfaces.",
@@ -3675,7 +3675,8 @@
       "kind": "availability",
       "date": {
         "start": "2025-08-07",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "m365-copilot",
       "model_ids": [
@@ -4126,7 +4127,8 @@
       "kind": "availability",
       "date": {
         "start": "2025-09-30",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "openai",
       "model_ids": [
@@ -4844,7 +4846,8 @@
       "kind": "availability",
       "date": {
         "start": "2025-11-24",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -5515,7 +5518,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-02-17",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -6235,7 +6239,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-04-16",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "m365-copilot",
       "experience_ids": [
@@ -6891,7 +6896,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-04-27",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "m365-copilot",
       "model_ids": [
@@ -6938,6 +6944,60 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "announcement"
+        }
+      ]
+    },
+    {
+      "id": "mistral-medium3-5-2026-04-28",
+      "kind": "availability",
+      "date": {
+        "start": "2026-04-28",
+        "precision": "day"
+      },
+      "surface_id": "mistral",
+      "model_ids": [
+        "mistral-medium-3-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported",
+        "model": "confirmed",
+        "lifecycle": "confirmed"
+      },
+      "evidence_note": "Mistral released Mistral Medium 3.5, a dense 128B open-weights model with a 256k context, in public preview on its API, in Le Chat and in Mistral Vibe, where it became the default model.",
+      "caveat": "The day rests on Mistral's model card, which shows 28 April 2026 beside a link to the launch post but does not label it a release date, and which showed only 'April 2026' until a revision between 13 May and 4 June. The launch post has no visible dateline and its page metadata reads 22 May 2026, but its first Wayback capture, 29 April 2026 15:20 UTC, already shows it live with the same public-preview wording, which rules out the metadata as the publication date and bounds the release to no later than 29 April. The model card now labels the model GA; that later transition is undated and tracked as mistral-medium-3-5-vendor-release.",
+      "sources": [
+        {
+          "publisher": "Mistral AI",
+          "title": "Mistral Medium 3.5 - Mistral Docs",
+          "url": "https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20260604094934/https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04",
+          "quote": "April 28, 2026",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The date sits in the card header beside a link to the launch post. Captures on 29 April, 5 May, 8 May and 13 May 2026 show only 'April 2026'; the day first appears in the capture of 4 June, so it was added retrospectively. The archived_url is that first capture showing the day."
+        },
+        {
+          "publisher": "Mistral AI",
+          "title": "Remote agents in Vibe. Powered by Mistral Medium 3.5.",
+          "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260429152024/https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
+          "quote": "Mistral Medium 3.5 is our first flagship merged model, available in public preview.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ]
         }
       ]
     },
@@ -7430,7 +7490,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-05-28",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "m365-copilot",
       "experience_ids": [
@@ -7458,11 +7519,81 @@
       ]
     },
     {
-      "id": "studio-opus4-8-2026-05-28",
+      "id": "studio-mistral-medium3-5-2026-05-28",
       "kind": "availability",
       "date": {
         "start": "2026-05-28",
         "precision": "day"
+      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "mistral-medium-3-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft added Mistral Medium 3.5 to Copilot Studio as a primary model for agent building and orchestration, available worldwide to customers in early release environments. Microsoft's documentation lists it as Experimental in every region, cross-geo everywhere except Europe, where data processing stays in-region.",
+      "caveat": "Copilot Studio labels the model Experimental and restricts it to early release environments; the dataset records that release type as public_preview, as it does for Copilot Studio's other experimental early-release models, which is why lifecycle is supported rather than confirmed. Access is gated twice: a tenant admin must opt in to the Mistral Medium 3.5 preview in the Microsoft 365 admin center and enable external model providers in the Power Platform admin center, and Microsoft states the model will not appear to makers until both switches are on. The model is hosted by Mistral outside Microsoft under Mistral's own terms.",
+      "sources": [
+        {
+          "publisher": "Microsoft",
+          "title": "Mistral Medium 3.5 joins Copilot Studio model lineup for agents",
+          "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/mistral-joins-copilot-studios-growing-lineup-of-model-providers/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-05-28",
+          "source_type": "announcement",
+          "quote": "Today, we’re expanding that choice with the addition of Mistral Medium 3.5 for agent building and orchestration. Medium 3.5 is currently available worldwide for customers in early release environments.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "The page carries a visible dateline and publication metadata of 28 May 2026; its modified time of 15 September 2026 is why the candidate watcher surfaced it in September."
+        },
+        {
+          "publisher": "Microsoft",
+          "title": "Mistral Medium 3.5 joins Copilot Studio model lineup for agents",
+          "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/mistral-joins-copilot-studios-growing-lineup-of-model-providers/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-05-28",
+          "source_type": "announcement",
+          "quote": "As an experimental model, we recommend using it in non-production scenarios while testing and evaluations are completed.",
+          "supports": [
+            "lifecycle"
+          ]
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Select a primary AI model for your agent",
+          "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-select-agent-model",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "source_type": "documentation",
+          "quote": "Mistral Medium 3.5 | General | Experimental (cross-geo) | Experimental (cross-geo) | Experimental (cross-geo) | Experimental (cross-geo) | Experimental |",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Current-state documentation: it proves the Experimental label, not the arrival date. The row is quoted through the Europe column; every other region reads Experimental (cross-geo)."
+        }
+      ]
+    },
+    {
+      "id": "studio-opus4-8-2026-05-28",
+      "kind": "availability",
+      "date": {
+        "start": "2026-05-28",
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "copilot-studio",
       "model_ids": [
@@ -8437,7 +8568,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-07-01",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -8506,7 +8638,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-07-02",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "m365-cowork",
       "model_ids": [
@@ -8534,7 +8667,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-07-02",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "m365-copilot",
       "experience_ids": [
@@ -9347,7 +9481,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-07-28",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -9494,7 +9629,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-08-06",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -9536,7 +9672,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-08-11",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -9625,7 +9762,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-08-13",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -9660,7 +9798,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-08-14",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -10043,7 +10182,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-09-01",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "m365-cowork",
       "model_ids": [
@@ -10183,7 +10323,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-09-01",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -10225,7 +10366,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-09-01",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "copilot-studio",
       "model_ids": [
@@ -10281,6 +10423,871 @@
             "lifecycle"
           ],
           "note": "Microsoft's tenant-targeted Message Center notice, category 'Plan for change', published 1 September 2026 and updated 2 September, reproduced by a third-party mirror because Message Center is not public; a tenant administrator can verify the text in the Microsoft 365 admin center. It states 'Rollout will begin on September 1, 2026 and is expected to complete by September 2, 2026' and that prompts and outputs are not retained by Anthropic. It carries no preview label, where the equivalent notice for Fable 5, MC1387806 of 14 June 2026, read 'Claude Fable 5 (preview) is now available as an opt-in, admin-controlled model'; that contrast is the basis for lifecycle. No Wayback capture of the mirror exists."
+        }
+      ]
+    },
+    {
+      "id": "google-gemini3-8-flash-2026-09-02",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-02",
+        "precision": "day"
+      },
+      "surface_id": "google-gemini-api",
+      "model_ids": [
+        "gemini-3-8-flash"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Google released Gemini 3.8 Flash as generally available in the Gemini API on 2 September 2026, alongside Gemini 3.8 Flash Cyber for trusted defenders. It reached developers through Google AI Studio and Android Studio, enterprises through Gemini Enterprise, and Google AI Pro and Ultra subscribers on launch day.",
+      "caveat": "Gemini 3.8 Flash Cyber, released the same day through Google's Fairwind Program for trusted defenders, is not registered.",
+      "sources": [
+        {
+          "publisher": "Google",
+          "title": "Gemini API release notes",
+          "url": "https://ai.google.dev/gemini-api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-02",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260923093946/https://ai.google.dev/gemini-api/docs/changelog",
+          "quote": "Gemini 3.8 Flash generally available (GA): Released gemini-3.8-flash, our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed September 2, 2026. Read through r.jina.ai."
+        },
+        {
+          "publisher": "Google",
+          "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-02",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260902154613/https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+          "quote": "Developers : Build with 3.8 Flash and explore agent-first workflows in Google Antigravity or start building today in the Gemini API via Google AI Studio and Android Studio",
+          "supports": [
+            "date",
+            "model"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt6-astra-2026-09-03",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-03",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-6-astra"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft announced GPT-6 Astra generally available for all customers in Microsoft Foundry on OpenAI's release day.",
+      "caveat": "The announcement was modified on 14 September 2026, but its first Wayback capture, 5 September, already carries the generally-available wording. A third-party headline describing Foundry access as limited is not supported by Microsoft's text. The Foundry retirement schedule, read on 24 September 2026 in its 21 September revision, has no gpt-6-astra row, so no retirement date is recorded.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-astra-2026-09-03"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Azure Blog",
+          "title": "GPT-6 Astra: Frontier intelligence for work, now generally available in Microsoft Foundry",
+          "url": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-frontier-intelligence-for-work-now-generally-available-in-microsoft-foundry/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-03",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260905022112/https://azure.microsoft.com/en-us/blog/gpt-6-astra-frontier-intelligence-for-work-now-generally-available-in-microsoft-foundry/",
+          "quote": "GPT-6 Astra, OpenAI’s newest frontier model, is now generally available for all customers in Microsoft Foundry.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because azure.microsoft.com is outside this environment's allowlist, and checked against the Wayback capture of 5 September 2026."
+        }
+      ]
+    },
+    {
+      "id": "github-claude-opus4-7-deprecation-announced-2026-09-03",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-09-03",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-opus-4-7"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub announced that Claude Opus 4.7 would be deprecated across all GitHub Copilot experiences on 2 October 2026, with Claude Opus 5 as the suggested alternative.",
+      "caveat": "Recorded as an announcement, not a retirement: the deprecation date falls after this dataset's research cutoff. The timeline holds no GitHub Copilot arrival for Claude Opus 4.7.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Upcoming deprecation of selected GitHub Copilot models",
+          "url": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-03",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20260904075238/https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models/",
+          "quote": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on October 2nd, 2026",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Table row: 'Claude Opus 4.7 | 2026-10-02 | Claude Opus 5'."
+        }
+      ]
+    },
+    {
+      "id": "github-gemini3-6-flash-deprecation-announced-2026-09-03",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-09-03",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gemini-3-6-flash"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub announced that Gemini 3.6 Flash would be deprecated across all GitHub Copilot experiences on 2 October 2026, with Gemini 3.8 Flash as the suggested alternative.",
+      "caveat": "Recorded as an announcement, not a retirement: the deprecation date falls after this dataset's research cutoff.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Upcoming deprecation of selected GitHub Copilot models",
+          "url": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-03",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20260904075238/https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models/",
+          "quote": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on October 2nd, 2026",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Table row: 'Gemini 3.6 Flash | 2026-10-02 | Gemini 3.8 Flash'."
+        }
+      ]
+    },
+    {
+      "id": "github-gemini3-8-flash-2026-09-03",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-03",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gemini-3-8-flash"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Gemini 3.8 Flash reached GitHub Copilot on 3 September 2026, one day after Google's release, for Copilot Pro, Pro+, Max, Business, and Enterprise users, selectable in the model picker in VS Code, Visual Studio, Copilot CLI, the GitHub Copilot cloud agent, the GitHub Copilot app, JetBrains IDEs, Xcode, and Eclipse. It is billed at introductory provider pricing through 31 December 2026.",
+      "caveat": "The changelog says 'now available' and never uses a stage word. It is recorded as ga because, unlike the Gemini 3.7 Flash post of 13 August, it names no preview policy, and under default model enablement the model is on for Business and Enterprise unless an administrator has turned it off; lifecycle is supported rather than confirmed. Rollout is gradual, so 3 September starts the rollout window.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "google-gemini3-8-flash-2026-09-02"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Gemini 3.8 Flash is now available in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-03",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20260904075610/https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot/",
+          "quote": "Gemini 3.8 Flash, Google’s latest Flash model, is now available in GitHub Copilot.",
+          "supports": [
+            "date",
+            "model"
+          ]
+        },
+        {
+          "publisher": "GitHub",
+          "title": "Gemini 3.8 Flash is now available in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-03",
+          "source_type": "changelog",
+          "quote": "Gemini 3.8 Flash will be available to Copilot Pro, Pro+, Max, Business, and Enterprise users.",
+          "supports": [
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "github-kimi-k2-7-code-deprecation-announced-2026-09-03",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-09-03",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "kimi-k2-7-code"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub announced that Kimi K2.7 Code would be deprecated across all GitHub Copilot experiences on 2 October 2026, with Kimi K3 as the suggested alternative.",
+      "caveat": "Recorded as an announcement, not a retirement: the deprecation date falls after this dataset's research cutoff.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Upcoming deprecation of selected GitHub Copilot models",
+          "url": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-03",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20260904075238/https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models/",
+          "quote": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on October 2nd, 2026",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Table row: 'Kimi K2.7 Code | 2026-10-02 | Kimi K3'."
+        }
+      ]
+    },
+    {
+      "id": "microsoft-mai-transcribe-2-2026-09-03",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-03",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-ai",
+      "model_ids": [
+        "mai-transcribe-2"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft released MAI-Transcribe-2, its speech-to-text model from Microsoft AI, in public preview in Microsoft Foundry, covering 60 languages and adding speaker diarization and word-level timestamps.",
+      "caveat": "Recorded on the microsoft-ai vendor surface because the Foundry catalogue is the vendor channel for Microsoft's own MAI models, so no adoption lag exists by construction. Microsoft Learn's MAI-Transcribe page lists MAI-Transcribe-2 alongside MAI-Transcribe-1.5 and marks MAI-Transcribe-1 deprecated on 20 August 2026; that transition is not recorded here.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "MAI-Transcribe-2: Highest quality transcription, at the fastest speed and lowest cost",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/mai-transcribe-2-highest-quality-transcription-at-the-fastest-speed-and-lowest-c/4550972",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-03",
+          "source_type": "announcement",
+          "quote": "Today, we're announcing MAI-Transcribe-2 available in public preview in Microsoft Foundry, the newest speech-to-text model from Microsoft AI (MAI).",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt6-astra-2026-09-03",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-03",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-6-astra"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "OpenAI released GPT-6 Astra on 3 September 2026, starting a staged rollout across ChatGPT and the API. Its API changelog records the model as released that day; Microsoft Foundry carried it as generally available the same day and GitHub Copilot the next.",
+      "caveat": "The launch post describes a staged rollout: a limited set of organisations on 3 September, then all ChatGPT Plus, Pro, Business, and Enterprise users and the API 'over the coming days'. No OpenAI text dates the end of that rollout. GA is recorded on the launch day because the API changelog lists the model as released on 3 September, rather than as a separate limited_preview event; lifecycle is therefore supported, not confirmed. OpenAI's follow-up post, first captured on 10 September, says the model is now available in ChatGPT Work, Codex, and the API. By its 4 September captures the launch post had added Microsoft Azure and AWS Bedrock to the channels it names.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "GPT-6 Astra: A new generation of intelligence",
+          "url": "https://openai.com/index/gpt-6-astra/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-03",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260903201137/https://openai.com/index/gpt-6-astra/",
+          "quote": "GPT‑6 Astra is rolling out today to a limited set of organizations and over the coming days will become available to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the OpenAI API and AWS.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read from the Wayback capture of 3 September 2026 20:11 UTC because openai.com answers this environment with a Cloudflare challenge. Captures from 4 September onward read 'through the OpenAI API, Microsoft Azure, and AWS Bedrock'."
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-03",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260922191231/https://developers.openai.com/api/docs/changelog",
+          "quote": "Released GPT-6 Astra, our most capable model, built for the hardest end-to-end work.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed Sep 3, endpoints v1/responses and v1/chat/completions. Read through r.jina.ai."
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "GPT-6 Astra: The next generation in intelligence for work",
+          "url": "https://openai.com/index/gpt-6-astra-next-generation-work/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260910064024/https://openai.com/index/gpt-6-astra-next-generation-work",
+          "quote": "Last week we introduced GPT‑6 Astra, the world’s most intelligent and aligned model, now available in ChatGPT Work, Codex, and the API.",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "The page shows no dateline; its first Wayback capture is 10 September 2026 06:40 UTC, which bounds its publication. Read through r.jina.ai."
+        }
+      ]
+    },
+    {
+      "id": "cowork-gpt6-astra-2026-09-04",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-04",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "m365-cowork",
+      "model_ids": [
+        "gpt-6-astra"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced GPT-6 Astra rolling out to users in Copilot Cowork on 4 September 2026, the day after OpenAI's release, in the same announcement that covers Copilot Studio.",
+      "caveat": "Recorded separately from studio-gpt6-astra-2026-09-04 because Cowork is a distinct surface with its own model picker; both events cite the same announcement. The announcement carries no stage word and no preview label, the same shape as the Fable 5.1 announcement recorded as ga with lifecycle supported. Microsoft states availability may vary by region and organisation and that admins manage access through the Microsoft 365 admin center.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-astra-2026-09-03"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Available today: OpenAI GPT-6 Astra in Microsoft Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openai-gpt-6-astra-in-microsoft-copilot/4552808",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-04",
+          "source_type": "announcement",
+          "quote": "GPT-6 Astra is rolling out today to users in Copilot Cowork and Copilot Studio.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "github-gpt6-astra-ga-2026-09-04",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-04",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-6-astra"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-6 Astra became generally available in GitHub Copilot on 4 September 2026 for Copilot Pro+, Max, Business, and Enterprise users, selectable in VS Code, Visual Studio, Copilot CLI, the GitHub Copilot coding agent, the GitHub Copilot app, github.com, GitHub Mobile, JetBrains IDEs, Xcode, and Eclipse. It is billed at provider list pricing under usage-based billing.",
+      "caveat": "Copilot Pro is not among the plans named, unlike Gemini 3.8 Flash the day before. Rollout is gradual, so 4 September starts the rollout window. Under default model enablement the model is on for Business and Enterprise unless an administrator has turned it off.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-astra-2026-09-03"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "GPT-6 Astra is generally available in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-04",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20260904213218/https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot/",
+          "quote": "GPT-6 Astra is generally available in GitHub Copilot",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "The changelog entry's title."
+        },
+        {
+          "publisher": "GitHub",
+          "title": "GPT-6 Astra is generally available in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-04",
+          "source_type": "changelog",
+          "quote": "GPT-6 Astra is available to Copilot Pro+, Max, Business, and Enterprise users.",
+          "supports": [
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "microsoft-mai-image-2-6-2026-09-04",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-04",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-ai",
+      "model_ids": [
+        "mai-image-2-6",
+        "mai-image-2-6-flash"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft released MAI-Image-2.6 and the faster, lower-cost MAI-Image-2.6-Flash in public preview in Microsoft Foundry, both supporting multi-reference editing and web grounding.",
+      "caveat": "Recorded on the microsoft-ai vendor surface because the Foundry catalogue is the vendor channel for Microsoft's own MAI models. MAI-Image-2.6 was announced earlier, on 10 August 2026, as testable on the Arena leaderboard with MAI Playground and Foundry to follow; Arena is a third-party evaluation site and no dated MAI Playground arrival has been found, so 4 September is the first recorded arrival. Microsoft Learn lists both models with version string 2026-07-31, which is a build date, not an arrival date.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "MAI-Image-2.6 and MAI-Image-2.6-Flash: Quality and speed at production scale",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/mai-image-2-6-and-mai-image-2-6-flash-quality-and-speed-at-production-scale/4550970",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-04",
+          "source_type": "announcement",
+          "quote": "MAI-Image-2.6 and MAI-Image-2.6-Flash are available in public preview in Foundry.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        },
+        {
+          "publisher": "Microsoft AI",
+          "title": "Pushing the quality-cost frontier with MAI-Image-2.6",
+          "url": "https://microsoft.ai/news/pushing-the-quality-cost-frontier-with-mai-image-2-6/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-04",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260904170929/https://microsoft.ai/news/pushing-the-quality-cost-frontier-with-mai-image-2-6/",
+          "quote": "Today, we’re bringing it to developers in Microsoft Foundry and expanding the family with MAI-Image-2.6-Flash – built to deliver that same level of quality for latency-sensitive, high-throughput production workloads.",
+          "supports": [
+            "date",
+            "model"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "studio-gpt6-astra-2026-09-04",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-04",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "gpt-6-astra"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced GPT-6 Astra rolling out to users in Copilot Studio on 4 September 2026, the day after OpenAI's release, in the same announcement that covers Copilot Cowork.",
+      "caveat": "Recorded separately from cowork-gpt6-astra-2026-09-04 because Copilot Studio is a distinct surface; both events cite the same announcement. The announcement carries no stage word and no preview label, so ga is recorded with lifecycle supported. Copilot Studio's model availability table, read on 24 September 2026 in its 18 September revision, does not list GPT-6 Astra, so no release tag corroborates the stage.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-astra-2026-09-03"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Available today: OpenAI GPT-6 Astra in Microsoft Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openai-gpt-6-astra-in-microsoft-copilot/4552808",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-04",
+          "source_type": "announcement",
+          "quote": "GPT-6 Astra is rolling out today to users in Copilot Cowork and Copilot Studio.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepseek-v4-1-flash-2026-09-10",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-10",
+        "precision": "day"
+      },
+      "surface_id": "deepseek",
+      "model_ids": [
+        "deepseek-v4-1-flash"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "DeepSeek published DeepSeek-V4.1-Flash as an open-weights release under MIT: a multimodal mixture-of-experts model with 552B backbone parameters, a one-million-token context and image and text input, built on a new causal encoder-decoder architecture.",
+      "caveat": "Dated from the weights repository's own creation timestamp, 2026-09-10T02:17:58Z via the Hugging Face API, the method used for DeepSeek-V4-Flash-0731; the model card states no release date. DeepSeek's announcement on X was the candidate's source and was not read. No Microsoft surface carries the model yet.",
+      "sources": [
+        {
+          "publisher": "Hugging Face",
+          "title": "deepseek-ai/DeepSeek-V4.1-Flash",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-10",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20260922125348/https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+          "quote": "We introduce DeepSeek-V4.1-Flash, a multimodal Mixture-of-Experts (MoE) model with 552B backbone parameters and support for contexts of up to one million tokens.",
+          "supports": [
+            "model"
+          ]
+        },
+        {
+          "publisher": "Hugging Face",
+          "title": "Model metadata for deepseek-ai/DeepSeek-V4.1-Flash",
+          "url": "https://huggingface.co/api/models/deepseek-ai/DeepSeek-V4.1-Flash",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-10",
+          "source_type": "other",
+          "quote": "\"createdAt\": \"2026-09-10T02:17:58.000Z\"",
+          "supports": [
+            "date"
+          ],
+          "note": "The repository is public and ungated, with licence tag license:mit."
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt-live-1-api-2026-09-10",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-10",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "gpt-live-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI made GPT-Live-1, its full-duplex voice model, generally available in the API through a new live sessions endpoint, with reasoning and tool calls delegated to a backend model or the developer's own agent.",
+      "caveat": "OpenAI says GPT-Live-1 was first introduced in ChatGPT; that earlier ChatGPT arrival is undated in the sources read, so this API release is the only vendor event and lag measured against it would understate the model's age. No Microsoft surface carries the model yet.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-10",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260922191231/https://developers.openai.com/api/docs/changelog",
+          "quote": "GPT-Live 1 is now generally available in the API.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed Sep 10, endpoint v1/live/sessions. Read through r.jina.ai."
+        }
+      ]
+    },
+    {
+      "id": "google-gemini3-8-live-2026-09-15",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-15",
+        "precision": "day"
+      },
+      "surface_id": "google-gemini-api",
+      "model_ids": [
+        "gemini-3-8-live",
+        "gemini-3-8-live-extended-thinking"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Google released Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking as generally available audio-to-audio models for real-time voice through the Live API.",
+      "caveat": "No Microsoft surface carries either model yet.",
+      "sources": [
+        {
+          "publisher": "Google",
+          "title": "Gemini API release notes",
+          "url": "https://ai.google.dev/gemini-api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-15",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260923093946/https://ai.google.dev/gemini-api/docs/changelog",
+          "quote": "Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking generally available (GA): Released two new audio-to-audio models for real-time voice applications using the Live API",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed September 15, 2026. Read through r.jina.ai."
+        }
+      ]
+    },
+    {
+      "id": "github-gemini3-7-flash-deprecation-announced-2026-09-18",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-09-18",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gemini-3-7-flash"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub announced that Gemini 3.7 Flash would be deprecated across all GitHub Copilot experiences on 19 October 2026, with Gemini 3.8 Flash as the suggested alternative.",
+      "caveat": "Recorded as an announcement, not a retirement: the deprecation date falls after this dataset's research cutoff.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Upcoming deprecation of selected GitHub Copilot models in mid-October",
+          "url": "https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-18",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20260919123229/https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/",
+          "quote": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on October 19th, 2026",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Table row: 'Gemini 3.7 Flash | 2026-10-19 | Gemini 3.8 Flash'."
+        }
+      ]
+    },
+    {
+      "id": "github-gpt5-4-deprecation-announced-2026-09-18",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-09-18",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-5-4"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub announced that GPT-5.4 would be deprecated across all GitHub Copilot experiences on 19 October 2026, with GPT-5.6 Sol as the suggested alternative.",
+      "caveat": "Recorded as an announcement, not a retirement: the deprecation date falls after this dataset's research cutoff. The timeline holds no GitHub Copilot arrival for GPT-5.4.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Upcoming deprecation of selected GitHub Copilot models in mid-October",
+          "url": "https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-18",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20260919123229/https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/",
+          "quote": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on October 19th, 2026",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Table row: 'GPT-5.4 | 2026-10-19 | GPT-5.6 Sol'."
+        }
+      ]
+    },
+    {
+      "id": "github-gpt5-5-deprecation-announced-2026-09-18",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-09-18",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-5-5"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub announced that GPT-5.5 would be deprecated across all GitHub Copilot experiences on 19 October 2026, with GPT-5.6 Sol as the suggested alternative.",
+      "caveat": "Recorded as an announcement, not a retirement: the deprecation date falls after this dataset's research cutoff.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Upcoming deprecation of selected GitHub Copilot models in mid-October",
+          "url": "https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-18",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20260919123229/https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/",
+          "quote": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on October 19th, 2026",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Table row: 'GPT-5.5 | 2026-10-19 | GPT-5.6 Sol'."
+        }
+      ]
+    },
+    {
+      "id": "github-gpt5-mini-deprecation-announced-2026-09-18",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-09-18",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-5-mini"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub announced that GPT-5 mini would be deprecated across all GitHub Copilot experiences on 19 October 2026, with GPT-5.6 Luna as the suggested alternative.",
+      "caveat": "Recorded as an announcement, not a retirement: the deprecation date falls after this dataset's research cutoff.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Upcoming deprecation of selected GitHub Copilot models in mid-October",
+          "url": "https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-18",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20260919123229/https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/",
+          "quote": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on October 19th, 2026",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Table row: 'GPT-5 mini | 2026-10-19 | GPT-5.6 Luna'."
+        }
+      ]
+    },
+    {
+      "id": "github-grok4-5-deprecation-announced-2026-09-18",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-09-18",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "grok-4-5"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub announced that Grok 4.5 would be deprecated across all GitHub Copilot experiences on 19 October 2026, with Grok 4.6 as the suggested alternative.",
+      "caveat": "Recorded as an announcement, not a retirement: the deprecation date falls after this dataset's research cutoff.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Upcoming deprecation of selected GitHub Copilot models in mid-October",
+          "url": "https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-18",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20260919123229/https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/",
+          "quote": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on October 19th, 2026",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Table row: 'Grok 4.5 | 2026-10-19 | Grok 4.6'."
         }
       ]
     }
@@ -10976,7 +11983,7 @@
       "state": "open",
       "working_claim": "GitHub announces Copilot model deprecations in dated changelog entries, most of which the timeline now records.",
       "reason": "First pass complete on 28 July 2026. Both known changelogs were read and eight retirements recorded, all with dates that have already passed. Three models named in them are outside the registry and were not added, because the timeline holds no arrival for them either: GPT-4.5, Gemini 2.0 Flash and Claude Sonnet 3.7 Thinking. GitHub publishes these as individual posts rather than a maintained schedule, so there is no single page to re-read.",
-      "target": "Watch the GitHub changelog for further deprecation posts. Passes so far: the September 2025 wave was re-read in full this pass and cross-checks exactly against the six recorded 23 October retirements, plus Gemini 2.0 Flash whose removal is now recorded following its registry addition; Sonnet 3.7 Thinking remains outside the registry by choice. The 20 May 2026 update removed all Gemini models, GPT-5.2 Codex and GPT-5.4 nano from Copilot on the web only, which is scoped narrower than the surface and is logged here rather than recorded as retirements.",
+      "target": "Watch the GitHub changelog for further deprecation posts. Passes so far: the September 2025 wave was re-read in full this pass and cross-checks exactly against the six recorded 23 October retirements, plus Gemini 2.0 Flash whose removal is now recorded following its registry addition; Sonnet 3.7 Thinking remains outside the registry by choice. The 20 May 2026 update removed all Gemini models, GPT-5.2 Codex and GPT-5.4 nano from Copilot on the web only, which is scoped narrower than the surface and is logged here rather than recorded as retirements. September 2026 pass: two posts read and recorded as announcements. The 3 September post deprecates Gemini 3.5 Flash, Gemini 3.6 Flash, Kimi K2.7 Code and Claude Opus 4.7 on 2 October 2026; the 18 September post deprecates Gemini 3.7 Flash, GPT-5.5, GPT-5.4, GPT-5.4 mini, GPT-5 mini and Grok 4.5 on 19 October 2026. Gemini 3.5 Flash and GPT-5.4 mini are outside the registry and were not added, under the rule above. Record each as retired once its date passes and GitHub has not withdrawn the notice.",
       "model_ids": [],
       "surface_ids": [
         "github-copilot",
@@ -11337,7 +12344,7 @@
       "state": "open",
       "working_claim": "Microsoft's current MAI lineup is MAI-Image-2.5, MAI-Voice-2, MAI-Transcribe-1.5, MAI-Thinking-1, MAI-Code-1-Flash and MAI-Cyber-1-Flash, all listed generally available on microsoft.ai, with no dated releases recorded.",
       "reason": "The microsoft.ai models page is current-state marketing and dates nothing. Its 12 July 2026 Wayback capture already lists five of the six, so those were live by then; MAI-Cyber-1-Flash appears only in the live page, so it surfaced between 12 and 31 July. The first-generation MAI models were recorded from the April retrospective; this second wave has no retrospective coverage yet.",
-      "target": "Checked against the Foundry model-wave post of 6 August 2026, which names MAI-Thinking-1, MAI-Image-2.5, MAI-Image-2.5 Flash, MAI-Voice-2 and MAI-Transcribe-1.5 in one sentence and dates none of them — it says Microsoft 'has announced' them, in the past tense, without stating Foundry availability. That post is a positioning piece rather than a monthly retrospective, so it does not close this item; it does confirm the lineup and it did register MAI-Image-2.5 Flash. MAI-Thinking-1 now has a specific item (mai-thinking-1-public-preview-2026-08) tracking its announcement page, which states public preview is available and carries a page update date of 12 August 2026. Still to do: date each remaining model from the June, July and August Foundry retrospectives as they publish, and from schedule version strings as floors. MAI-Image-2.5 should also close the loop with the 15 August retirement of the Image-2 pair, which names it as replacement. Microsoft Frontier Tuning is a fine-tuning service, not a model, and stays out of the registry.",
+      "target": "Checked against the Foundry model-wave post of 6 August 2026, which names MAI-Thinking-1, MAI-Image-2.5, MAI-Image-2.5 Flash, MAI-Voice-2 and MAI-Transcribe-1.5 in one sentence and dates none of them — it says Microsoft 'has announced' them, in the past tense, without stating Foundry availability. That post is a positioning piece rather than a monthly retrospective, so it does not close this item; it does confirm the lineup and it did register MAI-Image-2.5 Flash. MAI-Thinking-1 now has a specific item (mai-thinking-1-public-preview-2026-08) tracking its announcement page, which states public preview is available and carries a page update date of 12 August 2026. Still to do: date each remaining model from the June, July and August Foundry retrospectives as they publish, and from schedule version strings as floors. MAI-Image-2.5 should also close the loop with the 15 August retirement of the Image-2 pair, which names it as replacement. Microsoft Frontier Tuning is a fine-tuning service, not a model, and stays out of the registry. September 2026: MAI-Transcribe-2 (3 September) and the MAI-Image-2.6 pair (4 September) are recorded from dated Foundry announcements. MAI-Image-2.6 was first announced on microsoft.ai on 10 August 2026 as testable on Arena and 'coming later this week to MAI Playground'; a dated MAI Playground arrival would be an earlier vendor-channel date for it and has not been found.",
       "model_ids": [
         "mai-image-2-5",
         "mai-voice-2",
@@ -11635,7 +12642,7 @@
       "state": "open",
       "working_claim": "The Copilot Studio release notes date general availability for several models the timeline still carries only as public preview.",
       "reason": "Found while harvesting retirements. The release notes gave GA dates for GPT-5 and Claude Sonnet 4.5, which are now recorded, but the same page names others the timeline cannot yet place: Claude Sonnet 4.6 and Claude Sonnet 5 have no Copilot Studio arrival at all, an unqualified Claude Opus in March 2026 does not identify a specific model, GPT-5 Chat reached GA for European and United States regions in November 2025, and Mistral Medium 3.5 entered preview in May 2026 for a vendor the registry does not carry.",
-      "target": "Work through the remaining Copilot Studio entries, adding registry entries where a model is genuinely new and recording arrivals before their GA transitions.",
+      "target": "Work through the remaining Copilot Studio entries, adding registry entries where a model is genuinely new and recording arrivals before their GA transitions. Mistral Medium 3.5 is now registered and its May 2026 arrival recorded as studio-mistral-medium3-5-2026-05-28, dated from Microsoft's 28 May announcement.",
       "model_ids": [
         "claude-sonnet-4-6",
         "claude-sonnet-5"
@@ -11936,6 +12943,76 @@
       "target": "Sweep the usual sources across 21 August to 1 September 2026 - GitHub Copilot changelog, Microsoft Foundry blog, retirement schedule and August retrospective when published, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms for OpenAI, Anthropic, Google, xAI, Moonshot and Mistral - then either record what is found or close this item as confirming nothing else landed. Wayback captures were looked up for every source added in the 3 September batch: the announcements on techcommunity.microsoft.com, github.blog and thurrott.com and the Grok deployment page have no capture at all, and the Claude models, retirement schedule, subprocessor and Cowork picker pages have only pre-change captures. Those need snapshots taken from a browser and backfilled as archived_url.",
       "model_ids": [],
       "surface_ids": []
+    },
+    {
+      "id": "sweep-2026-09-02-to-09-18",
+      "state": "open",
+      "working_claim": "The window from 2 September to 18 September 2026 has been covered by the candidate watcher's filings and by what those filings led to, not by a systematic sweep; research_cutoff was moved for the 24 September triage batch.",
+      "reason": "Twenty-one events were added from candidate issues #96, #97, #98, #99, #102, #103, #104, #107, #108 and #109, and from first-party sources those candidates led to: Microsoft's own GPT-6 Astra announcements for Foundry, Copilot Cowork and Copilot Studio, Google's and OpenAI's API changelogs, and GitHub's 3 September deprecation post. research_cutoff moved from 2026-09-01 to 2026-09-18 so the dataset does not carry evidence beyond its own stated reach. That move is bookkeeping, not evidence: absence of other events in the window means nothing.",
+      "target": "Sweep the usual sources across 2 to 18 September 2026 - GitHub Copilot changelog, Microsoft Foundry blog, retirement schedule and September retrospective when published, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms for OpenAI, Anthropic, Google, xAI, Moonshot, DeepSeek and Mistral - then either record what is found or close this item as confirming nothing else landed. Known gaps: GPT-6 Astra's Microsoft 365 Copilot Chat status beyond Cowork, Gemini 3.8 Flash on any Microsoft surface other than GitHub Copilot, and the Microsoft 365 Message Center notice for GPT-6 Astra.",
+      "model_ids": [],
+      "surface_ids": []
+    },
+    {
+      "id": "gpt-6-sol-luna-2026-09-22",
+      "state": "open",
+      "working_claim": "OpenAI released GPT-6 Sol and GPT-6 Luna in the API on 22 September 2026, and Microsoft made both generally available in Microsoft Foundry the same day.",
+      "reason": "Both dates fall after the research cutoff of 18 September 2026, and neither model is registered yet. Recording them means moving the cutoff past a window that has not been swept.",
+      "target": "Once the 2 to 18 September sweep is done, register gpt-6-sol and gpt-6-luna under the gpt-6 generation, record the OpenAI API release and the Foundry arrival, and look for GitHub Copilot, Copilot Cowork and Copilot Studio arrivals. Both sources below were read on 24 September 2026.",
+      "model_ids": [],
+      "surface_ids": [
+        "openai-api",
+        "microsoft-foundry"
+      ],
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-22",
+          "source_type": "release_notes",
+          "quote": "Released GPT-6 Sol (gpt-6-sol) and GPT-6 Luna (gpt-6-luna).",
+          "note": "Entry headed Sep 22. Read through r.jina.ai."
+        },
+        {
+          "publisher": "Microsoft Azure Blog",
+          "title": "GPT-6 Astra, Sol, and Luna: For production agents in Microsoft Foundry",
+          "url": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "Today, we are expanding our GPT-6 series by welcoming GPT-6 Sol and GPT-6 Luna to our generally available lineup in Microsoft Foundry.",
+          "note": "Read through r.jina.ai because azure.microsoft.com is outside this environment's allowlist."
+        }
+      ]
+    },
+    {
+      "id": "mistral-medium-3-5-vendor-release",
+      "state": "open",
+      "working_claim": "Mistral moved Mistral Medium 3.5 from public preview to general availability on its own platform some time after its 28 April 2026 release.",
+      "reason": "Mistral's launch post calls the model a public preview, and its model card now labels it GA, but neither says when the stage changed. The release day is also soft: the model card shows 28 April 2026 without labelling it, and the launch post has no visible dateline, although its first Wayback capture on 29 April shows it live. The release is therefore recorded as supported rather than confirmed.",
+      "target": "Find a dated first-party record of the GA transition, such as Mistral's changelog, and record it as a ga event on the mistral surface. The model card's captures were bisected on 24 September 2026: the GA badge is absent on 22 July and present on 2 August 2026, but that is also the capture where the card's badge markup changes, so it may be a site redesign applying stage badges to every card rather than a stage change on that date. Comparing another Mistral model card across the same two captures would tell the two apart. The Hugging Face repository mistralai/Mistral-Medium-3.5-128B was created on 31 March 2026, before the release, so its timestamp dates neither stage.",
+      "model_ids": [
+        "mistral-medium-3-5"
+      ],
+      "surface_ids": [
+        "mistral"
+      ],
+      "sources": [
+        {
+          "publisher": "Mistral AI",
+          "title": "Remote agents in Vibe. Powered by Mistral Medium 3.5.",
+          "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5/",
+          "primary": true,
+          "retrieved_at": "2026-09-24",
+          "source_type": "announcement",
+          "quote": "Mistral Medium 3.5 is our first flagship merged model, available in public preview.",
+          "note": "Page metadata reads datePublished 2026-05-22T15:01:55Z and dateModified 2026-09-10T14:01:55Z; no visible dateline was found in the page text."
+        }
+      ]
     }
   ]
 }

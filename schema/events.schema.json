@@ -68,8 +68,13 @@
         "start": {"$ref": "#/$defs/partial_date"},
         "precision": {"type": "string", "enum": ["day", "month", "year"]},
         "end": {"$ref": "#/$defs/partial_date"},
-        "basis": {"type": "string", "enum": ["announced", "documented", "observed"]}
+        "basis": {"type": "string", "enum": ["announced", "documented", "observed"]},
+        "rollout_start": {
+          "comment": "The start date is the first day of a staged rollout whose completion is not published. Only on availability events, and never with end: a published end makes the date a window instead.",
+          "const": true
+        }
       },
+      "not": {"required": ["end", "rollout_start"]},
       "additionalProperties": false
     },
 
