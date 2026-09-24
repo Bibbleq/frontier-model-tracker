@@ -407,6 +407,18 @@ deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,github_copilot,any_exposu
 deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,github_copilot,selectable_or_default,deepseek-v3-2-speciale-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
 deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,foundry,any_exposure,deepseek-v3-2-speciale-2025-12-01,2025-12-01,ga,foundry-deepseek-v3-2-speciale-2025-12-15,2025-12-15,microsoft-foundry,catalogue,public_preview,14,14,exact
 deepseek-v3-2-speciale,DeepSeek V3.2-Speciale,DeepSeek,foundry,selectable_or_default,deepseek-v3-2-speciale-2025-12-01,2025-12-01,ga,,,,,,,,not_recorded
+deepseek-v4-1-flash,DeepSeek V4.1 Flash,DeepSeek,microsoft,any_exposure,deepseek-v4-1-flash-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+deepseek-v4-1-flash,DeepSeek V4.1 Flash,DeepSeek,microsoft,selectable_or_default,deepseek-v4-1-flash-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+deepseek-v4-1-flash,DeepSeek V4.1 Flash,DeepSeek,copilot,any_exposure,deepseek-v4-1-flash-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+deepseek-v4-1-flash,DeepSeek V4.1 Flash,DeepSeek,copilot,selectable_or_default,deepseek-v4-1-flash-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+deepseek-v4-1-flash,DeepSeek V4.1 Flash,DeepSeek,m365,any_exposure,deepseek-v4-1-flash-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+deepseek-v4-1-flash,DeepSeek V4.1 Flash,DeepSeek,m365,selectable_or_default,deepseek-v4-1-flash-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+deepseek-v4-1-flash,DeepSeek V4.1 Flash,DeepSeek,studio,any_exposure,deepseek-v4-1-flash-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+deepseek-v4-1-flash,DeepSeek V4.1 Flash,DeepSeek,studio,selectable_or_default,deepseek-v4-1-flash-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+deepseek-v4-1-flash,DeepSeek V4.1 Flash,DeepSeek,github_copilot,any_exposure,deepseek-v4-1-flash-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+deepseek-v4-1-flash,DeepSeek V4.1 Flash,DeepSeek,github_copilot,selectable_or_default,deepseek-v4-1-flash-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+deepseek-v4-1-flash,DeepSeek V4.1 Flash,DeepSeek,foundry,any_exposure,deepseek-v4-1-flash-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+deepseek-v4-1-flash,DeepSeek V4.1 Flash,DeepSeek,foundry,selectable_or_default,deepseek-v4-1-flash-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
 deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,microsoft,any_exposure,deepseek-v4-flash-2026-04-24,2026-04-24,public_preview,foundry-deepseek-v4-flash-2026-04-24,2026-04-24,microsoft-foundry,catalogue,ga,0,37,range
 deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,microsoft,selectable_or_default,deepseek-v4-flash-2026-04-24,2026-04-24,public_preview,,,,,,,,not_recorded
 deepseek-v4-flash,DeepSeek V4 Flash,DeepSeek,copilot,any_exposure,deepseek-v4-flash-2026-04-24,2026-04-24,public_preview,,,,,,,,not_recorded
@@ -503,6 +515,42 @@ gemini-3-7-flash,Gemini 3.7 Flash,Google,github_copilot,any_exposure,,,,github-g
 gemini-3-7-flash,Gemini 3.7 Flash,Google,github_copilot,selectable_or_default,,,,github-gemini3-7-flash-public-preview-2026-08-13,2026-08-13,github-copilot,selectable,public_preview,,,unknown_no_baseline
 gemini-3-7-flash,Gemini 3.7 Flash,Google,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
 gemini-3-7-flash,Gemini 3.7 Flash,Google,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+gemini-3-8-flash,Gemini 3.8 Flash,Google,microsoft,any_exposure,google-gemini3-8-flash-2026-09-02,2026-09-02,ga,github-gemini3-8-flash-2026-09-03,2026-09-03,github-copilot,selectable,ga,1,1,exact
+gemini-3-8-flash,Gemini 3.8 Flash,Google,microsoft,selectable_or_default,google-gemini3-8-flash-2026-09-02,2026-09-02,ga,github-gemini3-8-flash-2026-09-03,2026-09-03,github-copilot,selectable,ga,1,1,exact
+gemini-3-8-flash,Gemini 3.8 Flash,Google,copilot,any_exposure,google-gemini3-8-flash-2026-09-02,2026-09-02,ga,github-gemini3-8-flash-2026-09-03,2026-09-03,github-copilot,selectable,ga,1,1,exact
+gemini-3-8-flash,Gemini 3.8 Flash,Google,copilot,selectable_or_default,google-gemini3-8-flash-2026-09-02,2026-09-02,ga,github-gemini3-8-flash-2026-09-03,2026-09-03,github-copilot,selectable,ga,1,1,exact
+gemini-3-8-flash,Gemini 3.8 Flash,Google,m365,any_exposure,google-gemini3-8-flash-2026-09-02,2026-09-02,ga,,,,,,,,not_recorded
+gemini-3-8-flash,Gemini 3.8 Flash,Google,m365,selectable_or_default,google-gemini3-8-flash-2026-09-02,2026-09-02,ga,,,,,,,,not_recorded
+gemini-3-8-flash,Gemini 3.8 Flash,Google,studio,any_exposure,google-gemini3-8-flash-2026-09-02,2026-09-02,ga,,,,,,,,not_recorded
+gemini-3-8-flash,Gemini 3.8 Flash,Google,studio,selectable_or_default,google-gemini3-8-flash-2026-09-02,2026-09-02,ga,,,,,,,,not_recorded
+gemini-3-8-flash,Gemini 3.8 Flash,Google,github_copilot,any_exposure,google-gemini3-8-flash-2026-09-02,2026-09-02,ga,github-gemini3-8-flash-2026-09-03,2026-09-03,github-copilot,selectable,ga,1,1,exact
+gemini-3-8-flash,Gemini 3.8 Flash,Google,github_copilot,selectable_or_default,google-gemini3-8-flash-2026-09-02,2026-09-02,ga,github-gemini3-8-flash-2026-09-03,2026-09-03,github-copilot,selectable,ga,1,1,exact
+gemini-3-8-flash,Gemini 3.8 Flash,Google,foundry,any_exposure,google-gemini3-8-flash-2026-09-02,2026-09-02,ga,,,,,,,,not_recorded
+gemini-3-8-flash,Gemini 3.8 Flash,Google,foundry,selectable_or_default,google-gemini3-8-flash-2026-09-02,2026-09-02,ga,,,,,,,,not_recorded
+gemini-3-8-live,Gemini 3.8 Live,Google,microsoft,any_exposure,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live,Gemini 3.8 Live,Google,microsoft,selectable_or_default,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live,Gemini 3.8 Live,Google,copilot,any_exposure,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live,Gemini 3.8 Live,Google,copilot,selectable_or_default,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live,Gemini 3.8 Live,Google,m365,any_exposure,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live,Gemini 3.8 Live,Google,m365,selectable_or_default,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live,Gemini 3.8 Live,Google,studio,any_exposure,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live,Gemini 3.8 Live,Google,studio,selectable_or_default,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live,Gemini 3.8 Live,Google,github_copilot,any_exposure,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live,Gemini 3.8 Live,Google,github_copilot,selectable_or_default,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live,Gemini 3.8 Live,Google,foundry,any_exposure,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live,Gemini 3.8 Live,Google,foundry,selectable_or_default,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live-extended-thinking,Gemini 3.8 Live Extended Thinking,Google,microsoft,any_exposure,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live-extended-thinking,Gemini 3.8 Live Extended Thinking,Google,microsoft,selectable_or_default,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live-extended-thinking,Gemini 3.8 Live Extended Thinking,Google,copilot,any_exposure,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live-extended-thinking,Gemini 3.8 Live Extended Thinking,Google,copilot,selectable_or_default,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live-extended-thinking,Gemini 3.8 Live Extended Thinking,Google,m365,any_exposure,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live-extended-thinking,Gemini 3.8 Live Extended Thinking,Google,m365,selectable_or_default,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live-extended-thinking,Gemini 3.8 Live Extended Thinking,Google,studio,any_exposure,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live-extended-thinking,Gemini 3.8 Live Extended Thinking,Google,studio,selectable_or_default,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live-extended-thinking,Gemini 3.8 Live Extended Thinking,Google,github_copilot,any_exposure,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live-extended-thinking,Gemini 3.8 Live Extended Thinking,Google,github_copilot,selectable_or_default,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live-extended-thinking,Gemini 3.8 Live Extended Thinking,Google,foundry,any_exposure,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
+gemini-3-8-live-extended-thinking,Gemini 3.8 Live Extended Thinking,Google,foundry,selectable_or_default,google-gemini3-8-live-2026-09-15,2026-09-15,ga,,,,,,,,not_recorded
 gpt-3,GPT-3,OpenAI,microsoft,any_exposure,openai-api-2020-06-11,2020-06-11,ga,azure-openai-preview-2021-11-02,2021-11-02,azure-openai,catalogue,limited_preview,509,509,exact
 gpt-3,GPT-3,OpenAI,microsoft,selectable_or_default,openai-api-2020-06-11,2020-06-11,ga,,,,,,,,unknown_open_research
 gpt-3,GPT-3,OpenAI,copilot,any_exposure,openai-api-2020-06-11,2020-06-11,ga,,,,,,,,not_recorded
@@ -767,6 +815,18 @@ gpt-5-mini,GPT-5 mini,OpenAI,github_copilot,any_exposure,openai-gpt5-mini-2025-0
 gpt-5-mini,GPT-5 mini,OpenAI,github_copilot,selectable_or_default,openai-gpt5-mini-2025-08-07,2025-08-07,ga,github-gpt5-mini-ga-2025-09-09,2025-09-09,github-copilot,selectable,ga,33,33,exact
 gpt-5-mini,GPT-5 mini,OpenAI,foundry,any_exposure,openai-gpt5-mini-2025-08-07,2025-08-07,ga,,,,,,,,not_recorded
 gpt-5-mini,GPT-5 mini,OpenAI,foundry,selectable_or_default,openai-gpt5-mini-2025-08-07,2025-08-07,ga,,,,,,,,not_recorded
+gpt-6-astra,GPT-6 Astra,OpenAI,microsoft,any_exposure,openai-gpt6-astra-2026-09-03,2026-09-03,ga,foundry-gpt6-astra-2026-09-03,2026-09-03,microsoft-foundry,catalogue,ga,0,0,exact
+gpt-6-astra,GPT-6 Astra,OpenAI,microsoft,selectable_or_default,openai-gpt6-astra-2026-09-03,2026-09-03,ga,cowork-gpt6-astra-2026-09-04,2026-09-04,m365-cowork,selectable,ga,1,1,exact
+gpt-6-astra,GPT-6 Astra,OpenAI,copilot,any_exposure,openai-gpt6-astra-2026-09-03,2026-09-03,ga,cowork-gpt6-astra-2026-09-04,2026-09-04,m365-cowork,selectable,ga,1,1,exact
+gpt-6-astra,GPT-6 Astra,OpenAI,copilot,selectable_or_default,openai-gpt6-astra-2026-09-03,2026-09-03,ga,cowork-gpt6-astra-2026-09-04,2026-09-04,m365-cowork,selectable,ga,1,1,exact
+gpt-6-astra,GPT-6 Astra,OpenAI,m365,any_exposure,openai-gpt6-astra-2026-09-03,2026-09-03,ga,,,,,,,,not_recorded
+gpt-6-astra,GPT-6 Astra,OpenAI,m365,selectable_or_default,openai-gpt6-astra-2026-09-03,2026-09-03,ga,,,,,,,,not_recorded
+gpt-6-astra,GPT-6 Astra,OpenAI,studio,any_exposure,openai-gpt6-astra-2026-09-03,2026-09-03,ga,studio-gpt6-astra-2026-09-04,2026-09-04,copilot-studio,selectable,ga,1,1,exact
+gpt-6-astra,GPT-6 Astra,OpenAI,studio,selectable_or_default,openai-gpt6-astra-2026-09-03,2026-09-03,ga,studio-gpt6-astra-2026-09-04,2026-09-04,copilot-studio,selectable,ga,1,1,exact
+gpt-6-astra,GPT-6 Astra,OpenAI,github_copilot,any_exposure,openai-gpt6-astra-2026-09-03,2026-09-03,ga,github-gpt6-astra-ga-2026-09-04,2026-09-04,github-copilot,selectable,ga,1,1,exact
+gpt-6-astra,GPT-6 Astra,OpenAI,github_copilot,selectable_or_default,openai-gpt6-astra-2026-09-03,2026-09-03,ga,github-gpt6-astra-ga-2026-09-04,2026-09-04,github-copilot,selectable,ga,1,1,exact
+gpt-6-astra,GPT-6 Astra,OpenAI,foundry,any_exposure,openai-gpt6-astra-2026-09-03,2026-09-03,ga,foundry-gpt6-astra-2026-09-03,2026-09-03,microsoft-foundry,catalogue,ga,0,0,exact
+gpt-6-astra,GPT-6 Astra,OpenAI,foundry,selectable_or_default,openai-gpt6-astra-2026-09-03,2026-09-03,ga,,,,,,,,not_recorded
 gpt-image-1,GPT-image-1,OpenAI,microsoft,any_exposure,,,,azure-gpt-image-1-2025-04,2025-04,azure-openai,catalogue,limited_preview,,,unknown_no_baseline
 gpt-image-1,GPT-image-1,OpenAI,microsoft,selectable_or_default,,,,,,,,,,,unknown_open_research
 gpt-image-1,GPT-image-1,OpenAI,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
@@ -803,6 +863,18 @@ gpt-image-2,GPT-image-2,OpenAI,github_copilot,any_exposure,,,,,,,,,,,unknown_no_
 gpt-image-2,GPT-image-2,OpenAI,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 gpt-image-2,GPT-image-2,OpenAI,foundry,any_exposure,,,,foundry-gpt-image-2-2026-04-21,2026-04-21,microsoft-foundry,catalogue,public_preview,,,unknown_no_baseline
 gpt-image-2,GPT-image-2,OpenAI,foundry,selectable_or_default,,,,,,,,,,,unknown_open_research
+gpt-live-1,GPT-Live-1,OpenAI,microsoft,any_exposure,openai-gpt-live-1-api-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+gpt-live-1,GPT-Live-1,OpenAI,microsoft,selectable_or_default,openai-gpt-live-1-api-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+gpt-live-1,GPT-Live-1,OpenAI,copilot,any_exposure,openai-gpt-live-1-api-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+gpt-live-1,GPT-Live-1,OpenAI,copilot,selectable_or_default,openai-gpt-live-1-api-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+gpt-live-1,GPT-Live-1,OpenAI,m365,any_exposure,openai-gpt-live-1-api-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+gpt-live-1,GPT-Live-1,OpenAI,m365,selectable_or_default,openai-gpt-live-1-api-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+gpt-live-1,GPT-Live-1,OpenAI,studio,any_exposure,openai-gpt-live-1-api-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+gpt-live-1,GPT-Live-1,OpenAI,studio,selectable_or_default,openai-gpt-live-1-api-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+gpt-live-1,GPT-Live-1,OpenAI,github_copilot,any_exposure,openai-gpt-live-1-api-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+gpt-live-1,GPT-Live-1,OpenAI,github_copilot,selectable_or_default,openai-gpt-live-1-api-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+gpt-live-1,GPT-Live-1,OpenAI,foundry,any_exposure,openai-gpt-live-1-api-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
+gpt-live-1,GPT-Live-1,OpenAI,foundry,selectable_or_default,openai-gpt-live-1-api-2026-09-10,2026-09-10,ga,,,,,,,,not_recorded
 gpt-live-transcribe,GPT-live-transcribe,OpenAI,microsoft,any_exposure,,,,foundry-gpt-live-transcribe-2026-07-29,2026-07-29,microsoft-foundry,catalogue,ga,,,unknown_no_baseline
 gpt-live-transcribe,GPT-live-transcribe,OpenAI,microsoft,selectable_or_default,,,,,,,,,,,unknown_open_research
 gpt-live-transcribe,GPT-live-transcribe,OpenAI,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
@@ -1067,6 +1139,30 @@ mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,github_copilot,any_exposure,,,
 mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
 mai-image-2-5-flash,MAI-Image-2.5 Flash,Microsoft,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-image-2-6,MAI-Image-2.6,Microsoft,microsoft,any_exposure,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6,MAI-Image-2.6,Microsoft,microsoft,selectable_or_default,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6,MAI-Image-2.6,Microsoft,copilot,any_exposure,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6,MAI-Image-2.6,Microsoft,copilot,selectable_or_default,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6,MAI-Image-2.6,Microsoft,m365,any_exposure,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6,MAI-Image-2.6,Microsoft,m365,selectable_or_default,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6,MAI-Image-2.6,Microsoft,studio,any_exposure,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6,MAI-Image-2.6,Microsoft,studio,selectable_or_default,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6,MAI-Image-2.6,Microsoft,github_copilot,any_exposure,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6,MAI-Image-2.6,Microsoft,github_copilot,selectable_or_default,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6,MAI-Image-2.6,Microsoft,foundry,any_exposure,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6,MAI-Image-2.6,Microsoft,foundry,selectable_or_default,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6-flash,MAI-Image-2.6-Flash,Microsoft,microsoft,any_exposure,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6-flash,MAI-Image-2.6-Flash,Microsoft,microsoft,selectable_or_default,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6-flash,MAI-Image-2.6-Flash,Microsoft,copilot,any_exposure,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6-flash,MAI-Image-2.6-Flash,Microsoft,copilot,selectable_or_default,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6-flash,MAI-Image-2.6-Flash,Microsoft,m365,any_exposure,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6-flash,MAI-Image-2.6-Flash,Microsoft,m365,selectable_or_default,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6-flash,MAI-Image-2.6-Flash,Microsoft,studio,any_exposure,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6-flash,MAI-Image-2.6-Flash,Microsoft,studio,selectable_or_default,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6-flash,MAI-Image-2.6-Flash,Microsoft,github_copilot,any_exposure,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6-flash,MAI-Image-2.6-Flash,Microsoft,github_copilot,selectable_or_default,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6-flash,MAI-Image-2.6-Flash,Microsoft,foundry,any_exposure,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
+mai-image-2-6-flash,MAI-Image-2.6-Flash,Microsoft,foundry,selectable_or_default,microsoft-mai-image-2-6-2026-09-04,2026-09-04,public_preview,,,,,,,,not_recorded
 mai-image-2e,MAI-Image-2e,Microsoft,microsoft,any_exposure,microsoft-mai-image-2e-2026-04,2026-04-01,public_preview,m365-mai-image-2e-2026-07-01,2026-07-01,m365-copilot,specialist,ga,62,91,range
 mai-image-2e,MAI-Image-2e,Microsoft,microsoft,selectable_or_default,microsoft-mai-image-2e-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
 mai-image-2e,MAI-Image-2e,Microsoft,copilot,any_exposure,microsoft-mai-image-2e-2026-04,2026-04-01,public_preview,m365-mai-image-2e-2026-07-01,2026-07-01,m365-copilot,specialist,ga,62,91,range
@@ -1115,6 +1211,18 @@ mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,github_copilot,any_exposure,,,,,
 mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline
 mai-transcribe-1-5,MAI-Transcribe-1.5,Microsoft,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline
+mai-transcribe-2,MAI-Transcribe-2,Microsoft,microsoft,any_exposure,microsoft-mai-transcribe-2-2026-09-03,2026-09-03,public_preview,,,,,,,,not_recorded
+mai-transcribe-2,MAI-Transcribe-2,Microsoft,microsoft,selectable_or_default,microsoft-mai-transcribe-2-2026-09-03,2026-09-03,public_preview,,,,,,,,not_recorded
+mai-transcribe-2,MAI-Transcribe-2,Microsoft,copilot,any_exposure,microsoft-mai-transcribe-2-2026-09-03,2026-09-03,public_preview,,,,,,,,not_recorded
+mai-transcribe-2,MAI-Transcribe-2,Microsoft,copilot,selectable_or_default,microsoft-mai-transcribe-2-2026-09-03,2026-09-03,public_preview,,,,,,,,not_recorded
+mai-transcribe-2,MAI-Transcribe-2,Microsoft,m365,any_exposure,microsoft-mai-transcribe-2-2026-09-03,2026-09-03,public_preview,,,,,,,,not_recorded
+mai-transcribe-2,MAI-Transcribe-2,Microsoft,m365,selectable_or_default,microsoft-mai-transcribe-2-2026-09-03,2026-09-03,public_preview,,,,,,,,not_recorded
+mai-transcribe-2,MAI-Transcribe-2,Microsoft,studio,any_exposure,microsoft-mai-transcribe-2-2026-09-03,2026-09-03,public_preview,,,,,,,,not_recorded
+mai-transcribe-2,MAI-Transcribe-2,Microsoft,studio,selectable_or_default,microsoft-mai-transcribe-2-2026-09-03,2026-09-03,public_preview,,,,,,,,not_recorded
+mai-transcribe-2,MAI-Transcribe-2,Microsoft,github_copilot,any_exposure,microsoft-mai-transcribe-2-2026-09-03,2026-09-03,public_preview,,,,,,,,not_recorded
+mai-transcribe-2,MAI-Transcribe-2,Microsoft,github_copilot,selectable_or_default,microsoft-mai-transcribe-2-2026-09-03,2026-09-03,public_preview,,,,,,,,not_recorded
+mai-transcribe-2,MAI-Transcribe-2,Microsoft,foundry,any_exposure,microsoft-mai-transcribe-2-2026-09-03,2026-09-03,public_preview,,,,,,,,not_recorded
+mai-transcribe-2,MAI-Transcribe-2,Microsoft,foundry,selectable_or_default,microsoft-mai-transcribe-2-2026-09-03,2026-09-03,public_preview,,,,,,,,not_recorded
 mai-voice-1,MAI-Voice-1,Microsoft,microsoft,any_exposure,microsoft-mai-voice-1-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
 mai-voice-1,MAI-Voice-1,Microsoft,microsoft,selectable_or_default,microsoft-mai-voice-1-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
 mai-voice-1,MAI-Voice-1,Microsoft,copilot,any_exposure,microsoft-mai-voice-1-2026-04,2026-04-01,public_preview,,,,,,,,not_recorded
@@ -1163,6 +1271,18 @@ mistral-large-3,Mistral Large 3,Mistral AI,github_copilot,any_exposure,mistral3-
 mistral-large-3,Mistral Large 3,Mistral AI,github_copilot,selectable_or_default,mistral3-2025-12-02,2025-12-02,ga,,,,,,,,not_recorded
 mistral-large-3,Mistral Large 3,Mistral AI,foundry,any_exposure,mistral3-2025-12-02,2025-12-02,ga,foundry-mistral-large3-2025-12-02,2025-12-02,microsoft-foundry,catalogue,ga,0,0,exact
 mistral-large-3,Mistral Large 3,Mistral AI,foundry,selectable_or_default,mistral3-2025-12-02,2025-12-02,ga,,,,,,,,not_recorded
+mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,microsoft,any_exposure,mistral-medium3-5-2026-04-28,2026-04-28,public_preview,studio-mistral-medium3-5-2026-05-28,2026-05-28,copilot-studio,selectable,public_preview,30,30,exact
+mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,microsoft,selectable_or_default,mistral-medium3-5-2026-04-28,2026-04-28,public_preview,studio-mistral-medium3-5-2026-05-28,2026-05-28,copilot-studio,selectable,public_preview,30,30,exact
+mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,copilot,any_exposure,mistral-medium3-5-2026-04-28,2026-04-28,public_preview,studio-mistral-medium3-5-2026-05-28,2026-05-28,copilot-studio,selectable,public_preview,30,30,exact
+mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,copilot,selectable_or_default,mistral-medium3-5-2026-04-28,2026-04-28,public_preview,studio-mistral-medium3-5-2026-05-28,2026-05-28,copilot-studio,selectable,public_preview,30,30,exact
+mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,m365,any_exposure,mistral-medium3-5-2026-04-28,2026-04-28,public_preview,,,,,,,,not_recorded
+mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,m365,selectable_or_default,mistral-medium3-5-2026-04-28,2026-04-28,public_preview,,,,,,,,not_recorded
+mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,studio,any_exposure,mistral-medium3-5-2026-04-28,2026-04-28,public_preview,studio-mistral-medium3-5-2026-05-28,2026-05-28,copilot-studio,selectable,public_preview,30,30,exact
+mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,studio,selectable_or_default,mistral-medium3-5-2026-04-28,2026-04-28,public_preview,studio-mistral-medium3-5-2026-05-28,2026-05-28,copilot-studio,selectable,public_preview,30,30,exact
+mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,github_copilot,any_exposure,mistral-medium3-5-2026-04-28,2026-04-28,public_preview,,,,,,,,not_recorded
+mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,github_copilot,selectable_or_default,mistral-medium3-5-2026-04-28,2026-04-28,public_preview,,,,,,,,not_recorded
+mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,foundry,any_exposure,mistral-medium3-5-2026-04-28,2026-04-28,public_preview,,,,,,,,not_recorded
+mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,foundry,selectable_or_default,mistral-medium3-5-2026-04-28,2026-04-28,public_preview,,,,,,,,not_recorded
 nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,microsoft,any_exposure,,,,foundry-nemotron-3-5-lightning-2026-08-19,2026-08-19,microsoft-foundry,catalogue,ga,,,unknown_no_baseline
 nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline
 nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline
