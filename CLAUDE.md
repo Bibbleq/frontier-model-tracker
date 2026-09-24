@@ -29,6 +29,11 @@ Read that correctly:
   Use them to confirm dates and stages, but they do not replace reading the
   primary page or recording an `archived_url`.
 
+On 2026-09-24 the Default environment's network access was raised to **Full**,
+so every host below is reachable and the rest of this section applies only if
+access is narrowed again. openai.com and x.ai still answer with Cloudflare
+challenges under Full; read them through the archive or r.jina.ai.
+
 The fix is on the environment, not in the session: open the environment,
 set **Network access** to **Custom**, tick **Also include default list of
 common package managers**, and list the hosts below one per line in
@@ -61,6 +66,20 @@ qwen.ai
 ```
 
 `www.microsoft.com` is reachable under Trusted and does not need listing.
+
+`r.jina.ai` was also added on 2026-09-24. It fetches a page on its own side and
+returns it as Markdown, so it reaches hosts the allowlist refuses and pages
+that are rendered client-side. Before access was raised to Full it was the only way in to
+`azure.microsoft.com` and `developers.openai.com`, which were not on the list.
+Ask it for JSON to get page metadata as well:
+
+```bash
+curl -sS -m 120 -H 'Accept: application/json' "https://r.jina.ai/<url>"
+```
+
+Its metadata often lacks a publication date, and it is a reader, not an
+archive: say "read through r.jina.ai" in the source `note`, and still look up
+an `archived_url`.
 
 Check reachability in one pass before starting a batch, and add any new
 publisher a candidate cites to the list above when you find it refused.
