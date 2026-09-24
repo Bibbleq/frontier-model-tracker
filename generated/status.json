@@ -251,9 +251,10 @@
     ]
   },
   "lag_certainty": {
-    "exact": 363,
+    "exact": 302,
     "not_recorded": 639,
-    "range": 39,
+    "range": 27,
+    "rollout_start": 73,
     "unknown_no_baseline": 296,
     "unknown_open_research": 91
   }

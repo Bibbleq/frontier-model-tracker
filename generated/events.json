@@ -3675,7 +3675,8 @@
       "kind": "availability",
       "date": {
         "start": "2025-08-07",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "m365-copilot",
       "model_ids": [
@@ -4126,7 +4127,8 @@
       "kind": "availability",
       "date": {
         "start": "2025-09-30",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "openai",
       "model_ids": [
@@ -4844,7 +4846,8 @@
       "kind": "availability",
       "date": {
         "start": "2025-11-24",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -5515,7 +5518,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-02-17",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -6235,7 +6239,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-04-16",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "m365-copilot",
       "experience_ids": [
@@ -6891,7 +6896,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-04-27",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "m365-copilot",
       "model_ids": [
@@ -7484,7 +7490,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-05-28",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "m365-copilot",
       "experience_ids": [
@@ -7585,7 +7592,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-05-28",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "copilot-studio",
       "model_ids": [
@@ -8560,7 +8568,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-07-01",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -8629,7 +8638,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-07-02",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "m365-cowork",
       "model_ids": [
@@ -8657,7 +8667,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-07-02",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "m365-copilot",
       "experience_ids": [
@@ -9470,7 +9481,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-07-28",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -9617,7 +9629,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-08-06",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -9659,7 +9672,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-08-11",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -9748,7 +9762,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-08-13",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -9783,7 +9798,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-08-14",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -10166,7 +10182,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-09-01",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "m365-cowork",
       "model_ids": [
@@ -10306,7 +10323,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-09-01",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -10348,7 +10366,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-09-01",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "copilot-studio",
       "model_ids": [
@@ -10576,7 +10595,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-09-03",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -10705,7 +10725,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-09-03",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "openai",
       "model_ids": [
@@ -10778,7 +10799,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-09-04",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "m365-cowork",
       "model_ids": [
@@ -10825,7 +10847,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-09-04",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "github-copilot",
       "model_ids": [
@@ -10932,7 +10955,8 @@
       "kind": "availability",
       "date": {
         "start": "2026-09-04",
-        "precision": "day"
+        "precision": "day",
+        "rollout_start": true
       },
       "surface_id": "copilot-studio",
       "model_ids": [

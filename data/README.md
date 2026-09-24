@@ -75,6 +75,27 @@ Use `date.end` for a rollout window. Never pad a month to a day to make
 sorting or rendering easier — the build rejects a mismatch, and derived lag
 becomes a range rather than a false point.
 
+A source that says a model is "rolling out today", or that rollout "will be
+gradual", dates the first day of availability, not the day every eligible user
+had it. Record that day as `date.start` and add `rollout_start: true`:
+
+```yaml
+  date:
+    start: "2026-09-04"
+    precision: "day"
+    rollout_start: true
+```
+
+Use it only on availability events, and only when no end is published. If the
+source or a later one states when the rollout completed, record a window with
+`date.end` instead; the build rejects both together. An expected completion
+date ("is expected to complete by") is not a published end. Do not use the flag
+for an embedded experience rolling out behind a model that is already
+selectable, or for a generic warning that releases take several days. Lag
+measured from or to a flagged date is reported with `certainty:
+rollout_start`, so the flag is what stops a rollout start being counted as an
+exact lag.
+
 A day-precision date on the **first of a month** is flagged, because that is
 the shape a padded month takes. The flag clears when a source vouches for the
 day, and only two things count:
