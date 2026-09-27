@@ -127,6 +127,42 @@ CDX API and to avoid the availability API. Two additions:
    excerpt as if it were the page; the guide already says an issue excerpt is
    not the page.
 
+3. A third failure mode looks like neither: the CONNECT tunnel opens, then the
+   TLS handshake is reset. `curl` reports `Recv failure: Connection reset by
+   peer`, and `curl -sS "$HTTPS_PROXY/__agentproxy/status"` lists
+   `web.archive.org:443` under `recentRelayFailures` as
+   `ws_closed_mid_exchange`. That is the session's relay, not the archive and
+   not the allowlist. On 2026-09-27 it held for the whole session, every TLS
+   option failed the same way, `r.jina.ai` refused the host with an
+   `AbuseAlleviationError`, and the harness's own web fetch tool declined it.
+
+   The workaround is the availability API, which lives on `archive.org`
+   rather than `web.archive.org` and answered normally that day, with no
+   429s:
+
+   ```
+   https://archive.org/wayback/available?url=<url-without-scheme>&timestamp=<YYYYMMDD>
+   ```
+
+   The response's `archived_snapshots.closest` gives a `timestamp`, a
+   `status` and the capture URL; build `archived_url` from it as usual. Two
+   limits, both to be stated in the source `note`:
+
+   - It returns one capture, the closest to the timestamp you pass, so it
+     cannot bisect revisions or prove a change date. Pass the publication
+     date for a dated page and the retrieval date for a rolling page, and
+     check the timestamp it returns is after the claim before citing it.
+   - It tells you a capture exists; it does not let you read it, and
+     `web.archive.org/web/<timestamp>id_/...` is still refused. Record the
+     capture as located but not read, and do not claim the quoted text was
+     confirmed present in it.
+
+   The 27 September batch was archived this way; the `sweep-2026-09-19-to-09-25`
+   item lists which sources still need a snapshot taken from a browser. If
+   the availability API answers 429 on its first request, that is the case
+   `.github/copilot-instructions.md` warns about: the endpoint refusing you,
+   not a limit to wait out.
+
 ## Candidate issues
 
 `bibble-envoy[bot]` files candidates from news feeds. The **Flagged** timestamp
