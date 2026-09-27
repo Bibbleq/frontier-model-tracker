@@ -118,11 +118,6 @@
     },
     {
       "code": "missing_archive",
-      "subject": "openai-gpt6-sol-luna-2026-09-22",
-      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/changelog"
-    },
-    {
-      "code": "missing_archive",
       "subject": "studio-fable5-1-2026-09-01",
       "message": "documentation source has no archived_url and may be edited in place: https://pupuweb.com/mc1465748-claude-fable-5-1-is-now-available-in-copilot-cowork-and-copilot-studio-with-microsofts-enterprise-data-protection/"
     },
@@ -219,7 +214,7 @@
   ],
   "warning_counts": {
     "backlog_without_surface": 7,
-    "missing_archive": 15,
+    "missing_archive": 14,
     "no_vendor_baseline": 9,
     "no_vendor_baseline_extended": 7,
     "pre_release_access": 1
