@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updated": "2026-09-24",
-  "research_cutoff": "2026-09-18",
+  "updated": "2026-09-27",
+  "research_cutoff": "2026-09-25",
   "metadata": {
     "project": "365Explained Frontier Model Tracker",
     "purpose": "Sourced history of frontier and significant model availability across tracked Microsoft surfaces.",
@@ -11290,6 +11290,1009 @@
           "note": "Table row: 'Grok 4.5 | 2026-10-19 | Grok 4.6'."
         }
       ]
+    },
+    {
+      "id": "github-grok4-7-2026-09-21",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-21",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "grok-4-7"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Grok 4.7 began rolling out in GitHub Copilot on 21 September 2026, xAI's release day, for the Copilot Pro, Pro+, Max, Business and Enterprise plans, selectable in the model picker in VS Code, Visual Studio, Copilot CLI, the GitHub Copilot cloud agent, the GitHub Copilot app, JetBrains, Xcode and Eclipse. Billed at provider list pricing under usage-based billing.",
+      "caveat": "The changelog says 'now rolling out' and 'Rollout will be gradual', so 21 September starts the rollout window; its plan sentence is in the future tense ('will be available'), and GitHub's weekly summary of 25 September restates it in the present tense. No stage word is used, so ga is recorded with lifecycle supported, as for github-grok4-6-2026-08-14. Under default model enablement the model is on for Business and Enterprise unless an administrator has turned off the global default or disabled it. No Wayback capture could be looked up from this session; web.archive.org connections were reset.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "xai-grok4-7-2026-09-21"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Grok 4.7 is now available in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-21",
+          "source_type": "changelog",
+          "quote": "Grok 4.7, xAI’s latest reasoning model, is now rolling out in GitHub Copilot.",
+          "supports": [
+            "date",
+            "model"
+          ]
+        },
+        {
+          "publisher": "GitHub",
+          "title": "Grok 4.7 is now available in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-21",
+          "source_type": "changelog",
+          "quote": "Grok 4.7 will be available to Copilot Pro, Pro+, Max, Business, and Enterprise SKUs.",
+          "supports": [
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot weekly releases — September 21",
+          "url": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21/",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-25",
+          "source_type": "changelog",
+          "quote": "Grok 4.7 is available to Copilot Pro, Pro+, Max, Business, and Enterprise plans.",
+          "supports": [
+            "model",
+            "exposure"
+          ],
+          "note": "The weekly summary, published four days later; it restates the plans in the present tense but dates nothing."
+        }
+      ]
+    },
+    {
+      "id": "xai-grok4-7-2026-09-21",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-21",
+        "precision": "day"
+      },
+      "surface_id": "xai-grok",
+      "model_ids": [
+        "grok-4-7"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "xAI released Grok 4.7 on 21 September 2026, available on release day in Cursor and Grok Build and through the Grok API, third-party coding harnesses, model routers and cloud platforms, at the same price as Grok 4.6. GitHub Copilot began rolling it out the same day.",
+      "caveat": "Single-source day: the launch page's dateline reads 'Sep 21, 2026' and its metadata carries the same date; the GitHub Copilot changelog of 21 September independently shows the model public that day. A newsletter reprint reached triage on 27 September; the vendor page, not the reprint, dates the release. x.ai answers this environment with a Cloudflare challenge, so the page was read through r.jina.ai, and no Wayback capture could be looked up because web.archive.org connections were reset.",
+      "sources": [
+        {
+          "publisher": "xAI",
+          "title": "Introducing Grok 4.7",
+          "url": "https://x.ai/news/grok-4-7",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-21",
+          "source_type": "announcement",
+          "quote": "Grok 4.7 is available today in Cursor and Grok Build.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai. The page dateline reads 'Sep 21, 2026'."
+        },
+        {
+          "publisher": "xAI",
+          "title": "Introducing Grok 4.7",
+          "url": "https://x.ai/news/grok-4-7",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-21",
+          "source_type": "announcement",
+          "quote": "It is also available through the Grok API, third-party coding harnesses, and model routers and cloud platforms.",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "Names no cloud platform, so this sentence is not evidence for any Microsoft surface."
+        }
+      ]
+    },
+    {
+      "id": "anthropic-opus5-5-2026-09-22",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-22",
+        "precision": "day"
+      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-opus-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Anthropic released Claude Opus 5.5 on 22 September 2026, the first model of its Claude 5.5 family, available on release day on the Claude Platform as claude-opus-5-5 and on Amazon Web Services, Google Cloud and Microsoft Azure, priced 20% below Opus 5.",
+      "caveat": "The launch page carries a dateline of September 22, 2026, and Microsoft's Foundry, GitHub Copilot and Microsoft Copilot announcements of the same day corroborate it. Anthropic says Sonnet 5.5 and Haiku 5.5 will follow in the coming weeks; neither is registered. No Wayback capture could be looked up from this session.",
+      "sources": [
+        {
+          "publisher": "Anthropic",
+          "title": "Introducing Claude Opus 5.5",
+          "url": "https://www.anthropic.com/news/claude-opus-5-5",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "Claude Opus 5.5 is now available on all platforms, including Amazon Web Services, Google Cloud, and Microsoft Azure.",
+          "supports": [
+            "date",
+            "lifecycle"
+          ],
+          "note": "The page dateline reads 'September 22, 2026'."
+        },
+        {
+          "publisher": "Anthropic",
+          "title": "Introducing Claude Opus 5.5",
+          "url": "https://www.anthropic.com/news/claude-opus-5-5",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "We’re introducing Claude Opus 5.5, the first model in our new Claude 5.5 family.",
+          "supports": [
+            "model"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cowork-gpt6-sol-2026-09-22",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-22",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "m365-cowork",
+      "model_ids": [
+        "gpt-6-sol"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced GPT-6 Sol rolling out to Copilot Cowork on 22 September 2026, OpenAI's release day, in the same announcement that covers Word, Excel, PowerPoint, Chat and Copilot Studio and that adds Claude Opus 5.5.",
+      "caveat": "Recorded separately from m365-gpt6-sol-2026-09-22 and studio-gpt6-sol-2026-09-22 because Cowork is a distinct surface with its own picker; all three cite the same announcement. The announcement carries no stage word and no preview label, so ga is recorded with lifecycle supported. GPT-6 Luna is not named for any Copilot surface. Microsoft says availability may vary by licence, access and region, and points to the Microsoft 365 roadmap and Copilot release notes for rollout status. No Wayback capture could be looked up from this session.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-sol-luna-2026-09-22"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "More Models, One Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/more-models-one-copilot/4559035",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "Anthropic's Claude Opus 5.5 and OpenAI's GPT-6 Sol are rolling out to Microsoft Copilot today across Word, Excel, PowerPoint, Chat, Cowork, and Copilot Studio.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The page dateline reads 'Sep 22, 2026'."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "More Models, One Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/more-models-one-copilot/4559035",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "That's why Microsoft Copilot provides access to multiple frontier models, giving users the flexibility to choose the one that best fits the work they need to accomplish.",
+          "supports": [
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cowork-opus5-5-2026-09-22",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-22",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "m365-cowork",
+      "model_ids": [
+        "claude-opus-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced Claude Opus 5.5 rolling out to Copilot Cowork on 22 September 2026, Anthropic's release day, in the same announcement that covers Word, Excel, PowerPoint, Chat and Copilot Studio and that adds GPT-6 Sol.",
+      "caveat": "Recorded separately from m365-opus5-5-2026-09-22 and studio-opus5-5-2026-09-22 because Cowork is a distinct surface with its own picker; all three cite the same announcement. The announcement carries no stage word and no preview label, so ga is recorded with lifecycle supported, as for cowork-fable5-1-2026-09-01. Anthropic models remain off by default in a tenant until an administrator enables them, a governance gate this event does not date. Microsoft says availability may vary by licence, access and region. No Wayback capture could be looked up from this session.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-opus5-5-2026-09-22"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "More Models, One Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/more-models-one-copilot/4559035",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "Anthropic's Claude Opus 5.5 and OpenAI's GPT-6 Sol are rolling out to Microsoft Copilot today across Word, Excel, PowerPoint, Chat, Cowork, and Copilot Studio.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The page dateline reads 'Sep 22, 2026'."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "More Models, One Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/more-models-one-copilot/4559035",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "Claude Opus 5.5 and GPT-6 Sol begins rolling out today. Availability may vary by license, access, and region.",
+          "supports": [
+            "date"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt6-sol-luna-2026-09-22",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-22",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-6-sol",
+        "gpt-6-luna"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft made GPT-6 Sol and GPT-6 Luna generally available in Microsoft Foundry on 22 September 2026, OpenAI's release day, with Standard deployment in all 28 Global regions and the US and EU Data Zones, Provisioned Throughput for Sol, and Priority Processing for Sol in Global regions and the US Data Zone.",
+      "caveat": "One event for both models, following foundry-gpt5-6-2026-07-09: the announcement names each individually and states one stage for both. Microsoft Learn's region tables list gpt-6-sol and gpt-6-luna with version string 2026-09-22, which agrees with the announcement but is a version string, not the date source. The Azure blog was fetched directly on 27 September 2026 and carries published_time 2026-09-22T18:30:00+00:00; no Wayback capture could be looked up from this session.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-sol-luna-2026-09-22"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Azure Blog",
+          "title": "GPT-6 Astra, Sol, and Luna: For production agents in Microsoft Foundry",
+          "url": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "Today, we are expanding our GPT-6 series by welcoming GPT-6 Sol and GPT-6 Luna to our generally available lineup in Microsoft Foundry.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "Microsoft Azure Blog",
+          "title": "GPT-6 Astra, Sol, and Luna: For production agents in Microsoft Foundry",
+          "url": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "Today, Standard deployment is available for Astra, Sol and Luna across all 28 Global regions, and US and EU Data Zones; Provisioned Throughput for Astra and Sol across Global regions and US and EU Data Zones; and Priority Processing for Sol across Global regions and US Data Zones.",
+          "supports": [
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Region availability for Foundry Models sold by Azure",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure-region-availability",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "source_type": "documentation",
+          "quote": "gpt-6-sol | 2026-09-22 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅",
+          "supports": [
+            "model"
+          ],
+          "note": "Global Standard table, read on 27 September 2026 through the Microsoft Learn MCP server; gpt-6-luna carries the same version string. A version string is not a date source. No archived_url: the Wayback Machine could not be reached from this session."
+        }
+      ]
+    },
+    {
+      "id": "foundry-opus5-5-2026-09-22",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-22",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "claude-opus-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft announced Claude Opus 5.5 available in Microsoft Foundry on Anthropic's release day, 22 September 2026, as a generally available model hosted on Azure with Global Standard and US Data Zone deployments and a separate long-context offer at the same price.",
+      "caveat": "The candidate's t5-style URL now returns 'This blog post cannot be found'; the canonical URL below carries the post, dated Sep 22, 2026. Microsoft Learn's Claude page lists claude-opus-5-5 as GA both hosted on Azure and hosted on Anthropic infrastructure, and says Opus 5.5 is the first Opus model to carry the Fable 5.1-class safety classifiers, under which some cybersecurity and biology requests are handled by another Claude model. techcommunity.microsoft.com answers this environment's direct requests with 403, so the post was read through r.jina.ai; no Wayback capture could be looked up from this session.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-opus5-5-2026-09-22"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Claude Opus 5.5 comes to Microsoft Foundry for long-running coding and knowledge work",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/claude-opus-5-5-comes-to-microsoft-foundry-for-long-running-coding-and-knowledge/4558051",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "Today, Claude Opus 5.5 is available in Microsoft Foundry, bringing Anthropic’s most capable Opus model to developers and enterprises building AI applications and agents.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai. The page dateline reads 'Sep 22, 2026'; the post is at version 2.0, also updated 22 September."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Claude Opus 5.5 comes to Microsoft Foundry for long-running coding and knowledge work",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/claude-opus-5-5-comes-to-microsoft-foundry-for-long-running-coding-and-knowledge/4558051",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "GA, Hosted on Azure",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "The Availability column of the post's pricing table, for both the Claude Opus 5.5 row and the Claude Opus 5.5 (Long Context) row."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Claude models in Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "source_type": "documentation",
+          "quote": "claude-opus-5-5 | - Hosted on Azure: GA - Hosted on Anthropic infrastructure: GA | 1M / 128K",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "Read on 27 September 2026 through the Microsoft Learn MCP server. Current-state evidence for the stage, not for the date. No archived_url: the Wayback Machine could not be reached from this session."
+        }
+      ]
+    },
+    {
+      "id": "github-gpt6-luna-2026-09-22",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-22",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-6-luna"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-6 Luna became available in GitHub Copilot on 22 September 2026, OpenAI's release day, for the Copilot Pro, Pro+, Max, Business and Enterprise plans, selectable in the model picker in VS Code, Visual Studio, Copilot CLI, the GitHub Copilot cloud agent, the GitHub Copilot app, github.com, GitHub Mobile, JetBrains, Xcode and Eclipse. Billed under usage-based billing.",
+      "caveat": "Recorded separately from github-gpt6-sol-2026-09-22 because the plans differ: Luna reaches the base Copilot Pro plan and Sol does not, following the per-model split used for GPT-5.6. Rollout is gradual, so 22 September starts the rollout window. Under default model enablement the model is on for Business and Enterprise unless an administrator has turned off the global default or disabled it. No Wayback capture could be looked up from this session.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-sol-luna-2026-09-22"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "OpenAI’s GPT-6 Sol and GPT-6 Luna now available",
+          "url": "https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available/",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "changelog",
+          "quote": "OpenAI’s GPT-6 family is expanding in GitHub Copilot with two additional models: GPT-6 Sol, and GPT-6 Luna.",
+          "supports": [
+            "date",
+            "model"
+          ]
+        },
+        {
+          "publisher": "GitHub",
+          "title": "OpenAI’s GPT-6 Sol and GPT-6 Luna now available",
+          "url": "https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available/",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "changelog",
+          "quote": "GPT-6 Luna is available to Copilot Pro, Pro+, Max, Business, and Enterprise plans.",
+          "supports": [
+            "exposure",
+            "lifecycle"
+          ]
+        },
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot weekly releases — September 21",
+          "url": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21/",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-25",
+          "source_type": "changelog",
+          "quote": "GPT-6 Luna is available to Copilot Pro, Pro+, Max, Business, and Enterprise plans.",
+          "supports": [
+            "model",
+            "exposure"
+          ],
+          "note": "The weekly summary, published three days later; it dates nothing."
+        }
+      ]
+    },
+    {
+      "id": "github-gpt6-sol-2026-09-22",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-22",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-6-sol"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-6 Sol became available in GitHub Copilot on 22 September 2026, OpenAI's release day, for the Copilot Pro+, Max, Business and Enterprise plans, selectable in the model picker in VS Code, Visual Studio, Copilot CLI, the GitHub Copilot cloud agent, the GitHub Copilot app, github.com, GitHub Mobile, JetBrains, Xcode and Eclipse. Billed under usage-based billing.",
+      "caveat": "Not on the base Copilot Pro plan, unlike GPT-6 Luna in the same changelog, so selectable exposure does not extend to every paying Copilot user; recorded separately for that reason, following the per-model split used for GPT-5.6. Rollout is gradual, so 22 September starts the rollout window. Under default model enablement the model is on for Business and Enterprise unless an administrator has turned off the global default or disabled it. No Wayback capture could be looked up from this session.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-sol-luna-2026-09-22"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "OpenAI’s GPT-6 Sol and GPT-6 Luna now available",
+          "url": "https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available/",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "changelog",
+          "quote": "OpenAI’s GPT-6 family is expanding in GitHub Copilot with two additional models: GPT-6 Sol, and GPT-6 Luna.",
+          "supports": [
+            "date",
+            "model"
+          ]
+        },
+        {
+          "publisher": "GitHub",
+          "title": "OpenAI’s GPT-6 Sol and GPT-6 Luna now available",
+          "url": "https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available/",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "changelog",
+          "quote": "GPT-6 Sol is available to Copilot Pro+, Max, Business, and Enterprise plans.",
+          "supports": [
+            "exposure",
+            "lifecycle"
+          ]
+        },
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot weekly releases — September 21",
+          "url": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21/",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-25",
+          "source_type": "changelog",
+          "quote": "GPT-6 Sol is available to Copilot Pro+, Max, Business, and Enterprise plans.",
+          "supports": [
+            "model",
+            "exposure"
+          ],
+          "note": "The weekly summary, published three days later; it dates nothing."
+        }
+      ]
+    },
+    {
+      "id": "github-opus5-5-2026-09-22",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-22",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-opus-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "Claude Opus 5.5 became available in GitHub Copilot on 22 September 2026, Anthropic's release day, for the Copilot Pro+, Max, Business and Enterprise plans, selectable in the model picker in VS Code, Visual Studio, Copilot CLI, the GitHub Copilot coding agent, the GitHub Copilot app, github.com, GitHub Mobile, JetBrains IDEs, Xcode and Eclipse. Billed at provider list pricing under usage-based billing.",
+      "caveat": "Not on the base Copilot Pro plan, like Claude Opus 5 before it, so selectable exposure does not extend to every paying Copilot user. Rollout is gradual, so 22 September starts the rollout window. Under default model enablement the model is on for Business and Enterprise unless an administrator has turned off the global default or disabled it. GitHub notes that the model watermarks its text outputs. No Wayback capture could be looked up from this session.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-opus5-5-2026-09-22"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Claude Opus 5.5 is now available in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "changelog",
+          "quote": "Claude Opus 5.5, Anthropic’s newest Opus model, is now available in GitHub Copilot.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        },
+        {
+          "publisher": "GitHub",
+          "title": "Claude Opus 5.5 is now available in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "changelog",
+          "quote": "Claude Opus 5.5 is available to Copilot Pro+, Max, Business, and Enterprise users.",
+          "supports": [
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot weekly releases — September 21",
+          "url": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21/",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-25",
+          "source_type": "changelog",
+          "quote": "Claude Opus 5.5 is available to Copilot Pro+, Max, Business, and Enterprise plans.",
+          "supports": [
+            "model",
+            "exposure"
+          ],
+          "note": "The weekly summary, published three days later; it dates nothing."
+        }
+      ]
+    },
+    {
+      "id": "m365-gpt6-sol-2026-09-22",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-22",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "word",
+        "excel",
+        "powerpoint",
+        "m365-copilot-chat"
+      ],
+      "model_ids": [
+        "gpt-6-sol"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced GPT-6 Sol rolling out to Microsoft 365 Copilot on 22 September 2026, OpenAI's release day, across Word, Excel, PowerPoint and Copilot Chat, in the announcement that also covers Cowork and Copilot Studio and adds Claude Opus 5.5.",
+      "caveat": "The announcement is a short notice with no stage word and no preview label, so ga is recorded with lifecycle supported; Microsoft points to the Microsoft 365 roadmap and the Copilot release notes for rollout status, and neither had been read for this model at triage. Availability may vary by licence, access and region. GPT-6 Luna is not named for any Copilot surface, and GPT-6 Astra's Microsoft 365 Copilot status remains a known gap. No Wayback capture could be looked up from this session.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-sol-luna-2026-09-22"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "More Models, One Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/more-models-one-copilot/4559035",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "Anthropic's Claude Opus 5.5 and OpenAI's GPT-6 Sol are rolling out to Microsoft Copilot today across Word, Excel, PowerPoint, Chat, Cowork, and Copilot Studio.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The page dateline reads 'Sep 22, 2026'."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "More Models, One Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/more-models-one-copilot/4559035",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "That's why Microsoft Copilot provides access to multiple frontier models, giving users the flexibility to choose the one that best fits the work they need to accomplish.",
+          "supports": [
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m365-opus5-5-2026-09-22",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-22",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "word",
+        "excel",
+        "powerpoint",
+        "m365-copilot-chat"
+      ],
+      "model_ids": [
+        "claude-opus-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced Claude Opus 5.5 rolling out to Microsoft 365 Copilot on 22 September 2026, Anthropic's release day, across Word, Excel, PowerPoint and Copilot Chat, in the announcement that also covers Cowork and Copilot Studio and adds GPT-6 Sol. With it the model reached all four tracked Microsoft surfaces plus Cowork on release day, as Claude Opus 5 did.",
+      "caveat": "The announcement is a short notice with no stage word and no preview label, so ga is recorded with lifecycle supported, where the Opus 5 announcement of 24 July was recorded confirmed on fuller text. Anthropic models are off by default in a tenant until an administrator enables them. Availability may vary by licence, access and region. No Wayback capture could be looked up from this session.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-opus5-5-2026-09-22"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "More Models, One Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/more-models-one-copilot/4559035",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "Anthropic's Claude Opus 5.5 and OpenAI's GPT-6 Sol are rolling out to Microsoft Copilot today across Word, Excel, PowerPoint, Chat, Cowork, and Copilot Studio.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The page dateline reads 'Sep 22, 2026'."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "More Models, One Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/more-models-one-copilot/4559035",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "That's why Microsoft Copilot provides access to multiple frontier models, giving users the flexibility to choose the one that best fits the work they need to accomplish.",
+          "supports": [
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt6-sol-luna-2026-09-22",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-22",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-6-sol",
+        "gpt-6-luna"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI released GPT-6 Sol and GPT-6 Luna on 22 September 2026, in the API as gpt-6-sol and gpt-6-luna and in ChatGPT Work and Codex for Plus, Pro, Business, Enterprise and Edu users, at half the API price of their GPT-5.6 predecessors. Microsoft Foundry and GitHub Copilot carried both the same day.",
+      "caveat": "One event for both models on the umbrella surface, following openai-gpt5-6-2026-07-09: the launch covers the API and ChatGPT together. OpenAI says the ChatGPT rollout ran gradually through the day and that the models were not yet available in Chat, only in ChatGPT Work and Codex; the API changelog records them as released that day, so no rollout flag is set. The launch post shows no dateline in its readable text; its markup carries 2026-09-22T21:00:00Z, and the date rests on the API changelog entry headed Sep 22 and on Microsoft's same-day announcements. openai.com answers this environment with a Cloudflare challenge, so the post was read through r.jina.ai; no Wayback capture could be looked up from this session.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "release_notes",
+          "quote": "Released GPT-6 Sol (gpt-6-sol) and GPT-6 Luna (gpt-6-luna).",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed Sep 22, endpoints v1/responses and v1/chat/completions. Read through r.jina.ai."
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing GPT-6 Sol and Luna",
+          "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "GPT‑6 Sol and GPT‑6 Luna are available in ChatGPT Work and Codex starting today for all Plus, Pro, Business, Enterprise, and Edu users.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai. The sentence continues: 'Free and Go users can access GPT‑6 Luna in the desktop app. These models are not yet available in Chat. In the OpenAI API, they are available as gpt-6-sol and gpt-6-luna.'"
+        }
+      ]
+    },
+    {
+      "id": "studio-gpt6-sol-2026-09-22",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-22",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "gpt-6-sol"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced GPT-6 Sol rolling out to Copilot Studio on 22 September 2026, OpenAI's release day, in the same announcement that covers Microsoft 365 Copilot and Cowork and adds Claude Opus 5.5.",
+      "caveat": "Recorded separately from m365-gpt6-sol-2026-09-22 and cowork-gpt6-sol-2026-09-22 because Copilot Studio is a distinct surface; all three cite the same announcement. The announcement carries no stage word and no preview label, so ga is recorded with lifecycle supported; Copilot Studio's model availability table had not been read for this model at triage, so no release tag corroborates the stage. Availability may vary by licence, access and region. No Wayback capture could be looked up from this session.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-sol-luna-2026-09-22"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "More Models, One Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/more-models-one-copilot/4559035",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "Anthropic's Claude Opus 5.5 and OpenAI's GPT-6 Sol are rolling out to Microsoft Copilot today across Word, Excel, PowerPoint, Chat, Cowork, and Copilot Studio.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The page dateline reads 'Sep 22, 2026'."
+        }
+      ]
+    },
+    {
+      "id": "studio-opus5-5-2026-09-22",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-22",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "claude-opus-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced Claude Opus 5.5 rolling out to Copilot Studio on 22 September 2026, Anthropic's release day, in the same announcement that covers Microsoft 365 Copilot and Cowork and adds GPT-6 Sol.",
+      "caveat": "Recorded separately from m365-opus5-5-2026-09-22 and cowork-opus5-5-2026-09-22 because Copilot Studio is a distinct surface; all three cite the same announcement. The announcement carries no stage word and no preview label, so ga is recorded with lifecycle supported, as for studio-fable5-1-2026-09-01; Copilot Studio's model availability table had not been read for this model at triage. Anthropic models are off by default in a tenant until an administrator enables them. No Wayback capture could be looked up from this session.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-opus5-5-2026-09-22"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "More Models, One Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/more-models-one-copilot/4559035",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-22",
+          "source_type": "announcement",
+          "quote": "Anthropic's Claude Opus 5.5 and OpenAI's GPT-6 Sol are rolling out to Microsoft Copilot today across Word, Excel, PowerPoint, Chat, Cowork, and Copilot Studio.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The page dateline reads 'Sep 22, 2026'."
+        }
+      ]
+    },
+    {
+      "id": "foundry-deepseek-v4-1-flash-2026-09-23",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-23",
+        "end": "2026-09-25",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "deepseek-v4-1-flash"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "confirmed"
+      },
+      "evidence_note": "DeepSeek-V4.1-Flash reached the Microsoft Foundry catalogue between 23 and 25 September 2026 by two paths: Direct from Azure in public preview, and generally available through Fireworks on Foundry as FW-DeepSeek-V4.1-Flash with PayGo Global and Provisioned Throughput deployments. Microsoft's post also adds a Global deployment for Kimi K3 through Fireworks and lists GLM-5.3-Flash through Fireworks.",
+      "caveat": "Bounded, not pointed: Microsoft's post is dated 23 September and titled 'is coming to Microsoft Foundry', but the text read on 27 September, its version 3.0 revision updated 25 September, says the model can be deployed by either path and links both catalogue cards. Without a capture of the 23 September text, which the Wayback Machine could not supply from this session, the arrival is bounded by the post's publication and its last revision. The Direct from Azure listing anchors the catalogue claim and its stated public preview sets the lifecycle, following foundry-deepseek-v4-flash-0731-2026-08-19; the Fireworks path is generally available and partner-hosted, and is noted here rather than recorded as a second event. Microsoft Learn's Fireworks catalogue lists FW-DeepSeek-V4.1-Flash as pay-per-token Global Standard; its models-sold-by-Azure page did not yet list the direct offer at its 27 September reading. DeepSeek's own release is dated 10 September from the weights repository, so the Foundry lag is 13 to 15 days. techcommunity.microsoft.com answers this environment's direct requests with 403, so the post was read through r.jina.ai.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "DeepSeek-V4.1-Flash is coming to Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/deepseek-v4-1-flash-is-coming-to-microsoft-foundry/4556431",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-23",
+          "source_type": "announcement",
+          "quote": "Developers can deploy the model either Direct from Azure (public preview) or through Fireworks on Foundry (generally available), choosing the consumption path that best fits their performance, operational, and purchasing requirements.",
+          "supports": [
+            "model",
+            "lifecycle",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai. The page dateline reads 'Sep 23, 2026' and the footer 'Updated Sep 25, 2026', 'Version 3.0'; the candidate's t5-style URL resolves to this canonical one. The opening paragraph still reads 'DeepSeek-V4.1-Flash is coming to Foundry Models.'"
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "DeepSeek-V4.1-Flash is coming to Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/deepseek-v4-1-flash-is-coming-to-microsoft-foundry/4556431",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "published_at": "2026-09-23",
+          "source_type": "announcement",
+          "quote": "DeepSeek-V4.1-Flash is available through Fireworks AI with PayGo Global and Provisioned Throughput deployment options.",
+          "supports": [
+            "date",
+            "exposure"
+          ],
+          "note": "Present-tense availability in the revision read; it is what bounds the window's end at the 25 September revision date."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Fireworks models on Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/how-to/fireworks/enable-fireworks-models",
+          "primary": true,
+          "retrieved_at": "2026-09-27",
+          "source_type": "documentation",
+          "quote": "DeepSeek | DeepSeek V4.1 Flash | FW-DeepSeek-V4.1-Flash | Chat completions | Pay-per-token (Global Standard) | Multimodal MoE model with 552B parameters, image input, and 1M context.",
+          "supports": [
+            "model",
+            "exposure"
+          ],
+          "note": "Read on 27 September 2026 through the Microsoft Learn MCP server. Current-state evidence for the Fireworks path; it dates nothing. No archived_url: the Wayback Machine could not be reached from this session."
+        }
+      ]
     }
   ],
   "validation_backlog": [
@@ -12955,13 +13958,19 @@
     },
     {
       "id": "gpt-6-sol-luna-2026-09-22",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "OpenAI released GPT-6 Sol and GPT-6 Luna in the API on 22 September 2026, and Microsoft made both generally available in Microsoft Foundry the same day.",
       "reason": "Both dates fall after the research cutoff of 18 September 2026, and neither model is registered yet. Recording them means moving the cutoff past a window that has not been swept.",
       "target": "Once the 2 to 18 September sweep is done, register gpt-6-sol and gpt-6-luna under the gpt-6 generation, record the OpenAI API release and the Foundry arrival, and look for GitHub Copilot, Copilot Cowork and Copilot Studio arrivals. Both sources below were read on 24 September 2026.",
-      "model_ids": [],
+      "resolution": "Both models registered under the gpt-6 generation on 27 September 2026 and the cutoff moved to 25 September with sweep-2026-09-19-to-09-25 covering the unswept window. OpenAI's launch post places the release in ChatGPT Work, Codex and the API together, so the vendor event sits on the umbrella surface rather than openai-api. Recorded alongside it: the Foundry arrival (foundry-gpt6-sol-luna-2026-09-22), separate GitHub Copilot events for Sol and Luna, whose plans differ, and Microsoft 365 Copilot, Cowork and Copilot Studio events for Sol only, from Microsoft's 22 September 'More Models, One Copilot' notice, which does not name Luna.",
+      "resolved_on": "2026-09-27",
+      "promoted_to": "openai-gpt6-sol-luna-2026-09-22",
+      "model_ids": [
+        "gpt-6-sol",
+        "gpt-6-luna"
+      ],
       "surface_ids": [
-        "openai-api",
+        "openai",
         "microsoft-foundry"
       ],
       "sources": [
@@ -13013,6 +14022,15 @@
           "note": "Page metadata reads datePublished 2026-05-22T15:01:55Z and dateModified 2026-09-10T14:01:55Z; no visible dateline was found in the page text."
         }
       ]
+    },
+    {
+      "id": "sweep-2026-09-19-to-09-25",
+      "state": "open",
+      "working_claim": "The window from 19 September to 25 September 2026 has been covered by the candidate watcher's filings and by what those filings led to, not by a systematic sweep; research_cutoff was moved for the 27 September triage batch.",
+      "reason": "Sixteen events were added from candidate issues #113, #115, #116, #117, #118, #119 and #120, and from first-party sources those candidates led to: Anthropic's Claude Opus 5.5 launch post, OpenAI's GPT-6 Sol and Luna launch post and API changelog, GitHub's GPT-6 Sol and Luna changelog, and Microsoft's 'More Models, One Copilot' notice for Microsoft 365 Copilot, Cowork and Copilot Studio. research_cutoff moved from 2026-09-18 to 2026-09-25 so the dataset does not carry evidence beyond its own stated reach. That move is bookkeeping, not evidence: absence of other events in the window means nothing.",
+      "target": "Sweep the usual sources across 19 to 25 September 2026 - GitHub Copilot changelog, Microsoft Foundry blog, retirement schedule and September retrospective when published, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms for OpenAI, Anthropic, Google, xAI, Moonshot, DeepSeek and Mistral - then either record what is found or close this item as confirming nothing else landed. Known gaps from this batch: the release stage Microsoft assigns Claude Opus 5.5 and GPT-6 Sol in Microsoft 365 Copilot, Cowork and Copilot Studio, recorded ga with lifecycle supported from a notice with no stage word, which the Copilot release notes, the Cowork picker page or the Copilot Studio model tables may settle; a Grok 4.7 arrival in Microsoft Foundry, which xAI's launch page implies only as unnamed 'cloud platforms'; GPT-6 Luna on any Copilot surface; the 23 September text of Microsoft's DeepSeek-V4.1-Flash post, which would collapse that event's window to a day; and GLM-5.3-Flash through Fireworks on Foundry, named in the same post, whose GLM-5.3 sibling is tracked as zai-glm-5-3-foundry-fireworks-2026. No Wayback capture could be looked up for any source in this batch: web.archive.org connections were reset at the TLS handshake from this session on 27 September 2026, so every archived_url is owed a later backfill.",
+      "model_ids": [],
+      "surface_ids": []
     }
   ]
 }

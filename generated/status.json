@@ -1,23 +1,23 @@
 {
   "totals": {
-    "events": 309,
-    "backlog": 89,
-    "sources": 409,
-    "models": 119,
+    "events": 325,
+    "backlog": 90,
+    "sources": 446,
+    "models": 123,
     "surfaces": 26,
-    "confirmed": 255,
-    "supported": 54
+    "confirmed": 263,
+    "supported": 62
   },
   "kinds": {
     "announcement": 20,
-    "availability": 274,
+    "availability": 290,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
     "open": 48,
-    "promoted": 35,
+    "promoted": 36,
     "rejected": 4
   },
   "warnings": [
@@ -52,6 +52,11 @@
       "message": "open item names no surface, so it cannot suppress a lag answer"
     },
     {
+      "code": "backlog_without_surface",
+      "subject": "sweep-2026-09-19-to-09-25",
+      "message": "open item names no surface, so it cannot suppress a lag answer"
+    },
+    {
       "code": "missing_archive",
       "subject": "cowork-fable5-1-2026-09-01",
       "message": "documentation source has no archived_url and may be edited in place: https://pupuweb.com/mc1465748-claude-fable-5-1-is-now-available-in-copilot-cowork-and-copilot-studio-with-microsofts-enterprise-data-protection/"
@@ -73,6 +78,11 @@
     },
     {
       "code": "missing_archive",
+      "subject": "foundry-deepseek-v4-1-flash-2026-09-23",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/how-to/fireworks/enable-fireworks-models"
+    },
+    {
+      "code": "missing_archive",
       "subject": "foundry-deepseek-v4-flash-0731-2026-08-19",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
     },
@@ -88,6 +98,11 @@
     },
     {
       "code": "missing_archive",
+      "subject": "foundry-gpt6-sol-luna-2026-09-22",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure-region-availability"
+    },
+    {
+      "code": "missing_archive",
       "subject": "foundry-grok4-6-preview-2026-08-26",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/how-to/use-foundry-models-grok"
     },
@@ -95,6 +110,16 @@
       "code": "missing_archive",
       "subject": "foundry-nemotron-3-5-lightning-2026-08-19",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/how-to/fireworks/enable-fireworks-models"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-opus5-5-2026-09-22",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-gpt6-sol-luna-2026-09-22",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/changelog"
     },
     {
       "code": "missing_archive",
@@ -193,8 +218,8 @@
     }
   ],
   "warning_counts": {
-    "backlog_without_surface": 6,
-    "missing_archive": 11,
+    "backlog_without_surface": 7,
+    "missing_archive": 15,
     "no_vendor_baseline": 9,
     "no_vendor_baseline_extended": 7,
     "pre_release_access": 1
@@ -251,10 +276,10 @@
     ]
   },
   "lag_certainty": {
-    "exact": 302,
-    "not_recorded": 639,
-    "range": 27,
-    "rollout_start": 73,
+    "exact": 306,
+    "not_recorded": 650,
+    "range": 29,
+    "rollout_start": 104,
     "unknown_no_baseline": 296,
     "unknown_open_research": 91
   }

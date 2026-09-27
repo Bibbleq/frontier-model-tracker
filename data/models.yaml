@@ -474,7 +474,17 @@ models:
     display_name: "GPT-6 Astra"
     vendor: OpenAI
     generation: gpt-6
-    note: "The first GPT-6 model, released 3 September 2026. GPT-6 Sol and GPT-6 Luna followed on 22 September and are tracked in the backlog, not yet registered."
+    note: "The first GPT-6 model, released 3 September 2026. GPT-6 Sol and GPT-6 Luna followed on 22 September."
+  - id: gpt-6-sol
+    display_name: "GPT-6 Sol"
+    vendor: OpenAI
+    generation: gpt-6
+    note: "OpenAI's mid-tier GPT-6 model, released 22 September 2026 as the successor to GPT-5.6 Sol at half its API price. No family is declared for the GPT-6 trio, matching gpt-6-astra."
+  - id: gpt-6-luna
+    display_name: "GPT-6 Luna"
+    vendor: OpenAI
+    generation: gpt-6
+    note: "OpenAI's smallest GPT-6 model, released 22 September 2026 as the successor to GPT-5.6 Luna. Microsoft's 22 September Copilot announcement names GPT-6 Sol only, so no Microsoft 365 Copilot, Cowork or Copilot Studio event exists for Luna."
 
   # ------------------------------------------------------------- Anthropic
   - id: claude-1
@@ -580,6 +590,12 @@ models:
     vendor: Anthropic
     generation: claude-5
     model_line: claude-opus
+  - id: claude-opus-5-5
+    display_name: "Claude Opus 5.5"
+    vendor: Anthropic
+    generation: claude-5
+    model_line: claude-opus
+    note: "Anthropic calls it the first model in a new Claude 5.5 family, with Sonnet 5.5 and Haiku 5.5 to follow. Classified under the Claude 5 generation, as GPT-5.6 Sol sits under GPT-5; a claude-5-5 family can be added when a second member is released."
   - id: claude-fable-5
     display_name: "Claude Fable 5"
     vendor: Anthropic
@@ -696,6 +712,11 @@ models:
     display_name: "Grok 4.6"
     vendor: xAI
     generation: grok-4
+  - id: grok-4-7
+    display_name: "Grok 4.7"
+    vendor: xAI
+    generation: grok-4
+    note: "Released 21 September 2026. xAI's launch page says the model is also served through model routers and cloud platforms without naming any; no Microsoft Foundry arrival has been sourced."
   - id: llama-2
     display_name: "Llama 2"
     vendor: Meta
@@ -757,7 +778,7 @@ models:
     vendor: DeepSeek
     generation: deepseek-v4
     aliases: ["DeepSeek-V4.1-Flash"]
-    note: "A 552B-parameter multimodal mixture-of-experts model taking image and text input, the first of DeepSeek's V4.1 architecture. No Microsoft surface carries it yet."
+    note: "A 552B-parameter multimodal mixture-of-experts model taking image and text input, the first of DeepSeek's V4.1 architecture. Microsoft Foundry lists it both Direct from Azure and as 'FW-DeepSeek-V4.1-Flash' through Fireworks AI."
   - id: kimi-k2-5
     display_name: "Kimi K2.5"
     vendor: Moonshot AI
