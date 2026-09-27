@@ -11,7 +11,9 @@ Corrections, additional model events and better primary sources are welcome.
 5. Keep embedded/specialist use separate from a generally selectable model.
 6. Use separate events for preview, GA, default, retirement and policy changes when those dates are independently known.
 7. Preserve the evidence's real date precision; do not invent a day. Use
-   `date.end` for a rollout window rather than picking a point inside it.
+   `date.end` for a rollout window rather than picking a point inside it, and
+   `rollout_start: true` when a rollout's start is published but its end is
+   not.
 8. If a claim is not yet strong enough for `confirmed` or `supported`, add it to `validation_backlog` instead of the canonical timeline.
 
 ## Adding or correcting an event

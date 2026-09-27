@@ -218,6 +218,14 @@ Format from the precision. A month-precision date is "October 2025", never
 "1 October 2025". Sorting may pad internally — sort by the earliest possible
 day — but display must not.
 
+An availability event's `date` may also carry `rollout_start: true`. The start
+is then the first day of a staged rollout — "rolling out today", "rollout will
+be gradual" — and the day every eligible user could select the model is later
+by an amount the source does not publish. Present it as a start: "rolling out
+from 4 September 2026", not "available on 4 September 2026". It never
+appears with `end`; a rollout whose end is published is recorded as a window.
+`events.csv` carries the flag as `date_rollout_start`, `true` or empty.
+
 ### 5. Read `certainty` before reading a lag number
 
 `lag.csv` gives `lag_days_min` and `lag_days_max` alongside a `certainty`:
@@ -226,6 +234,7 @@ day — but display must not.
 | --- | --- |
 | `exact` | A single defensible number |
 | `range` | A window, because at least one date is partial |
+| `rollout_start` | A number measured from or to the first day of a staged rollout; see below |
 | `not_recorded` | No availability recorded on this tier |
 | `unknown_open_research` | An open backlog item covers this model and tier |
 | `unknown_no_baseline` | No vendor release to measure from |
@@ -234,6 +243,21 @@ day — but display must not.
 been researched, not that the model never arrived. Rendering it identically to
 `not_recorded` — or as a gap in a chart — turns a gap in research into an
 apparent finding. Show the three unknowns distinguishably, or show none of them.
+
+`rollout_start` means at least one of the two events is dated from the first
+day of a staged rollout with no published end. `lag_days_min` and
+`lag_days_max` still hold the distance between those first days, so the number
+is real, but it is not the lag any particular user experienced: a partner
+rollout makes the typical wait longer than the number, and a vendor rollout
+can make it shorter. Present it with its qualifier — "from 1 day, rolling
+out" — never as a bare figure.
+
+Every row with a number also has `date_confidence`, `confirmed` or
+`supported`: the weaker of the two events' date confidence, read from each
+event's `confidence_detail` where the date is named and from its headline
+`confidence` otherwise. It is empty when there is no number. It is independent
+of `certainty`: a `supported` date can still be a single day, and an `exact`
+lag can rest on a supported date. Obligation 8 applies to it.
 
 **`lag_days_min` and `lag_days_max` can be negative.** A Microsoft surface can
 carry a model before its vendor releases it, because Microsoft sometimes has
@@ -347,6 +371,7 @@ them:
 
 | Contract | Dataset | Change |
 | --- | --- | --- |
+| 3 | 3 | Adds the optional `rollout_start` flag to an event's `date`, a `date_rollout_start` column in `data/events.csv`, the `rollout_start` value of `certainty` in `data/lag.csv` and a `date_confidence` column there. Rows whose baseline or first event is a rollout start move from `exact` or `range` to `rollout_start` with their numbers unchanged. Additive only — an optional field, two new columns and a new value on an open vocabulary — so no version bump; a consumer that treats unrecognised values as opaque needs no change, and one that renders `certainty` should add the new value. |
 | 3 | 3 | Adds the optional model `scope` field (`frontier`/`extended`), a `scope` column in `data/models.csv`, the `no_vendor_baseline_extended` warning code and the `extended_scope_models` coverage list. Additive only — an optional field, a new column, a new warning code and a new coverage key — so no version bump; consumers that ignore unrecognised fields need no change. |
 | 3 | 3 | Declares that `lag_days_min` and `lag_days_max` in `data/lag.csv` may be negative, which has been true in the data since a partner surface with pre-release access was recorded: GitHub Copilot ran on Codex 42 days before OpenAI released it. Also marks the settlement of the publishing layout as data-only, with the informal HTML pages gone and schema `$id` values naming their published URLs. No field, file or enum changed; consumers that already tolerated the documented range need no code change. |
 | 2 | 3 | Adds `data/current-state.csv` and the obligation not to treat the latest event as the current state. Adds `legacy` to the `lifecycle` enum and states that consumers must tolerate unrecognised enum values. |

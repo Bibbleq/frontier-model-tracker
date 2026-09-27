@@ -135,12 +135,26 @@ lag_days_max = platform_latest  - baseline_earliest
 month-precision date never becomes a point value, so partial precision cannot
 be laundered into false precision by arithmetic.
 
+A rollout start cannot be laundered either. When the baseline or the platform
+event carries `rollout_start: true`, the date is the first day a staged rollout
+began and the day it completed is unpublished, so the arithmetic above measures
+between first days and `certainty` is `rollout_start` whatever the precision.
+The numbers are kept because the first day is real evidence; the label stops
+them passing as the lag a user experienced.
+
+`date_confidence` travels beside the number and is the weaker of the two
+events' date confidence. It is kept separate from `certainty` on purpose:
+certainty describes the shape of the dates, confidence how well they are
+established, and folding one into the other would hide either a partial date or
+a retrospective one.
+
 ## When lag is deliberately not a number
 
 | `certainty` | Meaning |
 | --- | --- |
 | `exact` | A single defensible number |
 | `range` | A window, because at least one date is partial |
+| `rollout_start` | Measured from or to the first day of a staged rollout whose completion is unpublished |
 | `not_recorded` | The model has a vendor release but no recorded availability on this tier |
 | `unknown_open_research` | An open validation-backlog item covers this model and tier |
 | `unknown_no_baseline` | No vendor release event, so there is nothing to measure from |

@@ -317,6 +317,7 @@ def validate_semantics(data: dict, models: dict, platforms: dict) -> None:
                 fail(f"{eid}: date.end {date['end']!r} does not match precision {date['precision']!r}")
             if date["end"] < date["start"]:
                 fail(f"{eid}: date.end precedes date.start")
+        check_rollout_start(event)
 
         if event["surface_id"] not in known_surfaces:
             fail(f"{eid}: unknown surface_id {event['surface_id']}")
@@ -404,6 +405,20 @@ def validate_semantics(data: dict, models: dict, platforms: dict) -> None:
     check_vendor_baseline(events, known_models, known_surfaces)
     check_vendor_ending_surface(events, known_surfaces)
     check_relations(events)
+
+
+def check_rollout_start(event: dict) -> None:
+    """A rollout start says availability began that day and finished on an
+    unpublished later one. Only an availability fact has a rollout, and a
+    published end already makes the date a window, so neither may combine
+    with it."""
+    date = event["date"]
+    if not date.get("rollout_start"):
+        return
+    if event["kind"] != "availability":
+        fail(f"{event['id']}: rollout_start on a {event['kind']} event; only availability rolls out")
+    if date.get("end"):
+        fail(f"{event['id']}: rollout_start with date.end; a published end is a window, not an open rollout")
 
 
 def _availability(events: list[dict]) -> list[dict]:
@@ -778,6 +793,24 @@ def derive_current_state(data: dict, models: dict, platforms: dict) -> list[dict
     return rows
 
 
+def date_confidence(event: dict) -> str:
+    """How firmly the event's date is established, separate from the rest of
+    the claim. `confidence_detail` names only the parts that are soft, so a
+    date it does not mention is as firm as a confirmed headline."""
+    if event["confidence"] == "confirmed":
+        return "confirmed"
+    detail = event.get("confidence_detail")
+    if not detail:
+        # A supported headline with no breakdown could be soft anywhere,
+        # including the date, so it cannot be read as a firm date.
+        return "supported"
+    return detail.get("date", "confirmed")
+
+
+def weaker_confidence(*levels: str) -> str:
+    return "supported" if "supported" in levels else "confirmed"
+
+
 def derive_lag(data: dict, models: dict, platforms: dict) -> list[dict]:
     events = [e for e in data["events"] if e["kind"] == "availability"]
     surfaces = {entry["id"]: entry for entry in platforms["surfaces"]}
@@ -805,7 +838,9 @@ def derive_lag(data: dict, models: dict, platforms: dict) -> list[dict]:
         for model_id in event["model_ids"]:
             if model_id not in baseline or low < baseline[model_id]["low"]:
                 baseline[model_id] = {"low": low, "high": date_interval(event["date"])[1],
-                                      "event": event["id"], "lifecycle": event["lifecycle"]}
+                                      "event": event["id"], "lifecycle": event["lifecycle"],
+                                      "rollout_start": bool(event["date"].get("rollout_start")),
+                                      "source": event}
 
     rows: list[dict] = []
     for model_id in sorted(model_names):
@@ -830,6 +865,7 @@ def derive_lag(data: dict, models: dict, platforms: dict) -> list[dict]:
                     "first_event": "", "first_date": "", "first_surface": "",
                     "first_exposure": "", "first_lifecycle": "",
                     "lag_days_min": "", "lag_days_max": "", "certainty": "",
+                    "date_confidence": "",
                 }
                 if not candidates:
                     if (model_id, tier) in open_questions:
@@ -857,7 +893,17 @@ def derive_lag(data: dict, models: dict, platforms: dict) -> list[dict]:
                     lag_max = (high - base["low"]).days
                     row["lag_days_min"] = lag_min
                     row["lag_days_max"] = lag_max
-                    row["certainty"] = "exact" if lag_min == lag_max else "range"
+                    if base["rollout_start"] or first["date"].get("rollout_start"):
+                        # The number runs between the first days of staged
+                        # rollouts. When any given user could select the model
+                        # is later by an unpublished amount, so it is neither
+                        # exact nor a bounded range.
+                        row["certainty"] = "rollout_start"
+                    else:
+                        row["certainty"] = "exact" if lag_min == lag_max else "range"
+                    row["date_confidence"] = weaker_confidence(
+                        date_confidence(base["source"]), date_confidence(first)
+                    )
                 rows.append(row)
     return rows
 
@@ -873,7 +919,8 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
         handle.write("\n")
 
     event_fields = [
-        "id", "kind", "date_start", "date_precision", "date_end", "surface_id", "surface",
+        "id", "kind", "date_start", "date_precision", "date_end", "date_rollout_start",
+        "surface_id", "surface",
         "experiences", "model_ids", "models", "model_claim", "lifecycle", "exposure",
         "selectable", "confidence", "confidence_detail", "evidence_note", "caveat",
         "source_types", "sources",
@@ -889,6 +936,7 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
                 "date_start": event["date"]["start"],
                 "date_precision": event["date"]["precision"],
                 "date_end": event["date"].get("end", ""),
+                "date_rollout_start": "true" if event["date"].get("rollout_start") else "",
                 "surface_id": event["surface_id"],
                 "surface": surface_names[event["surface_id"]],
                 "experiences": " | ".join(experience_names[x] for x in event.get("experience_ids", [])),
@@ -1051,7 +1099,7 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
         "model_id", "model", "vendor", "tier", "measure",
         "baseline_event", "baseline_date", "baseline_lifecycle",
         "first_event", "first_date", "first_surface", "first_exposure", "first_lifecycle",
-        "lag_days_min", "lag_days_max", "certainty",
+        "lag_days_min", "lag_days_max", "certainty", "date_confidence",
     ]
     with (OUTPUT_DIR / "lag.csv").open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=lag_fields, lineterminator="\n")

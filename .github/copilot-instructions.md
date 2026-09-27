@@ -309,7 +309,10 @@ Work in this order. The order matters.
 4. **Match date precision to the evidence.** `date.start` must match
    `date.precision` exactly — `2026-04` with `precision: month`, not `2026-04-01`
    with `precision: day`. Use `date.end` for a rollout or observation window
-   rather than picking a point inside it. A day-precision date on the first of a
+   rather than picking a point inside it. When the source says the model is rolling
+   out from that day and publishes no end, keep the start and add
+   `rollout_start: true` instead of inventing an end (see "Dates" in
+   `data/README.md`). A day-precision date on the first of a
    month is flagged unless a source's `published_at` is that exact day or a
    `quote` lists `date` in its `supports`; a test enforces this over the whole
    dataset, so an unattested first-of-month date will fail CI.

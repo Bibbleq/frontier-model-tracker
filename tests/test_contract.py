@@ -281,6 +281,32 @@ class ConsumerContractTests(unittest.TestCase):
                     self.assertIn(event["lifecycle"], lifecycles)
                     self.assertIn(event["exposure"], exposures)
 
+    def test_rollout_start_is_an_open_rollout_on_availability_only(self) -> None:
+        for event in self.events["events"]:
+            if "rollout_start" not in event["date"]:
+                continue
+            with self.subTest(event["id"]):
+                self.assertIs(event["date"]["rollout_start"], True)
+                self.assertEqual(event["kind"], "availability")
+                self.assertNotIn("end", event["date"])
+
+    def test_lag_certainty_and_date_confidence_hold_documented_values(self) -> None:
+        with (GENERATED / "lag.csv").open(encoding="utf-8", newline="") as handle:
+            rows = list(csv.DictReader(handle))
+        certainties = {
+            "exact", "range", "rollout_start", "not_recorded",
+            "unknown_open_research", "unknown_no_baseline",
+        }
+        for row in rows:
+            with self.subTest((row["model_id"], row["tier"], row["measure"])):
+                self.assertIn(row["certainty"], certainties)
+                measured = row["lag_days_min"] != ""
+                self.assertEqual(measured, row["certainty"] in {"exact", "range", "rollout_start"})
+                if measured:
+                    self.assertIn(row["date_confidence"], {"confirmed", "supported"})
+                else:
+                    self.assertEqual(row["date_confidence"], "")
+
     def test_backlog_states_are_documented(self) -> None:
         for item in self.events["validation_backlog"]:
             with self.subTest(item["id"]):
