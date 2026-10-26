@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updated": "2026-09-27",
-  "research_cutoff": "2026-09-25",
+  "updated": "2026-10-26",
+  "research_cutoff": "2026-10-23",
   "metadata": {
     "project": "365Explained Frontier Model Tracker",
     "purpose": "Sourced history of frontier and significant model availability across tracked Microsoft surfaces.",
@@ -12309,6 +12309,2508 @@
           "note": "Read on 27 September 2026 through the Microsoft Learn MCP server. Current-state evidence for the Fireworks path; it dates nothing. No archived_url: the Wayback Machine could not be reached from this session."
         }
       ]
+    },
+    {
+      "id": "anthropic-sonnet5-5-2026-09-28",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-28",
+        "precision": "day"
+      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-sonnet-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Anthropic released Claude Sonnet 5.5 on 28 September 2026, the second model of its Claude 5.5 family, available on release day on the Claude Platform as claude-sonnet-5-5 and on Amazon Web Services, Google Cloud and Microsoft Azure, at $2 per million input tokens and $10 per million output tokens, the same price as Sonnet 5.",
+      "caveat": "The launch page carries no 'today' sentence, so the date is the page's visible dateline, corroborated by the Anthropic /news index tile and by Microsoft's Foundry post and GitHub's changelog entry of the same day. The page says Sonnet 5.5 cache reads cost $0.10 per million tokens, half of Sonnet 5's $0.20, but Anthropic's Haiku 5.5 post of 7 October says that cut began that day, so the launch page has been edited since publication and the text read on 26 October is the later state. Anthropic said Haiku 5.5 would follow in the coming weeks; it is recorded as anthropic-haiku5-5-2026-10-07.",
+      "sources": [
+        {
+          "publisher": "Anthropic",
+          "title": "Introducing Claude Sonnet 5.5",
+          "url": "https://www.anthropic.com/news/claude-sonnet-5-5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-28",
+          "source_type": "announcement",
+          "quote": "Claude Sonnet 5.5 is now available on all platforms, including Amazon Web Services, Google Cloud, and Microsoft Azure.",
+          "supports": [
+            "date",
+            "lifecycle"
+          ],
+          "note": "The page dateline reads 'September 28, 2026', and the /news index tile for the post reads 'Sep 28, 2026'. The page carries no machine-readable date. No Wayback capture of anthropic.com pages exists at the 26 October CDX lookup, so no archived_url."
+        },
+        {
+          "publisher": "Anthropic",
+          "title": "Introducing Claude Sonnet 5.5",
+          "url": "https://www.anthropic.com/news/claude-sonnet-5-5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-28",
+          "source_type": "announcement",
+          "quote": "Introducing Claude Sonnet 5.5, the second model in the Claude 5.5 family.",
+          "supports": [
+            "model"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-sonnet5-5-2026-09-28",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-28",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "claude-sonnet-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft announced Claude Sonnet 5.5 available in Microsoft Foundry on Anthropic's release day, 28 September 2026, as a generally available model: Global Standard and US Datazone deployments hosted on Azure and a Global Standard deployment hosted on Anthropic infrastructure, each at $2 per million input tokens and $10 per million output tokens.",
+      "caveat": "Recorded on Anthropic's release day, so the lag is zero days. The post's lead sentence runs 'Today,Claude' without a space and is quoted as rendered. Microsoft Learn's Claude page lists claude-sonnet-5-5 as GA both hosted on Azure and hosted on Anthropic infrastructure, with '1M / 128K' limits; it proves the stage at the 26 October reading, not the date. techcommunity.microsoft.com answers this environment's direct requests with 403, so the post was read through r.jina.ai.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-sonnet5-5-2026-09-28"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Claude Sonnet 5.5 is now available in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/claude-sonnet-5-5-is-now-available-in-microsoft-foundry/ba-p/4559774",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-28",
+          "source_type": "announcement",
+          "quote": "Today,Claude Sonnet 5.5 is available in Microsoft Foundry, bringing Anthropic’s latest Sonnet model to developers building AI applications and agents.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The date is the post's embedded postTime, 2026-09-28T11:02:20.861-07:00 (Pacific time). The rendered text runs 'Today,Claude' with no space after the comma; the quote is as rendered. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Claude Sonnet 5.5 is now available in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/claude-sonnet-5-5-is-now-available-in-microsoft-foundry/ba-p/4559774",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-28",
+          "source_type": "announcement",
+          "quote": "GA, Hosted on Azure",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "The Availability column of the post's pricing table: 'GA, Hosted on Azure' for the Global Standard and US Datazone row, 'GA, Hosted on Anthropic Infrastructure' for the Global Standard row."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Claude models in Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "source_type": "documentation",
+          "quote": "claude-sonnet-5-5 | - Hosted on Azure: GA - Hosted on Anthropic infrastructure: GA | 1M / 128K",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "Read on 26 October 2026 through the Microsoft Learn MCP server. Current-state evidence for the stage, not for the date. No archived_url: no Wayback capture was pulled for this page in this batch."
+        }
+      ]
+    },
+    {
+      "id": "github-sonnet5-5-2026-09-28",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-28",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-sonnet-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "Claude Sonnet 5.5 became available in GitHub Copilot on 28 September 2026, Anthropic's release day, for the Copilot Pro, Pro+, Max, Business and Enterprise plans, selectable in the model picker in VS Code, Visual Studio, Copilot CLI, the GitHub Copilot coding agent, the GitHub Copilot app, github.com, GitHub Mobile, JetBrains IDEs, Xcode and Eclipse. Billed at provider list pricing under usage-based billing.",
+      "caveat": "Includes the base Copilot Pro plan, unlike Claude Opus 5.5, so selectable exposure reaches more paying Copilot users than the Opus 5.5 event records. Rollout is gradual ('Rollout will be gradual. Check back soon if you don't see it yet.'), so 28 September starts the rollout window. Under default model enablement the model is on for Business and Enterprise unless an administrator has turned off the global default or disabled it.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-sonnet5-5-2026-09-28"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Claude Sonnet 5.5 in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-28",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20260930003150/https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot/",
+          "quote": "Claude Sonnet 5.5, Anthropic’s newest Sonnet model, is now generally available in GitHub Copilot.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "The Wayback capture of 30 September postdates the entry; it was located through the CDX API and not read."
+        },
+        {
+          "publisher": "GitHub",
+          "title": "Claude Sonnet 5.5 in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-28",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20260930003150/https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot/",
+          "quote": "Claude Sonnet 5.5 is available to Copilot Pro, Pro+, Max, Business, and Enterprise users.",
+          "supports": [
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot weekly releases — September 28",
+          "url": "https://github.blog/changelog/2026-10-02-github-copilot-weekly-releases-september-28",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-02",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261013141631/https://github.blog/changelog/2026-10-02-github-copilot-weekly-releases-september-28/",
+          "quote": "Claude Sonnet 5.5 is available to Copilot Pro, Pro+, Max, Business, and Enterprise users.",
+          "supports": [
+            "model",
+            "exposure"
+          ],
+          "note": "The weekly summary, published four days later; it dates nothing. Its Wayback capture of 13 October was located through the CDX API and not read."
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt6-1-sol-2026-09-29",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-29",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-6-1-sol"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft announced OpenAI's GPT-6.1 Sol generally available in Microsoft Foundry on 29 September 2026, OpenAI's release day, with a context window of up to 1M tokens, Standard deployment across Global regions and the US, EU and APAC Data Zones, and Provisioned Throughput at launch through Global and US Data Zone deployments.",
+      "caveat": "Same day as OpenAI's release, so the lag is zero days. Foundry's Global Standard price for short context is $2.00 per million input tokens, $0.10 cached input and $10.00 output, matching OpenAI's API price. The post says it joins GPT-6 Astra, GPT-6 Sol and GPT-6 Luna in the catalogue. techcommunity.microsoft.com answers this environment's direct requests with 403, so the post was read through r.jina.ai.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-1-sol-2026-09-29"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Introducing GPT-6.1 Sol in Microsoft Foundry: Advanced intelligence, optimized for production agents",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-gpt-6-1-sol-in-microsoft-foundry-advanced/ba-p/4560811",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-29",
+          "source_type": "announcement",
+          "quote": "Today, OpenAI's GPT-6.1 Sol is generally available in Microsoft Foundry.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The date is the post's embedded postTime, 2026-09-29T10:17:55.852-07:00 (Pacific time). The 26 October CDX lookup for this page answered 503 'Temporarily Offline' on both attempts, so whether a capture exists is unknown and no archived_url is recorded."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Introducing GPT-6.1 Sol in Microsoft Foundry: Advanced intelligence, optimized for production agents",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-gpt-6-1-sol-in-microsoft-foundry-advanced/ba-p/4560811",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-29",
+          "source_type": "announcement",
+          "quote": "Standard deployment offers flexible capacity billed by usage across Global regions and US, EU, and APAC Data Zones. Provisioned Throughput is available at launch through Global and US Data Zone deployments, providing reserved capacity for critical production workloads.",
+          "supports": [
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Foundry Models sold by Azure",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "source_type": "documentation",
+          "quote": "GPT-6.1 series | NEW gpt-6.1-sol",
+          "supports": [
+            "model"
+          ],
+          "note": "Read on 26 October 2026 (updated_at 2026-10-08T22:09:00Z). Current-state evidence that the model is carried, not a date: the page also shows the version string 'gpt-6.1-sol (2026-09-29)', a build-style string that is not used as evidence. No archived_url: no capture after the claim was found at the 26 October CDX lookup (the only capture found is from 2 March 2026)."
+        }
+      ]
+    },
+    {
+      "id": "github-gpt6-1-sol-2026-09-29",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-29",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-6-1-sol"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-6.1 Sol became available in GitHub Copilot on 29 September 2026, OpenAI's release day, for the Copilot Pro+, Max, Business and Enterprise plans, selectable in the model picker in VS Code, Visual Studio, Copilot CLI, the GitHub Copilot coding agent, the GitHub Copilot app, github.com, GitHub Mobile, JetBrains IDEs, Xcode and Eclipse. Billed at provider list pricing under usage-based billing.",
+      "caveat": "Not on the base Copilot Pro plan, as for GPT-6 Sol, so selectable exposure does not extend to every paying Copilot user. The changelog says 'generally available and rolling out' and 'Rollout will be gradual', so 29 September starts the rollout window. Under default model enablement the model is on for Business and Enterprise unless an administrator has turned off the global default or disabled it.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-1-sol-2026-09-29"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "GPT-6.1 Sol in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-29",
+          "source_type": "changelog",
+          "quote": "GPT-6.1 Sol, the latest model from OpenAI, is now generally available and rolling out in GitHub Copilot.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ]
+        },
+        {
+          "publisher": "GitHub",
+          "title": "GPT-6.1 Sol in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-29",
+          "source_type": "changelog",
+          "quote": "GPT-6.1 Sol is available to Copilot Pro+, Max, Business, and Enterprise users.",
+          "supports": [
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt6-1-sol-2026-09-29",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-29",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-6-1-sol"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI released GPT-6.1 Sol on 29 September 2026, an upgrade to GPT-6 Sol, in ChatGPT Work and Codex for Plus, Pro, Business, Enterprise and Edu users and in the API as gpt-6.1-sol, priced at $2 per million input tokens, $0.10 per million cached input tokens and $10 per million output tokens. Microsoft Foundry and GitHub Copilot carried it the same day.",
+      "caveat": "One event on the umbrella surface because ChatGPT Work, Codex and the API moved together, following openai-gpt6-sol-luna-2026-09-22. OpenAI says the model is not yet available in Chat, only in ChatGPT Work and Codex, so the ChatGPT side of the launch is partial. The launch post shows no visible dateline; the date rests on its embedded publicationDateText, the API changelog entry headed Sep 29 and Microsoft's and GitHub's same-day posts. OpenAI's changelog records an Ultrafast service tier for GPT-6.1 Sol on 8 October, a later addition not recorded here.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-29",
+          "source_type": "release_notes",
+          "quote": "Released GPT-6.1 Sol (gpt-6.1-sol) for complex coding and professional work at a lower cost than GPT-6 Astra.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed Sep 29, endpoints v1/responses and v1/chat/completions. Read through r.jina.ai. No archived_url: no capture after the claim was found at the 26 October CDX lookup (the only capture found is from 5 March 2026)."
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing GPT-6.1 Sol",
+          "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-29",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260930142705/https://openai.com/index/introducing-gpt-6-1-sol/",
+          "quote": "GPT-6.1 Sol is available starting today to all Plus, Pro, Business, Enterprise, and Edu users in ChatGPT Work and Codex.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "The page shows no visible dateline; its embedded publicationDateText reads 'September 29, 2026', and the API changelog entry headed Sep 29 agrees. Read directly and through r.jina.ai. The sentence continues: 'GPT-6.1 Sol is not yet available in Chat. Developers can also access it through the OpenAI API as gpt-6.1-sol.' The Wayback capture of 30 September postdates the post; it was located through the CDX API and not read."
+        }
+      ]
+    },
+    {
+      "id": "cowork-gpt6-1-sol-2026-09-30",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-30",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "m365-cowork",
+      "model_ids": [
+        "gpt-6-1-sol"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced GPT-6.1 Sol rolling out to Copilot Cowork on 30 September 2026, a day after OpenAI's release, with usage-based billing, in the announcement that also covers Copilot Studio and adds Claude Sonnet 5.5.",
+      "caveat": "Recorded separately from studio-gpt6-1-sol-2026-09-30 and m365-gpt6-1-sol-announced-2026-09-30 because Cowork is a distinct surface with its own picker; all three cite the same announcement. The announcement carries no stage word and no preview label, so ga is recorded with lifecycle supported, the same call as cowork-fable5-1-2026-09-01 and cowork-opus5-5-2026-09-22. Rollout began that day with no published end. Microsoft says 'Availability and usage may vary by license, access, and region.' The Learn Cowork page says organisations within the EU Data Boundary are limited to GPT models, which includes this one.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-1-sol-2026-09-29"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Available today: OpenAI's GPT-6.1 Sol and Claude Sonnet 5.5 in Microsoft Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-1-sol-and-claude-sonnet-5-5-in-microsoft-copilot/4560801",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "GPT 6.1 Sol and Claude Sonnet 5.5 begin rolling out today with usage-based billing in Copilot Cowork and Copilot Studio.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The page byline reads 'Sep 30, 2026'; the date is the post's embedded postTime, 2026-09-30T15:14:38.330-07:00 (Pacific time). The post is at version 2.0, last edited 2026-09-30T16:28:22.646-07:00. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Available today: OpenAI's GPT-6.1 Sol and Claude Sonnet 5.5 in Microsoft Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-1-sol-and-claude-sonnet-5-5-in-microsoft-copilot/4560801",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "Now, we're continuing to expand that choice by bringing GPT-6.1 Sol and Claude Sonnet 5.5 to Microsoft Copilot, giving users more model options for how they delegate work to Copilot.",
+          "supports": [
+            "model"
+          ]
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Choose a model for Copilot Cowork",
+          "url": "https://learn.microsoft.com/en-us/copilot/cowork/cowork-models",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "source_type": "documentation",
+          "quote": "GPT 6.1 Sol | Intelligent and efficient for hard work. | Provided by OpenAI as a subprocessor.",
+          "supports": [
+            "model",
+            "exposure"
+          ],
+          "note": "Read on 26 October 2026 at the canonical path (updated_at 2026-10-24T01:03:00Z). Current-state evidence for the model and its exposure, not for the date: a stale copy of the same page at /en-us/microsoft-365/copilot/cowork/cowork-models (updated_at 2026-09-14) lacks the row, which dates the page revision and not the arrival. No archived_url: no Wayback capture was pulled for this page in this batch."
+        }
+      ]
+    },
+    {
+      "id": "cowork-sonnet5-5-2026-09-30",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-30",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "m365-cowork",
+      "model_ids": [
+        "claude-sonnet-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced Claude Sonnet 5.5 rolling out to Copilot Cowork on 30 September 2026, two days after Anthropic's release, with usage-based billing, in the announcement that also covers Copilot Studio and adds GPT-6.1 Sol.",
+      "caveat": "Recorded separately from studio-sonnet5-5-2026-09-30 and m365-sonnet5-5-announced-2026-09-30 because Cowork is a distinct surface with its own picker; all three cite the same announcement. The announcement carries no stage word and no preview label, so ga is recorded with lifecycle supported, the same call as cowork-fable5-1-2026-09-01 and cowork-opus5-5-2026-09-22. Rollout began that day with no published end. Microsoft says 'Availability and usage may vary by license, access, and region.' The Learn Cowork page says administrators can turn off the Anthropic model family in the Microsoft 365 admin center, a governance gate this event does not date, and that organisations within the EU Data Boundary are limited to GPT models.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-sonnet5-5-2026-09-28"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Available today: OpenAI's GPT-6.1 Sol and Claude Sonnet 5.5 in Microsoft Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-1-sol-and-claude-sonnet-5-5-in-microsoft-copilot/4560801",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "GPT 6.1 Sol and Claude Sonnet 5.5 begin rolling out today with usage-based billing in Copilot Cowork and Copilot Studio.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The page byline reads 'Sep 30, 2026'; the date is the post's embedded postTime, 2026-09-30T15:14:38.330-07:00 (Pacific time). The post is at version 2.0, last edited 2026-09-30T16:28:22.646-07:00. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Available today: OpenAI's GPT-6.1 Sol and Claude Sonnet 5.5 in Microsoft Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-1-sol-and-claude-sonnet-5-5-in-microsoft-copilot/4560801",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "Now, we're continuing to expand that choice by bringing GPT-6.1 Sol and Claude Sonnet 5.5 to Microsoft Copilot, giving users more model options for how they delegate work to Copilot.",
+          "supports": [
+            "model"
+          ]
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Choose a model for Copilot Cowork",
+          "url": "https://learn.microsoft.com/en-us/copilot/cowork/cowork-models",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "source_type": "documentation",
+          "quote": "Claude Sonnet 5.5 | Efficient for everyday tasks. | Use when you want a shorter response cycle for common tasks. More information: Anthropic subprocessor",
+          "supports": [
+            "model",
+            "exposure"
+          ],
+          "note": "Read on 26 October 2026 at the canonical path (updated_at 2026-10-24T01:03:00Z). Current-state evidence for the model and its exposure, not for the date: a stale copy of the same page at /en-us/microsoft-365/copilot/cowork/cowork-models (updated_at 2026-09-14) lacks the row, which dates the page revision and not the arrival. No archived_url: no Wayback capture was pulled for this page in this batch."
+        }
+      ]
+    },
+    {
+      "id": "foundry-cohere-embed-v5-2026-09-30",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-30",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "cohere-embed-v5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced Cohere Embed V5 Pro and Embed V5 Fast in Microsoft Foundry on 30 September 2026, the day Cohere released Embed 5, as multimodal embedding models that share one embedding space and support more than 100 languages and a range of Matryoshka vector sizes. Cohere prices Pro at $0.12 and Fast at $0.08 per million tokens on its own API.",
+      "caveat": "Microsoft's post carries no stage word; Cohere's own statement that Embed 5 is 'generally available today' on the Foundry route among others is the only stage evidence, which is why lifecycle is supported. The Learn catalogue page read on 26 October still lists Cohere-rerank-v4.0 rows and no Embed V5 row, so no Microsoft documentation corroborates the listing. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning, with one registry id for the Pro and Fast variants. Cohere's release and the Foundry arrival are the same day, but no Cohere vendor surface exists, so the lag is unknown_no_baseline by construction. techcommunity.microsoft.com answers this environment's direct requests with 403, so the post was read through r.jina.ai.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Cohere Embed V5 brings more relevant retrieval to Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/cohere-embed-v5-brings-more-relevant-retrieval-to-microsoft/ba-p/4560845",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "Today, we’re introducing Cohere Embed V5 Pro and Embed V5 Fast in Microsoft Foundry, bringing stronger multimodal retrieval to enterprise search and AI applications.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The date is the post's embedded postTime, 2026-09-30T09:59:02.612-07:00 (Pacific time). The rendered page opens with the shell text 'This blog post cannot be found' for the candidate's t5-style URL, but the page's embedded data carries the post body and postTime, which are what was read. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        },
+        {
+          "publisher": "Cohere",
+          "title": "Announcing Cohere's Embed 5 Models",
+          "url": "https://docs.cohere.com/changelog/embed-v5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20261018004842/https://docs.cohere.com/changelog/embed-v5",
+          "quote": "Embed 5 is available through the Embed API, as well as Microsoft Foundry (Pro, Fast) and Amazon SageMaker (Pro, Fast).",
+          "supports": [
+            "model",
+            "exposure"
+          ],
+          "note": "The changelog entry is dated September 30, 2026 (its source file is pages/changelog/2026-09-30-embed-v5.mdx). The Wayback capture of 18 October postdates the entry; it was located through the CDX API and not read."
+        },
+        {
+          "publisher": "Cohere",
+          "title": "Embed 5: Frontier Embedding Models for Enterprise",
+          "url": "https://cohere.com/blog/embed-5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "Embed 5 is generally available today on the Cohere API and Model Vault, Microsoft Foundry, and Amazon SageMaker.",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "The page's JSON-LD datePublished is 2026-09-30T09:51:00Z. The stage is attested by Cohere, not by Microsoft. No archived_url: no Wayback lookup was run for this page in this batch."
+        }
+      ]
+    },
+    {
+      "id": "google-gemini4-argon-fairwind-2026-09-30",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-30",
+        "precision": "day"
+      },
+      "surface_id": "google-gemini",
+      "model_ids": [
+        "gemini-4-argon"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "limited_preview",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Google announced Gemini 4 Argon, its first Gemini 4 model, on 30 September 2026, rolling out to a set of trusted cyber defenders through its Fairwind Program ahead of a wider release, at an introductory price of $2 per million input tokens and $10 per million output tokens that rises to $4 and $20 after the introductory period.",
+      "caveat": "limited_preview is a classification rather than a quoted label: Google's page says the model is 'rolling out' to trusted cyber defenders and trusted testers through a 'phased approach' before 'making Argon available to developers, enterprises, and consumers', and never uses the word preview, so the stage rests on access being restricted to Fairwind Program defenders and trusted testers. Google's page has been edited since publication (sitemap lastmod 14 October) and links forward to the 13 October posts, so the text read is the 26 October state. The introductory price is $2 and $10 per million tokens, rising to $4 and $20 once the introductory period expires. The general release followed on 13 October as google-gemini4-argon-2026-10-13.",
+      "relations": [
+        {
+          "type": "previews_for",
+          "target": "google-gemini4-argon-2026-10-13"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Google",
+          "title": "Gemini 4 Argon: our next era of frontier intelligence",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "Today, we’re announcing our new frontier model, Gemini 4 Argon, which is rolling out to a set of trusted cyber defenders through our Fairwind Program.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "The page dateline reads 'Sep 30, 2026'; article:published_time is 2026-09-30 and the JSON-LD datePublished is 2026-09-30T20:00:00+00:00. Google's sitemap shows lastmod 2026-10-14 for the URL, so the page has been edited since publication and the text read is the 26 October state. No archived_url: no Wayback lookup was run for this page in this batch."
+        },
+        {
+          "publisher": "Google",
+          "title": "Gemini 4 Argon: our next era of frontier intelligence",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "Google is prioritizing safety and rigorous testing before a wider release to the public.",
+          "supports": [
+            "lifecycle"
+          ]
+        },
+        {
+          "publisher": "Engadget",
+          "title": "Google's First Gemini 4 Model Is 'Argon'",
+          "url": "https://www.engadget.com/2274263/google-gemini-4-model-argon",
+          "primary": false,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-01",
+          "source_type": "news",
+          "quote": "Google has launched Gemini 4 Argon, its latest most advanced model",
+          "supports": [
+            "model"
+          ],
+          "note": "Coverage published the next day (the page's publishedTime is 2026-10-01T09:26:30+00:00); it does not date the release."
+        }
+      ]
+    },
+    {
+      "id": "m365-gpt6-1-sol-announced-2026-09-30",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-09-30",
+        "precision": "day"
+      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "word",
+        "excel",
+        "powerpoint",
+        "m365-copilot-chat"
+      ],
+      "model_ids": [
+        "gpt-6-1-sol"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft announced on 30 September 2026 that GPT-6.1 Sol would begin rolling out in phases across Word, Excel, PowerPoint and Chat in the coming week as part of the user subscription license, with limits that apply. No source read dates the start of that rollout, and the Microsoft 365 Copilot release notes edition of 6 October does not name the model, so no availability event is recorded for Microsoft 365 Copilot.",
+      "caveat": "Recorded as an announcement, not availability: the sentence promises a phased start 'in the coming week' and gives no day. Do not classify this as first use of GPT-6.1 Sol in Microsoft 365 Copilot. The Cowork and Copilot Studio rollout in the same post is recorded as cowork-gpt6-1-sol-2026-09-30 and studio-gpt6-1-sol-2026-09-30. The gap is tracked in sweep-2026-09-26-to-10-23.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Available today: OpenAI's GPT-6.1 Sol and Claude Sonnet 5.5 in Microsoft Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-1-sol-and-claude-sonnet-5-5-in-microsoft-copilot/4560801",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "GPT 6.1 Sol and Claude Sonnet 5.5 will also begin rolling out in phases across Word, Excel, PowerPoint, and Chat in the coming week as part of the user subscription license (USL)--limits apply but are designed to enable broad everyday AI usage across the organization, with the vast majority of users not expected to reach them.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The page byline reads 'Sep 30, 2026'; the date is the post's embedded postTime, 2026-09-30T15:14:38.330-07:00 (Pacific time). The post is at version 2.0, last edited 2026-09-30T16:28:22.646-07:00. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        }
+      ]
+    },
+    {
+      "id": "m365-sonnet5-5-announced-2026-09-30",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-09-30",
+        "precision": "day"
+      },
+      "surface_id": "m365-copilot",
+      "experience_ids": [
+        "word",
+        "excel",
+        "powerpoint",
+        "m365-copilot-chat"
+      ],
+      "model_ids": [
+        "claude-sonnet-5-5"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft announced on 30 September 2026 that Claude Sonnet 5.5 would begin rolling out in phases across Word, Excel, PowerPoint and Chat in the coming week as part of the user subscription license, with limits that apply. No source read dates the start of that rollout, and the Microsoft 365 Copilot release notes edition of 6 October does not name the model, so no availability event is recorded for Microsoft 365 Copilot.",
+      "caveat": "Recorded as an announcement, not availability: the sentence promises a phased start 'in the coming week' and gives no day. Do not classify this as first use of Claude Sonnet 5.5 in Microsoft 365 Copilot. The Cowork and Copilot Studio rollout in the same post is recorded as cowork-sonnet5-5-2026-09-30 and studio-sonnet5-5-2026-09-30. The gap is tracked in sweep-2026-09-26-to-10-23.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Available today: OpenAI's GPT-6.1 Sol and Claude Sonnet 5.5 in Microsoft Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-1-sol-and-claude-sonnet-5-5-in-microsoft-copilot/4560801",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "GPT 6.1 Sol and Claude Sonnet 5.5 will also begin rolling out in phases across Word, Excel, PowerPoint, and Chat in the coming week as part of the user subscription license (USL)--limits apply but are designed to enable broad everyday AI usage across the organization, with the vast majority of users not expected to reach them.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The page byline reads 'Sep 30, 2026'; the date is the post's embedded postTime, 2026-09-30T15:14:38.330-07:00 (Pacific time). The post is at version 2.0, last edited 2026-09-30T16:28:22.646-07:00. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        }
+      ]
+    },
+    {
+      "id": "studio-gpt6-1-sol-2026-09-30",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-30",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "gpt-6-1-sol"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced GPT-6.1 Sol rolling out to Copilot Studio on 30 September 2026, a day after OpenAI's release, with usage-based billing, in the announcement that also covers Copilot Cowork and adds Claude Sonnet 5.5.",
+      "caveat": "Recorded separately from cowork-gpt6-1-sol-2026-09-30 and m365-gpt6-1-sol-announced-2026-09-30 because Copilot Studio is a distinct surface; all three cite the same announcement. The announcement carries no stage word and no preview label, so ga is recorded with lifecycle supported, as for studio-opus5-5-2026-09-22. The Copilot Studio availability tables read on 26 October 2026, the standard harness table (updated 23 October) and the GitHub-harness table (updated 12 October), do not yet list GPT-6.1 Sol, so no documentation corroborates the stage or the picker. Usage-based billing applies, and Microsoft says availability and usage may vary by license, access and region.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-1-sol-2026-09-29"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Available today: OpenAI's GPT-6.1 Sol and Claude Sonnet 5.5 in Microsoft Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-1-sol-and-claude-sonnet-5-5-in-microsoft-copilot/4560801",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "GPT 6.1 Sol and Claude Sonnet 5.5 begin rolling out today with usage-based billing in Copilot Cowork and Copilot Studio.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The page byline reads 'Sep 30, 2026'; the date is the post's embedded postTime, 2026-09-30T15:14:38.330-07:00 (Pacific time). The post is at version 2.0, last edited 2026-09-30T16:28:22.646-07:00. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Available today: OpenAI's GPT-6.1 Sol and Claude Sonnet 5.5 in Microsoft Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-1-sol-and-claude-sonnet-5-5-in-microsoft-copilot/4560801",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "Now, we're continuing to expand that choice by bringing GPT-6.1 Sol and Claude Sonnet 5.5 to Microsoft Copilot, giving users more model options for how they delegate work to Copilot.",
+          "supports": [
+            "model"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "studio-sonnet5-5-2026-09-30",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-30",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "copilot-studio",
+      "model_ids": [
+        "claude-sonnet-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced Claude Sonnet 5.5 rolling out to Copilot Studio on 30 September 2026, two days after Anthropic's release, with usage-based billing, in the announcement that also covers Copilot Cowork and adds GPT-6.1 Sol.",
+      "caveat": "Recorded separately from cowork-sonnet5-5-2026-09-30 and m365-sonnet5-5-announced-2026-09-30 because Copilot Studio is a distinct surface; all three cite the same announcement. The announcement carries no stage word and no preview label, so ga is recorded with lifecycle supported, as for studio-opus5-5-2026-09-22. The Copilot Studio availability tables read on 26 October 2026, the standard harness table (updated 23 October) and the GitHub-harness table (updated 12 October), do not yet list Claude Sonnet 5.5, so no documentation corroborates the stage or the picker. Usage-based billing applies, and Microsoft says availability and usage may vary by license, access and region.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-sonnet5-5-2026-09-28"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Available today: OpenAI's GPT-6.1 Sol and Claude Sonnet 5.5 in Microsoft Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-1-sol-and-claude-sonnet-5-5-in-microsoft-copilot/4560801",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "GPT 6.1 Sol and Claude Sonnet 5.5 begin rolling out today with usage-based billing in Copilot Cowork and Copilot Studio.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The page byline reads 'Sep 30, 2026'; the date is the post's embedded postTime, 2026-09-30T15:14:38.330-07:00 (Pacific time). The post is at version 2.0, last edited 2026-09-30T16:28:22.646-07:00. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Available today: OpenAI's GPT-6.1 Sol and Claude Sonnet 5.5 in Microsoft Copilot",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-1-sol-and-claude-sonnet-5-5-in-microsoft-copilot/4560801",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "Now, we're continuing to expand that choice by bringing GPT-6.1 Sol and Claude Sonnet 5.5 to Microsoft Copilot, giving users more model options for how they delegate work to Copilot.",
+          "supports": [
+            "model"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "microsoft-mai-transcribe-2-streaming-2026-10-01",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-01",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-ai",
+      "model_ids": [
+        "mai-transcribe-2-streaming"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft introduced MAI-Transcribe-2-Streaming in Microsoft Foundry on 1 October 2026, a streaming speech-to-text model that transcribes continuously across 60 languages with automatic language detection, available through Azure Speech and with direct API access through Microsoft Foundry at an introductory price of $0.54 per hour of audio through the end of the year.",
+      "caveat": "Neither post states a release stage, unlike MAI-Transcribe-2, which Microsoft introduced as a public preview in September, so ga is recorded with lifecycle supported. The Learn catalogue page read on 26 October carries only the line 'MAI models available through Azure Speech in Foundry Tools: MAI-Voice and MAI-Transcribe', without versions, so it corroborates nothing here. The model is also offered through the MAI Playground, Vercel and Azure Voice Live, with LiveKit listed as coming soon. Recorded on the microsoft-ai vendor surface, where the Foundry catalogue is the vendor channel and no lag exists by construction. techcommunity.microsoft.com answers this environment's direct requests with 403, so the post was read through r.jina.ai.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Build expressive voice experiences with new MAI models in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/build-expressive-voice-experiences-with-new-mai-models-in/ba-p/4524637",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-01",
+          "source_type": "announcement",
+          "quote": "Today, we’re introducing three new Microsoft AI (MAI) models in Microsoft Foundry:",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The date is the post's embedded postTime, 2026-10-01T09:02:47.044-07:00 (Pacific time). The rendered page opens with the shell text 'This blog post cannot be found' for the candidate's t5-style URL, but the page's embedded data carries the post body and postTime, which are what was read. The sentence introduces a list of three items: MAI-Transcribe-2-Streaming, MAI-Voice-2.1 and MAI-Voice-2.1-Flash. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Build expressive voice experiences with new MAI models in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/build-expressive-voice-experiences-with-new-mai-models-in/ba-p/4524637",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-01",
+          "source_type": "announcement",
+          "quote": "MAI-Transcribe-2-Streaming, which turns live speech into text as it arrives",
+          "supports": [
+            "model"
+          ]
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Build expressive voice experiences with new MAI models in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/build-expressive-voice-experiences-with-new-mai-models-in/ba-p/4524637",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-01",
+          "source_type": "announcement",
+          "quote": "All three models are available in Microsoft Foundry through Azure Speech and with direct API access through Microsoft Foundry:",
+          "supports": [
+            "lifecycle"
+          ]
+        },
+        {
+          "publisher": "Microsoft AI",
+          "title": "Our first streaming transcription model debuts at no. 1 on Artificial Analysis",
+          "url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-01",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20261002230056/https://microsoft.ai/news/our-first-streaming-transcription-model/",
+          "quote": "Along with today’s launch of our top-ranking MAI-Transcribe-2-Streaming, we’re also announcing two new voice models: MAI‑Voice‑2.1 and our blazing-fast variant, MAI‑Voice‑2.1‑Flash.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The page dateline reads 'October 1, 2026'; the JSON-LD datePublished is 2026-10-01T16:00:00Z and dateModified 2026-10-08T20:43:19Z, so the page has been edited since. The Wayback capture of 2 October was located through the CDX API and not read."
+        }
+      ]
+    },
+    {
+      "id": "microsoft-mai-voice-2-1-2026-10-01",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-01",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-ai",
+      "model_ids": [
+        "mai-voice-2-1",
+        "mai-voice-2-1-flash"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft introduced MAI-Voice-2.1 and MAI-Voice-2.1-Flash in Microsoft Foundry on 1 October 2026, text-to-speech models across 23 languages with a consistent voice identity, available through Azure Speech and with direct API access through Microsoft Foundry and through OpenRouter, priced at $22 per million characters for MAI-Voice-2.1 and $15 per million characters for the Flash variant.",
+      "caveat": "One event for both voice models because they are announced together in the same posts. Neither post states a release stage, so ga is recorded with lifecycle supported; the Learn catalogue page read on 26 October carries only the line 'MAI models available through Azure Speech in Foundry Tools: MAI-Voice and MAI-Transcribe', without versions. The models are also offered through Vercel and LiveKit (listed as coming soon), and OpenRouter carries the two voice models. Recorded on the microsoft-ai vendor surface, where the Foundry catalogue is the vendor channel and no lag exists by construction. techcommunity.microsoft.com answers this environment's direct requests with 403, so the post was read through r.jina.ai.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Build expressive voice experiences with new MAI models in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/build-expressive-voice-experiences-with-new-mai-models-in/ba-p/4524637",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-01",
+          "source_type": "announcement",
+          "quote": "Today, we’re introducing three new Microsoft AI (MAI) models in Microsoft Foundry:",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The date is the post's embedded postTime, 2026-10-01T09:02:47.044-07:00 (Pacific time). The rendered page opens with the shell text 'This blog post cannot be found' for the candidate's t5-style URL, but the page's embedded data carries the post body and postTime, which are what was read. The sentence introduces a list of three items: MAI-Transcribe-2-Streaming, MAI-Voice-2.1 and MAI-Voice-2.1-Flash. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Build expressive voice experiences with new MAI models in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/build-expressive-voice-experiences-with-new-mai-models-in/ba-p/4524637",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-01",
+          "source_type": "announcement",
+          "quote": "MAI-Voice-2.1, our most expressive multilingual text-to-speech model yet",
+          "supports": [
+            "model"
+          ]
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Build expressive voice experiences with new MAI models in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/build-expressive-voice-experiences-with-new-mai-models-in/ba-p/4524637",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-01",
+          "source_type": "announcement",
+          "quote": "MAI-Voice-2.1-Flash, optimized for responsive, high-volume voice applications.",
+          "supports": [
+            "model"
+          ]
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Build expressive voice experiences with new MAI models in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/build-expressive-voice-experiences-with-new-mai-models-in/ba-p/4524637",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-01",
+          "source_type": "announcement",
+          "quote": "All three models are available in Microsoft Foundry through Azure Speech and with direct API access through Microsoft Foundry:",
+          "supports": [
+            "lifecycle"
+          ]
+        },
+        {
+          "publisher": "Microsoft AI",
+          "title": "Our first streaming transcription model debuts at no. 1 on Artificial Analysis",
+          "url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-01",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20261002230056/https://microsoft.ai/news/our-first-streaming-transcription-model/",
+          "quote": "Along with today’s launch of our top-ranking MAI-Transcribe-2-Streaming, we’re also announcing two new voice models: MAI‑Voice‑2.1 and our blazing-fast variant, MAI‑Voice‑2.1‑Flash.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The page dateline reads 'October 1, 2026'; the JSON-LD datePublished is 2026-10-01T16:00:00Z and dateModified 2026-10-08T20:43:19Z, so the page has been edited since. The Wayback capture of 2 October was located through the CDX API and not read. The same post announces both voice models; no separate microsoft.ai post for MAI-Voice-2.1 was found."
+        }
+      ]
+    },
+    {
+      "id": "github-claude-opus4-7-retired-2026-10-02",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-02",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-opus-4-7"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "retired",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub deprecated Claude Opus 4.7 across all GitHub Copilot experiences on 2 October 2026, as it announced on 3 September, with Claude Opus 5.5 as the suggested alternative.",
+      "caveat": "GitHub writes 'deprecated' for removal from every Copilot experience, which is this dataset's retired stage rather than its deprecated stage (existing customers only). Gemini 3.5 Flash in the same table is outside the registry and is logged in github-copilot-model-deprecations.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "github-claude-opus4-7-deprecation-announced-2026-09-03"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Selected models in GitHub Copilot deprecated",
+          "url": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-02",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261005113217/https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated/",
+          "quote": "As of today, October 2, 2026, we have deprecated the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions).",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Table row: 'Claude Opus 4.7 | 2026-10-02 | Claude Opus 5.5'. The entry is typed 'Retired'. The Wayback capture of 5 October postdates the entry; it was located through the CDX API and not read."
+        }
+      ]
+    },
+    {
+      "id": "github-gemini3-6-flash-retired-2026-10-02",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-02",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gemini-3-6-flash"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "retired",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub deprecated Gemini 3.6 Flash across all GitHub Copilot experiences on 2 October 2026, as it announced on 3 September, with Gemini 3.8 Flash as the suggested alternative.",
+      "caveat": "GitHub writes 'deprecated' for removal from every Copilot experience, which is this dataset's retired stage rather than its deprecated stage (existing customers only). Gemini 3.5 Flash in the same table is outside the registry and is logged in github-copilot-model-deprecations.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "github-gemini3-6-flash-deprecation-announced-2026-09-03"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Selected models in GitHub Copilot deprecated",
+          "url": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-02",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261005113217/https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated/",
+          "quote": "As of today, October 2, 2026, we have deprecated the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions).",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Table row: 'Gemini 3.6 Flash | 2026-10-02 | Gemini 3.8 Flash'. The entry is typed 'Retired'. The Wayback capture of 5 October postdates the entry; it was located through the CDX API and not read."
+        }
+      ]
+    },
+    {
+      "id": "github-kimi-k2-7-code-retired-2026-10-02",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-02",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "kimi-k2-7-code"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "retired",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub deprecated Kimi K2.7 Code across all GitHub Copilot experiences on 2 October 2026, as it announced on 3 September, with Kimi K3 as the suggested alternative.",
+      "caveat": "GitHub writes 'deprecated' for removal from every Copilot experience, which is this dataset's retired stage rather than its deprecated stage (existing customers only). Gemini 3.5 Flash in the same table is outside the registry and is logged in github-copilot-model-deprecations.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "github-kimi-k2-7-code-deprecation-announced-2026-09-03"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Selected models in GitHub Copilot deprecated",
+          "url": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-02",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261005113217/https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated/",
+          "quote": "As of today, October 2, 2026, we have deprecated the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions).",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Table row: 'Kimi K2.7 Code | 2026-10-02 | Kimi K3'. The entry is typed 'Retired'. The Wayback capture of 5 October postdates the entry; it was located through the CDX API and not read."
+        }
+      ]
+    },
+    {
+      "id": "foundry-grok4-7-2026-10-06",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-06",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "grok-4-7"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft announced Grok 4.7 from SpaceXAI generally available in Microsoft Foundry Models on 6 October 2026, through Global Standard and US Data Zone Standard deployments at $2.00 per million input tokens and $6.00 per million output tokens in Global Standard for contexts under 200K tokens, 15 days after xAI's release.",
+      "caveat": "Arrived 15 days after xAI's release of 21 September 2026, which closes the Grok 4.7 Foundry gap named in sweep-2026-09-19-to-09-25. Microsoft writes the vendor as 'SpaceXAI' throughout, where xAI's own page and this dataset's surface say xAI. The post also says Grok 4.7 'is also planned to support up to 500K context from launch'; the Learn row lists a 500,000-token context window. techcommunity.microsoft.com answers this environment's direct requests with 403, so the post was read through r.jina.ai.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "xai-grok4-7-2026-09-21"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Introducing Grok 4.7 on Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-grok-4-7-on-microsoft-foundry/ba-p/4562168",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-06",
+          "source_type": "announcement",
+          "quote": "Today, Grok 4.7 from SpaceXAI is generally available in Microsoft Foundry Models, expanding the portfolio of leading models available to developers and enterprises building the next generation of AI applications.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The date is the post's embedded postTime, 2026-10-06T14:11:11.789-07:00 (Pacific time). The rendered page opens with the shell text 'This blog post cannot be found' for the candidate's t5-style URL, but the page's embedded data carries the post body and postTime, which are what was read. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Introducing Grok 4.7 on Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-grok-4-7-on-microsoft-foundry/ba-p/4562168",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-06",
+          "source_type": "announcement",
+          "quote": "Grok 4.7 is available in Microsoft Foundry through Global Standard and US Data Zone Standard deployments, giving developers flexibility in how they deploy the model for their applications.",
+          "supports": [
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Foundry Models sold by Azure",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "source_type": "documentation",
+          "quote": "grok-4.7 | Chat Completions API Responses API | - Input: text, image (500,000 tokens) - Output: text (500,000 tokens)",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "Read on 26 October 2026 (updated_at 2026-10-08T22:09:00Z). The grok-4.7 row carries no Preview tag, where the grok-4.6 row does. Current-state evidence for the stage, not for the date. No archived_url: no capture after the claim was found at the 26 October CDX lookup (the only capture found is from 2 March 2026)."
+        }
+      ]
+    },
+    {
+      "id": "google-nano-banana-2-1-2026-10-06",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-06",
+        "precision": "day"
+      },
+      "surface_id": "google-gemini-api",
+      "model_ids": [
+        "nano-banana-2-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Google released Gemini Nano Banana 2.1 (gemini-nano-banana-2.1) in the Gemini API on 6 October 2026, listed as generally available: an image generation and conversational editing model that updates Nano Banana 2 (gemini-3.1-flash-image), with 1K, 2K and 4K output and new wide and panoramic aspect ratios.",
+      "caveat": "The same changelog entry deprecates gemini-3.1-flash-image (Nano Banana 2) with no shutdown date announced; that model is not registered, so no ending is recorded. The model card places Nano Banana 2.1 in the Gemini 3 series, based on Gemini 3.6 Flash, so it is classified there. No Google blog post for the release was found. The day rests on the changelog entry and the model card's cover eyebrow; the card's body gives only the month.",
+      "sources": [
+        {
+          "publisher": "Google",
+          "title": "Gemini API release notes",
+          "url": "https://ai.google.dev/gemini-api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-06",
+          "source_type": "release_notes",
+          "quote": "Gemini Nano Banana 2.1 generally available (GA): Released Gemini Nano Banana 2.1 (gemini-nano-banana-2.1), the latest high-efficiency image generation and conversational editing model.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed October 6, 2026; the quote is the entry's first sentence. Read through r.jina.ai because a direct fetch redirects to a sign-in. No archived_url: no capture after the claim was found at the 26 October CDX lookup (the only capture found is from 21 May 2024)."
+        },
+        {
+          "publisher": "Google DeepMind",
+          "title": "Nano Banana 2.1 - Model Card",
+          "url": "https://deepmind.google/models/model-cards/nano-banana-2-1",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-06",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20261007083448/https://deepmind.google/models/model-cards/nano-banana-2-1/",
+          "quote": "Published 6 October 2026",
+          "supports": [
+            "date"
+          ],
+          "note": "The cover eyebrow reads 'Published 6 October 2026'; the body also says 'Published: October 2026'. The card says 'Nano Banana 2.1 is a member of the Gemini 3 series of models' and 'Nano Banana 2.1 is based on Gemini 3.6 Flash.' The Wayback capture of 7 October postdates the card; it was located through the CDX API and not read."
+        }
+      ]
+    },
+    {
+      "id": "mistral-large4-preview-2026-10-06",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-06",
+        "precision": "day"
+      },
+      "surface_id": "mistral",
+      "model_ids": [
+        "mistral-large-4"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Mistral launched a public preview of Mistral Large 4 on 6 October 2026, a 1 trillion-parameter natively multimodal model with 52 billion active parameters, with a preview API on Mistral Studio; the page's model-card block lists $1.36 per million input tokens and $4.18 per million output tokens.",
+      "caveat": "Mistral says the weights will follow by the end of the month ('We will release the weights by the end of the month.'). A name search of Hugging Face on 26 October found no Mistral Large 4 repository, which does not rule out a private one, so no open-weight release is recorded. The page was modified on 7 October and the text read on 26 October is the current state. During the preview Mistral is also red-teaming the model with cybersecurity leaders and vetted partners who access the same model with reduced moderation.",
+      "sources": [
+        {
+          "publisher": "Mistral AI",
+          "title": "Introducing Mistral Large 4",
+          "url": "https://mistral.ai/news/mistral-large-4",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-06",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20261006171437/https://mistral.ai/news/mistral-large-4/",
+          "quote": "Today, we’re launching a public preview of Mistral Large 4.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "The page dateline reads 'October 6, 2026'; the JSON-LD BlogPosting gives datePublished 2026-10-06T12:00:27Z and dateModified 2026-10-07T20:20:52Z. The Wayback capture of 6 October predates the 7 October edit, so it may differ from the text read; it was located through the CDX API and not read."
+        },
+        {
+          "publisher": "Mistral AI",
+          "title": "Introducing Mistral Large 4",
+          "url": "https://mistral.ai/news/mistral-large-4",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-06",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20261006171437/https://mistral.ai/news/mistral-large-4/",
+          "quote": "You can try the preview API today on Mistral Studio.",
+          "supports": [
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anthropic-haiku5-5-2026-10-07",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-07",
+        "precision": "day"
+      },
+      "surface_id": "anthropic-claude",
+      "model_ids": [
+        "claude-haiku-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Anthropic released Claude Haiku 5.5 on 7 October 2026, joining Claude Opus 5.5 and Sonnet 5.5 in the Claude 5.5 family, available on release day on the Claude Platform as claude-haiku-5-5 and on Amazon Web Services, Google Cloud and Microsoft Azure, at $0.10 per million input tokens and $0.50 per million output tokens for prompts up to 100,000 tokens, and the first Haiku-class model with an adjustable effort setting.",
+      "caveat": "The page says Haiku 5.5 costs around 75% less to run than Haiku 4.5 on average (90% lower for requests up to 100,000 tokens, 50% lower above that), and that on the same day Anthropic halved the price of Sonnet 5.5 cache reads, from $0.20 to $0.10 per million tokens. The page carries no 'today' sentence for the launch itself; the date is the machine-readable <time> dateline, which the /news index tile repeats.",
+      "sources": [
+        {
+          "publisher": "Anthropic",
+          "title": "Introducing Claude Haiku 5.5",
+          "url": "https://www.anthropic.com/news/claude-haiku-5-5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-07",
+          "source_type": "announcement",
+          "quote": "Claude Haiku 5.5 is available now on all platforms, including Amazon Web Services, Google Cloud, and Microsoft Azure. On the Claude Platform, developers can get started with claude-haiku-5-5.",
+          "supports": [
+            "date",
+            "lifecycle"
+          ],
+          "note": "The dateline is the page's <time dateTime=\"2026-10-07\"> element, 'October 7, 2026'; the /news index tile reads 'Oct 7, 2026'. No Wayback capture of anthropic.com pages exists at the 26 October CDX lookup, so no archived_url."
+        },
+        {
+          "publisher": "Anthropic",
+          "title": "Introducing Claude Haiku 5.5",
+          "url": "https://www.anthropic.com/news/claude-haiku-5-5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-07",
+          "source_type": "announcement",
+          "quote": "Introducing Claude Haiku 5.5: the cheapest, fastest, and most capable small model we’ve ever released.",
+          "supports": [
+            "model"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-haiku5-5-2026-10-07",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-07",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "claude-haiku-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced Claude Haiku 5.5 available in Microsoft Foundry on Anthropic's release day, 7 October 2026, describing it as the fastest and most efficient model in the Claude 5.5 family and the first Haiku model with effort controls. The post states no release stage and carries no pricing table.",
+      "caveat": "The announcement has no stage word and no pricing table, unlike foundry-sonnet5-5-2026-09-28, so the stage rests on Microsoft Learn's Claude page, which lists claude-haiku-5-5 as GA both hosted on Azure and hosted on Anthropic infrastructure at the 26 October reading. That is current-state documentation, which is why lifecycle is supported rather than confirmed. Same day as Anthropic's release, so the lag is zero days.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-haiku5-5-2026-10-07"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Claude Haiku 5.5 is now available in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/claude-haiku-5-5-is-now-available-in-microsoft-foundry/ba-p/4562408",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-07",
+          "source_type": "announcement",
+          "quote": "Claude Haiku 5.5 is now available in Microsoft Foundry.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The date is the post's embedded postTime, 2026-10-07T11:04:23.280-07:00 (Pacific time). The rendered page opens with the shell text 'This blog post cannot be found' for the candidate's t5-style URL, but the page's embedded data carries the post body and postTime, which are what was read. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Claude models in Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "source_type": "documentation",
+          "quote": "claude-haiku-5-5 | - Hosted on Azure: GA - Hosted on Anthropic infrastructure: GA | 1M / 128K",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "Read on 26 October 2026 through the Microsoft Learn MCP server. Current-state evidence for the stage, not for the date. No archived_url: no Wayback capture was pulled for this page in this batch."
+        }
+      ]
+    },
+    {
+      "id": "github-haiku5-5-2026-10-07",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-07",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-haiku-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "Claude Haiku 5.5 became available in GitHub Copilot on 7 October 2026, Anthropic's release day, for the Copilot Pro, Pro+, Max, Business and Enterprise plans, selectable in the model picker in VS Code, Visual Studio, Copilot CLI, the GitHub Copilot cloud agent, the GitHub Copilot app, github.com, GitHub Mobile, JetBrains IDEs, Xcode and Eclipse. Billed at provider list pricing under usage-based billing.",
+      "caveat": "The client list names 'GitHub Copilot cloud agent' where the Sonnet 5.5 and Opus 5.5 entries name the coding agent. Rollout is gradual ('Rollout will be gradual. Check back soon if you don't see it yet.'), so 7 October starts the rollout window. Under default model enablement the model is on for Business and Enterprise unless an administrator has turned off the global default or disabled it.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "anthropic-haiku5-5-2026-10-07"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Claude Haiku 5.5 in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-07",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261011033212/https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/",
+          "quote": "Claude Haiku 5.5, Anthropic’s newest lightweight model, is now generally available in GitHub Copilot.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "The Wayback capture of 11 October postdates the entry; it was located through the CDX API and not read."
+        },
+        {
+          "publisher": "GitHub",
+          "title": "Claude Haiku 5.5 in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-07",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261011033212/https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/",
+          "quote": "Claude Haiku 5.5 is available to Copilot Pro, Pro+, Max, Business, and Enterprise users.",
+          "supports": [
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot weekly releases — October 5",
+          "url": "https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-09",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261015013103/https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5/",
+          "quote": "Claude Haiku 5.5 is available to Copilot Pro, Pro+, Max, Business, and Enterprise users.",
+          "supports": [
+            "model",
+            "exposure"
+          ],
+          "note": "The weekly summary, published two days later; it dates nothing. Its Wayback capture of 15 October was located through the CDX API and not read."
+        }
+      ]
+    },
+    {
+      "id": "microsoft-decision-1-2026-10-09",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-09",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-ai",
+      "model_ids": [
+        "microsoft-decision-1"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft introduced Microsoft-Decision-1 on 9 October 2026, a decision-scoring model post-trained from Qwen3.5-9B for fast, single-pass choices among predefined options, available in Microsoft Foundry and through OpenRouter, priced at $0.042 per million input tokens with output tokens free, and said it will later rebase the model on MAI and OpenAI models.",
+      "caveat": "The two Microsoft posts disagree on stage: the Tech Community post says public preview, while the Command Line post and the Learn catalogue page carry no stage word, so lifecycle is supported. Recorded on the microsoft-ai vendor surface because the Foundry catalogue is the vendor channel for Microsoft's own models, as for the MAI line, although this model is not MAI-branded: Microsoft says it post-trained Qwen3.5-9B and will soon rebase it on other models, including MAI and OpenAI. The model is also available through OpenRouter. Its registry entry is deliberately unclassified, with no generation or model line.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Introducing Microsoft-Decision-1 in Microsoft Foundry for decision and classification workloads",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-microsoft-decision-1-in-microsoft-foundry-for/ba-p/4562742",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-09",
+          "source_type": "announcement",
+          "quote": "Now available in public preview, Microsoft-Decision-1 is a decision model built on Qwen3.5-9B and designed for applications that need to make fast, structured choices among predefined options.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The date is the post's embedded postTime, 2026-10-09T11:40:54.190-07:00 (Pacific time). The rendered page opens with the shell text 'This blog post cannot be found' for the candidate's t5-style URL, but the page's embedded data carries the post body and postTime, which are what was read. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        },
+        {
+          "publisher": "Microsoft Command Line",
+          "title": "Microsoft-Decision-1: Our model for fast decision-making",
+          "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-09",
+          "source_type": "announcement",
+          "quote": "Today we’re introducing Microsoft-Decision-1, our new model for fast decision-scoring, available in Microsoft Foundry and through OpenRouter.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The page's visible date is 2026.10.09 and its article:published_time is 2026-10-10T01:35:51Z, which is the evening of 9 October Pacific time. The word 'preview' does not appear on the page. No archived_url: no Wayback lookup was run for this page in this batch."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Foundry Models sold by Azure",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "source_type": "documentation",
+          "quote": "Microsoft-Decision-1 | decision, text classification, zero shot classification",
+          "supports": [
+            "model"
+          ],
+          "note": "Read on 26 October 2026. The page's updated_at stamp, 2026-10-08T22:09:00Z, precedes the announcement although the row is present, so its date metadata is not usable as arrival evidence. The row carries no Preview tag, which sits uneasily with the Tech Community post's 'public preview'; absence of a tag is not a stage statement, so it is noted rather than relied on. No archived_url: no capture after the claim was found at the 26 October CDX lookup (the only capture found is from 2 March 2026)."
+        }
+      ]
+    },
+    {
+      "id": "meta-muse-wonder-2026-10-12",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-12",
+        "precision": "day"
+      },
+      "surface_id": "meta",
+      "model_ids": [
+        "muse-wonder",
+        "muse-wonder-full"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Meta released Muse Wonder and Muse Wonder Full on 12 October 2026, its most capable models to date for personal and professional agentic tasks: Muse Wonder to developers and builders through the Meta Model API and Muse Code, and Muse Wonder Full to Muse Code subscribers.",
+      "caveat": "Found through a keyword sweep of that week's model coverage (The Verge, 12 October) rather than a candidate filing; Meta's own dated posts carry the evidence. Muse Wonder Full is available by subscription only, in Muse Code. Meta says Muse Wonder 'will soon power experiences in Muse, and will roll out first to subscribers'; that later consumer rollout is not recorded. No Microsoft surface carries either model, so no lag is derivable. No stage word appears on any Meta page read.",
+      "sources": [
+        {
+          "publisher": "Meta",
+          "title": "Introducing Muse Wonder and Muse Wonder Full: Frontier Models for Agents",
+          "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-12",
+          "source_type": "announcement",
+          "quote": "Muse Wonder is available today for developers and builders through the Meta Model API and Muse Code while Muse Wonder Full is available today for Muse Code subscribers.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "The page's article:published_time is 2026-10-12T17:08:05Z and its visible date is October 12, 2026; it was modified on 13 October. No archived_url: no Wayback lookup was run for this page in this batch."
+        },
+        {
+          "publisher": "Meta AI",
+          "title": "Muse Wonder: A Frontier Model For Personal & Professional AI Agents",
+          "url": "https://research.meta.ai/blog/introducing-muse-wonder/",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-12",
+          "source_type": "announcement",
+          "quote": "Today, we’re excited to introduce the Muse Wonder series with Muse Wonder and Muse Wonder Full",
+          "supports": [
+            "model"
+          ],
+          "note": "The page's visible date is October 12, 2026 and article:published_time is 2026-10-12T00:00:00Z."
+        }
+      ]
+    },
+    {
+      "id": "github-gemini4-argon-2026-10-13",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-13",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gemini-4-argon"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "Gemini 4 Argon became available in GitHub Copilot on 13 October 2026, the day of Google's general release, for the Copilot Pro+, Max, Business and Enterprise plans, selectable in the model picker in VS Code, Visual Studio, Copilot CLI, the GitHub Copilot coding agent, the GitHub Copilot app, JetBrains IDEs, Xcode and Eclipse. Billed at provider list pricing under usage-based billing.",
+      "caveat": "Not on the base Copilot Pro plan, so selectable exposure does not extend to every paying Copilot user. The client list omits github.com and GitHub Mobile, which the Claude Sonnet 5.5 and GPT-6.1 Sol entries include. Rollout is gradual ('Rollout will be gradual. Check back soon if you don't see it yet.'), so 13 October starts the rollout window. Under default model enablement the model is on for Business and Enterprise unless an administrator has turned off the global default or disabled it.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "google-gemini4-argon-2026-10-13"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Gemini 4 Argon in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-13",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261015152434/https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot/",
+          "quote": "Gemini 4 Argon, Google’s newest frontier model, is now generally available in GitHub Copilot.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "The page's article:modified_time is 2026-10-15T13:37:08Z, so the text read is the later state. The Wayback capture of 15 October postdates that edit; it was located through the CDX API and not read."
+        },
+        {
+          "publisher": "GitHub",
+          "title": "Gemini 4 Argon in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-13",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261015152434/https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot/",
+          "quote": "Gemini 4 Argon is available to Copilot Pro+, Max, Business, and Enterprise users.",
+          "supports": [
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "google-gemini4-argon-2026-10-13",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-13",
+        "precision": "day"
+      },
+      "surface_id": "google-gemini",
+      "model_ids": [
+        "gemini-4-argon"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Google made Gemini 4 Argon generally available on 13 October 2026, through the Gemini API in AI Studio and the Gemini platform, to Google AI Ultra subscribers in Google Antigravity, and to Google AI Ultra and Pro subscribers in the Gemini app and AI Mode in Search, at an introductory price of $2 per million input tokens and $10 per million output tokens, and began expanding the Fairwind Program to hundreds of additional partners the same day.",
+      "caveat": "One event on the umbrella surface because the API, the Gemini app, Antigravity and AI Mode in Search moved together ('rolling out today globally'). Fairwind Program access to Argon without cyber guardrails continues 'on a rolling basis' for applicants, and scientists and researchers are onboarded the same way, so the event dates the general release rather than every route. The two companion posts of 13 October, one for developers and one for the Gemini app, agree with the main post. Google's sitemap lastmod for the main post is 13 October.",
+      "sources": [
+        {
+          "publisher": "Google",
+          "title": "Gemini 4 Argon is now available for everyone",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-13",
+          "source_type": "announcement",
+          "quote": "Gemini 4 Argon is now globally available today for developers and enterprises via the API in AI Studio and Gemini platform, for Google AI Ultra subscribers in Google Antigravity, and Google AI Ultra and Pro subscribers in the Gemini app and AI Mode in Search.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "The page dateline reads 'Oct 13, 2026'; article:published_time is 2026-10-13 and the JSON-LD datePublished is 2026-10-13T16:00:00+00:00. No archived_url: no Wayback lookup was run for this page in this batch."
+        },
+        {
+          "publisher": "Google",
+          "title": "Gemini API release notes",
+          "url": "https://ai.google.dev/gemini-api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-13",
+          "source_type": "release_notes",
+          "quote": "Gemini 4 Argon (gemini-4-argon) generally available (GA): Released Gemini 4 Argon (gemini-4-argon), our most capable model built for complex coding, agentic, math, and science tasks.",
+          "supports": [
+            "date",
+            "lifecycle"
+          ],
+          "note": "Entry headed October 13, 2026; it is the only Argon entry in the changelog, which does not date the Fairwind-only launch. Read through r.jina.ai because a direct fetch redirects to a sign-in. No archived_url: no capture after the claim was found at the 26 October CDX lookup (the only capture found is from 21 May 2024)."
+        }
+      ]
+    },
+    {
+      "id": "xai-grok-voice3-2026-10-14",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-14",
+        "precision": "day"
+      },
+      "surface_id": "xai-grok",
+      "model_ids": [
+        "grok-voice-3"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "xAI announced Grok Voice 3.0, its speech-to-speech model, on 14 October 2026, available the same day in the Speech to Speech API at $0.08 per minute ($4.80 per hour), the same price as Grok Voice 2.0, and already powering Grok Bot's voice mode and conversations in Tesla vehicles.",
+      "caveat": "The page carries no stage word; 'available today in the API' is read as GA on the same basis as openai-gpt-live-1-api-2026-09-10. Agents using the grok-voice-latest alias were switched over automatically, so the alias changed hands the same day. Grok Voice 2.0 is not registered because no dated release for it has been read, so this event is the only xAI voice-model record. No Microsoft surface carries the model.",
+      "sources": [
+        {
+          "publisher": "xAI",
+          "title": "Introducing Grok Voice 3.0",
+          "url": "https://x.ai/news/grok-voice-3",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-14",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20261015061149/https://x.ai/news/grok-voice-3",
+          "quote": "Today, we’re announcing Grok Voice 3.0, the world’s most intelligent speech-to-speech model.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The page dateline reads 'Oct 14, 2026' (a <time dateTime=\"2026-10-14\"> element), and the JSON-LD datePublished is 2026-10-14T00:00:00Z. The Wayback capture of 15 October postdates the page; it was located through the CDX API and not read."
+        },
+        {
+          "publisher": "xAI",
+          "title": "Introducing Grok Voice 3.0",
+          "url": "https://x.ai/news/grok-voice-3",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-14",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20261015061149/https://x.ai/news/grok-voice-3",
+          "quote": "Grok Voice 3.0 is available today in the Speech to Speech API at $0.08 / min ($4.80 / hr), the same price as Grok Voice 2.0.",
+          "supports": [
+            "date",
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-muse-spark-open-2026-10-15",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-15",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "muse-spark-open"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced Muse Spark Open, Meta's coding-optimised open-weight model, available in Microsoft Foundry Models on 15 October 2026 through the Hugging Face collection, with a 1M-token context window and a managed compute deployment path on dedicated GPU-backed inference endpoints; the NVFP4 deployment template runs each model instance on 8 NVIDIA H200 GPUs.",
+      "caveat": "The announcement states no release stage. The Hugging Face collection route on Foundry was documented as preview when foundry-nemotron-3-5-lightning-2026-08-19 was recorded and nothing read for this batch says otherwise, so public_preview is the weaker part of the claim and lifecycle is supported. Same day as Meta's release, so the lag is zero days. The route is managed compute on dedicated GPUs rather than a model sold by Azure. techcommunity.microsoft.com answers this environment's direct requests with 403, so the posts were read through r.jina.ai.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "meta-muse-spark-open-2026-10-15"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Muse Spark Open is available in Microsoft Foundry Models",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/muse-spark-open-is-available-in-microsoft-foundry-models/ba-p/4564585",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-15",
+          "source_type": "announcement",
+          "quote": "Muse Spark Open, a coding-optimized open-weight model from Meta, is available today in Microsoft Foundry Models through Hugging Face collection.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The date is the post's embedded postTime, 2026-10-15T13:07:05.118-07:00 (Pacific time). The rendered page opens with the shell text 'This blog post cannot be found' for the candidate's t5-style URL, but the page's embedded data carries the post body and postTime, which are what was read. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Muse Spark Open is available in Microsoft Foundry Models",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/muse-spark-open-is-available-in-microsoft-foundry-models/ba-p/4564585",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-15",
+          "source_type": "announcement",
+          "quote": "Availability through Hugging Face in Microsoft Foundry brings that choice into Foundry Models. Hugging Face models use a managed compute deployment path with dedicated GPU-backed inference endpoints, helping teams move from model discovery to integration with their applications.",
+          "supports": [
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Now in Foundry: Meta Muse Spark Open, NVIDIA Nemotron 3.5 Super VL, and Reflection Beam",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/now-in-foundry-meta-muse-spark-open-nvidia-nemotron-3-5-super-vl/ba-p/4565899",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-19",
+          "source_type": "announcement",
+          "quote": "This week's Model Mondays edition highlights three Hugging Face models newly available in Microsoft Foundry, giving developers more open-weight options for enterprise coding and agentic work: Meta's Muse Spark Open, NVIDIA's Nemotron 3.5 Super VL, and Reflection's Beam 1.0.",
+          "supports": [
+            "model"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The date is the post's embedded postTime, 2026-10-19T10:08:14.641-07:00 (Pacific time). The post dates none of the three models; it corroborates the Hugging Face collection route only. It also gives the Muse Spark Open deployment configuration: NVFP4 weights, a 1,048,576-token context and 8 x NVIDIA H200 GPUs per model instance. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        }
+      ]
+    },
+    {
+      "id": "github-claude-opus4-8-deprecation-announced-2026-10-15",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-10-15",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-opus-4-8"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub announced that Claude Opus 4.8 would be deprecated across all GitHub Copilot experiences on 16 November 2026, with Claude Opus 5.5 as the suggested alternative, except for individual subscribers on annual plans, who keep it.",
+      "caveat": "Recorded as an announcement, not a retirement: the deprecation date, 16 November 2026, falls after this dataset's research cutoff. The footnote means the removal will be partial: Claude Opus 4.8 stays available to individual subscribers on annual plans, so the date does not end the model on this surface for everyone.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
+          "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-15",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261016231822/https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/",
+          "quote": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on November 16th, 2026:",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Table row: 'Claude Opus 4.8* | 2026-11-16 | Claude Opus 5.5'. The entry is typed 'Retired'. The Wayback capture of 16 October postdates the entry; it was located through the CDX API and not read."
+        },
+        {
+          "publisher": "GitHub",
+          "title": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
+          "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-15",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261016231822/https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/",
+          "quote": "*Claude Opus 4.8 will remain available to individual GitHub Copilot subscribers on annual plans so they retain an Opus offering. The deprecation of Claude Opus 4.8 does not apply to these customers.",
+          "supports": [
+            "model"
+          ],
+          "note": "The table's footnote to the Claude Opus 4.8 row."
+        }
+      ]
+    },
+    {
+      "id": "github-claude-opus5-deprecation-announced-2026-10-15",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-10-15",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "claude-opus-5"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub announced that Claude Opus 5 would be deprecated across all GitHub Copilot experiences on 16 November 2026, with Claude Opus 5.5 as the suggested alternative.",
+      "caveat": "Recorded as an announcement, not a retirement: the deprecation date, 16 November 2026, falls after this dataset's research cutoff.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
+          "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-15",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261016231822/https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/",
+          "quote": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on November 16th, 2026:",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Table row: 'Claude Opus 5 | 2026-11-16 | Claude Opus 5.5'. The entry is typed 'Retired'. The Wayback capture of 16 October postdates the entry; it was located through the CDX API and not read."
+        }
+      ]
+    },
+    {
+      "id": "github-gpt5-6-terra-deprecation-announced-2026-10-15",
+      "kind": "announcement",
+      "date": {
+        "start": "2026-10-15",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-5-6-terra"
+      ],
+      "model_claim": "specific",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub announced that GPT-5.6 Terra would be deprecated across all GitHub Copilot experiences on 16 November 2026, with GPT-6.1 Sol or GPT-6 Luna as the suggested alternative.",
+      "caveat": "Recorded as an announcement, not a retirement: the deprecation date, 16 November 2026, falls after this dataset's research cutoff.",
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
+          "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-15",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261016231822/https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/",
+          "quote": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on November 16th, 2026:",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Table row: 'GPT-5.6 Terra | 2026-11-16 | GPT-6.1 Sol or GPT-6 Luna'. The entry is typed 'Retired'. The Wayback capture of 16 October postdates the entry; it was located through the CDX API and not read."
+        }
+      ]
+    },
+    {
+      "id": "meta-muse-spark-open-2026-10-15",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-15",
+        "precision": "day"
+      },
+      "surface_id": "meta",
+      "model_ids": [
+        "muse-spark-open"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Meta released the open weights of Muse Spark Open on 15 October 2026, an 816B-parameter sparse mixture-of-experts model that activates roughly 42 billion parameters per token, under the Muse Model License, with hosted inference from Baseten, Fireworks AI, Groq, Modal, Nebius, OpenRouter and Together AI and downloads through Amazon SageMaker AI, Google Cloud Model Garden, Hugging Face and Microsoft Foundry Models.",
+      "caveat": "The Hugging Face repositories were created on 15 September 2026, a month before the release, so repository creation is not used as the date; the date rests on Meta's own posts and the licence text. The licence is the Muse Model License, which Meta describes as having 'limited commercial terms', so this is open-weight rather than open-source. Meta's undated product page (dev.meta.ai/models/muse-spark-open/) says Muse Spark Open is 'derived from the Muse Spark model we released in August'; Muse Spark itself and Muse Glimmer are not registered (see meta-muse-glimmer-release-evidence). Microsoft Foundry's own arrival for the model is recorded as foundry-muse-spark-open-2026-10-15, the same day.",
+      "sources": [
+        {
+          "publisher": "Meta AI",
+          "title": "Introducing Muse Spark Open, The Most Capable US Open‑Weight Model to Date",
+          "url": "https://research.meta.ai/blog/muse-spark-open",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-15",
+          "source_type": "announcement",
+          "quote": "Today, we’re releasing the weights for Muse Spark Open, the most capable US open-weight model to date.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The page's visible dateline reads 'October 15, 2026'. It also says 'We’re releasing the weights under the Muse Model License with limited commercial terms, which allow many developers to use the model for free.' No archived_url: no Wayback lookup was run for this page in this batch."
+        },
+        {
+          "publisher": "Meta AI",
+          "title": "Introducing Muse Spark Open, The Most Capable US Open‑Weight Model to Date",
+          "url": "https://research.meta.ai/blog/muse-spark-open",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-15",
+          "source_type": "announcement",
+          "quote": "Muse Spark Open is available today through API platforms at Baseten, Fireworks AI, Groq, Modal, Nebius, OpenRouter and Together AI. Model weights are available for download on Amazon SageMaker AI, Google Cloud Model Garden, Hugging Face, and Microsoft Foundry Models.",
+          "supports": [
+            "lifecycle"
+          ]
+        },
+        {
+          "publisher": "Meta AI",
+          "title": "Build with Muse Spark Open",
+          "url": "https://dev.meta.ai/resources/blog/build-with-muse-spark-open/",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-15",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20261016002542/https://dev.meta.ai/resources/blog/build-with-muse-spark-open",
+          "quote": "Today we're releasing Muse Spark Open, the open weights version of Muse Spark, an 816B-parameter sparse mixture-of-experts model that activates roughly 42 billion parameters per token.",
+          "supports": [
+            "model"
+          ],
+          "note": "The byline reads 'Oct 15, 2026'; the page has no machine-readable date. It labels one hosting provider, Groq, a limited preview on GroqCloud, and gives no stage word for the model. The Wayback capture of 16 October postdates the post; it was located through the CDX API and not read."
+        },
+        {
+          "publisher": "Hugging Face",
+          "title": "meta-models/Muse-Spark-Open-816B-A42B-NVFP4",
+          "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B-NVFP4",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20261016182038/https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B-NVFP4",
+          "quote": "Release date: October 15, 2026",
+          "supports": [
+            "date"
+          ],
+          "note": "The line is from the Muse Model License text in the repository's gating prompt ('version: Muse Spark Open'), read through the Hugging Face API. The repository's createdAt is 2026-09-15T19:23:10Z, a month before release, and its lastModified is 2026-10-15T17:18:42Z; the base repository meta-models/Muse-Spark-Open-816B-A42B was also created on 15 September. Repository creation is not used as the date. The repository is gated by manual approval. The Wayback capture of 16 October was located through the CDX API and not read."
+        }
+      ]
+    },
+    {
+      "id": "deepseek-v4-1-flash-1017-2026-10-17",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-17",
+        "precision": "day"
+      },
+      "surface_id": "deepseek",
+      "model_ids": [
+        "deepseek-v4-1-flash-1017"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "DeepSeek released DeepSeek-V4.1-Flash-1017 on 17 October 2026, a minor update to V4.1 Flash with improvements across reasoning, coding, agentic tasks and visual benchmarks, shorter outputs and faster task completion, live on its website, app and API and published as open weights under the MIT licence.",
+      "caveat": "Dated from DeepSeek's own news entry and the weights repository's creation timestamp, not from the 1017 in the name; the two agree. DeepSeek's API documentation says deepseek-flash is now served by this revision and that the legacy names deepseek-v4-flash and deepseek-v4-flash-vision-exp, whose models it says have been retired, are served by it too; that vendor-side alias change is not recorded as an ending for any registered model. No Microsoft Foundry arrival has been sourced for this revision. The shape follows deepseek-v4-flash-0731-2026-07-31.",
+      "relations": [
+        {
+          "type": "supersedes",
+          "target": "deepseek-v4-1-flash-2026-09-10"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "DeepSeek",
+          "title": "DeepSeek-V4.1-Flash-1017: Wish-Driven Programming Made Real",
+          "url": "https://api-docs.deepseek.com/news/news261017",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-17",
+          "source_type": "announcement",
+          "quote": "DeepSeek-V4.1-Flash-1017 is here!",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The news index dates the entry 'DeepSeek-V4.1-Flash-1017 Release 2026/10/17'; the entry page carries no machine-readable date. No archived_url: no Wayback lookup was run for this page in this batch."
+        },
+        {
+          "publisher": "DeepSeek",
+          "title": "DeepSeek-V4.1-Flash-1017: Wish-Driven Programming Made Real",
+          "url": "https://api-docs.deepseek.com/news/news261017",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-17",
+          "source_type": "announcement",
+          "quote": "Now live on our website, app, and API.",
+          "supports": [
+            "lifecycle"
+          ]
+        },
+        {
+          "publisher": "Hugging Face",
+          "title": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-17",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20261017103838/https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "quote": "DeepSeek-V4.1-Flash-1017 is a minor update to DeepSeek-V4.1-Flash, delivering substantial improvements across reasoning, coding, agentic tasks, and visual benchmarks.",
+          "supports": [
+            "model"
+          ],
+          "note": "The repository's createdAt is 2026-10-17T02:40:38Z and lastModified 2026-10-17T05:46:55Z via the Hugging Face API; it is public, ungated and MIT-licensed. The card states no release date and no stage. The Wayback capture of 17 October postdates the repository's creation; it was located through the CDX API and not read."
+        }
+      ]
+    },
+    {
+      "id": "github-gemini3-7-flash-retired-2026-10-19",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-19",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gemini-3-7-flash"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "retired",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub deprecated Gemini 3.7 Flash across most GitHub Copilot experiences on 19 October 2026, as it announced on 18 September, with Gemini 3.8 Flash as the suggested alternative.",
+      "caveat": "GitHub writes 'deprecated' for removal from Copilot experiences, which is this dataset's retired stage rather than its deprecated stage (existing customers only). This post says 'most' rather than 'all' GitHub Copilot experiences, where the 18 September announcement said all, so a surviving experience is possible and is not recorded here. GPT-5.4 mini in the same table is outside the registry and is logged in github-copilot-model-deprecations.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "github-gemini3-7-flash-deprecation-announced-2026-09-18"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot models deprecated on October 19, 2026",
+          "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-19",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261026011415/https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/",
+          "quote": "As of today, October 19, 2026, we have deprecated the following models across most GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions).",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Table row: 'Gemini 3.7 Flash | 2026-10-19 | Gemini 3.8 Flash'. The entry is typed 'Retired'. The Wayback capture of 26 October postdates the entry; it was located through the CDX API and not read."
+        },
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot models deprecated on October 19, 2026",
+          "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-19",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261026011415/https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/",
+          "quote": "These deprecations were announced on September 18, 2026.",
+          "supports": [
+            "date"
+          ],
+          "note": "Ties the removal to the 18 September announcement event recorded in relations."
+        }
+      ]
+    },
+    {
+      "id": "github-gpt5-4-retired-2026-10-19",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-19",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-5-4"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "retired",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub deprecated GPT-5.4 across most GitHub Copilot experiences on 19 October 2026, as it announced on 18 September, with GPT-6.1 Sol as the suggested alternative.",
+      "caveat": "GitHub writes 'deprecated' for removal from Copilot experiences, which is this dataset's retired stage rather than its deprecated stage (existing customers only). This post says 'most' rather than 'all' GitHub Copilot experiences, where the 18 September announcement said all, so a surviving experience is possible and is not recorded here. GPT-5.4 mini in the same table is outside the registry and is logged in github-copilot-model-deprecations.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "github-gpt5-4-deprecation-announced-2026-09-18"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot models deprecated on October 19, 2026",
+          "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-19",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261026011415/https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/",
+          "quote": "As of today, October 19, 2026, we have deprecated the following models across most GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions).",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Table row: 'GPT-5.4 | 2026-10-19 | GPT-6.1 Sol'. The entry is typed 'Retired'. The Wayback capture of 26 October postdates the entry; it was located through the CDX API and not read."
+        },
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot models deprecated on October 19, 2026",
+          "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-19",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261026011415/https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/",
+          "quote": "These deprecations were announced on September 18, 2026.",
+          "supports": [
+            "date"
+          ],
+          "note": "Ties the removal to the 18 September announcement event recorded in relations."
+        }
+      ]
+    },
+    {
+      "id": "github-gpt5-5-retired-2026-10-19",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-19",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-5-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "retired",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub deprecated GPT-5.5 across most GitHub Copilot experiences on 19 October 2026, as it announced on 18 September, with GPT-6.1 Sol as the suggested alternative.",
+      "caveat": "GitHub writes 'deprecated' for removal from Copilot experiences, which is this dataset's retired stage rather than its deprecated stage (existing customers only). This post says 'most' rather than 'all' GitHub Copilot experiences, where the 18 September announcement said all, so a surviving experience is possible and is not recorded here. GPT-5.4 mini in the same table is outside the registry and is logged in github-copilot-model-deprecations.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "github-gpt5-5-deprecation-announced-2026-09-18"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot models deprecated on October 19, 2026",
+          "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-19",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261026011415/https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/",
+          "quote": "As of today, October 19, 2026, we have deprecated the following models across most GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions).",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Table row: 'GPT-5.5 | 2026-10-19 | GPT-6.1 Sol'. The entry is typed 'Retired'. The Wayback capture of 26 October postdates the entry; it was located through the CDX API and not read."
+        },
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot models deprecated on October 19, 2026",
+          "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-19",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261026011415/https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/",
+          "quote": "These deprecations were announced on September 18, 2026.",
+          "supports": [
+            "date"
+          ],
+          "note": "Ties the removal to the 18 September announcement event recorded in relations."
+        }
+      ]
+    },
+    {
+      "id": "github-gpt5-mini-retired-2026-10-19",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-19",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-5-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "retired",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub deprecated GPT-5 mini across most GitHub Copilot experiences on 19 October 2026, as it announced on 18 September, with GPT-6 Luna as the suggested alternative.",
+      "caveat": "GitHub writes 'deprecated' for removal from Copilot experiences, which is this dataset's retired stage rather than its deprecated stage (existing customers only). This post says 'most' rather than 'all' GitHub Copilot experiences, where the 18 September announcement said all, so a surviving experience is possible and is not recorded here. GPT-5.4 mini in the same table is outside the registry and is logged in github-copilot-model-deprecations.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "github-gpt5-mini-deprecation-announced-2026-09-18"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot models deprecated on October 19, 2026",
+          "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-19",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261026011415/https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/",
+          "quote": "As of today, October 19, 2026, we have deprecated the following models across most GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions).",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Table row: 'GPT-5 mini | 2026-10-19 | GPT-6 Luna'. The entry is typed 'Retired'. The Wayback capture of 26 October postdates the entry; it was located through the CDX API and not read."
+        },
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot models deprecated on October 19, 2026",
+          "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-19",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261026011415/https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/",
+          "quote": "These deprecations were announced on September 18, 2026.",
+          "supports": [
+            "date"
+          ],
+          "note": "Ties the removal to the 18 September announcement event recorded in relations."
+        }
+      ]
+    },
+    {
+      "id": "github-grok4-5-retired-2026-10-19",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-19",
+        "precision": "day"
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "grok-4-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "retired",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "GitHub deprecated Grok 4.5 across most GitHub Copilot experiences on 19 October 2026, as it announced on 18 September, with Grok 4.7 as the suggested alternative.",
+      "caveat": "GitHub writes 'deprecated' for removal from Copilot experiences, which is this dataset's retired stage rather than its deprecated stage (existing customers only). This post says 'most' rather than 'all' GitHub Copilot experiences, where the 18 September announcement said all, so a surviving experience is possible and is not recorded here. GPT-5.4 mini in the same table is outside the registry and is logged in github-copilot-model-deprecations.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "github-grok4-5-deprecation-announced-2026-09-18"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot models deprecated on October 19, 2026",
+          "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-19",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261026011415/https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/",
+          "quote": "As of today, October 19, 2026, we have deprecated the following models across most GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions).",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Table row: 'Grok 4.5 | 2026-10-19 | Grok 4.7'. The entry is typed 'Retired'. The Wayback capture of 26 October postdates the entry; it was located through the CDX API and not read."
+        },
+        {
+          "publisher": "GitHub",
+          "title": "GitHub Copilot models deprecated on October 19, 2026",
+          "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-19",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261026011415/https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/",
+          "quote": "These deprecations were announced on September 18, 2026.",
+          "supports": [
+            "date"
+          ],
+          "note": "Ties the removal to the 18 September announcement event recorded in relations."
+        }
+      ]
+    },
+    {
+      "id": "foundry-cohere-rerank-v5-2026-10-21",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-21",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "cohere-rerank-v5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "exposure": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced Cohere Rerank v5 available in Microsoft Foundry on 21 October 2026, the day Cohere released Rerank 5, in Fast and Pro versions with a new Context Focus capability that returns the most relevant passages within reranked documents. Cohere prices Pro at $0.05 and Fast at $0.02 per million tokens on its own API.",
+      "caveat": "Microsoft's post carries no stage word; Cohere's own statement that Rerank 5 Pro and Fast are 'generally available' through Microsoft Foundry among other routes is the only stage evidence, which is why lifecycle is supported. The Learn catalogue page read on 26 October lists Cohere-rerank-v4.0-pro and Cohere-rerank-v4.0-fast and no Rerank V5 row, so no Microsoft documentation corroborates the listing. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning, with one registry id for the Pro and Fast variants. Cohere's release and the Foundry arrival are the same day, but no Cohere vendor surface exists, so the lag is unknown_no_baseline by construction. techcommunity.microsoft.com answers this environment's direct requests with 403, so the post was read through r.jina.ai.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Cohere Rerank V5 is now available in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/cohere-rerank-v5-is-now-available-in-microsoft-foundry/ba-p/4566311",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-21",
+          "source_type": "announcement",
+          "quote": "Today, we’re announcing the availability of Cohere Rerank v5 in Microsoft Foundry, helping developers improve the relevance and efficiency of enterprise search and retrieval-augmented generation (RAG).",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The date is the post's embedded postTime, 2026-10-21T09:27:58.407-07:00 (Pacific time). The rendered page opens with the shell text 'This blog post cannot be found' for the candidate's t5-style URL, but the page's embedded data carries the post body and postTime, which are what was read. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+        },
+        {
+          "publisher": "Cohere",
+          "title": "Announcing Cohere's Rerank 5 Models",
+          "url": "https://docs.cohere.com/changelog/rerank-v5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-21",
+          "source_type": "announcement",
+          "quote": "Rerank 5 is available through the Rerank API, as well as Microsoft Foundry (Pro, Fast) and Amazon SageMaker (Pro, Fast).",
+          "supports": [
+            "model",
+            "exposure"
+          ],
+          "note": "The changelog entry is dated October 21, 2026 (its source file is pages/changelog/2026-10-21-rerank-v5.mdx) and lists the model ids rerank-v5.0-pro and rerank-v5.0-fast. No archived_url: no Wayback lookup was run for this page in this batch."
+        },
+        {
+          "publisher": "Cohere",
+          "title": "Introducing Rerank 5: precise, efficient enterprise document retrieval",
+          "url": "https://cohere.com/blog/rerank-5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-21",
+          "source_type": "announcement",
+          "quote": "Rerank 5 Pro and Rerank 5 Fast are generally available through the Cohere API, Model Vault, Microsoft Foundry (Fast, Pro), and Amazon SageMaker (Fast, Pro), and to all North users.",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "The page's JSON-LD datePublished is 2026-10-21T15:00:00Z. The stage is attested by Cohere, not by Microsoft. No archived_url: no Wayback lookup was run for this page in this batch."
+        }
+      ]
     }
   ],
   "validation_backlog": [
@@ -12518,7 +15020,7 @@
       "state": "open",
       "working_claim": "Meta announced Muse Glimmer as an open-source, open-weight model based on Muse Spark.",
       "reason": "The candidate source is third-party coverage and the cited Thurrott URL was not fetchable from this environment at triage time (DNS lookup failure). No first-party Meta artefact was found in this pass to attest a release date, lifecycle scope, or whether Muse Glimmer and Muse Spark are durable product names that belong in the registry.",
-      "target": "Pin a first-party Meta source (for example ai.meta.com or about.fb.com) that names Muse Glimmer, states a dated release fact, and clarifies model scope. If only undated/current-state references are available, keep this as backlog rather than promoting an inferred event.",
+      "target": "Pin a first-party Meta source (for example ai.meta.com or about.fb.com) that names Muse Glimmer, states a dated release fact, and clarifies model scope. If only undated/current-state references are available, keep this as backlog rather than promoting an inferred event. October 2026 pass: Meta's dated first-party posts now exist for Muse Wonder (12 October 2026) and Muse Spark Open (15 October 2026), both recorded as meta-muse-wonder-2026-10-12 and meta-muse-spark-open-2026-10-15; Meta's undated product page for Muse Spark Open says the model is derived from 'the Muse Spark model we released in August'. Muse Spark's August release and Muse Glimmer remain undated here, and Hugging Face repository timestamps are not release dates (the Muse Spark Open repositories were created a month before its release).",
       "model_ids": [],
       "surface_ids": [
         "meta"
@@ -13002,7 +15504,7 @@
       "state": "open",
       "working_claim": "GitHub announces Copilot model deprecations in dated changelog entries, most of which the timeline now records.",
       "reason": "First pass complete on 28 July 2026. Both known changelogs were read and eight retirements recorded, all with dates that have already passed. Three models named in them are outside the registry and were not added, because the timeline holds no arrival for them either: GPT-4.5, Gemini 2.0 Flash and Claude Sonnet 3.7 Thinking. GitHub publishes these as individual posts rather than a maintained schedule, so there is no single page to re-read.",
-      "target": "Watch the GitHub changelog for further deprecation posts. Passes so far: the September 2025 wave was re-read in full this pass and cross-checks exactly against the six recorded 23 October retirements, plus Gemini 2.0 Flash whose removal is now recorded following its registry addition; Sonnet 3.7 Thinking remains outside the registry by choice. The 20 May 2026 update removed all Gemini models, GPT-5.2 Codex and GPT-5.4 nano from Copilot on the web only, which is scoped narrower than the surface and is logged here rather than recorded as retirements. September 2026 pass: two posts read and recorded as announcements. The 3 September post deprecates Gemini 3.5 Flash, Gemini 3.6 Flash, Kimi K2.7 Code and Claude Opus 4.7 on 2 October 2026; the 18 September post deprecates Gemini 3.7 Flash, GPT-5.5, GPT-5.4, GPT-5.4 mini, GPT-5 mini and Grok 4.5 on 19 October 2026. Gemini 3.5 Flash and GPT-5.4 mini are outside the registry and were not added, under the rule above. Record each as retired once its date passes and GitHub has not withdrawn the notice.",
+      "target": "Watch the GitHub changelog for further deprecation posts. Passes so far: the September 2025 wave was re-read in full this pass and cross-checks exactly against the six recorded 23 October retirements, plus Gemini 2.0 Flash whose removal is now recorded following its registry addition; Sonnet 3.7 Thinking remains outside the registry by choice. The 20 May 2026 update removed all Gemini models, GPT-5.2 Codex and GPT-5.4 nano from Copilot on the web only, which is scoped narrower than the surface and is logged here rather than recorded as retirements. September 2026 pass: two posts read and recorded as announcements. The 3 September post deprecates Gemini 3.5 Flash, Gemini 3.6 Flash, Kimi K2.7 Code and Claude Opus 4.7 on 2 October 2026; the 18 September post deprecates Gemini 3.7 Flash, GPT-5.5, GPT-5.4, GPT-5.4 mini, GPT-5 mini and Grok 4.5 on 19 October 2026. Gemini 3.5 Flash and GPT-5.4 mini are outside the registry and were not added, under the rule above. Record each as retired once its date passes and GitHub has not withdrawn the notice. October 2026 pass: the 2 October and 19 October removals are recorded as retirements (eight events); Gemini 3.5 Flash and GPT-5.4 mini stay outside the registry. The 15 October post announces 16 November deprecations of Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra, recorded as announcements; Opus 4.8 remains available to individual annual-plan subscribers, so its removal will be partial.",
       "model_ids": [],
       "surface_ids": [
         "github-copilot",
@@ -13783,7 +16285,7 @@
       "state": "open",
       "working_claim": "The gpt-chat-latest alias endpoint in Microsoft Foundry was updated to route to GPT-5.6 Sol on or around 13 August 2026.",
       "reason": "gpt-chat-latest is a routing alias, not a distinct model: GPT-5.6 Sol's arrival in Microsoft Foundry is already recorded as foundry-gpt5-6-2026-07-09. The blog post, published 13 August 2026, confirms the alias is 'built on GPT-5.6 Sol' but names no versioned endpoint and states no effective date for the routing change — it is current-state documentation of a rolling alias. Without a dated, durable routing commitment there is no availability change to record; whether an alias re-point should ever be a milestone event is unsettled.",
-      "target": "The post has now been read: published 2026-08-13, it confirms the 'built on GPT-5.6 Sol' claim verbatim, names no versioned endpoint (e.g. gpt-chat-latest-YYYY-MM-DD), and gives no effective date for the routing change. Remaining question: whether a rolling alias re-point is worth a kind: milestone event at month precision, or only a note on the existing foundry-gpt5-6-2026-07-09 event. If Microsoft later documents a dated, stable routing commitment for the alias, that would settle it.",
+      "target": "The post has now been read: published 2026-08-13, it confirms the 'built on GPT-5.6 Sol' claim verbatim, names no versioned endpoint (e.g. gpt-chat-latest-YYYY-MM-DD), and gives no effective date for the routing change. Remaining question: whether a rolling alias re-point is worth a kind: milestone event at month precision, or only a note on the existing foundry-gpt5-6-2026-07-09 event. If Microsoft later documents a dated, stable routing commitment for the alias, that would settle it. October 2026 pass: Microsoft's 14 October post on GPT-chat-latest again re-points the alias, now described as GPT-6-level, with no versioned endpoint and no effective date; OpenAI's own API changelog updated its chat-latest snapshot on 7 October; and the Learn models-sold-by-Azure page lists gpt-chat-latest as a new model in Preview. The question whether alias re-points deserve a milestone event stays open.",
       "model_ids": [
         "gpt-5-6-sol"
       ],
@@ -13804,6 +16306,33 @@
             "model"
           ],
           "note": "Direct fetches returned 403; retrieved on 2026-08-17 through the r.jina.ai read-only mirror, which returned the full article body. Publication timestamp 2026-08-13T14:14:26-07:00 from the page metadata. Quote markup stripped; source spelling retained."
+        },
+        {
+          "publisher": "Microsoft Tech Community / Foundry Blog",
+          "title": "GPT-chat-latest gets more intelligent, interactive, and personal in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/gpt-chat-latest-gets-more-intelligent-interactive-and-personal/ba-p/4564574",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-14",
+          "source_type": "announcement",
+          "quote": "This update brings GPT-6-level intelligence to conversational and agentic applications, with stronger reasoning across coding, search, multilingual interactions, personalization, and task creation.",
+          "supports": [
+            "model"
+          ],
+          "note": "Direct fetches returned 403; read on 2026-10-26 through the r.jina.ai read-only mirror. The date is the post's embedded postTime, 2026-10-14T14:23:57.996-07:00 (Pacific time). The rendered page opens with the shell text 'This blog post cannot be found' for the t5-style URL, but the embedded data carries the post body. The post names no versioned endpoint and no effective date. Tech Community pages had no Wayback captures at the 26 October CDX lookup."
+        },
+        {
+          "publisher": "Microsoft Tech Community / Foundry Blog",
+          "title": "GPT-chat-latest gets more intelligent, interactive, and personal in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/gpt-chat-latest-gets-more-intelligent-interactive-and-personal/ba-p/4564574",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-14",
+          "source_type": "announcement",
+          "quote": "Developers can access these improvements through the existing GPT-chat-latest in Microsoft Foundry, no need to redeploy a new model.",
+          "supports": [
+            "model"
+          ]
         }
       ]
     },
@@ -14044,7 +16573,116 @@
       "state": "open",
       "working_claim": "The window from 19 September to 25 September 2026 has been covered by the candidate watcher's filings and by what those filings led to, not by a systematic sweep; research_cutoff was moved for the 27 September triage batch.",
       "reason": "Sixteen events were added from candidate issues #113, #115, #116, #117, #118, #119 and #120, and from first-party sources those candidates led to: Anthropic's Claude Opus 5.5 launch post, OpenAI's GPT-6 Sol and Luna launch post and API changelog, GitHub's GPT-6 Sol and Luna changelog, and Microsoft's 'More Models, One Copilot' notice for Microsoft 365 Copilot, Cowork and Copilot Studio. research_cutoff moved from 2026-09-18 to 2026-09-25 so the dataset does not carry evidence beyond its own stated reach. That move is bookkeeping, not evidence: absence of other events in the window means nothing.",
-      "target": "Sweep the usual sources across 19 to 25 September 2026 - GitHub Copilot changelog, Microsoft Foundry blog, retirement schedule and September retrospective when published, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms for OpenAI, Anthropic, Google, xAI, Moonshot, DeepSeek and Mistral - then either record what is found or close this item as confirming nothing else landed. Known gaps from this batch: the release stage Microsoft assigns Claude Opus 5.5 and GPT-6 Sol in Microsoft 365 Copilot, Cowork and Copilot Studio, recorded ga with lifecycle supported from a notice with no stage word, which the Copilot release notes, the Cowork picker page or the Copilot Studio model tables may settle; a Grok 4.7 arrival in Microsoft Foundry, which xAI's launch page implies only as unnamed 'cloud platforms'; GPT-6 Luna on any Copilot surface; the 23 September text of Microsoft's DeepSeek-V4.1-Flash post, which would collapse that event's window to a day; and GLM-5.3-Flash through Fireworks on Foundry, named in the same post, whose GLM-5.3 sibling is tracked as zai-glm-5-3-foundry-fireworks-2026. Archives: web.archive.org connections were reset at the TLS handshake from this session on 27 September 2026 and r.jina.ai refuses that host, so the archive.org availability API was used instead. It located captures for the GitHub changelogs (except Claude Opus 5.5's), xAI's and OpenAI's launch posts, the Azure blog and the OpenAI API changelog, all recorded without being read; it reports none for Anthropic's launch post, the three Tech Community posts or the Learn region table, and only pre-change captures of the Learn Claude and Fireworks pages. Those still need snapshots taken from a browser and backfilled. Stage evidence read on 27 September: the Microsoft 365 Copilot release notes' 23 September edition, the Cowork picker page and the Copilot Studio availability table list neither Claude Opus 5.5 nor GPT-6 Sol.",
+      "target": "Sweep the usual sources across 19 to 25 September 2026 - GitHub Copilot changelog, Microsoft Foundry blog, retirement schedule and September retrospective when published, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms for OpenAI, Anthropic, Google, xAI, Moonshot, DeepSeek and Mistral - then either record what is found or close this item as confirming nothing else landed. Known gaps from this batch: the release stage Microsoft assigns Claude Opus 5.5 and GPT-6 Sol in Microsoft 365 Copilot, Cowork and Copilot Studio, recorded ga with lifecycle supported from a notice with no stage word, which the Copilot release notes, the Cowork picker page or the Copilot Studio model tables may settle; a Grok 4.7 arrival in Microsoft Foundry, which xAI's launch page implies only as unnamed 'cloud platforms'; GPT-6 Luna on any Copilot surface; the 23 September text of Microsoft's DeepSeek-V4.1-Flash post, which would collapse that event's window to a day; and GLM-5.3-Flash through Fireworks on Foundry, named in the same post, whose GLM-5.3 sibling is tracked as zai-glm-5-3-foundry-fireworks-2026. Archives: web.archive.org connections were reset at the TLS handshake from this session on 27 September 2026 and r.jina.ai refuses that host, so the archive.org availability API was used instead. It located captures for the GitHub changelogs (except Claude Opus 5.5's), xAI's and OpenAI's launch posts, the Azure blog and the OpenAI API changelog, all recorded without being read; it reports none for Anthropic's launch post, the three Tech Community posts or the Learn region table, and only pre-change captures of the Learn Claude and Fireworks pages. Those still need snapshots taken from a browser and backfilled. Stage evidence read on 27 September: the Microsoft 365 Copilot release notes' 23 September edition, the Cowork picker page and the Copilot Studio availability table list neither Claude Opus 5.5 nor GPT-6 Sol. Update of 26 October 2026: the Grok 4.7 Foundry gap is closed by foundry-grok4-7-2026-10-06, and the Copilot stage question for Claude Opus 5.5 and GPT-6 Sol is unchanged, since the 30 September Copilot notice for Claude Sonnet 5.5 and GPT-6.1 Sol also carries no stage word.",
+      "model_ids": [],
+      "surface_ids": []
+    },
+    {
+      "id": "cowork-grok4-7-arrival-2026",
+      "state": "open",
+      "working_claim": "Grok 4.7 is selectable in Microsoft Copilot Cowork, provided by xAI as an independent processor.",
+      "reason": "The Learn Cowork models page read on 26 October 2026 (updated_at 2026-10-24) lists 'Grok 4.7 | Strong on long documents, coding, and multi-step tasks. | Provided by xAI as an independent processor.', while a stale copy of the same page at a second path (updated 14 September) does not; but a Learn revision dates the page, not the arrival. Microsoft's 12 September Copilot notice ('Expanding model choice in Copilot with Grok', postTime 2026-09-12) says 'Today we are expanding model choice in Copilot with the addition of Grok models from SpaceXAI', names no version, scopes access to the Microsoft Frontier Program in Word, Excel and PowerPoint rather than Cowork, and excludes EU, EFTA and UK customers during the preview. No Microsoft Copilot notice read names Grok 4.7 in Cowork, so no availability event is recorded.",
+      "target": "Pull CDX captures of https://learn.microsoft.com/en-us/copilot/cowork/cowork-models and find the first revision listing Grok 4.7, or find a Microsoft Copilot notice naming 4.7 in Cowork; record a bounded window if captures bracket it. Already searched on 26 October 2026: the Microsoft Copilot Blog (20 posts from 2 September to 23 October), the Microsoft 365 Copilot release notes (edition of 6 October) and the Copilot Studio tables, none of which names Grok 4.7 for Cowork.",
+      "model_ids": [
+        "grok-4-7"
+      ],
+      "surface_ids": [
+        "m365-cowork"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Choose a model for Copilot Cowork",
+          "url": "https://learn.microsoft.com/en-us/copilot/cowork/cowork-models",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "source_type": "documentation",
+          "quote": "Grok 4.7 | Strong on long documents, coding, and multi-step tasks. | Provided by xAI as an independent processor.",
+          "supports": [
+            "model",
+            "exposure"
+          ],
+          "note": "Read on 26 October 2026 at the canonical path (updated_at 2026-10-24T01:03:00Z). Current-state evidence, not a date. The stale copy at /en-us/microsoft-365/copilot/cowork/cowork-models (updated_at 2026-09-14) lacks the row. No archived_url: no Wayback capture was pulled for this page in this batch."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Expanding model choice in Copilot with Grok",
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/expanding-model-choice-in-copilot-with-grok/4555749",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-12",
+          "source_type": "announcement",
+          "quote": "Today we are expanding model choice in Copilot with the addition of Grok models from SpaceXAI",
+          "supports": [
+            "date"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The date is the post's embedded postTime, 2026-09-12T08:00:30.775-07:00 (Pacific time). The post says 'Access to Grok models is rolling out through the Microsoft Frontier Program in Microsoft Word, Excel, and PowerPoint.' and 'Grok is not available to Frontier customers in the European Union (EU), European Free Trade Association (EFTA), and the United Kingdom during the preview.' It names no Grok version."
+        }
+      ]
+    },
+    {
+      "id": "foundry-model-mondays-2026-10-19-arrivals",
+      "state": "open",
+      "working_claim": "NVIDIA Nemotron 3.5 Super VL (120B-A12B) and Reflection AI's Beam 1.0 (501B-A23B) became deployable in Microsoft Foundry through the Hugging Face collection in October 2026.",
+      "reason": "Microsoft's Model Mondays post of 19 October says the three models are 'newly available' and dates none of them; Muse Spark Open has its own dated post and is recorded as foundry-muse-spark-open-2026-10-15, but the other two do not. Both vendors date their own releases: NVIDIA's post of 15 October 2026 ('NVIDIA today released Nemotron 3.5 Super VL, an open 120-billion-parameter model that delivers the fastest task completion and highest accuracy for specialized always-on agents.') and Reflection's post of 16 October 2026 ('Today, we have released Beam’s model weights on Hugging Face under an Apache 2.0 license.'), so each Foundry arrival falls between its vendor release and 19 October. A window whose start is only the vendor's date is the build's own floor, not an observation, so no window is recorded. Neither model is registered: NVIDIA has no vendor surface and Reflection AI is a new vendor, a registry decision taken deliberately rather than by a backlog item, on the zai-glm-5-3-foundry-fireworks-2026 precedent.",
+      "target": "Find the first catalogue or Learn Hugging Face-collection revision listing each model via CDX, or a dated Foundry post; then register the models and record the arrivals, Nemotron 3.5 Super VL under scope extended beside nemotron-3-5-lightning. Not yet searched beyond the Model Mondays post and the vendors' own posts: no Foundry post, catalogue revision or Learn page was checked for a dated listing of either model.",
+      "model_ids": [],
+      "surface_ids": [
+        "microsoft-foundry"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Now in Foundry: Meta Muse Spark Open, NVIDIA Nemotron 3.5 Super VL, and Reflection Beam",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/now-in-foundry-meta-muse-spark-open-nvidia-nemotron-3-5-super-vl/ba-p/4565899",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-19",
+          "source_type": "announcement",
+          "quote": "This week's Model Mondays edition highlights three Hugging Face models newly available in Microsoft Foundry, giving developers more open-weight options for enterprise coding and agentic work: Meta's Muse Spark Open, NVIDIA's Nemotron 3.5 Super VL, and Reflection's Beam 1.0.",
+          "supports": [
+            "model"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The date is the post's embedded postTime, 2026-10-19T10:08:14.641-07:00 (Pacific time). It dates none of the three models. Tech Community pages had no Wayback captures at the 26 October CDX lookup."
+        },
+        {
+          "publisher": "NVIDIA",
+          "title": "Open From Data Center to Desktop: NVIDIA Expands Nemotron Family With Highest Efficiency Super VL and Bolt Models",
+          "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-15",
+          "source_type": "announcement",
+          "quote": "NVIDIA today released Nemotron 3.5 Super VL, an open 120-billion-parameter model that delivers the fastest task completion and highest accuracy for specialized always-on agents.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The page's dateline reads 'October 15, 2026' and article:published_time is 2026-10-15T15:00:24Z. The Hugging Face repository nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16 was created on 2026-10-12 and its model card gives 'Hugging Face - 10/15/2026' as the release date."
+        },
+        {
+          "publisher": "Reflection AI",
+          "title": "Beam is now available",
+          "url": "https://reflection.ai/blog/beam-is-available",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-16",
+          "source_type": "announcement",
+          "quote": "Today, we have released Beam’s model weights on Hugging Face under an Apache 2.0 license.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The page's dateline reads 'October 16, 2026'. The repository reflection/Beam-1.0-501B-A23B was created on 2026-10-07, before the release, so creation is not used as the date. The vendor's posts and model card say 'Beam' without '1.0'; the repository and Microsoft's post say Beam-1.0."
+        }
+      ]
+    },
+    {
+      "id": "sweep-2026-09-26-to-10-23",
+      "state": "open",
+      "working_claim": "The window from 26 September to 23 October 2026 has been covered by the candidate watcher's filings (#124 to #146), by the first-party sources they led to, and by a keyword sweep of the watcher's model-tracking category, not by a systematic sweep; research_cutoff was moved to 23 October for the 26 October triage batch.",
+      "reason": "Forty-two events and 18 registry entries (17 models and the claude-5-5 family, with the generation, series and model-line records they needed) were added from candidate issues #124 to #146 and from the first-party sources those candidates led to: the Anthropic, OpenAI, Google, Mistral, xAI, Meta, DeepSeek, Cohere and Microsoft launch posts, the GitHub Copilot changelog, and the Gemini and OpenAI API changelogs. The keyword sweep found the Muse Wonder release, which no candidate carried. Perplexity's pplx-decider models, inclusionAI's Ling-3.1-flash, the Foundry Managed Fine-Tuning additions and the OpenAI Decisions API were considered and not recorded: the first two are not from a tracked vendor and no Microsoft surface carries them, and the last two are a service and an API feature rather than model arrivals. research_cutoff moved from 2026-09-25 to 2026-10-23 so the dataset does not carry evidence beyond its own stated reach. That move is bookkeeping, not evidence: absence of other events in the window means nothing.",
+      "target": "Sweep the usual sources across 26 September to 23 October 2026 - GitHub Copilot changelog, Microsoft Foundry blog, retirement schedule and October retrospective when published, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms for OpenAI, Anthropic, Google, xAI, Moonshot, DeepSeek, Mistral and Meta - then either record what is found or close this item as confirming nothing else landed. Known gaps from this batch: the start of the phased rollout of GPT-6.1 Sol and Claude Sonnet 5.5 to Word, Excel, PowerPoint and Chat in Microsoft 365 Copilot, announced on 30 September for 'the coming week', which the 6 October release notes do not name; Claude Haiku 5.5 and Gemini 4 Argon on any Microsoft Copilot surface and Gemini 4 Argon in Foundry, none of which was found (Azure Databricks carried Argon from 13 October, which is not a tracked surface); the release stage Microsoft assigns Claude Sonnet 5.5 and GPT-6.1 Sol in Cowork and Copilot Studio, recorded ga with lifecycle supported from a notice with no stage word; Grok 4.7 in Cowork, tracked as cowork-grok4-7-arrival-2026; Nemotron 3.5 Super VL and Beam 1.0 in Foundry, tracked as foundry-model-mondays-2026-10-19-arrivals; claude-opus-5-5-fast, listed GA hosted on Azure on the Learn Claude page with no announcement read; Mistral's Voxtral 3 speech models (21 October) and Google's Gemini 3.8 Flash TTS pair (22 September), vendor modality releases not yet recorded; Google's 8 October API deprecations of gemini-3.7-flash and gemini-3.5-flash, not recorded because neither has a Gemini API arrival event; Mistral Large 4's open-weight release, promised for the end of October; the OpenAI Decisions API on Foundry (22 October) and OpenAI's own general availability (22 October), treated as an API feature built on GPT-6 Luna rather than a model; and the vendor dates for Muse Spark (August) and Muse Glimmer. Archives: archived_url values were added for dated pages from Wayback captures located through the CDX API on 26 October 2026 (OpenAI's GPT-6.1 Sol post, eight GitHub changelog entries, Mistral's and xAI's launch posts, the Nano Banana 2.1 model card, Cohere's Embed 5 changelog entry, the DeepSeek and Muse Spark Open Hugging Face repositories, Meta's developer blog and Microsoft AI's streaming transcription post), and none of those captures was read. None was attached to the rolling pages whose only captures predate the claims (the OpenAI and Gemini API changelogs and the Learn models-sold-by-Azure page), and Tech Community and anthropic.com pages had no captures; those still need snapshots taken from a browser and backfilled.",
       "model_ids": [],
       "surface_ids": []
     }

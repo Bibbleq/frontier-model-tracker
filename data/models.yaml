@@ -49,6 +49,9 @@ series:
   - id: llama
     display_name: "Llama"
     vendor: Meta
+  - id: muse
+    display_name: "Muse"
+    vendor: Meta
   - id: mistral
     display_name: "Mistral"
     vendor: Mistral AI
@@ -146,6 +149,10 @@ generations:
     display_name: "Gemini 3"
     vendor: Google
     series: gemini
+  - id: gemini-4
+    display_name: "Gemini 4"
+    vendor: Google
+    series: gemini
   - id: grok-3
     display_name: "Grok 3"
     vendor: xAI
@@ -158,8 +165,20 @@ generations:
     display_name: "Llama 2"
     vendor: Meta
     series: llama
+  - id: muse-spark
+    display_name: "Muse Spark"
+    vendor: Meta
+    series: muse
+  - id: muse-wonder
+    display_name: "Muse Wonder"
+    vendor: Meta
+    series: muse
   - id: mistral-3
     display_name: "Mistral 3"
+    vendor: Mistral AI
+    series: mistral
+  - id: mistral-4
+    display_name: "Mistral 4"
     vendor: Mistral AI
     series: mistral
   - id: deepseek-r1
@@ -260,6 +279,10 @@ model_lines:
     display_name: "MAI Cyber"
     vendor: Microsoft
     series: mai
+  - id: grok-voice
+    display_name: "Grok Voice"
+    vendor: xAI
+    series: grok
 
 models:
   # ---------------------------------------------------------------- OpenAI
@@ -480,6 +503,12 @@ models:
     vendor: OpenAI
     generation: gpt-6
     note: "OpenAI's mid-tier GPT-6 model, released 22 September 2026 as the successor to GPT-5.6 Sol at half its API price. No family is declared for the GPT-6 trio, matching gpt-6-astra."
+  - id: gpt-6-1-sol
+    display_name: "GPT-6.1 Sol"
+    vendor: OpenAI
+    generation: gpt-6
+    aliases: ["gpt-6.1-sol", "GPT 6.1 Sol"]
+    note: "OpenAI calls it an upgrade to GPT-6 Sol, released 29 September 2026. No family is declared, matching gpt-6-sol."
   - id: gpt-6-luna
     display_name: "GPT-6 Luna"
     vendor: OpenAI
@@ -593,9 +622,24 @@ models:
   - id: claude-opus-5-5
     display_name: "Claude Opus 5.5"
     vendor: Anthropic
+    family: claude-5-5
     generation: claude-5
     model_line: claude-opus
-    note: "Anthropic calls it the first model in a new Claude 5.5 family, with Sonnet 5.5 and Haiku 5.5 to follow. Classified under the Claude 5 generation, as GPT-5.6 Sol sits under GPT-5; a claude-5-5 family can be added when a second member is released."
+    note: "Released 22 September 2026 as the first model in Anthropic's Claude 5.5 family, which now has three members: Opus 5.5 (22 September), Sonnet 5.5 (28 September) and Haiku 5.5 (7 October 2026). Classified under the Claude 5 generation, as GPT-5.6 Sol sits under GPT-5, with the claude-5-5 family grouping the three."
+  - id: claude-sonnet-5-5
+    display_name: "Claude Sonnet 5.5"
+    vendor: Anthropic
+    family: claude-5-5
+    generation: claude-5
+    model_line: claude-sonnet
+    note: "Released 28 September 2026 as the second model of the Claude 5.5 family."
+  - id: claude-haiku-5-5
+    display_name: "Claude Haiku 5.5"
+    vendor: Anthropic
+    family: claude-5-5
+    generation: claude-5
+    model_line: claude-haiku
+    note: "Released 7 October 2026 as the third member of the Claude 5.5 family and the first Haiku with effort controls."
   - id: claude-fable-5
     display_name: "Claude Fable 5"
     vendor: Anthropic
@@ -669,6 +713,20 @@ models:
     modality: voice
     generation: gemini-3
     note: "The high-reasoning variant of Gemini 3.8 Live, released alongside it."
+  - id: gemini-4-argon
+    display_name: "Gemini 4 Argon"
+    vendor: Google
+    generation: gemini-4
+    aliases: ["gemini-4-argon"]
+    note: "Google's first Gemini 4 model; rolled out to Fairwind Program cyber defenders from 30 September 2026 and generally from 13 October 2026."
+  - id: nano-banana-2-1
+    display_name: "Nano Banana 2.1"
+    vendor: Google
+    generation: gemini-3
+    modality: image
+    scope: extended
+    aliases: ["gemini-nano-banana-2.1", "Gemini Nano Banana 2.1"]
+    note: "Google's model card says it is a member of the Gemini 3 series based on Gemini 3.6 Flash and an update to Nano Banana 2 (gemini-3.1-flash-image), which is not registered; recorded under extended scope because it is a point release in an image line whose earlier members are unrecorded."
   - id: grok-3
     display_name: "Grok 3"
     vendor: xAI
@@ -716,7 +774,14 @@ models:
     display_name: "Grok 4.7"
     vendor: xAI
     generation: grok-4
-    note: "Released 21 September 2026. xAI's launch page says the model is also served through model routers and cloud platforms without naming any; no Microsoft Foundry arrival has been sourced."
+    note: "Released 21 September 2026. xAI's launch page says the model is also served through model routers and cloud platforms without naming any. Microsoft Foundry arrival is now recorded (foundry-grok4-7-2026-10-06); the Cowork picker lists it undated (cowork-grok4-7-arrival-2026)."
+  - id: grok-voice-3
+    display_name: "Grok Voice 3.0"
+    vendor: xAI
+    model_line: grok-voice
+    modality: voice
+    aliases: ["Grok Voice 3", "grok-voice-latest"]
+    note: "xAI's speech-to-speech model, recorded as the vendor's flagship for the voice modality on the same reasoning as gpt-live-1; Grok Voice 2.0 is not registered because no dated release has been read."
   - id: llama-2
     display_name: "Llama 2"
     vendor: Meta
@@ -735,6 +800,12 @@ models:
     generation: mistral-3
     aliases: ["Medium 3.5"]
     note: "Released in public preview on 28 April 2026 per Mistral's model card; the card now labels it GA, a transition not yet dated."
+  - id: mistral-large-4
+    display_name: "Mistral Large 4"
+    vendor: Mistral AI
+    generation: mistral-4
+    aliases: ["ML4", "Mistral Large 4 Preview"]
+    note: "A 1-trillion-parameter mixture-of-experts model with 52 billion active parameters per Mistral's launch page; public preview API on Mistral Studio from 6 October 2026, with weights promised by the end of that month (not yet verified)."
   - id: deepseek-r1
     display_name: "DeepSeek-R1"
     vendor: DeepSeek
@@ -777,8 +848,17 @@ models:
     display_name: "DeepSeek V4.1 Flash"
     vendor: DeepSeek
     generation: deepseek-v4
+    superseded_by: deepseek-v4-1-flash-1017
     aliases: ["DeepSeek-V4.1-Flash"]
     note: "A 552B-parameter multimodal mixture-of-experts model taking image and text input, the first of DeepSeek's V4.1 architecture. Microsoft Foundry lists it both Direct from Azure and as 'FW-DeepSeek-V4.1-Flash' through Fireworks AI."
+  - id: deepseek-v4-1-flash-1017
+    display_name: "DeepSeek-V4.1-Flash-1017"
+    vendor: DeepSeek
+    generation: deepseek-v4
+    scope: extended
+    supersedes: deepseek-v4-1-flash
+    aliases: ["DeepSeek V4.1 Flash 1017"]
+    note: "The dated October 2026 revision of V4.1 Flash, on the pattern of deepseek-v4-flash-0731: DeepSeek ships it as its own weights repository. DeepSeek's API now serves deepseek-flash with it."
   - id: kimi-k2-5
     display_name: "Kimi K2.5"
     vendor: Moonshot AI
@@ -814,6 +894,24 @@ models:
     aliases: ["qwen3-vl-2b-instruct"]
     note: "A vision-language model recorded under the image modality because modality covers what a model processes as well as what it produces: it reads images and writes text, and generates no images. The catalogue id in Foundry Local's SDK sample is qwen3-vl-2b-instruct."
 
+  # ------------------------------------------------------------- Meta
+  - id: muse-spark-open
+    display_name: "Muse Spark Open"
+    vendor: Meta
+    generation: muse-spark
+    aliases: ["Muse-Spark-Open-816B-A42B", "Muse-Spark-Open-816B-A42B-NVFP4", "meta-models--muse-spark-open-816b-a42b-nvfp4"]
+    note: "The open-weight version of Muse Spark (816B mixture-of-experts, 42B active) under the Muse Model License. Muse Spark itself (released August 2026 per Meta) and Muse Glimmer are not registered; see meta-muse-glimmer-release-evidence."
+  - id: muse-wonder
+    display_name: "Muse Wonder"
+    vendor: Meta
+    generation: muse-wonder
+    aliases: ["muse-wonder-1.0"]
+  - id: muse-wonder-full
+    display_name: "Muse Wonder Full"
+    vendor: Meta
+    generation: muse-wonder
+    aliases: ["muse-wonder-full-1.0"]
+
   # ------------------------------------------------------------- Cohere
   - id: cohere-parse-v5
     display_name: "Cohere Parse v5"
@@ -822,6 +920,18 @@ models:
     scope: extended
     aliases: ["Cohere-parse-v5", "Cohere Parse"]
     note: "A vision-language document-parsing model: it reads images, tables and forms and writes Markdown, so it is recorded under the image modality on the same reasoning as qwen-3-5-vision. Registered under extended scope as a catalogue entry. Cohere's earlier Embed and Rerank models in Foundry remain unrecorded and stay parked in meta-cohere-flux-mai-foundry-history; no Cohere vendor surface exists, so lag for this model is unknown_no_baseline by construction."
+  - id: cohere-embed-v5
+    display_name: "Cohere Embed 5"
+    vendor: Cohere
+    scope: extended
+    aliases: ["Embed V5", "embed-v5.0-pro", "embed-v5.0-fast", "Cohere-Embed-V5-Pro", "Cohere-Embed-V5-Fast"]
+    note: "One registry id for the Pro and Fast variants, which share an embedding space. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning; no Cohere vendor surface exists, so lag is unknown_no_baseline by construction although Cohere dates its own release to 30 September 2026."
+  - id: cohere-rerank-v5
+    display_name: "Cohere Rerank 5"
+    vendor: Cohere
+    scope: extended
+    aliases: ["Rerank V5", "rerank-v5.0-pro", "rerank-v5.0-fast", "Cohere-rerank-v5-pro", "Cohere-rerank-v5-fast"]
+    note: "One registry id for the Pro and Fast variants. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning; no Cohere vendor surface exists, so lag is unknown_no_baseline by construction although Cohere dates its own release to 21 October 2026."
 
   # ------------------------------------------------------------- NVIDIA
   - id: nemotron-speech-streaming-en
@@ -920,6 +1030,27 @@ models:
     vendor: Microsoft
     modality: image
     model_line: mai-image
+  - id: microsoft-decision-1
+    display_name: "Microsoft-Decision-1"
+    vendor: Microsoft
+    scope: extended
+    aliases: ["Microsoft Decision 1"]
+    note: "Deliberately unclassified: it is not an MAI-branded model. Microsoft says it post-trained Qwen3.5-9B and will later rebase it on MAI and OpenAI models, so it has no generation or model line of its own. Recorded under extended scope as a catalogue entry on the microsoft-ai surface, where the Foundry catalogue is the vendor channel for Microsoft's own models."
+  - id: mai-transcribe-2-streaming
+    display_name: "MAI-Transcribe-2-Streaming"
+    vendor: Microsoft
+    modality: audio
+    model_line: mai-transcribe
+  - id: mai-voice-2-1
+    display_name: "MAI-Voice-2.1"
+    vendor: Microsoft
+    modality: voice
+    model_line: mai-voice
+  - id: mai-voice-2-1-flash
+    display_name: "MAI-Voice-2.1-Flash"
+    vendor: Microsoft
+    modality: voice
+    model_line: mai-voice
 
 families:
   - id: gpt-transcribe
@@ -945,4 +1076,7 @@ families:
     vendor: Anthropic
   - id: claude-4
     display_name: "Claude 4 family"
+    vendor: Anthropic
+  - id: claude-5-5
+    display_name: "Claude 5.5 family"
     vendor: Anthropic
