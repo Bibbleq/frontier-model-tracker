@@ -10029,7 +10029,7 @@
         "lifecycle": "supported"
       },
       "evidence_note": "Microsoft announced Cohere Parse v5 as available in the Microsoft Foundry model catalogue, sold directly by Azure and deployed into the customer's own Foundry environment. The announcement states no release stage; Microsoft's catalogue documentation and the retirement schedule both list Cohere-parse-v5 as Preview, the latter with a 15 December 2026 retirement date.",
-      "caveat": "The stage rests on current-state documentation read a week after the arrival, which is why lifecycle is supported rather than confirmed. Recorded under extended scope as a catalogue entry: it is a document-parsing model rather than a frontier chat model, and no Cohere vendor surface exists, so lag is unknown_no_baseline by construction. Cohere's Embed and Rerank catalogue history is not recorded and remains parked.",
+      "caveat": "The stage rests on current-state documentation read a week after the arrival, which is why lifecycle is supported rather than confirmed. Recorded under extended scope as a catalogue entry: it is a document-parsing model rather than a frontier chat model. Cohere's own Parse v5 release is not dated here, so lag is unknown_no_baseline until a dated Cohere source is read; the cohere vendor surface was added in October 2026 when Embed 5 and Rerank 5 arrived with dated Cohere releases. Cohere's earlier Embed and Rerank catalogue history is not recorded and remains parked.",
       "sources": [
         {
           "publisher": "Microsoft Community Hub",
@@ -12678,6 +12678,84 @@
       ]
     },
     {
+      "id": "cohere-embed-v5-2026-09-30",
+      "kind": "availability",
+      "date": {
+        "start": "2026-09-30",
+        "precision": "day"
+      },
+      "surface_id": "cohere",
+      "model_ids": [
+        "cohere-embed-v5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Cohere released Embed 5 on 30 September 2026 as two generally available models, embed-v5.0-pro and embed-v5.0-fast, sharing one embedding space, through the Embed API and Model Vault, with Microsoft Foundry and Amazon SageMaker carrying both variants the same day. Priced at $0.12 per million tokens for Pro and $0.08 for Fast on Cohere's API.",
+      "caveat": "The first event on the cohere vendor surface, added in October 2026 once three Cohere models carried dated Cohere releases; it exists to anchor lag for foundry-cohere-embed-v5-2026-09-30, which is the same day. The changelog entry and the blog post carry the same date; the blog is the source for the stage word. One registry id covers Pro and Fast, so model_claim is specific for that id rather than for each variant.",
+      "sources": [
+        {
+          "publisher": "Cohere",
+          "title": "Announcing Cohere's Embed 5 Models",
+          "url": "https://docs.cohere.com/changelog/embed-v5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261018004842/https://docs.cohere.com/changelog/embed-v5",
+          "quote": "We’re pleased to announce the release of Embed 5, Cohere’s most powerful embeddings family yet.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The changelog entry is dated September 30, 2026 (its source file is pages/changelog/2026-09-30-embed-v5.mdx). The Wayback capture of 18 October postdates the entry; it was located through the CDX API and not read."
+        },
+        {
+          "publisher": "Cohere",
+          "title": "Announcing Cohere's Embed 5 Models",
+          "url": "https://docs.cohere.com/changelog/embed-v5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20261018004842/https://docs.cohere.com/changelog/embed-v5",
+          "quote": "Embed 5 is available through the Embed API, as well as Microsoft Foundry (Pro, Fast) and Amazon SageMaker (Pro, Fast).",
+          "supports": [
+            "model"
+          ]
+        },
+        {
+          "publisher": "Cohere",
+          "title": "Embed 5: Frontier Embedding Models for Enterprise",
+          "url": "https://cohere.com/blog/embed-5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "Today, we're releasing Embed 5, a new family of embeddings models at the frontier of high-quality enterprise retrieval.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The page's JSON-LD datePublished is 2026-09-30T09:51:00Z and the visible dateline reads 'Sep 30, 2026'. No archived_url: no Wayback lookup was run for this page in this batch."
+        },
+        {
+          "publisher": "Cohere",
+          "title": "Embed 5: Frontier Embedding Models for Enterprise",
+          "url": "https://cohere.com/blog/embed-5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-09-30",
+          "source_type": "announcement",
+          "quote": "Embed 5 is generally available today on the Cohere API and Model Vault, Microsoft Foundry, and Amazon SageMaker.",
+          "supports": [
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
       "id": "cowork-gpt6-1-sol-2026-09-30",
       "kind": "availability",
       "date": {
@@ -12851,7 +12929,13 @@
         "lifecycle": "supported"
       },
       "evidence_note": "Microsoft announced Cohere Embed V5 Pro and Embed V5 Fast in Microsoft Foundry on 30 September 2026, the day Cohere released Embed 5, as multimodal embedding models that share one embedding space and support more than 100 languages and a range of Matryoshka vector sizes. Cohere prices Pro at $0.12 and Fast at $0.08 per million tokens on its own API.",
-      "caveat": "Microsoft's post carries no stage word; Cohere's own statement that Embed 5 is 'generally available today' on the Foundry route among others is the only stage evidence, which is why lifecycle is supported. The Learn catalogue page read on 26 October still lists Cohere-rerank-v4.0 rows and no Embed V5 row, so no Microsoft documentation corroborates the listing. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning, with one registry id for the Pro and Fast variants. Cohere's release and the Foundry arrival are the same day, but no Cohere vendor surface exists, so the lag is unknown_no_baseline by construction. techcommunity.microsoft.com answers this environment's direct requests with 403, so the post was read through r.jina.ai.",
+      "caveat": "Microsoft's post carries no stage word; Cohere's own statement that Embed 5 is 'generally available today' on the Foundry route among others is the only stage evidence, which is why lifecycle is supported. The Learn catalogue page read on 26 October still lists Cohere-rerank-v4.0 rows and no Embed V5 row, so no Microsoft documentation corroborates the listing. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning, with one registry id for the Pro and Fast variants. Cohere's release and the Foundry arrival are the same day, recorded as cohere-embed-v5-2026-09-30, so the lag is zero days. techcommunity.microsoft.com answers this environment's direct requests with 403, so the post was read through r.jina.ai.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "cohere-embed-v5-2026-09-30"
+        }
+      ],
       "sources": [
         {
           "publisher": "Microsoft Community Hub",
@@ -14742,6 +14826,82 @@
       ]
     },
     {
+      "id": "cohere-rerank-v5-2026-10-21",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-21",
+        "precision": "day"
+      },
+      "surface_id": "cohere",
+      "model_ids": [
+        "cohere-rerank-v5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Cohere released Rerank 5 on 21 October 2026 as two generally available models, rerank-v5.0-pro and rerank-v5.0-fast, with a Context Focus capability that returns the most relevant passages, through the Rerank API and Model Vault, with Microsoft Foundry, Amazon SageMaker and Cohere's North product carrying both variants the same day. Priced at $0.05 per million tokens for Pro and $0.02 for Fast on Cohere's API.",
+      "caveat": "Anchors lag for foundry-cohere-rerank-v5-2026-10-21, which is the same day. The changelog entry and the blog post carry the same date; the blog is the source for the stage word. One registry id covers Pro and Fast.",
+      "sources": [
+        {
+          "publisher": "Cohere",
+          "title": "Announcing Cohere's Rerank 5 Models",
+          "url": "https://docs.cohere.com/changelog/rerank-v5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-21",
+          "source_type": "changelog",
+          "quote": "We’re pleased to announce the release of Rerank 5, Cohere’s most advanced reranking models for enterprise retrieval: sharper search, with fewer tokens sent to your LLM.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The changelog entry is dated October 21, 2026 (its source file is pages/changelog/2026-10-21-rerank-v5.mdx) and is the first entry on the changelog index. No archived_url: no Wayback lookup was run for this page in this batch."
+        },
+        {
+          "publisher": "Cohere",
+          "title": "Announcing Cohere's Rerank 5 Models",
+          "url": "https://docs.cohere.com/changelog/rerank-v5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-21",
+          "source_type": "changelog",
+          "quote": "Rerank 5 is available through the Rerank API, as well as Microsoft Foundry (Pro, Fast) and Amazon SageMaker (Pro, Fast).",
+          "supports": [
+            "model"
+          ]
+        },
+        {
+          "publisher": "Cohere",
+          "title": "Introducing Rerank 5: precise, efficient enterprise document retrieval",
+          "url": "https://cohere.com/blog/rerank-5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-21",
+          "source_type": "announcement",
+          "quote": "Today, we're releasing Rerank 5, our most advanced enterprise retrieval models yet, available in Pro and Fast tiers.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The page's JSON-LD datePublished is 2026-10-21T15:00:00Z and the visible dateline reads 'Oct 21, 2026'. No archived_url: no Wayback lookup was run for this page in this batch."
+        },
+        {
+          "publisher": "Cohere",
+          "title": "Introducing Rerank 5: precise, efficient enterprise document retrieval",
+          "url": "https://cohere.com/blog/rerank-5",
+          "primary": true,
+          "retrieved_at": "2026-10-26",
+          "published_at": "2026-10-21",
+          "source_type": "announcement",
+          "quote": "Rerank 5 Pro and Rerank 5 Fast are generally available through the Cohere API, Model Vault, Microsoft Foundry (Fast, Pro), and Amazon SageMaker (Fast, Pro), and to all North users.",
+          "supports": [
+            "lifecycle"
+          ]
+        }
+      ]
+    },
+    {
       "id": "foundry-cohere-rerank-v5-2026-10-21",
       "kind": "availability",
       "date": {
@@ -14763,7 +14923,13 @@
         "lifecycle": "supported"
       },
       "evidence_note": "Microsoft announced Cohere Rerank v5 available in Microsoft Foundry on 21 October 2026, the day Cohere released Rerank 5, in Fast and Pro versions with a new Context Focus capability that returns the most relevant passages within reranked documents. Cohere prices Pro at $0.05 and Fast at $0.02 per million tokens on its own API.",
-      "caveat": "Microsoft's post carries no stage word; Cohere's own statement that Rerank 5 Pro and Fast are 'generally available' through Microsoft Foundry among other routes is the only stage evidence, which is why lifecycle is supported. The Learn catalogue page read on 26 October lists Cohere-rerank-v4.0-pro and Cohere-rerank-v4.0-fast and no Rerank V5 row, so no Microsoft documentation corroborates the listing. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning, with one registry id for the Pro and Fast variants. Cohere's release and the Foundry arrival are the same day, but no Cohere vendor surface exists, so the lag is unknown_no_baseline by construction. techcommunity.microsoft.com answers this environment's direct requests with 403, so the post was read through r.jina.ai.",
+      "caveat": "Microsoft's post carries no stage word; Cohere's own statement that Rerank 5 Pro and Fast are 'generally available' through Microsoft Foundry among other routes is the only stage evidence, which is why lifecycle is supported. The Learn catalogue page read on 26 October lists Cohere-rerank-v4.0-pro and Cohere-rerank-v4.0-fast and no Rerank V5 row, so no Microsoft documentation corroborates the listing. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning, with one registry id for the Pro and Fast variants. Cohere's release and the Foundry arrival are the same day, recorded as cohere-rerank-v5-2026-10-21, so the lag is zero days. techcommunity.microsoft.com answers this environment's direct requests with 403, so the post was read through r.jina.ai.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "cohere-rerank-v5-2026-10-21"
+        }
+      ],
       "sources": [
         {
           "publisher": "Microsoft Community Hub",

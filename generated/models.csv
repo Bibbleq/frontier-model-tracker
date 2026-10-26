@@ -116,8 +116,8 @@ muse-spark-open,Muse Spark Open,Meta,text,frontier,muse,muse-spark,,,Muse-Spark-
 muse-wonder,Muse Wonder,Meta,text,frontier,muse,muse-wonder,,,muse-wonder-1.0,,,1
 muse-wonder-full,Muse Wonder Full,Meta,text,frontier,muse,muse-wonder,,,muse-wonder-full-1.0,,,1
 cohere-parse-v5,Cohere Parse v5,Cohere,image,extended,,,,,Cohere-parse-v5 | Cohere Parse,,,1
-cohere-embed-v5,Cohere Embed 5,Cohere,text,extended,,,,,Embed V5 | embed-v5.0-pro | embed-v5.0-fast | Cohere-Embed-V5-Pro | Cohere-Embed-V5-Fast,,,1
-cohere-rerank-v5,Cohere Rerank 5,Cohere,text,extended,,,,,Rerank V5 | rerank-v5.0-pro | rerank-v5.0-fast | Cohere-rerank-v5-pro | Cohere-rerank-v5-fast,,,1
+cohere-embed-v5,Cohere Embed 5,Cohere,text,extended,,,,,Embed V5 | embed-v5.0-pro | embed-v5.0-fast | Cohere-Embed-V5-Pro | Cohere-Embed-V5-Fast,,,2
+cohere-rerank-v5,Cohere Rerank 5,Cohere,text,extended,,,,,Rerank V5 | rerank-v5.0-pro | rerank-v5.0-fast | Cohere-rerank-v5-pro | Cohere-rerank-v5-fast,,,2
 nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,audio,extended,nemotron,nemotron,,,nemotron-speech-streaming-en-0.6b | Nemotron ASR,,,1
 nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,text,frontier,nemotron,nemotron,,,Nemotron 3.5 Lightning | nvidia-nemotron-3.5-lightning-30b-a3b,,,1
 mai-image-2,MAI-Image-2,Microsoft,image,frontier,mai,,mai-image,mai-image-2,,,,1

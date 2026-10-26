@@ -1,16 +1,16 @@
 {
   "totals": {
-    "events": 367,
+    "events": 369,
     "backlog": 93,
-    "sources": 550,
+    "sources": 558,
     "models": 140,
-    "surfaces": 26,
-    "confirmed": 294,
+    "surfaces": 27,
+    "confirmed": 296,
     "supported": 73
   },
   "kinds": {
     "announcement": 25,
-    "availability": 327,
+    "availability": 329,
     "milestone": 9,
     "policy": 6
   },
@@ -228,17 +228,7 @@
     },
     {
       "code": "no_vendor_baseline_extended",
-      "subject": "cohere-embed-v5",
-      "message": "no vendor release event, so lag cannot be derived"
-    },
-    {
-      "code": "no_vendor_baseline_extended",
       "subject": "cohere-parse-v5",
-      "message": "no vendor release event, so lag cannot be derived"
-    },
-    {
-      "code": "no_vendor_baseline_extended",
-      "subject": "cohere-rerank-v5",
       "message": "no vendor release event, so lag cannot be derived"
     },
     {
@@ -281,7 +271,7 @@
     "backlog_without_surface": 8,
     "missing_archive": 24,
     "no_vendor_baseline": 9,
-    "no_vendor_baseline_extended": 9,
+    "no_vendor_baseline_extended": 7,
     "pre_release_access": 1
   },
   "coverage": {
@@ -351,11 +341,11 @@
     ]
   },
   "lag_certainty": {
-    "exact": 319,
-    "not_recorded": 792,
+    "exact": 323,
+    "not_recorded": 812,
     "range": 29,
     "rollout_start": 129,
-    "unknown_no_baseline": 320,
+    "unknown_no_baseline": 296,
     "unknown_open_research": 91
   }
 }

@@ -919,19 +919,19 @@ models:
     modality: image
     scope: extended
     aliases: ["Cohere-parse-v5", "Cohere Parse"]
-    note: "A vision-language document-parsing model: it reads images, tables and forms and writes Markdown, so it is recorded under the image modality on the same reasoning as qwen-3-5-vision. Registered under extended scope as a catalogue entry. Cohere's earlier Embed and Rerank models in Foundry remain unrecorded and stay parked in meta-cohere-flux-mai-foundry-history; no Cohere vendor surface exists, so lag for this model is unknown_no_baseline by construction."
+    note: "A vision-language document-parsing model: it reads images, tables and forms and writes Markdown, so it is recorded under the image modality on the same reasoning as qwen-3-5-vision. Registered under extended scope as a catalogue entry. Cohere's earlier Embed and Rerank models in Foundry remain unrecorded and stay parked in meta-cohere-flux-mai-foundry-history. Cohere's own Parse v5 release is not dated here, so lag for this model is unknown_no_baseline until a dated Cohere source is read."
   - id: cohere-embed-v5
     display_name: "Cohere Embed 5"
     vendor: Cohere
     scope: extended
     aliases: ["Embed V5", "embed-v5.0-pro", "embed-v5.0-fast", "Cohere-Embed-V5-Pro", "Cohere-Embed-V5-Fast"]
-    note: "One registry id for the Pro and Fast variants, which share an embedding space. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning; no Cohere vendor surface exists, so lag is unknown_no_baseline by construction although Cohere dates its own release to 30 September 2026."
+    note: "One registry id for the Pro and Fast variants, which share an embedding space. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning. Cohere's own release of 30 September 2026 is recorded on the cohere vendor surface, so the Foundry lag is zero days."
   - id: cohere-rerank-v5
     display_name: "Cohere Rerank 5"
     vendor: Cohere
     scope: extended
     aliases: ["Rerank V5", "rerank-v5.0-pro", "rerank-v5.0-fast", "Cohere-rerank-v5-pro", "Cohere-rerank-v5-fast"]
-    note: "One registry id for the Pro and Fast variants. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning; no Cohere vendor surface exists, so lag is unknown_no_baseline by construction although Cohere dates its own release to 21 October 2026."
+    note: "One registry id for the Pro and Fast variants. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning. Cohere's own release of 21 October 2026 is recorded on the cohere vendor surface, so the Foundry lag is zero days."
 
   # ------------------------------------------------------------- NVIDIA
   - id: nemotron-speech-streaming-en
