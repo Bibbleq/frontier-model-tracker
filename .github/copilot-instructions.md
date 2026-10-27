@@ -7,7 +7,9 @@ Everything in `generated/` and `published/` is derived from three
 human-maintained files in `data/`.
 
 Most tasks you are given will arrive as an issue labelled `candidate`: a piece of
-published news, filed automatically, that *might* be a dataset event. Your job is
+published news, filed automatically, that *might* be a dataset event. Issues
+labelled `observation` come from the catalogue watcher instead; read "Observation
+issues" below before triaging one. Your job is
 to decide what the evidence actually supports and to leave the repository in a
 state a human can merge or reject in one reading.
 
@@ -280,6 +282,46 @@ the rule it rests on and the covering event or backlog id in the body, and use
 Tick **only** the checklist lines for steps you actually ran, which for a
 no-change PR is usually none of them. A ticked build step that never ran is a
 false attestation, and it is the first thing a reviewer checks.
+
+## Observation issues
+
+Some issues arrive labelled `observation`, not `candidate`. They are filed by the
+catalogue watcher, which reads Microsoft's Foundry Models API in every Azure region
+four times a day and commits what changed to `observations/` (the contract is
+`docs/catalogue-contract.md`). One issue carries a day's observations, each under
+its own heading with a **Kind**, a **Window**, the before and after files, the
+**Region**, the **Deployment types**, the **Stage vocabulary**, the **Absence
+strength**, whether the model is in the **Registry**, and a **Suggested handling**.
+Treat each item as its own candidate and apply the same decision tree, with these
+rules on top:
+
+- **An observation dates when the watcher looked, never when Microsoft changed the
+  listing.** Every item is a window between two runs, usually six hours apart.
+  Never collapse it to a point date: if you record an event from it, `date.start`
+  and `date.end` are the two run times at `day` precision, or the backlog item
+  quotes both.
+- **A listing is not documentation of a first date.** A `first_seen_present` item
+  becomes a backlog item on `microsoft-foundry` citing the observation file as a
+  `documentation` source with a `quote` of the entry. Promote it to an event only
+  when a Microsoft post, Learn revision or changelog dates the arrival; the
+  observation then corroborates.
+- **Absence is weak.** The listing is one subscription's view. An absence
+  (`last_seen_absent`) is a backlog item unless a public page agrees. Where one
+  does, the README's bounded ending applies: `lifecycle: retired`, `date.start`
+  last seen present, `date.end` first seen absent, `confidence: supported`,
+  caveat "Bounded by catalogue observation".
+- **Show both stage words.** The API's `lifecycleStatus` differs from the portal's
+  words (`Deprecating` is portal Deprecated, `Deprecated` is portal Retired);
+  `schema/lifecycle-mapping.json` is the table. Quote the API value beside the
+  portal word in the evidence note. Where the API stage contradicts the stage the
+  dataset already records, record both in a backlog item and say what the
+  contradiction is; never pick one.
+- **Version strings are build identifiers.** Never date anything from them.
+- **Cite the immutable URL.** Use the commit-pinned raw URL of the observation
+  file (`https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/<sha>/observations/...`),
+  never the `main` blob URL.
+- **"Observation, no documentation" is a correct close.** An item with no public
+  documentation and nothing worth a backlog item is closed with that reason.
 
 ## Mechanical steps for a data PR
 
