@@ -1,5 +1,5 @@
 id,display_name,owner,family,lineage,vendor_baseline,counts_as,renamed_from,renamed_to,renamed_on,event_count
-openai,OpenAI,OpenAI,,,true,,,,,26
+openai,OpenAI,OpenAI,,,true,,,,,27
 openai-api,OpenAI API,OpenAI,,,true,,,,,14
 chatgpt,ChatGPT,OpenAI,,,true,,,,,4
 anthropic-claude,Claude,Anthropic,,,true,,,,,27
@@ -17,12 +17,12 @@ m365-cowork,Microsoft Copilot Cowork,Microsoft,Microsoft 365,,false,microsoft | 
 m365-admin,Microsoft 365 admin centre,Microsoft,Microsoft 365,,false,microsoft,,,,3
 copilot-studio,Microsoft Copilot Studio,Microsoft,Copilot Studio,,false,microsoft | copilot | studio,power-virtual-agents,,,29
 power-virtual-agents,Power Virtual Agents,Microsoft,Copilot Studio,,false,microsoft | copilot | studio,,copilot-studio,2023-11-15,1
-github-copilot,GitHub Copilot,GitHub,GitHub Copilot,,false,microsoft | copilot | github_copilot,,,,87
+github-copilot,GitHub Copilot,GitHub,GitHub Copilot,,false,microsoft | copilot | github_copilot,,,,88
 github-models,GitHub Models,GitHub,GitHub Models,,false,microsoft,,,,10
 azure-openai,Azure OpenAI Service,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,,15
 azure-ai-catalog,Azure AI model catalogue,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,,1
 azure-ai-studio,Azure AI Studio,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,2024-11-19,1
 azure-ai-foundry,Azure AI Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-studio,microsoft-foundry,,7
-microsoft-foundry,Microsoft Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-foundry,,,50
+microsoft-foundry,Microsoft Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-foundry,,,51
 foundry-local,Foundry Local,Microsoft,Microsoft Foundry,,false,microsoft,,,,2
 microsoft-corporate,Microsoft,Microsoft,,,false,,,,,1

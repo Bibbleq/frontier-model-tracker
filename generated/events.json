@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "updated": "2026-10-26",
-  "research_cutoff": "2026-10-23",
+  "updated": "2026-10-27",
+  "research_cutoff": "2026-10-26",
   "metadata": {
     "project": "CtrlAltBen Frontier Model Tracker",
     "purpose": "Sourced history of frontier and significant model availability across tracked Microsoft surfaces.",
@@ -14977,6 +14977,184 @@
           "note": "The page's JSON-LD datePublished is 2026-10-21T15:00:00Z. The stage is attested by Cohere, not by Microsoft. No archived_url: no Wayback lookup was run for this page in this batch."
         }
       ]
+    },
+    {
+      "id": "foundry-gpt6-1-terra-2026-10-26",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-26",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-6-1-terra"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft announced GPT-6.1 Terra generally available in Microsoft Foundry on 26 October 2026, OpenAI's release day, through the Responses API in Global Standard deployments across all supported regions and Data Zone Standard deployments in the US, EU and APAC, priced at $1.00 input and $5.00 output per million tokens on Global Standard short context.",
+      "caveat": "Same-day as OpenAI's release, so the lag is zero days. The post reads 'now generally available' in its opening paragraph and names no preview path. techcommunity.microsoft.com answers this environment's direct requests with 403, so the post was read through r.jina.ai; the candidate's t5-style URL renders the shell text 'This blog post cannot be found' while the embedded page data carries the body and postTime. The post was surfaced the day after publication by the news watcher, after the 26 October batch had closed with its cutoff at 23 October.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-1-terra-2026-10-26"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "GPT-6.1 Terra now generally available in Microsoft Foundry: build agents that see and act",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/gpt-6-1-terra-now-generally-available-in-microsoft-foundry-build/ba-p/4567769",
+          "primary": true,
+          "retrieved_at": "2026-10-27",
+          "published_at": "2026-10-26",
+          "source_type": "announcement",
+          "quote": "OpenAI’s GPT-6.1 Terra, now generally available in Microsoft Foundry, delivers significant gains in visual reasoning and computer-use speed, so the apps and agents you build can see more and act faster.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai on 27 October 2026. The date is the post's embedded postTime, 2026-10-26T11:31:26.556-07:00 (Pacific time). No Wayback lookup was run for this page; Tech Community pages had no captures at the 26 October CDX lookup for the previous batch."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "GPT-6.1 Terra now generally available in Microsoft Foundry: build agents that see and act",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/gpt-6-1-terra-now-generally-available-in-microsoft-foundry-build/ba-p/4567769",
+          "primary": true,
+          "retrieved_at": "2026-10-27",
+          "published_at": "2026-10-26",
+          "source_type": "announcement",
+          "quote": "From day one, GPT-6.1 Terra is available through Foundry Models in Global Standard deployments across all supported regions, and in Data Zone Standard deployments in US, EU and APAC.",
+          "supports": [
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "github-gpt6-1-terra-2026-10-26",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-26",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "github-copilot",
+      "model_ids": [
+        "gpt-6-1-terra"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "selectable",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-6.1 Terra became generally available in GitHub Copilot on 26 October 2026, OpenAI's release day, for the Copilot Pro, Pro+, Max, Business and Enterprise plans, selectable in the model picker in VS Code, Visual Studio, Copilot CLI, the GitHub Copilot cloud agent, the GitHub Copilot app, github.com, GitHub Mobile, JetBrains IDEs, Xcode and Eclipse. Billed at provider list pricing under usage-based billing.",
+      "caveat": "Includes the base Copilot Pro plan, as Claude Sonnet 5.5 and Haiku 5.5 did and GPT-6.1 Sol did not. Rollout is gradual, so 26 October starts the rollout window. Under default model enablement the model is on for Business and Enterprise unless an administrator has turned off the global default or disabled it. GitHub positions it for everyday agentic coding and terminal work at a lower cost than GPT-6.1 Sol. No Wayback lookup was run for this entry, published the day before it was read.",
+      "relations": [
+        {
+          "type": "announced_by",
+          "target": "openai-gpt6-1-terra-2026-10-26"
+        }
+      ],
+      "sources": [
+        {
+          "publisher": "GitHub",
+          "title": "GPT-6.1 Terra in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot",
+          "primary": true,
+          "retrieved_at": "2026-10-27",
+          "published_at": "2026-10-26",
+          "source_type": "changelog",
+          "quote": "GPT-6.1 Terra, OpenAI’s newest model, is now generally available in GitHub Copilot.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "The entry's date line reads 'October 26, 2026' and it is typed 'Release'."
+        },
+        {
+          "publisher": "GitHub",
+          "title": "GPT-6.1 Terra in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot",
+          "primary": true,
+          "retrieved_at": "2026-10-27",
+          "published_at": "2026-10-26",
+          "source_type": "changelog",
+          "quote": "GPT-6.1 Terra is available to Copilot Pro, Pro+, Max, Business, and Enterprise users.",
+          "supports": [
+            "exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt6-1-terra-2026-10-26",
+      "kind": "availability",
+      "date": {
+        "start": "2026-10-26",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-6-1-terra"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI released GPT-6.1 Terra on 26 October 2026, in the API as gpt-6.1-terra and in ChatGPT Work and Codex for Plus, Pro, Enterprise and Edu users, as a fast, efficient model for visual reasoning, computer use and writing, priced 50% below GPT-5.6 Terra and GPT-6.1 Sol. Microsoft Foundry and GitHub Copilot carried it the same day.",
+      "caveat": "Umbrella surface, following openai-gpt6-1-sol-2026-09-29: the launch covers ChatGPT Work, Codex and the API together. The ChatGPT plan list names Plus, Pro, Enterprise and Edu and not Business, where the GPT-6.1 Sol launch named Business too; the difference is recorded, not explained. The launch post shows no visible dateline in its readable text; OpenAI's news index lists it under 'Oct 26, 2026' and the API changelog entry headed Oct 26 supplies the date. The post was read through r.jina.ai, and the quote's bold markup is stripped. A GPT-6.1 Terra Pro variant is listed by a third-party router but appears in no OpenAI source read, so it is not registered.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-27",
+          "published_at": "2026-10-26",
+          "source_type": "release_notes",
+          "quote": "Released GPT-6.1 Terra, a fast, efficient model for visual reasoning, precise computer use, and clear, natural writing.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed Oct 26, endpoints v1/responses and v1/chat/completions. Read through r.jina.ai. No archived_url: the only Wayback captures of this rolling page found at the 26 October CDX lookup predate the entry."
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing GPT-6.1 Terra",
+          "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+          "primary": true,
+          "retrieved_at": "2026-10-27",
+          "published_at": "2026-10-26",
+          "source_type": "announcement",
+          "quote": "Starting today, GPT-6.1 Terra is available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex. Developers can also access it through the OpenAI API as gpt-6.1-terra.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai. The page carries no visible dateline; OpenAI's news index lists the post under 'Oct 26, 2026'. The model id in the quote is rendered in code markup on the page. No Wayback lookup was run for this page, published the day before it was read."
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing GPT-6.1 Terra",
+          "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+          "primary": true,
+          "retrieved_at": "2026-10-27",
+          "published_at": "2026-10-26",
+          "source_type": "announcement",
+          "quote": "We’re introducing GPT-6.1 Terra, a fast, efficient model that combines detailed visual reasoning and precise computer use alongside clearer, more natural writing.",
+          "supports": [
+            "model"
+          ],
+          "note": "Bold markup around the model name stripped."
+        }
+      ]
     }
   ],
   "validation_backlog": [
@@ -16849,6 +17027,15 @@
       "working_claim": "The window from 26 September to 23 October 2026 has been covered by the candidate watcher's filings (#124 to #146), by the first-party sources they led to, and by a keyword sweep of the watcher's model-tracking category, not by a systematic sweep; research_cutoff was moved to 23 October for the 26 October triage batch.",
       "reason": "Forty-two events and 18 registry entries (17 models and the claude-5-5 family, with the generation, series and model-line records they needed) were added from candidate issues #124 to #146 and from the first-party sources those candidates led to: the Anthropic, OpenAI, Google, Mistral, xAI, Meta, DeepSeek, Cohere and Microsoft launch posts, the GitHub Copilot changelog, and the Gemini and OpenAI API changelogs. The keyword sweep found the Muse Wonder release, which no candidate carried. Perplexity's pplx-decider models, inclusionAI's Ling-3.1-flash, the Foundry Managed Fine-Tuning additions and the OpenAI Decisions API were considered and not recorded: the first two are not from a tracked vendor and no Microsoft surface carries them, and the last two are a service and an API feature rather than model arrivals. research_cutoff moved from 2026-09-25 to 2026-10-23 so the dataset does not carry evidence beyond its own stated reach. That move is bookkeeping, not evidence: absence of other events in the window means nothing.",
       "target": "Sweep the usual sources across 26 September to 23 October 2026 - GitHub Copilot changelog, Microsoft Foundry blog, retirement schedule and October retrospective when published, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms for OpenAI, Anthropic, Google, xAI, Moonshot, DeepSeek, Mistral and Meta - then either record what is found or close this item as confirming nothing else landed. Known gaps from this batch: the start of the phased rollout of GPT-6.1 Sol and Claude Sonnet 5.5 to Word, Excel, PowerPoint and Chat in Microsoft 365 Copilot, announced on 30 September for 'the coming week', which the 6 October release notes do not name; Claude Haiku 5.5 and Gemini 4 Argon on any Microsoft Copilot surface and Gemini 4 Argon in Foundry, none of which was found (Azure Databricks carried Argon from 13 October, which is not a tracked surface); the release stage Microsoft assigns Claude Sonnet 5.5 and GPT-6.1 Sol in Cowork and Copilot Studio, recorded ga with lifecycle supported from a notice with no stage word; Grok 4.7 in Cowork, tracked as cowork-grok4-7-arrival-2026; Nemotron 3.5 Super VL and Beam 1.0 in Foundry, tracked as foundry-model-mondays-2026-10-19-arrivals; claude-opus-5-5-fast, listed GA hosted on Azure on the Learn Claude page with no announcement read; Mistral's Voxtral 3 speech models (21 October) and Google's Gemini 3.8 Flash TTS pair (22 September), vendor modality releases not yet recorded; Google's 8 October API deprecations of gemini-3.7-flash and gemini-3.5-flash, not recorded because neither has a Gemini API arrival event; Mistral Large 4's open-weight release, promised for the end of October; the OpenAI Decisions API on Foundry (22 October) and OpenAI's own general availability (22 October), treated as an API feature built on GPT-6 Luna rather than a model; and the vendor dates for Muse Spark (August) and Muse Glimmer. Archives: archived_url values were added for dated pages from Wayback captures located through the CDX API on 26 October 2026 (OpenAI's GPT-6.1 Sol post, eight GitHub changelog entries, Mistral's and xAI's launch posts, the Nano Banana 2.1 model card, Cohere's Embed 5 changelog entry, the DeepSeek and Muse Spark Open Hugging Face repositories, Meta's developer blog and Microsoft AI's streaming transcription post), and none of those captures was read. None was attached to the rolling pages whose only captures predate the claims (the OpenAI and Gemini API changelogs and the Learn models-sold-by-Azure page), and Tech Community and anthropic.com pages had no captures; those still need snapshots taken from a browser and backfilled.",
+      "model_ids": [],
+      "surface_ids": []
+    },
+    {
+      "id": "sweep-2026-10-24-to-10-26",
+      "state": "open",
+      "working_claim": "The window from 24 October to 26 October 2026 has been covered by one release, GPT-6.1 Terra, found through the news watcher's model-tracking category and a third-party catalogue listing the day after it happened, not by a systematic sweep; research_cutoff was moved to 26 October for the 27 October follow-up.",
+      "reason": "Three events were added for GPT-6.1 Terra from OpenAI's launch post and API changelog, Microsoft's Foundry announcement and GitHub's Copilot changelog, all dated 26 October 2026. research_cutoff moved from 2026-10-23 to 2026-10-26 so the dataset does not carry evidence beyond its own stated reach. That move is bookkeeping, not evidence: absence of other events in the window means nothing.",
+      "target": "Sweep the usual sources across 24 to 26 October 2026 - GitHub Copilot changelog, Microsoft Foundry blog, Microsoft Copilot blog, the retirement schedule, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms - then either record what is found or close this item as confirming nothing else landed. Known gaps from this follow-up: GPT-6.1 Terra on Microsoft 365 Copilot, Cowork or Copilot Studio, for which the only item seen was a third-party report of a configuration leak, which is not recorded; a GPT-6.1 Terra Pro variant and a GPT-6.1 Sol Pro variant listed by a third-party router with no OpenAI source read; Moonshot's Kimi K3.1 Pro, listed by the same router on 23 October with no vendor source read; and everything named in sweep-2026-09-26-to-10-23, which remains open. No Wayback lookups were run for this follow-up; the three sources need captures backfilled.",
       "model_ids": [],
       "surface_ids": []
     }
