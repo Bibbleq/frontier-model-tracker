@@ -2,7 +2,7 @@
 
 Diff-only catalogue observation files, written by the catalogue watcher: one file per run of one source in one region that saw at least one change. They are machine-captured catalogue snapshots, not curated data, and each one dates the observation, never the change.
 
-This folder starts empty apart from this README. Files are laid out as `observations/arm/<region>/<YYYY>/<MM>/<timestamp>.json`.
+This folder starts empty apart from this README. Files are laid out as `observations/arm/<region>/<YYYY>/<MM>/<timestamp>.json`, where `<timestamp>` is the run's UTC time with hyphens in place of colons, for example `2026-10-27T19-30-00Z`.
 
 Cite a file by a commit-pinned raw URL: `https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/<sha>/observations/...`
 

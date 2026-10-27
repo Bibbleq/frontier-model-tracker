@@ -87,6 +87,21 @@ class CatalogueSchemaTests(unittest.TestCase):
         document["previous_file"] = None
         self.validators[OBSERVATION].validate(document)
 
+    def test_file_paths_carry_no_colons(self) -> None:
+        # Windows cannot create a file whose name contains a colon.
+        for field, path in (
+            ("previous_file", "observations/arm/uksouth/2026/10/2026-10-26T18:30:41Z.json"),
+            ("checkpoint", "checkpoints/arm/uksouth/2026-10-01T00:31:02Z.json"),
+        ):
+            document = copy.deepcopy(self.observation)
+            document[field] = path
+            self.assertFalse(self.validators[OBSERVATION].is_valid(document), field)
+
+    def test_committed_catalogue_files_have_windows_safe_names(self) -> None:
+        for folder in ("observations", "checkpoints", "status"):
+            for path in (ROOT / folder).rglob("*"):
+                self.assertNotIn(":", path.name, path)
+
     def test_timestamps_must_be_utc(self) -> None:
         document = copy.deepcopy(self.observation)
         document["observed_at"] = "2026-10-27T12:30:44+01:00"

@@ -38,7 +38,10 @@ status/regions.json
 ```
 
 `<region>` is the ARM lowercase region identifier, for example `uksouth`.
-`<timestamp>` is the run's UTC time, for example `2026-10-27T12:30:44Z`.
+`<timestamp>` is the run's UTC time with hyphens in place of colons, for
+example `2026-10-27T12-30-44Z`, because Windows cannot create a file whose
+name contains a colon. The `observed_at` field inside the file keeps the
+ordinary form, `2026-10-27T12:30:44Z`.
 
 The shapes are published as JSON Schema beside the dataset schemas:
 
@@ -112,7 +115,7 @@ These are interpretation rules for anything that reads or renders the files.
 
 The files live in the repository and are served by GitHub. Cite a file by a
 commit-pinned raw URL, for example
-`https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/<sha>/observations/arm/uksouth/2026/10/2026-10-27T12:30:44Z.json`,
+`https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/<sha>/observations/arm/uksouth/2026/10/2026-10-27T12-30-44Z.json`,
 not by a branch URL.
 
 - Do not poll more than once an hour. The watcher runs four times a day.
@@ -136,3 +139,4 @@ Microsoft, OpenAI, Anthropic or GitHub.
 | Version | Change |
 | --- | --- |
 | 1 | Initial catalogue contract: observation and checkpoint schemas, the lifecycle mapping table, and the `observations/`, `checkpoints/` and `status/` folders. |
+| 1, amended 27 October 2026 | File names use hyphens in the time part (`2026-10-27T19-30-00Z.json`), so the repository can be cloned on Windows. The 35 seed checkpoints were renamed with their bytes unchanged; no observation file had been written. The `previous_file` and `checkpoint` patterns in the observation schema follow. |
