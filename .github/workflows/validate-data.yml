@@ -1,5 +1,8 @@
 name: Validate dataset
 
+# observations/, checkpoints/ and status/ are deliberately outside the include
+# lists below, so the machine commits that write them trigger neither this job
+# nor the Pages publish.
 on:
   push:
     paths:

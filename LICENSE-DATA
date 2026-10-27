@@ -10,6 +10,11 @@ https://creativecommons.org/licenses/by/4.0/
 Suggested attribution:
 "CtrlAltBen Frontier Model Tracker, maintained by Frontier Model Tracker contributors."
 
+The catalogue observation, checkpoint and status files under /observations,
+/checkpoints and /status are machine-captured records of public API listings
+rather than curated data. They are licensed under the same Creative Commons
+Attribution 4.0 International terms, with the same attribution.
+
 The licence applies to the original selection, organisation, annotations and
 other protectable elements of this project's dataset. It does not assert
 ownership over underlying facts, third-party trademarks, linked source

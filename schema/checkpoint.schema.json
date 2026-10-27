@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bibbleq.github.io/frontier-model-tracker/schema/checkpoint.schema.json",
+  "title": "CtrlAltBen Frontier Model Tracker catalogue checkpoint",
+  "comment": "The full normalised state of one source in one region at one run. A seed checkpoint starts a chain of observation files; a monthly checkpoint is a full-state re-statement that a replay can verify against. The watcher writes the file minified; the schema does not care. See docs/catalogue-contract.md.",
+  "type": "object",
+  "required": ["schema_version", "source", "region", "kind", "observed_at", "observed_from", "entry_count", "cell_count", "snapshot_sha256", "entries"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "source": {
+      "comment": "The listing the run read. The v1 value is arm; the vocabulary is open.",
+      "$ref": "#/$defs/identifier"
+    },
+    "region": {
+      "comment": "The ARM lowercase region identifier, for example uksouth.",
+      "$ref": "#/$defs/identifier"
+    },
+    "kind": {"type": "string", "enum": ["seed", "monthly"]},
+    "observed_at": {
+      "comment": "The run this state was read at. A checkpoint dates the observation, never the changes that led to it.",
+      "$ref": "#/$defs/timestamp"
+    },
+    "observed_from": {
+      "comment": "The literal label for the vantage point of the run, for example 'standard pay-as-you-go subscription'.",
+      "type": "string",
+      "minLength": 1
+    },
+    "entry_count": {"type": "integer", "minimum": 0},
+    "cell_count": {"type": "integer", "minimum": 0},
+    "snapshot_sha256": {
+      "comment": "SHA-256 of the full normalised snapshot the watcher holds privately.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "entries": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/entry"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "identifier": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "timestamp": {"type": "string", "format": "date-time", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"},
+    "nullable_timestamp": {
+      "anyOf": [
+        {"$ref": "#/$defs/timestamp"},
+        {"type": "null"}
+      ]
+    },
+    "model_key": {
+      "comment": "name@version exactly as the API spells them, case preserved. The version is a build identifier, never a date.",
+      "type": "string",
+      "pattern": "^[^@\\s]+@[^@\\s]+$"
+    },
+
+    "entry": {
+      "type": "object",
+      "required": ["model_key", "first_seen", "last_seen", "watched", "cells"],
+      "properties": {
+        "model_key": {"$ref": "#/$defs/model_key"},
+        "first_seen": {
+          "comment": "The first run at which this entry was seen present. It is an observation date, not the date the model arrived.",
+          "$ref": "#/$defs/timestamp"
+        },
+        "last_seen": {"$ref": "#/$defs/timestamp"},
+        "watched": {"$ref": "#/$defs/watched"},
+        "cells": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/cell"}
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "watched": {
+      "comment": "The watched subset of a model entry. systemData timestamps are never watched and never appear here.",
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "version": {"type": "string"},
+        "format": {"type": "string"},
+        "lifecycle_status": {
+          "comment": "The raw API value, shown beside its portal word from schema/lifecycle-mapping.json.",
+          "type": "string"
+        },
+        "lifecycle_portal": {
+          "comment": "The portal word for lifecycle_status from schema/lifecycle-mapping.json; null when the value is unmapped.",
+          "type": ["string", "null"]
+        },
+        "deprecation_inference": {"$ref": "#/$defs/nullable_timestamp"},
+        "deprecation_fine_tune": {"$ref": "#/$defs/nullable_timestamp"},
+        "is_default_version": {"type": "boolean"},
+        "capabilities": {
+          "type": "object",
+          "additionalProperties": {"type": "string"}
+        },
+        "skus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string"},
+              "deprecation_date": {"type": ["string", "null"]}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "cell": {
+      "comment": "One deployment type of one model entry in the region. Capacity is a moment, read at capacity_at, not a standing quantity.",
+      "type": "object",
+      "required": ["deployment_type"],
+      "properties": {
+        "deployment_type": {
+          "comment": "The ARM skuName, or none when the row carries skus: [].",
+          "type": "string"
+        },
+        "first_seen": {"$ref": "#/$defs/timestamp"},
+        "last_seen": {"$ref": "#/$defs/timestamp"},
+        "removed_at": {"$ref": "#/$defs/nullable_timestamp"},
+        "sku_deprecation_date": {"type": ["string", "null"]},
+        "capacity": {
+          "comment": "Absent, not zero, when capacity was not read.",
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "capacity_at": {"$ref": "#/$defs/nullable_timestamp"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

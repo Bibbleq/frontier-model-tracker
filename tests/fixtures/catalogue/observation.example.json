@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "source": "arm",
+  "region": "uksouth",
+  "observed_at": "2026-10-27T12:30:44Z",
+  "previous_run_at": "2026-10-27T06:30:41Z",
+  "runs_since_previous_file": 3,
+  "previous_file": "observations/arm/uksouth/2026/10/2026-10-26T18:30:41Z.json",
+  "checkpoint": "checkpoints/arm/uksouth/2026-10-01T00:31:02Z.json",
+  "observed_from": "standard pay-as-you-go subscription",
+  "entry_count": 212,
+  "cell_count": 538,
+  "snapshot_sha256": "faa35794ccc2c43afa6ab6c8ee879c283256ff9967f1ac392911e11fd026c06c",
+  "keys_present": [
+    "example-model-mini@2026-10-01",
+    "example-model@2026-10-01"
+  ],
+  "changes": [
+    {
+      "kind": "first_seen_present",
+      "model_key": "example-model@2026-10-01",
+      "window_start": "2026-10-27T06:30:41Z",
+      "window_end": "2026-10-27T12:30:44Z",
+      "after": {
+        "name": "example-model",
+        "version": "2026-10-01",
+        "format": "OpenAI",
+        "lifecycle_status": "Preview",
+        "lifecycle_portal": "Preview",
+        "deprecation_inference": null,
+        "deprecation_fine_tune": null,
+        "is_default_version": true,
+        "capabilities": {
+          "chatCompletion": "true",
+          "maxContextToken": "400000"
+        },
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": null
+          },
+          {
+            "name": "DataZoneStandard",
+            "deprecation_date": null
+          }
+        ]
+      },
+      "cells": [
+        {
+          "deployment_type": "GlobalStandard",
+          "first_seen": "2026-10-27T12:30:44Z",
+          "last_seen": "2026-10-27T12:30:44Z",
+          "removed_at": null,
+          "sku_deprecation_date": null,
+          "capacity": 250,
+          "capacity_at": "2026-10-27T12:30:44Z"
+        },
+        {
+          "deployment_type": "DataZoneStandard",
+          "first_seen": "2026-10-27T12:30:44Z",
+          "last_seen": "2026-10-27T12:30:44Z",
+          "removed_at": null,
+          "sku_deprecation_date": null,
+          "capacity": null,
+          "capacity_at": null
+        }
+      ]
+    },
+    {
+      "kind": "last_seen_absent",
+      "model_key": "example-retired-model@2025-04-14",
+      "window_start": "2026-10-27T06:30:41Z",
+      "window_end": "2026-10-27T12:30:44Z",
+      "confirmed_at": "2026-10-27T12:30:44Z",
+      "absence_strength": "weak",
+      "before": {
+        "name": "example-retired-model",
+        "version": "2025-04-14",
+        "lifecycle_status": "Deprecating",
+        "lifecycle_portal": "Deprecated",
+        "deprecation_inference": "2026-10-27T00:00:00Z"
+      },
+      "cells": [
+        {
+          "deployment_type": "Standard",
+          "first_seen": "2026-10-01T00:31:02Z",
+          "last_seen": "2026-10-27T06:30:41Z",
+          "removed_at": null,
+          "sku_deprecation_date": "2026-10-27",
+          "capacity": null,
+          "capacity_at": null
+        }
+      ],
+      "note": "Absent from this subscription's listing only; a Deprecating model can stay visible to a subscription that deployed it before."
+    },
+    {
+      "kind": "lifecycle_changed",
+      "model_key": "example-model-mini@2026-10-01",
+      "window_start": "2026-10-27T06:30:41Z",
+      "window_end": "2026-10-27T12:30:44Z",
+      "fields": [
+        "lifecycle_status",
+        "lifecycle_portal"
+      ],
+      "before": {
+        "lifecycle_status": "Preview",
+        "lifecycle_portal": "Preview"
+      },
+      "after": {
+        "lifecycle_status": "GenerallyAvailable",
+        "lifecycle_portal": "Generally Available"
+      },
+      "note": "The stage value changed between two runs; the day the change took effect is not known."
+    }
+  ]
+}

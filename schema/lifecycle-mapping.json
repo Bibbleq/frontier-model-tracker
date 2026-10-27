@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "title": "CtrlAltBen Frontier Model Tracker lifecycle mapping",
+  "source": {
+    "publisher": "Microsoft Learn",
+    "title": "Foundry Models lifecycle and support policy",
+    "url": "https://learn.microsoft.com/azure/foundry/openai/concepts/model-retirements#notifications",
+    "retrieved_at": "2026-10-27"
+  },
+  "comment": "Microsoft's Models API uses a different stage vocabulary from its documentation and portal. This table maps the API's lifecycleStatus values to the portal words and to the dataset's lifecycle enum, so every rendering shows the API value beside its portal word and the watcher and the replay cannot disagree. Legacy is returned by the live API but absent from the REST reference's enum; Stable is in the enum and has not been seen live, so it is recorded raw and marked unmapped rather than guessed.",
+  "api_to_portal": {
+    "Preview":            {"portal": "Preview",             "dataset_lifecycle": "public_preview", "mapped": true},
+    "GenerallyAvailable": {"portal": "Generally Available", "dataset_lifecycle": "ga",             "mapped": true},
+    "Legacy":             {"portal": "Legacy",              "dataset_lifecycle": "legacy",         "mapped": true, "note": "Returned live; omitted from the REST reference enum and from the page's table of API values. Mapped to the page's own Legacy stage."},
+    "Deprecating":        {"portal": "Deprecated",          "dataset_lifecycle": "deprecated",     "mapped": true, "note": "Still serves inference; blocked for new customers."},
+    "Deprecated":         {"portal": "Retired",             "dataset_lifecycle": "retired",        "mapped": true, "note": "Inference returns 410 Gone."},
+    "Stable":             {"portal": null,                  "dataset_lifecycle": null,             "mapped": false, "note": "In the REST enum, never seen live; recorded raw and marked unmapped."}
+  },
+  "rules": [
+    {"id": "past-inference-deprecation-is-retired", "statement": "If deprecation.inference is in the past the model is Retired whatever lifecycleStatus says.", "source_quote": "if deprecation.inference < today           → Retired (regardless of lifecycleStatus lag)"},
+    {"id": "deprecated-means-existing-subscriptions-only", "statement": "A Deprecating listing can be visible to a subscription that has deployed the version before and absent from a new one, because 'existing customer' is decided per subscription; an absence of a Deprecating model from one subscription's listing is therefore weaker than other absences.", "source_quote": "\"Existing customer\" is determined at the subscription level: whether that Azure subscription has ever deployed the specific model version."}
+  ]
+}
