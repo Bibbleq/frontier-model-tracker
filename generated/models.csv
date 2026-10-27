@@ -43,6 +43,7 @@ gpt-5-6-cyber,GPT-5.6-Cyber,OpenAI,text,frontier,openai-gpt,gpt-5,,gpt-5-6,,,,0
 gpt-6-astra,GPT-6 Astra,OpenAI,text,frontier,openai-gpt,gpt-6,,,,,,5
 gpt-6-sol,GPT-6 Sol,OpenAI,text,frontier,openai-gpt,gpt-6,,,,,,6
 gpt-6-1-sol,GPT-6.1 Sol,OpenAI,text,frontier,openai-gpt,gpt-6,,,gpt-6.1-sol | GPT 6.1 Sol,,,6
+gpt-6-1-terra,GPT-6.1 Terra,OpenAI,text,frontier,openai-gpt,gpt-6,,,gpt-6.1-terra | GPT 6.1 Terra,,,3
 gpt-6-luna,GPT-6 Luna,OpenAI,text,frontier,openai-gpt,gpt-6,,,,,,3
 claude-1,Claude 1,Anthropic,text,frontier,claude,claude-1,,,,,,1
 claude-2,Claude 2,Anthropic,text,frontier,claude,claude-2,,,,,,1

@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 369,
-    "backlog": 93,
-    "sources": 558,
-    "models": 140,
+    "events": 372,
+    "backlog": 94,
+    "sources": 565,
+    "models": 141,
     "surfaces": 27,
-    "confirmed": 296,
+    "confirmed": 299,
     "supported": 73
   },
   "kinds": {
     "announcement": 25,
-    "availability": 329,
+    "availability": 332,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 51,
+    "open": 52,
     "promoted": 36,
     "rejected": 4
   },
@@ -59,6 +59,11 @@
     {
       "code": "backlog_without_surface",
       "subject": "sweep-2026-09-26-to-10-23",
+      "message": "open item names no surface, so it cannot suppress a lag answer"
+    },
+    {
+      "code": "backlog_without_surface",
+      "subject": "sweep-2026-10-24-to-10-26",
       "message": "open item names no surface, so it cannot suppress a lag answer"
     },
     {
@@ -173,6 +178,11 @@
     },
     {
       "code": "missing_archive",
+      "subject": "openai-gpt6-1-terra-2026-10-26",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
       "subject": "studio-fable5-1-2026-09-01",
       "message": "documentation source has no archived_url and may be edited in place: https://pupuweb.com/mc1465748-claude-fable-5-1-is-now-available-in-copilot-cowork-and-copilot-studio-with-microsofts-enterprise-data-protection/"
     },
@@ -268,8 +278,8 @@
     }
   ],
   "warning_counts": {
-    "backlog_without_surface": 8,
-    "missing_archive": 24,
+    "backlog_without_surface": 9,
+    "missing_archive": 25,
     "no_vendor_baseline": 9,
     "no_vendor_baseline_extended": 7,
     "pre_release_access": 1
@@ -341,10 +351,10 @@
     ]
   },
   "lag_certainty": {
-    "exact": 323,
-    "not_recorded": 812,
+    "exact": 325,
+    "not_recorded": 817,
     "range": 29,
-    "rollout_start": 129,
+    "rollout_start": 134,
     "unknown_no_baseline": 296,
     "unknown_open_research": 91
   }

@@ -509,6 +509,12 @@ models:
     generation: gpt-6
     aliases: ["gpt-6.1-sol", "GPT 6.1 Sol"]
     note: "OpenAI calls it an upgrade to GPT-6 Sol, released 29 September 2026. No family is declared, matching gpt-6-sol."
+  - id: gpt-6-1-terra
+    display_name: "GPT-6.1 Terra"
+    vendor: OpenAI
+    generation: gpt-6
+    aliases: ["gpt-6.1-terra", "GPT 6.1 Terra"]
+    note: "Released 26 October 2026. OpenAI calls it a significant step up from GPT-5.6 Terra, priced 50% below GPT-5.6 Terra and GPT-6.1 Sol; no supersedes link is recorded because GitHub's 16 November deprecation of GPT-5.6 Terra names GPT-6.1 Sol or GPT-6 Luna, not Terra, as the alternative. No family is declared, matching gpt-6-sol."
   - id: gpt-6-luna
     display_name: "GPT-6 Luna"
     vendor: OpenAI
