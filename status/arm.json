@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-27T19:30:00Z",
+  "observed_from": "standard pay-as-you-go subscription",
+  "source": "arm",
+  "note": "Status report from the catalogue watcher; not an observation and not evidence.",
+  "regions": {
+    "australiaeast": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 116,
+      "cell_count": 203,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "brazilsouth": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 112,
+      "cell_count": 170,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "canadacentral": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 127,
+      "cell_count": 161,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "canadaeast": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 112,
+      "cell_count": 178,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "centralindia": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 10,
+      "cell_count": 10,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "centralus": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 153,
+      "cell_count": 301,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "eastasia": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 10,
+      "cell_count": 10,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "eastus": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 142,
+      "cell_count": 318,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "eastus2": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 168,
+      "cell_count": 353,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "francecentral": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 128,
+      "cell_count": 264,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "germanywestcentral": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 112,
+      "cell_count": 243,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "italynorth": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 112,
+      "cell_count": 205,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "japaneast": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 112,
+      "cell_count": 198,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "japanwest": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 64,
+      "cell_count": 69,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "koreacentral": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 114,
+      "cell_count": 192,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "northcentralus": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 136,
+      "cell_count": 311,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "northeurope": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 32,
+      "cell_count": 41,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "norwayeast": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 113,
+      "cell_count": 186,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "polandcentral": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 120,
+      "cell_count": 249,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "qatarcentral": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "error",
+      "entry_count": null,
+      "cell_count": null,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 1
+    },
+    "southafricanorth": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 111,
+      "cell_count": 165,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "southcentralus": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 134,
+      "cell_count": 308,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "southeastasia": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 109,
+      "cell_count": 160,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "southindia": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 136,
+      "cell_count": 218,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "spaincentral": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 113,
+      "cell_count": 220,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "swedencentral": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 177,
+      "cell_count": 333,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "switzerlandnorth": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 115,
+      "cell_count": 197,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "switzerlandwest": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 111,
+      "cell_count": 143,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "uaenorth": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 143,
+      "cell_count": 195,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "uksouth": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 115,
+      "cell_count": 187,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "ukwest": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 64,
+      "cell_count": 68,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "westcentralus": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 91,
+      "cell_count": 117,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "westeurope": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 118,
+      "cell_count": 248,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "westus": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 139,
+      "cell_count": 317,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "westus2": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 65,
+      "cell_count": 85,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    },
+    "westus3": {
+      "last_run_at": "2026-10-27T19:30:00Z",
+      "last_outcome": "seeded",
+      "entry_count": 144,
+      "cell_count": 326,
+      "last_change_at": null,
+      "last_file": null,
+      "consecutive_errors": 0
+    }
+  }
+}

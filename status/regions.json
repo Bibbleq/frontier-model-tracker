@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-27T19:30:00Z",
+  "note": "Reference data exported by the catalogue watcher from the Azure locations list; not evidence.",
+  "regions": [
+    {
+      "id": "australiaeast",
+      "display_name": "Australia East",
+      "geography": "Asia Pacific",
+      "latitude": -33.86,
+      "longitude": 151.2094
+    },
+    {
+      "id": "brazilsouth",
+      "display_name": "Brazil South",
+      "geography": "South America",
+      "latitude": -23.55,
+      "longitude": -46.633
+    },
+    {
+      "id": "canadacentral",
+      "display_name": "Canada Central",
+      "geography": "Canada",
+      "latitude": 43.653,
+      "longitude": -79.383
+    },
+    {
+      "id": "canadaeast",
+      "display_name": "Canada East",
+      "geography": "Canada",
+      "latitude": 46.817,
+      "longitude": -71.217
+    },
+    {
+      "id": "centralindia",
+      "display_name": "Central India",
+      "geography": "Asia Pacific",
+      "latitude": 18.5822,
+      "longitude": 73.9197
+    },
+    {
+      "id": "centralus",
+      "display_name": "Central US",
+      "geography": "US",
+      "latitude": 41.5908,
+      "longitude": -93.6208
+    },
+    {
+      "id": "eastasia",
+      "display_name": "East Asia",
+      "geography": "Asia Pacific",
+      "latitude": 22.267,
+      "longitude": 114.188
+    },
+    {
+      "id": "eastus",
+      "display_name": "East US",
+      "geography": "US",
+      "latitude": 37.3719,
+      "longitude": -79.8164
+    },
+    {
+      "id": "eastus2",
+      "display_name": "East US 2",
+      "geography": "US",
+      "latitude": 36.6681,
+      "longitude": -78.3889
+    },
+    {
+      "id": "francecentral",
+      "display_name": "France Central",
+      "geography": "Europe",
+      "latitude": 46.3772,
+      "longitude": 2.373
+    },
+    {
+      "id": "germanywestcentral",
+      "display_name": "Germany West Central",
+      "geography": "Europe",
+      "latitude": 50.110924,
+      "longitude": 8.682127
+    },
+    {
+      "id": "italynorth",
+      "display_name": "Italy North",
+      "geography": "Europe",
+      "latitude": 45.46888,
+      "longitude": 9.18109
+    },
+    {
+      "id": "japaneast",
+      "display_name": "Japan East",
+      "geography": "Asia Pacific",
+      "latitude": 35.68,
+      "longitude": 139.77
+    },
+    {
+      "id": "japanwest",
+      "display_name": "Japan West",
+      "geography": "Asia Pacific",
+      "latitude": 34.6939,
+      "longitude": 135.5022
+    },
+    {
+      "id": "koreacentral",
+      "display_name": "Korea Central",
+      "geography": "Asia Pacific",
+      "latitude": 37.5665,
+      "longitude": 126.978
+    },
+    {
+      "id": "northcentralus",
+      "display_name": "North Central US",
+      "geography": "US",
+      "latitude": 41.8819,
+      "longitude": -87.6278
+    },
+    {
+      "id": "northeurope",
+      "display_name": "North Europe",
+      "geography": "Europe",
+      "latitude": 53.3478,
+      "longitude": -6.2597
+    },
+    {
+      "id": "norwayeast",
+      "display_name": "Norway East",
+      "geography": "Europe",
+      "latitude": 59.913868,
+      "longitude": 10.752245
+    },
+    {
+      "id": "polandcentral",
+      "display_name": "Poland Central",
+      "geography": "Europe",
+      "latitude": 52.23334,
+      "longitude": 21.01666
+    },
+    {
+      "id": "qatarcentral",
+      "display_name": "Qatar Central",
+      "geography": "Middle East",
+      "latitude": 25.551462,
+      "longitude": 51.439327
+    },
+    {
+      "id": "southafricanorth",
+      "display_name": "South Africa North",
+      "geography": "Africa",
+      "latitude": -25.73134,
+      "longitude": 28.21837
+    },
+    {
+      "id": "southcentralus",
+      "display_name": "South Central US",
+      "geography": "US",
+      "latitude": 29.4167,
+      "longitude": -98.5
+    },
+    {
+      "id": "southeastasia",
+      "display_name": "Southeast Asia",
+      "geography": "Asia Pacific",
+      "latitude": 1.283,
+      "longitude": 103.833
+    },
+    {
+      "id": "southindia",
+      "display_name": "South India",
+      "geography": "Asia Pacific",
+      "latitude": 12.9822,
+      "longitude": 80.1636
+    },
+    {
+      "id": "spaincentral",
+      "display_name": "Spain Central",
+      "geography": "Europe",
+      "latitude": 40.4259,
+      "longitude": 3.4209
+    },
+    {
+      "id": "swedencentral",
+      "display_name": "Sweden Central",
+      "geography": "Europe",
+      "latitude": 60.67488,
+      "longitude": 17.14127
+    },
+    {
+      "id": "switzerlandnorth",
+      "display_name": "Switzerland North",
+      "geography": "Europe",
+      "latitude": 47.451542,
+      "longitude": 8.564572
+    },
+    {
+      "id": "switzerlandwest",
+      "display_name": "Switzerland West",
+      "geography": "Europe",
+      "latitude": 46.204391,
+      "longitude": 6.143158
+    },
+    {
+      "id": "uaenorth",
+      "display_name": "UAE North",
+      "geography": "Middle East",
+      "latitude": 25.266666,
+      "longitude": 55.316666
+    },
+    {
+      "id": "uksouth",
+      "display_name": "UK South",
+      "geography": "UK",
+      "latitude": 50.941,
+      "longitude": -0.799
+    },
+    {
+      "id": "ukwest",
+      "display_name": "UK West",
+      "geography": "UK",
+      "latitude": 53.427,
+      "longitude": -3.084
+    },
+    {
+      "id": "westcentralus",
+      "display_name": "West Central US",
+      "geography": "US",
+      "latitude": 40.89,
+      "longitude": -110.234
+    },
+    {
+      "id": "westeurope",
+      "display_name": "West Europe",
+      "geography": "Europe",
+      "latitude": 52.3667,
+      "longitude": 4.9
+    },
+    {
+      "id": "westus",
+      "display_name": "West US",
+      "geography": "US",
+      "latitude": 37.783,
+      "longitude": -122.417
+    },
+    {
+      "id": "westus2",
+      "display_name": "West US 2",
+      "geography": "US",
+      "latitude": 47.233,
+      "longitude": -119.852
+    },
+    {
+      "id": "westus3",
+      "display_name": "West US 3",
+      "geography": "US",
+      "latitude": 33.448376,
+      "longitude": -112.074036
+    }
+  ],
+  "overrides": {}
+}
