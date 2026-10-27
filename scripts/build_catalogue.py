@@ -119,8 +119,6 @@ class Cell:
     seen_after: str | None          # last run known without it; None when present at the seed
     seen_by: str                    # first run that saw it
     sku_deprecation_date: str | None = None
-    capacity: int | None = None
-    capacity_at: str | None = None
 
 
 @dataclass
@@ -198,12 +196,11 @@ def sku_names(watched: dict | None) -> list[str]:
 
 
 def absorb(c: Cell, cell: dict) -> None:
-    """Take a committed cell's moment facts: its SKU date and the capacity read, if any."""
+    """Take a committed cell's SKU deprecation date. Capacity, which the seed checkpoints still
+    carry as null, is the watcher's subscription quota, not a fact about the region, and is
+    never published."""
     if "sku_deprecation_date" in cell:
         c.sku_deprecation_date = cell["sku_deprecation_date"]
-    if cell.get("capacity_at") is not None:
-        c.capacity = cell.get("capacity")
-        c.capacity_at = cell["capacity_at"]
 
 
 def cell_row(region: str, key: str, c: Cell, until: dict | None) -> dict:
@@ -214,8 +211,6 @@ def cell_row(region: str, key: str, c: Cell, until: dict | None) -> dict:
         "seen_from": {"after": c.seen_after, "by": c.seen_by},
         "seen_until": until,
         "sku_deprecation_date": c.sku_deprecation_date,
-        "capacity": c.capacity,
-        "capacity_at": c.capacity_at,
     }
 
 
@@ -363,8 +358,8 @@ def apply_change(state: RegionReplay, ch: dict, mapping: dict, label: str) -> No
         return
 
     if kind == "capacity_changed":
-        # The new figure is only in the note, whose wording is not part of the contract;
-        # capacity is taken from arrivals and checkpoints instead.
+        # Capacity is the watcher's subscription quota, never published; the watcher no longer
+        # writes this kind, and a committed one changes nothing the catalogue shows.
         return
 
     if kind in FIELD_KINDS:

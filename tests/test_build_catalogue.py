@@ -186,7 +186,7 @@ class CatalogueBuildTests(unittest.TestCase):
         ], silent=1))
         row = self.rows(self.build(), "beta@1")[0]
         self.assertEqual(row["seen_from"], {"after": T1, "by": T2})
-        self.assertEqual((row["capacity"], row["capacity_at"]), (250, T2))
+        self.assertNotIn("capacity", row)
 
     def test_a_stage_change_opens_a_new_state_segment(self) -> None:
         a = watched("alpha")
@@ -281,19 +281,21 @@ class CatalogueBuildTests(unittest.TestCase):
         self.assertEqual(rows[0]["seen_from"]["by"], T0)
         self.assertNotIn("absent_unconfirmed_since", rows[0])
 
-    def test_a_monthly_checkpoint_agrees_and_brings_capacity(self) -> None:
+    def test_a_monthly_checkpoint_agrees_and_its_capacity_is_not_published(self) -> None:
         a = watched("alpha")
         cp = self.put(cp_path("uksouth", T0), checkpoint("uksouth", T0, [a]))
         self.put(cp_path("uksouth", NOV), checkpoint("uksouth", NOV, [a], kind="monthly",
                                                      capacity={("alpha@1", "GlobalStandard"): 500}))
         intervals = self.build()
         row = self.rows(intervals, "alpha@1")[0]
-        self.assertEqual((row["capacity"], row["capacity_at"], row["seen_from"]["by"]), (500, NOV, T0))
+        self.assertEqual(row["seen_from"]["by"], T0)
+        self.assertNotIn("capacity", row)
+        self.assertNotIn("capacity_at", row)
         self.assertEqual(intervals["regions"]["uksouth"]["checkpoints"], 2)
         self.assertEqual(intervals["observed_through"], NOV)
         self.assertTrue(cp)
 
-    def test_a_capacity_change_alone_leaves_the_windows_alone(self) -> None:
+    def test_a_committed_capacity_change_changes_nothing_published(self) -> None:
         a = watched("alpha")
         cp = self.put(cp_path("uksouth", T0), checkpoint("uksouth", T0, [a]))
         self.put(obs_path("uksouth", T1), observation("uksouth", T1, T0, None, cp, [a], [
@@ -301,7 +303,8 @@ class CatalogueBuildTests(unittest.TestCase):
              "fields": ["cells[GlobalStandard].capacity"], "note": "GlobalStandard capacity 100 → 250"},
         ]))
         row = self.rows(self.build(), "alpha@1")[0]
-        self.assertEqual((row["seen_from"]["by"], row["capacity"]), (T0, None))
+        self.assertEqual(row["seen_from"]["by"], T0)
+        self.assertNotIn("capacity", row)
 
     # -- a chain that does not add up fails the build ------------------------------------------
 
