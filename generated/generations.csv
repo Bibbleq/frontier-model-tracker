@@ -15,10 +15,14 @@ claude-5,Claude 5,Anthropic,claude
 gemini-1,Gemini 1,Google,gemini
 gemini-2,Gemini 2,Google,gemini
 gemini-3,Gemini 3,Google,gemini
+gemini-4,Gemini 4,Google,gemini
 grok-3,Grok 3,xAI,grok
 grok-4,Grok 4,xAI,grok
 llama-2,Llama 2,Meta,llama
+muse-spark,Muse Spark,Meta,muse
+muse-wonder,Muse Wonder,Meta,muse
 mistral-3,Mistral 3,Mistral AI,mistral
+mistral-4,Mistral 4,Mistral AI,mistral
 deepseek-r1,DeepSeek R1,DeepSeek,deepseek-r
 deepseek-v3,DeepSeek V3,DeepSeek,deepseek-v
 deepseek-v4,DeepSeek V4,DeepSeek,deepseek-v

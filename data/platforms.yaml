@@ -75,6 +75,11 @@ surfaces:
     owner: Mistral AI
     vendor_baseline: true
     counts_as: []
+  - id: cohere
+    display_name: "Cohere"
+    owner: Cohere
+    vendor_baseline: true
+    counts_as: []
   - id: xai-grok
     display_name: "Grok"
     owner: xAI

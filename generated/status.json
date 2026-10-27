@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 325,
-    "backlog": 90,
-    "sources": 446,
-    "models": 123,
-    "surfaces": 26,
-    "confirmed": 263,
-    "supported": 62
+    "events": 369,
+    "backlog": 93,
+    "sources": 558,
+    "models": 140,
+    "surfaces": 27,
+    "confirmed": 296,
+    "supported": 73
   },
   "kinds": {
-    "announcement": 20,
-    "availability": 290,
+    "announcement": 25,
+    "availability": 329,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 48,
+    "open": 51,
     "promoted": 36,
     "rejected": 4
   },
@@ -57,6 +57,11 @@
       "message": "open item names no surface, so it cannot suppress a lag answer"
     },
     {
+      "code": "backlog_without_surface",
+      "subject": "sweep-2026-09-26-to-10-23",
+      "message": "open item names no surface, so it cannot suppress a lag answer"
+    },
+    {
       "code": "missing_archive",
       "subject": "cowork-fable5-1-2026-09-01",
       "message": "documentation source has no archived_url and may be edited in place: https://pupuweb.com/mc1465748-claude-fable-5-1-is-now-available-in-copilot-cowork-and-copilot-studio-with-microsofts-enterprise-data-protection/"
@@ -65,6 +70,16 @@
       "code": "missing_archive",
       "subject": "cowork-fable5-1-2026-09-01",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "cowork-gpt6-1-sol-2026-09-30",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/copilot/cowork/cowork-models"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "cowork-sonnet5-5-2026-09-30",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/copilot/cowork/cowork-models"
     },
     {
       "code": "missing_archive",
@@ -98,6 +113,11 @@
     },
     {
       "code": "missing_archive",
+      "subject": "foundry-gpt6-1-sol-2026-09-29",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+    },
+    {
+      "code": "missing_archive",
       "subject": "foundry-gpt6-sol-luna-2026-09-22",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure-region-availability"
     },
@@ -108,6 +128,16 @@
     },
     {
       "code": "missing_archive",
+      "subject": "foundry-grok4-7-2026-10-06",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-haiku5-5-2026-10-07",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
+    },
+    {
+      "code": "missing_archive",
       "subject": "foundry-nemotron-3-5-lightning-2026-08-19",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/how-to/fireworks/enable-fireworks-models"
     },
@@ -115,6 +145,31 @@
       "code": "missing_archive",
       "subject": "foundry-opus5-5-2026-09-22",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-sonnet5-5-2026-09-28",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "google-gemini4-argon-2026-10-13",
+      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "google-nano-banana-2-1-2026-10-06",
+      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "microsoft-decision-1-2026-10-09",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-gpt6-1-sol-2026-09-29",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/changelog"
     },
     {
       "code": "missing_archive",
@@ -213,8 +268,8 @@
     }
   ],
   "warning_counts": {
-    "backlog_without_surface": 7,
-    "missing_archive": 14,
+    "backlog_without_surface": 8,
+    "missing_archive": 24,
     "no_vendor_baseline": 9,
     "no_vendor_baseline_extended": 7,
     "pre_release_access": 1
@@ -235,7 +290,10 @@
     "models_without_generation": [
       "claude-mythos-preview",
       "codex",
+      "cohere-embed-v5",
       "cohere-parse-v5",
+      "cohere-rerank-v5",
+      "grok-voice-3",
       "mai-code-1-1-flash",
       "mai-code-1-flash",
       "mai-cyber-1-flash",
@@ -249,32 +307,44 @@
       "mai-transcribe-1",
       "mai-transcribe-1-5",
       "mai-transcribe-2",
+      "mai-transcribe-2-streaming",
       "mai-voice-1",
       "mai-voice-2",
+      "mai-voice-2-1",
+      "mai-voice-2-1-flash",
+      "microsoft-decision-1",
       "openai-deep-research"
     ],
     "models_without_classification": [
       "codex",
+      "cohere-embed-v5",
       "cohere-parse-v5",
+      "cohere-rerank-v5",
+      "microsoft-decision-1",
       "openai-deep-research"
     ],
     "surfaces_without_events": [],
     "extended_scope_models": [
+      "cohere-embed-v5",
       "cohere-parse-v5",
+      "cohere-rerank-v5",
+      "deepseek-v4-1-flash-1017",
       "grok-4-1-fast",
       "grok-4-20",
       "grok-4-3",
       "kimi-k2-5",
       "kimi-k2-6",
+      "microsoft-decision-1",
+      "nano-banana-2-1",
       "nemotron-speech-streaming-en",
       "qwen-3-5-vision"
     ]
   },
   "lag_certainty": {
-    "exact": 306,
-    "not_recorded": 650,
+    "exact": 323,
+    "not_recorded": 812,
     "range": 29,
-    "rollout_start": 104,
+    "rollout_start": 129,
     "unknown_no_baseline": 296,
     "unknown_open_research": 91
   }
