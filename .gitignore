@@ -4,3 +4,4 @@ __pycache__/
 
 # machine-specific dev server config
 .claude/
+generated/catalogue/

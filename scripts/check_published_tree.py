@@ -71,10 +71,15 @@ def main() -> None:
     if snapshots == 0:
         fail("no immutable contract snapshots were assembled")
 
+    catalogue = site / "catalogue" / "manifest.json"
+    catalogue_files = 0
+    if catalogue.exists():
+        catalogue_files = check_tree(site, load_manifest(catalogue.parent, "catalogue"), "catalogue")
+
     print(
         f"Published tree verified: latest contract v{latest['contract_version']}, "
         f"dataset v{latest['dataset_version']}, {count} payload files, "
-        f"{snapshots} immutable snapshot(s)."
+        f"{snapshots} immutable snapshot(s), {catalogue_files} catalogue file(s)."
     )
 
 

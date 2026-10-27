@@ -42,6 +42,11 @@ how to query, analyse or present them.
 
 Start at the manifest: <https://bibbleq.github.io/frontier-model-tracker/manifest.json>
 
+The catalogue, a by-region view of the Microsoft Foundry models listing replayed from
+`observations/` and `checkpoints/`, has its own manifest and contract:
+<https://bibbleq.github.io/frontier-model-tracker/catalogue/manifest.json>, described in
+[`docs/catalogue-contract.md`](docs/catalogue-contract.md).
+
 [`docs/data-contract.md`](docs/data-contract.md) is the promise consumers can
 rely on: which paths are stable, how versioning and deprecation work, and the
 interpretation rules consumers must preserve so the distinctions in the data are
