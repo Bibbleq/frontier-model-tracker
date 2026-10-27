@@ -22,7 +22,7 @@ from jsonschema import Draft202012Validator
 # the shape of the records. They move independently.
 CONTRACT_VERSION = 3
 BASE_URL = "https://bibbleq.github.io/frontier-model-tracker/"
-ATTRIBUTION = "365Explained Frontier Model Tracker"
+ATTRIBUTION = "CtrlAltBen Frontier Model Tracker"
 
 # Files promised to consumers, in the order they appear in the manifest. The
 # key is the path on the published site; the value describes it.
