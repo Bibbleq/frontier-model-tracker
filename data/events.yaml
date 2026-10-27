@@ -2,7 +2,7 @@ version: 3
 updated: "2026-10-26"
 research_cutoff: "2026-10-23"
 metadata:
-  project: "365Explained Frontier Model Tracker"
+  project: "CtrlAltBen Frontier Model Tracker"
   purpose: "Sourced history of frontier and significant model availability across tracked Microsoft surfaces."
   interpretation_rules:
     - "GitHub Models is not GitHub Copilot."

@@ -1,6 +1,6 @@
 # Copilot instructions: triaging a `candidate` issue
 
-You are working on the **365Explained Frontier Model Tracker**, a sourced history of
+You are working on the **CtrlAltBen Frontier Model Tracker**, a sourced history of
 when frontier and significant AI models were released by their vendors and when
 they became available on tracked Microsoft surfaces. The dataset is the product.
 Everything in `generated/` and `published/` is derived from three

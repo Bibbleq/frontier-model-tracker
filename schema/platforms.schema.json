@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://bibbleq.github.io/frontier-model-tracker/schema/platforms.schema.json",
-  "title": "365Explained Frontier Model Tracker surface registry",
+  "title": "CtrlAltBen Frontier Model Tracker surface registry",
   "type": "object",
   "required": ["version", "surfaces", "experiences"],
   "properties": {

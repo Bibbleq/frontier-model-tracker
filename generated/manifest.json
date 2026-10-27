@@ -9,7 +9,7 @@
   "licence": {
     "data": "CC-BY-4.0",
     "code": "MIT",
-    "attribution": "365Explained Frontier Model Tracker",
+    "attribution": "CtrlAltBen Frontier Model Tracker",
     "notice": "A sourced research project, not official product documentation. Not affiliated with Microsoft, OpenAI, Anthropic or GitHub."
   },
   "files": [
@@ -17,8 +17,8 @@
       "path": "data/events.json",
       "media_type": "application/json",
       "description": "The whole dataset: metadata, canonical events and the validation backlog",
-      "bytes": 835181,
-      "sha256": "989f34c3a9a4838beee57c018dc42bd5d140b4b8e8e62b5f58a092695cdd7477"
+      "bytes": 835179,
+      "sha256": "fa62017e85f2cd7f1c4e630cb2be0e08b9f1febcf974b2212fb38c46100b90be"
     },
     {
       "path": "data/status.json",
@@ -94,22 +94,22 @@
       "path": "schema/events.schema.json",
       "media_type": "application/json",
       "description": "JSON Schema the dataset validates against",
-      "bytes": 11345,
-      "sha256": "af072e78ac6b6e2fd40ccd78e8721b37949de33aea6e747fc2743071dc6752de"
+      "bytes": 11343,
+      "sha256": "82e9289cb2cd4d4b7dc95cb545c497e011583d2574bf44de8b4d45b043e1a0c8"
     },
     {
       "path": "schema/models.schema.json",
       "media_type": "application/json",
       "description": "JSON Schema for the model registry",
-      "bytes": 3589,
-      "sha256": "030fd72a464ab4aaee4052c9182c3c422836f8a5db89ae93154cea20885fca91"
+      "bytes": 3587,
+      "sha256": "c039cf1a760b2bc08c8384bf80409866399f20c09219c96520a1f941234a4e2e"
     },
     {
       "path": "schema/platforms.schema.json",
       "media_type": "application/json",
       "description": "JSON Schema for the surface registry",
-      "bytes": 2055,
-      "sha256": "54127409a8388b80e6db8afcd8a37f676336ea95f96afe0260f743046f982689"
+      "bytes": 2053,
+      "sha256": "87914b48a83ec62d1821b31dd072e746fe2bc44947db6c2224b070a10f7a042b"
     }
   ]
 }

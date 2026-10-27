@@ -1,4 +1,4 @@
-# 365Explained Frontier Model Tracker
+# CtrlAltBen Frontier Model Tracker
 
 An independent, community-maintained history of frontier and significant AI model availability across the Microsoft AI stack.
 
@@ -72,6 +72,6 @@ Third-party names, trademarks, linked source material and quoted content remain 
 
 ## Independence
 
-365Explained Frontier Model Tracker is an independent community project. It is not affiliated with, authorised, sponsored or approved by Microsoft Corporation, OpenAI, Anthropic, GitHub or any other model provider referenced in the dataset.
+CtrlAltBen Frontier Model Tracker is an independent community project. It is not affiliated with, authorised, sponsored or approved by Microsoft Corporation, OpenAI, Anthropic, GitHub or any other model provider referenced in the dataset.
 
 Microsoft, Azure, Microsoft 365, Copilot, GitHub and other product names are used descriptively to identify the products and services being tracked.
