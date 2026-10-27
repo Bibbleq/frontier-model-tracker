@@ -35,14 +35,14 @@
     "previous_file": {
       "comment": "Path, relative to the repository root, of the previous observation file for this source and region, or null for the first file after a checkpoint with no earlier file.",
       "anyOf": [
-        {"type": "string", "pattern": "^observations/[a-z0-9-]+/[a-z0-9-]+/\\d{4}/\\d{2}/\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z\\.json$"},
+        {"type": "string", "pattern": "^observations/[a-z0-9-]+/[a-z0-9-]+/\\d{4}/\\d{2}/\\d{4}-\\d{2}-\\d{2}T\\d{2}-\\d{2}-\\d{2}Z\\.json$"},
         {"type": "null"}
       ]
     },
     "checkpoint": {
       "comment": "Path of the latest checkpoint at or before this file. Required and not nullable: a diff file never exists without a seed checkpoint.",
       "type": "string",
-      "pattern": "^checkpoints/[a-z0-9-]+/[a-z0-9-]+/\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z\\.json$"
+      "pattern": "^checkpoints/[a-z0-9-]+/[a-z0-9-]+/\\d{4}-\\d{2}-\\d{2}T\\d{2}-\\d{2}-\\d{2}Z\\.json$"
     },
     "observed_from": {
       "comment": "The literal label for the vantage point of the run, for example 'standard pay-as-you-go subscription'. A listing is one subscription's view, which is why absence is weaker evidence than presence.",
