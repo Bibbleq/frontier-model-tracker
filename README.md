@@ -26,7 +26,10 @@ data/              Human-maintained source data: model and surface registries, e
 docs/              Data contract, methodology and research provenance
 generated/         Machine-generated JSON/CSV outputs
 published/         Immutable contract and dataset snapshots
-schema/            JSON Schema for event validation
+schema/            JSON Schema for the dataset and the catalogue files
+observations/      Machine-written catalogue observations (diffs only)
+checkpoints/       Machine-written full-state catalogue checkpoints
+status/            Machine-written catalogue status exports
 scripts/           Build and validation tooling
 .github/           Contribution and validation workflows
 ```

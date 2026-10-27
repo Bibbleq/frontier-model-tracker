@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "source": "arm",
+  "region": "uksouth",
+  "kind": "seed",
+  "observed_at": "2026-10-01T00:31:02Z",
+  "observed_from": "standard pay-as-you-go subscription",
+  "entry_count": 2,
+  "cell_count": 2,
+  "snapshot_sha256": "6fb82a46696074977f095af25a85171d2ea451cec7bef4bbbbb655d57fe5f61f",
+  "entries": [
+    {
+      "model_key": "example-retired-model@2025-04-14",
+      "first_seen": "2026-10-01T00:31:02Z",
+      "last_seen": "2026-10-01T00:31:02Z",
+      "watched": {
+        "name": "example-retired-model",
+        "version": "2025-04-14",
+        "format": "OpenAI",
+        "lifecycle_status": "Deprecating",
+        "lifecycle_portal": "Deprecated",
+        "deprecation_inference": "2026-10-27T00:00:00Z",
+        "deprecation_fine_tune": null,
+        "is_default_version": false,
+        "capabilities": {
+          "chatCompletion": "true"
+        },
+        "skus": [
+          {
+            "name": "Standard",
+            "deprecation_date": "2026-10-27"
+          }
+        ]
+      },
+      "cells": [
+        {
+          "deployment_type": "Standard",
+          "first_seen": "2026-10-01T00:31:02Z",
+          "last_seen": "2026-10-01T00:31:02Z",
+          "removed_at": null,
+          "sku_deprecation_date": "2026-10-27",
+          "capacity": null,
+          "capacity_at": null
+        }
+      ]
+    },
+    {
+      "model_key": "Example-Embedding-Large@1",
+      "first_seen": "2026-10-01T00:31:02Z",
+      "last_seen": "2026-10-01T00:31:02Z",
+      "watched": {
+        "name": "Example-Embedding-Large",
+        "version": "1",
+        "format": "Example",
+        "lifecycle_status": "Stable",
+        "lifecycle_portal": null,
+        "deprecation_inference": null,
+        "deprecation_fine_tune": null,
+        "is_default_version": true,
+        "capabilities": {
+          "embeddings": "true"
+        },
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": null
+          }
+        ]
+      },
+      "cells": [
+        {
+          "deployment_type": "GlobalStandard",
+          "first_seen": "2026-10-01T00:31:02Z",
+          "last_seen": "2026-10-01T00:31:02Z",
+          "removed_at": null,
+          "sku_deprecation_date": null,
+          "capacity": 0,
+          "capacity_at": "2026-10-01T00:31:02Z"
+        }
+      ]
+    }
+  ]
+}

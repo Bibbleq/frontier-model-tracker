@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bibbleq.github.io/frontier-model-tracker/schema/observation.schema.json",
+  "title": "CtrlAltBen Frontier Model Tracker catalogue observation",
+  "comment": "One file is one run of one source in one region that saw at least one change. A run that sees nothing new writes no file; the chain of files attests those silent runs through previous_run_at, runs_since_previous_file and keys_present. See docs/catalogue-contract.md.",
+  "type": "object",
+  "required": [
+    "schema_version", "source", "region", "observed_at", "previous_run_at",
+    "runs_since_previous_file", "previous_file", "checkpoint", "observed_from",
+    "entry_count", "cell_count", "snapshot_sha256", "keys_present", "changes"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "source": {
+      "comment": "The listing the run read. The v1 value is arm (the Azure Resource Manager Models API); the vocabulary is open so another listing can be added without a new schema version.",
+      "$ref": "#/$defs/identifier"
+    },
+    "region": {
+      "comment": "The ARM lowercase region identifier, for example uksouth.",
+      "$ref": "#/$defs/identifier"
+    },
+    "observed_at": {
+      "comment": "The run that saw the changes. An observation dates the observation, never the change itself.",
+      "$ref": "#/$defs/timestamp"
+    },
+    "previous_run_at": {
+      "comment": "The last successful run of the same source and region. It is the 'absent at' edge of every first-seen window in the file.",
+      "$ref": "#/$defs/timestamp"
+    },
+    "runs_since_previous_file": {
+      "comment": "Silent successful runs between the previous file and this one, none of which saw a change.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "previous_file": {
+      "comment": "Path, relative to the repository root, of the previous observation file for this source and region, or null for the first file after a checkpoint with no earlier file.",
+      "anyOf": [
+        {"type": "string", "pattern": "^observations/[a-z0-9-]+/[a-z0-9-]+/\\d{4}/\\d{2}/\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z\\.json$"},
+        {"type": "null"}
+      ]
+    },
+    "checkpoint": {
+      "comment": "Path of the latest checkpoint at or before this file. Required and not nullable: a diff file never exists without a seed checkpoint.",
+      "type": "string",
+      "pattern": "^checkpoints/[a-z0-9-]+/[a-z0-9-]+/\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z\\.json$"
+    },
+    "observed_from": {
+      "comment": "The literal label for the vantage point of the run, for example 'standard pay-as-you-go subscription'. A listing is one subscription's view, which is why absence is weaker evidence than presence.",
+      "type": "string",
+      "minLength": 1
+    },
+    "entry_count": {
+      "comment": "Model entries the run saw in total, not the number that changed.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "cell_count": {
+      "comment": "Deployment-type cells the run saw in total, not the number that changed.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "snapshot_sha256": {
+      "comment": "SHA-256 of the full normalised snapshot the watcher holds privately, so a replay can show it reached the same state without the snapshot being published.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "keys_present": {
+      "comment": "The full list of model keys the run saw, not only the changed ones. A key absent here but present in the replayed state is an absence the run saw.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/model_key"}
+    },
+    "changes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/change"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "identifier": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "timestamp": {"type": "string", "format": "date-time", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"},
+    "nullable_timestamp": {
+      "anyOf": [
+        {"$ref": "#/$defs/timestamp"},
+        {"type": "null"}
+      ]
+    },
+    "model_key": {
+      "comment": "name@version exactly as the API spells them, case preserved, for example gpt-chat-latest@2026-10-07 or Muse-Glimmer-30B@1. The version is a build identifier, never a date.",
+      "type": "string",
+      "pattern": "^[^@\\s]+@[^@\\s]+$"
+    },
+
+    "change": {
+      "type": "object",
+      "required": ["kind", "model_key", "window_start", "window_end"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "first_seen_present", "region_added", "returned", "last_seen_absent",
+            "lifecycle_changed", "deprecation_set", "deprecation_moved",
+            "default_version_changed", "alias_version_added",
+            "deployment_type_added", "deployment_type_removed",
+            "capacity_changed", "fields_changed"
+          ]
+        },
+        "model_key": {"$ref": "#/$defs/model_key"},
+        "window_start": {
+          "comment": "The run at which the old state was last seen. Every change is a window from one run to the next, never a day.",
+          "$ref": "#/$defs/timestamp"
+        },
+        "window_end": {
+          "comment": "The run at which the new state was first seen. For last_seen_absent this is the first absent run, and confirmed_at says when the absence was confirmed.",
+          "$ref": "#/$defs/timestamp"
+        },
+        "confirmed_at": {
+          "comment": "Absences only: the run at which the absence was confirmed.",
+          "$ref": "#/$defs/timestamp"
+        },
+        "absence_strength": {
+          "comment": "Absences only. The listing is one subscription's view, so ARM absences are always weak; page is reserved for a source that publishes the listing itself.",
+          "type": "string",
+          "enum": ["weak", "page"]
+        },
+        "fields": {
+          "comment": "The watched field names that changed.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "before": {
+          "comment": "The watched subset before the change: present on changes and absences.",
+          "$ref": "#/$defs/watched"
+        },
+        "after": {
+          "comment": "The watched subset after the change: present on arrivals and changes.",
+          "$ref": "#/$defs/watched"
+        },
+        "cells": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/cell"}
+        },
+        "note": {
+          "comment": "Free text, for example: Legacy is mapped to the portal's Legacy stage; the REST enum omits it.",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "watched": {
+      "comment": "The watched subset of a model entry. systemData timestamps are never watched and never appear here.",
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "version": {"type": "string"},
+        "format": {"type": "string"},
+        "lifecycle_status": {
+          "comment": "The raw API value, shown beside its portal word from schema/lifecycle-mapping.json.",
+          "type": "string"
+        },
+        "lifecycle_portal": {
+          "comment": "The portal word for lifecycle_status from schema/lifecycle-mapping.json; null when the value is unmapped.",
+          "type": ["string", "null"]
+        },
+        "deprecation_inference": {"$ref": "#/$defs/nullable_timestamp"},
+        "deprecation_fine_tune": {"$ref": "#/$defs/nullable_timestamp"},
+        "is_default_version": {"type": "boolean"},
+        "capabilities": {
+          "type": "object",
+          "additionalProperties": {"type": "string"}
+        },
+        "skus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string"},
+              "deprecation_date": {"type": ["string", "null"]}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "cell": {
+      "comment": "One deployment type of one model entry in the region. Capacity is a moment, read at capacity_at, not a standing quantity.",
+      "type": "object",
+      "required": ["deployment_type"],
+      "properties": {
+        "deployment_type": {
+          "comment": "The ARM skuName, or none when the row carries skus: [].",
+          "type": "string"
+        },
+        "first_seen": {"$ref": "#/$defs/timestamp"},
+        "last_seen": {"$ref": "#/$defs/timestamp"},
+        "removed_at": {"$ref": "#/$defs/nullable_timestamp"},
+        "sku_deprecation_date": {"type": ["string", "null"]},
+        "capacity": {
+          "comment": "Absent, not zero, when capacity was not read.",
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "capacity_at": {"$ref": "#/$defs/nullable_timestamp"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

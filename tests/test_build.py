@@ -265,6 +265,14 @@ class PublishedArtifactTests(unittest.TestCase):
             self.assertEqual(list(site.rglob("*.html")), [])
             self.assertEqual(list(site.rglob("*.css")), [])
 
+    def test_artifact_carries_the_catalogue_contract_files(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            site = Path(directory) / "_site"
+            assemble_site.assemble(site)
+
+            for name in ("observation.schema.json", "checkpoint.schema.json", "lifecycle-mapping.json"):
+                self.assertTrue((site / "schema" / name).is_file(), name)
+
 
 if __name__ == "__main__":
     unittest.main()

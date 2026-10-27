@@ -3,6 +3,9 @@ name: Publish data
 # The repository is authoritative. This publishes the generated outputs and
 # immutable snapshots to a stable, independently consumable URL.
 
+# observations/, checkpoints/ and status/ are deliberately outside this include
+# list, so the machine commits that write them trigger neither this job nor
+# the validation job. The list gains them only when the catalogue build lands.
 on:
   push:
     branches: [main]

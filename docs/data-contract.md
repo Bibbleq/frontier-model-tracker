@@ -351,6 +351,14 @@ The dataset records publicly documented availability. It is a sourced research
 project, not official product documentation, and is not affiliated with
 Microsoft, OpenAI, Anthropic or GitHub. A consumer should not imply otherwise.
 
+## Catalogue observations
+
+Three further folders exist in the repository: `observations/`, `checkpoints/`
+and `status/`. They hold machine-written catalogue snapshots and are outside
+this contract. They are append-only but not versioned, and they are not part of
+the published `/c3/v3/` tree or any immutable snapshot. Their file shapes and
+rules are described in [`catalogue-contract.md`](catalogue-contract.md).
+
 ## What is not in the contract
 
 These may change without a version bump, and a consumer must not depend on
@@ -371,6 +379,7 @@ them:
 
 | Contract | Dataset | Change |
 | --- | --- | --- |
+| 3 | 3 | Adds the catalogue contract (`docs/catalogue-contract.md`): JSON schemas for machine-written catalogue observation and checkpoint files and the lifecycle mapping table under `schema/`, with three append-only folders outside this contract. Additive only, no field, file or enum of the dataset changed, so no version bump. |
 | 3 | 3 | Renames the project and its attribution string from 365Explained Frontier Model Tracker to CtrlAltBen Frontier Model Tracker: in `metadata.project`, the `attribution` string in `manifest.json`, the schema titles, LICENSE-DATA and the repository documentation. A naming change only: no field, file or enum changed, so no version bump. Published snapshots keep the attribution string they were issued with, and a consumer crediting the earlier name for data it obtained under it remains compliant; the new string applies to data fetched from the rename onwards. |
 | 3 | 3 | Adds the optional `rollout_start` flag to an event's `date`, a `date_rollout_start` column in `data/events.csv`, the `rollout_start` value of `certainty` in `data/lag.csv` and a `date_confidence` column there. Rows whose baseline or first event is a rollout start move from `exact` or `range` to `rollout_start` with their numbers unchanged. Additive only — an optional field, two new columns and a new value on an open vocabulary — so no version bump; a consumer that treats unrecognised values as opaque needs no change, and one that renders `certainty` should add the new value. |
 | 3 | 3 | Adds the optional model `scope` field (`frontier`/`extended`), a `scope` column in `data/models.csv`, the `no_vendor_baseline_extended` warning code and the `extended_scope_models` coverage list. Additive only — an optional field, a new column, a new warning code and a new coverage key — so no version bump; consumers that ignore unrecognised fields need no change. |
