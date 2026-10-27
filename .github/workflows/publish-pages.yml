@@ -3,9 +3,11 @@ name: Publish data
 # The repository is authoritative. This publishes the generated outputs and
 # immutable snapshots to a stable, independently consumable URL.
 
-# observations/, checkpoints/ and status/ are deliberately outside this include
-# list, so the machine commits that write them trigger neither this job nor
-# the validation job. The list gains them only when the catalogue build lands.
+# The catalogue watcher's machine commits to observations/, checkpoints/ and
+# status/ trigger this job, which replays them into the catalogue product
+# (scripts/build_catalogue.py) and publishes it under catalogue/. The output is
+# published, never committed. The validation job's include list still leaves
+# those folders out.
 on:
   push:
     branches: [main]
@@ -16,6 +18,9 @@ on:
       - "requirements.txt"
       - "generated/**"
       - "published/**"
+      - "observations/**"
+      - "checkpoints/**"
+      - "status/**"
       - ".github/workflows/publish-pages.yml"
   workflow_dispatch:
 
@@ -56,6 +61,11 @@ jobs:
 
       - name: Assemble site
         run: python scripts/assemble_site.py _site
+
+      # Replays every region's chain from its seed checkpoint and fails if a
+      # file does not reach the state the watcher hashed.
+      - name: Build the catalogue
+        run: python scripts/build_catalogue.py _site
 
       - name: Verify the published tree matches the manifest
         run: python scripts/check_published_tree.py _site

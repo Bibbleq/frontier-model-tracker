@@ -1,11 +1,11 @@
-# Catalogue contract, version 1
+# Catalogue contract, version 2
 
 This document describes three folders of machine-written catalogue snapshots
 and the file shapes inside them. It is separate from the dataset's
 [data contract](data-contract.md): the dataset is curated research, whereas
 these folders are captured listings of what a public API returned.
 
-**Catalogue contract version 1.**
+**Catalogue contract version 2.**
 
 These folders are append-only but not versioned; they sit outside the immutable
 `published/` promise of the data contract.
@@ -16,7 +16,7 @@ These folders are append-only but not versioned; they sit outside the immutable
 | --- | --- |
 | `observations/` | Diff-only observation files: one file per run of one source in one region that saw at least one change |
 | `checkpoints/` | Full-state checkpoints: a seed that starts a chain, then one per month |
-| `status/` | Two status exports, `arm.json` and `regions.json` |
+| `status/` | Two status exports, `arm.json` and `regions.json`: a status report and reference data, never evidence |
 
 The first source is the Azure Resource Manager Models API, which the paths call
 `arm`. The catalogue watcher polls it for every Azure region four times a day.
@@ -97,18 +97,78 @@ These are interpretation rules for anything that reads or renders the files.
   raw and marked unmapped, never guessed.
 - **Version strings are build identifiers, never dates.** `gpt-chat-latest@2026-10-07`
   is a name and a build label; the model key keeps the API's spelling and case.
-- **Capacity is a moment.** A capacity figure is what the API reported at
-  `capacity_at`. It is absent, not zero, when it was not read.
+- **Capacity is not published.** The Model Capacities API reports the
+  capacity available *to the calling subscription*: its quota, which depends
+  on the subscription's tier and usage, less what it has deployed. It says
+  nothing about a region that another subscription could rely on, so the
+  watcher no longer writes `capacity`, `capacity_at` or `capacity_changed`
+  (27 October 2026). The schema still allows the fields, the seed checkpoints
+  carry them as null, and no reader should show them.
+
+## The derived catalogue
+
+The Pages site publishes a catalogue product built from these folders by
+`scripts/build_catalogue.py`. Start at its manifest:
+<https://bibbleq.github.io/frontier-model-tracker/catalogue/manifest.json>
+
+| File | Origin | Contents |
+| --- | --- | --- |
+| `catalogue/manifest.json` | derived | `catalogue_contract_version`, the first and latest observation times, the licence, and the size and SHA-256 of every file below |
+| `catalogue/intervals.json` | derived | Presence windows and state segments, replayed from `checkpoints/` and `observations/` |
+| `catalogue/regions.json` | export | `status/regions.json`, byte for byte |
+| `catalogue/status.json` | export | `status/arm.json`, byte for byte |
+
+The two exports are copied so a reader can verify them against the same
+manifest; they keep their meaning: reference data and a status report, never
+evidence.
+
+The build is a replay, not a summary. For each region it starts from the seed
+checkpoint, applies every observation file in order, and at each file
+recomputes the snapshot hash from the replayed state, using the watcher's
+formulas:
+
+```text
+fingerprint     = sha256( json.dumps(watched, sort_keys=True, separators=(",", ":")) )
+snapshot_sha256 = sha256( json.dumps([[model_key, fingerprint], ...] sorted by model_key,
+                                     separators=(",", ":")) )
+```
+
+It also checks the entry and cell counts, each file's `previous_file` and
+`checkpoint` links, and that every later checkpoint restates exactly the
+replayed state. A chain that does not add up fails the build, so nothing is
+published from a record that does not reconcile. The output carries no build
+time: the same inputs give the same bytes, and anyone can run the script on a
+clone to reproduce it. It is published, never committed.
+
+### `intervals.json`
+
+| Field | Meaning |
+| --- | --- |
+| `first_observed_at`, `observed_through` | The earliest and latest run any committed file records. Nothing before `first_observed_at` was observed. |
+| `regions` | Per region: its own `first_observed_at` and `last_observed_at`, the `observed_from` label, how many observation files and checkpoints it has, and how many entries are present. `last_observed_at` is the latest file, not the latest run; quiet runs write nothing, and the status export says when a region was last polled. |
+| `models` | Per `model_key`: `name`, `version`, `format`, and `tracker_model`, the dataset's model id when `data/models.yaml` lists the ARM name or key in that model's `aliases`, else null. No other link is made. |
+| `cells` | One row per region, model key, deployment type and unbroken presence. `seen_from` is `{after, by}`: the last run known without it and the first run that saw it; `after` is null for anything present at the region's first observation. `seen_until` is null while present, else `{last_seen, absent_by, confirmed_at}`. `sku_deprecation_date` is the latest value the files carry. |
+| `cells[].absent_unconfirmed_since` | Present only on an open row whose key has dropped out of the listing but whose absence is not yet confirmed. The row stays open until a confirmed absence closes it. |
+| `states` | One row per region and model key each time the stage, the deprecation dates, the default-version flag or the capabilities change. `from` is the same `{after, by}` window. The raw `lifecycle_status` sits beside `lifecycle_portal` and the dataset's `dataset_lifecycle`, from `schema/lifecycle-mapping.json`. Capabilities live here because one key can list different capabilities in different regions. |
+
+### Reading it
+
+- **Presence on a day.** A cell row covers a moment *t* when `seen_from.by` ≤
+  *t* and either `seen_until` is null or *t* < `seen_until.absent_by`. Between
+  `seen_from.after` and `seen_from.by` the arrival happened at an unknown
+  point: render the window, never a date.
+- **State on a day.** For a region and key, the state at *t* is the latest
+  `states` row whose `from.by` ≤ *t*.
+- **A flap is not a gap.** A key that drops out and returns before its absence
+  is confirmed keeps one unbroken row, as the watcher records it.
+- **No capacity, by design.** See the honesty rule above: a capacity figure
+  is one subscription's quota, so the catalogue carries none.
+- **The honesty rules above apply.** Observed is not confirmed, absence is
+  weak, and every row is one subscription's view.
 
 ## What is not in the contract
 
 - The watcher's private state, snapshots and configuration.
-- The `status/` files. They are a status report and reference data about the
-  watcher and the regions it covers; they are never evidence that anything was
-  or was not available.
-- The derived catalogue build and `generated/catalogue/manifest.json`. A
-  replay that turns these files into a published catalogue arrives in a later
-  version of this contract, with its own manifest.
 - The wording of any `note` field.
 
 ## Caching and polite use
@@ -140,3 +200,4 @@ Microsoft, OpenAI, Anthropic or GitHub.
 | --- | --- |
 | 1 | Initial catalogue contract: observation and checkpoint schemas, the lifecycle mapping table, and the `observations/`, `checkpoints/` and `status/` folders. |
 | 1, amended 27 October 2026 | File names use hyphens in the time part (`2026-10-27T19-30-00Z.json`), so the repository can be cloned on Windows. The 35 seed checkpoints were renamed with their bytes unchanged; no observation file had been written. The `previous_file` and `checkpoint` patterns in the observation schema follow. |
+| 2 | The derived catalogue: `scripts/build_catalogue.py` replays the chain, proves each file against its snapshot hash and publishes `catalogue/manifest.json`, `intervals.json` and the two exports on the Pages site. Capacity is no longer written or published: it is the watcher's subscription quota. The observation and checkpoint shapes are unchanged. |
