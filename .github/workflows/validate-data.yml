@@ -1,8 +1,11 @@
 name: Validate dataset
 
-# observations/, checkpoints/ and status/ are deliberately outside the include
-# lists below, so the machine commits that write them trigger neither this job
-# nor the Pages publish.
+# observations/, checkpoints/ and status/ are deliberately outside the push
+# include list below, so the machine commits that write them do not trigger
+# this job.
+#
+# Pull requests have no path filter. `validate` is a required check on main, and
+# a check that never runs leaves a docs-only PR blocked, so every PR runs it.
 on:
   push:
     paths:
@@ -15,15 +18,6 @@ on:
       - "tests/**"
       - ".github/workflows/validate-data.yml"
   pull_request:
-    paths:
-      - "data/**"
-      - "schema/**"
-      - "scripts/**"
-      - "generated/**"
-      - "published/**"
-      - "requirements.txt"
-      - "tests/**"
-      - ".github/workflows/validate-data.yml"
 
 permissions:
   contents: read
