@@ -4,6 +4,7 @@ gpt-3-5,GPT-3.5,OpenAI,openai-gpt
 gpt-4,GPT-4,OpenAI,openai-gpt
 gpt-5,GPT-5,OpenAI,openai-gpt
 gpt-6,GPT-6,OpenAI,openai-gpt
+gpt-oss,gpt-oss,OpenAI,openai-gpt
 o1,o1,OpenAI,openai-o
 o3,o3,OpenAI,openai-o
 o4,o4,OpenAI,openai-o
@@ -19,6 +20,7 @@ gemini-4,Gemini 4,Google,gemini
 grok-3,Grok 3,xAI,grok
 grok-4,Grok 4,xAI,grok
 llama-2,Llama 2,Meta,llama
+llama-4,Llama 4,Meta,llama
 muse-spark,Muse Spark,Meta,muse
 muse-wonder,Muse Wonder,Meta,muse
 mistral-3,Mistral 3,Mistral AI,mistral

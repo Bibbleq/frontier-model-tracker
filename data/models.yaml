@@ -111,6 +111,10 @@ generations:
     display_name: "GPT-6"
     vendor: OpenAI
     series: openai-gpt
+  - id: gpt-oss
+    display_name: "gpt-oss"
+    vendor: OpenAI
+    series: openai-gpt
   - id: o1
     display_name: "o1"
     vendor: OpenAI
@@ -169,6 +173,10 @@ generations:
     series: grok
   - id: llama-2
     display_name: "Llama 2"
+    vendor: Meta
+    series: llama
+  - id: llama-4
+    display_name: "Llama 4"
     vendor: Meta
     series: llama
   - id: muse-spark
@@ -331,6 +339,14 @@ models:
     vendor: OpenAI
     generation: gpt-4
     aliases: ["gpt-4o"]
+  - id: gpt-4o-mini
+    display_name: "GPT-4o mini"
+    vendor: OpenAI
+    generation: gpt-4
+    aliases: ["gpt-4o-mini"]
+    variant_of: gpt-4o
+    variant_kind: mini
+    note: "Not the gpt-4o-mini-tts, -transcribe, -realtime or -audio models, which are separate models."
   - id: gpt-4-1
     display_name: "GPT-4.1"
     vendor: OpenAI
@@ -377,15 +393,40 @@ models:
     vendor: OpenAI
     generation: o3
     aliases: ["o3-mini"]
+  - id: o3-deep-research
+    display_name: "o3-deep-research"
+    vendor: OpenAI
+    generation: o3
+    aliases: ["o3-deep-research"]
+    note: "The API deep-research model. Same lineage as openai-deep-research (ChatGPT deep research), but no source says they are the same model, so the Researcher events stay on openai-deep-research."
   - id: o4-mini
     display_name: "o4-mini"
     vendor: OpenAI
     generation: o4
     aliases: ["o4-mini"]
+  - id: codex-mini
+    display_name: "codex-mini"
+    vendor: OpenAI
+    generation: o4
+    aliases: ["codex-mini", "codex-mini-latest"]
+    variant_of: o4-mini
+    variant_kind: codex
+    note: "A 2025 fine-tune of o4-mini for the Codex CLI; shares only the brand with the 2021 `codex`."
   - id: openai-deep-research
     display_name: "OpenAI deep research model"
     vendor: OpenAI
     note: "Named only generically in the source; kept as a distinct model because Microsoft documented it as the basis for Researcher."
+  - id: gpt-oss-120b
+    display_name: "gpt-oss-120b"
+    vendor: OpenAI
+    generation: gpt-oss
+    aliases: ["gpt-oss-120b"]
+    note: "Open weights, Apache 2.0."
+  - id: gpt-oss-20b
+    display_name: "gpt-oss-20b"
+    vendor: OpenAI
+    generation: gpt-oss
+    aliases: ["gpt-oss-20b"]
   - id: dall-e-3
     display_name: "DALL-E 3"
     vendor: OpenAI
@@ -460,28 +501,106 @@ models:
     vendor: OpenAI
     generation: gpt-5
     aliases: ["gpt-5-mini"]
+  - id: gpt-5-nano
+    display_name: "GPT-5 nano"
+    vendor: OpenAI
+    generation: gpt-5
+    aliases: ["gpt-5-nano"]
+    variant_of: gpt-5
+    variant_kind: nano
+  - id: gpt-5-pro
+    display_name: "GPT-5 pro"
+    vendor: OpenAI
+    generation: gpt-5
+    aliases: ["gpt-5-pro"]
+    variant_of: gpt-5
+    variant_kind: pro
+    note: "OpenAI introduced it as replacing OpenAI o3-pro."
+  - id: gpt-5-codex
+    display_name: "GPT-5-Codex"
+    vendor: OpenAI
+    generation: gpt-5
+    aliases: ["gpt-5-codex"]
+    variant_of: gpt-5
+    variant_kind: codex
   - id: gpt-5-1
     display_name: "GPT-5.1"
     vendor: OpenAI
     generation: gpt-5
     aliases: ["gpt-5.1"]
+  - id: gpt-5-1-codex
+    display_name: "GPT-5.1-Codex"
+    vendor: OpenAI
+    generation: gpt-5
+    aliases: ["gpt-5.1-codex"]
+    variant_of: gpt-5-1
+    variant_kind: codex
+  - id: gpt-5-1-codex-mini
+    display_name: "GPT-5.1-Codex-Mini"
+    vendor: OpenAI
+    generation: gpt-5
+    aliases: ["gpt-5.1-codex-mini"]
+    variant_of: gpt-5-1
+    variant_kind: codex
+  - id: gpt-5-1-codex-max
+    display_name: "GPT-5.1-Codex-Max"
+    vendor: OpenAI
+    generation: gpt-5
+    aliases: ["gpt-5.1-codex-max"]
+    variant_of: gpt-5-1
+    variant_kind: codex
   - id: gpt-5-2
     display_name: "GPT-5.2"
     vendor: OpenAI
     generation: gpt-5
     aliases: ["gpt-5.2"]
+  - id: gpt-5-2-codex
+    display_name: "GPT-5.2-Codex"
+    vendor: OpenAI
+    generation: gpt-5
+    aliases: ["gpt-5.2-codex"]
+    variant_of: gpt-5-2
+    variant_kind: codex
   - id: gpt-5-3-instant
     display_name: "GPT-5.3 Instant"
     vendor: OpenAI
     generation: gpt-5
     aliases: ["GPT-5.3 Chat"]
     note: "Copilot Studio surfaces this model as 'GPT-5.3 Chat'."
+  - id: gpt-5-3-codex
+    display_name: "GPT-5.3-Codex"
+    vendor: OpenAI
+    generation: gpt-5
+    aliases: ["gpt-5.3-codex"]
+    note: "Successor to GPT-5.2-Codex. Not a variant of gpt-5-3-instant, a different chat model."
   - id: gpt-5-4
     display_name: "GPT-5.4"
     vendor: OpenAI
     generation: gpt-5
     aliases: ["GPT-5.4 Reasoning", "gpt-5.4"]
     note: "Copilot Studio surfaces this model as 'GPT-5.4 Reasoning'."
+  - id: gpt-5-4-mini
+    display_name: "GPT-5.4 mini"
+    vendor: OpenAI
+    generation: gpt-5
+    aliases: ["gpt-5.4-mini"]
+    variant_of: gpt-5-4
+    variant_kind: mini
+  - id: gpt-5-4-nano
+    display_name: "GPT-5.4 nano"
+    vendor: OpenAI
+    generation: gpt-5
+    aliases: ["gpt-5.4-nano"]
+    variant_of: gpt-5-4
+    variant_kind: nano
+    note: "Available only in the API at OpenAI, not in ChatGPT or Codex."
+  - id: gpt-5-4-pro
+    display_name: "GPT-5.4 Pro"
+    vendor: OpenAI
+    generation: gpt-5
+    aliases: ["gpt-5.4-pro"]
+    variant_of: gpt-5-4
+    variant_kind: pro
   - id: gpt-5-5
     display_name: "GPT-5.5"
     vendor: OpenAI
@@ -869,6 +988,16 @@ models:
     display_name: "Llama 2"
     vendor: Meta
     generation: llama-2
+  - id: llama-4-maverick
+    display_name: "Llama 4 Maverick"
+    vendor: Meta
+    generation: llama-4
+    aliases: ["Llama-4-Maverick-17B-128E-Instruct-FP8"]
+  - id: llama-4-scout
+    display_name: "Llama 4 Scout"
+    vendor: Meta
+    generation: llama-4
+    aliases: ["Llama-4-Scout-17B-16E-Instruct"]
   - id: mistral-3
     display_name: "Mistral 3"
     vendor: Mistral AI
@@ -878,6 +1007,12 @@ models:
     vendor: Mistral AI
     generation: mistral-3
     aliases: ["Mistral-Large-3"]
+  - id: mistral-medium-3
+    display_name: "Mistral Medium 3"
+    vendor: Mistral AI
+    generation: mistral-3
+    aliases: ["mistral-medium-2505"]
+    note: "Foundry's retirement schedule lists a retirement on 2026-12-09 with mistral-medium-3-5 as the replacement. That is a lifecycle fact, not supersession, so supersedes is not set."
   - id: mistral-medium-3-5
     display_name: "Mistral Medium 3.5"
     vendor: Mistral AI
@@ -933,6 +1068,14 @@ models:
     vendor: DeepSeek
     generation: deepseek-v4
     aliases: ["DeepSeek-V4-Pro"]
+  - id: deepseek-v4-pro-0813
+    display_name: "DeepSeek V4 Pro 0813"
+    vendor: DeepSeek
+    generation: deepseek-v4
+    aliases: ["DeepSeek-V4-Pro-0813"]
+    variant_of: deepseek-v4-pro
+    variant_kind: dated-build
+    note: "The dated August 2026 build of V4 Pro, which DeepSeek describes as the official release superseding the preview version, on the pattern of deepseek-v4-flash-0731. Registered as a dated-build variant of deepseek-v4-pro and not as a supersession."
   - id: deepseek-v4-1-flash
     display_name: "DeepSeek V4.1 Flash"
     vendor: DeepSeek
@@ -990,7 +1133,13 @@ models:
     vendor: Meta
     generation: muse-spark
     aliases: ["Muse-Spark-Open-816B-A42B", "Muse-Spark-Open-816B-A42B-NVFP4", "meta-models--muse-spark-open-816b-a42b-nvfp4"]
-    note: "The open-weight version of Muse Spark (816B mixture-of-experts, 42B active) under the Muse Model License. Muse Spark itself (released August 2026 per Meta) and Muse Glimmer are not registered; see meta-muse-glimmer-release-evidence."
+    note: "The open-weight version of Muse Spark (816B mixture-of-experts, 42B active) under the Muse Model License. Muse Spark itself (released August 2026 per Meta) is not registered; Muse Glimmer is registered as muse-glimmer."
+  - id: muse-glimmer
+    display_name: "Muse Glimmer"
+    vendor: Meta
+    generation: muse-spark
+    aliases: ["Muse-Glimmer-30B"]
+    note: "Distilled from Muse Spark; a distinct 30B open-weight model, not muse-spark-open."
   - id: muse-wonder
     display_name: "Muse Wonder"
     vendor: Meta
@@ -1107,6 +1256,14 @@ models:
     model_line: mai-image
     aliases: ["MAI-Image-2.5-Flash"]
     note: "Registered on identity, not availability. Two Microsoft artefacts now name it — the Foundry retirement schedule, as MAI-Image-2e's replacement, and the Foundry model-wave post of 6 August 2026 — which supersedes the earlier reason for leaving it out, that it was named only once and absent from microsoft.ai. No release date, no catalogue listing and no arrival event; it exists as a name Microsoft uses."
+  - id: mai-image-2-5-pro
+    display_name: "MAI-Image-2.5-Pro"
+    vendor: Microsoft
+    modality: image
+    model_line: mai-image
+    aliases: ["MAI-Image-2.5-Pro"]
+    variant_of: mai-image-2-5
+    variant_kind: pro
   - id: mai-voice-2
     display_name: "MAI-Voice-2"
     vendor: Microsoft

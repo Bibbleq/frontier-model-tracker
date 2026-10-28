@@ -1,23 +1,23 @@
 {
   "totals": {
-    "events": 372,
-    "backlog": 94,
-    "sources": 565,
-    "models": 149,
+    "events": 418,
+    "backlog": 97,
+    "sources": 646,
+    "models": 171,
     "surfaces": 27,
-    "confirmed": 299,
-    "supported": 73
+    "confirmed": 320,
+    "supported": 98
   },
   "kinds": {
     "announcement": 25,
-    "availability": 332,
+    "availability": 378,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 52,
-    "promoted": 36,
+    "open": 54,
+    "promoted": 37,
     "rejected": 4
   },
   "warnings": [
@@ -322,6 +322,7 @@
       "mai-image-2",
       "mai-image-2-5",
       "mai-image-2-5-flash",
+      "mai-image-2-5-pro",
       "mai-image-2-6",
       "mai-image-2-6-flash",
       "mai-image-2e",
@@ -375,11 +376,11 @@
     ]
   },
   "lag_certainty": {
-    "exact": 325,
-    "not_recorded": 817,
-    "range": 29,
-    "rollout_start": 134,
+    "exact": 349,
+    "not_recorded": 1031,
+    "range": 35,
+    "rollout_start": 142,
     "unknown_no_baseline": 392,
-    "unknown_open_research": 91
+    "unknown_open_research": 103
   }
 }
