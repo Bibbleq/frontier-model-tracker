@@ -16,3 +16,4 @@ openai-image,OpenAI image generation,OpenAI
 openai-audio,OpenAI audio,OpenAI
 openai-video,OpenAI video,OpenAI
 mai,Microsoft MAI,Microsoft
+phi,Phi,Microsoft

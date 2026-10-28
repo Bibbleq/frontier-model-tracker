@@ -89,6 +89,9 @@ series:
   - id: mai
     display_name: "Microsoft MAI"
     vendor: Microsoft
+  - id: phi
+    display_name: "Phi"
+    vendor: Microsoft
 
 generations:
   - id: gpt-3
@@ -175,6 +178,10 @@ generations:
     display_name: "Llama 2"
     vendor: Meta
     series: llama
+  - id: llama-3
+    display_name: "Llama 3"
+    vendor: Meta
+    series: llama
   - id: llama-4
     display_name: "Llama 4"
     vendor: Meta
@@ -219,6 +226,10 @@ generations:
     display_name: "Qwen 3.5"
     vendor: Alibaba
     series: qwen
+  - id: phi-4
+    display_name: "Phi-4"
+    vendor: Microsoft
+    series: phi
   - id: nemotron
     display_name: "Nemotron"
     vendor: NVIDIA
@@ -438,6 +449,14 @@ models:
     modality: image
     generation: gpt-image
     aliases: ["gpt-image-1"]
+  - id: gpt-image-1-mini
+    display_name: "GPT-image-1 mini"
+    vendor: OpenAI
+    modality: image
+    generation: gpt-image
+    aliases: ["gpt-image-1-mini"]
+    variant_of: gpt-image-1
+    variant_kind: mini
   - id: gpt-image-1-5
     display_name: "GPT-image-1.5"
     vendor: OpenAI
@@ -450,6 +469,22 @@ models:
     modality: image
     generation: gpt-image
     aliases: ["gpt-image-2"]
+  - id: gpt-image-2-5-flare
+    display_name: "GPT Image 2.5 Flare"
+    vendor: OpenAI
+    modality: image
+    generation: gpt-image
+    family: gpt-image-2-5
+    aliases: ["gpt-image-2.5-flare"]
+    note: "The faster, high-throughput model of the pair."
+  - id: gpt-image-2-5-sunburst
+    display_name: "GPT Image 2.5 Sunburst"
+    vendor: OpenAI
+    modality: image
+    generation: gpt-image
+    family: gpt-image-2-5
+    aliases: ["gpt-image-2.5-sunburst"]
+    note: "The premium model of the pair, for precision and editing."
   - id: whisper
     display_name: "Whisper"
     vendor: OpenAI
@@ -468,6 +503,65 @@ models:
     modality: voice
     generation: gpt-audio
     aliases: ["gpt-realtime"]
+  - id: gpt-realtime-mini
+    display_name: "GPT-Realtime mini"
+    vendor: OpenAI
+    modality: voice
+    generation: gpt-audio
+    aliases: ["gpt-realtime-mini"]
+    variant_of: gpt-realtime
+    variant_kind: mini
+    note: "Builds 2025-10-06 and 2025-12-15 are one model."
+  - id: gpt-realtime-1-5
+    display_name: "GPT-Realtime-1.5"
+    vendor: OpenAI
+    modality: voice
+    generation: gpt-audio
+    aliases: ["gpt-realtime-1.5"]
+  - id: gpt-realtime-2
+    display_name: "GPT-Realtime-2"
+    vendor: OpenAI
+    modality: voice
+    generation: gpt-audio
+    aliases: ["gpt-realtime-2"]
+    note: "A reasoning realtime model; deliberately not registered as a variant of gpt-realtime."
+  - id: gpt-realtime-2-1
+    display_name: "GPT-Realtime-2.1"
+    vendor: OpenAI
+    modality: voice
+    generation: gpt-audio
+    aliases: ["gpt-realtime-2.1"]
+  - id: gpt-realtime-2-1-mini
+    display_name: "GPT-Realtime-2.1 mini"
+    vendor: OpenAI
+    modality: voice
+    generation: gpt-audio
+    aliases: ["gpt-realtime-2.1-mini", "gpt-realtime-mini-2.1"]
+    variant_of: gpt-realtime-2-1
+    variant_kind: mini
+    note: "Microsoft's July 2026 post calls it gpt-realtime-mini-2.1; not a build of gpt-realtime-mini."
+  - id: gpt-audio
+    display_name: "GPT-audio"
+    vendor: OpenAI
+    modality: voice
+    generation: gpt-audio
+    aliases: ["gpt-audio"]
+    note: "The Chat Completions audio line, separate from gpt-4o-audio-preview."
+  - id: gpt-audio-1-5
+    display_name: "GPT-Audio-1.5"
+    vendor: OpenAI
+    modality: voice
+    generation: gpt-audio
+    aliases: ["gpt-audio-1.5"]
+  - id: gpt-audio-mini
+    display_name: "GPT-Audio mini"
+    vendor: OpenAI
+    modality: voice
+    generation: gpt-audio
+    aliases: ["gpt-audio-mini"]
+    variant_of: gpt-audio
+    variant_kind: mini
+    note: "Builds 2025-10-06 and 2025-12-15 are one model."
   - id: gpt-transcribe
     display_name: "GPT-transcribe"
     vendor: OpenAI
@@ -792,6 +886,16 @@ models:
     model_line: claude-opus
     aliases: ["claude-opus-5-5"]
     note: "Released 22 September 2026 as the first model in Anthropic's Claude 5.5 family, which now has three members: Opus 5.5 (22 September), Sonnet 5.5 (28 September) and Haiku 5.5 (7 October 2026). Classified under the Claude 5 generation, as GPT-5.6 Sol sits under GPT-5, with the claude-5-5 family grouping the three."
+  - id: claude-opus-5-5-fast
+    display_name: "Claude Opus 5.5 Fast"
+    vendor: Anthropic
+    family: claude-5-5
+    generation: claude-5
+    model_line: claude-opus
+    aliases: ["claude-opus-5-5-fast"]
+    variant_of: claude-opus-5-5
+    variant_kind: fast
+    note: "Anthropic describes fast mode as the same model with a faster inference configuration, selected per request (`speed: \"fast\"`). Microsoft Foundry lists it as its own catalogue id, hosted on Azure only, with its own quotas and retirement date; registered so that id has a home."
   - id: claude-sonnet-5-5
     display_name: "Claude Sonnet 5.5"
     vendor: Anthropic
@@ -988,6 +1092,12 @@ models:
     display_name: "Llama 2"
     vendor: Meta
     generation: llama-2
+  - id: llama-3-3-70b
+    display_name: "Llama 3.3 70B Instruct"
+    vendor: Meta
+    generation: llama-3
+    scope: extended
+    aliases: ["Llama-3.3-70B-Instruct", "Llama 3.3 70B"]
   - id: llama-4-maverick
     display_name: "Llama 4 Maverick"
     vendor: Meta
@@ -1025,6 +1135,29 @@ models:
     generation: mistral-4
     aliases: ["ML4", "Mistral Large 4 Preview"]
     note: "A 1-trillion-parameter mixture-of-experts model with 52 billion active parameters per Mistral's launch page; public preview API on Mistral Studio from 6 October 2026, with weights promised by the end of that month (not yet verified)."
+  - id: mistral-large-24-02
+    display_name: "Mistral Large (24.02)"
+    vendor: Mistral AI
+    scope: extended
+    aliases: ["Mistral-large", "mistral-large-2402", "Mistral-large (2402)"]
+    note: "Mapping Foundry `Mistral-large` version 1 to 24.02 is inferred from the catalogue's display names (2402/2407/2411 rows). Not in the mistral-3 generation, and not the 24.07 or 24.11 builds, which are separate models."
+  - id: mistral-small-3-1
+    display_name: "Mistral Small 3.1"
+    vendor: Mistral AI
+    scope: extended
+    aliases: ["mistral-small-2503", "Mistral Small 3.1 (25.03)"]
+    note: "Foundry's retirement schedule names a replacement for mistral-small-2503. That is a lifecycle fact, not supersession, so superseded_by is not set."
+  - id: codestral-25-01
+    display_name: "Codestral 25.01"
+    vendor: Mistral AI
+    scope: extended
+    aliases: ["Codestral-2501", "codestral-2501"]
+  - id: ministral-3b-24-10
+    display_name: "Ministral 3B (24.10)"
+    vendor: Mistral AI
+    scope: extended
+    aliases: ["Ministral-3B", "ministral-3b-2410"]
+    note: "Not the December 2025 Ministral 3 family (ministral-3b-2512)."
   - id: deepseek-r1
     display_name: "DeepSeek-R1"
     vendor: DeepSeek
@@ -1204,6 +1337,18 @@ models:
     aliases: ["rerank-v5.0-fast", "Cohere-rerank-v5-fast"]
     variant_of: cohere-rerank-v5
     variant_kind: fast
+  - id: cohere-command-a
+    display_name: "Cohere Command A"
+    vendor: Cohere
+    scope: extended
+    aliases: ["Cohere-command-a", "command-a-03-2025"]
+    note: "Foundry's retirement schedule names the Command A+ builds as replacements. That is a lifecycle fact, not supersession, so superseded_by is not set."
+  - id: cohere-command-a-plus
+    display_name: "Cohere Command A+"
+    vendor: Cohere
+    scope: extended
+    aliases: ["Cohere-command-a-plus-05-2026", "command-a-plus-05-2026", "Command A+"]
+    note: "Open weights under Apache 2.0. Foundry lists the Cohere-command-a-plus-05-2026 id for the serverless offering and the coherelabs builds for managed compute."
 
   # ------------------------------------------------------------- NVIDIA
   - id: nemotron-speech-streaming-en
@@ -1220,6 +1365,47 @@ models:
     generation: nemotron
     aliases: ["Nemotron 3.5 Lightning", "nvidia-nemotron-3.5-lightning-30b-a3b"]
     note: "A 30B-A3B open-weight agentic model, per the Foundry catalogue identifiers. Reached Microsoft Foundry through Fireworks AI and the Hugging Face collection rather than as a model sold by Azure; no NVIDIA vendor-surface release is recorded, so lag from NVIDIA cannot be derived."
+
+  # ------------------------------------------------------------- Phi
+  - id: phi-4
+    display_name: "Phi-4"
+    vendor: Microsoft
+    generation: phi-4
+    scope: extended
+    aliases: ["Phi-4"]
+    note: "Versions 2 to 7 of the Foundry id are builds of the one model."
+  - id: phi-4-mini
+    display_name: "Phi-4-mini"
+    vendor: Microsoft
+    generation: phi-4
+    scope: extended
+    aliases: ["Phi-4-mini-instruct"]
+    variant_of: phi-4
+    variant_kind: mini
+  - id: phi-4-multimodal
+    display_name: "Phi-4-multimodal"
+    vendor: Microsoft
+    generation: phi-4
+    scope: extended
+    aliases: ["Phi-4-multimodal-instruct"]
+    note: "Built on Phi-4-mini. Left unlinked because variant_kind has no multimodal value."
+  - id: phi-4-reasoning
+    display_name: "Phi-4-reasoning"
+    vendor: Microsoft
+    generation: phi-4
+    scope: extended
+    aliases: ["Phi-4-reasoning"]
+    variant_of: phi-4
+    variant_kind: reasoning
+  - id: phi-4-mini-reasoning
+    display_name: "Phi-4-mini-reasoning"
+    vendor: Microsoft
+    generation: phi-4
+    scope: extended
+    aliases: ["Phi-4-mini-reasoning"]
+    variant_of: phi-4
+    variant_kind: reasoning
+    note: "Built on Phi-4-mini; variant_of is one level deep, so it links to phi-4."
 
   # ------------------------------------------------------------- Microsoft
   - id: mai-image-2
@@ -1343,6 +1529,9 @@ models:
 families:
   - id: gpt-transcribe
     display_name: "GPT-transcribe pair"
+    vendor: OpenAI
+  - id: gpt-image-2-5
+    display_name: "GPT Image 2.5 pair"
     vendor: OpenAI
   - id: mai-image-2
     display_name: "MAI-Image-2 pair"
