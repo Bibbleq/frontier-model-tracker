@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-27T19:30:00Z",
+  "generated_at": "2026-10-28T19:30:00Z",
   "note": "Reference data exported by the catalogue watcher from the Azure locations list; not evidence.",
   "regions": [
     {
@@ -176,7 +176,7 @@
       "display_name": "Spain Central",
       "geography": "Europe",
       "latitude": 40.4259,
-      "longitude": 3.4209
+      "longitude": -3.4209
     },
     {
       "id": "swedencentral",
@@ -256,5 +256,9 @@
       "longitude": -112.074036
     }
   ],
-  "overrides": {}
+  "overrides": {
+    "spaincentral": {
+      "longitude": -3.4209
+    }
+  }
 }
