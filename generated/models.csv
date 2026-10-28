@@ -29,7 +29,7 @@ gpt-image-1-5,GPT-image-1.5,OpenAI,image,frontier,openai-image,gpt-image,,,gpt-i
 gpt-image-2,GPT-image-2,OpenAI,image,frontier,openai-image,gpt-image,,,gpt-image-2,,,1,,
 gpt-image-2-5-flare,GPT Image 2.5 Flare,OpenAI,image,frontier,openai-image,gpt-image,,gpt-image-2-5,gpt-image-2.5-flare,,,2,,
 gpt-image-2-5-sunburst,GPT Image 2.5 Sunburst,OpenAI,image,frontier,openai-image,gpt-image,,gpt-image-2-5,gpt-image-2.5-sunburst,,,2,,
-whisper,Whisper,OpenAI,audio,frontier,openai-audio,whisper,,,,,,3,,
+whisper,Whisper,OpenAI,audio,frontier,openai-audio,whisper,,,whisper,,,3,,
 sora-2,Sora 2,OpenAI,video,frontier,openai-video,sora,,,sora-2,,,2,,
 gpt-realtime,gpt-realtime,OpenAI,voice,frontier,openai-audio,gpt-audio,,,gpt-realtime,,,2,,
 gpt-realtime-mini,GPT-Realtime mini,OpenAI,voice,frontier,openai-audio,gpt-audio,,,gpt-realtime-mini,,,3,gpt-realtime,mini
@@ -96,7 +96,7 @@ claude-opus-5-5,Claude Opus 5.5,Anthropic,text,frontier,claude,claude-5,claude-o
 claude-opus-5-5-fast,Claude Opus 5.5 Fast,Anthropic,text,frontier,claude,claude-5,claude-opus,claude-5-5,claude-opus-5-5-fast,,,3,claude-opus-5-5,fast
 claude-sonnet-5-5,Claude Sonnet 5.5,Anthropic,text,frontier,claude,claude-5,claude-sonnet,claude-5-5,claude-sonnet-5-5,,,6,,
 claude-haiku-5-5,Claude Haiku 5.5,Anthropic,text,frontier,claude,claude-5,claude-haiku,claude-5-5,claude-haiku-5-5,,,3,,
-claude-fable-5,Claude Fable 5,Anthropic,text,frontier,claude,claude-5,claude-fable,,,,claude-fable-5-1,12,,
+claude-fable-5,Claude Fable 5,Anthropic,text,frontier,claude,claude-5,claude-fable,,claude-fable-5,,claude-fable-5-1,12,,
 claude-mythos-5,Claude Mythos 5,Anthropic,text,frontier,claude,claude-5,claude-mythos,,,,claude-mythos-5-1,3,,
 claude-fable-5-1,Claude Fable 5.1,Anthropic,text,frontier,claude,claude-5,claude-fable,,claude-fable-5-1,claude-fable-5,,5,,
 claude-mythos-5-1,Claude Mythos 5.1,Anthropic,text,frontier,claude,claude-5,claude-mythos,,,claude-mythos-5,,1,,
@@ -166,7 +166,7 @@ cohere-embed-v5-fast,Cohere Embed 5 Fast,Cohere,text,extended,,,,,embed-v5.0-fas
 cohere-rerank-v5,Cohere Rerank 5,Cohere,text,extended,,,,,Rerank V5,,,2,,
 cohere-rerank-v5-pro,Cohere Rerank 5 Pro,Cohere,text,extended,,,,,rerank-v5.0-pro | Cohere-rerank-v5-pro,,,0,cohere-rerank-v5,pro
 cohere-rerank-v5-fast,Cohere Rerank 5 Fast,Cohere,text,extended,,,,,rerank-v5.0-fast | Cohere-rerank-v5-fast,,,0,cohere-rerank-v5,fast
-cohere-command-a,Cohere Command A,Cohere,text,extended,,,,,Cohere-command-a | command-a-03-2025,,,2,,
+cohere-command-a,Cohere Command A,Cohere,text,extended,,,,,cohere-command-a | Cohere-command-a | command-a-03-2025,,,2,,
 cohere-command-a-plus,Cohere Command A+,Cohere,text,extended,,,,,Cohere-command-a-plus-05-2026 | command-a-plus-05-2026 | Command A+,,,2,,
 nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,audio,extended,nemotron,nemotron,,,nemotron-speech-streaming-en-0.6b | Nemotron ASR,,,1,,
 nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,text,frontier,nemotron,nemotron,,,Nemotron 3.5 Lightning | nvidia-nemotron-3.5-lightning-30b-a3b,,,1,,

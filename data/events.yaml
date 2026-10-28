@@ -16068,7 +16068,7 @@ validation_backlog:
   - id: "foundry-fable5-restoration-2026"
     state: "open"
     working_claim: "Fable 5 availability in Microsoft Foundry was restored at some point after the export controls were lifted on 30 June 2026."
-    reason: "Two Microsoft sources contradict each other, so the item stays here under the rule that a contradiction is recorded rather than resolved by preference. The Claude models in Microsoft Foundry page lists claude-fable-5 as 'Hosted on Anthropic: Preview' at its 10 July 2026 revision, seventeen days earlier than the 27 July capture this item was opened with; but Microsoft's own Fable 5 launch announcement still carries the notice that the model is disabled globally, present in every capture from 14 June to 9 August 2026. One of the two is stale and nothing found says which. CNBC's 30 June report that Anthropic would re-enable Foundry access 'as soon as possible' remains an announcement of future availability, not a date. The technique that dated the Cowork restoration does not transfer: there, a page revision showed the model gone and a later one showed it back, whereas the Wayback Machine holds no capture of the Foundry page inside the suspension window, so its 10 July listing cannot be shown to be a change rather than a listing that never came down."
+    reason: "Two Microsoft sources contradict each other, so the item stays here under the rule that a contradiction is recorded rather than resolved by preference. The Claude models in Microsoft Foundry page lists claude-fable-5 as 'Hosted on Anthropic: Preview' at its 10 July 2026 revision, seventeen days earlier than the 27 July capture this item was opened with; but Microsoft's own Fable 5 launch announcement still carries the notice that the model is disabled globally, present in every capture from 14 June to 9 August 2026. One of the two is stale and nothing found says which. CNBC's 30 June report that Anthropic would re-enable Foundry access 'as soon as possible' remains an announcement of future availability, not a date. The technique that dated the Cowork restoration does not transfer: there, a page revision showed the model gone and a later one showed it back, whereas the Wayback Machine holds no capture of the Foundry page inside the suspension window, so its 10 July listing cannot be shown to be a change rather than a listing that never came down. The catalogue watcher's first run, on 27 October 2026, found claude-fable-5 version 1 listed in two regions (East US 2 and Sweden Central) as Preview, GlobalStandard, with an inference deprecation date of 5 December 2027. That is a listing, not proof that the model could be deployed, and the watcher began after the suspension, so it neither dates the restoration nor shows the listing ever came down."
     target: "Locate a dated Microsoft Foundry re-enablement record. Checked and exhausted so far: the May 2026 retrospective carries no Fable 5 entry; the June 2026 retrospective was published on 7 July 2026 and is silent on both the suspension and the restoration despite covering Claude's Foundry GA at length; no July 2026 retrospective exists as of 21 August 2026, and the 17 August Foundry post on new Claude capabilities does not mention Fable 5. Check the July retrospective when it appears. Any Wayback capture of the Claude models page between 12 June and 10 July 2026 would settle it directly, as would Microsoft removing or dating the disabled notice on the launch announcement."
     model_ids: ["claude-fable-5"]
     surface_ids: ["microsoft-foundry"]
@@ -16108,6 +16108,16 @@ validation_backlog:
         published_at: "2026-07-07"
         source_type: "release_notes"
         note: "Checked and negative. The retrospective covering the month of the suspension names Claude thirty times, covers its Foundry GA in detail, and mentions Fable 5 nowhere. It neither records the suspension nor the restoration, which closes one half of this item's original target."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Seed checkpoint, Foundry Models API, eastus2, 2026-10-27T19:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/9e97f6274e6c6d6ada5f71530865c85a46b634cf/checkpoints/arm/eastus2/2026-10-27T19-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-10-28"
+        published_at: "2026-10-27"
+        source_type: "other"
+        quote: "\"watched\":{\"name\":\"claude-fable-5\",\"version\":\"1\",\"format\":\"Anthropic\",\"lifecycle_status\":\"Preview\",\"lifecycle_portal\":\"Preview\""
+        supports: ["exposure", "lifecycle"]
+        note: "The seed of the catalogue watcher, cited at its commit-pinned URL; Sweden Central's checkpoint carries the same entry. Its first_seen is the watcher's first run, not an arrival or restoration date."
   - id: "foundry-fable5-suspension-2026"
     state: "promoted"
     working_claim: "Fable 5 availability in Microsoft Foundry was suspended alongside the vendor-level action on 12 June 2026."
