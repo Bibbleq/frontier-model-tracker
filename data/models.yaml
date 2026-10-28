@@ -915,7 +915,7 @@ models:
     vendor: xAI
     generation: grok-4
     scope: extended
-    note: "Grok 4.1 Fast as released. Foundry deploys it under two API names, registered as the variants grok-4-1-fast-reasoning and grok-4-1-fast-non-reasoning. The Foundry retirement schedule lists both as generally available and names the reasoning variant as Grok 3 Mini's replacement at its 1 May 2026 retirement; no dated arrival source has been found, so the model carries no event yet."
+    note: "Grok 4.1 Fast as released. Foundry deploys it under two API names, registered as the variants grok-4-1-fast-reasoning and grok-4-1-fast-non-reasoning. The Foundry retirement schedule lists both as generally available and names the reasoning variant as Grok 3 Mini's replacement at its 1 May 2026 retirement; the variants carry the dated Foundry arrivals (foundry-grok4-1-fast-non-reasoning-2026-02-27 and foundry-grok4-1-fast-reasoning-2026-03-04, from Microsoft's 27 February 2026 post), so the base model itself carries no event."
   - id: grok-4-1-fast-reasoning
     display_name: "Grok 4.1 Fast (reasoning)"
     vendor: xAI
@@ -1128,12 +1128,17 @@ models:
     note: "A vision-language model recorded under the image modality because modality covers what a model processes as well as what it produces: it reads images and writes text, and generates no images. The catalogue id in Foundry Local's SDK sample is qwen3-vl-2b-instruct."
 
   # ------------------------------------------------------------- Meta
+  - id: muse-spark
+    display_name: "Muse Spark"
+    vendor: Meta
+    generation: muse-spark
+    note: "Meta Superintelligence Labs' first Muse model, announced by Meta on 8 April 2026 (meta-muse-spark-2026-04-08): available in meta.ai and the Meta AI app, with a private API preview. Not muse-spark-open, its open-weight derivative, nor muse-glimmer, the distilled 30B model."
   - id: muse-spark-open
     display_name: "Muse Spark Open"
     vendor: Meta
     generation: muse-spark
     aliases: ["Muse-Spark-Open-816B-A42B", "Muse-Spark-Open-816B-A42B-NVFP4", "meta-models--muse-spark-open-816b-a42b-nvfp4"]
-    note: "The open-weight version of Muse Spark (816B mixture-of-experts, 42B active) under the Muse Model License. Muse Spark itself (released August 2026 per Meta) is not registered; Muse Glimmer is registered as muse-glimmer."
+    note: "The open-weight version of Muse Spark (816B mixture-of-experts, 42B active) under the Muse Model License. Muse Spark itself is registered as muse-spark (announced 8 April 2026 per Meta's newsroom); Meta's developer page says this model is derived from the Muse Spark 'we released in August', which probably refers to a later API release; Muse Glimmer is registered as muse-glimmer."
   - id: muse-glimmer
     display_name: "Muse Glimmer"
     vendor: Meta
@@ -1248,7 +1253,7 @@ models:
     modality: image
     model_line: mai-image
     aliases: ["MAI-Image-2.5"]
-    note: "Named by the Foundry retirement schedule as MAI-Image-2's replacement, and again by the Foundry model-wave post of 6 August 2026. Neither dates it."
+    note: "Named by the Foundry retirement schedule as MAI-Image-2's replacement, and again by the Foundry model-wave post of 6 August 2026. Neither dates it; Azure Update 563581 dates its public preview arrival to 2 June 2026 (microsoft-mai-image-2-5-2026-06-02)."
   - id: mai-image-2-5-flash
     display_name: "MAI-Image-2.5 Flash"
     vendor: Microsoft
