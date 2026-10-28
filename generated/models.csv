@@ -32,7 +32,7 @@ gpt-5-mini,GPT-5 mini,OpenAI,text,frontier,openai-gpt,gpt-5,,,,,,4
 gpt-5-1,GPT-5.1,OpenAI,text,frontier,openai-gpt,gpt-5,,,,,,2
 gpt-5-2,GPT-5.2,OpenAI,text,frontier,openai-gpt,gpt-5,,,,,,3
 gpt-5-3-instant,GPT-5.3 Instant,OpenAI,text,frontier,openai-gpt,gpt-5,,,GPT-5.3 Chat,,,3
-gpt-5-4,GPT-5.4,OpenAI,text,frontier,openai-gpt,gpt-5,,,GPT-5.4 Reasoning,,,6
+gpt-5-4,GPT-5.4,OpenAI,text,frontier,openai-gpt,gpt-5,,,GPT-5.4 Reasoning | gpt-5.4,,,6
 gpt-5-5,GPT-5.5,OpenAI,text,frontier,openai-gpt,gpt-5,,,GPT-5.5 Reasoning,,,7
 gpt-5-5-instant,GPT-5.5 Instant,OpenAI,text,frontier,openai-gpt,gpt-5,,,GPT-5.5 Chat,,,5
 gpt-5-5-thinking,GPT-5.5 Thinking,OpenAI,text,frontier,openai-gpt,gpt-5,,,,,,2

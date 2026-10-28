@@ -455,7 +455,7 @@ models:
     display_name: "GPT-5.4"
     vendor: OpenAI
     generation: gpt-5
-    aliases: ["GPT-5.4 Reasoning"]
+    aliases: ["GPT-5.4 Reasoning", "gpt-5.4"]
     note: "Copilot Studio surfaces this model as 'GPT-5.4 Reasoning'."
   - id: gpt-5-5
     display_name: "GPT-5.5"
