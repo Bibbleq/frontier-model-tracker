@@ -27,6 +27,12 @@
 # and catalogue entries a default view should hide — so breadth of capture
 # never has to trade against clutter. Scope is presentation guidance only; an
 # extended model's events meet the same evidence bar as any other.
+#
+# `variant_of` and `variant_kind` mark a distinct API identity that belongs
+# with another model: GPT-5.4 mini with GPT-5.4, a reasoning deployment with
+# its base model. A variant is registered as its own model with its own
+# aliases, events and lifecycle, so each Foundry API name maps to exactly one
+# id; the link only groups them, one level deep, within one vendor.
 
 version: 1
 
@@ -790,15 +796,46 @@ models:
     vendor: xAI
     generation: grok-4
     scope: extended
-    aliases: ["grok-4-1-fast-reasoning", "grok-4-1-fast-non-reasoning"]
-    note: "The reasoning and non-reasoning deployments are one model with two catalogue names. The Foundry retirement schedule lists both as generally available and names the reasoning variant as Grok 3 Mini's replacement at its 1 May 2026 retirement; no dated arrival source has been found, so the model carries no event yet."
+    note: "Grok 4.1 Fast as released. Foundry deploys it under two API names, registered as the variants grok-4-1-fast-reasoning and grok-4-1-fast-non-reasoning. The Foundry retirement schedule lists both as generally available and names the reasoning variant as Grok 3 Mini's replacement at its 1 May 2026 retirement; no dated arrival source has been found, so the model carries no event yet."
+  - id: grok-4-1-fast-reasoning
+    display_name: "Grok 4.1 Fast (reasoning)"
+    vendor: xAI
+    generation: grok-4
+    scope: extended
+    aliases: ["grok-4-1-fast-reasoning"]
+    variant_of: grok-4-1-fast
+    variant_kind: reasoning
+  - id: grok-4-1-fast-non-reasoning
+    display_name: "Grok 4.1 Fast (non-reasoning)"
+    vendor: xAI
+    generation: grok-4
+    scope: extended
+    aliases: ["grok-4-1-fast-non-reasoning"]
+    variant_of: grok-4-1-fast
+    variant_kind: non-reasoning
   - id: grok-4-20
     display_name: "Grok 4.20"
     vendor: xAI
     generation: grok-4
     scope: extended
-    aliases: ["Grok 4.2", "grok-4-20-reasoning", "grok-4-20-non-reasoning"]
-    note: "The Foundry retirement schedule's version strings say 4.20; Microsoft's retrospective prose writes Grok 4.2. One model under two spellings, with the schedule's form taken as canonical."
+    aliases: ["Grok 4.2"]
+    note: "The Foundry retirement schedule's version strings say 4.20; Microsoft's retrospective prose writes Grok 4.2. One model under two spellings, with the schedule's form taken as canonical. Foundry deploys it under two API names, registered as the variants grok-4-20-reasoning and grok-4-20-non-reasoning; the events here describe the model as released."
+  - id: grok-4-20-reasoning
+    display_name: "Grok 4.20 (reasoning)"
+    vendor: xAI
+    generation: grok-4
+    scope: extended
+    aliases: ["grok-4-20-reasoning"]
+    variant_of: grok-4-20
+    variant_kind: reasoning
+  - id: grok-4-20-non-reasoning
+    display_name: "Grok 4.20 (non-reasoning)"
+    vendor: xAI
+    generation: grok-4
+    scope: extended
+    aliases: ["grok-4-20-non-reasoning"]
+    variant_of: grok-4-20
+    variant_kind: non-reasoning
   - id: grok-4-3
     display_name: "Grok 4.3"
     vendor: xAI
@@ -977,14 +1014,42 @@ models:
     display_name: "Cohere Embed 5"
     vendor: Cohere
     scope: extended
-    aliases: ["Embed V5", "embed-v5.0-pro", "embed-v5.0-fast", "Cohere-Embed-V5-Pro", "Cohere-Embed-V5-Fast"]
-    note: "One registry id for the Pro and Fast variants, which share an embedding space. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning. Cohere's own release of 30 September 2026 is recorded on the cohere vendor surface, so the Foundry lag is zero days."
+    aliases: ["Embed V5"]
+    note: "Cohere Embed 5 as released. Its Pro and Fast models share an embedding space and are registered as the variants cohere-embed-v5-pro and cohere-embed-v5-fast; the events here describe the release. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning. Cohere's own release of 30 September 2026 is recorded on the cohere vendor surface, so the Foundry lag is zero days."
+  - id: cohere-embed-v5-pro
+    display_name: "Cohere Embed 5 Pro"
+    vendor: Cohere
+    scope: extended
+    aliases: ["embed-v5.0-pro", "Cohere-Embed-V5-Pro"]
+    variant_of: cohere-embed-v5
+    variant_kind: pro
+  - id: cohere-embed-v5-fast
+    display_name: "Cohere Embed 5 Fast"
+    vendor: Cohere
+    scope: extended
+    aliases: ["embed-v5.0-fast", "Cohere-Embed-V5-Fast"]
+    variant_of: cohere-embed-v5
+    variant_kind: fast
   - id: cohere-rerank-v5
     display_name: "Cohere Rerank 5"
     vendor: Cohere
     scope: extended
-    aliases: ["Rerank V5", "rerank-v5.0-pro", "rerank-v5.0-fast", "Cohere-rerank-v5-pro", "Cohere-rerank-v5-fast"]
-    note: "One registry id for the Pro and Fast variants. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning. Cohere's own release of 21 October 2026 is recorded on the cohere vendor surface, so the Foundry lag is zero days."
+    aliases: ["Rerank V5"]
+    note: "Cohere Rerank 5 as released. Its Pro and Fast models are registered as the variants cohere-rerank-v5-pro and cohere-rerank-v5-fast; the events here describe the release. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning. Cohere's own release of 21 October 2026 is recorded on the cohere vendor surface, so the Foundry lag is zero days."
+  - id: cohere-rerank-v5-pro
+    display_name: "Cohere Rerank 5 Pro"
+    vendor: Cohere
+    scope: extended
+    aliases: ["rerank-v5.0-pro", "Cohere-rerank-v5-pro"]
+    variant_of: cohere-rerank-v5
+    variant_kind: pro
+  - id: cohere-rerank-v5-fast
+    display_name: "Cohere Rerank 5 Fast"
+    vendor: Cohere
+    scope: extended
+    aliases: ["rerank-v5.0-fast", "Cohere-rerank-v5-fast"]
+    variant_of: cohere-rerank-v5
+    variant_kind: fast
 
   # ------------------------------------------------------------- NVIDIA
   - id: nemotron-speech-streaming-en

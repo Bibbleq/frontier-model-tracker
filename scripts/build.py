@@ -33,7 +33,7 @@ PUBLISHED_FILES = {
     "data/validation-backlog.csv": "Open research questions with states and targets, not confirmed history",
     "data/lag.csv": "Derived adoption lag; read certainty before any number",
     "data/current-state.csv": "Last known lifecycle per model and surface; read state_is_terminal before presenting it as current",
-    "data/models.csv": "Model registry with modality, scope, generation, model-line, family and event-count references",
+    "data/models.csv": "Model registry with modality, scope, generation, model-line, family, variant and event-count references",
     "data/series.csv": "Vendor model series referenced by generations and model lines",
     "data/generations.csv": "Broad named or numbered model generations; membership does not imply supersession",
     "data/model-lines.csv": "Recurring named model lines; membership does not imply technical ancestry",
@@ -175,12 +175,22 @@ def validate_registry_semantics(models: dict, platforms: dict) -> None:
             if key in names and names[key] != entry["id"]:
                 fail(f"{entry['id']}: name or alias {name!r} is already used by {names[key]}")
             names[key] = entry["id"]
-        for link in ("supersedes", "superseded_by"):
+        for link in ("supersedes", "superseded_by", "variant_of"):
             if entry.get(link) and entry[link] not in known_models:
                 fail(f"{entry['id']}: {link} points at unknown model {entry[link]}")
 
     model_by_id = {entry["id"]: entry for entry in models["models"]}
     for entry in models["models"]:
+        # A variant points one level up, at a model of the same vendor that is
+        # not itself a variant, so a consumer can group without walking a chain.
+        if entry.get("variant_of"):
+            parent = model_by_id[entry["variant_of"]]
+            if parent["id"] == entry["id"]:
+                fail(f"{entry['id']}: variant_of points at itself")
+            if parent.get("variant_of"):
+                fail(f"{entry['id']}: variant_of points at {parent['id']}, which is itself a variant")
+            if parent["vendor"] != entry["vendor"]:
+                fail(f"{entry['id']}: variant_of points at {parent['id']}, a model of another vendor")
         if entry.get("supersedes"):
             target = model_by_id[entry["supersedes"]]
             if target.get("superseded_by") != entry["id"]:
@@ -967,6 +977,7 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
     model_fields = [
         "id", "display_name", "vendor", "modality", "scope", "series", "generation",
         "model_line", "family", "aliases", "supersedes", "superseded_by", "event_count",
+        "variant_of", "variant_kind",
     ]
     model_use = collections.Counter(m for event in data["events"] for m in event["model_ids"])
     with (OUTPUT_DIR / "models.csv").open("w", encoding="utf-8", newline="") as handle:
@@ -998,6 +1009,8 @@ def write_outputs(data: dict, models: dict, platforms: dict) -> None:
                 "supersedes": entry.get("supersedes", ""),
                 "superseded_by": entry.get("superseded_by", ""),
                 "event_count": model_use.get(entry["id"], 0),
+                "variant_of": entry.get("variant_of", ""),
+                "variant_kind": entry.get("variant_kind", ""),
             })
 
     registry_exports = (

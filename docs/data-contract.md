@@ -81,6 +81,15 @@ Model classifications have deliberately different meanings:
 - `family` remains the narrower set of models announced or marketed together.
 - `supersedes` and `superseded_by` are used only where a replacement
   relationship is evidenced.
+- `variant_of` names the registered model a variant belongs to, and
+  `variant_kind` says how it differs (`mini`, `nano`, `small`, `pro`, `max`,
+  `fast`, `reasoning`, `non-reasoning`, `chat`, `codex`, `speech`, `realtime`,
+  `image` or `dated-build`). Both are set together or not at all. A variant is
+  its own model, with its own events, lifecycle and catalogue listing: the link
+  groups related API identities for presentation and never implies shared
+  availability or supersession. It is one level deep, between models of the
+  same vendor. `models.csv` carries both as columns, empty for a model that is
+  not a variant.
 
 Series, generation, model-line and family membership are classifications. None
 of them by itself asserts technical ancestry or supersession.
@@ -379,6 +388,7 @@ them:
 
 | Contract | Dataset | Change |
 | --- | --- | --- |
+| 3 | 3 | Adds the optional model fields `variant_of` and `variant_kind` and their two columns at the end of `data/models.csv`. The Grok 4.1 Fast and Grok 4.20 reasoning and non-reasoning deployments, and the Cohere Embed 5 and Rerank 5 Pro and Fast models, become variants of their base models instead of aliases of them, so each Foundry API identity maps to one registry model. Additive only (two optional fields and two new trailing columns), so no version bump; consumers that ignore unrecognised fields and columns need no change. |
 | 3 | 3 | Adds the catalogue contract (`docs/catalogue-contract.md`): JSON schemas for machine-written catalogue observation and checkpoint files and the lifecycle mapping table under `schema/`, with three append-only folders outside this contract. Additive only, no field, file or enum of the dataset changed, so no version bump. |
 | 3 | 3 | Renames the project and its attribution string from 365Explained Frontier Model Tracker to CtrlAltBen Frontier Model Tracker: in `metadata.project`, the `attribution` string in `manifest.json`, the schema titles, LICENSE-DATA and the repository documentation. A naming change only: no field, file or enum changed, so no version bump. Published snapshots keep the attribution string they were issued with, and a consumer crediting the earlier name for data it obtained under it remains compliant; the new string applies to data fetched from the rename onwards. |
 | 3 | 3 | Adds the optional `rollout_start` flag to an event's `date`, a `date_rollout_start` column in `data/events.csv`, the `rollout_start` value of `certainty` in `data/lag.csv` and a `date_confidence` column there. Rows whose baseline or first event is a rollout start move from `exact` or `range` to `rollout_start` with their numbers unchanged. Additive only — an optional field, two new columns and a new value on an open vocabulary — so no version bump; a consumer that treats unrecognised values as opaque needs no change, and one that renders `certainty` should add the new value. |

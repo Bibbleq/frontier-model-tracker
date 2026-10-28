@@ -110,6 +110,33 @@ class RegistryInvariantTests(unittest.TestCase):
         with self.assertRaises(SystemExit):
             build.validate_registry_semantics(models, copy.deepcopy(self.platforms))
 
+    def test_a_variant_must_point_one_level_up_within_its_vendor(self) -> None:
+        def models_with(**fields):
+            models = copy.deepcopy(self.models)
+            parent = next(m for m in models["models"] if m["id"] == "gpt-5-4")
+            models["models"].append({"id": "gpt-5-4-test-variant", "display_name": "GPT-5.4 test variant",
+                                     "vendor": parent["vendor"], **fields})
+            return models
+        build.validate_registry_semantics(models_with(variant_of="gpt-5-4", variant_kind="mini"),
+                                          copy.deepcopy(self.platforms))
+        for bad in (dict(variant_of="no-such-model", variant_kind="mini"),
+                    dict(variant_of="gpt-5-4-test-variant", variant_kind="mini"),
+                    dict(variant_of="claude-opus-5", variant_kind="mini"),
+                    dict(variant_of="grok-4-20-reasoning", variant_kind="mini")):
+            with self.subTest(bad=bad), self.assertRaises(SystemExit):
+                build.validate_registry_semantics(models_with(**bad), copy.deepcopy(self.platforms))
+
+    def test_each_foundry_api_name_belongs_to_one_model(self) -> None:
+        owners = {}
+        for model in self.models["models"]:
+            for alias in model.get("aliases", []):
+                self.assertNotIn(alias, owners, f"{alias} is on {owners.get(alias)} and {model['id']}")
+                owners[alias] = model["id"]
+        for api_name, model_id in (("grok-4-20-reasoning", "grok-4-20-reasoning"),
+                                   ("Cohere-Embed-V5-Pro", "cohere-embed-v5-pro"),
+                                   ("Cohere-rerank-v5-fast", "cohere-rerank-v5-fast")):
+            self.assertEqual(owners[api_name], model_id)
+
     def test_generation_and_model_line_must_share_a_series(self) -> None:
         models = copy.deepcopy(self.models)
         target = next(model for model in models["models"] if model.get("model_line"))
