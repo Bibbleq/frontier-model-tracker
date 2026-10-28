@@ -36,6 +36,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+import re
 import shutil
 import sys
 from dataclasses import dataclass, field
@@ -466,6 +467,34 @@ def tracker_links(root: Path) -> dict[str, str]:
     return links
 
 
+def unlinked_suggestions(root: Path, intervals: dict) -> list[tuple[str, str]]:
+    """Foundry names that look like a registered model but are not linked to it.
+
+    A name is suggested when it equals a model's id, display name or alias once
+    case and punctuation are ignored (`gpt-5.1` against `gpt-5-1`) and is not an
+    alias already. The links themselves stay explicit: this only says which
+    alias to consider adding, because a similar name is not proof of the same
+    API identity.
+    """
+    def fold(text: str) -> str:
+        return re.sub(r"[^a-z0-9]+", "", text.lower())
+
+    registry = yaml.safe_load((root / "data" / "models.yaml").read_text(encoding="utf-8"))
+    by_fold: dict[str, str] = {}
+    for model in registry.get("models") or []:
+        for name in [model["id"], model.get("display_name", ""), *(model.get("aliases") or [])]:
+            if name:
+                by_fold.setdefault(fold(name), model["id"])
+    suggestions = set()
+    for meta in intervals["models"].values():
+        if meta.get("tracker_model"):
+            continue
+        match = by_fold.get(fold(meta["name"]))
+        if match:
+            suggestions.add((meta["name"], match))
+    return sorted(suggestions, key=lambda pair: pair[0].lower())
+
+
 def build_intervals(states: list[RegionReplay], links: dict[str, str]) -> dict:
     cells: list[dict] = []
     segments: list[dict] = []
@@ -593,6 +622,12 @@ def main() -> None:
         f"{len(intervals['cells']) - open_cells} closed, {len(intervals['states'])} state segments; "
         f"wrote {(out / 'catalogue').as_posix()}."
     )
+    suggestions = unlinked_suggestions(ROOT, intervals)
+    if suggestions:
+        print(f"NOTE: {len(suggestions)} Foundry name(s) look like a registered model but are not "
+              "linked; add the alias to data/models.yaml if it is the same API identity:")
+        for name, model_id in suggestions:
+            print(f"  {name} -> {model_id}")
 
 
 if __name__ == "__main__":

@@ -56,7 +56,20 @@
         },
         "supersedes": {"$ref": "#/$defs/identifier"},
         "superseded_by": {"$ref": "#/$defs/identifier"},
+        "variant_of": {
+          "comment": "The registered model this one is a variant of. A variant is its own model with its own events and lifecycle; the link never implies shared availability or supersession.",
+          "$ref": "#/$defs/identifier"
+        },
+        "variant_kind": {
+          "comment": "How the variant differs from the model it is a variant of.",
+          "type": "string",
+          "enum": ["mini", "nano", "small", "pro", "max", "fast", "reasoning", "non-reasoning", "chat", "codex", "speech", "realtime", "image", "dated-build"]
+        },
         "note": {"type": "string", "minLength": 1}
+      },
+      "dependentRequired": {
+        "variant_of": ["variant_kind"],
+        "variant_kind": ["variant_of"]
       },
       "additionalProperties": false
     },

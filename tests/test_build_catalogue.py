@@ -155,6 +155,16 @@ class CatalogueBuildTests(unittest.TestCase):
         self.assertEqual(models["alpha@1"]["tracker_model"], "alpha-1")
         self.assertIsNone(models["beta@1"]["tracker_model"])
 
+    def test_a_lookalike_name_is_suggested_never_linked(self) -> None:
+        (self.tmp / "data" / "models.yaml").write_text(
+            "models:\n  - id: gpt-5-1\n    display_name: GPT-5.1\n  - id: alpha-1\n    aliases: [alpha]\n",
+            encoding="utf-8")
+        self.put(cp_path("uksouth", T0), checkpoint("uksouth", T0, [watched("gpt-5.1"), watched("alpha"),
+                                                                     watched("gpt-5.1-mini")]))
+        intervals = self.build()
+        self.assertIsNone(intervals["models"]["gpt-5.1@1"]["tracker_model"])
+        self.assertEqual(bc.unlinked_suggestions(self.tmp, intervals), [("gpt-5.1", "gpt-5-1")])
+
     def test_the_build_is_reproducible_and_the_manifest_checks_out(self) -> None:
         self.put(cp_path("uksouth", T0), checkpoint("uksouth", T0, [watched("alpha")]))
         self.build()
