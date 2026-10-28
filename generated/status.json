@@ -1,23 +1,23 @@
 {
   "totals": {
-    "events": 418,
-    "backlog": 97,
-    "sources": 646,
-    "models": 171,
+    "events": 469,
+    "backlog": 111,
+    "sources": 823,
+    "models": 172,
     "surfaces": 27,
-    "confirmed": 320,
-    "supported": 98
+    "confirmed": 349,
+    "supported": 120
   },
   "kinds": {
-    "announcement": 25,
-    "availability": 378,
+    "announcement": 27,
+    "availability": 427,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 54,
-    "promoted": 37,
+    "open": 65,
+    "promoted": 40,
     "rejected": 4
   },
   "warnings": [
@@ -64,6 +64,11 @@
     {
       "code": "backlog_without_surface",
       "subject": "sweep-2026-10-24-to-10-26",
+      "message": "open item names no surface, so it cannot suppress a lag answer"
+    },
+    {
+      "code": "backlog_without_surface",
+      "subject": "sweep-2026-10-27-to-10-28",
       "message": "open item names no surface, so it cannot suppress a lag answer"
     },
     {
@@ -243,6 +248,16 @@
     },
     {
       "code": "no_vendor_baseline_extended",
+      "subject": "grok-4-1-fast-non-reasoning",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline_extended",
+      "subject": "grok-4-1-fast-reasoning",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline_extended",
       "subject": "grok-4-20",
       "message": "no vendor release event, so lag cannot be derived"
     },
@@ -278,10 +293,10 @@
     }
   ],
   "warning_counts": {
-    "backlog_without_surface": 9,
+    "backlog_without_surface": 10,
     "missing_archive": 25,
     "no_vendor_baseline": 9,
-    "no_vendor_baseline_extended": 7,
+    "no_vendor_baseline_extended": 9,
     "pre_release_access": 1
   },
   "coverage": {
@@ -293,13 +308,10 @@
       "cohere-rerank-v5-pro",
       "gpt-5-6-cyber",
       "grok-4-1-fast",
-      "grok-4-1-fast-non-reasoning",
-      "grok-4-1-fast-reasoning",
       "grok-4-20-non-reasoning",
       "grok-4-20-reasoning",
       "mai-code-1-flash",
       "mai-cyber-1-flash",
-      "mai-image-2-5",
       "mai-image-2-5-flash",
       "mai-thinking-1",
       "mai-transcribe-1-5",
@@ -376,11 +388,11 @@
     ]
   },
   "lag_certainty": {
-    "exact": 349,
-    "not_recorded": 1031,
-    "range": 35,
-    "rollout_start": 142,
-    "unknown_no_baseline": 392,
-    "unknown_open_research": 103
+    "exact": 353,
+    "not_recorded": 1036,
+    "range": 39,
+    "rollout_start": 145,
+    "unknown_no_baseline": 372,
+    "unknown_open_research": 119
   }
 }
