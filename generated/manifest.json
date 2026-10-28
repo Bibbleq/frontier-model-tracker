@@ -59,8 +59,8 @@
       "path": "data/models.csv",
       "media_type": "text/csv",
       "description": "Model registry with modality, scope, generation, model-line, family and event-count references",
-      "bytes": 12250,
-      "sha256": "96794f987f3d044bb787a6d61cf373fc78aa6bc4fa170f30723b33e4a2b87ccf"
+      "bytes": 12260,
+      "sha256": "8ea3ee3e35e3ce5da1471a15d5e113cba18557eaf836236c1e1437e7eddac330"
     },
     {
       "path": "data/series.csv",
