@@ -490,6 +490,7 @@ models:
     vendor: OpenAI
     modality: audio
     generation: whisper
+    aliases: ["whisper"]
   - id: sora-2
     display_name: "Sora 2"
     vendor: OpenAI
@@ -917,6 +918,7 @@ models:
     vendor: Anthropic
     generation: claude-5
     model_line: claude-fable
+    aliases: ["claude-fable-5"]
     superseded_by: claude-fable-5-1
   - id: claude-mythos-5
     display_name: "Claude Mythos 5"
@@ -1341,7 +1343,7 @@ models:
     display_name: "Cohere Command A"
     vendor: Cohere
     scope: extended
-    aliases: ["Cohere-command-a", "command-a-03-2025"]
+    aliases: ["cohere-command-a", "Cohere-command-a", "command-a-03-2025"]
     note: "Foundry's retirement schedule names the Command A+ builds as replacements. That is a lifecycle fact, not supersession, so superseded_by is not set."
   - id: cohere-command-a-plus
     display_name: "Cohere Command A+"

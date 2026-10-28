@@ -17,15 +17,15 @@
       "path": "data/events.json",
       "media_type": "application/json",
       "description": "The whole dataset: metadata, canonical events and the validation backlog",
-      "bytes": 1339008,
-      "sha256": "17ca05f4d014a02d45db17a5fbce5a7ce570e30e6da76d83a6888c8fa3f95280"
+      "bytes": 1340374,
+      "sha256": "6995aa751d1cce9b8d5a72e8cb5091349a44bf29c0a2cf8138255116c7fa64cc"
     },
     {
       "path": "data/status.json",
       "media_type": "application/json",
       "description": "Totals, warning counts, coverage gaps and lag certainty distribution",
       "bytes": 17458,
-      "sha256": "2846e12336395adc5761e466cfcc7ca07984f45c6a29c5993a8ca0c1ab42d200"
+      "sha256": "85864874aa5b5006919266a54b7c73adf8322e633daa773caff6b4ce4ec569aa"
     },
     {
       "path": "data/events.csv",
@@ -38,8 +38,8 @@
       "path": "data/validation-backlog.csv",
       "media_type": "text/csv",
       "description": "Open research questions with states and targets, not confirmed history",
-      "bytes": 150107,
-      "sha256": "bd78f89bc83f7fb1086f8a2f1ec2adea34c2ede00e9194627b2e32240ecfc406"
+      "bytes": 150669,
+      "sha256": "ac0cf8303a10726ee775c7f9513fee67de099aaab3bd1a6c9cd82916c1014b49"
     },
     {
       "path": "data/lag.csv",
@@ -59,8 +59,8 @@
       "path": "data/models.csv",
       "media_type": "text/csv",
       "description": "Model registry with modality, scope, generation, model-line, family, variant and event-count references",
-      "bytes": 19108,
-      "sha256": "3ca2c55b5df5ca914afddbd9aea6cacaedb96043d7bbcbe524057942baa0a979"
+      "bytes": 19148,
+      "sha256": "4bd43d4562cab0ec73e3779d051387716e983f0e6aa43ff30bb789b38e9ae72a"
     },
     {
       "path": "data/series.csv",
