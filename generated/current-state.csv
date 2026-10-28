@@ -62,6 +62,8 @@ claude-opus-5-5,Claude Opus 5.5,Anthropic,m365-copilot,Microsoft 365 Copilot,mic
 claude-opus-5-5,Claude Opus 5.5,Anthropic,m365-cowork,Microsoft Copilot Cowork,microsoft | copilot,ga,selectable,false,cowork-opus5-5-2026-09-22,2026-09-22,day,2026-10-28,,0
 claude-opus-5-5,Claude Opus 5.5,Anthropic,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-opus5-5-2026-09-22,2026-09-22,day,2026-10-28,,0
 claude-opus-5-5,Claude Opus 5.5,Anthropic,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,ga,selectable,false,studio-opus5-5-2026-09-22,2026-09-22,day,2026-10-28,,0
+claude-opus-5-5-fast,Claude Opus 5.5 Fast,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-opus5-5-fast-ga-2026-10-15,2026-10-15,day,2026-10-28,,0
+claude-opus-5-5-fast,Claude Opus 5.5 Fast,Anthropic,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-opus5-5-fast-2026-10-15,2026-10-15,day,2026-10-28,,0
 claude-sonnet-4,Claude Sonnet 4,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-claude4-2025-05-22,2025-05-22,day,2026-10-28,,0
 claude-sonnet-4,Claude Sonnet 4,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,public_preview,selectable,false,github-sonnet4-preview-2025-05-22,2025-05-22,day,2026-10-28,,0
 claude-sonnet-4,Claude Sonnet 4,Anthropic,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,public_preview,selectable,false,studio-sonnet4-2025-09-24,2025-09-24,day,2026-10-28,,0
@@ -83,11 +85,17 @@ claude-sonnet-5-5,Claude Sonnet 5.5,Anthropic,github-copilot,GitHub Copilot,micr
 claude-sonnet-5-5,Claude Sonnet 5.5,Anthropic,m365-cowork,Microsoft Copilot Cowork,microsoft | copilot,ga,selectable,false,cowork-sonnet5-5-2026-09-30,2026-09-30,day,2026-10-28,,0
 claude-sonnet-5-5,Claude Sonnet 5.5,Anthropic,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-sonnet5-5-2026-09-28,2026-09-28,day,2026-10-28,,0
 claude-sonnet-5-5,Claude Sonnet 5.5,Anthropic,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,ga,selectable,false,studio-sonnet5-5-2026-09-30,2026-09-30,day,2026-10-28,,0
+codestral-25-01,Codestral 25.01,Mistral AI,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,limited_preview,catalogue,false,foundry-codestral-25-01-2025-01-13,2025-01-13,day,2026-10-28,,0
+codestral-25-01,Codestral 25.01,Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral-codestral-25-01-2025-01-13,2025-01-13,day,2026-10-28,,0
 codex,Codex,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,underlying,false,github-copilot-ga-2022-06-21,2022-06-21,day,2026-10-28,,0
 codex,Codex,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,retired,catalogue,true,azure-codex-retired-2024-06-14,2024-06-14,day,2026-10-28,,0
 codex,Codex,OpenAI,openai-api,OpenAI API,,retired,not_applicable,true,openai-codex-retired-2023-03-23,2023-03-23,day,2026-10-28,,0
 codex-mini,codex-mini,OpenAI,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-codex-mini-2025-06-03,2025-06-03,day,2026-10-28,,0
 codex-mini,codex-mini,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-api-codex-mini-2025-05-15,2025-05-15,day,2026-10-28,,0
+cohere-command-a,Cohere Command A,Cohere,cohere,Cohere,,ga,not_applicable,false,cohere-command-a-2025-03-13,2025-03-13,day,2026-10-28,,0
+cohere-command-a,Cohere Command A,Cohere,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-cohere-command-a-2025-04-15,2025-04-15,day,2026-10-28,,0
+cohere-command-a-plus,Cohere Command A+,Cohere,cohere,Cohere,,ga,not_applicable,false,cohere-command-a-plus-2026-05-20,2026-05-20,day,2026-10-28,,0
+cohere-command-a-plus,Cohere Command A+,Cohere,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-cohere-command-a-plus-2026-05-21,2026-05-21,day,2026-10-28,,1
 cohere-embed-v5,Cohere Embed 5,Cohere,cohere,Cohere,,ga,not_applicable,false,cohere-embed-v5-2026-09-30,2026-09-30,day,2026-10-28,,0
 cohere-embed-v5,Cohere Embed 5,Cohere,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-cohere-embed-v5-2026-09-30,2026-09-30,day,2026-10-28,,1
 cohere-parse-v5,Cohere Parse v5,Cohere,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-cohere-parse-v5-preview-2026-08-27,2026-08-27,day,2026-10-28,,0
@@ -256,17 +264,39 @@ gpt-6-sol,GPT-6 Sol,OpenAI,m365-cowork,Microsoft Copilot Cowork,microsoft | copi
 gpt-6-sol,GPT-6 Sol,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt6-sol-luna-2026-09-22,2026-09-22,day,2026-10-28,,0
 gpt-6-sol,GPT-6 Sol,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-gpt6-sol-luna-2026-09-22,2026-09-22,day,2026-10-28,,0
 gpt-6-sol,GPT-6 Sol,OpenAI,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,ga,selectable,false,studio-gpt6-sol-2026-09-22,2026-09-22,day,2026-10-28,,0
+gpt-audio,GPT-audio,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,catalogue,false,foundry-gpt-audio-2025-08-30,2025-08-30,day,2026-10-28,,0
+gpt-audio,GPT-audio,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt-audio-2025-08-28,2025-08-28,day,2026-10-28,,0
+gpt-audio-1-5,GPT-Audio-1.5,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt-audio-1-5-2026-02-24,2026-02-24,day,2026-10-28,,0
+gpt-audio-1-5,GPT-Audio-1.5,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt-audio-1-5-2026-02-23,2026-02-23,day,2026-10-28,,0
+gpt-audio-mini,GPT-Audio mini,OpenAI,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt-audio-mini-2025-10-06,2025-10-06,day,2026-10-28,,0
+gpt-audio-mini,GPT-Audio mini,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt-audio-mini-2025-10-06,2025-10-06,day,2026-10-28,,0
 gpt-image-1,GPT-image-1,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,retired,catalogue,true,foundry-gpt-image-1-retired-2026-10,2026-10-23,day,2026-10-28,,2
 gpt-image-1-5,GPT-image-1.5,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,limited_preview,catalogue,false,azure-gpt-image-1-5-2025-12,2025-12,month,2026-10-28,,4
+gpt-image-1-mini,GPT-image-1 mini,OpenAI,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,limited_preview,catalogue,false,foundry-gpt-image-1-mini-2025-10-06,2025-10-06,day,2026-10-28,,0
+gpt-image-1-mini,GPT-image-1 mini,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt-image-1-mini-2025-10-06,2025-10-06,day,2026-10-28,,0
 gpt-image-2,GPT-image-2,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-gpt-image-2-2026-04-21,2026-04-21,day,2026-10-28,,3
+gpt-image-2-5-flare,GPT Image 2.5 Flare,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt-image-2-5-flare-2026-09-10,2026-09-10,day,2026-10-28,,0
+gpt-image-2-5-flare,GPT Image 2.5 Flare,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt-image-2-5-flare-2026-09-08,2026-09-08,day,2026-10-28,,0
+gpt-image-2-5-sunburst,GPT Image 2.5 Sunburst,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt-image-2-5-sunburst-2026-09-10,2026-09-10,day,2026-10-28,,0
+gpt-image-2-5-sunburst,GPT Image 2.5 Sunburst,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt-image-2-5-sunburst-2026-09-08,2026-09-08,day,2026-10-28,,0
 gpt-live-1,GPT-Live-1,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt-live-1-api-2026-09-10,2026-09-10,day,2026-10-28,,0
 gpt-live-transcribe,GPT-live-transcribe,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt-live-transcribe-2026-07-29,2026-07-29,day,2026-10-28,,2
 gpt-oss-120b,gpt-oss-120b,OpenAI,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt-oss-120b-2025-08-05,2025-08-05,day,2026-10-28,,1
 gpt-oss-120b,gpt-oss-120b,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-gpt-oss-120b-2025-08-05,2025-08-05,day,2026-10-28,,0
 gpt-oss-20b,gpt-oss-20b,OpenAI,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt-oss-20b-2025-08-05,2025-08-05,day,2026-10-28,,1
 gpt-oss-20b,gpt-oss-20b,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-gpt-oss-20b-2025-08-05,2025-08-05,day,2026-10-28,,0
-gpt-realtime,gpt-realtime,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,catalogue,false,azure-gpt-realtime-2025-08-28,2025-08-28,day,2026-10-28,,0
+gpt-realtime,gpt-realtime,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,ga,catalogue,false,azure-gpt-realtime-2025-08-28,2025-09-03,day,2026-10-28,,0
 gpt-realtime,gpt-realtime,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt-realtime-2025-08-28,2025-08-28,day,2026-10-28,,0
+gpt-realtime-1-5,GPT-Realtime-1.5,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt-realtime-1-5-2026-02-24,2026-02-24,day,2026-10-28,,0
+gpt-realtime-1-5,GPT-Realtime-1.5,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt-realtime-1-5-2026-02-23,2026-02-23,day,2026-10-28,,0
+gpt-realtime-2,GPT-Realtime-2,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-gpt-realtime-2-2026-05-07,2026-05-07,day,2026-10-28,,1
+gpt-realtime-2,GPT-Realtime-2,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt-realtime-2-2026-05-07,2026-05-07,day,2026-10-28,,0
+gpt-realtime-2-1,GPT-Realtime-2.1,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt-realtime-2-1-ga-2026-08-25,2026-08-25,day,2026-10-28,,0
+gpt-realtime-2-1,GPT-Realtime-2.1,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt-realtime-2-1-2026-07-06,2026-07-06,day,2026-10-28,,0
+gpt-realtime-2-1-mini,GPT-Realtime-2.1 mini,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt-realtime-2-1-mini-ga-2026-08-25,2026-08-25,day,2026-10-28,,0
+gpt-realtime-2-1-mini,GPT-Realtime-2.1 mini,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt-realtime-2-1-mini-2026-07-06,2026-07-06,day,2026-10-28,,0
+gpt-realtime-mini,GPT-Realtime mini,OpenAI,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt-realtime-mini-2025-10-06,2025-10-06,day,2026-10-28,,0
+gpt-realtime-mini,GPT-Realtime mini,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-gpt-realtime-mini-2025-10-06,2025-10-06,day,2026-10-28,,0
 gpt-transcribe,GPT-transcribe,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-gpt-transcribe-2026-07-29,2026-07-29,day,2026-10-28,,2
 grok-3,Grok 3,xAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,retired,catalogue,true,foundry-grok3-retired-2026-05-01,2026-05-01,day,2026-10-28,,0
 grok-3,Grok 3,xAI,xai-grok,Grok,,public_preview,not_applicable,false,xai-grok3-2025-02-19,2025-02-19,day,2026-10-28,,0
@@ -297,6 +327,8 @@ kimi-k3,Kimi K3,Moonshot AI,microsoft-foundry,Microsoft Foundry,microsoft | foun
 kimi-k3,Kimi K3,Moonshot AI,moonshot,Moonshot AI,,ga,not_applicable,false,moonshot-kimi-k3-2026-07-01,2026-07-16,day,2026-10-28,,0
 llama-2,Llama 2,Meta,meta,Meta,,ga,not_applicable,false,meta-llama2-2023-07-18,2023-07-18,day,2026-10-28,,0
 llama-2,Llama 2,Meta,azure-ai-catalog,Azure AI model catalogue,microsoft | foundry,retired,catalogue,true,catalog-llama-2-retired-2025-06-30,2025-06-30,day,2026-10-28,,0
+llama-3-3-70b,Llama 3.3 70B Instruct,Meta,meta,Meta,,ga,not_applicable,false,meta-llama-3-3-70b-2024-12-06,2024-12-06,day,2026-10-28,,0
+llama-3-3-70b,Llama 3.3 70B Instruct,Meta,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-llama-3-3-70b-2024-12-06,2024-12-06,day,2026-10-28,,0
 llama-4-maverick,Llama 4 Maverick,Meta,meta,Meta,,ga,not_applicable,false,meta-llama4-maverick-2025-04-05,2025-04-05,day,2026-10-28,,0
 llama-4-maverick,Llama 4 Maverick,Meta,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-llama4-maverick-2025-04-05,2025-04-05,day,2026-10-28,,0
 llama-4-scout,Llama 4 Scout,Meta,meta,Meta,,ga,not_applicable,false,meta-llama4-scout-2025-04-05,2025-04-05,day,2026-10-28,,0
@@ -316,7 +348,11 @@ mai-voice-1,MAI-Voice-1,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_
 mai-voice-2-1,MAI-Voice-2.1,Microsoft,microsoft-ai,Microsoft AI,,ga,not_applicable,false,microsoft-mai-voice-2-1-2026-10-01,2026-10-01,day,2026-10-28,,0
 mai-voice-2-1-flash,MAI-Voice-2.1-Flash,Microsoft,microsoft-ai,Microsoft AI,,ga,not_applicable,false,microsoft-mai-voice-2-1-2026-10-01,2026-10-01,day,2026-10-28,,0
 microsoft-decision-1,Microsoft-Decision-1,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-decision-1-2026-10-09,2026-10-09,day,2026-10-28,,0
+ministral-3b-24-10,Ministral 3B (24.10),Mistral AI,azure-ai-studio,Azure AI Studio,microsoft | foundry,ga,catalogue,false,studio-ministral-3b-24-10-2024-10-23,2024-10-23,day,2026-10-28,,0
+ministral-3b-24-10,Ministral 3B (24.10),Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral-ministral-3b-24-10-2024-10-09,2024-10-09,day,2026-10-28,,0
 mistral-3,Mistral 3,Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral3-2025-12-02,2025-12-02,day,2026-10-28,,0
+mistral-large-24-02,Mistral Large (24.02),Mistral AI,azure-ai-catalog,Azure AI model catalogue,microsoft | foundry,ga,catalogue,false,catalog-mistral-large-24-02-2024-02-26,2024-02-26,day,2026-10-28,,2
+mistral-large-24-02,Mistral Large (24.02),Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral-large-24-02-2024-02-26,2024-02-26,day,2026-10-28,,0
 mistral-large-3,Mistral Large 3,Mistral AI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-mistral-large3-2025-12-02,2025-12-02,day,2026-10-28,,0
 mistral-large-3,Mistral Large 3,Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral3-2025-12-02,2025-12-02,day,2026-10-28,,0
 mistral-large-4,Mistral Large 4,Mistral AI,mistral,Mistral,,public_preview,not_applicable,false,mistral-large4-preview-2026-10-06,2026-10-06,day,2026-10-28,,0
@@ -324,6 +360,8 @@ mistral-medium-3,Mistral Medium 3,Mistral AI,azure-ai-foundry,Azure AI Foundry,m
 mistral-medium-3,Mistral Medium 3,Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral-medium-3-2025-05-07,2025-05-07,day,2026-10-28,,0
 mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,mistral,Mistral,,public_preview,not_applicable,false,mistral-medium3-5-2026-04-28,2026-04-28,day,2026-10-28,,1
 mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,public_preview,selectable,false,studio-mistral-medium3-5-2026-05-28,2026-05-28,day,2026-10-28,,0
+mistral-small-3-1,Mistral Small 3.1,Mistral AI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,deprecated,catalogue,false,foundry-mistral-small-3-1-deprecated-2026-10-09,2026-10-09,day,2026-10-28,,1
+mistral-small-3-1,Mistral Small 3.1,Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral-small-3-1-2025-03-17,2025-03-17,day,2026-10-28,,0
 muse-glimmer,Muse Glimmer,Meta,meta,Meta,,ga,not_applicable,false,meta-muse-glimmer-2026-08-10,2026-08-10,day,2026-10-28,,0
 muse-spark,Muse Spark,Meta,meta,Meta,,ga,not_applicable,false,meta-muse-spark-2026-04-08,2026-04-08,day,2026-10-28,,0
 muse-spark-open,Muse Spark Open,Meta,meta,Meta,,ga,not_applicable,false,meta-muse-spark-open-2026-10-15,2026-10-15,day,2026-10-28,,0
@@ -362,6 +400,16 @@ o4-mini,o4-mini,OpenAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,d
 o4-mini,o4-mini,OpenAI,openai,OpenAI,,ga,not_applicable,false,openai-o4-mini-2025-04-16,2025-04-16,day,2026-10-28,,0
 openai-deep-research,OpenAI deep research model,OpenAI,chatgpt,ChatGPT,,ga,not_applicable,false,openai-deep-research-2025-02-02,2025-02-02,day,2026-10-28,,0
 openai-deep-research,OpenAI deep research model,OpenAI,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,specialist,false,m365-researcher-ga-2025-06-02,2025-06-02,day,2026-10-28,,0
+phi-4,Phi-4,Microsoft,microsoft-ai,Microsoft AI,,ga,not_applicable,false,microsoft-phi-4-2024-12-12,2024-12-12,day,2026-10-28,,0
+phi-4,Phi-4,Microsoft,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-phi-4-2024-12-12,2024-12-12,day,2026-10-28,,0
+phi-4-mini,Phi-4-mini,Microsoft,microsoft-ai,Microsoft AI,,ga,not_applicable,false,microsoft-phi-4-mini-2025-02-26,2025-02-26,day,2026-10-28,,0
+phi-4-mini,Phi-4-mini,Microsoft,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-phi-4-mini-2025-02-26,2025-02-26,day,2026-10-28,,0
+phi-4-mini-reasoning,Phi-4-mini-reasoning,Microsoft,microsoft-ai,Microsoft AI,,ga,not_applicable,false,microsoft-phi-4-mini-reasoning-2025-04-30,2025-04-30,day,2026-10-28,,0
+phi-4-mini-reasoning,Phi-4-mini-reasoning,Microsoft,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-phi-4-mini-reasoning-2025-04-30,2025-04-30,day,2026-10-28,,0
+phi-4-multimodal,Phi-4-multimodal,Microsoft,microsoft-ai,Microsoft AI,,ga,not_applicable,false,microsoft-phi-4-multimodal-2025-02-26,2025-02-26,day,2026-10-28,,0
+phi-4-multimodal,Phi-4-multimodal,Microsoft,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-phi-4-multimodal-2025-02-26,2025-02-26,day,2026-10-28,,0
+phi-4-reasoning,Phi-4-reasoning,Microsoft,microsoft-ai,Microsoft AI,,ga,not_applicable,false,microsoft-phi-4-reasoning-2025-04-30,2025-04-30,day,2026-10-28,,0
+phi-4-reasoning,Phi-4-reasoning,Microsoft,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-phi-4-reasoning-2025-04-30,2025-04-30,day,2026-10-28,,0
 qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,foundry-local,Foundry Local,microsoft,ga,catalogue,false,foundry-local-qwen3-5-vision-2026-05,2026-05,month,2026-10-28,,0
 sora-2,Sora 2,OpenAI,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-sora2-preview-2025-10-15,2025-10-15,day,2026-10-28,,2
 sora-2,Sora 2,OpenAI,openai,OpenAI,,limited_preview,not_applicable,false,openai-sora-2-2025-09-30,2025-09-30,day,2026-10-28,,1

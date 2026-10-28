@@ -827,6 +827,68 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "catalog-mistral-large-24-02-2024-02-26"
+    kind: "availability"
+    date:
+      start: "2024-02-26"
+      precision: "day"
+    surface_id: "azure-ai-catalog"
+    model_ids: ["mistral-large-24-02"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Mistral Large was available first on Azure AI, as a models-as-a-service offering, on 26 February 2024, the day of Mistral's release."
+    caveat: "The announcement states availability, not a stage; the stage at launch is not recorded. Recorded on azure-ai-catalog, the surface for the 2024 Azure AI Studio and Azure Machine Learning catalogue, on the Llama 2 precedent. Mapping the Foundry id Mistral-large version 1 to 24.02 is inferred from the catalogue's display names. The published serverless retirement of April 2025 conflicts with the live listing; see foundry-mistral-large-2402-retirement."
+    sources:
+      - publisher: "Microsoft Azure Blog"
+        title: "Microsoft and Mistral AI announce new partnership to accelerate AI innovation and introduce Mistral Large first on Azure"
+        url: "https://azure.microsoft.com/en-us/blog/microsoft-and-mistral-ai-announce-new-partnership-to-accelerate-ai-innovation-and-introduce-mistral-large-first-on-azure/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2024-02-26"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20240226153537/https://azure.microsoft.com/en-us/blog/microsoft-and-mistral-ai-announce-new-partnership-to-accelerate-ai-innovation-and-introduce-mistral-large-first-on-azure/"
+        quote: "We are excited to announce Mistral AI's flagship commercial model, Mistral Large, available first on Azure AI and the Mistral AI platform"
+        supports: ["date", "model", "exposure"]
+        note: "The blog's date is 2024-02-26T14:10Z. The title is taken from the URL slug."
+      - publisher: "Microsoft Community Hub"
+        title: "Mistral Large, Mistral AI's flagship LLM, debuts on Azure AI Models"
+        url: "https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/mistal-large-mistral-ai-s-flagship-llm-debuts-on-azure-ai-models/ba-p/4066996"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2024-02-26"
+        source_type: "announcement"
+        supports: ["date"]
+        note: "Posted 2024-02-26T06:02:10-08:00 (Pacific time). The title is taken from the URL slug."
+  - id: "mistral-large-24-02-2024-02-26"
+    kind: "availability"
+    date:
+      start: "2024-02-26"
+      precision: "day"
+    surface_id: "mistral"
+    model_ids: ["mistral-large-24-02"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Mistral AI released Mistral Large, later named 24.02, on 26 February 2024, as its flagship commercial model."
+    caveat: "The announcement states a release, not a stage; ga is the classification of a model released as a commercial API."
+    sources:
+      - publisher: "Mistral AI"
+        title: "Au Large"
+        url: "https://mistral.ai/news/mistral-large/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2024-02-26"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20240226152230/https://mistral.ai/news/mistral-large/"
+        quote: "We are releasing Mistral Large, our latest and most advanced language model."
+        supports: ["date", "model"]
   - id: "anthropic-claude3-family-2024-03-04"
     kind: "availability"
     date:
@@ -1447,6 +1509,76 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "changelog"
+  - id: "mistral-ministral-3b-24-10-2024-10-09"
+    kind: "availability"
+    date:
+      start: "2024-10-09"
+      end: "2024-10-16"
+      precision: "day"
+    surface_id: "mistral"
+    model_ids: ["ministral-3b-24-10"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Mistral AI released Ministral 3B (ministral-3b-2410) between 9 and 16 October 2024, per its changelog and its announcement."
+    caveat: "Mistral's own sources conflict: the changelog says the models were released on 9 October 2024 and the news post says they were available 'starting today' on 16 October. Both are first-party, so the window carries the conflict and neither day is picked. Neither source states a stage; ga is the classification of a released model."
+    sources:
+      - publisher: "Mistral AI"
+        title: "Changelog | Mistral AI Documentation"
+        url: "https://docs.mistral.ai/getting-started/changelog/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2024-10-09"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20241022040904/https://docs.mistral.ai/getting-started/changelog/"
+        quote: "October 9, 2024 We released Ministral 3B (ministral-3b-2410) and Ministral 8B (ministral-8b-2410)."
+        supports: ["date", "model"]
+        note: "The day-level start of the window."
+      - publisher: "Mistral AI"
+        title: "Un Ministral, des Ministraux"
+        url: "https://mistral.ai/news/ministraux"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2024-10-16"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20241022072023/https://mistral.ai/news/ministraux/"
+        quote: "Both models are available starting today."
+        supports: ["date"]
+        note: "The end of the window: the news post gives 16 October."
+  - id: "studio-ministral-3b-24-10-2024-10-23"
+    kind: "availability"
+    date:
+      start: "2024-10-23"
+      precision: "day"
+    surface_id: "azure-ai-studio"
+    model_ids: ["ministral-3b-24-10"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Ministral 3B was added to the Azure AI Studio model catalogue, as a serverless pay-as-you-go offering, on 23 October 2024."
+    caveat: "The announcement states availability, not a stage; the stage at launch is not recorded. Learn and the Foundry Models API both show a retirement on 2026-12-09, with ministral-ministral-4b-instruct as the replacement; that is current-state documentation of a future ending, not an event, and is not a launch stage. This is the October 2024 Ministral 3B, not the December 2025 Ministral 3 family."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Ministral 3B small model from Mistral is now available in the Azure AI Model Catalog"
+        url: "https://techcommunity.microsoft.com/blog/machinelearningblog/-/4277641"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2024-10-23"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20241101223822/https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/ministral-3b-small-model-from-mistral-is-now-available-in-the/ba-p/4277641"
+        quote: "announce the addition of the new state-of-the-art models to the Azure AI Model Catalog: Ministral 3B"
+        supports: ["date", "model", "exposure"]
+        note: "Read from the post's embedded postTime, 2024-10-23T10:09:45-07:00 (Pacific time). The archive is of the post's earlier t5 URL."
   - id: "github-gpt4o-selectable-2024-10-29"
     kind: "availability"
     date:
@@ -1562,6 +1694,138 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "foundry-llama-3-3-70b-2024-12-06"
+    kind: "availability"
+    date:
+      start: "2024-12-06"
+      precision: "day"
+    surface_id: "azure-ai-foundry"
+    model_ids: ["llama-3-3-70b"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Llama 3.3 70B Instruct was announced as available in the Azure AI Foundry model catalogue on 6 December 2024, the day of Meta's release."
+    caveat: "The announcement states availability, not a stage; the stage at launch is not recorded. The post contradicts itself: its heading says models as a service while its deployment steps use managed compute, so the deployment type is unresolved. The catalogue capture of 6 December 2024 does not list the model, so the day rests on the post alone. Learn later shows GA with a retirement date of 2027-01-31, which is current-state evidence, not a launch stage."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Microsoft Azure AI Foundry Welcomes Meta Llama 3.3 70B Model"
+        url: "https://techcommunity.microsoft.com/blog/machinelearningblog/-/4355199"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2024-12-06"
+        source_type: "announcement"
+        quote: "We are happy to announce that the Meta Llama 3.3 70B is now available in the Azure AI Foundry Model Catalog."
+        supports: ["date", "model", "exposure"]
+        note: "Read from the post's embedded postTime, 2024-12-06T10:00:02-08:00 (Pacific time). The title is taken from the research record. No archive capture is recorded."
+      - publisher: "Microsoft Learn"
+        title: "Azure AI model catalog overview"
+        url: "https://learn.microsoft.com/en-us/azure/ai-studio/how-to/model-catalog-overview"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20250122120638/https://learn.microsoft.com/en-us/azure/ai-studio/how-to/model-catalog-overview"
+        supports: ["exposure"]
+        note: "Capture of 22 January 2025, which lists the model; the capture of 6 December 2024 does not (no archived URL recorded for it)."
+  - id: "meta-llama-3-3-70b-2024-12-06"
+    kind: "availability"
+    date:
+      start: "2024-12-06"
+      precision: "day"
+    surface_id: "meta"
+    model_ids: ["llama-3-3-70b"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Meta released Llama 3.3 70B Instruct on 6 December 2024, per its model card."
+    caveat: "The model card dates the release and states no stage; ga is the classification of a released open-weight model."
+    sources:
+      - publisher: "Meta"
+        title: "Llama 3.3 Model Card"
+        url: "https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        quote: "Model Release Date: 70B Instruct: December 6, 2024"
+        supports: ["date", "model"]
+        note: "The licence text agrees. No archived_url was recorded for this page."
+  - id: "foundry-phi-4-2024-12-12"
+    kind: "availability"
+    date:
+      start: "2024-12-12"
+      precision: "day"
+    surface_id: "azure-ai-foundry"
+    model_ids: ["phi-4"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Phi-4 was available in Azure AI Foundry on 12 December 2024, the day Microsoft introduced it."
+    caveat: "The announcement states availability, not a stage; the stage at launch is not recorded. Learn later shows GA with a retirement date of 2027-01-17 and the replacement 'microsoft--phi-4 (Foundry Managed Compute)'; that is the serverless offering retiring, not the model, and is current-state evidence, not a launch stage. The weights opened under an MIT licence on 8 January 2025 (VentureBeat, secondary)."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Introducing Phi-4: Microsoft's Newest Small Language Model Specializing in Complex Reasoning"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-phi-4-microsoft%E2%80%99s-newest-small-language-model-specializing-in-comple/4357090"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2024-12-12"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20250808153311/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-phi-4-microsoft%E2%80%99s-newest-small-language-model-specializing-in-comple/4357090"
+        quote: "Phi-4 is currently available on Azure AI Foundry and Hugging Face, take a look today."
+        supports: ["date", "model", "exposure"]
+        note: "The archive is a later capture, of 8 August 2025."
+      - publisher: "Microsoft Learn"
+        title: "Azure AI model catalog overview"
+        url: "https://learn.microsoft.com/en-us/azure/ai-studio/how-to/model-catalog-overview"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20250122120638/https://learn.microsoft.com/en-us/azure/ai-studio/how-to/model-catalog-overview"
+        supports: ["exposure"]
+        note: "Capture of 22 January 2025, which lists Phi-4 under managed compute and serverless; the capture of 6 December 2024 does not (no archived URL recorded for it)."
+      - publisher: "Microsoft Learn"
+        title: "Region availability for models in Serverless API endpoints"
+        url: "https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-serverless-availability"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20250227044414/https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-serverless-availability"
+        supports: ["exposure"]
+        note: "Capture of 27 February 2025, which lists the serverless regions."
+  - id: "microsoft-phi-4-2024-12-12"
+    kind: "availability"
+    date:
+      start: "2024-12-12"
+      precision: "day"
+    surface_id: "microsoft-ai"
+    model_ids: ["phi-4"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Microsoft introduced Phi-4, a 14-billion-parameter small language model, on 12 December 2024."
+    caveat: "The post states availability, not a stage; ga is the classification of a model released to the public. The weights opened under an MIT licence on 8 January 2025 (VentureBeat, a secondary source whose URL was not recorded), and the licence at launch could not be verified from a primary source; 12 December is kept as the release and no second vendor event is recorded."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Introducing Phi-4: Microsoft's Newest Small Language Model Specializing in Complex Reasoning"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-phi-4-microsoft%E2%80%99s-newest-small-language-model-specializing-in-comple/4357090"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2024-12-12"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20250808153311/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-phi-4-microsoft%E2%80%99s-newest-small-language-model-specializing-in-comple/4357090"
+        quote: "Today we are introducing Phi-4, our 14B parameter state-of-the-art small language model (SLM)"
+        supports: ["date", "model"]
+        note: "Read from the post's embedded postTime, 2024-12-12T16:59:44-08:00 (Pacific time). The archive is a later capture, of 8 August 2025."
   - id: "azure-o1-limited-preview-2024-12"
     kind: "availability"
     date:
@@ -1687,6 +1951,79 @@ events:
         published_at: "2024-12-26"
         source_type: "announcement"
         supports: ["date", "model", "lifecycle"]
+  - id: "foundry-codestral-25-01-2025-01-13"
+    kind: "availability"
+    date:
+      start: "2025-01-13"
+      precision: "day"
+    surface_id: "azure-ai-foundry"
+    model_ids: ["codestral-25-01"]
+    model_claim: "specific"
+    lifecycle: "limited_preview"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Codestral 25.01 was announced as available in the Azure AI Foundry model catalogue on 13 January 2025, as a serverless pay-as-you-go offering, the day of Mistral's release."
+    caveat: "Microsoft's post says 'now available' and states no stage, while Mistral's announcement says the model is 'in private preview on Azure AI Foundry'. limited_preview is recorded from Mistral's wording alone, at supported confidence, and is the weaker part of the claim; ga is not picked. Learn later shows GA with a retirement date of 2027-02-15, which is current-state evidence, not a launch stage."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Introducing Codestral 25.01: Mistral's First Code Model in Azure AI Foundry Model Catalog"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-codestral-25-01-mistrals-first-code-model-in-azure-ai-foundry-model-/4365705"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-01-13"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20251206101707/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-codestral-25-01-mistrals-first-code-model-in-azure-ai-foundry-model-/4365705"
+        quote: "now available in the Azure AI Foundry Model Catalog."
+        supports: ["date", "model", "exposure"]
+        note: "Read from the post's embedded postTime, 2025-01-13T09:03:36-08:00 (Pacific time). The quotation is the end of the post's opening sentence. The archive is a later capture, of 6 December 2025."
+      - publisher: "Mistral AI"
+        title: "Codestral 25.01"
+        url: "https://mistral.ai/news/codestral-2501"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-01-13"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20250113145826/https://mistral.ai/news/codestral-2501"
+        quote: "in private preview on Azure AI Foundry"
+        supports: ["lifecycle"]
+        note: "The phrase is Mistral's, taken from the research record of its announcement; Microsoft's post states no stage."
+  - id: "mistral-codestral-25-01-2025-01-13"
+    kind: "availability"
+    date:
+      start: "2025-01-13"
+      precision: "day"
+    surface_id: "mistral"
+    model_ids: ["codestral-25-01"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Mistral AI released Codestral 25.01 (codestral-2501), its code model, on 13 January 2025."
+    caveat: "The changelog states a release, not a stage; ga is the classification of a model released through Mistral's API."
+    sources:
+      - publisher: "Mistral AI"
+        title: "Codestral 25.01"
+        url: "https://mistral.ai/news/codestral-2501"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-01-13"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20250113145826/https://mistral.ai/news/codestral-2501"
+        supports: ["date", "model"]
+        note: "The title is taken from the URL slug."
+      - publisher: "Mistral AI"
+        title: "Changelog | Mistral AI Documentation"
+        url: "https://docs.mistral.ai/getting-started/changelog/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-01-13"
+        source_type: "changelog"
+        quote: "January 13, 2025 We released Codestral 25.01 (codestral-2501)."
+        supports: ["date", "model"]
   - id: "deepseek-r1-2025-01-20"
     kind: "availability"
     date:
@@ -1992,6 +2329,138 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "changelog"
+  - id: "foundry-phi-4-mini-2025-02-26"
+    kind: "availability"
+    date:
+      start: "2025-02-26"
+      precision: "day"
+    surface_id: "azure-ai-foundry"
+    model_ids: ["phi-4-mini"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Phi-4-mini was available in Azure AI Foundry on 26 February 2025, the day Microsoft announced it."
+    caveat: "The announcement states availability, not a stage; the stage at launch is not recorded. Learn later shows GA with a retirement date of 2027-01-17, which is current-state evidence, not a launch stage."
+    sources:
+      - publisher: "Microsoft Azure Blog"
+        title: "Empowering innovation: The next generation of the Phi family"
+        url: "https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-02-26"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20250227061752/https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/"
+        quote: "Now available in Azure AI Foundry, HuggingFace, and the NVIDIA API Catalog"
+        supports: ["date", "model", "exposure"]
+      - publisher: "Microsoft Learn"
+        title: "Region availability for models in Serverless API endpoints"
+        url: "https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-serverless-availability"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20250227044414/https://learn.microsoft.com/en-us/azure/ai-studio/how-to/deploy-models-serverless-availability"
+        supports: ["exposure"]
+        note: "Capture of 27 February 2025, which lists the model."
+  - id: "foundry-phi-4-multimodal-2025-02-26"
+    kind: "availability"
+    date:
+      start: "2025-02-26"
+      precision: "day"
+    surface_id: "azure-ai-foundry"
+    model_ids: ["phi-4-multimodal"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Phi-4-multimodal was in the Azure AI Foundry catalogue on 26 February 2025, the day Microsoft announced it."
+    caveat: "The announcement states availability, not a stage; the stage at launch is not recorded. Serverless regions for the model first appear between the Learn captures of 27 February and 17 March 2025, so serverless availability is bounded to 2025-02-27 to 2025-03-17. Learn later shows GA with a retirement date of 2027-01-17, which is current-state evidence, not a launch stage."
+    sources:
+      - publisher: "Microsoft Azure Blog"
+        title: "Empowering innovation: The next generation of the Phi family"
+        url: "https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-02-26"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20250227061752/https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/"
+        quote: "Now available in Azure AI Foundry, HuggingFace, and the NVIDIA API Catalog"
+        supports: ["date", "model", "exposure"]
+      - publisher: "Microsoft Learn"
+        title: "Region availability for models in Serverless API endpoints"
+        url: "https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/deploy-models-serverless-availability"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20250317222057/https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/deploy-models-serverless-availability"
+        supports: ["exposure"]
+        note: "Capture of 17 March 2025, which lists the serverless regions."
+  - id: "microsoft-phi-4-mini-2025-02-26"
+    kind: "availability"
+    date:
+      start: "2025-02-26"
+      precision: "day"
+    surface_id: "microsoft-ai"
+    model_ids: ["phi-4-mini"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Microsoft announced Phi-4-mini on 26 February 2025, together with Phi-4-multimodal, the newest models of the Phi family."
+    caveat: "The post announces the model and states no stage; ga is the classification of a model released to the public."
+    sources:
+      - publisher: "Microsoft Azure Blog"
+        title: "Empowering innovation: The next generation of the Phi family"
+        url: "https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-02-26"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20250227061752/https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/"
+        quote: "We are excited to announce Phi-4-multimodal and Phi-4-mini, the newest models in Microsoft's Phi family of small language models (SLMs)."
+        supports: ["date", "model"]
+        note: "The blog's date is 2025-02-26T14:00 Pacific time. The post covers Phi-4-multimodal and Phi-4-mini; one event is recorded per model."
+  - id: "microsoft-phi-4-multimodal-2025-02-26"
+    kind: "availability"
+    date:
+      start: "2025-02-26"
+      precision: "day"
+    surface_id: "microsoft-ai"
+    model_ids: ["phi-4-multimodal"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Microsoft announced Phi-4-multimodal on 26 February 2025, together with Phi-4-mini, the newest models of the Phi family."
+    caveat: "The post announces the model and states no stage; ga is the classification of a model released to the public."
+    sources:
+      - publisher: "Microsoft Azure Blog"
+        title: "Empowering innovation: The next generation of the Phi family"
+        url: "https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-02-26"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20250227061752/https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/"
+        quote: "We are excited to announce Phi-4-multimodal and Phi-4-mini, the newest models in Microsoft's Phi family of small language models (SLMs)."
+        supports: ["date", "model"]
+        note: "The blog's date is 2025-02-26T14:00 Pacific time. The post covers Phi-4-multimodal and Phi-4-mini; one event is recorded per model."
   - id: "catalog-llama-2-legacy-2025-02-28"
     kind: "availability"
     date:
@@ -2016,6 +2485,85 @@ events:
         quote: "Llama-2-70b | February 28, 2025 | March 31, 2025 | June 30, 2025 | Llama-3.3-70B-Instruct"
         supports: ["date", "model", "lifecycle"]
         note: "Capture of 21 April 2025 (page ms.date 2025-03-20). The columns are Legacy, Deprecation and Retirement; the row covers serverless deployments only, and the other Llama-2 models are listed in the same table."
+  - id: "cohere-command-a-2025-03-13"
+    kind: "availability"
+    date:
+      start: "2025-03-13"
+      precision: "day"
+    surface_id: "cohere"
+    model_ids: ["cohere-command-a"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Cohere introduced Command A on 13 March 2025."
+    caveat: "The post states availability, not a stage; ga is the classification of a released model."
+    sources:
+      - publisher: "Cohere"
+        title: "Introducing Command A"
+        url: "https://cohere.com/blog/command-a"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-03-13"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20250313130452/https://cohere.com/blog/command-a"
+        quote: "Today, we're introducing Command A, a new state-of-the-art generative model optimized for demanding enterprises"
+        supports: ["date", "model"]
+        note: "The title is taken from the URL slug."
+  - id: "foundry-mistral-small-3-1-2025-03-17"
+    kind: "availability"
+    date:
+      start: "2025-03-17"
+      end: "2025-03-25"
+      precision: "day"
+    surface_id: "azure-ai-foundry"
+    model_ids: ["mistral-small-3-1"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Mistral Small 3.1 appeared in the Azure AI Foundry catalogue between 17 and 25 March 2025."
+    caveat: "The announcement states availability, not a stage; the stage at launch is not recorded. A window, not a point: the start is Mistral's release day, which said Foundry would follow 'in the coming weeks' and is a floor and not an observation, and the end is the first capture that lists the model. No Microsoft post announces the arrival. Learn and the Foundry Models API now disagree about the model's retirement; see foundry-mistral-small-2503-retirement-date."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Azure AI model catalog overview"
+        url: "https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/model-catalog-overview"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20250325165643/https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/model-catalog-overview"
+        quote: "Mistral-small-2503"
+        supports: ["date", "model", "exposure"]
+        note: "Capture of 25 March 2025, which lists the model under serverless. This is the end of the window."
+  - id: "mistral-small-3-1-2025-03-17"
+    kind: "availability"
+    date:
+      start: "2025-03-17"
+      precision: "day"
+    surface_id: "mistral"
+    model_ids: ["mistral-small-3-1"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Mistral AI announced Mistral Small 3.1 (mistral-small-2503) on 17 March 2025."
+    caveat: "The announcement states availability, not a stage; ga is the classification of a released model. Mistral's changelog agrees with the date. The same post promises Azure AI Foundry 'in the coming weeks'."
+    sources:
+      - publisher: "Mistral AI"
+        title: "Mistral Small 3.1"
+        url: "https://mistral.ai/news/mistral-small-3-1"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-03-17"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20250317165129/https://mistral.ai/news/mistral-small-3-1"
+        quote: "Today we announce Mistral Small 3.1: the best model in its weight class."
+        supports: ["date", "model"]
+        note: "The title is taken from the URL slug. The page also says Azure AI Foundry would follow 'in the coming weeks', an announcement and not an arrival."
   - id: "google-gemini2-5-pro-2025-03-25"
     kind: "availability"
     date:
@@ -2489,6 +3037,42 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "foundry-cohere-command-a-2025-04-15"
+    kind: "availability"
+    date:
+      start: "2025-04-15"
+      precision: "day"
+    surface_id: "azure-ai-foundry"
+    model_ids: ["cohere-command-a"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Command A was announced as available through the Azure AI Foundry model catalogue, as a serverless pay-as-you-go offering, on 15 April 2025."
+    caveat: "The announcement states availability, not a stage; the stage at launch is not recorded. Learn catalogue captures bound the arrival to 25 March to 22 April 2025, so the model may have been present before Microsoft's 15 April post. Managed compute followed on 13 June 2025 and is a second deployment type, not an arrival. Learn later shows GA with a retirement date of 2027-02-15 and the Command A+ builds as replacements; Cohere has not retired command-a-03-2025, and that is current-state evidence, not a launch stage."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Unlock Multi-Modal Embed 4 and Multilingual Agentic RAG with Command A on Azure"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/unlock-multi-modal-embed-4-and-multilingual-agentic-rag-with-command-a-on-azure/4404458"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-04-15"
+        source_type: "announcement"
+        quote: "Cohere's latest Embed 4 embedding model and Command A generative LLM are now available through Azure AI Foundry model catalog."
+        supports: ["date", "model", "exposure"]
+        note: "Read from the post's embedded postTime, 2025-04-15T10:01:42-07:00 (Pacific time). The post covers Embed 4 and Command A; Embed 4 is not recorded here. No archive capture is recorded."
+      - publisher: "Microsoft Community Hub"
+        title: "Cohere models now available on managed compute in Azure AI Foundry Models"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/cohere-models-now-available-on-managed-compute-in-azure-ai-foundry-models/4423428"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-06-13"
+        source_type: "announcement"
+        note: "Documents the second deployment type, managed compute, added on 13 June 2025. It is not an arrival. The title is taken from the URL slug."
   - id: "azure-o3-2025-04-16"
     kind: "availability"
     date:
@@ -2712,6 +3296,134 @@ events:
         archived_url: "https://web.archive.org/web/20260728031511/https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf"
         quote: "OpenAI o3 and o4-mini System Card OpenAI April 16, 2025"
         supports: ["date"]
+  - id: "foundry-phi-4-mini-reasoning-2025-04-30"
+    kind: "availability"
+    date:
+      start: "2025-04-30"
+      precision: "day"
+    surface_id: "azure-ai-foundry"
+    model_ids: ["phi-4-mini-reasoning"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Phi-4-mini-reasoning was available in Azure AI Foundry on 30 April 2025, the day Microsoft introduced it."
+    caveat: "The announcement states availability, not a stage; the stage at launch is not recorded. The post's Foundry link points to the technical report, not to a catalogue page. Serverless regions first appear between the Learn captures of 22 April and 15 May 2025. Learn later shows GA with a retirement date of 2027-01-17, which is current-state evidence, not a launch stage."
+    sources:
+      - publisher: "Microsoft Azure Blog"
+        title: "One year of Phi: Small language models making big leaps in AI"
+        url: "https://azure.microsoft.com/en-us/blog/one-year-of-phi-small-language-models-making-big-leaps-in-ai/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-04-30"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20250501011721/https://azure.microsoft.com/en-us/blog/one-year-of-phi-small-language-models-making-big-leaps-in-ai/"
+        quote: "Try out the model on Azure AI Foundry or HuggingFace today."
+        supports: ["date", "model", "exposure"]
+      - publisher: "Microsoft Learn"
+        title: "Region availability for models in Serverless API endpoints"
+        url: "https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/deploy-models-serverless-availability"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20250515072221/https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/deploy-models-serverless-availability"
+        supports: ["exposure"]
+        note: "Capture of 15 May 2025, which lists the serverless regions."
+  - id: "foundry-phi-4-reasoning-2025-04-30"
+    kind: "availability"
+    date:
+      start: "2025-04-30"
+      precision: "day"
+    surface_id: "azure-ai-foundry"
+    model_ids: ["phi-4-reasoning"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Phi-4-reasoning was available in Azure AI Foundry on 30 April 2025, the day Microsoft introduced it."
+    caveat: "The announcement states availability, not a stage; the stage at launch is not recorded. Serverless regions first appear between the Learn captures of 22 April and 15 May 2025, which bounds serverless availability only. Learn later shows GA with a retirement date of 2027-01-17, which is current-state evidence, not a launch stage."
+    sources:
+      - publisher: "Microsoft Azure Blog"
+        title: "One year of Phi: Small language models making big leaps in AI"
+        url: "https://azure.microsoft.com/en-us/blog/one-year-of-phi-small-language-models-making-big-leaps-in-ai/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-04-30"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20250501011721/https://azure.microsoft.com/en-us/blog/one-year-of-phi-small-language-models-making-big-leaps-in-ai/"
+        quote: "Both models are available on Azure AI Foundry and HuggingFace"
+        supports: ["date", "model", "exposure"]
+      - publisher: "Microsoft Learn"
+        title: "Region availability for models in Serverless API endpoints"
+        url: "https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/deploy-models-serverless-availability"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20250515072221/https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/deploy-models-serverless-availability"
+        supports: ["exposure"]
+        note: "Capture of 15 May 2025, which lists the serverless regions."
+  - id: "microsoft-phi-4-mini-reasoning-2025-04-30"
+    kind: "availability"
+    date:
+      start: "2025-04-30"
+      precision: "day"
+    surface_id: "microsoft-ai"
+    model_ids: ["phi-4-mini-reasoning"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Microsoft introduced Phi-4-mini-reasoning on 30 April 2025 (Pacific time), with Phi-4-reasoning."
+    caveat: "The post states availability, not a stage; ga is the classification of a model released to the public. The day is the Pacific-time day; in UTC the post is 1 May."
+    sources:
+      - publisher: "Microsoft Azure Blog"
+        title: "One year of Phi: Small language models making big leaps in AI"
+        url: "https://azure.microsoft.com/en-us/blog/one-year-of-phi-small-language-models-making-big-leaps-in-ai/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-04-30"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20250501011721/https://azure.microsoft.com/en-us/blog/one-year-of-phi-small-language-models-making-big-leaps-in-ai/"
+        quote: "Today, we are excited to introduce Phi-4-reasoning, Phi-4-reasoning-plus, and Phi-4-mini-reasoning"
+        supports: ["date", "model"]
+        note: "The blog's date is 2025-04-30T17:00 Pacific time; its metadata shows 2025-05-01 in UTC."
+  - id: "microsoft-phi-4-reasoning-2025-04-30"
+    kind: "availability"
+    date:
+      start: "2025-04-30"
+      precision: "day"
+    surface_id: "microsoft-ai"
+    model_ids: ["phi-4-reasoning"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Microsoft introduced Phi-4-reasoning on 30 April 2025 (Pacific time), with Phi-4-reasoning-plus and Phi-4-mini-reasoning."
+    caveat: "The post states availability, not a stage; ga is the classification of a model released to the public. The day is the Pacific-time day; in UTC the post is 1 May."
+    sources:
+      - publisher: "Microsoft Azure Blog"
+        title: "One year of Phi: Small language models making big leaps in AI"
+        url: "https://azure.microsoft.com/en-us/blog/one-year-of-phi-small-language-models-making-big-leaps-in-ai/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-04-30"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20250501011721/https://azure.microsoft.com/en-us/blog/one-year-of-phi-small-language-models-making-big-leaps-in-ai/"
+        quote: "Today, we are excited to introduce Phi-4-reasoning, Phi-4-reasoning-plus, and Phi-4-mini-reasoning"
+        supports: ["date", "model"]
+        note: "The blog's date is 2025-04-30T17:00 Pacific time; its metadata shows 2025-05-01 in UTC. The Hugging Face model card says April 30, 2025. The post covers three models; one event is recorded per registered model, and Phi-4-reasoning-plus is not registered."
   - id: "mistral-medium-3-2025-05-07"
     kind: "availability"
     date:
@@ -3680,34 +4392,41 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "other"
-  - id: "azure-gpt-realtime-2025-08-28"
+  - id: "openai-gpt-audio-2025-08-28"
     kind: "availability"
     date:
       start: "2025-08-28"
-      end: "2025-08-31"
       precision: "day"
-    surface_id: "azure-openai"
-    model_ids: ["gpt-realtime"]
+    surface_id: "openai-api"
+    model_ids: ["gpt-audio"]
     model_claim: "specific"
     lifecycle: "ga"
-    exposure: "catalogue"
+    exposure: "not_applicable"
     confidence: "supported"
     confidence_detail:
       date: "supported"
-    evidence_note: "OpenAI's GPT RealTime and Audio models reached general availability in Microsoft Foundry Models, per the classic changelog's August 2025 entry."
-    caveat: "Bounded: the floor is the Learn version string 2025-08-28, which matches OpenAI's own release, and the ceiling is the changelog's August section."
-    relations:
-      - type: "announced_by"
-        target: "openai-gpt-realtime-2025-08-28"
+      model: "supported"
+      lifecycle: "supported"
+    evidence_note: "OpenAI's gpt-audio, the generally available audio model for Chat Completions, carries the snapshot name gpt-audio-2025-08-28, alongside the Realtime API general availability of the same day."
+    caveat: "The only basis is the OpenAI model page and the snapshot name. The model page is undated and reads 'The gpt-audio model is our first generally available audio model.' (quoted from the research dossier; its URL was not recorded), and the 28 August changelog entry does not name gpt-audio. A dated OpenAI source has not been found."
     sources:
-      - publisher: "Microsoft Learn"
-        title: "What's new in Azure OpenAI in Microsoft Foundry Models? (classic)"
-        url: "https://learn.microsoft.com/en-us/azure/foundry-classic/openai/whats-new"
+      - publisher: "OpenAI"
+        title: "Deprecations"
+        url: "https://developers.openai.com/api/docs/deprecations"
         primary: true
-        retrieved_at: "2026-07-31"
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        supports: ["model"]
+        note: "Read on 28 October 2026. The 2026-07-20 entry lists the snapshot gpt-audio-2025-08-28, which carries the date in its name. No archived_url was recorded for this page."
+      - publisher: "OpenAI"
+        title: "Changelog"
+        url: "https://developers.openai.com/api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-08-28"
         source_type: "changelog"
-        quote: "OpenAI's GPT RealTime and Audio models are now generally available in Microsoft Foundry Models."
-        supports: ["date", "model", "lifecycle"]
+        quote: "The OpenAI Realtime API is now generally available."
+        note: "The 28 August 2025 entry does not name gpt-audio; it dates the Realtime API general availability that the existing gpt-realtime event records."
   - id: "openai-gpt-realtime-2025-08-28"
     kind: "availability"
     date:
@@ -3732,6 +4451,99 @@ events:
         source_type: "announcement"
         quote: "The generally available Realtime API and new gpt-realtime model are available to all developers starting today."
         supports: ["model", "lifecycle"]
+  - id: "foundry-gpt-audio-2025-08-30"
+    kind: "availability"
+    date:
+      start: "2025-08-30"
+      end: "2025-09-05"
+      precision: "day"
+    surface_id: "azure-openai"
+    model_ids: ["gpt-audio"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "supported"
+      lifecycle: "supported"
+    evidence_note: "OpenAI's GPT-audio model reached general availability in Microsoft Foundry Models between 30 August and 5 September 2025, per the Learn what's-new entry 'Realtime API audio model GA'."
+    caveat: "A window, not a point. The start is the 30 August 2025 capture of the page, which lacks the entry, and the end is the page's updated_at of 2025-09-05 in the 9 September capture. The entry names 'GPT RealTime and Audio models' together, and Microsoft's 3 September post (postTime 2025-09-03T19:02:31Z) names gpt-realtime only. The entry sits under an August 2025 heading that the captures contradict. The Models page lists gpt-audio as absent on 2025-09-18 and present on 2025-09-29, which does not tighten the window. The deployment type is not stated. The surface is azure-openai, matching azure-gpt-realtime-2025-08-28."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "What's new in Azure OpenAI in Microsoft Foundry Models?"
+        url: "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/whats-new"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20250909112347/https://learn.microsoft.com/en-us/azure/ai-foundry/openai/whats-new"
+        quote: "OpenAI's GPT RealTime and Audio models are now generally available in Microsoft Foundry Models."
+        supports: ["date", "model", "lifecycle"]
+        note: "Capture of 9 September 2025, page updated_at 2025-09-05. The entry is titled 'Realtime API audio model GA' and sits under an August 2025 heading."
+      - publisher: "Microsoft Learn"
+        title: "What's new in Azure OpenAI in Microsoft Foundry Models?"
+        url: "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/whats-new"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20250830062540/https://learn.microsoft.com/en-us/azure/ai-foundry/openai/whats-new"
+        supports: ["date"]
+        note: "Capture of 30 August 2025, page updated_at 2025-08-28: the entry is absent."
+  - id: "azure-gpt-realtime-2025-08-28"
+    kind: "availability"
+    date:
+      start: "2025-09-03"
+      precision: "day"
+    surface_id: "azure-openai"
+    model_ids: ["gpt-realtime"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "confirmed"
+    evidence_note: "Microsoft announced the general availability of gpt-realtime in Azure AI Foundry on 3 September 2025, six days after OpenAI's release on 28 August."
+    caveat: "Re-dated from a window of 28 to 31 August 2025 to 3 September 2025; the id keeps the earlier date because identifiers are permanent. The earlier window rested on the Learn version string 2025-08-28 and on the classic what's-new entry 'Realtime API audio model GA', which sits under an 'August 2025' heading. That heading does not date the arrival: the entry is absent from the capture of 30 August 2025 (updated_at 2025-08-28) and first appears in the capture of 9 September (updated_at 2025-09-05), so it was added after 30 August. Microsoft's own post, with an embedded postTime of 2025-09-03T19:02:31Z, says 'releasing today the general availability', and the Models page lists gpt-realtime as absent at 2025-09-03T13:09Z and present at 2025-09-05T05:47Z. The surface stays azure-openai as before."
+    relations:
+      - type: "announced_by"
+        target: "openai-gpt-realtime-2025-08-28"
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Announcing gpt-realtime on Azure AI Foundry"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/announcing-gpt-realtime-on-azure-ai-foundry/4449666"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-09-03"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20250903203136/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/announcing-gpt-realtime-on-azure-ai-foundry/4449666"
+        quote: "We are thrilled to announce that we are releasing today the general availability of our latest advancement in speech-to-speech technology: gpt-realtime."
+        supports: ["date", "model", "lifecycle"]
+        note: "Read from the post's embedded postTime, 2025-09-03T19:02:31Z."
+      - publisher: "Microsoft Learn"
+        title: "What's new in Azure OpenAI in Microsoft Foundry Models? (classic)"
+        url: "https://learn.microsoft.com/en-us/azure/foundry-classic/openai/whats-new"
+        primary: true
+        retrieved_at: "2026-07-31"
+        source_type: "changelog"
+        quote: "OpenAI's GPT RealTime and Audio models are now generally available in Microsoft Foundry Models."
+        supports: ["model", "lifecycle"]
+        note: "The entry is titled 'Realtime API audio model GA' and sits under an August 2025 heading, which does not date the arrival; see the caveat."
+      - publisher: "Microsoft Learn"
+        title: "What's new in Azure OpenAI in Microsoft Foundry Models?"
+        url: "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/whats-new"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20250830062540/https://learn.microsoft.com/en-us/azure/ai-foundry/openai/whats-new"
+        supports: ["date"]
+        note: "Capture of 30 August 2025, page updated_at 2025-08-28: the entry is absent."
+      - publisher: "Microsoft Learn"
+        title: "What's new in Azure OpenAI in Microsoft Foundry Models?"
+        url: "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/whats-new"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20250909112347/https://learn.microsoft.com/en-us/azure/ai-foundry/openai/whats-new"
+        supports: ["date"]
+        note: "Capture of 9 September 2025, page updated_at 2025-09-05: the entry is present."
   - id: "github-gpt5-ga-2025-09-09"
     kind: "availability"
     date:
@@ -4044,6 +4856,173 @@ events:
         source_type: "announcement"
         quote: "The Sora iOS app is available to download now. You can sign up in-app for a push notification when access opens for your account. We're starting the initial rollout in the U.S. and Canada today with the intent to quickly expand to additional countries."
         supports: ["date", "model", "lifecycle"]
+  - id: "foundry-gpt-audio-mini-2025-10-06"
+    kind: "availability"
+    date:
+      start: "2025-10-06"
+      end: "2025-10-07"
+      precision: "day"
+    surface_id: "azure-ai-foundry"
+    model_ids: ["gpt-audio-mini"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "gpt-audio-mini (build 2025-10-06) was rolling out in Azure AI Foundry on 6 October 2025, OpenAI's release day, with most customers able to start on 7 October."
+    caveat: "The announcement states availability, not a stage; the stage at launch is not recorded. Recorded as a window because the post says 'rolling out now' with most customers starting on 7 October, so rollout_start is not used. ga is the stage the Learn retirement schedule later shows; that is current-state evidence, not a launch stage. The 2025-12-15 build has no Foundry date: Microsoft's 17 December 2025 post says the updates will arrive 'very soon', and the schedule first carries the row (GA) in its capture of 25 April 2026 and lacks it on 12 April, which sets a latest date and not an arrival. That build is not recorded as a separate event."
+    sources:
+      - publisher: "Microsoft Azure Blog"
+        title: "Unleash your creativity at scale: Azure AI Foundry's multimodal revolution"
+        url: "https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-10-06"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20251006202555/https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/"
+        quote: "will be rolling out now in Azure AI Foundry, with most customers being able to get started on October 7, 2025."
+        supports: ["date", "exposure"]
+        note: "The blog's WordPress date is 2025-10-06T18:03:45Z. The post states no stage."
+      - publisher: "Microsoft Azure Blog"
+        title: "Unleash your creativity at scale: Azure AI Foundry's multimodal revolution"
+        url: "https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-10-06"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20251006202555/https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/"
+        quote: "With today's launch of OpenAI GPT-image-1-mini, GPT-realtime-mini, and GPT-audio-mini"
+        supports: ["model"]
+      - publisher: "Microsoft Community Hub"
+        title: "Introducing updated GPT Voice Models in Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-updated-gpt-voice-models-in-microsoft-foundry/4478137"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-12-17"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20251219171900/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-updated-gpt-voice-models-in-microsoft-foundry/4478137"
+        quote: "We will release the gpt-audio-mini model updates via API in Microsoft Foundry very soon."
+        note: "Concerns the 2025-12-15 build, not the 2025-10-06 build dated here. The post's embedded postTime is 2025-12-17T19:22:06Z."
+  - id: "foundry-gpt-image-1-mini-2025-10-06"
+    kind: "availability"
+    date:
+      start: "2025-10-06"
+      end: "2025-10-07"
+      precision: "day"
+    surface_id: "azure-ai-foundry"
+    model_ids: ["gpt-image-1-mini"]
+    model_claim: "specific"
+    lifecycle: "limited_preview"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "gpt-image-1-mini was rolling out in Azure AI Foundry on 6 October 2025, OpenAI's release day, with most customers able to start on 7 October, behind a limited access application."
+    caveat: "Recorded as limited_preview on the precedent of azure-gpt-image-1-5-2025-12, which records a gated arrival that way, because Microsoft's what's-new entry puts the model behind a 'Limited access model application'. The retirement schedule shows GA from its first capture on 15 October 2025; the move to general access is undated, and Microsoft's blog post states no stage, so the stage is the weaker part of the claim. The same tension is held for GPT-image-1.5 in foundry-gpt-image-1-5-stage. Recorded as a window because the blog says 'rolling out now' with most customers starting on 7 October, so rollout_start is not used."
+    sources:
+      - publisher: "Microsoft Azure Blog"
+        title: "Unleash your creativity at scale: Azure AI Foundry's multimodal revolution"
+        url: "https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-10-06"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20251006202555/https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/"
+        quote: "will be rolling out now in Azure AI Foundry, with most customers being able to get started on October 7, 2025."
+        supports: ["date", "exposure"]
+        note: "The blog's WordPress date is 2025-10-06T18:03:45Z. The post states no stage."
+      - publisher: "Microsoft Azure Blog"
+        title: "Unleash your creativity at scale: Azure AI Foundry's multimodal revolution"
+        url: "https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-10-06"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20251006202555/https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/"
+        quote: "With today's launch of OpenAI GPT-image-1-mini, GPT-realtime-mini, and GPT-audio-mini"
+        supports: ["model"]
+      - publisher: "Microsoft Learn"
+        title: "What's new in Azure OpenAI in Microsoft Foundry Models? (classic)"
+        url: "https://learn.microsoft.com/en-us/azure/foundry-classic/openai/whats-new"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "changelog"
+        quote: "The gpt-image-1-mini model is now available for global deployments"
+        supports: ["model", "exposure"]
+        note: "Under the October 2025 heading, behind a 'Limited access model application' link, so access was gated."
+      - publisher: "Microsoft Learn"
+        title: "Azure OpenAI model retirements"
+        url: "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/model-retirements"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20251015180812/https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/model-retirements"
+        supports: ["lifecycle"]
+        note: "The first capture of the schedule, 15 October 2025, lists the model as GA."
+  - id: "foundry-gpt-realtime-mini-2025-10-06"
+    kind: "availability"
+    date:
+      start: "2025-10-06"
+      end: "2025-10-07"
+      precision: "day"
+    surface_id: "azure-ai-foundry"
+    model_ids: ["gpt-realtime-mini"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "GPT-Realtime mini (build 2025-10-06) was rolling out in Azure AI Foundry on 6 October 2025, OpenAI's release day, with most customers able to start on 7 October."
+    caveat: "The announcement states availability, not a stage; the stage at launch is not recorded. Recorded as a window because the post says 'rolling out now' with most customers starting on 7 October, so rollout_start is not used. ga is the stage the Learn retirement schedule later shows; that is current-state evidence, not a launch stage. The 2025-12-15 build is covered by Microsoft's 17 December 2025 post ('now generally available via API in Microsoft Foundry', cited above) and by the December to January roundup, which says three new audio models reached general availability on 15 December 2025; it is one model with this event, not a separate one."
+    sources:
+      - publisher: "Microsoft Azure Blog"
+        title: "Unleash your creativity at scale: Azure AI Foundry's multimodal revolution"
+        url: "https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-10-06"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20251006202555/https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/"
+        quote: "will be rolling out now in Azure AI Foundry, with most customers being able to get started on October 7, 2025."
+        supports: ["date", "exposure"]
+        note: "The blog's WordPress date is 2025-10-06T18:03:45Z. The post states no stage."
+      - publisher: "Microsoft Azure Blog"
+        title: "Unleash your creativity at scale: Azure AI Foundry's multimodal revolution"
+        url: "https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-10-06"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20251006202555/https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/"
+        quote: "With today's launch of OpenAI GPT-image-1-mini, GPT-realtime-mini, and GPT-audio-mini"
+        supports: ["model"]
+      - publisher: "Microsoft Learn"
+        title: "Foundry Models sold directly by Azure (earlier path)"
+        url: "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20251010102822/https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models"
+        supports: ["date"]
+        note: "Capture of 10 October 2025, which lists the model; the capture of 5 October lacks it (no archived URL recorded for that capture)."
+      - publisher: "Microsoft Community Hub"
+        title: "Introducing updated GPT Voice Models in Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-updated-gpt-voice-models-in-microsoft-foundry/4478137"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-12-17"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20251219171900/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-updated-gpt-voice-models-in-microsoft-foundry/4478137"
+        quote: "now generally available via API in Microsoft Foundry"
+        note: "Concerns the 2025-12-15 build, not the 2025-10-06 build dated here. The post's embedded postTime is 2025-12-17T19:22:06Z. Not used for this event's date."
   - id: "foundry-gpt5-pro-2025-10-06"
     kind: "availability"
     date:
@@ -4118,6 +5097,113 @@ events:
         quote: "introducing GPT-5 Pro, its latest language model"
         supports: ["date", "model"]
         note: "Published 2025-10-06T19:10:27Z."
+  - id: "openai-gpt-audio-mini-2025-10-06"
+    kind: "availability"
+    date:
+      start: "2025-10-06"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-audio-mini"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "OpenAI released gpt-audio-mini on 6 October 2025 at DevDay, in the same changelog entry as GPT-Realtime mini."
+    caveat: "The changelog says 'Released' and states no stage, so ga is recorded at supported confidence. Two builds exist, 2025-10-06 and 2025-12-15, and they are one model in the registry; the 15 December changelog entry reads 'Released four new dated audio snapshots.'"
+    sources:
+      - publisher: "OpenAI"
+        title: "Changelog"
+        url: "https://developers.openai.com/api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-10-06"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20260203170837/https://platform.openai.com/docs/changelog"
+        quote: "Released GPT-Realtime mini and gpt-audio-mini for more cost-efficient speech to speech performance."
+        supports: ["date", "model"]
+        note: "The archive is of the changelog's earlier platform.openai.com address, the first usable capture; the entry is dated 6 October 2025 (DevDay)."
+  - id: "openai-gpt-image-1-mini-2025-10-06"
+    kind: "availability"
+    date:
+      start: "2025-10-06"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-image-1-mini"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "OpenAI released gpt-image-1-mini on 6 October 2025, announced at DevDay as a cheaper image generation and editing model."
+    caveat: "The changelog says 'Released' and states no stage, so ga is recorded at supported confidence."
+    sources:
+      - publisher: "OpenAI"
+        title: "Changelog"
+        url: "https://developers.openai.com/api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-10-06"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20260203170837/https://platform.openai.com/docs/changelog"
+        quote: "Released gpt-image-1-mini for more cost-efficient image generation and editing."
+        supports: ["date", "model"]
+        note: "The archive is of the changelog's earlier platform.openai.com address, the first usable capture; the entry is dated 6 October 2025 (DevDay)."
+      - publisher: "OpenAI Developer Community"
+        title: "DevDay 2025: Apps SDK, Sora 2, GPT-5 Pro, AgentKit, new image generation and speech-to-speech mini models, and more"
+        url: "https://community.openai.com/t/devday-2025-apps-sdk-sora-2-gpt-5-pro-agentkit-new-image-generation-and-speech-to-speech-mini-models-and-more/1361279"
+        primary: false
+        retrieved_at: "2026-10-28"
+        published_at: "2025-10-06"
+        source_type: "other"
+        quote: "gpt-image-1-mini (~80% cheaper than gpt-image-1 but similar quality)"
+        supports: ["model"]
+        note: "Posted 2025-10-06T23:39:09Z. The title is taken from the URL slug."
+  - id: "openai-gpt-realtime-mini-2025-10-06"
+    kind: "availability"
+    date:
+      start: "2025-10-06"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-realtime-mini"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "OpenAI released GPT-Realtime mini on 6 October 2025, announced at DevDay as a cheaper speech-to-speech model alongside gpt-audio-mini and gpt-image-1-mini."
+    caveat: "The changelog says 'Released' and states no stage, so ga is recorded at supported confidence. Two builds exist, 2025-10-06 and 2025-12-15, and they are one model in the registry: the 15 December changelog entry reads 'Released four new dated audio snapshots.' and is not a second event. The 2025-12-15 build reached Microsoft Foundry on 15 to 17 December 2025 (see foundry-gpt-realtime-mini-2025-10-06)."
+    sources:
+      - publisher: "OpenAI"
+        title: "Changelog"
+        url: "https://developers.openai.com/api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2025-10-06"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20260203170837/https://platform.openai.com/docs/changelog"
+        quote: "Released GPT-Realtime mini and gpt-audio-mini for more cost-efficient speech to speech performance."
+        supports: ["date", "model"]
+        note: "The archive is of the changelog's earlier platform.openai.com address, the first usable capture; the entry is dated 6 October 2025 (DevDay)."
+      - publisher: "OpenAI Developer Community"
+        title: "DevDay 2025: Apps SDK, Sora 2, GPT-5 Pro, AgentKit, new image generation and speech-to-speech mini models, and more"
+        url: "https://community.openai.com/t/devday-2025-apps-sdk-sora-2-gpt-5-pro-agentkit-new-image-generation-and-speech-to-speech-mini-models-and-more/1361279"
+        primary: false
+        retrieved_at: "2026-10-28"
+        published_at: "2025-10-06"
+        source_type: "other"
+        quote: "gpt-realtime-mini (~70% cheaper than gpt-realtime but similar quality)"
+        supports: ["model"]
+        note: "Posted 2025-10-06T23:39:09Z. The title is taken from the URL slug."
   - id: "github-sonnet4-5-ga-2025-10-13"
     kind: "availability"
     date:
@@ -5615,6 +6701,125 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "changelog"
+  - id: "openai-gpt-audio-1-5-2026-02-23"
+    kind: "availability"
+    date:
+      start: "2026-02-23"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-audio-1-5"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "OpenAI released gpt-audio-1.5 to the Chat Completions API on 23 February 2026."
+    caveat: "The changelog states a release, not a stage; ga is the classification of a model released to the Chat Completions API without a preview label."
+    sources:
+      - publisher: "OpenAI"
+        title: "Changelog"
+        url: "https://developers.openai.com/api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-02-23"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20260305195240/https://developers.openai.com/api/docs/changelog"
+        quote: "Released gpt-audio-1.5 to the Chat Completions API."
+        supports: ["date", "model"]
+        note: "The capture of 18 February 2026 does not have the entry."
+      - publisher: "OpenAI"
+        title: "gpt-audio-1.5 model page"
+        url: "https://developers.openai.com/api/docs/models/gpt-audio-1.5"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260223190337/https://developers.openai.com/api/docs/models/gpt-audio-1.5"
+        supports: ["model"]
+        note: "The first capture of the model page, 23 February 2026."
+  - id: "openai-gpt-realtime-1-5-2026-02-23"
+    kind: "availability"
+    date:
+      start: "2026-02-23"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-realtime-1-5"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "OpenAI released GPT-Realtime-1.5 to the Realtime API on 23 February 2026."
+    caveat: "The changelog states a release, not a stage; ga is the classification of a model released to the Realtime API without a preview label."
+    sources:
+      - publisher: "OpenAI"
+        title: "Changelog"
+        url: "https://developers.openai.com/api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-02-23"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20260305195240/https://developers.openai.com/api/docs/changelog"
+        quote: "Released GPT-Realtime-1.5 to the Realtime API."
+        supports: ["date", "model"]
+        note: "The capture of 18 February 2026 does not have the entry."
+  - id: "foundry-gpt-audio-1-5-2026-02-24"
+    kind: "availability"
+    date:
+      start: "2026-02-24"
+      precision: "day"
+      rollout_start: true
+    surface_id: "microsoft-foundry"
+    model_ids: ["gpt-audio-1-5"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "GPT-Audio-1.5 began rolling out in Microsoft Foundry on 24 February 2026, the day after OpenAI's release, in Global Standard and Data Zone Standard."
+    caveat: "The post says 'Starting today ... are rolling out', so the rollout's end is unpublished and rollout_start is set. The post states no stage; ga is the stage the Learn retirement schedule shows from its earliest capture, 26 April 2026, which is current-state evidence and not a launch stage. Corroborated by an @Azure post of 25 February 2026 and by the Learn what's-new entry for February 2026 ('The gpt-realtime-1.5 and gpt-audio-1.5 models are now available'), neither of which is cited."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "New Azure Open AI models bring fast, expressive, and real-time AI experiences in Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/new-azure-open-ai-models-bring-fast-expressive-and-real%E2%80%91time-ai-experiences-in-m/4496184"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-02-24"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20260225151118/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/new-azure-open-ai-models-bring-fast-expressive-and-real%E2%80%91time-ai-experiences-in-m/4496184"
+        quote: "Starting today, GPT-Realtime-1.5, GPT-Audio-1.5, and GPT-5.3-Codex are rolling out into Microsoft Foundry."
+        supports: ["date", "model", "exposure"]
+        note: "Read from the post's embedded postTime, 2026-02-24T23:19:45Z. The post covers all three models; one event is recorded per model."
+  - id: "foundry-gpt-realtime-1-5-2026-02-24"
+    kind: "availability"
+    date:
+      start: "2026-02-24"
+      precision: "day"
+      rollout_start: true
+    surface_id: "microsoft-foundry"
+    model_ids: ["gpt-realtime-1-5"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "GPT-Realtime-1.5 began rolling out in Microsoft Foundry on 24 February 2026, the day after OpenAI's release, in Global Standard and Data Zone Standard."
+    caveat: "The post says 'Starting today ... are rolling out', so the rollout's end is unpublished and rollout_start is set. The post states no stage; ga is the stage the Learn retirement schedule shows from its earliest capture, 26 April 2026, which is current-state evidence and not a launch stage. Corroborated by an @Azure post of 25 February 2026 and by the Learn what's-new entry for February 2026 ('The gpt-realtime-1.5 and gpt-audio-1.5 models are now available'), neither of which is cited."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "New Azure Open AI models bring fast, expressive, and real-time AI experiences in Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/new-azure-open-ai-models-bring-fast-expressive-and-real%E2%80%91time-ai-experiences-in-m/4496184"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-02-24"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20260225151118/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/new-azure-open-ai-models-bring-fast-expressive-and-real%E2%80%91time-ai-experiences-in-m/4496184"
+        quote: "Starting today, GPT-Realtime-1.5, GPT-Audio-1.5, and GPT-5.3-Codex are rolling out into Microsoft Foundry."
+        supports: ["date", "model", "exposure"]
+        note: "Read from the post's embedded postTime, 2026-02-24T23:19:45Z. The post covers all three models; one event is recorded per model."
   - id: "foundry-gpt5-3-codex-2026-02-24"
     kind: "availability"
     date:
@@ -7372,6 +8577,35 @@ events:
         source_type: "announcement"
         quote: "We're updating ChatGPT's default model, available to everyone, to be smarter and more accurate, with clearer, more concise answers that feel better tailored to you."
         supports: ["date", "model", "lifecycle"]
+  - id: "foundry-gpt-realtime-2-2026-05-07"
+    kind: "availability"
+    date:
+      start: "2026-05-07"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["gpt-realtime-2"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "GPT-Realtime-2 became available in Microsoft Foundry on 7 May 2026, OpenAI's release day, in Global Standard."
+    caveat: "Microsoft's post states no stage. public_preview rests on the Learn what's-new entry for May 2026, which links to 'GPT Realtime 2.0 (preview) overview'. The retirement schedule contradicts itself on the stage, showing GA in captures from 29 May to 4 July 2026 and Preview from 5 August; that conflict is held in foundry-gpt-realtime-2-schedule-stage and neither reading is picked here."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "A New Chapter for Realtime AI: Reasoning, Translation, and Real-Time Transcription"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/a-new-chapter-for-realtime-ai-reasoning-translation-and-real-time-transcription/4517124"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-05-07"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20260507222020/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/a-new-chapter-for-realtime-ai-reasoning-translation-and-real-time-transcription/4517124"
+        quote: "OpenAI's GPT-realtime-translate, GPT-realtime-2 and, GPT-realtime-whisper are now available in Microsoft Foundry"
+        supports: ["date", "model", "exposure"]
+        note: "Read from the post's embedded postTime, 2026-05-07T17:59:52Z. The quotation reproduces the post's punctuation ('and,'). The post states no stage."
   - id: "m365-gpt5-5-instant-2026-05-07"
     kind: "availability"
     date:
@@ -7392,6 +8626,40 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "openai-gpt-realtime-2-2026-05-07"
+    kind: "availability"
+    date:
+      start: "2026-05-07"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-realtime-2"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "OpenAI released GPT-Realtime-2 to the API on 7 May 2026, a realtime voice model with configurable reasoning for speech-to-speech agents."
+    caveat: "The changelog and launch post state a release, not a stage; ga is the classification of a model released to the API without a preview label. Context-window figures disagree between sources, so none is recorded."
+    sources:
+      - publisher: "OpenAI"
+        title: "Advancing voice intelligence with new models in the API"
+        url: "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-05-07"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20260507173012/https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+        quote: "We're introducing three audio models in the API that unlock a new class of voice apps for developers."
+        supports: ["date"]
+      - publisher: "OpenAI"
+        title: "Changelog"
+        url: "https://developers.openai.com/api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-05-07"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20260509094344/https://developers.openai.com/api/docs/changelog"
+        quote: "Released GPT-Realtime-2, a new realtime voice model with configurable reasoning for speech-to-speech agents"
+        supports: ["date", "model"]
   - id: "studio-gpt5-5-chat-2026-05-07"
     kind: "availability"
     date:
@@ -7436,6 +8704,70 @@ events:
         quote: "May 12, 2026 | dall-e-2 | gpt-image-2, gpt-image-1, or gpt-image-1-mini"
         supports: [date, model, lifecycle]
         note: "Announcement of 2025-11-14, shutdown 2026-05-12."
+  - id: "cohere-command-a-plus-2026-05-20"
+    kind: "availability"
+    date:
+      start: "2026-05-20"
+      precision: "day"
+    surface_id: "cohere"
+    model_ids: ["cohere-command-a-plus"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Cohere released Command A+ as an open-source model on 20 May 2026."
+    caveat: "The post states a release, not a stage; ga is the classification of a released open-weight model."
+    sources:
+      - publisher: "Cohere"
+        title: "Introducing Command A+"
+        url: "https://cohere.com/blog/command-a-plus"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-05-20"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20260520154745/https://cohere.com/blog/command-a-plus"
+        quote: "Today, we're releasing Command A+ open-source."
+        supports: ["date", "model"]
+        note: "The title is taken from the URL slug. The weights are released under Apache 2.0."
+  - id: "foundry-cohere-command-a-plus-2026-05-21"
+    kind: "availability"
+    date:
+      start: "2026-05-21"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["cohere-command-a-plus"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Cohere Command A+ became available in Microsoft Foundry as a managed compute offer on 21 May 2026, the day after Cohere's release."
+    caveat: "The announcement states availability, not a stage; the stage at launch is not recorded. The catalogue names for the managed compute offer are the coherelabs builds. A second deployment type followed on 24 June 2026: a serverless API offering under the id Cohere-command-a-plus-05-2026, which the research record gives as Preview. It is not recorded as a separate public_preview event because a preview dated after this ga event on the same surface would be rejected by the build's lifecycle ordering. Its end is held in foundry-command-a-plus-serverless-end. No retirement event is recorded, because the managed compute offer remains and Cohere has not retired the model."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Cohere Command A+ Now Available in Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/cohere-command-a-now-available-in-microsoft-foundry/4522003"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-05-21"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20260521172943/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/cohere-command-a-now-available-in-microsoft-foundry/4522003"
+        quote: "Today, we're excited to announce that Cohere Command A+ is now available in Microsoft Foundry as a Managed Compute offer"
+        supports: ["date", "model", "exposure"]
+        note: "Dated 21 May 2026 Pacific time. The title is taken from the research record; the URL slug omits the plus."
+      - publisher: "Microsoft Community Hub"
+        title: "Introducing Cohere Command A+ in Foundry"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-cohere-command-a-in-foundry/4530376"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-06-24"
+        source_type: "announcement"
+        quote: "With Microsoft Foundry, developers can deploy Command A+ as a serverless API offering"
+        supports: ["exposure"]
+        note: "Documents the second deployment type, serverless, announced on 24 June 2026 (Pacific time) under the catalogue id Cohere-command-a-plus-05-2026. Not used for this event's date."
   - id: "anthropic-opus4-8-2026-05-28"
     kind: "availability"
     date:
@@ -7738,6 +9070,28 @@ events:
         quote: "Microsoft's MAI model family expands in Microsoft Foundry with four first-party models entering public preview at Build:"
         supports: ["date", "lifecycle"]
         note: "The same list names MAI-Image-2.5 as an updated image generator with image-to-image editing."
+  - id: "openai-gpt-image-1-mini-shutdown-announced-2026-06-02"
+    kind: "announcement"
+    date:
+      start: "2026-06-02"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-image-1-mini"]
+    model_claim: "specific"
+    confidence: "confirmed"
+    evidence_note: "OpenAI notified developers on 2 June 2026 that gpt-image-1-mini is deprecated and will shut down on 1 December 2026, naming GPT Image 2.5 Sunburst or Flare as the replacement."
+    caveat: "An announcement of a future ending on the OpenAI API, not a retirement, and it must not be drawn as one. The notice is OpenAI's and does not say it applies to Microsoft Foundry: the Learn schedule's date for the Foundry build moved from 'No earlier than October 6, 2026' to 2027-04-07 and no Foundry retirement has happened. The same notice lists gpt-image-1.5 and chatgpt-image-latest, which are not recorded here."
+    sources:
+      - publisher: "OpenAI"
+        title: "Deprecations"
+        url: "https://developers.openai.com/api/docs/deprecations"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-06-02"
+        source_type: "documentation"
+        quote: "On June 2, 2026, we notified developers using older GPT Image models of their deprecation"
+        supports: ["date", "model"]
+        note: "Read on 28 October 2026. The entry's table gives a shutdown date of Dec 1, 2026 for gpt-image-1-mini, with gpt-image-2.5-sunburst or gpt-image-2.5-flare as the replacement. No archived_url was recorded for this page."
   - id: "foundry-o4-mini-deprecated-2026-07"
     kind: "availability"
     date:
@@ -8759,6 +10113,168 @@ events:
         primary: true
         retrieved_at: "2026-07-26"
         source_type: "announcement"
+  - id: "openai-gpt-realtime-2-1-2026-07-06"
+    kind: "availability"
+    date:
+      start: "2026-07-06"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-realtime-2-1"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "OpenAI released GPT-Realtime-2.1 to the API on 6 July 2026."
+    caveat: "The changelog states a release, not a stage; ga is the classification of a model released to the API without a preview label. Learn calls it 'an incremental update', but it has its own API id, so it is a model and not a dated build."
+    sources:
+      - publisher: "OpenAI"
+        title: "Changelog"
+        url: "https://developers.openai.com/api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-07-06"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20260723171946/https://developers.openai.com/api/docs/changelog"
+        quote: "Released GPT-Realtime-2.1, an updated realtime reasoning model with improved alphanumeric recognition, silence and noise handling, and interruption behavior."
+        supports: ["date", "model"]
+      - publisher: "OpenAI"
+        title: "GPT-Realtime-2.1 model page"
+        url: "https://developers.openai.com/api/docs/models/gpt-realtime-2.1"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260707140110/https://developers.openai.com/api/docs/models/gpt-realtime-2.1"
+        supports: ["model"]
+        note: "The first capture of the model page."
+  - id: "openai-gpt-realtime-2-1-mini-2026-07-06"
+    kind: "availability"
+    date:
+      start: "2026-07-06"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-realtime-2-1-mini"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "OpenAI released GPT-Realtime-2.1 mini to the API on 6 July 2026."
+    caveat: "The changelog states a release, not a stage; ga is the classification of a model released to the API without a preview label. It has its own API id and is not a build of gpt-realtime-mini."
+    sources:
+      - publisher: "OpenAI"
+        title: "Changelog"
+        url: "https://developers.openai.com/api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-07-06"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20260723171946/https://developers.openai.com/api/docs/changelog"
+        quote: "Also released GPT-Realtime-2.1 mini, a faster, lower-cost distilled reasoning model for realtime voice applications."
+        supports: ["date", "model"]
+      - publisher: "OpenAI"
+        title: "GPT-Realtime-2.1 mini model page"
+        url: "https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260710233808/https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini"
+        supports: ["model"]
+        note: "The first capture of the model page."
+  - id: "foundry-gpt-realtime-2-1-2026-07-07"
+    kind: "availability"
+    date:
+      start: "2026-07-07"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["gpt-realtime-2-1"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "GPT-Realtime-2.1 became available in Microsoft Foundry in public preview on 7 July 2026, the day after OpenAI's release, in Global Standard (Learn also lists Data Zone Standard)."
+    caveat: "The day rests on the roundup's table row, published two months later, and on Models page captures that bound it to 6 to 13 July; no same-day Microsoft post was found. Microsoft's 29 July 2026 post that calls the mini model 'gpt-realtime-mini-2.1' is not an arrival source: it says only that the models are 'also available'. General availability is recorded in foundry-gpt-realtime-2-1-ga-2026-08-25."
+    sources:
+      - publisher: "Microsoft Foundry Blog"
+        title: "What's new in Microsoft Foundry, July and August 2026"
+        url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-july-august-2026/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-09-09"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260910203836/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-july-august-2026/"
+        quote: "July 7 | gpt-realtime-2.1, gpt-realtime-2.1-mini | Preview"
+        supports: ["date", "model", "lifecycle"]
+        note: "A table row of the roundup, published 9 September 2026. The title is taken from the URL slug."
+      - publisher: "Microsoft Community Hub"
+        title: "A New Chapter for Realtime AI: Reasoning, Translation, and Real-Time Transcription"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/a-new-chapter-for-realtime-ai-reasoning-translation-and-real-time-transcription/4517124"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-07-08"
+        source_type: "announcement"
+        quote: "Microsoft Foundry welcomes two new models to the Azure Open AI collection: GPT-realtime-2.1 and GPT-realtime-2.1-mini."
+        supports: ["model"]
+        note: "An update note added to the May post, marked 'Updated Jul 08, 2026'. No archive capture after 7 July exists."
+      - publisher: "Microsoft Learn"
+        title: "Foundry Models sold directly by Azure"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260713191050/https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+        supports: ["date", "exposure"]
+        note: "Capture of 13 July 2026, which lists the model; the Models page lacks it on 6 July (no archived URL recorded for that capture)."
+  - id: "foundry-gpt-realtime-2-1-mini-2026-07-07"
+    kind: "availability"
+    date:
+      start: "2026-07-07"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["gpt-realtime-2-1-mini"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "GPT-Realtime-2.1 mini became available in Microsoft Foundry in public preview on 7 July 2026, the day after OpenAI's release, in Global Standard (Learn also lists Data Zone Standard)."
+    caveat: "The day rests on the roundup's table row, published two months later, and on Models page captures that bound it to 6 to 13 July; no same-day Microsoft post was found. Microsoft's 29 July 2026 post that calls the mini model 'gpt-realtime-mini-2.1' is not an arrival source: it says only that the models are 'also available'. General availability is recorded in foundry-gpt-realtime-2-1-mini-ga-2026-08-25."
+    sources:
+      - publisher: "Microsoft Foundry Blog"
+        title: "What's new in Microsoft Foundry, July and August 2026"
+        url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-july-august-2026/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-09-09"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20260910203836/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-july-august-2026/"
+        quote: "July 7 | gpt-realtime-2.1, gpt-realtime-2.1-mini | Preview"
+        supports: ["date", "model", "lifecycle"]
+        note: "A table row of the roundup, published 9 September 2026. The title is taken from the URL slug."
+      - publisher: "Microsoft Community Hub"
+        title: "A New Chapter for Realtime AI: Reasoning, Translation, and Real-Time Transcription"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/a-new-chapter-for-realtime-ai-reasoning-translation-and-real-time-transcription/4517124"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-07-08"
+        source_type: "announcement"
+        quote: "Microsoft Foundry welcomes two new models to the Azure Open AI collection: GPT-realtime-2.1 and GPT-realtime-2.1-mini."
+        supports: ["model"]
+        note: "An update note added to the May post, marked 'Updated Jul 08, 2026'. No archive capture after 7 July exists."
+      - publisher: "Microsoft Learn"
+        title: "Foundry Models sold directly by Azure"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260713191050/https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+        supports: ["date", "exposure"]
+        note: "Capture of 13 July 2026, which lists the model; the Models page lacks it on 6 July (no archived URL recorded for that capture)."
   - id: "github-kimi-k2-7-enterprise-2026-07-07"
     kind: "availability"
     date:
@@ -9018,6 +10534,72 @@ events:
         quote: "the new generation large model Kimi K3 from Moonshot AI, a unicorn in the field of artificial intelligence, has also been confirmed to be released within this month."
         supports: ["date"]
         note: "Undated, but its own content places it in July 2026. Describes K3 as confirmed but not yet released, which is what makes 1 July the window's floor: the quote attests the month, not a day, and the first of the month is the floor of that month rather than a claimed date."
+  - id: "openai-gpt-audio-mini-shutdown-announced-2026-07-20"
+    kind: "announcement"
+    date:
+      start: "2026-07-20"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-audio-mini"]
+    model_claim: "specific"
+    confidence: "confirmed"
+    evidence_note: "OpenAI notified developers on 20 July 2026 that gpt-audio-mini (snapshot gpt-audio-mini-2025-12-15) will shut down on 20 January 2027, naming gpt-audio-1.5 as the replacement."
+    caveat: "An announcement of a future ending on the OpenAI API, not a retirement, and it must not be drawn as one. The notice is OpenAI's and does not say it applies to Microsoft Foundry, where the Learn retirement schedule carries its own dates and no retirement has happened. The model is named through a dated snapshot in a table headed 'Model family / snapshot'."
+    sources:
+      - publisher: "OpenAI"
+        title: "Deprecations"
+        url: "https://developers.openai.com/api/docs/deprecations"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-07-20"
+        source_type: "documentation"
+        quote: "On July 20, 2026, we notified developers using legacy audio, realtime, and transcription model families"
+        supports: ["date"]
+        note: "Read on 28 October 2026. The entry's table lists gpt-audio-mini with the snapshot gpt-audio-mini-2025-12-15, a shutdown date of Jan 20, 2027 and gpt-audio-1.5 as the replacement. No archived_url was recorded for this page."
+  - id: "openai-gpt-audio-shutdown-announced-2026-07-20"
+    kind: "announcement"
+    date:
+      start: "2026-07-20"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-audio"]
+    model_claim: "specific"
+    confidence: "confirmed"
+    evidence_note: "OpenAI notified developers on 20 July 2026 that gpt-audio (snapshot gpt-audio-2025-08-28) will shut down on 20 January 2027, naming gpt-audio-1.5 as the replacement."
+    caveat: "An announcement of a future ending on the OpenAI API, not a retirement, and it must not be drawn as one. The notice is OpenAI's and does not say it applies to Microsoft Foundry, where the Learn retirement schedule carries its own dates and no retirement has happened. The model is named through a dated snapshot in a table headed 'Model family / snapshot'."
+    sources:
+      - publisher: "OpenAI"
+        title: "Deprecations"
+        url: "https://developers.openai.com/api/docs/deprecations"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-07-20"
+        source_type: "documentation"
+        quote: "On July 20, 2026, we notified developers using legacy audio, realtime, and transcription model families"
+        supports: ["date"]
+        note: "Read on 28 October 2026. The entry's table lists gpt-audio with the snapshot gpt-audio-2025-08-28, a shutdown date of Jan 20, 2027 and gpt-audio-1.5 as the replacement. No archived_url was recorded for this page."
+  - id: "openai-gpt-realtime-mini-shutdown-announced-2026-07-20"
+    kind: "announcement"
+    date:
+      start: "2026-07-20"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-realtime-mini"]
+    model_claim: "specific"
+    confidence: "confirmed"
+    evidence_note: "OpenAI notified developers on 20 July 2026 that gpt-realtime-mini (snapshot gpt-realtime-mini-2025-12-15) will shut down on 20 January 2027, naming gpt-realtime-2.1-mini as the replacement."
+    caveat: "An announcement of a future ending on the OpenAI API, not a retirement, and it must not be drawn as one. The notice is OpenAI's and does not say it applies to Microsoft Foundry, where the Learn retirement schedule carries its own dates and no retirement has happened. The model is named through a dated snapshot in a table headed 'Model family / snapshot'."
+    sources:
+      - publisher: "OpenAI"
+        title: "Deprecations"
+        url: "https://developers.openai.com/api/docs/deprecations"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-07-20"
+        source_type: "documentation"
+        quote: "On July 20, 2026, we notified developers using legacy audio, realtime, and transcription model families"
+        supports: ["date"]
+        note: "Read on 28 October 2026. The entry's table lists gpt-realtime-mini with the snapshot gpt-realtime-mini-2025-12-15, a shutdown date of Jan 20, 2027 and gpt-realtime-2.1-mini as the replacement. No archived_url was recorded for this page."
   - id: "github-gemini3-6-flash-2026-07-21"
     kind: "availability"
     date:
@@ -10159,6 +11741,84 @@ events:
         quote: "Deprecated | Existing customers can continue to create and manage deployments. No longer available to new customers—new customers can't create deployments or access the model. \"Existing customer\" is determined at the subscription level: whether that Azure subscription has ever deployed the specific model version. A new subscription under the same tenant doesn't inherit access."
         supports: ["lifecycle"]
         note: "Capture of 6 May 2026, the first on which the stage table appears (absent on 12 April). It defines the stage, and does not date any change."
+  - id: "foundry-gpt-realtime-2-1-ga-2026-08-25"
+    kind: "availability"
+    date:
+      start: "2026-08-25"
+      end: "2026-09-20"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["gpt-realtime-2-1"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "GPT-Realtime-2.1 moved from public preview to general availability in Microsoft Foundry between 25 August and 20 September 2026, bounded by two captures of the retirement schedule."
+    caveat: "A window, not a point: the start is the day after the last capture that reads Preview and the end is the first capture that reads GA; the move happened on an unpublished day between them. The Learn concept page now says 'The generally available GPT Realtime 2.1 models are speech-to-speech models with built-in reasoning', which is current-state evidence. No Microsoft post announcing the move was found."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260920020012/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        quote: "gpt-realtime-2.1 | 2026-07-07 | GA | 2027-06-25 | —"
+        supports: ["date", "lifecycle"]
+        note: "Capture of 20 September 2026, page ms.date 2026-09-02: the first to read GA."
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260824080858/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        quote: "gpt-realtime-2.1 | 2026-07-07 | Preview | 2027-06-25 | —"
+        supports: ["date", "lifecycle"]
+        note: "Capture of 24 August 2026, page ms.date 2026-08-19: still Preview, as in the captures of 5 and 11 August."
+  - id: "foundry-gpt-realtime-2-1-mini-ga-2026-08-25"
+    kind: "availability"
+    date:
+      start: "2026-08-25"
+      end: "2026-09-20"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["gpt-realtime-2-1-mini"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "GPT-Realtime-2.1 mini moved from public preview to general availability in Microsoft Foundry between 25 August and 20 September 2026, bounded by two captures of the retirement schedule."
+    caveat: "A window, not a point: the start is the day after the last capture that reads Preview and the end is the first capture that reads GA; the move happened on an unpublished day between them. The Learn concept page now says 'The generally available GPT Realtime 2.1 models are speech-to-speech models with built-in reasoning', which is current-state evidence. No Microsoft post announcing the move was found."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260920020012/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        quote: "gpt-realtime-2.1-mini | 2026-07-07 | GA | 2027-06-25 | —"
+        supports: ["date", "lifecycle"]
+        note: "Capture of 20 September 2026, page ms.date 2026-09-02: the first to read GA."
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260824080858/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        quote: "gpt-realtime-2.1-mini | 2026-07-07 | Preview | 2027-06-25 | —"
+        supports: ["date", "lifecycle"]
+        note: "Capture of 24 August 2026, page ms.date 2026-08-19: still Preview, as in the captures of 5 and 11 August."
   - id: "foundry-grok4-6-preview-2026-08-26"
     kind: "availability"
     date:
@@ -10853,6 +12513,94 @@ events:
         source_type: "announcement"
         quote: "GPT-6 Astra is rolling out today to users in Copilot Cowork and Copilot Studio."
         supports: ["date", "model", "exposure"]
+  - id: "openai-gpt-image-2-5-flare-2026-09-08"
+    kind: "availability"
+    date:
+      start: "2026-09-08"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-image-2-5-flare"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "OpenAI released GPT Image 2.5 Flare to the API on 8 September 2026, one of two new image models introduced with ChatGPT Images 2.5."
+    caveat: "The changelog and launch post state a release, not a stage; ga is the classification of a model released to the API without a preview label. The snapshot name is gpt-image-2.5-flare-2026-09-08."
+    sources:
+      - publisher: "OpenAI"
+        title: "Changelog"
+        url: "https://developers.openai.com/api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-09-08"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20260909130821/https://developers.openai.com/api/docs/changelog"
+        quote: "Released GPT Image 2.5 Sunburst and GPT Image 2.5 Flare for image generation and editing"
+        supports: ["date", "model"]
+        note: "One entry covers both models; one event is recorded per model."
+      - publisher: "OpenAI"
+        title: "Introducing ChatGPT Images 2.5"
+        url: "https://openai.com/index/introducing-chatgpt-images-2-5/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-09-08"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20260909074307/https://openai.com/index/introducing-chatgpt-images-2-5/"
+        quote: "For developers, we're introducing two new models in the API."
+        supports: ["date", "model"]
+      - publisher: "OpenAI Developer Community"
+        title: "Introducing GPT Images 2.5 in the API and ChatGPT"
+        url: "https://community.openai.com/t/introducing-gpt-images-2-5-in-the-api-and-chatgpt/1395897"
+        primary: false
+        retrieved_at: "2026-10-28"
+        published_at: "2026-09-08"
+        source_type: "other"
+        supports: ["date"]
+        note: "Posted 2026-09-08T19:12:36Z. The title is taken from the URL slug."
+  - id: "openai-gpt-image-2-5-sunburst-2026-09-08"
+    kind: "availability"
+    date:
+      start: "2026-09-08"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-image-2-5-sunburst"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "OpenAI released GPT Image 2.5 Sunburst to the API on 8 September 2026, one of two new image models introduced with ChatGPT Images 2.5."
+    caveat: "The changelog and launch post state a release, not a stage; ga is the classification of a model released to the API without a preview label. The snapshot name is gpt-image-2.5-sunburst-2026-09-08."
+    sources:
+      - publisher: "OpenAI"
+        title: "Changelog"
+        url: "https://developers.openai.com/api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-09-08"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20260909130821/https://developers.openai.com/api/docs/changelog"
+        quote: "Released GPT Image 2.5 Sunburst and GPT Image 2.5 Flare for image generation and editing"
+        supports: ["date", "model"]
+        note: "One entry covers both models; one event is recorded per model."
+      - publisher: "OpenAI"
+        title: "Introducing ChatGPT Images 2.5"
+        url: "https://openai.com/index/introducing-chatgpt-images-2-5/"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-09-08"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20260909074307/https://openai.com/index/introducing-chatgpt-images-2-5/"
+        quote: "For developers, we're introducing two new models in the API."
+        supports: ["date", "model"]
+      - publisher: "OpenAI Developer Community"
+        title: "Introducing GPT Images 2.5 in the API and ChatGPT"
+        url: "https://community.openai.com/t/introducing-gpt-images-2-5-in-the-api-and-chatgpt/1395897"
+        primary: false
+        retrieved_at: "2026-10-28"
+        published_at: "2026-09-08"
+        source_type: "other"
+        supports: ["date"]
+        note: "Posted 2026-09-08T19:12:36Z. The title is taken from the URL slug."
   - id: "deepseek-v4-1-flash-2026-09-10"
     kind: "availability"
     date:
@@ -10887,6 +12635,100 @@ events:
         quote: "\"createdAt\": \"2026-09-10T02:17:58.000Z\""
         supports: ["date"]
         note: "The repository is public and ungated, with licence tag license:mit."
+  - id: "foundry-gpt-image-2-5-flare-2026-09-10"
+    kind: "availability"
+    date:
+      start: "2026-09-10"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["gpt-image-2-5-flare"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "GPT Image 2.5 Flare became available in Microsoft Foundry on 10 September 2026, two days after OpenAI's release, in Global Standard."
+    caveat: "The post says 'available today' without a stage word. ga is the stage the retirement schedule shows from its capture of 20 September 2026, which is current-state evidence and not a launch stage. The schedule's version string is 2026-09-09 where OpenAI's snapshot is 2026-09-08, and a build string does not date anything. The Tech Community post has no archive capture."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Create multimodal applications with OpenAI models in Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/create-multimodal-applications-with-openai-models-in-microsoft-foundry/4543593"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-09-10"
+        source_type: "announcement"
+        quote: "GPt-image-2.5 models are available todayin Microsoft Foundry"
+        supports: ["date", "model", "exposure"]
+        note: "The quotation reproduces the post's typography ('GPt', 'todayin'). The post's embedded postTime is 2026-09-10T20:10:30Z. No archive capture exists."
+      - publisher: "Microsoft Learn"
+        title: "Foundry Models sold directly by Azure"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260912082123/https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+        supports: ["exposure"]
+        note: "Capture of 12 September 2026, which lists the models; the page lacked them at 2026-09-08T09:35Z (no archived URL recorded for that capture)."
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260920020012/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        quote: "gpt-image-2.5-flare | 2026-09-09 | GA | 2027-09-09 | —"
+        supports: ["lifecycle"]
+        note: "Capture of 20 September 2026: GA. The 24 August capture does not have the row."
+  - id: "foundry-gpt-image-2-5-sunburst-2026-09-10"
+    kind: "availability"
+    date:
+      start: "2026-09-10"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["gpt-image-2-5-sunburst"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "GPT Image 2.5 Sunburst became available in Microsoft Foundry on 10 September 2026, two days after OpenAI's release, in Global Standard."
+    caveat: "The post says 'available today' without a stage word. ga is the stage the retirement schedule shows from its capture of 20 September 2026, which is current-state evidence and not a launch stage. The schedule's version string is 2026-09-09 where OpenAI's snapshot is 2026-09-08, and a build string does not date anything. The Tech Community post has no archive capture."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Create multimodal applications with OpenAI models in Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/create-multimodal-applications-with-openai-models-in-microsoft-foundry/4543593"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-09-10"
+        source_type: "announcement"
+        quote: "GPt-image-2.5 models are available todayin Microsoft Foundry"
+        supports: ["date", "model", "exposure"]
+        note: "The quotation reproduces the post's typography ('GPt', 'todayin'). The post's embedded postTime is 2026-09-10T20:10:30Z. No archive capture exists."
+      - publisher: "Microsoft Learn"
+        title: "Foundry Models sold directly by Azure"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260912082123/https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+        supports: ["exposure"]
+        note: "Capture of 12 September 2026, which lists the models; the page lacked them at 2026-09-08T09:35Z (no archived URL recorded for that capture)."
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260920020012/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        quote: "gpt-image-2.5-sunburst | 2026-09-09 | GA | 2027-09-09 | —"
+        supports: ["lifecycle"]
+        note: "Capture of 20 September 2026: GA. The 24 August capture does not have the row."
   - id: "foundry-gpt-live-1-announced-2026-09-10"
     kind: "announcement"
     date:
@@ -11197,6 +13039,50 @@ events:
         source_type: "announcement"
         quote: "We’re introducing Claude Opus 5.5, the first model in our new Claude 5.5 family."
         supports: ["model"]
+  - id: "anthropic-opus5-5-fast-preview-2026-09-22"
+    kind: "availability"
+    date:
+      start: "2026-09-22"
+      precision: "day"
+    surface_id: "anthropic-claude"
+    model_ids: ["claude-opus-5-5-fast"]
+    model_claim: "specific"
+    lifecycle: "limited_preview"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Anthropic made fast mode available for Claude Opus 5.5 on the Claude API in research preview on 22 September 2026, the model's release day."
+    caveat: "limited_preview is a classification of Anthropic's 'research preview' label: access had to be requested, as the 15 October release note shows by saying customers 'no longer need to request access'. Fast mode is a request setting on the same model, registered separately because Microsoft Foundry lists claude-opus-5-5-fast as its own catalogue id. General availability is recorded in anthropic-opus5-5-fast-ga-2026-10-15."
+    sources:
+      - publisher: "Anthropic"
+        title: "Claude Platform release notes"
+        url: "https://platform.claude.com/docs/en/release-notes/overview"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-09-22"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20261017085106/https://platform.claude.com/docs/en/release-notes/overview"
+        quote: "Fast mode (research preview) is available for Claude Opus 5.5 on the Claude API."
+        supports: ["date", "model", "lifecycle"]
+        note: "The 22 September 2026 entry. Capture of 17 October 2026."
+      - publisher: "Anthropic"
+        title: "Introducing Claude Opus 5.5"
+        url: "https://www.anthropic.com/news/claude-opus-5-5"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-09-22"
+        source_type: "announcement"
+        quote: "Fast mode for Opus 5.5 is also available in Claude Code and the Claude Platform with up to 2.5x speed."
+        supports: ["model"]
+      - publisher: "Anthropic"
+        title: "Fast mode"
+        url: "https://platform.claude.com/docs/en/build-with-claude/fast-mode"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20261016125431/https://platform.claude.com/docs/en/build-with-claude/fast-mode"
+        quote: "Fast mode runs the same model with a faster inference configuration."
+        supports: ["model"]
+        note: "Fast mode is a request setting (speed: \"fast\") on the same model; it is not available for deployments hosted on Anthropic's infrastructure."
   - id: "cowork-gpt6-sol-2026-09-22"
     kind: "availability"
     date:
@@ -12866,6 +14752,42 @@ events:
         quote: "Claude Haiku 5.5 is available to Copilot Pro, Pro+, Max, Business, and Enterprise users."
         supports: ["model", "exposure"]
         note: "The weekly summary, published two days later; it dates nothing. Its Wayback capture of 15 October was located through the CDX API and not read."
+  - id: "foundry-mistral-small-3-1-deprecated-2026-10-09"
+    kind: "availability"
+    date:
+      start: "2026-10-09"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["mistral-small-3-1"]
+    model_claim: "specific"
+    lifecycle: "deprecated"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Microsoft's Learn lifecycle page states that Microsoft deprecated mistral-small-2503 in Foundry on 9 October 2026."
+    caveat: "The date rests on a footnote of a living page with no capture, so it is current-state documentation that states a past date; it is recorded as supported and not confirmed. The Foundry Models API read on 27 October 2026 says GenerallyAvailable with a deprecation date of 2026-12-09, which conflicts with Learn's Deprecated status and its 2027-02-15 retirement; that conflict is held in foundry-mistral-small-2503-retirement-date, and neither reading is picked. The replacement column names mistralai-mistral-small-4-119b-2603; that is a lifecycle fact, not supersession."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Model lifecycle and retirement"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/concepts/model-lifecycle-retirement"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        quote: "Microsoft deprecated mistral-small-2503 on October 9, 2026."
+        supports: ["date", "lifecycle"]
+        note: "A footnote of the page, read live on 28 October 2026; the page was last published 2026-10-26. No Wayback capture of the page carries this footnote, so the date cannot be checked against an earlier revision."
+      - publisher: "Microsoft Learn"
+        title: "Model lifecycle and retirement"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/concepts/model-lifecycle-retirement"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        quote: "mistral-small-2503 | 1 | Deprecated | 2027-02-15 | mistralai-mistral-small-4-119b-2603"
+        supports: ["lifecycle"]
+        note: "The table row, read live on 28 October 2026. Retirement 2027-02-15 is a scheduled date, not a published event."
   - id: "microsoft-decision-1-2026-10-09"
     kind: "availability"
     date:
@@ -13055,6 +14977,41 @@ events:
         archived_url: "https://web.archive.org/web/20261015061149/https://x.ai/news/grok-voice-3"
         quote: "Grok Voice 3.0 is available today in the Speech to Speech API at $0.08 / min ($4.80 / hr), the same price as Grok Voice 2.0."
         supports: ["date", "lifecycle"]
+  - id: "anthropic-opus5-5-fast-ga-2026-10-15"
+    kind: "availability"
+    date:
+      start: "2026-10-15"
+      precision: "day"
+    surface_id: "anthropic-claude"
+    model_ids: ["claude-opus-5-5-fast"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Anthropic took fast mode for Claude Opus 5.5 out of research preview on 15 October 2026, so access no longer has to be requested."
+    caveat: "The release note also gives Opus 5.5 a default fast mode rate limit in the Start, Build and Scale usage tiers. Fast mode for Claude Opus 5 and Opus 4.8 stays in research preview."
+    sources:
+      - publisher: "Anthropic"
+        title: "Claude Platform release notes"
+        url: "https://platform.claude.com/docs/en/release-notes/overview"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-10-15"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20261017085106/https://platform.claude.com/docs/en/release-notes/overview"
+        quote: "is out of research preview for Claude Opus 5.5, and you no longer need to request access"
+        supports: ["date", "model", "lifecycle"]
+        note: "The 15 October 2026 entry, present in the capture of 17 October 2026. The entry begins 'Fast mode is out of research preview'."
+      - publisher: "Anthropic"
+        title: "@ClaudeDevs on X"
+        url: "https://x.com/ClaudeDevs/status/2110825294655562048"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-10-15"
+        source_type: "other"
+        quote: "Opus 5.5 fast mode in the Claude Platform is no longer in research preview"
+        supports: ["date", "lifecycle"]
+        note: "Posted 2026-10-15 at 20:09 UTC. The title is a description of the post."
   - id: "foundry-muse-spark-open-2026-10-15"
     kind: "availability"
     date:
@@ -13106,6 +15063,44 @@ events:
         quote: "This week's Model Mondays edition highlights three Hugging Face models newly available in Microsoft Foundry, giving developers more open-weight options for enterprise coding and agentic work: Meta's Muse Spark Open, NVIDIA's Nemotron 3.5 Super VL, and Reflection's Beam 1.0."
         supports: ["model"]
         note: "Read through r.jina.ai because techcommunity.microsoft.com answers this environment's direct requests with 403. The date is the post's embedded postTime, 2026-10-19T10:08:14.641-07:00 (Pacific time). The post dates none of the three models; it corroborates the Hugging Face collection route only. It also gives the Muse Spark Open deployment configuration: NVFP4 weights, a 1,048,576-token context and 8 x NVIDIA H200 GPUs per model instance. Tech Community pages had no Wayback captures at the 26 October CDX lookup, so no archived_url."
+  - id: "foundry-opus5-5-fast-2026-10-15"
+    kind: "availability"
+    date:
+      start: "2026-10-15"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["claude-opus-5-5-fast"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Fast mode for Claude Opus 5.5 became available in Microsoft Foundry for Azure-hosted deployments on 15 October 2026, per Anthropic's release notes, as the catalogue id claude-opus-5-5-fast."
+    caveat: "Microsoft dates nothing: the day is the date of Anthropic's release note, which says fast mode is now available on Claude in Microsoft Foundry for Azure-hosted deployments. The Learn claude-models, retirement-schedule and quotas pages have no opus-5-5-fast row in their captures of 28 September and 12 October 2026, so the row appeared between 12 and 28 October. ARM systemData.createdAt of 2026-09-30 is resource metadata, not a launch date. On 28 October 2026 the Foundry models listing showed the model to a Visual Studio Enterprise subscription in nine regions and to the pay-as-you-go subscription in none, and no Microsoft page explains why. The quotas page gives lower defaults than the parent (pay-as-you-go 16 RPM against 40), and its Free Trial and Enterprise rows mark the Anthropic-hosted version 'Yes', which contradicts the models page's N/A. The retirement schedule row 'claude-opus-5-5-fast | 2 | GA | 2027-01-15 | —' is current-state documentation with no dated notice, so no retirement event is recorded; neither Anthropic page gives the date."
+    sources:
+      - publisher: "Anthropic"
+        title: "Claude Platform release notes"
+        url: "https://platform.claude.com/docs/en/release-notes/overview"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-10-15"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20261017085106/https://platform.claude.com/docs/en/release-notes/overview"
+        quote: "Fast mode for Claude Opus 5.5 is now available on Claude in Microsoft Foundry for deployments hosted on Azure."
+        supports: ["date", "model", "exposure"]
+        note: "The 15 October 2026 entry, present in the capture of 17 October 2026. The date is Anthropic's; Microsoft dates nothing."
+      - publisher: "Microsoft Learn"
+        title: "Claude models in Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        quote: "claude-opus-5-5-fast | Hosted on Azure: GA; Hosted on Anthropic infrastructure: N/A"
+        supports: ["lifecycle", "exposure"]
+        note: "Read live on 28 October 2026. Current-state evidence for the stage, not for the date. The model supports Global Standard and Data Zone Standard (US) deployments. No archived_url: the page has no capture that carries the row."
   - id: "github-claude-opus4-8-deprecation-announced-2026-10-15"
     kind: "announcement"
     date:
@@ -14544,8 +16539,8 @@ validation_backlog:
   - id: "meta-cohere-flux-mai-foundry-history"
     state: "open"
     working_claim: "Meta Llama 3.x, Cohere, FLUX and Microsoft MAI have catalogue milestones worth tracking."
-    reason: "These broader catalogue candidates remain outside the current sourced pack. The same scope question now covers audio models: Microsoft announced OpenAI's GPT-transcribe and GPT-live-transcribe as generally available in Foundry on 29 July 2026, alongside GPT-realtime-2.1 and GPT-realtime-mini-2.1, at techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-gpt-transcribe-and-gpt-live-transcribe-in-microsoft/ba-p/4541740. The registry carries no audio model of any kind, so recording that post would open a category, not add an event: Whisper, the gpt-4o transcribe and TTS families and the realtime line would all be implied. Held here until the scope decision is taken deliberately. The July 2026 sweep adds further parked candidates, all Microsoft-carried or vendor-adjacent but unrecorded: Grok 4.1, 4.20 and 4.3, the last confirmed in the Foundry catalogue by the May 2026 retrospective; Kimi K2.5 and K2.6, the latter on the schedule at version 2026-04-20 and arriving via Fireworks in May; the wider Gemini line, 2.0 Pro, 2.5 Flash, 3 Pro, 3.1 Pro, 3.5 Flash and Flash-Lite, and 3 Deep Think; Claude Instant 1.2, Claude 3.5 Haiku and the announced Claude Science; the GPT-5.x Codex line including GPT-5.3-Codex of 5 February 2026; and from the May retrospective, Qwen 3.5 Vision on-device and the Nemotron ASR streaming model. Recording any of these was a scope decision parked for review, and the decision was taken in August 2026: record everything at the same evidence bar, with point releases and catalogue entries marked scope: extended so default presentations can hide them."
-    target: "Wave 1 recorded in August 2026 under scope: extended — Grok 4.20 GA, Grok 4.3, Kimi K2.5 and K2.6 via Fireworks, Qwen 3.5 Vision and Nemotron ASR on the new foundry-local surface, plus the missing frontier GPT-5.4 Foundry GA; Grok 4.1 Fast is registered without an event pending a dated arrival source. Remaining for later waves: the wider Gemini line; Claude Instant 1.2, Claude 3.5 Haiku and Claude Science; the GPT-5.x-Codex line and the GPT-5.4 Mini and Pro variants; FLUX, four models GA in the retirement schedule; Llama 3.x and Cohere catalogue history; DeepSeek V3.2, V3.2-Speciale, gpt-oss-120b and MiniMax M2.5 from the March Fireworks launch; the Phi-4 family; grok-code-fast-1; the NVIDIA Nemotron catalogue family arrival dated 16 March 2026; and the schedule's naming of claude-opus-4-8 as claude-opus-4-1's replacement at its 5 August 2026 retirement. Cohere Parse v5 was recorded from a dated Foundry announcement in September 2026 as foundry-cohere-parse-v5-preview-2026-08-27; the Embed and Rerank history it joined stays parked here."
+    reason: "These broader catalogue candidates remain outside the current sourced pack. The same scope question now covers audio models: Microsoft announced OpenAI's GPT-transcribe and GPT-live-transcribe as generally available in Foundry on 29 July 2026, alongside GPT-realtime-2.1 and gpt-realtime-2.1-mini (which the post spells 'GPT-realtime-mini-2.1'), at techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-gpt-transcribe-and-gpt-live-transcribe-in-microsoft/ba-p/4541740. The registry carries no audio model of any kind, so recording that post would open a category, not add an event: Whisper, the gpt-4o transcribe and TTS families and the realtime line would all be implied. Held here until the scope decision is taken deliberately. The July 2026 sweep adds further parked candidates, all Microsoft-carried or vendor-adjacent but unrecorded: Grok 4.1, 4.20 and 4.3, the last confirmed in the Foundry catalogue by the May 2026 retrospective; Kimi K2.5 and K2.6, the latter on the schedule at version 2026-04-20 and arriving via Fireworks in May; the wider Gemini line, 2.0 Pro, 2.5 Flash, 3 Pro, 3.1 Pro, 3.5 Flash and Flash-Lite, and 3 Deep Think; Claude Instant 1.2, Claude 3.5 Haiku and the announced Claude Science; the GPT-5.x Codex line including GPT-5.3-Codex of 5 February 2026; and from the May retrospective, Qwen 3.5 Vision on-device and the Nemotron ASR streaming model. Recording any of these was a scope decision parked for review, and the decision was taken in August 2026: record everything at the same evidence bar, with point releases and catalogue entries marked scope: extended so default presentations can hide them."
+    target: "Wave 1 recorded in August 2026 under scope: extended — Grok 4.20 GA, Grok 4.3, Kimi K2.5 and K2.6 via Fireworks, Qwen 3.5 Vision and Nemotron ASR on the new foundry-local surface, plus the missing frontier GPT-5.4 Foundry GA; Grok 4.1 Fast is registered without an event pending a dated arrival source. Remaining for later waves: the wider Gemini line; Claude Instant 1.2, Claude 3.5 Haiku and Claude Science; the GPT-5.x-Codex line and the GPT-5.4 Mini and Pro variants; FLUX, four models GA in the retirement schedule; Llama 3.x and Cohere catalogue history (Llama 3.3 70B Instruct, Command A and Command A+ are now registered with dated arrivals; the rest of Llama 3.x and Cohere's earlier Command, Embed and Rerank history stay parked); DeepSeek V3.2, V3.2-Speciale, gpt-oss-120b and MiniMax M2.5 from the March Fireworks launch; the Phi-4 family (Phi-4, Phi-4-mini, Phi-4-multimodal, Phi-4-reasoning and Phi-4-mini-reasoning are now registered with dated arrivals; Phi-4-reasoning-plus is not); grok-code-fast-1; the NVIDIA Nemotron catalogue family arrival dated 16 March 2026; and the schedule's naming of claude-opus-4-8 as claude-opus-4-1's replacement at its 5 August 2026 retirement. Cohere Parse v5 was recorded from a dated Foundry announcement in September 2026 as foundry-cohere-parse-v5-preview-2026-08-27; the Embed and Rerank history it joined stays parked here."
     model_ids: []
     surface_ids: ["microsoft-foundry"]
   - id: "microsoft-foundry-branding-2025-11-18"
@@ -15211,7 +17206,7 @@ validation_backlog:
   - id: "foundry-opus4-7-launch-stage"
     state: "open"
     working_claim: "Claude Opus 4.7 reached Microsoft Foundry on 16 April 2026 in a preview stage, not general availability, and general availability followed later on an undated day."
-    reason: "foundry-opus4-7-2026-04-16 records ga on the unlabelled-catalogue convention, and says so in its caveat. The same reasoning gap was found for Opus 4.8, where the Learn partner-model page showed Claude rows as Preview until Claude in Foundry reached GA on 29 June 2026 (claude-foundry-ga-2026-06-29). The schedule shows Opus 4.7 as Preview on its earliest capture of 25 April 2026, nine days after launch, and as GA on 12 October 2026. The 26 June partner-model capture also labels it Preview. None of this dates a move to GA, and the existing event is left unchanged in this pass. Opus 4.7 is listed on Learn and in the schedule but was not seen by the catalogue watcher (no entry in the 27 October checkpoint); that is a view issue of unknown cause, and nothing here records a withdrawal."
+    reason: "foundry-opus4-7-2026-04-16 records ga on the unlabelled-catalogue convention, and says so in its caveat. The same reasoning gap was found for Opus 4.8, where the Learn partner-model page showed Claude rows as Preview until Claude in Foundry reached GA on 29 June 2026 (claude-foundry-ga-2026-06-29). The schedule shows Opus 4.7 as Preview on its earliest capture of 25 April 2026, nine days after launch, and as GA on 12 October 2026. The 26 June partner-model capture also labels it Preview. None of this dates a move to GA, and the existing event is left unchanged in this pass. Opus 4.7 is listed on Learn and in the schedule. On 2026-10-28 the Foundry models listing showed claude-opus-4-7 version 1 (GA) to a Visual Studio Enterprise subscription in nine regions and to the pay-as-you-go subscription in none; the catalogue has read both subscriptions as one view since then. Nothing here records a withdrawal."
     target: "Decide whether foundry-opus4-7-2026-04-16 should become public_preview, with a separate GA step bounded by Learn captures as for Opus 4.6 and Sonnet 4.6. Needed: the Claude page and partner-model page captures between 26 June and 15 July 2026 for the Opus 4.7 row, and any Microsoft statement of its stage at launch. The April 2026 roundup calls Opus 4.7 'Anthropic's most capable generally available model', which describes Anthropic's release, not Foundry's stage."
     model_ids: ["claude-opus-4-7"]
     surface_ids: ["microsoft-foundry"]
@@ -15614,3 +17609,113 @@ validation_backlog:
     target: "Sweep the usual sources across 27 and 28 October 2026 - GitHub Copilot changelog, Microsoft Foundry blog, Microsoft Copilot blog, the retirement schedule, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms - then either record what is found or close this item as confirming nothing else landed. Known gaps: everything named in sweep-2026-10-24-to-10-26 and sweep-2026-09-26-to-10-23, which remain open."
     model_ids: []
     surface_ids: []
+  - id: "foundry-gpt-realtime-2-schedule-stage"
+    state: "open"
+    working_claim: "GPT-Realtime-2 has a single lifecycle stage on Microsoft Foundry."
+    reason: "The Learn retirement schedule contradicts itself over time. Captures from 29 May to 4 July 2026 read GA with retirement 2027-05-06; from 5 August 2026 they read Preview with retirement 2026-08-31, and the page has not read GA since. The live page reads Preview with a retirement date of 2027-01-20 that was added between 12 and 28 October. Microsoft's launch post of 7 May 2026 states no stage, and the Learn what's-new entry for May links to 'GPT Realtime 2.0 (preview) overview'. foundry-gpt-realtime-2-2026-05-07 records public_preview at supported confidence on that link, and neither schedule reading is picked."
+    target: "A Microsoft statement of the stage at launch and of any move between Preview and GA, or Learn revisions of the Models page and the GPT Realtime 2.0 overview that date the preview label. Already read: the captures of 7 June and 5 August 2026 and the 20 September capture, which still reads Preview. Not yet searched: Learn revisions between 4 July and 5 August that would show when the stage changed."
+    model_ids: ["gpt-realtime-2"]
+    surface_ids: ["microsoft-foundry"]
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260607153339/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        quote: "gpt-realtime-2 | 2026-05-06 | GA | 2027-05-06 | —"
+        supports: ["lifecycle"]
+        note: "Capture of 7 June 2026, page ms.date 2026-04-23. The row reads GA with retirement 2027-05-06, as in captures from 29 May to 4 July. The version string 2026-05-06 is a build id, not a date source."
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20260805004310/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        quote: "gpt-realtime-2 | 2026-05-06 | Preview | 2026-08-31 | —"
+        supports: ["lifecycle"]
+        note: "Capture of 5 August 2026, page ms.date 2026-07-23. The row reads Preview with retirement 2026-08-31."
+  - id: "foundry-mistral-large-2402-retirement"
+    state: "open"
+    working_claim: "Mistral Large 24.02 was retired from the serverless endpoint in Azure AI Foundry on 15 April 2025."
+    reason: "Learn's lifecycle page, in its capture of 21 April 2025, published a retirement of the serverless Mistral-large on April 15, 2025 with Mistral-large-2411 as the replacement. But the Foundry Models API still lists Mistral-large version 1 as GenerallyAvailable with the 2099 sentinel date in all 32 regions on 27 October 2026, and Learn's current region table still lists 'Mistral-large | 1'. A model listed as GA eighteen months after its published retirement is either not retired, a different model from 24.02, or a stale listing. The mapping of Mistral-large version 1 to 24.02 is itself inferred from the catalogue's display names (2402, 2407 and 2411 rows), and no capture of the page exists before 21 April 2025. No retirement event is recorded."
+    target: "A Microsoft statement of whether the serverless Mistral-large endpoint was retired and, if so, why the listing persists, or a Learn revision between December 2024 and April 2025 that shows the row's dates being set. Already read: the 21 April 2025 capture and the 27 October 2026 catalogue checkpoint for eastus. Not yet searched: Learn captures of the region availability page between 2025 and 2026, and the other 31 regions' checkpoints one by one."
+    model_ids: ["mistral-large-24-02"]
+    surface_ids: ["azure-ai-catalog", "microsoft-foundry"]
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Model lifecycle and retirement"
+        url: "https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/model-lifecycle-retirement"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20250421174820/https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/model-lifecycle-retirement"
+        quote: "Mistral-large | December 15, 2024 | January 15, 2025 | April 15, 2025 | Mistral-large-2411"
+        supports: ["lifecycle", "date"]
+        note: "Capture of 21 April 2025, the earliest of the page. The columns are the announcement, legacy and retirement dates, and the replacement."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue checkpoint, Foundry Models API, eastus, 2026-10-27T19:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/9e97f6274e6c6d6ada5f71530865c85a46b634cf/checkpoints/arm/eastus/2026-10-27T19-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-10-28"
+        published_at: "2026-10-27"
+        source_type: "other"
+        quote: "\"watched\":{\"name\":\"Mistral-large\",\"version\":\"1\",\"format\":\"Mistral AI\",\"lifecycle_status\":\"GenerallyAvailable\",\"lifecycle_portal\":\"Generally Available\",\"deprecation_inference\":\"2099-12-31T00:00:00Z\""
+        supports: ["lifecycle"]
+        note: "The watcher's seed checkpoint for eastus from the standard pay-as-you-go subscription, cited at its commit-pinned URL. The same state holds across 32 regions. first_seen is the watcher's first run, not an arrival date."
+  - id: "foundry-mistral-small-2503-retirement-date"
+    state: "open"
+    working_claim: "mistral-small-2503 is retired from Microsoft Foundry on a single date."
+    reason: "Learn's lifecycle page reads 'mistral-small-2503 | 1 | Deprecated | 2027-02-15 | mistralai-mistral-small-4-119b-2603' with a footnote saying Microsoft deprecated it on October 9, 2026, while the Foundry Models API on 27 October 2026 reads GenerallyAvailable with a deprecation date of 2026-12-09. The two disagree on both the stage and the retirement date. foundry-mistral-small-3-1-deprecated-2026-10-09 records the deprecated step from the footnote at supported confidence and names the conflict; no retirement event is recorded. The replacement column is a lifecycle fact, not supersession."
+    target: "Capture of the Learn lifecycle page after 9 October 2026 that carries the row and footnote, or a Microsoft notice of the deprecation and of the retirement date, and a later catalogue checkpoint that shows whether the API's stage changes. Already read: the live Learn page of 28 October 2026 and the 27 October checkpoint for eastus. No Wayback capture of the page carries the row."
+    model_ids: ["mistral-small-3-1"]
+    surface_ids: ["microsoft-foundry"]
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Model lifecycle and retirement"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/concepts/model-lifecycle-retirement"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        quote: "mistral-small-2503 | 1 | Deprecated | 2027-02-15 | mistralai-mistral-small-4-119b-2603"
+        supports: ["lifecycle", "date"]
+        note: "Read live on 28 October 2026; the page was last published 2026-10-26. No archived_url: no capture carries the row."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue checkpoint, Foundry Models API, eastus, 2026-10-27T19:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/9e97f6274e6c6d6ada5f71530865c85a46b634cf/checkpoints/arm/eastus/2026-10-27T19-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-10-28"
+        published_at: "2026-10-27"
+        source_type: "other"
+        quote: "\"watched\":{\"name\":\"mistral-small-2503\",\"version\":\"1\",\"format\":\"Mistral AI\",\"lifecycle_status\":\"GenerallyAvailable\",\"lifecycle_portal\":\"Generally Available\",\"deprecation_inference\":\"2026-12-09T00:00:00Z\""
+        supports: ["lifecycle", "date"]
+        note: "The watcher's seed checkpoint for eastus, cited at its commit-pinned URL."
+  - id: "foundry-command-a-plus-serverless-end"
+    state: "open"
+    working_claim: "The serverless offering of Cohere Command A+ in Microsoft Foundry ended on a single date in October 2026."
+    reason: "The Foundry Models API reads Preview for Cohere-command-a-plus-05-2026 version 1 with a deprecation date of 2026-10-13, and its portal word already reads Retired in the checkpoint of 27 October 2026, while Learn's retirement page gives 'Preview | 2026-10-16'. The two dates are three days apart and neither is a published notice. The managed compute offer remains and Cohere has not retired the model, so no retirement event is recorded for cohere-command-a-plus. The serverless offering's own preview arrival on 24 June 2026 is held in the caveat of foundry-cohere-command-a-plus-2026-05-21, not as an event."
+    target: "A Microsoft notice of the end of the serverless preview, or a Learn capture of the retirement page near 13 to 16 October 2026 that carries the row. Already read: the live Learn page of 28 October 2026 and the 27 October checkpoint for eastus. Not yet searched: Wayback captures of the retirement page for October 2026."
+    model_ids: ["cohere-command-a-plus"]
+    surface_ids: ["microsoft-foundry"]
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Model lifecycle and retirement"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/concepts/model-lifecycle-retirement"
+        primary: true
+        retrieved_at: "2026-10-28"
+        source_type: "documentation"
+        quote: "Preview | 2026-10-16"
+        supports: ["lifecycle", "date"]
+        note: "The stage and date cells of the Cohere-command-a-plus-05-2026 row, read live on 28 October 2026 and quoted from the research record, which gives these two cells and not the whole row. No archived_url: no capture carries the row."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue checkpoint, Foundry Models API, eastus, 2026-10-27T19:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/9e97f6274e6c6d6ada5f71530865c85a46b634cf/checkpoints/arm/eastus/2026-10-27T19-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-10-28"
+        published_at: "2026-10-27"
+        source_type: "other"
+        quote: "\"watched\":{\"name\":\"Cohere-command-a-plus-05-2026\",\"version\":\"1\",\"format\":\"Cohere\",\"lifecycle_status\":\"Preview\",\"lifecycle_portal\":\"Retired\",\"deprecation_inference\":\"2026-10-13T00:00:00Z\""
+        supports: ["lifecycle", "date"]
+        note: "The watcher's seed checkpoint for eastus, cited at its commit-pinned URL. lifecycle_status is the API word and lifecycle_portal the portal word."

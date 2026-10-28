@@ -20,6 +20,7 @@ gemini-4,Gemini 4,Google,gemini
 grok-3,Grok 3,xAI,grok
 grok-4,Grok 4,xAI,grok
 llama-2,Llama 2,Meta,llama
+llama-3,Llama 3,Meta,llama
 llama-4,Llama 4,Meta,llama
 muse-spark,Muse Spark,Meta,muse
 muse-wonder,Muse Wonder,Meta,muse
@@ -31,6 +32,7 @@ deepseek-v4,DeepSeek V4,DeepSeek,deepseek-v
 kimi-k2,Kimi K2,Moonshot AI,kimi
 kimi-k3,Kimi K3,Moonshot AI,kimi
 qwen-3-5,Qwen 3.5,Alibaba,qwen
+phi-4,Phi-4,Microsoft,phi
 nemotron,Nemotron,NVIDIA,nemotron
 dall-e,DALL-E,OpenAI,openai-image
 gpt-image,GPT-image,OpenAI,openai-image

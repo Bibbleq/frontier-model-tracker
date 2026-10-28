@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 469,
-    "backlog": 111,
-    "sources": 823,
-    "models": 172,
+    "events": 525,
+    "backlog": 115,
+    "sources": 938,
+    "models": 196,
     "surfaces": 27,
-    "confirmed": 349,
-    "supported": 120
+    "confirmed": 371,
+    "supported": 154
   },
   "kinds": {
-    "announcement": 27,
-    "availability": 427,
+    "announcement": 31,
+    "availability": 479,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 65,
+    "open": 69,
     "promoted": 40,
     "rejected": 4
   },
@@ -148,12 +148,22 @@
     },
     {
       "code": "missing_archive",
+      "subject": "foundry-mistral-small-3-1-deprecated-2026-10-09",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/concepts/model-lifecycle-retirement"
+    },
+    {
+      "code": "missing_archive",
       "subject": "foundry-nemotron-3-5-lightning-2026-08-19",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/how-to/fireworks/enable-fireworks-models"
     },
     {
       "code": "missing_archive",
       "subject": "foundry-opus5-5-2026-09-22",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-opus5-5-fast-2026-10-15",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
     },
     {
@@ -173,8 +183,38 @@
     },
     {
       "code": "missing_archive",
+      "subject": "meta-llama-3-3-70b-2024-12-06",
+      "message": "documentation source has no archived_url and may be edited in place: https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md"
+    },
+    {
+      "code": "missing_archive",
       "subject": "microsoft-decision-1-2026-10-09",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-gpt-audio-2025-08-28",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-gpt-audio-mini-shutdown-announced-2026-07-20",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-gpt-audio-shutdown-announced-2026-07-20",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-gpt-image-1-mini-shutdown-announced-2026-06-02",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-gpt-realtime-mini-shutdown-announced-2026-07-20",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/deprecations"
     },
     {
       "code": "missing_archive",
@@ -294,7 +334,7 @@
   ],
   "warning_counts": {
     "backlog_without_surface": 10,
-    "missing_archive": 25,
+    "missing_archive": 33,
     "no_vendor_baseline": 9,
     "no_vendor_baseline_extended": 9,
     "pre_release_access": 1
@@ -319,7 +359,10 @@
     ],
     "models_without_generation": [
       "claude-mythos-preview",
+      "codestral-25-01",
       "codex",
+      "cohere-command-a",
+      "cohere-command-a-plus",
       "cohere-embed-v5",
       "cohere-embed-v5-fast",
       "cohere-embed-v5-pro",
@@ -348,10 +391,16 @@
       "mai-voice-2-1",
       "mai-voice-2-1-flash",
       "microsoft-decision-1",
+      "ministral-3b-24-10",
+      "mistral-large-24-02",
+      "mistral-small-3-1",
       "openai-deep-research"
     ],
     "models_without_classification": [
+      "codestral-25-01",
       "codex",
+      "cohere-command-a",
+      "cohere-command-a-plus",
       "cohere-embed-v5",
       "cohere-embed-v5-fast",
       "cohere-embed-v5-pro",
@@ -360,10 +409,16 @@
       "cohere-rerank-v5-fast",
       "cohere-rerank-v5-pro",
       "microsoft-decision-1",
+      "ministral-3b-24-10",
+      "mistral-large-24-02",
+      "mistral-small-3-1",
       "openai-deep-research"
     ],
     "surfaces_without_events": [],
     "extended_scope_models": [
+      "codestral-25-01",
+      "cohere-command-a",
+      "cohere-command-a-plus",
       "cohere-embed-v5",
       "cohere-embed-v5-fast",
       "cohere-embed-v5-pro",
@@ -381,18 +436,27 @@
       "grok-4-3",
       "kimi-k2-5",
       "kimi-k2-6",
+      "llama-3-3-70b",
       "microsoft-decision-1",
+      "ministral-3b-24-10",
+      "mistral-large-24-02",
+      "mistral-small-3-1",
       "nano-banana-2-1",
       "nemotron-speech-streaming-en",
+      "phi-4",
+      "phi-4-mini",
+      "phi-4-mini-reasoning",
+      "phi-4-multimodal",
+      "phi-4-reasoning",
       "qwen-3-5-vision"
     ]
   },
   "lag_certainty": {
-    "exact": 353,
-    "not_recorded": 1036,
-    "range": 39,
-    "rollout_start": 145,
+    "exact": 387,
+    "not_recorded": 1268,
+    "range": 49,
+    "rollout_start": 149,
     "unknown_no_baseline": 372,
-    "unknown_open_research": 119
+    "unknown_open_research": 127
   }
 }
