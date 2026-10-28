@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "research_cutoff": "2026-10-26",
   "metadata": {
     "project": "CtrlAltBen Frontier Model Tracker",
@@ -1312,6 +1312,96 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "announcement"
+        }
+      ]
+    },
+    {
+      "id": "azure-gpt4o-mini-2024-07-18",
+      "kind": "availability",
+      "date": {
+        "start": "2024-07-18",
+        "precision": "day"
+      },
+      "surface_id": "azure-openai",
+      "model_ids": [
+        "gpt-4o-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "GPT-4o mini became available on Azure AI on 18 July 2024, simultaneously with OpenAI's announcement, supporting text processing and offered first in the Azure OpenAI Studio Playground at no cost: a zero-day lag.",
+      "caveat": "The announcement states availability, not a stage; the stage at launch is not recorded. The same post says global pay-as-you-go deployment would be 'generally available this month', so general availability may have followed within July rather than on the day. Current Foundry stage is Deprecated; that is current-state evidence, not a launch stage.",
+      "sources": [
+        {
+          "publisher": "Microsoft Azure",
+          "title": "OpenAI's fastest model, GPT-4o mini is now available on Azure AI",
+          "url": "https://azure.microsoft.com/en-us/blog/openais-fastest-model-gpt-4o-mini-is-now-available-on-azure-ai/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2024-07-18",
+          "source_type": "announcement",
+          "quote": "GPT-4o mini, announced by OpenAI today, is available simultaneously on Azure AI, supporting text processing capabilities with excellent speed",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The post's datePublished is 2024-07-18T20:00:00Z. Read through r.jina.ai because azure.microsoft.com is outside this environment's allowlist."
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt4o-mini-2024-07-18",
+      "kind": "availability",
+      "date": {
+        "start": "2024-07-18",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-4o-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI announced GPT-4o mini, its most cost-efficient small model, on 18 July 2024 and released it in the API the same day. Registered as the mini variant of GPT-4o.",
+      "caveat": "Not the gpt-4o-mini-tts, -transcribe, -realtime or -audio models, which are separate models.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2024-07-18",
+          "source_type": "changelog",
+          "quote": "Released GPT-4o mini, our affordable an intelligent small model for fast, lightweight tasks.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed Jul 18. The typo 'an' is OpenAI's."
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "GPT-4o mini: advancing cost-efficient intelligence",
+          "url": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20240718174226/https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+          "quote": "Today, we're announcing GPT-4o mini, our most cost-efficient small model.",
+          "supports": [
+            "model"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The page prints no date, so its archived_url is the earliest Wayback capture, which bounds the day rather than stating it."
         }
       ]
     },
@@ -2689,6 +2779,194 @@
       ]
     },
     {
+      "id": "foundry-llama4-maverick-2025-04-05",
+      "kind": "availability",
+      "date": {
+        "start": "2025-04-05",
+        "precision": "day"
+      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "llama-4-maverick"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Llama 4 Maverick (Llama-4-Maverick-17B-128E-Instruct-FP8) reached Azure AI Foundry on 5 April 2025, the day Meta released it, as a managed compute offering: a zero-day lag. Serverless Models as a Service endpoints followed on 14 April 2025.",
+      "caveat": "Dated 5 April, the Pacific date of the post: its machine timestamp is 2025-04-06T02:51:26Z, the evening of 5 April in Pacific time. Managed compute at launch; serverless followed on 14 April. The announcement states availability, not a stage; the stage at launch is not recorded. Current Foundry stage is GA; that is current-state evidence, not a launch stage.",
+      "sources": [
+        {
+          "publisher": "Microsoft Azure",
+          "title": "Introducing the Llama 4 herd in Azure AI Foundry and Azure Databricks",
+          "url": "https://azure.microsoft.com/en-us/blog/introducing-the-llama-4-herd-in-azure-ai-foundry-and-azure-databricks/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-04-05",
+          "source_type": "announcement",
+          "quote": "We are excited to share the first models in the Llama 4 herd are available today in Azure AI Foundry and Azure Databricks",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The post's machine timestamp is 2025-04-06T02:51:26Z, which is the evening of 5 April in Pacific time; the post says 'available today', so 5 April is its Pacific date. The body reads: 'Today, we are bringing Meta's Llama 4 Scout and Maverick models into Azure AI Foundry as managed compute offerings'. Read through r.jina.ai because azure.microsoft.com is outside this environment's allowlist."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Expanding the Llama 4 Herd: New Models Now Available on Azure AI Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/aiplatformblog/-/4403609",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-04-14",
+          "source_type": "announcement",
+          "quote": "now available in the Azure AI Foundry model catalog as Models as a Service (MaaS) endpoints",
+          "supports": [
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers direct requests with 403. The date is the post's embedded postTime, 2025-04-14T10:02:23.510-07:00 (Pacific time). It dates the serverless step only, not the 5 April managed compute arrival."
+        }
+      ]
+    },
+    {
+      "id": "foundry-llama4-scout-2025-04-05",
+      "kind": "availability",
+      "date": {
+        "start": "2025-04-05",
+        "precision": "day"
+      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "llama-4-scout"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Llama 4 Scout (Llama-4-Scout-17B-16E-Instruct) reached Azure AI Foundry on 5 April 2025, the day Meta released it, as a managed compute offering: a zero-day lag. Serverless Models as a Service endpoints followed on 14 April 2025.",
+      "caveat": "Dated 5 April, the Pacific date of the post: its machine timestamp is 2025-04-06T02:51:26Z, the evening of 5 April in Pacific time. Managed compute at launch; serverless followed on 14 April. The announcement states availability, not a stage; the stage at launch is not recorded. Current Foundry stage is GA; that is current-state evidence, not a launch stage. The post lists both a base Llama-4-Scout-17B-16E and the instruct model; the model in scope is the instruct one.",
+      "sources": [
+        {
+          "publisher": "Microsoft Azure",
+          "title": "Introducing the Llama 4 herd in Azure AI Foundry and Azure Databricks",
+          "url": "https://azure.microsoft.com/en-us/blog/introducing-the-llama-4-herd-in-azure-ai-foundry-and-azure-databricks/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-04-05",
+          "source_type": "announcement",
+          "quote": "We are excited to share the first models in the Llama 4 herd are available today in Azure AI Foundry and Azure Databricks",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The post's machine timestamp is 2025-04-06T02:51:26Z, which is the evening of 5 April in Pacific time; the post says 'available today', so 5 April is its Pacific date. The body reads: 'Today, we are bringing Meta's Llama 4 Scout and Maverick models into Azure AI Foundry as managed compute offerings'. Read through r.jina.ai because azure.microsoft.com is outside this environment's allowlist."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Expanding the Llama 4 Herd: New Models Now Available on Azure AI Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/aiplatformblog/-/4403609",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-04-14",
+          "source_type": "announcement",
+          "quote": "now available in the Azure AI Foundry model catalog as Models as a Service (MaaS) endpoints",
+          "supports": [
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers direct requests with 403. The date is the post's embedded postTime, 2025-04-14T10:02:23.510-07:00 (Pacific time). It dates the serverless step only, not the 5 April managed compute arrival."
+        }
+      ]
+    },
+    {
+      "id": "meta-llama4-maverick-2025-04-05",
+      "kind": "availability",
+      "date": {
+        "start": "2025-04-05",
+        "precision": "day"
+      },
+      "surface_id": "meta",
+      "model_ids": [
+        "llama-4-maverick"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Meta released Llama 4 Maverick (17B active parameters, 128 experts) as open weights on 5 April 2025, downloadable from llama.com and Hugging Face, together with the other Llama 4 model of the first two.",
+      "caveat": "The announcement states availability, not a stage; the stage at launch is not recorded. One post covers both Llama 4 Scout and Maverick, recorded as one event per model. Behemoth, previewed in the same post, was still training and is not registered.",
+      "sources": [
+        {
+          "publisher": "Meta",
+          "title": "The Llama 4 herd: The beginning of a new era of natively multimodal AI innovation",
+          "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-04-05",
+          "source_type": "announcement",
+          "quote": "We're making Llama 4 Scout and Llama 4 Maverick available for download today on llama.com and Hugging Face",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The page's date line reads April 5, 2025."
+        }
+      ]
+    },
+    {
+      "id": "meta-llama4-scout-2025-04-05",
+      "kind": "availability",
+      "date": {
+        "start": "2025-04-05",
+        "precision": "day"
+      },
+      "surface_id": "meta",
+      "model_ids": [
+        "llama-4-scout"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Meta released Llama 4 Scout (17B active parameters, 16 experts) as open weights on 5 April 2025, downloadable from llama.com and Hugging Face, together with the other Llama 4 model of the first two.",
+      "caveat": "The announcement states availability, not a stage; the stage at launch is not recorded. One post covers both Llama 4 Scout and Maverick, recorded as one event per model. Behemoth, previewed in the same post, was still training and is not registered.",
+      "sources": [
+        {
+          "publisher": "Meta",
+          "title": "The Llama 4 herd: The beginning of a new era of natively multimodal AI innovation",
+          "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-04-05",
+          "source_type": "announcement",
+          "quote": "We're making Llama 4 Scout and Llama 4 Maverick available for download today on llama.com and Hugging Face",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The page's date line reads April 5, 2025."
+        }
+      ]
+    },
+    {
       "id": "github-gemini2-5-pro-preview-2025-04-11",
       "kind": "availability",
       "date": {
@@ -3203,6 +3481,184 @@
       ]
     },
     {
+      "id": "mistral-medium-3-2025-05-07",
+      "kind": "availability",
+      "date": {
+        "start": "2025-05-07",
+        "precision": "day"
+      },
+      "surface_id": "mistral",
+      "model_ids": [
+        "mistral-medium-3"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Mistral released Mistral Medium 3 (mistral-medium-2505) on 7 May 2025 as a commercial API on La Plateforme and Amazon SageMaker, with IBM WatsonX, NVIDIA NIM, Azure AI Foundry and Google Cloud Vertex to follow.",
+      "caveat": "The announcement states availability, not a stage; the stage at launch is not recorded. A closed-weights commercial API.",
+      "sources": [
+        {
+          "publisher": "Mistral AI",
+          "title": "Medium is the new large",
+          "url": "https://mistral.ai/news/mistral-medium-3",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-05-07",
+          "source_type": "announcement",
+          "quote": "The Mistral Medium 3 API is available starting today on Mistral La Plateforme and Amazon Sagemaker",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Read through r.jina.ai; the page's published time is 2025-05-07T12:00:00Z."
+        },
+        {
+          "publisher": "Mistral AI",
+          "title": "Changelog | Mistral AI Documentation",
+          "url": "https://docs.mistral.ai/getting-started/changelog/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-05-07",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20250615113519/https://docs.mistral.ai/getting-started/changelog/",
+          "quote": "May 7, 2025 We released Mistral Medium 3 (mistral-medium-2505).",
+          "supports": [
+            "date",
+            "model"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-mistral-medium-3-2025-05-08",
+      "kind": "availability",
+      "date": {
+        "start": "2025-05-08",
+        "end": "2025-05-15",
+        "precision": "day"
+      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "mistral-medium-3"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Mistral Medium 3 (25.05) appeared in Azure AI Foundry as a serverless API with pay-as-you-go billing between 8 and 15 May 2025. No Microsoft post announces the arrival. The start is the day after Mistral's release, which said Foundry would follow soon; the end is the first Learn capture that lists the model.",
+      "caveat": "A window, not a point: the start is the day after Mistral's 7 May release, which said Foundry would follow 'soon', and is a floor rather than an observation; the end is the first capture that lists the model. No Microsoft source states a stage; the stage at launch is not recorded. Current Foundry stage is GA; that is current-state evidence, not a launch stage.",
+      "sources": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Region availability for models in Serverless API endpoints",
+          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/deploy-models-serverless-availability",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20250515072221/https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/deploy-models-serverless-availability",
+          "quote": "Mistral Medium 3 (25.05) | Microsoft Managed Countries/Regions Brazil, Hong Kong SAR, Israel | East US, East US 2, North Central US, South Central US, Sweden Central, West US, West US 3 | Not available",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Capture of 15 May 2025, the first to list the row. The page's ms.date and updated_at meta stay at 2025-02-28 in both captures because the table comes from an include, so the capture timestamps bound the window, not the meta."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Region availability for models in Serverless API endpoints",
+          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/deploy-models-serverless-availability",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20250422122731/https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/deploy-models-serverless-availability",
+          "supports": [
+            "date"
+          ],
+          "note": "Capture of 22 April 2025: lists Mistral Large and Ministral-3B rows but no Mistral Medium 3. No capture exists between 22 April and 15 May, so the window cannot be tightened from this page."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Foundry Models featured",
+          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/models-featured",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20250609015940/https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/models-featured",
+          "quote": "Mistral Medium 3 (25.05), and Ministral 3B models, and are available as serverless APIs with pay-as-you-go token-based billing",
+          "supports": [
+            "exposure"
+          ],
+          "note": "Capture of 9 June 2025; no earlier capture of this page after 15 April 2025 exists."
+        }
+      ]
+    },
+    {
+      "id": "openai-api-codex-mini-2025-05-15",
+      "kind": "availability",
+      "date": {
+        "start": "2025-05-15",
+        "end": "2025-05-16",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "codex-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "OpenAI released codex-mini, a smaller version of codex-1 and a version of o4-mini designed for use in Codex CLI, as the default model in Codex CLI and in the API as codex-mini-latest. A 2025 reasoning model: not the 2021 Codex model registered as codex.",
+      "caveat": "OpenAI's two first-party sources differ by a day: the changelog lists codex-mini-latest under 15 May, while the announcement's first Wayback capture is 16 May. Neither is picked, so the event records the window between them.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing Codex",
+          "url": "https://openai.com/index/introducing-codex/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20250516164208/https://openai.com/index/introducing-codex/",
+          "quote": "It's available now as the default model in Codex CLI and in the API as codex-mini-latest.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The page prints no date, so its archived_url is the earliest Wayback capture, which bounds the day rather than stating it. The page also says: 'Today, we're also releasing a smaller version of codex-1, a version of o4-mini designed specifically for use in Codex CLI.'"
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-05-15",
+          "source_type": "changelog",
+          "quote": "Launched codex-mini-latest in the API",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Entry headed May 15."
+        }
+      ]
+    },
+    {
       "id": "foundry-grok3-2025-05-19",
       "kind": "availability",
       "date": {
@@ -3443,6 +3899,177 @@
       ]
     },
     {
+      "id": "foundry-codex-mini-2025-06-03",
+      "kind": "availability",
+      "date": {
+        "start": "2025-06-03",
+        "end": "2025-06-20",
+        "precision": "day"
+      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "codex-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "codex-mini became available in Azure OpenAI in Foundry in June 2025: Learn's what's-new page had no June 2025 entry at its 15 June capture and lists 'codex-mini and o3-pro are now available' by its 30 June capture, and Microsoft's Foundry blog said on 20 June that it was available in East US 2 and Sweden Central with Standard Global deployment.",
+      "caveat": "A window, not a point: no source dates the arrival itself. The start is the revision stamp of the last Learn capture without the entry, the end is the blog post's publication. A Microsoft dev blog post of 17 June deploys codex-mini in its steps but was edited on 15 September 2025, so it is not evidence for 17 June. No Microsoft source states a stage; the stage at launch is not recorded. Current Foundry stage is Deprecated; that is current-state evidence, not a launch stage.",
+      "sources": [
+        {
+          "publisher": "Microsoft Foundry Blog",
+          "title": "Codex-mini: Fast, scalable code generation for the CLI era",
+          "url": "https://devblogs.microsoft.com/foundry/codex-mini-fast-scalable-code-generation-for-the-cli-era/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-06-20",
+          "source_type": "announcement",
+          "quote": "codex-mini is now available via the Azure OpenAI API and Codex CLI.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "datePublished 2025-06-20T16:23:00Z. The post also says: 'Codex-mini is available in East US2 and Sweden Central, supporting Standard Global deployment.'"
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "What's new in Azure OpenAI Service",
+          "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/whats-new",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20250630130703/https://learn.microsoft.com/en-us/azure/ai-services/openai/whats-new",
+          "quote": "codex-mini and o3-pro are now available",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Capture of 30 June 2025 (ms.date 2025-06-17, updated_at 2025-06-20), where the entry sits under 'June 2025' with the heading 'codex-mini & o3-pro models released'."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "What's new in Azure OpenAI Service",
+          "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/whats-new",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "changelog",
+          "archived_url": "https://web.archive.org/web/20250615085836/https://learn.microsoft.com/en-us/azure/ai-services/openai/whats-new",
+          "supports": [
+            "date"
+          ],
+          "note": "Capture of 15 June 2025 (updated_at 2025-06-03): no June 2025 entry. The window's start is that revision stamp."
+        }
+      ]
+    },
+    {
+      "id": "openai-api-o3-deep-research-2025-06-26",
+      "kind": "availability",
+      "date": {
+        "start": "2025-06-26",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "o3-deep-research"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "OpenAI released o3-deep-research in the Responses API on 26 June 2025, the API deep research model, alongside o4-mini-deep-research, which is not registered. Recorded as its own model: it shares a lineage with openai-deep-research (ChatGPT deep research), but no source says they are the same model.",
+      "caveat": "No first-party sentence carries the date and OpenAI's API changelog does not list this model. The day rests on first Wayback captures of the model and cookbook pages (26 and 27 June 2025); the snapshot name o3-deep-research-2025-06-26 agrees and is not the source. The cookbook page's own date line reads Jun 25, 2025.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "o3-deep-research",
+          "url": "https://platform.openai.com/docs/models/o3-deep-research",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20250627112138/https://platform.openai.com/docs/models/o3-deep-research",
+          "quote": "o3-deep-research is our most advanced model for deep research, designed to tackle complex, multi-step research tasks.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The earliest Wayback capture of the model page is 27 June 2025 at 11:21 UTC. The page now lives at developers.openai.com/api/docs/models/o3-deep-research. It carries no release date; the snapshot is named o3-deep-research-2025-06-26."
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "Introduction to deep research in the OpenAI API",
+          "url": "https://cookbook.openai.com/examples/deep_research_api/introduction_to_deep_research_api",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20250626180117/https://cookbook.openai.com/examples/deep_research_api/introduction_to_deep_research_api",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The earliest Wayback capture is 26 June 2025 at 18:01 UTC. The page's own date line reads Jun 25, 2025, a day earlier."
+        }
+      ]
+    },
+    {
+      "id": "foundry-o3-deep-research-2025-07-07",
+      "kind": "availability",
+      "date": {
+        "start": "2025-07-07",
+        "precision": "day"
+      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "o3-deep-research"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "limited_preview",
+      "exposure": "specialist",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft announced Deep Research in Azure AI Foundry Agent Service in limited public preview on 7 July 2025, built on o3-deep-research. The model was usable only through the Agent Service's Deep Research tool.",
+      "caveat": "Specialist exposure: it was available only through Foundry Agent Service's Deep Research tool, not as a catalogue deployment, and the preview was limited to customers who signed up for access. Current Foundry stage is Deprecated; that is current-state evidence, not a launch stage.",
+      "sources": [
+        {
+          "publisher": "Microsoft Azure",
+          "title": "Introducing Deep Research in Azure AI Foundry Agent Service",
+          "url": "https://azure.microsoft.com/en-us/blog/introducing-deep-research-in-azure-ai-foundry-agent-service/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-07-07",
+          "source_type": "announcement",
+          "quote": "Deep Research is available now in limited public preview for Azure AI Foundry Agent Service customers.",
+          "supports": [
+            "date",
+            "lifecycle",
+            "exposure"
+          ],
+          "note": "datePublished 2025-07-07T17:00:00Z. The post opens 'Today we're excited to announce the public preview of Deep Research in Azure AI Foundry'. Read through r.jina.ai because azure.microsoft.com is outside this environment's allowlist."
+        },
+        {
+          "publisher": "Microsoft Azure",
+          "title": "Introducing Deep Research in Azure AI Foundry Agent Service",
+          "url": "https://azure.microsoft.com/en-us/blog/introducing-deep-research-in-azure-ai-foundry-agent-service/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-07-07",
+          "source_type": "announcement",
+          "quote": "Pricing for Deep Research (model: o3-deep-research) is as follows:",
+          "supports": [
+            "model"
+          ],
+          "note": "Markdown emphasis in the extracted text is omitted from the quote."
+        }
+      ]
+    },
+    {
       "id": "github-o1-retired-2025-07-07",
       "kind": "availability",
       "date": {
@@ -3576,6 +4203,162 @@
       ]
     },
     {
+      "id": "foundry-gpt-oss-120b-2025-08-05",
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-05",
+        "precision": "day"
+      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "gpt-oss-120b"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "gpt-oss-120b became available on Azure AI Foundry on 5 August 2025, the day OpenAI released it, deployable on managed compute from the catalogue: a zero-day lag.",
+      "caveat": "Managed compute at launch. The announcement states availability, not a stage; the stage at launch is not recorded. Current stage evidence conflicts: Learn's catalogue page labels gpt-oss-120b '(Preview)' while the retirement schedule lists it as GA (see foundry-gpt-oss-stage); ga is recorded only because an availability event must carry a lifecycle.",
+      "sources": [
+        {
+          "publisher": "Microsoft Azure",
+          "title": "OpenAI's open-source model: gpt-oss on Azure AI Foundry and Windows AI Foundry",
+          "url": "https://azure.microsoft.com/en-us/blog/openais-open-source-model-gpt-oss-on-azure-ai-foundry-and-windows-ai-foundry/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-08-05",
+          "source_type": "announcement",
+          "quote": "Today, gpt-oss-120b and gpt-oss-20b are available on Azure AI Foundry.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "datePublished 2025-08-05T10:00:00 (Pacific). The post also says: 'Deploy gpt-oss in the cloud today with a few CLI commands using Azure AI Foundry.' Read through r.jina.ai because azure.microsoft.com is outside this environment's allowlist."
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt-oss-20b-2025-08-05",
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-05",
+        "precision": "day"
+      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "gpt-oss-20b"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "gpt-oss-20b became available on Azure AI Foundry on 5 August 2025, the day OpenAI released it, deployable on managed compute from the catalogue: a zero-day lag.",
+      "caveat": "Managed compute at launch. The announcement states availability, not a stage; the stage at launch is not recorded. Current stage evidence conflicts: Learn's catalogue page labels gpt-oss-20b '(Preview)' and the retirement schedule does not list it (see foundry-gpt-oss-stage); ga is recorded only because an availability event must carry a lifecycle. The post adds that gpt-oss-20b is also on Windows AI Foundry, which is not a tracked surface.",
+      "sources": [
+        {
+          "publisher": "Microsoft Azure",
+          "title": "OpenAI's open-source model: gpt-oss on Azure AI Foundry and Windows AI Foundry",
+          "url": "https://azure.microsoft.com/en-us/blog/openais-open-source-model-gpt-oss-on-azure-ai-foundry-and-windows-ai-foundry/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-08-05",
+          "source_type": "announcement",
+          "quote": "Today, gpt-oss-120b and gpt-oss-20b are available on Azure AI Foundry.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "datePublished 2025-08-05T10:00:00 (Pacific). The post also says: 'Deploy gpt-oss in the cloud today with a few CLI commands using Azure AI Foundry.' Read through r.jina.ai because azure.microsoft.com is outside this environment's allowlist. The post adds: 'gpt-oss-20b is also available on Windows AI Foundry and will be coming soon on MacOS via Foundry Local.'"
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt-oss-120b-2025-08-05",
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-05",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-oss-120b"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "OpenAI released gpt-oss-120b, one of two open-weight language models it released together on 5 August 2025, with weights on Hugging Face (Apache 2.0 per OpenAI's page).",
+      "caveat": "The OpenAI page prints no date, so the day rests on its first Wayback capture of 5 August 2025, with the same-day Microsoft post agreeing. The Hugging Face repository was created on 4 August, which is a floor and not a release date. Open weights, so no API stage applies; ga records the release. One post covers both models, recorded as one event per model.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing gpt-oss",
+          "url": "https://openai.com/index/introducing-gpt-oss/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20250805170537/https://openai.com/index/introducing-gpt-oss/",
+          "quote": "We're releasing gpt-oss-120b and gpt-oss-20b—two state-of-the-art open-weight language models that deliver strong real-world performance at low cost.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The page prints no date, so its archived_url is the earliest Wayback capture, which bounds the day rather than stating it."
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt-oss-20b-2025-08-05",
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-05",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-oss-20b"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "OpenAI released gpt-oss-20b, one of two open-weight language models it released together on 5 August 2025, with weights on Hugging Face (Apache 2.0 per OpenAI's page).",
+      "caveat": "The OpenAI page prints no date, so the day rests on its first Wayback capture of 5 August 2025, with the same-day Microsoft post agreeing. The Hugging Face repository was created on 4 August, which is a floor and not a release date. Open weights, so no API stage applies; ga records the release. One post covers both models, recorded as one event per model.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing gpt-oss",
+          "url": "https://openai.com/index/introducing-gpt-oss/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20250805170537/https://openai.com/index/introducing-gpt-oss/",
+          "quote": "We're releasing gpt-oss-120b and gpt-oss-20b—two state-of-the-art open-weight language models that deliver strong real-world performance at low cost.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The page prints no date, so its archived_url is the earliest Wayback capture, which bounds the day rather than stating it."
+        }
+      ]
+    },
+    {
       "id": "github-gpt4o-retired-2025-08-06",
       "kind": "availability",
       "date": {
@@ -3634,6 +4417,55 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "announcement"
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt5-nano-2025-08-07",
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-07",
+        "precision": "day"
+      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "gpt-5-nano"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-5 nano became generally available in Azure AI Foundry on 7 August 2025, with GPT-5 and GPT-5 mini, the day OpenAI released it: a zero-day lag. Recorded separately from foundry-gpt5-2025-08-07, which names only gpt-5.",
+      "caveat": "The general availability sentence names GPT-5; the nano description sits in the same post.",
+      "sources": [
+        {
+          "publisher": "Microsoft Azure",
+          "title": "GPT-5 in Azure AI Foundry: The future of AI apps and agents starts here",
+          "url": "https://azure.microsoft.com/en-us/blog/gpt-5-in-azure-ai-foundry-the-future-of-ai-apps-and-agents-starts-here/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-08-07",
+          "source_type": "announcement",
+          "quote": "Today, we're announcing general availability of OpenAI's new flagship model, GPT-5, in Azure AI Foundry.",
+          "supports": [
+            "date",
+            "lifecycle"
+          ],
+          "note": "WordPress date 2025-08-07T10:00:00 (Pacific). Read through r.jina.ai because azure.microsoft.com is outside this environment's allowlist."
+        },
+        {
+          "publisher": "Microsoft Azure",
+          "title": "GPT-5 in Azure AI Foundry: The future of AI apps and agents starts here",
+          "url": "https://azure.microsoft.com/en-us/blog/gpt-5-in-azure-ai-foundry-the-future-of-ai-apps-and-agents-starts-here/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-08-07",
+          "source_type": "announcement",
+          "quote": "GPT-5 nano is a new class of reasoning model which focuses on ultra-low-latency and speed with rich Q&A capabilities.",
+          "supports": [
+            "model"
+          ],
+          "note": "The post's per-model pricing table did not survive text extraction, so nano's own deployment rows were not read."
         }
       ]
     },
@@ -3755,6 +4587,92 @@
             "lifecycle"
           ],
           "note": "The page is undated; the day is the GPT-5 launch date already carried by openai-gpt5-2025-08-07."
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt5-nano-2025-08-07",
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-07",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-nano"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI shipped GPT-5 in three API sizes on launch day; gpt-5-nano is the smallest. Recorded separately from openai-gpt5-2025-08-07 and openai-gpt5-mini-2025-08-07 because the registry tracks the sizes as distinct models.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-08-07",
+          "source_type": "changelog",
+          "quote": "Released GPT-5 family of models in the API, including gpt-5, gpt-5-mini, and gpt-5-nano.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed Aug 7."
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing GPT-5 for developers",
+          "url": "https://openai.com/index/introducing-gpt-5-for-developers/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20250807171344/https://openai.com/index/introducing-gpt-5-for-developers/",
+          "quote": "GPT-5 is available now in the API platform in three sizes: gpt-5, gpt-5-mini, and gpt-5-nano.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The page prints no date, so its archived_url is the earliest Wayback capture, which bounds the day rather than stating it."
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt5-pro-2025-08-07",
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-07",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-pro"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI released GPT-5 pro in ChatGPT with the GPT-5 launch on 7 August 2025, replacing OpenAI o3-pro. It had no API until 6 October 2025 (openai-api-gpt5-pro-2025-10-06).",
+      "caveat": "The ChatGPT release, recorded on the OpenAI umbrella surface. The API release followed on 6 October 2025; the lag baseline is the earliest vendor availability, so lag counts from this date.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing GPT-5",
+          "url": "https://openai.com/index/introducing-gpt-5/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20250807174456/https://openai.com/index/introducing-gpt-5/",
+          "quote": "we are also releasing GPT-5 pro, replacing OpenAI o3-pro, a variant of GPT-5 that thinks for ever longer",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The page prints no date, so its archived_url is the earliest Wayback capture, which bounds the day rather than stating it. The quoted sentence does not name the plan; the ChatGPT scope is the launch context recorded in the research dossier, not a quote."
         }
       ]
     },
@@ -3917,6 +4835,131 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "changelog"
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt5-codex-2025-09-15",
+      "kind": "availability",
+      "date": {
+        "start": "2025-09-15",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-codex"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "OpenAI released GPT-5-Codex, a version of GPT-5 further optimised for agentic coding in Codex, in the Codex product (ChatGPT sign-in) on 15 September 2025, before the API.",
+      "caveat": "The Codex-product release. The page says Today but prints no date, so the day rests on its first Wayback capture. The API followed on 23 September 2025 (openai-api-gpt5-codex-2025-09-23). The lag baseline is the earliest vendor availability, so lag counts from this Codex date.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing upgrades to Codex",
+          "url": "https://openai.com/index/introducing-upgrades-to-codex/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20250915190812/https://openai.com/index/introducing-upgrades-to-codex/",
+          "quote": "Today, we're releasing GPT-5-Codex—a version of GPT-5 further optimized for agentic coding in Codex.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The page prints no date, so its archived_url is the earliest Wayback capture, which bounds the day rather than stating it."
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt5-codex-2025-09-23",
+      "kind": "availability",
+      "date": {
+        "start": "2025-09-23",
+        "precision": "day"
+      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "gpt-5-codex"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-5-Codex became generally available in Azure AI Foundry on 23 September 2025, the day it reached the OpenAI API and eight days after the Codex product release. Standard Global deployment in East US 2 and Sweden Central.",
+      "caveat": "The lag to the first vendor availability counts from the Codex product release of 15 September, so it is eight days; against the API release it is zero.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Announcing OpenAI's GPT-5-Codex in Azure AI Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/-/4455524",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-09-23",
+          "source_type": "announcement",
+          "quote": "Today, we're excited to announce OpenAI's GPT-5-Codex is generally available in Azure AI Foundry, and in public preview for GitHub Copilot in Visual Studio Code.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers direct requests with 403. The date is the post's embedded postTime, 2025-09-23T10:26:01.736-07:00 (Pacific time). The deployment type and regions are from the same post."
+        }
+      ]
+    },
+    {
+      "id": "openai-api-gpt5-codex-2025-09-23",
+      "kind": "availability",
+      "date": {
+        "start": "2025-09-23",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "gpt-5-codex"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-5-Codex reached developers through the API on 23 September 2025, in the Responses API only, eight days after the Codex product release.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing upgrades to Codex",
+          "url": "https://openai.com/index/introducing-upgrades-to-codex/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-09-23",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20250915190812/https://openai.com/index/introducing-upgrades-to-codex/",
+          "quote": "Update on September 23, 2025: GPT-5-Codex is now available to developers using Codex via API key",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The dated update sits on the announcement page; the archived_url is the earliest capture, which predates the update."
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-09-23",
+          "source_type": "changelog",
+          "quote": "Launched special-purpose model gpt-5-codex, built and optimized for use with the Codex CLI.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Entry headed Sep 23."
         }
       ]
     },
@@ -4155,6 +5198,112 @@
             "model",
             "lifecycle"
           ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt5-pro-2025-10-06",
+      "kind": "availability",
+      "date": {
+        "start": "2025-10-06",
+        "end": "2025-10-07",
+        "precision": "day"
+      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "gpt-5-pro"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported",
+        "model": "supported",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced on 6 October 2025 that the models OpenAI announced that day were rolling out in Azure AI Foundry, with most customers able to start on 7 October, and the post has a dedicated GPT-5-pro section.",
+      "caveat": "A window: rolling out on 6 October, most customers from 7 October. The sentence that gives the date opens by listing GPT-image-1-mini, GPT-realtime-mini and GPT-audio-mini and does not name GPT-5 pro, so the link rests on the post's dedicated section. The announcement states availability, not a stage; the stage at launch is not recorded. Current Foundry stage is GA; that is current-state evidence, not a launch stage.",
+      "sources": [
+        {
+          "publisher": "Microsoft Azure",
+          "title": "Unleash your creativity at scale: Azure AI Foundry's multimodal revolution",
+          "url": "https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-10-06",
+          "source_type": "announcement",
+          "quote": "the models announced today by OpenAI will be rolling out now in Azure AI Foundry, with most customers being able to get started on October 7, 2025.",
+          "supports": [
+            "date"
+          ],
+          "note": "datePublished 2025-10-06T18:03:45Z. Read through r.jina.ai because azure.microsoft.com is outside this environment's allowlist."
+        },
+        {
+          "publisher": "Microsoft Azure",
+          "title": "Unleash your creativity at scale: Azure AI Foundry's multimodal revolution",
+          "url": "https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-10-06",
+          "source_type": "announcement",
+          "quote": "GPT-5-pro: The pinnacle of reasoning and analytics",
+          "supports": [
+            "model"
+          ],
+          "note": "A section heading. The section's pricing and deployment table did not survive text extraction, so deployment types were not read."
+        }
+      ]
+    },
+    {
+      "id": "openai-api-gpt5-pro-2025-10-06",
+      "kind": "availability",
+      "date": {
+        "start": "2025-10-06",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "gpt-5-pro"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "GPT-5 pro reached the OpenAI API on 6 October 2025, at OpenAI DevDay, in the Responses API only, as the snapshot gpt-5-pro-2025-10-06.",
+      "caveat": "No first-party sentence carrying the date was retrieved: the changelog's Oct 6 block lost its model rows when extracted, so the day rests on the model page, whose platform.openai.com copy was first captured on 6 October 2025 at 19:29 UTC, and on TechCrunch's same-day report.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "GPT-5 pro",
+          "url": "https://platform.openai.com/docs/models/gpt-5-pro",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20251006192916/https://platform.openai.com/docs/models/gpt-5-pro",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The earliest Wayback capture of the model page is 6 October 2025 at 19:29 UTC. The page now lives at developers.openai.com/api/docs/models/gpt-5-pro, where it labels the model Deprecated. The snapshot name gpt-5-pro-2025-10-06 agrees with the date and is not the source."
+        },
+        {
+          "publisher": "TechCrunch",
+          "title": "OpenAI ramps up developer push with more powerful models in its API",
+          "url": "https://techcrunch.com/2025/10/06/openai-ramps-up-developer-push-with-more-powerful-models-in-its-api/",
+          "primary": false,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-10-06",
+          "source_type": "news",
+          "quote": "introducing GPT-5 Pro, its latest language model",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Published 2025-10-06T19:10:27Z."
         }
       ]
     },
@@ -4660,6 +5809,192 @@
       ]
     },
     {
+      "id": "foundry-gpt5-1-codex-2025-11-13",
+      "kind": "availability",
+      "date": {
+        "start": "2025-11-13",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "gpt-5-1-codex"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "GPT-5.1-Codex began rolling out in Foundry on 13 November 2025, the day OpenAI released it, as a Standard Global deployment: a zero-day lag. One post covers both Codex models, recorded as one event per model.",
+      "caveat": "The post says the models will be rolling out today and publishes no end, so the date is a rollout start. The announcement states availability, not a stage; the stage at launch is not recorded. Current Foundry stage is GA; that is current-state evidence, not a launch stage.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "The GPT-5.1 series is now available in Foundry Models",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/-/4469067",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-11-13",
+          "source_type": "announcement",
+          "quote": "The following models will be rolling out in Foundry today:",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The list that follows names GPT-5.1-codex and GPT-5.1-codex-mini. Read through r.jina.ai because techcommunity.microsoft.com answers direct requests with 403. The date is the post's embedded postTime, 2025-11-13T11:12:53.362-08:00 (Pacific time)."
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt5-1-codex-mini-2025-11-13",
+      "kind": "availability",
+      "date": {
+        "start": "2025-11-13",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "gpt-5-1-codex-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "GPT-5.1-Codex-Mini began rolling out in Foundry on 13 November 2025, the day OpenAI released it, as a Standard Global deployment: a zero-day lag. One post covers both Codex models, recorded as one event per model. Microsoft describes it as 'a compact variant for resource-constrained environments'.",
+      "caveat": "The post says the models will be rolling out today and publishes no end, so the date is a rollout start. The announcement states availability, not a stage; the stage at launch is not recorded. Current Foundry stage is GA; that is current-state evidence, not a launch stage.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "The GPT-5.1 series is now available in Foundry Models",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/-/4469067",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-11-13",
+          "source_type": "announcement",
+          "quote": "The following models will be rolling out in Foundry today:",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The list that follows names GPT-5.1-codex and GPT-5.1-codex-mini. Read through r.jina.ai because techcommunity.microsoft.com answers direct requests with 403. The date is the post's embedded postTime, 2025-11-13T11:12:53.362-08:00 (Pacific time)."
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt5-1-codex-2025-11-13",
+      "kind": "availability",
+      "date": {
+        "start": "2025-11-13",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-1-codex"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI released gpt-5.1-codex in the API on 13 November 2025, in the Responses API, with GPT-5.1 for developers. One post covers gpt-5.1-codex and gpt-5.1-codex-mini, recorded as one event per model.",
+      "caveat": "Whether the Codex product had it before 13 November was not checked.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "GPT-5.1 for developers",
+          "url": "https://openai.com/index/gpt-5-1-for-developers/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20251113220155/https://openai.com/index/gpt-5-1-for-developers/",
+          "quote": "We're also releasing `gpt-5.1-codex` and `gpt-5.1-codex-mini` in the API.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The page prints no date, so its archived_url is the earliest Wayback capture, which bounds the day rather than stating it."
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-11-13",
+          "source_type": "changelog",
+          "quote": "Released `gpt-5.1-codex` and `gpt-5.1-codex-mini` to the Responses API.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed Nov 13."
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt5-1-codex-mini-2025-11-13",
+      "kind": "availability",
+      "date": {
+        "start": "2025-11-13",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-1-codex-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI released gpt-5.1-codex-mini in the API on 13 November 2025, in the Responses API, with GPT-5.1 for developers. One post covers gpt-5.1-codex and gpt-5.1-codex-mini, recorded as one event per model.",
+      "caveat": "Whether the Codex product had it before 13 November was not checked.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "GPT-5.1 for developers",
+          "url": "https://openai.com/index/gpt-5-1-for-developers/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20251113220155/https://openai.com/index/gpt-5-1-for-developers/",
+          "quote": "We're also releasing `gpt-5.1-codex` and `gpt-5.1-codex-mini` in the API.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The page prints no date, so its archived_url is the earliest Wayback capture, which bounds the day rather than stating it."
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-11-13",
+          "source_type": "changelog",
+          "quote": "Released `gpt-5.1-codex` and `gpt-5.1-codex-mini` to the Responses API.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed Nov 13."
+        }
+      ]
+    },
+    {
       "id": "foundry-branding-2025-11-18",
       "kind": "milestone",
       "date": {
@@ -4779,6 +6114,44 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "announcement"
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt5-1-codex-max-2025-11-19",
+      "kind": "availability",
+      "date": {
+        "start": "2025-11-19",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-1-codex-max"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "OpenAI released GPT-5.1-Codex-Max in Codex on 19 November 2025, for the CLI, IDE extension, cloud and code review, with API access still to come.",
+      "caveat": "The Codex-product release. The page says today but prints no date, so the day rests on its first Wayback capture. The API followed on 4 December 2025 (openai-api-gpt5-1-codex-max-2025-12-04). The lag baseline is the earliest vendor availability, so lag counts from this Codex date.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Building more with GPT-5.1-Codex-Max",
+          "url": "https://openai.com/index/gpt-5-1-codex-max/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20251119200939/https://openai.com/index/gpt-5-1-codex-max/",
+          "quote": "GPT-5.1-Codex-Max is available in Codex today for use in the CLI, IDE extension, cloud, and code review, and API access is coming soon.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The page prints no date, so its archived_url is the earliest Wayback capture, which bounds the day rather than stating it."
         }
       ]
     },
@@ -5069,6 +6442,91 @@
       ]
     },
     {
+      "id": "openai-api-gpt5-1-codex-max-2025-12-04",
+      "kind": "availability",
+      "date": {
+        "start": "2025-12-04",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "gpt-5-1-codex-max"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-5.1-Codex-Max reached the OpenAI Responses API on 4 December 2025, fifteen days after the Codex product release.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-12-04",
+          "source_type": "changelog",
+          "quote": "Released `gpt-5.1-codex-max` to the Responses API.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed Dec 4. The snapshot version 2025-12-04 agrees and is not the source."
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt5-1-codex-max-2025-12-05",
+      "kind": "availability",
+      "date": {
+        "start": "2025-12-05",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-5-1-codex-max"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-5.1-Codex-Max became generally available in Microsoft Foundry Models on 5 December 2025, the day after the API release and sixteen days after the Codex product release.",
+      "caveat": "First availability could precede the announcement by a day, since the API was out on 4 December; no source separates them. The lag is sixteen days from the Codex release and one day from the API release.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "GPT-5.1-Codex-Max is now generally available in Microsoft Foundry Models",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/-/4475274",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2025-12-05",
+          "source_type": "announcement",
+          "quote": "We're thrilled to announce the general availability of OpenAI's GPT-5.1-codex-max in Microsoft Foundry Models",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers direct requests with 403. The date is the post's embedded postTime, 2025-12-05T09:02:44.431-08:00 (Pacific time). Deployment types and regions are not named in the text read."
+        },
+        {
+          "publisher": "Microsoft Foundry Blog",
+          "title": "What's new in Microsoft Foundry, Dec 2025 and Jan 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-dec-2025-jan-2026/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260219061423/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-dec-2025-jan-2026/",
+          "quote": "GPT-5.1 Codex Max is now generally available in Microsoft Foundry",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "The page writes model names with non-breaking hyphens; they are normalised in the quote."
+        }
+      ]
+    },
+    {
       "id": "m365-anthropic-admin-control-2025-12-08",
       "kind": "policy",
       "date": {
@@ -5271,6 +6729,44 @@
       ]
     },
     {
+      "id": "openai-gpt5-2-codex-2025-12-18",
+      "kind": "availability",
+      "date": {
+        "start": "2025-12-18",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-2-codex"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "OpenAI released GPT-5.2-Codex in Codex for paid ChatGPT users on 18 December 2025, across all Codex surfaces.",
+      "caveat": "The Codex-product release. The page says Today but prints no date, so the day rests on its first Wayback capture. The API followed on 14 January 2026 (openai-api-gpt5-2-codex-2026-01-14). The lag baseline is the earliest vendor availability, so lag counts from this Codex date.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing GPT-5.2-Codex",
+          "url": "https://openai.com/index/introducing-gpt-5-2-codex/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20251218185914/https://openai.com/index/introducing-gpt-5-2-codex/",
+          "quote": "Today we're releasing GPT-5.2-Codex, the most advanced agentic coding model yet for complex, real-world software engineering.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The page prints no date, so its archived_url is the earliest Wayback capture, which bounds the day rather than stating it. The page also says: 'working towards safely enabling access to GPT-5.2-Codex for API users in the coming weeks.'"
+        }
+      ]
+    },
+    {
       "id": "studio-anthropic-default-policy-2026-01-06",
       "kind": "policy",
       "date": {
@@ -5328,6 +6824,77 @@
             "policy"
           ],
           "note": "Scoped to policy deliberately. The page attests the arrangement, not its start date."
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt5-2-codex-2026-01-14",
+      "kind": "availability",
+      "date": {
+        "start": "2026-01-14",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-5-2-codex"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-5.2-Codex became generally available through Azure OpenAI in Microsoft Foundry Models on 14 January 2026, the day it reached the OpenAI API and twenty-seven days after the Codex product release.",
+      "caveat": "The lag to the first vendor availability counts from the Codex product release of 18 December 2025; against the API release it is zero.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Announcing GPT-5.2-Codex in Microsoft Foundry: enterprise-grade AI for secure software engineering",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/announcing-gpt%E2%80%915-2%E2%80%91codex-in-microsoft-foundry-enterprise%E2%80%91grade-ai-for-secure-sof/4485379",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-01-14",
+          "source_type": "announcement",
+          "quote": "Generally available starting today through Azure OpenAI in Microsoft Foundry Models, GPT-5.2-Codex",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers direct requests with 403. The date is the post's embedded postTime, 2026-01-14T10:30:13.053-08:00 (Pacific time). Deployment types and regions are not stated in the post."
+        }
+      ]
+    },
+    {
+      "id": "openai-api-gpt5-2-codex-2026-01-14",
+      "kind": "availability",
+      "date": {
+        "start": "2026-01-14",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "gpt-5-2-codex"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-5.2-Codex reached the OpenAI Responses API on 14 January 2026, twenty-seven days after the Codex product release.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-01-14",
+          "source_type": "changelog",
+          "quote": "Released `gpt-5.2-codex` to the Responses API.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed Jan 14. The snapshot version 2026-01-14 agrees and is not the source."
         }
       ]
     },
@@ -5440,6 +7007,44 @@
       ]
     },
     {
+      "id": "openai-gpt5-3-codex-2026-02-05",
+      "kind": "availability",
+      "date": {
+        "start": "2026-02-05",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-3-codex"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported"
+      },
+      "evidence_note": "OpenAI released GPT-5.3-Codex in Codex on 5 February 2026, for paid ChatGPT plans across the app, CLI, IDE extension and web. The successor to GPT-5.2-Codex, not a variant of GPT-5.3 Instant.",
+      "caveat": "The Codex-product release. The page prints no date, so the day rests on its first Wayback capture. The API followed on 24 February 2026 (openai-api-gpt5-3-codex-2026-02-24). The lag baseline is the earliest vendor availability, so lag counts from this Codex date.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing GPT-5.3-Codex",
+          "url": "https://openai.com/index/introducing-gpt-5-3-codex/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260205182847/https://openai.com/index/introducing-gpt-5-3-codex/",
+          "quote": "GPT-5.3-Codex is available with paid ChatGPT plans, everywhere you can use Codex: the app, CLI, IDE extension and web.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The page prints no date, so its archived_url is the earliest Wayback capture, which bounds the day rather than stating it. The page also says: 'We are working to safely enable API access soon.'"
+        }
+      ]
+    },
+    {
       "id": "anthropic-sonnet4-6-2026-02-17",
       "kind": "availability",
       "date": {
@@ -5539,6 +7144,82 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "changelog"
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt5-3-codex-2026-02-24",
+      "kind": "availability",
+      "date": {
+        "start": "2026-02-24",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-5-3-codex"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "GPT-5.3-Codex began rolling out into Microsoft Foundry on 24 February 2026, the day it reached the OpenAI API and nineteen days after the Codex product release.",
+      "caveat": "The post says the models are rolling out and publishes no end, so the date is a rollout start. The lag to the first vendor availability counts from the Codex product release of 5 February. The announcement states availability, not a stage; the stage at launch is not recorded. Current Foundry stage is GA; that is current-state evidence, not a launch stage.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "New Azure OpenAI models bring fast, expressive and real-time AI experiences in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/new-azure-open-ai-models-bring-fast-expressive-and-real%E2%80%91time-ai-experiences-in-m/4496184",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-02-24",
+          "source_type": "announcement",
+          "quote": "Starting today, GPT-Realtime-1.5, GPT-Audio-1.5, and GPT-5.3-Codex are rolling out into Microsoft Foundry.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers direct requests with 403. The date is the post's embedded postTime, 2026-02-24T15:19:45.461-08:00 (Pacific time). Deployment types and regions are not named in the text read."
+        }
+      ]
+    },
+    {
+      "id": "openai-api-gpt5-3-codex-2026-02-24",
+      "kind": "availability",
+      "date": {
+        "start": "2026-02-24",
+        "precision": "day"
+      },
+      "surface_id": "openai-api",
+      "model_ids": [
+        "gpt-5-3-codex"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-5.3-Codex reached the OpenAI Responses API on 24 February 2026, nineteen days after the Codex product release.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-02-24",
+          "source_type": "changelog",
+          "quote": "Released `gpt-5.3-codex` to the Responses API.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed Feb 24. The snapshot version 2026-02-24 agrees and is not the source."
         }
       ]
     },
@@ -5753,7 +7434,7 @@
       "exposure": "catalogue",
       "confidence": "confirmed",
       "evidence_note": "GPT-5.4 went generally available on Microsoft Foundry on 5 March 2026, the same day as OpenAI's release — a zero-day lag. The retirement schedule carries it at version 2026-03-05, matching.",
-      "caveat": "The retrospective that dates it was published on 9 April, so the day rests on Microsoft's own retrospective statement rather than a same-day post. GPT-5.4 Pro is covered by the same section but is not separately registered.",
+      "caveat": "The retrospective that dates it was published on 9 April, so the day rests on Microsoft's own retrospective statement rather than a same-day post.",
       "sources": [
         {
           "publisher": "Microsoft",
@@ -5770,6 +7451,57 @@
             "model",
             "lifecycle"
           ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt5-4-pro-2026-03-05",
+      "kind": "availability",
+      "date": {
+        "start": "2026-03-05",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-5-4-pro"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-5.4 Pro was available in Microsoft Foundry at launch on 5 March 2026, in Standard Global, the same day as OpenAI's release: a zero-day lag. Microsoft's March retrospective lists it generally available under the heading 'GPT-5.4 + GPT-5.4 Pro (GA)'.",
+      "caveat": "The general availability label for Pro rests on the March retrospective's heading, published on 9 April, not on a same-day statement; the launch post's own general availability sentence names GPT-5.4.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Introducing GPT-5.4 in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-gpt-5-4-in-microsoft-foundry/4499785",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-03-05",
+          "source_type": "announcement",
+          "quote": "GPT-5.4 Pro is priced at $30.00 per million input tokens, and $180.00 per million output tokens, and is available at launch in Standard Global.",
+          "supports": [
+            "date",
+            "model",
+            "exposure"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers direct requests with 403. The date is the post's embedded postTime, 2026-03-05T11:11:40.184-08:00 (Pacific time). The post's general availability sentence names GPT-5.4: 'Today, we're thrilled to announce that OpenAI's GPT-5.4 is now generally available in Microsoft Foundry'."
+        },
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, March 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-mar-2026/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-04-09",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260522100639/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-mar-2026/",
+          "quote": "GPT-5.4 + GPT-5.4 Pro (GA)",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "A section heading. The section text says GPT-5.4 went generally available on March 5."
         }
       ]
     },
@@ -5797,6 +7529,57 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "announcement"
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt5-4-pro-2026-03-05",
+      "kind": "availability",
+      "date": {
+        "start": "2026-03-05",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-4-pro"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI released GPT-5.4 Pro on 5 March 2026 in ChatGPT, for the Pro and Enterprise plans, and in the Responses API, the same day as GPT-5.4.",
+      "caveat": "Recorded separately from openai-gpt5-4-2026-03-05, which covers GPT-5.4.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing GPT-5.4",
+          "url": "https://openai.com/index/introducing-gpt-5-4/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260305181141/https://openai.com/index/introducing-gpt-5-4/",
+          "quote": "We're also releasing GPT-5.4 Pro in ChatGPT and the API, for people who want maximum performance on complex tasks.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The page prints no date, so its archived_url is the earliest Wayback capture, which bounds the day rather than stating it."
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-03-05",
+          "source_type": "changelog",
+          "quote": "released GPT-5.4 Pro to the Responses API for tougher problems that benefit from more compute.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed Mar 5."
         }
       ]
     },
@@ -5877,6 +7660,210 @@
           "primary": true,
           "retrieved_at": "2026-07-26",
           "source_type": "announcement"
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt5-4-mini-2026-03-17",
+      "kind": "availability",
+      "date": {
+        "start": "2026-03-17",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-5-4-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "GPT-5.4 mini reached Microsoft Foundry on 17 March 2026, the day OpenAI released it, in Standard Global with Data Zone US available: a zero-day lag. Microsoft's March retrospective states it shipped on 17 March and lists it as generally available.",
+      "caveat": "The day and the general availability stage rest on Microsoft's own retrospective, published on 9 April, on the precedent of foundry-gpt5-4-ga-2026-03-05; the launch post says rolling out today. Data Zone EU was still rolling out at launch.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Introducing OpenAI's GPT-5.4 mini and GPT-5.4 nano for low-latency AI",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-openai%E2%80%99s-gpt-5-4-mini-and-gpt-5-4-nano-for-low-latency-ai/4500569",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-03-17",
+          "source_type": "announcement",
+          "quote": "GPT-5.4 mini and GPT-5.4 nano will be rolling out today in Microsoft Foundry",
+          "supports": [
+            "model"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers direct requests with 403. The date is the post's embedded postTime, 2026-03-17T10:55:52.876-07:00 (Pacific time). The post also says: 'The models are also available in Data Zone US. It is rolling out to Data Zone EU.'"
+        },
+        {
+          "publisher": "Microsoft",
+          "title": "What's new in Microsoft Foundry, March 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-mar-2026/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-04-09",
+          "source_type": "release_notes",
+          "archived_url": "https://web.archive.org/web/20260522100639/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-mar-2026/",
+          "quote": "GPT-5.4 Mini shipped on March 17",
+          "supports": [
+            "date",
+            "lifecycle"
+          ],
+          "note": "Under the heading 'GPT-5.4 Mini (GA)'. The page writes the model name with a capital M."
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt5-4-nano-2026-03-17",
+      "kind": "availability",
+      "date": {
+        "start": "2026-03-17",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "gpt-5-4-nano"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "GPT-5.4 nano began rolling out in Microsoft Foundry on 17 March 2026, the day OpenAI released it, in Standard Global with Data Zone US available: a zero-day lag.",
+      "caveat": "The post says the models will be rolling out today and publishes no end, so the date is a rollout start. The March retrospective's general availability heading names only GPT-5.4 mini. The announcement states availability, not a stage; the stage at launch is not recorded. Current Foundry stage is GA; that is current-state evidence, not a launch stage.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Introducing OpenAI's GPT-5.4 mini and GPT-5.4 nano for low-latency AI",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-openai%E2%80%99s-gpt-5-4-mini-and-gpt-5-4-nano-for-low-latency-ai/4500569",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-03-17",
+          "source_type": "announcement",
+          "quote": "GPT-5.4 mini and GPT-5.4 nano will be rolling out today in Microsoft Foundry",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers direct requests with 403. The date is the post's embedded postTime, 2026-03-17T10:55:52.876-07:00 (Pacific time)."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Introducing OpenAI's GPT-5.4 mini and GPT-5.4 nano for low-latency AI",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-openai%E2%80%99s-gpt-5-4-mini-and-gpt-5-4-nano-for-low-latency-ai/4500569",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-03-17",
+          "source_type": "announcement",
+          "quote": "GPT-5.4 nano is the smallest and fastest model in the lineup",
+          "supports": [
+            "model"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt5-4-mini-2026-03-17",
+      "kind": "availability",
+      "date": {
+        "start": "2026-03-17",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-4-mini"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI released GPT-5.4 mini on 17 March 2026. GPT-5.4 mini is available in the API, Codex and ChatGPT. One post covers mini and nano, recorded as one event per model because their exposure differs.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing GPT-5.4 mini and nano",
+          "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260317172015/https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+          "quote": "GPT-5.4 mini is available today in the API, Codex, and ChatGPT.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The page prints no date, so its archived_url is the earliest Wayback capture, which bounds the day rather than stating it."
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-03-17",
+          "source_type": "changelog",
+          "quote": "Released GPT-5.4 mini and GPT-5.4 nano to the Chat Completions and Responses API.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed Mar 17."
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt5-4-nano-2026-03-17",
+      "kind": "availability",
+      "date": {
+        "start": "2026-03-17",
+        "precision": "day"
+      },
+      "surface_id": "openai",
+      "model_ids": [
+        "gpt-5-4-nano"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "OpenAI released GPT-5.4 nano on 17 March 2026. GPT-5.4 nano is available only in the API, not in ChatGPT or Codex. One post covers mini and nano, recorded as one event per model because their exposure differs.",
+      "sources": [
+        {
+          "publisher": "OpenAI",
+          "title": "Introducing GPT-5.4 mini and nano",
+          "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260317172015/https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+          "quote": "GPT-5.4 nano is only available in the API",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because openai.com answers direct requests with 403. The page prints no date, so its archived_url is the earliest Wayback capture, which bounds the day rather than stating it."
+        },
+        {
+          "publisher": "OpenAI",
+          "title": "Changelog | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/changelog",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-03-17",
+          "source_type": "changelog",
+          "quote": "Released GPT-5.4 mini and GPT-5.4 nano to the Chat Completions and Responses API.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry headed Mar 17."
         }
       ]
     },
@@ -9137,6 +11124,70 @@
       ]
     },
     {
+      "id": "microsoft-mai-image-2-5-pro-2026-07-23",
+      "kind": "availability",
+      "date": {
+        "start": "2026-07-23",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-ai",
+      "model_ids": [
+        "mai-image-2-5-pro"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft AI announced MAI-Image-2.5-Pro on 23 July 2026, its highest-fidelity image model to date, in public preview in the Foundry catalogue. Learn's Foundry Models sold by Azure page lacked the row on 22 July and listed it on 24 July.",
+      "caveat": "Recorded on the microsoft-ai vendor surface because for first-party models the Foundry catalogue is the vendor channel, so there is no separate Foundry event and the lag from the vendor is zero by construction. The catalogue version string 2026-06-19 is a build identifier, 34 days before this date, and dates nothing.",
+      "sources": [
+        {
+          "publisher": "Microsoft AI",
+          "title": "Introducing MAI-Image-2.5-Pro and MAI-Voice-2-Flash",
+          "url": "https://microsoft.ai/news/introducing-mai-image-2-5-pro-and-mai-voice-2-flash/",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-07-23",
+          "source_type": "announcement",
+          "quote": "MAI-Image-2.5-Pro is now in public preview.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "The article's date line reads July 23, 2026, with no time zone. The closing paragraph links to the Foundry catalogue ('get started with the models in Foundry') and to the MAI Playground."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Foundry Models sold by Azure",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20260724145214/https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure",
+          "quote": "MAI-Image-2.5-Pro Preview | Image-to-Image and Text-to-Image.",
+          "supports": [
+            "date",
+            "exposure"
+          ],
+          "note": "Capture of 24 July 2026 (updated_at 2026-07-23T16:18Z), which carries the row."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Foundry Models sold by Azure",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20260722172804/https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure",
+          "supports": [
+            "date"
+          ],
+          "note": "Capture of 22 July 2026 (updated_at 2026-07-07): lists MAI-Image-2.5-Flash but no MAI-Image-2.5-Pro row."
+        }
+      ]
+    },
+    {
       "id": "anthropic-opus5-2026-07-24",
       "kind": "availability",
       "date": {
@@ -9668,6 +11719,61 @@
       ]
     },
     {
+      "id": "meta-muse-glimmer-2026-08-10",
+      "kind": "availability",
+      "date": {
+        "start": "2026-08-10",
+        "precision": "day"
+      },
+      "surface_id": "meta",
+      "model_ids": [
+        "muse-glimmer"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Meta introduced Muse Glimmer on 10 August 2026 and open sourced its weights under an Apache 2.0 licence, the next model from Meta Superintelligence Labs. A distinct model from Muse Spark Open.",
+      "caveat": "The announcement states availability, not a stage; the stage at launch is not recorded. No Microsoft Foundry arrival is recorded: no Microsoft source dates one (see foundry-muse-glimmer-arrival).",
+      "sources": [
+        {
+          "publisher": "Meta AI",
+          "title": "Introducing Muse Glimmer: an open agentic model",
+          "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-08-10",
+          "source_type": "announcement",
+          "quote": "Today, we're introducing Muse Glimmer, the next model from Meta Superintelligence Labs, and open sourcing the model weights under a permissive Apache 2.0 license.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "The post is stamped 2026-08-10."
+        },
+        {
+          "publisher": "Hugging Face",
+          "title": "Muse Glimmer",
+          "url": "https://huggingface.co/blog/muse-glimmer",
+          "primary": false,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-08-10",
+          "source_type": "announcement",
+          "quote": "released today",
+          "supports": [
+            "date"
+          ],
+          "note": "The co-launch post, stamped 2026-08-10. The weights repository meta-models/Muse-Glimmer-30B was created on 2026-08-09, before the release, so creation is not used as the date."
+        }
+      ]
+    },
+    {
       "id": "github-copilot-mai-code-1-1-flash-2026-08-11",
       "kind": "availability",
       "date": {
@@ -9754,6 +11860,57 @@
             "lifecycle"
           ],
           "archived_url": "https://web.archive.org/web/20260812153731/https://x.ai/news/grok-4-6"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-v4-pro-0813-2026-08-13",
+      "kind": "availability",
+      "date": {
+        "start": "2026-08-13",
+        "precision": "day"
+      },
+      "surface_id": "deepseek",
+      "model_ids": [
+        "deepseek-v4-pro-0813"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "DeepSeek released the 0813 build as the GA release of DeepSeek-V4-Pro on 13 August 2026, on the app, the web and the API, superseding the April 2026 preview. The API model name deepseek-v4-pro is unchanged.",
+      "caveat": "Dated from the changelog's 2026-08-13 entry, with the weights repository's creation timestamp agreeing. The 0813 in the name and the Foundry version string 2026-08-13 also agree and are not the source. No Microsoft Foundry arrival is recorded: no Microsoft source dates one (see foundry-deepseek-v4-pro-0813-arrival).",
+      "sources": [
+        {
+          "publisher": "DeepSeek",
+          "title": "Change Log | DeepSeek API Docs",
+          "url": "https://api-docs.deepseek.com/updates",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-08-13",
+          "source_type": "changelog",
+          "quote": "The GA release of DeepSeek-V4-Pro has been rolled out on the APP, Web, and API.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Entry dated 2026-08-13. Read through r.jina.ai; the page's own timestamp is Mon, 19 Oct 2026."
+        },
+        {
+          "publisher": "Hugging Face",
+          "title": "deepseek-ai/DeepSeek-V4-Pro-0813",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-08-13",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20260813123623/https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+          "quote": "DeepSeek-V4-Pro-0813 is the official release of DeepSeek-V4-Pro, superseding the preview version",
+          "supports": [
+            "model"
+          ],
+          "note": "The repository's createdAt is 2026-08-13T03:05:06Z via the Hugging Face API."
         }
       ]
     },
@@ -15361,11 +17518,16 @@
     },
     {
       "id": "meta-muse-glimmer-release-evidence",
-      "state": "open",
+      "state": "promoted",
       "working_claim": "Meta announced Muse Glimmer as an open-source, open-weight model based on Muse Spark.",
       "reason": "The candidate source is third-party coverage and the cited Thurrott URL was not fetchable from this environment at triage time (DNS lookup failure). No first-party Meta artefact was found in this pass to attest a release date, lifecycle scope, or whether Muse Glimmer and Muse Spark are durable product names that belong in the registry.",
       "target": "Pin a first-party Meta source (for example ai.meta.com or about.fb.com) that names Muse Glimmer, states a dated release fact, and clarifies model scope. If only undated/current-state references are available, keep this as backlog rather than promoting an inferred event. October 2026 pass: Meta's dated first-party posts now exist for Muse Wonder (12 October 2026) and Muse Spark Open (15 October 2026), both recorded as meta-muse-wonder-2026-10-12 and meta-muse-spark-open-2026-10-15; Meta's undated product page for Muse Spark Open says the model is derived from 'the Muse Spark model we released in August'. Muse Spark's August release and Muse Glimmer remain undated here, and Hugging Face repository timestamps are not release dates (the Muse Spark Open repositories were created a month before its release).",
-      "model_ids": [],
+      "resolution": "Meta's own research post of 10 August 2026 introduces Muse Glimmer and open sources its weights under Apache 2.0, and Hugging Face's co-launch post says it was released that day. Recorded as meta-muse-glimmer-2026-08-10 and registered as muse-glimmer, a distinct model from muse-spark-open. Muse Spark's own August release remains undated here. The Microsoft Foundry arrival is not dated by any source and is tracked in foundry-muse-glimmer-arrival.",
+      "resolved_on": "2026-10-28",
+      "promoted_to": "meta-muse-glimmer-2026-08-10",
+      "model_ids": [
+        "muse-glimmer"
+      ],
       "surface_ids": [
         "meta"
       ],
@@ -17038,6 +19200,138 @@
       "target": "Sweep the usual sources across 24 to 26 October 2026 - GitHub Copilot changelog, Microsoft Foundry blog, Microsoft Copilot blog, the retirement schedule, Microsoft 365 Copilot and Copilot Studio release notes, and the vendor newsrooms - then either record what is found or close this item as confirming nothing else landed. Known gaps from this follow-up: GPT-6.1 Terra on Microsoft 365 Copilot, Cowork or Copilot Studio, for which the only item seen was a third-party report of a configuration leak, which is not recorded; a GPT-6.1 Terra Pro variant and a GPT-6.1 Sol Pro variant listed by a third-party router with no OpenAI source read; Moonshot's Kimi K3.1 Pro, listed by the same router on 23 October with no vendor source read; and everything named in sweep-2026-09-26-to-10-23, which remains open. No Wayback lookups were run for this follow-up; the three sources need captures backfilled.",
       "model_ids": [],
       "surface_ids": []
+    },
+    {
+      "id": "foundry-deepseek-v4-pro-0813-arrival",
+      "state": "open",
+      "working_claim": "DeepSeek-V4-Pro-0813 reached the Microsoft Foundry catalogue, where it was first seen in preview in a single region.",
+      "reason": "The Foundry Models API listed DeepSeek-V4-Pro-0813 at Preview in swedencentral only, with no other region, when the catalogue watcher first ran on 27 October 2026. That first_seen is the watcher's first run, so it dates the watcher's first look and not the arrival. No Microsoft source dates the listing: Learn's models sold by Azure page, its region-availability page and the retirement schedule carry no row for it, and list DeepSeek-V4-Pro at version 2026-04-23. The version string 2026-08-13 equals DeepSeek's release day and is a build identifier, not evidence of arrival. DeepSeek's own release of 13 August 2026 is recorded as deepseek-v4-pro-0813-2026-08-13.",
+      "target": "A Microsoft post, Learn revision or Azure update that names DeepSeek-V4-Pro-0813 and dates its listing. Already searched without result: Learn's Foundry Models sold by Azure page (live, and Wayback captures from 10 August to 14 September 2026), its region-availability page (captures of 24 August, 28 September and 15 October), the retirement schedule (captures from 7 June to 12 October, and the revision of 26 October), the Foundry 'What's new' roundups for July and August (published 9 September) and for September (published 16 October), and the Tech Community post of 19 August that dated DeepSeek-V4-Flash-0731. The catalogue page itself is client-rendered and returns an empty shell. Once a dated source exists, record the arrival and weigh the Preview-in-one-region state against the GA label Foundry gives DeepSeek-V4-Pro.",
+      "model_ids": [
+        "deepseek-v4-pro-0813"
+      ],
+      "surface_ids": [
+        "microsoft-foundry"
+      ],
+      "sources": [
+        {
+          "publisher": "CtrlAltBen Frontier Model Tracker",
+          "title": "Seed checkpoint, Foundry Models API, swedencentral, 2026-10-27T19:30:00Z",
+          "url": "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/9e97f6274e6c6d6ada5f71530865c85a46b634cf/checkpoints/arm/swedencentral/2026-10-27T19-30-00Z.json",
+          "primary": false,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-10-27",
+          "source_type": "documentation",
+          "quote": "\"watched\":{\"name\":\"DeepSeek-V4-Pro-0813\",\"version\":\"2026-08-13\",\"format\":\"DeepSeek\",\"lifecycle_status\":\"Preview\",\"lifecycle_portal\":\"Preview\"",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "The seed of the catalogue watcher, cited at its commit-pinned URL. API lifecycleStatus and portal word are both Preview. The entry's first_seen is the watcher's first run, not an arrival date. DeepSeek-V4-Pro-0813 appears in this region only; the other region checkpoints carry no entry for it."
+        }
+      ]
+    },
+    {
+      "id": "foundry-muse-glimmer-arrival",
+      "state": "open",
+      "working_claim": "Muse-Glimmer-30B reached the Microsoft Foundry catalogue between Meta's release on 10 August 2026 and 12 October 2026, and its Foundry stage is unresolved.",
+      "reason": "No first-party Microsoft source dates the catalogue arrival. The only bound is Learn's fine-tuning overview, whose earliest Wayback capture (12 October 2026) already lists Muse-Glimmer-30B as preview; no earlier capture of that page exists, so the capture bounds the arrival from above without dating it. Microsoft's Tech Community post of 22 October 2026 on open-source fine-tuning names it among models joining Foundry's managed open-source collection with supervised fine-tuning support, and describes that route as a public preview; that dates the fine-tuning route, not the catalogue arrival. The stage conflicts: Learn and the 22 October post say preview for fine-tuning, while the Foundry Models API on 27 October lists Muse-Glimmer-30B as GenerallyAvailable in 10 regions. Both are recorded and neither is picked. Meta's release is recorded as meta-muse-glimmer-2026-08-10.",
+      "target": "A Microsoft post, Learn revision or Azure update that dates the catalogue listing and states its stage. Already searched without result: the Foundry 'What's new' roundups for July and August (published 9 September) and September (published 16 October), Azure Updates, Message Center, Meta's launch material (which does not name Foundry) and the Fireworks catalogue page history (no Wayback captures after 5 August 2026). The Hugging Face launch post names Inference Endpoints, not Foundry. Once a dated source exists, record the arrival and decide whether the catalogue stage and the fine-tuning stage are separate claims.",
+      "model_ids": [
+        "muse-glimmer"
+      ],
+      "surface_ids": [
+        "microsoft-foundry"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Fine-tuning in Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/fine-tuning/overview",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20261012131543/https://learn.microsoft.com/en-us/azure/foundry/fine-tuning/overview",
+          "quote": "Muse-Glimmer-30B (preview)",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Capture of 12 October 2026, the page's earliest. The row reads Managed: SFT, RFT; Serverless: no; Managed compute: yes; Fireworks: yes."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Foundry Fine-Tuning: open-source model expansion, MAI-Code, and shared multi-LoRA deployments",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/foundry-fine-tuning-open-source-model-expansion-mai-code-and-shared-multi-lora-d/4565915",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-10-22",
+          "source_type": "announcement",
+          "quote": "Muse-Glimmer-30B, qwen3.8-27b, qwen3.6-35b-a3b and gpt-oss-120b join Foundry's managed open-source model collection, with supervised fine-tuning (SFT) support across all four.",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai because techcommunity.microsoft.com answers direct requests with 403. The date is the post's embedded postTime, 2026-10-22T14:53:18-07:00 (Pacific time)."
+        },
+        {
+          "publisher": "CtrlAltBen Frontier Model Tracker",
+          "title": "Seed checkpoint, Foundry Models API, australiaeast, 2026-10-27T19:30:00Z",
+          "url": "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/9e97f6274e6c6d6ada5f71530865c85a46b634cf/checkpoints/arm/australiaeast/2026-10-27T19-30-00Z.json",
+          "primary": false,
+          "retrieved_at": "2026-10-28",
+          "published_at": "2026-10-27",
+          "source_type": "documentation",
+          "quote": "\"watched\":{\"name\":\"Muse-Glimmer-30B\",\"version\":\"1\",\"format\":\"Meta\",\"lifecycle_status\":\"GenerallyAvailable\",\"lifecycle_portal\":\"Generally Available\"",
+          "supports": [
+            "model",
+            "lifecycle"
+          ],
+          "note": "The seed of the catalogue watcher, cited at its commit-pinned URL. The same entry appears in the checkpoints of ten regions. Its first_seen is the watcher's first run, not an arrival date."
+        }
+      ]
+    },
+    {
+      "id": "foundry-gpt-oss-stage",
+      "state": "open",
+      "working_claim": "gpt-oss-120b and gpt-oss-20b have a single current Foundry lifecycle stage.",
+      "reason": "Microsoft's two current pages disagree. Learn's Foundry Models sold by Azure page labels both models '(Preview)', while the model retirement schedule lists gpt-oss-120b as GA with a retirement date of 2027-09-15 and has no row for gpt-oss-20b. Neither page dates a stage transition, so the launch stage on 5 August 2025 is unrecorded too: foundry-gpt-oss-120b-2025-08-05 and foundry-gpt-oss-20b-2025-08-05 carry ga only because an availability event must carry a lifecycle, and say so. Both are recorded here and neither is picked.",
+      "target": "Wayback revisions of the Learn catalogue page and of the retirement schedule (and its older paths) that date when the Preview label appeared and whether either page ever said GA, or a Microsoft statement of the stage of either model. Not yet searched: those revisions. Also unexplained is why gpt-oss-20b is absent from the retirement schedule.",
+      "model_ids": [
+        "gpt-oss-120b",
+        "gpt-oss-20b"
+      ],
+      "surface_ids": [
+        "microsoft-foundry"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Foundry Models sold by Azure",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "documentation",
+          "quote": "gpt-oss-20b (Preview)",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "Retrieved live on 28 October 2026; the page's updated_at is 2026-10-08T22:09:00Z. The gpt-oss-120b row carries the same '(Preview)' label beside a footnote marker, and the page says gpt-oss-120b requires a Foundry project to deploy."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Model lifecycle and retirement",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/model-lifecycle-retirement",
+          "primary": true,
+          "retrieved_at": "2026-10-28",
+          "source_type": "documentation",
+          "quote": "gpt-oss-120b | 1 | GA | 2027-09-15",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "Retrieved live on 28 October 2026; the page's updated_at is 2026-09-23T17:11:00Z. The row sits under the OpenAI-OSS heading, and the table has no gpt-oss-20b row."
+        }
+      ]
     }
   ]
 }
