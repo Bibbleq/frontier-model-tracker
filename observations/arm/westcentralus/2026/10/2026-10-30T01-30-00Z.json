@@ -1,0 +1,412 @@
+{
+  "schema_version": 1,
+  "source": "arm",
+  "region": "westcentralus",
+  "observed_at": "2026-10-30T01:30:00Z",
+  "previous_run_at": "2026-10-29T19:30:00Z",
+  "runs_since_previous_file": 3,
+  "previous_file": "observations/arm/westcentralus/2026/10/2026-10-29T01-30-00Z.json",
+  "checkpoint": "checkpoints/arm/westcentralus/2026-10-27T19-30-00Z.json",
+  "observed_from": "standard pay-as-you-go and Visual Studio Enterprise subscriptions",
+  "entry_count": 93,
+  "cell_count": 120,
+  "snapshot_sha256": "2ac5393fdbfb9bcc186064c75e95208a0dc83575c3f4bab0d8fb795ab9fe18c4",
+  "keys_present": [
+    "Codestral-2501@2",
+    "Cohere-Embed-V5-Fast@1",
+    "Cohere-Embed-V5-Pro@1",
+    "Cohere-command-a-plus-05-2026@1",
+    "Cohere-embed-v3-english@1",
+    "Cohere-embed-v3-multilingual@1",
+    "Cohere-parse-v5@1",
+    "Cohere-rerank-v4.0-fast@1",
+    "Cohere-rerank-v4.0-pro@1",
+    "Cohere-rerank-v5-fast@1",
+    "Cohere-rerank-v5-pro@1",
+    "DeepSeek-R1@1",
+    "DeepSeek-V3.2-Speciale@1",
+    "DeepSeek-V3.2@1",
+    "DeepSeek-V4-Flash-0731@2026-07-31",
+    "DeepSeek-V4-Flash@2026-04-23",
+    "DeepSeek-V4-Pro@2026-04-23",
+    "DeepSeek-V4.1-Flash@2026-09-10",
+    "FLUX-1.1-pro@1",
+    "FLUX.1-Kontext-pro@1",
+    "FLUX.2-flex@1",
+    "FLUX.2-pro@1",
+    "Kimi-K2.5@1",
+    "Kimi-K2.6@2026-04-20",
+    "Kimi-K2.7-Code@2026-06-12",
+    "Llama-3.3-70B-Instruct@1",
+    "Llama-3.3-70B-Instruct@2",
+    "Llama-3.3-70B-Instruct@3",
+    "Llama-3.3-70B-Instruct@4",
+    "Llama-3.3-70B-Instruct@5",
+    "Llama-3.3-70B-Instruct@9",
+    "Llama-4-Maverick-17B-128E-Instruct-FP8@1",
+    "Llama-4-Scout-17B-16E-Instruct@1",
+    "MAI-Image-2.5-Flash@2026-06-02",
+    "MAI-Image-2.5-Pro@2026-06-19",
+    "MAI-Image-2.5@2026-06-02",
+    "MAI-Image-2.6-Flash@2026-07-31",
+    "MAI-Image-2.6@2026-07-31",
+    "MAI-Image-2@2026-02-20",
+    "MAI-Image-2e@2026-04-09",
+    "MAI-Thinking-1@2026-06-01",
+    "Microsoft-Decision-1@1",
+    "Ministral-3B@1",
+    "Mistral-Large-3@1",
+    "Mistral-large@1",
+    "Phi-4-mini-instruct@1",
+    "Phi-4-mini-reasoning@1",
+    "Phi-4-multimodal-instruct@1",
+    "Phi-4-reasoning@1",
+    "Phi-4@2",
+    "Phi-4@3",
+    "Phi-4@4",
+    "Phi-4@5",
+    "Phi-4@6",
+    "Phi-4@7",
+    "claude-fable-5-1@1",
+    "claude-haiku-4-5@2",
+    "claude-haiku-4-5@20251001",
+    "claude-haiku-5-5@1",
+    "claude-haiku-5-5@2",
+    "claude-opus-4-1@20250805",
+    "claude-opus-4-5@20251101",
+    "claude-opus-4-6@1",
+    "claude-opus-4-7@1",
+    "claude-opus-4-8@1",
+    "claude-opus-4-8@2",
+    "claude-opus-5-5-fast@2",
+    "claude-opus-5-5@1",
+    "claude-opus-5-5@2",
+    "claude-opus-5@1",
+    "claude-opus-5@2",
+    "claude-sonnet-4-5@20250929",
+    "claude-sonnet-4-6@1",
+    "claude-sonnet-5-5@1",
+    "claude-sonnet-5-5@2",
+    "claude-sonnet-5@1",
+    "claude-sonnet-5@2",
+    "cohere-command-a@1",
+    "embed-v-4-0@1",
+    "gpt-oss-120b@1",
+    "gpt-oss-20b@11",
+    "grok-4-1-fast-non-reasoning@1",
+    "grok-4-1-fast-reasoning@1",
+    "grok-4-20-non-reasoning@1",
+    "grok-4-20-reasoning@1",
+    "grok-4.3@1",
+    "grok-4.6@1",
+    "grok-4.7@1",
+    "mistral-document-ai-2512@1",
+    "mistral-medium-2505@1",
+    "mistral-medium-3-5@1",
+    "mistral-ocr-4-0@1",
+    "mistral-small-2503@1"
+  ],
+  "changes": [
+    {
+      "kind": "deprecation_moved",
+      "model_key": "Cohere-embed-v3-english@1",
+      "window_start": "2026-10-29T19:30:00Z",
+      "window_end": "2026-10-30T01:30:00Z",
+      "fields": [
+        "deprecation_inference",
+        "skus[GlobalStandard].deprecation_date"
+      ],
+      "before": {
+        "name": "Cohere-embed-v3-english",
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2099-12-31T00:00:00Z"
+          }
+        ],
+        "format": "Cohere",
+        "version": "1",
+        "capabilities": {},
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2099-12-31T00:00:00Z"
+      },
+      "after": {
+        "name": "Cohere-embed-v3-english",
+        "version": "1",
+        "format": "Cohere",
+        "lifecycle_status": "GenerallyAvailable",
+        "lifecycle_portal": "Generally Available",
+        "deprecation_inference": "2027-02-15T00:00:00Z",
+        "deprecation_fine_tune": null,
+        "is_default_version": true,
+        "capabilities": {},
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-02-15T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "deprecation_moved",
+      "model_key": "Cohere-embed-v3-multilingual@1",
+      "window_start": "2026-10-29T19:30:00Z",
+      "window_end": "2026-10-30T01:30:00Z",
+      "fields": [
+        "deprecation_inference",
+        "skus[GlobalStandard].deprecation_date"
+      ],
+      "before": {
+        "name": "Cohere-embed-v3-multilingual",
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2099-12-31T00:00:00Z"
+          }
+        ],
+        "format": "Cohere",
+        "version": "1",
+        "capabilities": {},
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2099-12-31T00:00:00Z"
+      },
+      "after": {
+        "name": "Cohere-embed-v3-multilingual",
+        "version": "1",
+        "format": "Cohere",
+        "lifecycle_status": "GenerallyAvailable",
+        "lifecycle_portal": "Generally Available",
+        "deprecation_inference": "2027-02-15T00:00:00Z",
+        "deprecation_fine_tune": null,
+        "is_default_version": true,
+        "capabilities": {},
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-02-15T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "deprecation_moved",
+      "model_key": "DeepSeek-V3.2@1",
+      "window_start": "2026-10-29T19:30:00Z",
+      "window_end": "2026-10-30T01:30:00Z",
+      "fields": [
+        "deprecation_inference",
+        "skus[GlobalStandard].deprecation_date"
+      ],
+      "before": {
+        "name": "DeepSeek-V3.2",
+        "skus": [
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2099-06-01T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2099-12-31T00:00:00Z"
+          }
+        ],
+        "format": "DeepSeek",
+        "version": "1",
+        "capabilities": {
+          "agentsV2": "true",
+          "chatCompletion": "true"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2099-12-31T00:00:00Z"
+      },
+      "after": {
+        "name": "DeepSeek-V3.2",
+        "version": "1",
+        "format": "DeepSeek",
+        "lifecycle_status": "GenerallyAvailable",
+        "lifecycle_portal": "Generally Available",
+        "deprecation_inference": "2027-11-01T00:00:00Z",
+        "deprecation_fine_tune": null,
+        "is_default_version": true,
+        "capabilities": {
+          "agentsV2": "true",
+          "chatCompletion": "true"
+        },
+        "skus": [
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2099-06-01T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-11-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "deprecation_moved",
+      "model_key": "cohere-command-a@1",
+      "window_start": "2026-10-29T19:30:00Z",
+      "window_end": "2026-10-30T01:30:00Z",
+      "fields": [
+        "deprecation_inference",
+        "skus[GlobalStandard].deprecation_date"
+      ],
+      "before": {
+        "name": "cohere-command-a",
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2099-12-31T00:00:00Z"
+          }
+        ],
+        "format": "Cohere",
+        "version": "1",
+        "capabilities": {
+          "assistants": "false",
+          "chatCompletion": "true"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2099-12-31T00:00:00Z"
+      },
+      "after": {
+        "name": "cohere-command-a",
+        "version": "1",
+        "format": "Cohere",
+        "lifecycle_status": "GenerallyAvailable",
+        "lifecycle_portal": "Generally Available",
+        "deprecation_inference": "2027-02-15T00:00:00Z",
+        "deprecation_fine_tune": null,
+        "is_default_version": true,
+        "capabilities": {
+          "assistants": "false",
+          "chatCompletion": "true"
+        },
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-02-15T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "deprecation_moved",
+      "model_key": "embed-v-4-0@1",
+      "window_start": "2026-10-29T19:30:00Z",
+      "window_end": "2026-10-30T01:30:00Z",
+      "fields": [
+        "deprecation_inference",
+        "skus[GlobalStandard].deprecation_date"
+      ],
+      "before": {
+        "name": "embed-v-4-0",
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2099-12-31T00:00:00Z"
+          }
+        ],
+        "format": "Cohere",
+        "version": "1",
+        "capabilities": {},
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2099-12-31T00:00:00Z"
+      },
+      "after": {
+        "name": "embed-v-4-0",
+        "version": "1",
+        "format": "Cohere",
+        "lifecycle_status": "GenerallyAvailable",
+        "lifecycle_portal": "Generally Available",
+        "deprecation_inference": "2027-06-01T00:00:00Z",
+        "deprecation_fine_tune": null,
+        "is_default_version": true,
+        "capabilities": {},
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-06-01T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "deprecation_moved",
+      "model_key": "gpt-oss-120b@1",
+      "window_start": "2026-10-29T19:30:00Z",
+      "window_end": "2026-10-30T01:30:00Z",
+      "fields": [
+        "deprecation_inference",
+        "skus[DeveloperTier].deprecation_date",
+        "skus[GlobalStandard].deprecation_date"
+      ],
+      "before": {
+        "name": "gpt-oss-120b",
+        "skus": [
+          {
+            "name": "DeveloperTier",
+            "deprecation_date": "2099-12-31T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2099-12-31T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI-OSS",
+        "version": "1",
+        "capabilities": {
+          "agentsV2": "true",
+          "chatCompletion": "true",
+          "FineTuneTokensMaxValue": "3000000000"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": "2099-12-31T00:00:00Z",
+        "deprecation_inference": "2099-12-31T00:00:00Z"
+      },
+      "after": {
+        "name": "gpt-oss-120b",
+        "version": "1",
+        "format": "OpenAI-OSS",
+        "lifecycle_status": "GenerallyAvailable",
+        "lifecycle_portal": "Generally Available",
+        "deprecation_inference": "2027-09-15T00:00:00Z",
+        "deprecation_fine_tune": "2099-12-31T00:00:00Z",
+        "is_default_version": true,
+        "capabilities": {
+          "FineTuneTokensMaxValue": "3000000000",
+          "agentsV2": "true",
+          "chatCompletion": "true"
+        },
+        "skus": [
+          {
+            "name": "DeveloperTier",
+            "deprecation_date": "2027-09-15T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-09-15T00:00:00Z"
+          }
+        ]
+      }
+    }
+  ]
+}
