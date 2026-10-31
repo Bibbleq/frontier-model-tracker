@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "source": "arm",
+  "region": "northeurope",
+  "observed_at": "2026-10-31T07:30:00Z",
+  "previous_run_at": "2026-10-31T01:30:00Z",
+  "runs_since_previous_file": 0,
+  "previous_file": "observations/arm/northeurope/2026/10/2026-10-31T01-30-00Z.json",
+  "checkpoint": "checkpoints/arm/northeurope/2026-10-27T19-30-00Z.json",
+  "observed_from": "standard pay-as-you-go and Visual Studio Enterprise subscriptions",
+  "entry_count": 32,
+  "cell_count": 41,
+  "snapshot_sha256": "acec7de74b58088a1ae2cfaa4af58a8cc00073775eb20a2cb2b01fa808e9e3cf",
+  "keys_present": [
+    "gpt-4.1-mini@2025-04-14",
+    "gpt-4.1-nano@2025-04-14",
+    "gpt-4.1@2025-04-14",
+    "gpt-4o-mini@2024-07-18",
+    "gpt-4o@2024-05-13",
+    "gpt-4o@2024-08-06",
+    "gpt-4o@2024-11-20",
+    "gpt-5-mini@2025-08-07",
+    "gpt-5.1-codex@2025-11-13",
+    "gpt-5.1@2025-11-13",
+    "gpt-5.2-codex@2026-01-14",
+    "gpt-5.2@2025-12-11",
+    "gpt-5.3-codex@2026-02-24",
+    "gpt-5.4-mini@2026-03-17",
+    "gpt-5.4-nano@2026-03-17",
+    "gpt-5.4-pro@2026-03-05",
+    "gpt-5.4@2026-03-05",
+    "gpt-5.5@2026-04-24",
+    "gpt-5@2025-08-07",
+    "gpt-6-astra@2026-09-03",
+    "gpt-audio-1.5@2026-02-23",
+    "gpt-chat-latest@2026-05-05",
+    "model-router@2025-05-19",
+    "model-router@2025-08-07",
+    "model-router@2025-11-18",
+    "o1@2024-12-17",
+    "o3-mini@2025-01-31",
+    "o3@2025-04-16",
+    "o4-mini@2025-04-16",
+    "text-embedding-3-large@1",
+    "text-embedding-3-small@1",
+    "whisper@001"
+  ],
+  "changes": [
+    {
+      "kind": "deprecation_moved",
+      "model_key": "model-router@2025-05-19",
+      "window_start": "2026-10-31T01:30:00Z",
+      "window_end": "2026-10-31T07:30:00Z",
+      "fields": [
+        "deprecation_inference",
+        "deprecation_fine_tune",
+        "skus[GlobalStandard].deprecation_date"
+      ],
+      "before": {
+        "name": "model-router",
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2026-10-31T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-05-19",
+        "capabilities": {
+          "area": "EUR",
+          "models": "[{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-nano\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-mini\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"o4-mini\",\"version\":\"2025-04-16\"}]",
+          "router": "true",
+          "agentsV2": "true",
+          "chatCompletion": "true"
+        },
+        "lifecycle_portal": "Retired",
+        "lifecycle_status": "Preview",
+        "is_default_version": false,
+        "deprecation_fine_tune": "2026-10-31T00:00:00Z",
+        "deprecation_inference": "2026-10-31T00:00:00Z"
+      },
+      "after": {
+        "name": "model-router",
+        "version": "2025-05-19",
+        "format": "OpenAI",
+        "lifecycle_status": "Preview",
+        "lifecycle_portal": "Preview",
+        "deprecation_inference": "2027-01-27T00:00:00Z",
+        "deprecation_fine_tune": "2027-01-27T00:00:00Z",
+        "is_default_version": false,
+        "capabilities": {
+          "agentsV2": "true",
+          "area": "EUR",
+          "chatCompletion": "true",
+          "models": "[{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-nano\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-mini\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"o4-mini\",\"version\":\"2025-04-16\"}]",
+          "router": "true"
+        },
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-01-27T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "deprecation_moved",
+      "model_key": "model-router@2025-08-07",
+      "window_start": "2026-10-31T01:30:00Z",
+      "window_end": "2026-10-31T07:30:00Z",
+      "fields": [
+        "deprecation_inference",
+        "deprecation_fine_tune",
+        "skus[GlobalStandard].deprecation_date"
+      ],
+      "before": {
+        "name": "model-router",
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2026-10-31T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-08-07",
+        "capabilities": {
+          "area": "EUR",
+          "models": "[{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-nano\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-mini\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"o4-mini\",\"version\":\"2025-04-16\"},{\"format\":\"OpenAI\",\"name\":\"gpt-5-nano\",\"version\":\"2025-08-07\"},{\"format\":\"OpenAI\",\"name\":\"gpt-5-mini\",\"version\":\"2025-08-07\"},{\"format\":\"OpenAI\",\"name\":\"gpt-5\",\"version\":\"2025-08-07\"}]",
+          "router": "true",
+          "agentsV2": "true",
+          "chatCompletion": "true"
+        },
+        "lifecycle_portal": "Retired",
+        "lifecycle_status": "Preview",
+        "is_default_version": false,
+        "deprecation_fine_tune": "2026-10-31T00:00:00Z",
+        "deprecation_inference": "2026-10-31T00:00:00Z"
+      },
+      "after": {
+        "name": "model-router",
+        "version": "2025-08-07",
+        "format": "OpenAI",
+        "lifecycle_status": "Preview",
+        "lifecycle_portal": "Preview",
+        "deprecation_inference": "2027-01-27T00:00:00Z",
+        "deprecation_fine_tune": "2027-01-27T00:00:00Z",
+        "is_default_version": false,
+        "capabilities": {
+          "agentsV2": "true",
+          "area": "EUR",
+          "chatCompletion": "true",
+          "models": "[{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-nano\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-mini\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"o4-mini\",\"version\":\"2025-04-16\"},{\"format\":\"OpenAI\",\"name\":\"gpt-5-nano\",\"version\":\"2025-08-07\"},{\"format\":\"OpenAI\",\"name\":\"gpt-5-mini\",\"version\":\"2025-08-07\"},{\"format\":\"OpenAI\",\"name\":\"gpt-5\",\"version\":\"2025-08-07\"}]",
+          "router": "true"
+        },
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-01-27T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "lifecycle_changed",
+      "model_key": "model-router@2025-05-19",
+      "window_start": "2026-10-31T01:30:00Z",
+      "window_end": "2026-10-31T07:30:00Z",
+      "fields": [
+        "lifecycle_portal"
+      ],
+      "before": {
+        "name": "model-router",
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2026-10-31T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-05-19",
+        "capabilities": {
+          "area": "EUR",
+          "models": "[{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-nano\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-mini\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"o4-mini\",\"version\":\"2025-04-16\"}]",
+          "router": "true",
+          "agentsV2": "true",
+          "chatCompletion": "true"
+        },
+        "lifecycle_portal": "Retired",
+        "lifecycle_status": "Preview",
+        "is_default_version": false,
+        "deprecation_fine_tune": "2026-10-31T00:00:00Z",
+        "deprecation_inference": "2026-10-31T00:00:00Z"
+      },
+      "after": {
+        "name": "model-router",
+        "version": "2025-05-19",
+        "format": "OpenAI",
+        "lifecycle_status": "Preview",
+        "lifecycle_portal": "Preview",
+        "deprecation_inference": "2027-01-27T00:00:00Z",
+        "deprecation_fine_tune": "2027-01-27T00:00:00Z",
+        "is_default_version": false,
+        "capabilities": {
+          "agentsV2": "true",
+          "area": "EUR",
+          "chatCompletion": "true",
+          "models": "[{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-nano\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-mini\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"o4-mini\",\"version\":\"2025-04-16\"}]",
+          "router": "true"
+        },
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-01-27T00:00:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "lifecycle_changed",
+      "model_key": "model-router@2025-08-07",
+      "window_start": "2026-10-31T01:30:00Z",
+      "window_end": "2026-10-31T07:30:00Z",
+      "fields": [
+        "lifecycle_portal"
+      ],
+      "before": {
+        "name": "model-router",
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2026-10-31T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-08-07",
+        "capabilities": {
+          "area": "EUR",
+          "models": "[{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-nano\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-mini\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"o4-mini\",\"version\":\"2025-04-16\"},{\"format\":\"OpenAI\",\"name\":\"gpt-5-nano\",\"version\":\"2025-08-07\"},{\"format\":\"OpenAI\",\"name\":\"gpt-5-mini\",\"version\":\"2025-08-07\"},{\"format\":\"OpenAI\",\"name\":\"gpt-5\",\"version\":\"2025-08-07\"}]",
+          "router": "true",
+          "agentsV2": "true",
+          "chatCompletion": "true"
+        },
+        "lifecycle_portal": "Retired",
+        "lifecycle_status": "Preview",
+        "is_default_version": false,
+        "deprecation_fine_tune": "2026-10-31T00:00:00Z",
+        "deprecation_inference": "2026-10-31T00:00:00Z"
+      },
+      "after": {
+        "name": "model-router",
+        "version": "2025-08-07",
+        "format": "OpenAI",
+        "lifecycle_status": "Preview",
+        "lifecycle_portal": "Preview",
+        "deprecation_inference": "2027-01-27T00:00:00Z",
+        "deprecation_fine_tune": "2027-01-27T00:00:00Z",
+        "is_default_version": false,
+        "capabilities": {
+          "agentsV2": "true",
+          "area": "EUR",
+          "chatCompletion": "true",
+          "models": "[{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-nano\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1-mini\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"gpt-4.1\",\"version\":\"2025-04-14\"},{\"format\":\"OpenAI\",\"name\":\"o4-mini\",\"version\":\"2025-04-16\"},{\"format\":\"OpenAI\",\"name\":\"gpt-5-nano\",\"version\":\"2025-08-07\"},{\"format\":\"OpenAI\",\"name\":\"gpt-5-mini\",\"version\":\"2025-08-07\"},{\"format\":\"OpenAI\",\"name\":\"gpt-5\",\"version\":\"2025-08-07\"}]",
+          "router": "true"
+        },
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-01-27T00:00:00Z"
+          }
+        ]
+      }
+    }
+  ]
+}
