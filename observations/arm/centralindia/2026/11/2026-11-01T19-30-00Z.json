@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "source": "arm",
+  "region": "centralindia",
+  "observed_at": "2026-11-01T19:30:00Z",
+  "previous_run_at": "2026-11-01T13:30:00Z",
+  "runs_since_previous_file": 2,
+  "previous_file": null,
+  "checkpoint": "checkpoints/arm/centralindia/2026-11-01T01-30-00Z.json",
+  "observed_from": "standard pay-as-you-go and Visual Studio Enterprise subscriptions",
+  "entry_count": 10,
+  "cell_count": 10,
+  "snapshot_sha256": "8ec30396b0cfe2628245a37c3ab6d4e0553f33da3937a2ac8ed7003bd7113797",
+  "keys_present": [
+    "gpt-4.1-mini@2025-04-14",
+    "gpt-4.1-nano@2025-04-14",
+    "gpt-4.1@2025-04-14",
+    "gpt-4o-mini@2024-07-18",
+    "gpt-4o@2024-05-13",
+    "gpt-4o@2024-08-06",
+    "gpt-4o@2024-11-20",
+    "o1@2024-12-17",
+    "o4-mini@2025-04-16",
+    "whisper@001"
+  ],
+  "changes": [
+    {
+      "kind": "deprecation_moved",
+      "model_key": "gpt-4o@2024-05-13",
+      "window_start": "2026-11-01T13:30:00Z",
+      "window_end": "2026-11-01T19:30:00Z",
+      "fields": [
+        "deprecation_inference",
+        "skus[GlobalProvisionedManaged].deprecation_date"
+      ],
+      "before": {
+        "name": "gpt-4o",
+        "skus": [
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2026-12-09T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2024-05-13",
+        "capabilities": {
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "maxOutputToken": "4096",
+          "maxContextToken": "128000",
+          "jsonObjectResponse": "true",
+          "FineTuneTokensMaxValue": "2000000000",
+          "FineTuneTokensMaxValuePerExample": "131072",
+          "allowProvisionedManagedCommitment": "true"
+        },
+        "lifecycle_portal": "Deprecated",
+        "lifecycle_status": "Deprecating",
+        "is_default_version": false,
+        "deprecation_fine_tune": "2026-12-09T00:00:00Z",
+        "deprecation_inference": "2026-12-09T00:00:00Z"
+      },
+      "after": {
+        "name": "gpt-4o",
+        "version": "2024-05-13",
+        "format": "OpenAI",
+        "lifecycle_status": "Deprecating",
+        "lifecycle_portal": "Deprecated",
+        "deprecation_inference": "2027-01-14T00:00:00Z",
+        "deprecation_fine_tune": "2026-12-09T00:00:00Z",
+        "is_default_version": false,
+        "capabilities": {
+          "FineTuneTokensMaxValue": "2000000000",
+          "FineTuneTokensMaxValuePerExample": "131072",
+          "agentsV2": "true",
+          "allowProvisionedManagedCommitment": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "jsonObjectResponse": "true",
+          "maxContextToken": "128000",
+          "maxOutputToken": "4096",
+          "responses": "true"
+        },
+        "skus": [
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2027-01-14T00:00:00Z"
+          }
+        ]
+      }
+    }
+  ]
+}
