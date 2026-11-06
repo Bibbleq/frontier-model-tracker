@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-06T13:30:00Z",
+  "generated_at": "2026-11-06T19:30:00Z",
   "observed_from": "standard pay-as-you-go and Visual Studio Enterprise subscriptions",
   "source": "arm",
   "note": "Status report from the catalogue watcher; not an observation and not evidence.",
   "regions": {
     "australiaeast": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 119,
       "cell_count": 208,
@@ -15,7 +15,7 @@
       "consecutive_errors": 0
     },
     "brazilsouth": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 115,
       "cell_count": 174,
@@ -24,7 +24,7 @@
       "consecutive_errors": 0
     },
     "canadacentral": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 130,
       "cell_count": 165,
@@ -33,8 +33,8 @@
       "consecutive_errors": 0
     },
     "canadaeast": {
-      "last_run_at": "2026-11-06T13:30:00Z",
-      "last_outcome": "changed",
+      "last_run_at": "2026-11-06T19:30:00Z",
+      "last_outcome": "unchanged",
       "entry_count": 115,
       "cell_count": 182,
       "last_change_at": "2026-11-06T13:30:00Z",
@@ -42,7 +42,7 @@
       "consecutive_errors": 0
     },
     "centralindia": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 10,
       "cell_count": 10,
@@ -51,16 +51,16 @@
       "consecutive_errors": 0
     },
     "centralus": {
-      "last_run_at": "2026-11-06T13:30:00Z",
-      "last_outcome": "unchanged",
+      "last_run_at": "2026-11-06T19:30:00Z",
+      "last_outcome": "changed",
       "entry_count": 158,
       "cell_count": 309,
-      "last_change_at": "2026-11-06T01:30:00Z",
-      "last_file": "observations/arm/centralus/2026/11/2026-11-06T01-30-00Z.json",
+      "last_change_at": "2026-11-06T19:30:00Z",
+      "last_file": "observations/arm/centralus/2026/11/2026-11-06T19-30-00Z.json",
       "consecutive_errors": 0
     },
     "eastasia": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 10,
       "cell_count": 10,
@@ -69,7 +69,7 @@
       "consecutive_errors": 0
     },
     "eastus": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 147,
       "cell_count": 326,
@@ -78,7 +78,7 @@
       "consecutive_errors": 0
     },
     "eastus2": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 173,
       "cell_count": 361,
@@ -87,7 +87,7 @@
       "consecutive_errors": 0
     },
     "francecentral": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 131,
       "cell_count": 270,
@@ -96,7 +96,7 @@
       "consecutive_errors": 0
     },
     "germanywestcentral": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 115,
       "cell_count": 249,
@@ -105,7 +105,7 @@
       "consecutive_errors": 0
     },
     "italynorth": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 115,
       "cell_count": 211,
@@ -114,7 +114,7 @@
       "consecutive_errors": 0
     },
     "japaneast": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 115,
       "cell_count": 202,
@@ -123,7 +123,7 @@
       "consecutive_errors": 0
     },
     "japanwest": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 67,
       "cell_count": 72,
@@ -132,8 +132,8 @@
       "consecutive_errors": 0
     },
     "koreacentral": {
-      "last_run_at": "2026-11-06T13:30:00Z",
-      "last_outcome": "changed",
+      "last_run_at": "2026-11-06T19:30:00Z",
+      "last_outcome": "unchanged",
       "entry_count": 117,
       "cell_count": 196,
       "last_change_at": "2026-11-06T13:30:00Z",
@@ -141,8 +141,8 @@
       "consecutive_errors": 0
     },
     "northcentralus": {
-      "last_run_at": "2026-11-06T13:30:00Z",
-      "last_outcome": "changed",
+      "last_run_at": "2026-11-06T19:30:00Z",
+      "last_outcome": "unchanged",
       "entry_count": 141,
       "cell_count": 319,
       "last_change_at": "2026-11-06T13:30:00Z",
@@ -150,7 +150,7 @@
       "consecutive_errors": 0
     },
     "northeurope": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 32,
       "cell_count": 41,
@@ -159,7 +159,7 @@
       "consecutive_errors": 0
     },
     "norwayeast": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 116,
       "cell_count": 190,
@@ -168,7 +168,7 @@
       "consecutive_errors": 0
     },
     "polandcentral": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 124,
       "cell_count": 256,
@@ -177,7 +177,7 @@
       "consecutive_errors": 0
     },
     "qatarcentral": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "not_live",
       "entry_count": null,
       "cell_count": null,
@@ -186,7 +186,7 @@
       "consecutive_errors": 0
     },
     "southafricanorth": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 114,
       "cell_count": 169,
@@ -195,7 +195,7 @@
       "consecutive_errors": 0
     },
     "southcentralus": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 139,
       "cell_count": 316,
@@ -204,7 +204,7 @@
       "consecutive_errors": 0
     },
     "southeastasia": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 112,
       "cell_count": 164,
@@ -213,16 +213,16 @@
       "consecutive_errors": 0
     },
     "southindia": {
-      "last_run_at": "2026-11-06T13:30:00Z",
-      "last_outcome": "unchanged",
+      "last_run_at": "2026-11-06T19:30:00Z",
+      "last_outcome": "changed",
       "entry_count": 139,
-      "cell_count": 222,
-      "last_change_at": "2026-11-06T01:30:00Z",
-      "last_file": "observations/arm/southindia/2026/11/2026-11-06T01-30-00Z.json",
+      "cell_count": 224,
+      "last_change_at": "2026-11-06T19:30:00Z",
+      "last_file": "observations/arm/southindia/2026/11/2026-11-06T19-30-00Z.json",
       "consecutive_errors": 0
     },
     "spaincentral": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 116,
       "cell_count": 226,
@@ -231,8 +231,8 @@
       "consecutive_errors": 0
     },
     "swedencentral": {
-      "last_run_at": "2026-11-06T13:30:00Z",
-      "last_outcome": "changed",
+      "last_run_at": "2026-11-06T19:30:00Z",
+      "last_outcome": "unchanged",
       "entry_count": 182,
       "cell_count": 341,
       "last_change_at": "2026-11-06T13:30:00Z",
@@ -240,8 +240,8 @@
       "consecutive_errors": 0
     },
     "switzerlandnorth": {
-      "last_run_at": "2026-11-06T13:30:00Z",
-      "last_outcome": "changed",
+      "last_run_at": "2026-11-06T19:30:00Z",
+      "last_outcome": "unchanged",
       "entry_count": 118,
       "cell_count": 201,
       "last_change_at": "2026-11-06T13:30:00Z",
@@ -249,7 +249,7 @@
       "consecutive_errors": 0
     },
     "switzerlandwest": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 114,
       "cell_count": 147,
@@ -258,7 +258,7 @@
       "consecutive_errors": 0
     },
     "uaenorth": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 147,
       "cell_count": 200,
@@ -267,7 +267,7 @@
       "consecutive_errors": 0
     },
     "uksouth": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 118,
       "cell_count": 191,
@@ -276,7 +276,7 @@
       "consecutive_errors": 0
     },
     "ukwest": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 67,
       "cell_count": 71,
@@ -285,16 +285,16 @@
       "consecutive_errors": 0
     },
     "westcentralus": {
-      "last_run_at": "2026-11-06T13:30:00Z",
-      "last_outcome": "unchanged",
+      "last_run_at": "2026-11-06T19:30:00Z",
+      "last_outcome": "changed",
       "entry_count": 95,
       "cell_count": 122,
-      "last_change_at": "2026-11-06T01:30:00Z",
-      "last_file": "observations/arm/westcentralus/2026/11/2026-11-06T01-30-00Z.json",
+      "last_change_at": "2026-11-06T19:30:00Z",
+      "last_file": "observations/arm/westcentralus/2026/11/2026-11-06T19-30-00Z.json",
       "consecutive_errors": 0
     },
     "westeurope": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 121,
       "cell_count": 254,
@@ -303,7 +303,7 @@
       "consecutive_errors": 0
     },
     "westus": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 144,
       "cell_count": 325,
@@ -312,7 +312,7 @@
       "consecutive_errors": 0
     },
     "westus2": {
-      "last_run_at": "2026-11-06T13:30:00Z",
+      "last_run_at": "2026-11-06T19:30:00Z",
       "last_outcome": "unchanged",
       "entry_count": 68,
       "cell_count": 88,
@@ -321,8 +321,8 @@
       "consecutive_errors": 0
     },
     "westus3": {
-      "last_run_at": "2026-11-06T13:30:00Z",
-      "last_outcome": "changed",
+      "last_run_at": "2026-11-06T19:30:00Z",
+      "last_outcome": "unchanged",
       "entry_count": 166,
       "cell_count": 352,
       "last_change_at": "2026-11-06T13:30:00Z",
