@@ -9589,6 +9589,62 @@
       ]
     },
     {
+      "id": "kuaishou-kling-3-0-2026-02-04",
+      "kind": "availability",
+      "date": {
+        "start": "2026-02-04",
+        "end": "2026-02-06",
+        "precision": "day"
+      },
+      "surface_id": "kling",
+      "model_ids": [
+        "kling-3-0"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "limited_preview",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Kuaishou launched its Kling AI 3.0 models, Video 3.0 among them, between 4 and 6 February 2026, at first as exclusive early access for Ultra subscribers.",
+      "caveat": "The window joins two dated statements that differ by two days: fal's post of 4 February 2026 says Kling 3.0 is available on fal 'from day zero', and Kuaishou's press release of 6 February says it 'today announced the launch'. Which is the first day is not settled, so neither is picked. limited_preview is a classification of early access restricted to one subscriber tier; the press release says the models 'will soon be available to the public' and that wider release is undated and not recorded. The press release was read in a newswire mirror because Kuaishou's investor-relations site could not be reached, and Kling's own release note carries no date.",
+      "sources": [
+        {
+          "publisher": "Kuaishou Technology, mirrored by Bernama from GlobeNewswire",
+          "title": "Kling AI Launches 3.0 Model, Ushering in an Era Where Everyone Can Be a Director",
+          "url": "https://mrem.bernama.com/viewsm.php?idm=53441",
+          "primary": false,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2026-02-06",
+          "source_type": "announcement",
+          "quote": "The Kling AI 3.0 models are now available for exclusive early access to Ultra subscribers and will soon be available to the public.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Kuaishou's own press release reproduced by a newswire mirror, dated 'Friday 06/02/2026' and datelined 'HONG KONG, Feb 6 (Bernama-GLOBE NEWSWIRE)'; it opens by saying Kuaishou 'today announced the launch' of the models. Marked non-primary because the vendor's own copy was not read."
+        },
+        {
+          "publisher": "fal",
+          "title": "Kling 3.0 is Now Available on fal",
+          "url": "https://blog.fal.ai/kling-3-0-is-now-available-on-fal/",
+          "primary": false,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2026-02-04",
+          "source_type": "announcement",
+          "quote": "now available on fal from day zero",
+          "supports": [
+            "date"
+          ],
+          "note": "A partner's post, not Kuaishou's; its datePublished is 2026-02-04T19:41:32Z. Cited as the earlier bound of the window."
+        }
+      ]
+    },
+    {
       "id": "anthropic-opus4-6-2026-02-05",
       "kind": "availability",
       "date": {
@@ -16726,6 +16782,46 @@
       ]
     },
     {
+      "id": "lightricks-ltx-2-5-2026-08-11",
+      "kind": "availability",
+      "date": {
+        "start": "2026-08-11",
+        "precision": "day"
+      },
+      "surface_id": "lightricks",
+      "model_ids": [
+        "ltx-2-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "supported",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "LTX-2.5 was released on 11 August 2026, as an API and as open weights the same day, per the vendor's own release notes.",
+      "caveat": "The release notes carry two entries under 11 August 2026, 'LTX-2.5 API' and 'LTX-2.5' tagged Open source; both are feature lists with no availability sentence, so the date rests on the entry headings and ga is the classification of a release with no preview label. The weights are under the vendor's own community licence, not an OSI licence. The vendor publishes as LTX at ltx.io and its Hugging Face organisation is Lightricks. No Wayback lookup was run for this entry.",
+      "sources": [
+        {
+          "publisher": "LTX",
+          "title": "Model News & Release Notes",
+          "url": "https://ltx.io/release-notes",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2026-08-11",
+          "source_type": "release_notes",
+          "quote": "LTX-2.5 API",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "An entry heading under the visible date 'August 11, 2026'; a second entry of the same date is headed 'LTX-2.5' and tagged 'Open source'. Fetched directly on 11 November 2026. The page carries no structured date."
+        }
+      ]
+    },
+    {
       "id": "xai-grok4-6-2026-08-12",
       "kind": "availability",
       "date": {
@@ -17463,6 +17559,54 @@
             "lifecycle"
           ],
           "note": "Current-state documentation: it proves the preview stage at 3 September 2026, not the arrival date. No Wayback capture of the page exists."
+        }
+      ]
+    },
+    {
+      "id": "fal-h3-max-2026-08-27",
+      "kind": "availability",
+      "date": {
+        "start": "2026-08-27",
+        "precision": "day"
+      },
+      "surface_id": "fal",
+      "model_ids": [
+        "minimax-h3-max"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "fal released H3 Max on its own platform on 27 August 2026, a post-trained version of MiniMax H3 developed by fal Research.",
+      "caveat": "fal is the maker of this derivative and not only its host, so the release sits on the fal vendor surface. The base model, MiniMax H3, was launched by MiniMax on 31 July 2026 and is not registered. The post states a release, not a stage; ga is the classification of a model released without a preview label. H3 Max Turbo is not named in this post and no dated release for it was found.",
+      "sources": [
+        {
+          "publisher": "fal",
+          "title": "Introducing H3 Max by fal",
+          "url": "https://blog.fal.ai/introducing-h3-max-by-fal/",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2026-08-27",
+          "source_type": "announcement",
+          "quote": "H3 Max is available today on fal.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Fetched directly on 11 November 2026; the page's datePublished is 2026-08-27T19:02:36Z."
+        },
+        {
+          "publisher": "fal",
+          "title": "Introducing H3 Max by fal",
+          "url": "https://blog.fal.ai/introducing-h3-max-by-fal/",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2026-08-27",
+          "source_type": "announcement",
+          "quote": "a post-trained version of MiniMax H3 developed by fal Research",
+          "supports": [
+            "model"
+          ]
         }
       ]
     },
@@ -23768,6 +23912,163 @@
       ]
     },
     {
+      "id": "foundry-kling-3-0-2026-11-05",
+      "kind": "availability",
+      "date": {
+        "start": "2026-11-05",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "kling-3-0"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft announced on 5 November 2026 that Kling v3 Pro, Kuaishou's Kling 3.0 video model, is rolling out in public preview in Microsoft Foundry through its partnership with fal, for text-to-video and image-to-video on US Data Zone deployment.",
+      "caveat": "Partner-hosted: fal serves the model and Microsoft supplies the Foundry surface, the post calling the portfolio 'served by fal and sourced from the companies that build them', so availability depends on both. The post says 'rolling out', so 5 November starts the rollout and no end is published. The Foundry Models API listed none of the fal-served models in any polled region up to 11 November 2026, so the catalogue watcher does not corroborate the rollout. Microsoft and fal name it Kling v3 Pro; Kling's own pages name Video 3.0 and do not say whether Pro is a mode or a separate model. The post says Foundry is the first provider to offer a US-hosted Kling 3 endpoint.",
+      "tags": [
+        "partner_hosted"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Building the next generation of multimodal AI experiences with fal in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-the-next-generation-of-multimodal-ai-experiences-with/ba-p/4570032",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2026-11-05",
+          "source_type": "announcement",
+          "quote": "We are excited to announce that Kling, LTX, and MiniMax video models are rolling out to in public preview in Microsoft Foundry through our new partnership with fal.",
+          "supports": [
+            "date",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai; direct requests return 403. The publication date is the page data's postTime, 2026-11-05T10:00:54-08:00, and its lastEditTime is 2026-11-06T11:31:59-08:00, so the text read is the edited state. 'rolling out to in' is the post's own wording. CDX returned no Wayback capture."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Building the next generation of multimodal AI experiences with fal in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-the-next-generation-of-multimodal-ai-experiences-with/ba-p/4570032",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2026-11-05",
+          "source_type": "announcement",
+          "quote": "Kling v3 Pro combines cinematic visuals and fluid motion with native audio generation and custom element support.",
+          "supports": [
+            "model"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-ltx-2-5-2026-11-05",
+      "kind": "availability",
+      "date": {
+        "start": "2026-11-05",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "ltx-2-5"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft announced on 5 November 2026 that LTX-2.5 is rolling out in public preview in Microsoft Foundry through its partnership with fal, as two Global Standard endpoints, LTX-2.5 Fast and LTX-2.5 Pro, for text-to-video and image-to-video with synchronised audio.",
+      "caveat": "Partner-hosted: fal serves the model and Microsoft supplies the Foundry surface, the post calling the portfolio 'served by fal and sourced from the companies that build them', so availability depends on both. The post says 'rolling out', so 5 November starts the rollout and no end is published. The Foundry Models API listed none of the fal-served models in any polled region up to 11 November 2026, so the catalogue watcher does not corroborate the rollout. Fast and Pro are the speed-optimised and quality-optimised endpoints of one model, in fal's naming; LTX's own pages name neither, so one registry model carries both.",
+      "tags": [
+        "partner_hosted"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Building the next generation of multimodal AI experiences with fal in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-the-next-generation-of-multimodal-ai-experiences-with/ba-p/4570032",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2026-11-05",
+          "source_type": "announcement",
+          "quote": "We are excited to announce that Kling, LTX, and MiniMax video models are rolling out to in public preview in Microsoft Foundry through our new partnership with fal.",
+          "supports": [
+            "date",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai; direct requests return 403. The publication date is the page data's postTime, 2026-11-05T10:00:54-08:00, and its lastEditTime is 2026-11-06T11:31:59-08:00, so the text read is the edited state. 'rolling out to in' is the post's own wording. CDX returned no Wayback capture."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Building the next generation of multimodal AI experiences with fal in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-the-next-generation-of-multimodal-ai-experiences-with/ba-p/4570032",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2026-11-05",
+          "source_type": "announcement",
+          "quote": "For rapid iteration and previews, LTX-2.5 Fast is the speed-optimized option; for high-fidelity final output, LTX-2.5 Pro is the quality-optimized option.",
+          "supports": [
+            "model"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foundry-minimax-h3-max-2026-11-05",
+      "kind": "availability",
+      "date": {
+        "start": "2026-11-05",
+        "precision": "day",
+        "rollout_start": true
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "minimax-h3-max",
+        "minimax-h3-max-turbo"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft announced on 5 November 2026 that MiniMax H3 Max and MiniMax H3 Max Turbo are rolling out in public preview in Microsoft Foundry through its partnership with fal, on Global Standard deployment.",
+      "caveat": "Partner-hosted: fal serves the model and Microsoft supplies the Foundry surface, the post calling the portfolio 'served by fal and sourced from the companies that build them', so availability depends on both. The post says 'rolling out', so 5 November starts the rollout and no end is published. The Foundry Models API listed none of the fal-served models in any polled region up to 11 November 2026, so the catalogue watcher does not corroborate the rollout. Both are fal's own post-trained versions of MiniMax H3, so fal is their maker as well as their host; MiniMax has published no Max model. H3 Max Turbo has no dated fal release, so no lag is derived for it.",
+      "tags": [
+        "partner_hosted"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Building the next generation of multimodal AI experiences with fal in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-the-next-generation-of-multimodal-ai-experiences-with/ba-p/4570032",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2026-11-05",
+          "source_type": "announcement",
+          "quote": "We are excited to announce that Kling, LTX, and MiniMax video models are rolling out to in public preview in Microsoft Foundry through our new partnership with fal.",
+          "supports": [
+            "date",
+            "lifecycle"
+          ],
+          "note": "Read through r.jina.ai; direct requests return 403. The publication date is the page data's postTime, 2026-11-05T10:00:54-08:00, and its lastEditTime is 2026-11-06T11:31:59-08:00, so the text read is the edited state. 'rolling out to in' is the post's own wording. CDX returned no Wayback capture."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Building the next generation of multimodal AI experiences with fal in Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-the-next-generation-of-multimodal-ai-experiences-with/ba-p/4570032",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2026-11-05",
+          "source_type": "announcement",
+          "quote": "MiniMax H3 Max and MiniMax H3 Max Turbo are post-trained variants of MiniMax H3 focused on prompt adherence, aesthetics, and inference performance.",
+          "supports": [
+            "model"
+          ]
+        }
+      ]
+    },
+    {
       "id": "openai-gpt6-cyber-2026-11-05",
       "kind": "availability",
       "date": {
@@ -27643,34 +27944,6 @@
             "model"
           ],
           "note": "A last_seen_absent observation with window_start 2026-11-07T19:30:00Z and window_end 2026-11-08T01:30:00Z. Cited at its commit-pinned URL."
-        }
-      ]
-    },
-    {
-      "id": "foundry-fal-video-models-2026-11",
-      "state": "open",
-      "working_claim": "Five video models served by fal began rolling out in public preview in Microsoft Foundry on 5 November 2026: Kling v3 Pro, LTX-2.5 Fast, LTX-2.5 Pro, MiniMax H3 Max and MiniMax H3 Max Turbo.",
-      "reason": "Microsoft's post of 5 November 2026 (edited 6 November) says the Kling, LTX and MiniMax video models 'are rolling out to in public preview in Microsoft Foundry through our new partnership with fal', 'served by fal and sourced from the companies that build them', US-hosted, Global Standard except Kling v3 Pro on US Data Zone. The date and stage are attested; what is undecided is scope. None of the five models nor their three vendors is in the registry, and recording them needs three vendor surfaces and five extended video models. The FLUX models sit in meta-cohere-flux-mai-foundry-history on the same grounds. Held for a scope decision rather than registered piecemeal.",
-      "target": "A scope decision. If the models are registered, record one partner_hosted public_preview event per model on microsoft-foundry dated 2026-11-05 with rollout_start, from this post.",
-      "model_ids": [],
-      "surface_ids": [
-        "microsoft-foundry"
-      ],
-      "sources": [
-        {
-          "publisher": "Microsoft Community Hub",
-          "title": "Building the next generation of multimodal AI experiences with fal in Microsoft Foundry",
-          "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-the-next-generation-of-multimodal-ai-experiences-with/ba-p/4570032",
-          "primary": true,
-          "retrieved_at": "2026-11-11",
-          "published_at": "2026-11-05",
-          "source_type": "announcement",
-          "quote": "The initial portfolio spans Kling v3 Pro, LTX-2.5 Fast, LTX-2.5 Pro, MiniMax H3 Max, and MiniMax H3 Max Turbo.",
-          "supports": [
-            "date",
-            "model"
-          ],
-          "note": "Read through r.jina.ai. The page data's postTime is 2026-11-05T10:00:54-08:00 and its lastEditTime is 2026-11-06T11:31:59-08:00, so the text read is the edited state."
         }
       ]
     },

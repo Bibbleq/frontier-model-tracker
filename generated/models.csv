@@ -168,6 +168,10 @@ muse-spark-open,Muse Spark Open,Meta,text,frontier,muse,muse-spark,,,Muse-Spark-
 muse-glimmer,Muse Glimmer,Meta,text,frontier,muse,muse-spark,,,Muse-Glimmer-30B,,,1,,
 muse-wonder,Muse Wonder,Meta,text,frontier,muse,muse-wonder,,,muse-wonder-1.0,,,1,,
 muse-wonder-full,Muse Wonder Full,Meta,text,frontier,muse,muse-wonder,,,muse-wonder-full-1.0,,,1,,
+kling-3-0,Kling 3.0,Kuaishou,video,extended,,,,,Kling v3 Pro | Kling 3 | Kling Video 3.0,,,2,,
+ltx-2-5,LTX-2.5,Lightricks,video,extended,,,,,LTX-2.5 Fast | LTX-2.5 Pro,,,2,,
+minimax-h3-max,MiniMax H3 Max,fal,video,extended,,,,,H3 Max,,,2,,
+minimax-h3-max-turbo,MiniMax H3 Max Turbo,fal,video,extended,,,,,H3 Max Turbo,,,1,,
 cohere-parse-v5,Cohere Parse v5,Cohere,image,extended,,,,,Cohere-parse-v5 | Cohere Parse,,,1,,
 cohere-embed-v5,Cohere Embed 5,Cohere,text,extended,,,,,Embed V5,,,2,,
 cohere-embed-v5-pro,Cohere Embed 5 Pro,Cohere,text,extended,,,,,embed-v5.0-pro | Cohere-Embed-V5-Pro,,,0,cohere-embed-v5,pro

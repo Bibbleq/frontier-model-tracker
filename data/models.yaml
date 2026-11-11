@@ -1353,6 +1353,36 @@ models:
     generation: muse-wonder
     aliases: ["muse-wonder-full-1.0"]
 
+
+  # ------------------------------------------- video models served by fal
+  - id: kling-3-0
+    display_name: "Kling 3.0"
+    vendor: Kuaishou
+    modality: video
+    scope: extended
+    aliases: ["Kling v3 Pro", "Kling 3", "Kling Video 3.0"]
+    note: "Kuaishou's Kling AI 3.0 video model, launched in February 2026. Microsoft Foundry and fal offer it as 'Kling v3 Pro'; Kling's own pages name Video 3.0 and do not say whether Pro is a mode or a separate model, so one model is registered. Recorded under extended scope as a catalogue entry served by fal."
+  - id: ltx-2-5
+    display_name: "LTX-2.5"
+    vendor: Lightricks
+    modality: video
+    scope: extended
+    aliases: ["LTX-2.5 Fast", "LTX-2.5 Pro"]
+    note: "Lightricks' open-weight video model, published under the LTX brand at ltx.io on 11 August 2026. 'LTX-2.5 Fast' and 'LTX-2.5 Pro' are the speed-optimised and quality-optimised endpoints fal serves and Microsoft Foundry lists; LTX's own pages name neither, so they are aliases of one model rather than variants. Recorded under extended scope as a catalogue entry served by fal."
+  - id: minimax-h3-max
+    display_name: "MiniMax H3 Max"
+    vendor: fal
+    modality: video
+    scope: extended
+    aliases: ["H3 Max"]
+    note: "A post-trained version of MiniMax H3 developed by fal Research, released by fal on 27 August 2026. The vendor is fal, its maker, not MiniMax: MiniMax launched the base model H3 on 31 July 2026 and has published no Max model. Microsoft Foundry lists it as 'MiniMax H3 Max'. The base model is not registered."
+  - id: minimax-h3-max-turbo
+    display_name: "MiniMax H3 Max Turbo"
+    vendor: fal
+    modality: video
+    scope: extended
+    aliases: ["H3 Max Turbo"]
+    note: "fal's faster post-trained version of MiniMax H3, listed in Microsoft Foundry beside H3 Max. No dated fal release for the Turbo model was found, so it has no vendor baseline. No variant link: the registry has no turbo variant kind."
   # ------------------------------------------------------------- Cohere
   - id: cohere-parse-v5
     display_name: "Cohere Parse v5"

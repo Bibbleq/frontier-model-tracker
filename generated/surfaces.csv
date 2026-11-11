@@ -11,6 +11,9 @@ xai-grok,Grok,xAI,,,true,,,,,6
 deepseek,DeepSeek,DeepSeek,,,true,,,,,10
 meta,Meta,Meta,,,true,,,,,9
 moonshot,Moonshot AI,Moonshot AI,,,true,,,,,3
+kling,Kling AI,Kuaishou,,,true,,,,,1
+lightricks,LTX,Lightricks,,,true,,,,,1
+fal,fal,fal,,,true,,,,,1
 microsoft-ai,Microsoft AI,Microsoft,,,true,,,,,20
 m365-copilot,Microsoft 365 Copilot,Microsoft,Microsoft 365,,false,microsoft | copilot | m365,,,,32
 m365-cowork,Microsoft Copilot Cowork,Microsoft,Microsoft 365,,false,microsoft | copilot,,,,14
@@ -23,6 +26,6 @@ azure-openai,Azure OpenAI Service,Microsoft,Microsoft Foundry,foundry,false,micr
 azure-ai-catalog,Azure AI model catalogue,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,,5
 azure-ai-studio,Azure AI Studio,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,2024-11-19,2
 azure-ai-foundry,Azure AI Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-studio,microsoft-foundry,,37
-microsoft-foundry,Microsoft Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-foundry,,,97
+microsoft-foundry,Microsoft Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-foundry,,,100
 foundry-local,Foundry Local,Microsoft,Microsoft Foundry,,false,microsoft,,,,2
 microsoft-corporate,Microsoft,Microsoft,,,false,,,,,1
