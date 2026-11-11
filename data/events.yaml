@@ -1,6 +1,6 @@
 version: 3
-updated: "2026-10-28"
-research_cutoff: "2026-10-28"
+updated: "2026-11-11"
+research_cutoff: "2026-11-10"
 metadata:
   project: "CtrlAltBen Frontier Model Tracker"
   purpose: "Sourced history of frontier and significant model availability across tracked Microsoft surfaces."
@@ -11117,6 +11117,41 @@ events:
         quote: "released today"
         supports: ["date"]
         note: "The co-launch post, stamped 2026-08-10. The weights repository meta-models/Muse-Glimmer-30B was created on 2026-08-09, before the release, so creation is not used as the date."
+  - id: "openai-gpt5-6-cyber-2026-08-10"
+    kind: "availability"
+    date:
+      start: "2026-08-10"
+      precision: "day"
+    surface_id: "openai"
+    model_ids: ["gpt-5-6-cyber"]
+    model_claim: "specific"
+    lifecycle: "limited_preview"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "OpenAI introduced GPT-5.6-Cyber on 10 August 2026, built on GPT-5.6 Sol and available through Daybreak Red to approved individuals and organisations conducting authorised security work."
+    caveat: "limited_preview is a classification: OpenAI gates access through identity verification, approved-use restrictions and legal attestations and does not use the word preview. The post also says a group of trusted customer partners had early access before this date, undated."
+    sources:
+      - publisher: "OpenAI"
+        title: "Expanding Daybreak as the Cyber Defense Window Narrows"
+        url: "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-08-10"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20260810220432/https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows"
+        quote: "it is trained to improve capabilities on several specialized cybersecurity tasks"
+        supports: ["date", "model"]
+        note: "openai.com answers direct requests with a Cloudflare challenge; read through r.jina.ai (visible dateline 'August 10, 2026') and the Wayback capture of 10 August 2026, whose HTML carries dateTime 2026-08-10T10:00:00-07:00. The sentence opens 'Built on GPT-5.6 Sol,' and the page prints that product name with non-breaking hyphens, so the quote is a clean span after it."
+      - publisher: "OpenAI"
+        title: "Expanding Daybreak as the Cyber Defense Window Narrows"
+        url: "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-08-10"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20260810220432/https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows"
+        quote: "Daybreak Blue and Daybreak Red access are available for approved individuals and organizations conducting authorized work."
+        supports: ["lifecycle"]
   - id: "foundry-gpt4-1-legacy-2026-08"
     kind: "availability"
     date:
@@ -12165,6 +12200,30 @@ events:
         archived_url: "https://web.archive.org/web/20260902154613/https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
         quote: "Developers : Build with 3.8 Flash and explore agent-first workflows in Google Antigravity or start building today in the Gemini API via Google AI Studio and Android Studio"
         supports: ["date", "model"]
+  - id: "meta-muse-spark-1-3-2026-09-02"
+    kind: "availability"
+    date:
+      start: "2026-09-02"
+      precision: "day"
+    surface_id: "meta"
+    model_ids: ["muse-spark-1-3"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Meta released Muse Spark 1.3 on 2 September 2026 in Muse Code and the Meta Model API."
+    caveat: "The post states a release, not a stage; ga is the classification of a model released to the API without a preview label. No Wayback lookup was run for this entry."
+    sources:
+      - publisher: "Meta AI"
+        title: "Introducing Muse Spark 1.3"
+        url: "https://research.meta.ai/blog/introducing-muse-spark-1-3"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-09-02"
+        source_type: "announcement"
+        quote: "Muse Spark 1.3 is available today in Muse Code and in Meta Model API."
+        supports: ["date", "model"]
+        note: "The date is the page's datePublished metadata (2026-09-02), read through r.jina.ai, whose Published Time field reads 2026-09-02T00:00:00.000Z. No archived_url: no Wayback lookup was run for this page."
   - id: "foundry-gpt6-astra-2026-09-03"
     kind: "availability"
     date:
@@ -15628,6 +15687,42 @@ events:
         quote: "\"window_end\": \"2026-10-28T01:30:00Z\","
         supports: ["date"]
         note: "The window of the change, per the same file."
+  - id: "moonshot-kimi-k3-1-pro-2026-10-23"
+    kind: "availability"
+    date:
+      start: "2026-10-23"
+      end: "2026-10-24"
+      precision: "day"
+    surface_id: "moonshot"
+    model_ids: ["kimi-k3-1-pro"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Moonshot AI released Kimi K3.1 Pro, the first model of its K3.1 series, on Kimi.ai, Kimi Work, Kimi Code and the Kimi API, with a faster Highspeed tier; the launch post was live by 17:11 UTC on 23 October 2026 and Moonshot's own blog index dates it 24 October."
+    caveat: "The post carries no dateline. The window is bounded by the earliest Wayback capture (23 October 2026, 17:11 UTC, already saying 'available today') and by the date Moonshot's blog index and the page's dateModified give (2026-10-24); the two are consistent with one publication moment read in UTC and in China Standard Time. The post promised open weights 'by Nov 4'; the Hugging Face repository moonshotai/Kimi-K3.1-Pro was created on 2 November 2026. ga is the classification of an API release with no preview label. A newsletter surfaced the post on 2 November, which is a coverage date and dates nothing."
+    sources:
+      - publisher: "Moonshot AI"
+        title: "Introducing Kimi K3.1 Pro"
+        url: "https://www.kimi.ai/blog/kimi-k3-1-pro"
+        primary: true
+        retrieved_at: "2026-11-11"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20261023171150/https://www.kimi.ai/blog/kimi-k3-1-pro"
+        quote: "Kimi K3.1 Pro and Kimi K3.1 Pro Highspeed are available today on Kimi.ai, Kimi Work, Kimi Code, and the Kimi API. The full model weights will be released by Nov 4."
+        supports: ["model", "lifecycle"]
+        note: "No published_at: the page carries no dateline. The earliest Wayback capture, 23 October 2026 at 17:11:50 UTC, already carries the 'available today' sentence; the page's dateModified is 2026-10-24 and Moonshot's blog index lists it under 24 October. Fetched directly on 11 November 2026; the page's title tag reads 'Kimi K3.1 Pro Tech Blog: Advancing Open Intelligence' and its heading is the title used here."
+      - publisher: "Hugging Face"
+        title: "moonshotai/Kimi-K3.1-Pro"
+        url: "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+        primary: false
+        retrieved_at: "2026-11-11"
+        source_type: "other"
+        note: "The repository's createdAt is 2026-11-02T04:13:51Z per the Hugging Face API. Cited for the weights release the launch post promised, not for the model's date."
   - id: "foundry-gpt6-1-terra-2026-10-26"
     kind: "availability"
     date:
@@ -15813,6 +15908,612 @@ events:
         quote: "\"watched\":{\"name\":\"MAI-Image-2.6\",\"version\":\"2026-07-31\",\"format\":\"Microsoft\",\"lifecycle_status\":\"GenerallyAvailable\",\"lifecycle_portal\":\"Generally Available\""
         supports: ["lifecycle"]
         note: "The seed of the catalogue watcher, cited at its commit-pinned URL; the same entry appears in other regions' checkpoints. Its first_seen is the watcher's first run, not an arrival date. API lifecycle_status is the Foundry Models API word; lifecycle_portal is the portal word."
+  - id: "github-gpt-image-2-5-flare-2026-10-28"
+    kind: "availability"
+    date:
+      start: "2026-10-28"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["gpt-image-2-5-flare"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "underlying"
+    confidence: "confirmed"
+    evidence_note: "GitHub added image generation and editing to Copilot on 28 October 2026 as a dedicated tool powered by GPT Image 2.5 Flare, in public preview for Copilot Pro, Pro+, Business and Enterprise."
+    caveat: "The model powers a tool and is not a model-picker entry, so exposure is underlying. Organisation owners can disable it through model policies."
+    sources:
+      - publisher: "GitHub"
+        title: "Generate and edit images directly in Copilot"
+        url: "https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-10-28"
+        source_type: "changelog"
+        quote: "When you ask for an image, your selected reasoning model calls a dedicated image-generation tool powered by GPT Image 2.5 Flare, previews the result inline, and saves it to your project."
+        supports: ["date", "model", "exposure"]
+        note: "The entry's date line reads 'October 28, 2026' and it is typed 'Release'."
+      - publisher: "GitHub"
+        title: "Generate and edit images directly in Copilot"
+        url: "https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-10-28"
+        source_type: "changelog"
+        quote: "Image generation is in public preview for Copilot Pro, Copilot Pro+, Copilot Business, and Copilot Enterprise."
+        supports: ["lifecycle"]
+  - id: "google-gemini4-carbon-fairwind-2026-10-28"
+    kind: "availability"
+    date:
+      start: "2026-10-28"
+      end: "2026-11-01"
+      precision: "day"
+    surface_id: "google-gemini"
+    model_ids: ["gemini-4-carbon"]
+    model_claim: "specific"
+    lifecycle: "limited_preview"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Google announced Gemini 4 Carbon on 28 October 2026 and said access would begin that week for a subset of cyber defenders, phased to further trusted partners through its Fairwind Program before any release to developers, businesses and consumers."
+    caveat: "The post is in the future tense ('Starting this week, we will make Carbon available'), so the first day of access is not stated; the window runs from the post's date to the end of that week. limited_preview is a classification, on the precedent of google-gemini4-argon-fairwind-2026-09-30: Google never uses the word preview. The page was modified on 10 November 2026, the day of general availability, so the text read is that later state."
+    relations:
+      - type: "previews_for"
+        target: "google-gemini4-carbon-2026-11-10"
+    sources:
+      - publisher: "Google"
+        title: "Introducing Gemini 4 Carbon"
+        url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-10-28"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20261028170245/https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+        quote: "Starting this week, we will make Carbon available to a subset of cyber defenders and will gradually phase access to additional trusted partners through our Fairwind Program."
+        supports: ["date", "model", "lifecycle"]
+        note: "The JSON-LD datePublished is 2026-10-28T17:00:00+00:00 and dateModified is 2026-11-10T21:47:38Z, so the text read on 11 November is the post-edit state; the Wayback capture of 28 October 2026 is cited as the contemporaneous copy."
+  - id: "foundry-mistral-large4-announced-2026-10-29"
+    kind: "announcement"
+    date:
+      start: "2026-10-29"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["mistral-large-4"]
+    model_claim: "specific"
+    confidence: "confirmed"
+    evidence_note: "Microsoft announced on 29 October 2026 that Mistral Large 4 would become available through Microsoft Foundry in public preview 'in the coming days', in Sweden Central for Global Standard and EU Data Zone deployment."
+    caveat: "An announcement of future availability, not an arrival, and it must not be drawn as one. The post's lastEditTime precedes its postTime and the text read on 11 November still says 'in the coming days' and 'once live'. The arrival itself is tracked as foundry-mistral-large-4-arrival-2026-11. The same post says Mistral OCR 4 moves from public preview to general availability in Foundry on the day Large 4 arrives; that model is not in the registry and is not recorded."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Mistral Large 4 in Microsoft Foundry: Build sovereign AI within a consistent platform experience"
+        url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/mistral-large-4-in-microsoft-foundry-build-sovereign-ai-within-a/ba-p/4568546"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-10-29"
+        source_type: "announcement"
+        quote: "available through Microsoft Foundry in the coming days."
+        supports: ["date", "model"]
+        note: "Read through r.jina.ai; direct requests return 403. The publication date is the page data's postTime, 2026-10-29T10:46:28-07:00. CDX returned no Wayback capture."
+      - publisher: "Microsoft Community Hub"
+        title: "Mistral Large 4 in Microsoft Foundry: Build sovereign AI within a consistent platform experience"
+        url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/mistral-large-4-in-microsoft-foundry-build-sovereign-ai-within-a/ba-p/4568546"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-10-29"
+        source_type: "announcement"
+        quote: "Mistral Large 4 will be available in Sweden Central region for Global Standard and EU DataZone deployment"
+        supports: ["model"]
+  - id: "foundry-kimi-k3-1-pro-2026-11-04"
+    kind: "availability"
+    date:
+      start: "2026-11-04"
+      end: "2026-11-05"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["kimi-k3-1-pro"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Kimi K3.1 Pro reached Microsoft Foundry on 4 or 5 November 2026: the catalogue watcher first saw Kimi-K3.1-Pro in the Foundry Models API between its runs of 07:30 and 13:30 UTC on 4 November, in 32 regions with Global Standard deployment, and Microsoft's launch post is dated 5 November and says the model is coming to Foundry that day."
+    caveat: "The window joins an observation and a post that differ by a day: the start is the watcher's first sighting, which dates when the watcher looked, and the end is Microsoft's own launch day. The post states no stage; ga rests on the API's lifecycleStatus GenerallyAvailable (portal word Generally Available) and on the retirement schedule row 'Kimi-K3.1-Pro | 2026-11-04 | GA | 2027-11-04', whose 2026-11-04 is a version string and dates nothing. This is the offer sold by Azure. A second offer, FW-Kimi-K3.1-Pro served by Fireworks AI, was announced on 10 November 2026 at different prices; it is the same model on the same surface and is not a separate event. CDX returned no Wayback capture of either post, and the schedule row is absent from the capture of 5 November 2026."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Moonshot AI’s Kimi K3.1 Pro comes to Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/moonshot-ai-s-kimi-k3-1-pro-comes-to-microsoft-foundry/ba-p/4570292"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-05"
+        source_type: "announcement"
+        quote: "Today, Moonshot AI’s Kimi K3.1 Pro is coming to Microsoft Foundry."
+        supports: ["date", "model"]
+        note: "Read through r.jina.ai; direct requests return 403. The publication date is the page data's postTime, 2026-11-05T11:51:53-08:00; lastEditTime precedes it."
+      - publisher: "Microsoft Community Hub"
+        title: "Moonshot AI’s Kimi K3.1 Pro comes to Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/moonshot-ai-s-kimi-k3-1-pro-comes-to-microsoft-foundry/ba-p/4570292"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-05"
+        source_type: "announcement"
+        quote: "It is an open-weight model built for agentic work, with text and image understanding and a context window of up to 1 million tokens."
+        supports: ["model"]
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, australiaeast, 2026-11-04T13:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/f261836f2057d9cac3f0b9e2cb3d4abdd1180e13/observations/arm/australiaeast/2026/11/2026-11-04T13-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-04"
+        source_type: "other"
+        quote: "\"model_key\": \"Kimi-K3.1-Pro@2026-11-04\","
+        supports: ["date", "model"]
+        note: "A first_seen_present observation with window_start 2026-11-04T07:30:00Z and window_end 2026-11-04T13:30:00Z: the model was absent at the 07:30 run and present at the 13:30 run. The same change appears in other regions' files; the one cited is australiaeast. Cited at its commit-pinned URL. Source type other because the URL is immutable."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, australiaeast, 2026-11-04T13:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/f261836f2057d9cac3f0b9e2cb3d4abdd1180e13/observations/arm/australiaeast/2026/11/2026-11-04T13-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-04"
+        source_type: "other"
+        quote: "\"lifecycle_status\": \"GenerallyAvailable\","
+        supports: ["lifecycle"]
+        note: "The API stage word of the same entry; the portal word is Generally Available."
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-11-11"
+        source_type: "documentation"
+        quote: "Kimi-K3.1-Pro | 2026-11-04 | GA | 2027-11-04 | —"
+        supports: ["lifecycle"]
+        note: "Read live on 11 November 2026. The 2026-11-04 cell is a version string and dates nothing. No archived_url: the capture of 5 November 2026 does not carry the row."
+      - publisher: "Microsoft Community Hub"
+        title: "Introducing Kimi K3.1 Pro through Fireworks on Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-kimi-k3-1-pro-through-fireworks-on-microsoft-foundry/ba-p/4571875"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-10"
+        source_type: "announcement"
+        quote: "Kimi K3.1 Pro is now available on Fireworks on Foundry"
+        supports: ["model"]
+        note: "The second offer, served by Fireworks AI. Read through r.jina.ai; the publication date is the page data's postTime, 2026-11-10T11:54:36-08:00."
+  - id: "openai-gpt-image-2-6-flare-2026-11-04"
+    kind: "availability"
+    date:
+      start: "2026-11-04"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-image-2-6-flare"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "OpenAI released GPT Image 2.6 Flare to the API on 4 November 2026, one of two new image models with adjustable complexity, SVG generation and animated GIF generation."
+    caveat: "The changelog states a release, not a stage; ga is the classification of a model released to the API without a preview label. OpenAI's deprecations page of 10 November 2026 names the pair as the replacement for gpt-image-2."
+    sources:
+      - publisher: "OpenAI"
+        title: "Changelog"
+        url: "https://developers.openai.com/api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-04"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20261105004449/https://developers.openai.com/api/docs/changelog"
+        quote: "Released GPT-Image-2.6 Sunburst and GPT-Image-2.6 Flare for image generation and editing"
+        supports: ["date", "model"]
+        note: "One entry, dated Nov 4, covers both models; one event is recorded per model. Capture of 5 November 2026."
+  - id: "openai-gpt-image-2-6-sunburst-2026-11-04"
+    kind: "availability"
+    date:
+      start: "2026-11-04"
+      precision: "day"
+    surface_id: "openai-api"
+    model_ids: ["gpt-image-2-6-sunburst"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "OpenAI released GPT Image 2.6 Sunburst to the API on 4 November 2026, one of two new image models with adjustable complexity, SVG generation and animated GIF generation."
+    caveat: "The changelog states a release, not a stage; ga is the classification of a model released to the API without a preview label. OpenAI's deprecations page of 10 November 2026 names the pair as the replacement for gpt-image-2."
+    sources:
+      - publisher: "OpenAI"
+        title: "Changelog"
+        url: "https://developers.openai.com/api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-04"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20261105004449/https://developers.openai.com/api/docs/changelog"
+        quote: "Released GPT-Image-2.6 Sunburst and GPT-Image-2.6 Flare for image generation and editing"
+        supports: ["date", "model"]
+        note: "One entry, dated Nov 4, covers both models; one event is recorded per model. Capture of 5 November 2026."
+  - id: "openai-gpt6-cyber-2026-11-05"
+    kind: "availability"
+    date:
+      start: "2026-11-05"
+      precision: "day"
+    surface_id: "openai"
+    model_ids: ["gpt-6-cyber"]
+    model_claim: "specific"
+    lifecycle: "limited_preview"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "OpenAI introduced GPT-6 Cyber on 5 November 2026, initially available through the API and Codex to a select group of approved Daybreak Red customers, with access to all Daybreak Red customers to follow."
+    caveat: "limited_preview is a classification, as for GPT-5.6-Cyber: access is gated by Daybreak Red approval with IP allowlisting by default, and OpenAI does not call it a preview. The same post opens GPT-5.6-Cyber to all Daybreak Red customers. No Microsoft, Azure or GitHub surface is named."
+    sources:
+      - publisher: "OpenAI"
+        title: "GPT-6 Cyber: Advancing the frontier of aligned cybersecurity agents"
+        url: "https://openai.com/index/introducing-gpt-6-cyber"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-05"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20261106181317/https://openai.com/index/introducing-gpt-6-cyber"
+        quote: "is initially available through the API and Codex to a select group of approved Daybreak Red customers."
+        supports: ["date", "model", "lifecycle"]
+        note: "Cloudflare challenge on direct requests; the body was read through r.jina.ai, and the dateline 'November 5, 2026' comes from the Wayback capture of 6 November. The sentence begins with the product name, which the page prints with a non-breaking hyphen, so the quote is trimmed to a clean span."
+      - publisher: "OpenAI"
+        title: "Changelog"
+        url: "https://developers.openai.com/api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-05"
+        source_type: "changelog"
+        archived_url: "https://web.archive.org/web/20261106131219/https://developers.openai.com/api/docs/changelog"
+        quote: "Use GPT-6-Cyber to investigate vulnerabilities, reproduce them in an authorized test environment, and verify fixes."
+        supports: ["date", "model"]
+        note: "The Nov 5 entry, typed Feature. Capture of 6 November 2026."
+  - id: "anthropic-fable5-2-2026-11-09"
+    kind: "availability"
+    date:
+      start: "2026-11-09"
+      precision: "day"
+    surface_id: "anthropic-claude"
+    model_ids: ["claude-fable-5-2"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Anthropic released Claude Fable 5.2 on 9 November 2026 on the Claude API and its cloud platforms, at $8 per million input tokens and $40 per million output tokens, alongside Claude Mythos 5.2."
+    caveat: "Requires 30-day data retention unless Anthropic expressly authorises zero data retention. Anthropic's release note names Claude in Microsoft Foundry among the launch platforms."
+    sources:
+      - publisher: "Anthropic"
+        title: "Claude Platform release notes"
+        url: "https://platform.claude.com/docs/en/release-notes/overview"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-09"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20261110102347/https://platform.claude.com/docs/en/release-notes/overview"
+        quote: "Claude Fable 5.2 is available on the Claude API, Claude Platform on AWS, and Claude Models on Google Cloud (Anthropic managed)."
+        supports: ["date", "model"]
+        note: "The November 9, 2026 entry. Capture of 10 November 2026."
+      - publisher: "Anthropic"
+        title: "Introducing Claude Fable 5.2 and Claude Mythos 5.2"
+        url: "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-09"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20261109185713/https://www.anthropic.com/claude-fable-and-mythos-5-2"
+        quote: "Claude Fable 5.2 is available today on all platforms, including Amazon Web Services, Google Cloud, and Microsoft Azure."
+        supports: ["model", "lifecycle"]
+        note: "The article's own dateline was not extracted; 9 November is the date on Anthropic's newsroom listing and the release-notes heading."
+  - id: "anthropic-fable5-2-fast-2026-11-09"
+    kind: "availability"
+    date:
+      start: "2026-11-09"
+      precision: "day"
+    surface_id: "anthropic-claude"
+    model_ids: ["claude-fable-5-2-fast"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Anthropic launched fast mode for Claude Fable 5.2 on the Claude API on release day, at $16 and $80 per million tokens, selected per request with no beta header."
+    caveat: "Anthropic states no stage. ga is inferred from the absence of a research-preview label and of a beta header, where Opus 5.5 fast mode began in research preview (anthropic-opus5-5-fast-preview-2026-09-22); the stage is the weaker part of the claim."
+    sources:
+      - publisher: "Anthropic"
+        title: "Claude Platform release notes"
+        url: "https://platform.claude.com/docs/en/release-notes/overview"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-09"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20261110102347/https://platform.claude.com/docs/en/release-notes/overview"
+        quote: "fast mode for Claude Fable 5.2 in Messages API requests on the Claude API."
+        supports: ["date", "model"]
+        note: "The November 9, 2026 entry. Capture of 10 November 2026. The sentence begins 'We’ve launched', trimmed here to avoid the apostrophe."
+      - publisher: "Anthropic"
+        title: "Claude Platform release notes"
+        url: "https://platform.claude.com/docs/en/release-notes/overview"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-09"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20261110102347/https://platform.claude.com/docs/en/release-notes/overview"
+        quote: "Set speed: \"fast\" on your request, with no beta header."
+        supports: ["lifecycle"]
+        note: "Rendered text of the same entry; the page shows speed: \"fast\" as inline code."
+  - id: "anthropic-mythos5-2-2026-11-09"
+    kind: "availability"
+    date:
+      start: "2026-11-09"
+      precision: "day"
+    surface_id: "anthropic-claude"
+    model_ids: ["claude-mythos-5-2"]
+    model_claim: "specific"
+    lifecycle: "limited_preview"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Anthropic released Claude Mythos 5.2 on the same day as Claude Fable 5.2, available only to organisations verified through its verification programmes such as the Cyber Verification Program."
+    caveat: "Recorded as limited_preview on the precedent of anthropic-mythos5-1-2026-09-01: access is gated by Anthropic rather than open, and Anthropic does not call it a preview."
+    relations:
+      - type: "announced_by"
+        target: "anthropic-fable5-2-2026-11-09"
+    sources:
+      - publisher: "Anthropic"
+        title: "Claude Platform release notes"
+        url: "https://platform.claude.com/docs/en/release-notes/overview"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-09"
+        source_type: "release_notes"
+        archived_url: "https://web.archive.org/web/20261110102347/https://platform.claude.com/docs/en/release-notes/overview"
+        quote: "offers the same capabilities only to organizations verified through"
+        supports: ["date", "model", "lifecycle"]
+        note: "The November 9, 2026 entry. Capture of 10 November 2026. The sentence continues 'Anthropic’s verification programs, such as the Cyber Verification Program', trimmed here before the apostrophe."
+  - id: "foundry-fable5-2-2026-11-09"
+    kind: "availability"
+    date:
+      start: "2026-11-09"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["claude-fable-5-2", "claude-fable-5-2-fast"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Microsoft introduced Claude Fable 5.2 and Claude Fable 5.2 Fast in Microsoft Foundry on 9 November 2026, Anthropic's release day, hosted on Anthropic infrastructure with Global Standard and US Data Zone deployment; the catalogue watcher first saw claude-fable-5-2 and claude-fable-5-2-fast in the Foundry Models API between its runs of 13:30 and 19:30 UTC that day, in nine regions."
+    caveat: "The stage is the weaker part of the claim. Microsoft's launch post labels both 'GA, Hosted on Anthropic' and the Foundry Models API reads lifecycleStatus GenerallyAvailable (portal word Generally Available), but Microsoft's Claude models page, read on 11 November, lists both as 'Hosted on Anthropic infrastructure: Preview'. Fable 5.1 went the same way in September, when Microsoft revised its launch post from generally available to public preview (foundry-fable5-1-preview-2026-09-01). The conflict is held open as foundry-fable5-2-stage. Covered models: data retention is required for safety monitoring, with zero data retention for eligible customers until Enterprise Frontier Safeguards is available. Version strings are build identifiers and date nothing. CDX returned no Wayback capture of the post."
+    relations:
+      - type: "announced_by"
+        target: "anthropic-fable5-2-2026-11-09"
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Claude Fable 5.2 and Mythos 5.2 bring frontier intelligence to Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/claude-fable-5-2-and-mythos-5-2-bring-frontier-intelligence-to/ba-p/4564282"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-09"
+        source_type: "announcement"
+        quote: "introducing Claude Fable 5.2, Claude Fable 5.2 Fast, Claude Mythos 5.2, Claude Mythos 5.2 in Microsoft Foundry, expanding what teams can tackle with AI across software engineering, scientific research, and finance."
+        supports: ["date", "model"]
+        note: "Read through r.jina.ai; direct requests return 403. The publication date is the page data's postTime, 2026-11-09T11:15:12-08:00; lastEditTime precedes it. The sentence begins 'We’re introducing', trimmed here before the apostrophe, and prints Claude Mythos 5.2 twice, as the post does."
+      - publisher: "Microsoft Community Hub"
+        title: "Claude Fable 5.2 and Mythos 5.2 bring frontier intelligence to Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/claude-fable-5-2-and-mythos-5-2-bring-frontier-intelligence-to/ba-p/4564282"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-09"
+        source_type: "announcement"
+        quote: "GA, Hosted on Anthropic"
+        supports: ["lifecycle"]
+        note: "The Availability column of the post's pricing table, for both the Claude Fable 5.2 row and the Claude Fable 5.2 Fast row."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, centralus, 2026-11-09T19:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/b65b2c26cb55b27dd30673f458416e300d8bcfdb/observations/arm/centralus/2026/11/2026-11-09T19-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-09"
+        source_type: "other"
+        quote: "\"model_key\": \"claude-fable-5-2@1\","
+        supports: ["date", "model"]
+        note: "A first_seen_present observation with window_start 2026-11-09T13:30:00Z and window_end 2026-11-09T19:30:00Z; claude-fable-5-2-fast@1 appears in the same file with the same window. The same change appears in other regions' files; the one cited is centralus. Cited at its commit-pinned URL. Source type other because the URL is immutable."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, centralus, 2026-11-09T19:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/b65b2c26cb55b27dd30673f458416e300d8bcfdb/observations/arm/centralus/2026/11/2026-11-09T19-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-09"
+        source_type: "other"
+        quote: "\"lifecycle_status\": \"GenerallyAvailable\","
+        supports: ["lifecycle"]
+        note: "The API stage word of the claude-fable-5-2 entry; the portal word is Generally Available."
+      - publisher: "Microsoft Learn"
+        title: "Claude models in Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
+        primary: true
+        retrieved_at: "2026-11-11"
+        source_type: "documentation"
+        quote: "claude-fable-5-2 | Hosted on Anthropic infrastructure: Preview | 1M / 128K"
+        supports: ["model"]
+        note: "Read on 11 November 2026. This row contradicts the stage in the launch post, so lifecycle is deliberately not listed in supports. ms.date 2026-09-21 and updated_at 2026-09-22 did not move when the rows were added; the row is absent from the Wayback capture of 3 November 2026, so there is no archived_url (the only capture predates the claim)."
+  - id: "foundry-mythos5-2-2026-11-09"
+    kind: "availability"
+    date:
+      start: "2026-11-09"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["claude-mythos-5-2"]
+    model_claim: "specific"
+    lifecycle: "limited_preview"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Microsoft introduced Claude Mythos 5.2 in Microsoft Foundry on 9 November 2026 in the same post as Fable 5.2, with access limited to customers authorised through Anthropic's verification programmes and confirmed through a Microsoft account team."
+    caveat: "limited_preview follows Microsoft's Claude models page, which lists claude-mythos-5-2 and claude-mythos-5-2-fast as 'Hosted on Anthropic infrastructure: Gated research preview'. The catalogue watcher's subscriptions are not authorised and do not see the model, so there is no observation to corroborate it. Unlike Mythos 5.1, whose Foundry arrival no source dates (foundry-mythos5-1-arrival-2026), this post names Mythos 5.2 in Foundry on a dated page. The Fast variant is not registered."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Claude Fable 5.2 and Mythos 5.2 bring frontier intelligence to Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/claude-fable-5-2-and-mythos-5-2-bring-frontier-intelligence-to/ba-p/4564282"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-09"
+        source_type: "announcement"
+        quote: "introducing Claude Fable 5.2, Claude Fable 5.2 Fast, Claude Mythos 5.2, Claude Mythos 5.2 in Microsoft Foundry, expanding what teams can tackle with AI across software engineering, scientific research, and finance."
+        supports: ["date"]
+        note: "Read through r.jina.ai; direct requests return 403. The publication date is the page data's postTime, 2026-11-09T11:15:12-08:00; lastEditTime precedes it. The sentence begins 'We’re introducing', trimmed here before the apostrophe, and prints Claude Mythos 5.2 twice, as the post does."
+      - publisher: "Microsoft Community Hub"
+        title: "Claude Fable 5.2 and Mythos 5.2 bring frontier intelligence to Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/claude-fable-5-2-and-mythos-5-2-bring-frontier-intelligence-to/ba-p/4564282"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-09"
+        source_type: "announcement"
+        quote: "For Claude Mythos 5.2, contact your Microsoft account team to confirm eligibility and access."
+        supports: ["model", "lifecycle"]
+      - publisher: "Microsoft Learn"
+        title: "Claude models in Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
+        primary: true
+        retrieved_at: "2026-11-11"
+        source_type: "documentation"
+        quote: "claude-mythos-5-2 | Hosted on Anthropic infrastructure: Gated research preview | 1M / 128K"
+        supports: ["model", "lifecycle"]
+        note: "Read on 11 November 2026; the page prints a footnote marker after the model id in the first cell. ms.date 2026-09-21 and updated_at 2026-09-22 did not move when the rows were added; the row is absent from the Wayback capture of 3 November 2026, so there is no archived_url (the only capture predates the claim)."
+  - id: "github-fable5-2-2026-11-09"
+    kind: "availability"
+    date:
+      start: "2026-11-09"
+      precision: "day"
+      rollout_start: true
+    surface_id: "github-copilot"
+    model_ids: ["claude-fable-5-2"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "Claude Fable 5.2 became generally available in GitHub Copilot on 9 November 2026, Anthropic's release day, for Copilot Pro+, Max, Business and Enterprise, selectable across VS Code, Visual Studio, Copilot CLI, the Copilot coding agent, the Copilot app, github.com, GitHub Mobile, JetBrains, Xcode and Eclipse."
+    caveat: "Rollout is gradual, so 9 November starts the rollout window. Business and Enterprise administrators must enable the Claude Fable 5.2 policy, which is off by default. The model requires data retention by default; eligible enterprises can use zero data retention to the end of the calendar year under a time-bound exemption. Not offered on the base Copilot Pro plan."
+    relations:
+      - type: "announced_by"
+        target: "anthropic-fable5-2-2026-11-09"
+    sources:
+      - publisher: "GitHub"
+        title: "Claude Fable 5.2 in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-09"
+        source_type: "changelog"
+        quote: "Claude Fable 5.2, Anthropic’s newest Fable model, is now generally available in GitHub Copilot."
+        supports: ["date", "model", "lifecycle"]
+        note: "The entry's date line reads 'November 9, 2026' and it is typed 'Release'."
+      - publisher: "GitHub"
+        title: "Claude Fable 5.2 in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-09"
+        source_type: "changelog"
+        quote: "Claude Fable 5.2 is available to Copilot Pro+, Max, Business, and Enterprise users."
+        supports: ["exposure"]
+      - publisher: "GitHub"
+        title: "Claude Fable 5.2 in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-09"
+        source_type: "changelog"
+        quote: "Rollout will be gradual."
+        supports: ["date"]
+  - id: "github-gemini4-carbon-2026-11-10"
+    kind: "availability"
+    date:
+      start: "2026-11-10"
+      precision: "day"
+      rollout_start: true
+    surface_id: "github-copilot"
+    model_ids: ["gemini-4-carbon"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "Gemini 4 Carbon became generally available in GitHub Copilot on 10 November 2026, the day Google made it generally available, for Copilot Pro+, Max, Business and Enterprise."
+    caveat: "Rollout is gradual, so 10 November starts the rollout window. Under default model enablement the model is on for Business and Enterprise unless an administrator has turned off the global default or disabled it. Not offered on the base Copilot Pro plan."
+    relations:
+      - type: "announced_by"
+        target: "google-gemini4-carbon-2026-11-10"
+    sources:
+      - publisher: "GitHub"
+        title: "Gemini 4 Carbon in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-10"
+        source_type: "changelog"
+        quote: "Gemini 4 Carbon, Google’s latest model, is now generally available in GitHub Copilot."
+        supports: ["date", "model", "lifecycle"]
+        note: "The entry's date line reads 'November 10, 2026' and it is typed 'Release'."
+      - publisher: "GitHub"
+        title: "Gemini 4 Carbon in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-10"
+        source_type: "changelog"
+        quote: "Gemini 4 Carbon is available to Copilot Pro+, Max, Business, and Enterprise users."
+        supports: ["exposure"]
+      - publisher: "GitHub"
+        title: "Gemini 4 Carbon in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-10"
+        source_type: "changelog"
+        quote: "Rollout will be gradual."
+        supports: ["date"]
+  - id: "google-gemini4-carbon-2026-11-10"
+    kind: "availability"
+    date:
+      start: "2026-11-10"
+      precision: "day"
+    surface_id: "google-gemini"
+    model_ids: ["gemini-4-carbon"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Google made Gemini 4 Carbon generally available on 10 November 2026: through the API in Google AI Studio and Gemini for business for all paying developers and enterprises, and rolling out to Google AI Ultra subscribers in Google Antigravity, the Gemini app and AI Mode in Search, at introductory pricing of $2.00 per million input tokens and $10.00 per million output tokens through 30 November 2026."
+    caveat: "One event on the umbrella surface because the API and the consumer products moved in one post, on the precedent of Gemini 4 Argon (google-gemini4-argon-2026-10-13), and so the model's stages sit beside the Fairwind rollout (google-gemini4-carbon-fairwind-2026-10-28). Google's post says 'available' and 'now available'; the words generally available are the Gemini API changelog's. The consumer side is 'rolling out' to Google AI Ultra subscribers with no end stated, so the day dates the API release and the start of that rollout."
+    sources:
+      - publisher: "Google"
+        title: "Gemini 4 Carbon is now available"
+        url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-10"
+        source_type: "announcement"
+        quote: "Gemini 4 Carbon is available via the API in Google AI Studio and Gemini for business for all paying developers and enterprises"
+        supports: ["date", "model"]
+        note: "Fetched directly on 11 November 2026; the page's datePublished is 2026-11-10T16:00:00+00:00 and its description opens 'Today'. The next sentence says it is also rolling out to all Google AI Ultra subscribers in Google Antigravity, the Gemini app and AI Mode in Search. No Wayback lookup was run for this page."
+      - publisher: "Google"
+        title: "Gemini API release notes"
+        url: "https://ai.google.dev/gemini-api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-10"
+        source_type: "release_notes"
+        quote: "Gemini 4 Carbon (gemini-4-carbon) generally available (GA): Released Gemini 4 Carbon (gemini-4-carbon), our most capable reasoning model built for sustained agentic coding, multimodal knowledge work, scientific reasoning, and cybersecurity defense"
+        supports: ["date", "model", "lifecycle"]
+        note: "Entry headed November 10, 2026; backticks around the model id are omitted from the quote, as in the Gemini 4 Argon entry. Read through r.jina.ai because a direct fetch redirects to a sign-in. No archived_url: CDX returned no capture of the changelog page after 9 November 2026."
 validation_backlog:
   - id: "m365-apps-fable5-suspension-window"
     state: "open"
@@ -16714,10 +17415,13 @@ validation_backlog:
     model_ids: ["grok-4-5"]
     surface_ids: ["xai-grok"]
   - id: "openai-gpt-5-6-cyber-daybreak-2026-08"
-    state: "open"
+    state: "promoted"
     working_claim: "OpenAI made GPT-5.6-Cyber available to approved security researchers through its Daybreak Red programme on or around 10 August 2026."
     reason: "The only source retrieved is a secondary news aggregator (runtimewire.com / TLDR Newsletters), which references an OpenAI X thread and an OpenAI technical post dated 10 August 2026 but does not reproduce verbatim quotes sufficient to establish day precision. The article, published Friday 14 August, says the launch happened 'on Monday', which is 10 August — consistent with the technical post's date. The X thread URL (https://x.com/OpenAI/status/2086864365379010729) and the August 10 technical post were not independently fetched during triage. The model is registered but has no sourced vendor-baseline event. Additionally, access is restricted to approved researchers via the Daybreak Red programme, making the lifecycle limited_preview rather than ga; that distinction must be confirmed from a first-party source before an event is recorded."
     target: "Fetch the OpenAI X thread at https://x.com/OpenAI/status/2086864365379010729 and the August 10 technical post linked from it. If those sources confirm the date, the scope (Daybreak Red, approved researchers), and that GPT-5.6-Cyber is a distinct model rather than a mode of GPT-5.6 Sol, record a vendor-baseline event on the openai surface with lifecycle limited_preview, exposure not_applicable, and confidence supported (or confirmed if a date-attesting quote is recoverable). The runtimewire.com article was checked and found to be a secondary paraphrase with no direct quoted material from the OpenAI announcement itself."
+    resolution: "The first-party post was found and read on 11 November 2026: OpenAI's 'Expanding Daybreak as the Cyber Defense Window Narrows', dated 10 August 2026, introduces GPT-5.6-Cyber, built on GPT-5.6 Sol, through Daybreak Red for approved individuals and organisations. Recorded as a vendor-baseline event at limited_preview with confidence confirmed (openai-gpt5-6-cyber-2026-08-10); GPT-6 Cyber, its successor, is recorded separately (openai-gpt6-cyber-2026-11-05)."
+    resolved_on: "2026-11-11"
+    promoted_to: "openai-gpt5-6-cyber-2026-08-10"
     model_ids: ["gpt-5-6-cyber"]
     surface_ids: ["openai"]
     sources:
@@ -16837,7 +17541,7 @@ validation_backlog:
   - id: "cowork-studio-fable5-1-stage-2026"
     state: "open"
     working_claim: "Claude Fable 5.1 reached Copilot Cowork and Copilot Studio on 1 September 2026 at a release stage Microsoft has not yet labelled."
-    reason: "cowork-fable5-1-2026-09-01 and studio-fable5-1-2026-09-01 record the arrivals at ga with lifecycle supported. The basis: Microsoft's announcement and its Message Center notice MC1465748 carry no preview label, Microsoft's documentation defines an untagged model as generally available, and the Fable 5 notice MC1387806 did say '(preview)', so the omission looks deliberate; a tenant observation on 3 September 2026 agreed, with the picker showing Fable 5.1 untagged. What keeps this open: no Microsoft text says 'generally available', the Message Center wording reaches the dataset only through a third-party mirror, and neither the Cowork picker documentation nor Copilot Studio's model pages listed Fable 5.1 at their 3 September readings. If a Microsoft page labels Fable 5.1 as preview on either surface, the recorded lifecycle overstates the stage."
+    reason: "cowork-fable5-1-2026-09-01 and studio-fable5-1-2026-09-01 record the arrivals at ga with lifecycle supported. The basis: Microsoft's announcement and its Message Center notice MC1465748 carry no preview label, Microsoft's documentation defines an untagged model as generally available, and the Fable 5 notice MC1387806 did say '(preview)', so the omission looks deliberate; a tenant observation on 3 September 2026 agreed, with the picker showing Fable 5.1 untagged. What keeps this open: no Microsoft text says 'generally available', the Message Center wording reaches the dataset only through a third-party mirror, and neither the Cowork picker documentation nor Copilot Studio's model pages listed Fable 5.1 at their 3 September readings. If a Microsoft page labels Fable 5.1 as preview on either surface, the recorded lifecycle overstates the stage. Read on 11 November 2026, the Cowork picker page (updated_at 2026-11-05) lists 'Claude Fable 5.1 (Frontier)' with no preview tag; '(Frontier)' is a programme label the page also puts on GPT 5.5, and whether it marks a release stage is not stated. Copilot Studio's primary-model page lists no Fable model. The Cowork page has no Wayback capture, so the first revision carrying the row cannot be dated."
     target: "Watch the Cowork picker documentation, the Cowork what's-new page and the Copilot Studio primary-model and external-model pages for a Fable 5.1 row; read ms.date on the first revision that lists it. If the row says preview, correct the lifecycle on the affected event and note the revision; if it carries no tag, promote lifecycle to confirmed and close this item. The Microsoft 365 Copilot release notes, whose 25 August 2026 edition was the latest at triage, may carry the same fact earlier."
     model_ids: ["claude-fable-5-1"]
     surface_ids: ["m365-cowork", "copilot-studio"]
@@ -17705,8 +18409,8 @@ validation_backlog:
   - id: "foundry-command-a-plus-serverless-end"
     state: "open"
     working_claim: "The serverless offering of Cohere Command A+ in Microsoft Foundry ended on a single date in October 2026."
-    reason: "The Foundry Models API reads Preview for Cohere-command-a-plus-05-2026 version 1 with a deprecation date of 2026-10-13, and its portal word already reads Retired in the checkpoint of 27 October 2026, while Learn's retirement page gives 'Preview | 2026-10-16'. The two dates are three days apart and neither is a published notice. The managed compute offer remains and Cohere has not retired the model, so no retirement event is recorded for cohere-command-a-plus. The serverless offering's own preview arrival on 24 June 2026 is held in the caveat of foundry-cohere-command-a-plus-2026-05-21, not as an event."
-    target: "A Microsoft notice of the end of the serverless preview, or a Learn capture of the retirement page near 13 to 16 October 2026 that carries the row. Already read: the live Learn page of 28 October 2026 and the 27 October checkpoint for eastus. Not yet searched: Wayback captures of the retirement page for October 2026."
+    reason: "The Foundry Models API reads Preview for Cohere-command-a-plus-05-2026 version 1 with a deprecation date of 2026-10-13, and its portal word already reads Retired in the checkpoint of 27 October 2026, while Learn's retirement page gives 'Preview | 2026-10-16'. The two dates are three days apart and neither is a published notice. The managed compute offer remains and Cohere has not retired the model, so no retirement event is recorded for cohere-command-a-plus. The serverless offering's own preview arrival on 24 June 2026 is held in the caveat of foundry-cohere-command-a-plus-2026-05-21, not as an event. On 11 November 2026 the two sources agree on the date: the Foundry Models API changed the row from Preview with 2026-10-13 to Deprecated (portal word Retired) with 2026-10-16 between the watcher's runs of 28 October 19:30 UTC and 29 October 19:30 UTC across 32 regions, and Learn's retirement schedule reads 'Cohere-command-a-plus-05-2026 | 1 | Preview | 2026-10-16' unchanged in its captures of 12 October and 5 November and live. Learn's stage word is still Preview after the date. No Microsoft notice was found."
+    target: "A Microsoft notice of the end of the serverless preview, or a Learn capture of the retirement page near 13 to 16 October 2026 that carries the row. Already read: the live Learn page of 28 October 2026 and the 27 October checkpoint for eastus. Wayback holds no capture of the schedule between 12 October and 5 November 2026, so no capture brackets the day."
     model_ids: ["cohere-command-a-plus"]
     surface_ids: ["microsoft-foundry"]
     sources:
@@ -17729,3 +18433,309 @@ validation_backlog:
         quote: "\"watched\":{\"name\":\"Cohere-command-a-plus-05-2026\",\"version\":\"1\",\"format\":\"Cohere\",\"lifecycle_status\":\"Preview\",\"lifecycle_portal\":\"Retired\",\"deprecation_inference\":\"2026-10-13T00:00:00Z\""
         supports: ["lifecycle", "date"]
         note: "The watcher's seed checkpoint for eastus, cited at its commit-pinned URL. lifecycle_status is the API word and lifecycle_portal the portal word."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, westcentralus, 2026-10-29T01:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/85ce456d16d4435d4ec15f152d7defedf90101e2/observations/arm/westcentralus/2026/10/2026-10-29T01-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-11"
+        published_at: "2026-10-29"
+        source_type: "other"
+        quote: "\"model_key\": \"Cohere-command-a-plus-05-2026@1\","
+        supports: ["lifecycle", "date"]
+        note: "A lifecycle_changed observation with window_start 2026-10-28T19:30:00Z and window_end 2026-10-29T01:30:00Z: the before block reads lifecycle_status Preview with deprecation_inference 2026-10-13T00:00:00Z, the after block Deprecated (portal word Retired) with 2026-10-16T00:00:00Z. westcentralus is the first region to show it; the others follow at the 29 October 19:30 UTC run. Cited at its commit-pinned URL."
+  - id: "foundry-fable5-2-stage"
+    state: "open"
+    working_claim: "Claude Fable 5.2's Foundry stage at launch is unresolved: Microsoft's launch post and the Foundry Models API say generally available, Microsoft's Claude models page says Preview."
+    reason: "Microsoft's launch post of 9 November 2026 labels both Claude Fable 5.2 and Claude Fable 5.2 Fast 'GA, Hosted on Anthropic' in its pricing table, and the Foundry Models API reads lifecycleStatus GenerallyAvailable (portal word Generally Available) for both in the watcher's file of 9 November 2026. Microsoft's Claude models page, read on 11 November, lists both as 'Hosted on Anthropic infrastructure: Preview'. Fable 5.1's launch post was revised from generally available to public preview within two days (foundry-fable5-1-preview-2026-09-01). The Learn page's ms.date (2026-09-21) and updated_at (2026-09-22) did not change when the rows were added: they are absent from the Wayback capture of 3 November 2026 and present on 11 November. Both sides are recorded and neither is picked; foundry-fable5-2-2026-11-09 records general availability with lifecycle supported."
+    target: "Re-read the launch post for a revision (compare with the 11 November text), watch the retirement schedule for a claude-fable-5-2 row and its stage word, and watch for the next Wayback capture of the Claude models page. If Microsoft revises the post to preview, correct foundry-fable5-2-2026-11-09 to public_preview."
+    model_ids: ["claude-fable-5-2", "claude-fable-5-2-fast"]
+    surface_ids: ["microsoft-foundry"]
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Claude Fable 5.2 and Mythos 5.2 bring frontier intelligence to Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/claude-fable-5-2-and-mythos-5-2-bring-frontier-intelligence-to/ba-p/4564282"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-09"
+        source_type: "announcement"
+        quote: "GA, Hosted on Anthropic"
+        supports: ["lifecycle"]
+        note: "The Availability column of the post's pricing table, for both the Claude Fable 5.2 row and the Claude Fable 5.2 Fast row. Read through r.jina.ai; the page data's postTime is 2026-11-09T11:15:12-08:00."
+      - publisher: "Microsoft Learn"
+        title: "Claude models in Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
+        primary: true
+        retrieved_at: "2026-11-11"
+        source_type: "documentation"
+        quote: "claude-fable-5-2 | Hosted on Anthropic infrastructure: Preview | 1M / 128K"
+        supports: ["lifecycle"]
+        note: "Read on 11 November 2026. No archived_url: the row is absent from the only recent capture, 3 November 2026."
+  - id: "foundry-mistral-large-4-arrival-2026-11"
+    state: "open"
+    working_claim: "Mistral Large 4 arrived in Microsoft Foundry in public preview between 9 and 11 November 2026."
+    reason: "The catalogue watcher first saw mistral-large-4-latest (API lifecycleStatus Preview, portal word Preview; DataZoneStandard and GlobalStandard) in westcentralus between its runs of 2026-11-09T19:30Z and 2026-11-10T01:30Z, and in 30 further regions between 2026-11-10T19:30Z and 2026-11-11T01:30Z. An observation dates when the watcher looked, not when Microsoft changed the listing. Microsoft's post of 29 October (foundry-mistral-large4-announced-2026-10-29) promised it 'in the coming days' for Sweden Central and has not been edited to say it is live; Mistral's own post of the same day says 'Mistral Large 4 is available through Microsoft Foundry' in the present tense, eleven days before the watcher saw it. No Learn page lists the model: not the retirement schedule, not the models-sold-directly-by-Azure page (captures to 10 November), not what's-new."
+    target: "A Microsoft post, Learn revision or retrospective that dates the arrival (the November 2026 'What's new in Microsoft Foundry' retrospective is the likeliest). Then record a public_preview event and cite the observations as corroboration."
+    model_ids: ["mistral-large-4"]
+    surface_ids: ["microsoft-foundry"]
+    sources:
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, westcentralus, 2026-11-10T01:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/22514123b2f7195310cfca62a1e3778aef2b4d80/observations/arm/westcentralus/2026/11/2026-11-10T01-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-10"
+        source_type: "other"
+        quote: "\"model_key\": \"mistral-large-4-latest@1\","
+        supports: ["date", "model"]
+        note: "A first_seen_present observation with window_start 2026-11-09T19:30:00Z and window_end 2026-11-10T01:30:00Z; the entry reads lifecycle_status Preview and lifecycle_portal Preview, with DataZoneStandard and GlobalStandard SKUs. Cited at its commit-pinned URL."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, australiaeast, 2026-11-11T01:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/7383f107ca3b726da221a8b6896692603739fc6f/observations/arm/australiaeast/2026/11/2026-11-11T01-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-11"
+        source_type: "other"
+        quote: "\"model_key\": \"mistral-large-4-latest@1\","
+        supports: ["date", "model"]
+        note: "A region_added observation with window_start 2026-11-10T19:30:00Z and window_end 2026-11-11T01:30:00Z; the same change appears in the other regions' files of that run. Cited at its commit-pinned URL."
+      - publisher: "Microsoft Community Hub"
+        title: "Mistral Large 4 in Microsoft Foundry: Build sovereign AI within a consistent platform experience"
+        url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/mistral-large-4-in-microsoft-foundry-build-sovereign-ai-within-a/ba-p/4568546"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-10-29"
+        source_type: "announcement"
+        quote: "available through Microsoft Foundry in the coming days."
+        supports: ["date"]
+        note: "Read through r.jina.ai; the page data's postTime is 2026-10-29T10:46:28-07:00. The text read on 11 November still says 'in the coming days'."
+      - publisher: "Mistral AI"
+        title: "Mistral Large 4 (Le Chonk) is now open weight"
+        url: "https://mistral.ai/news/mistral-large-4-oss/"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-10-29"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20261029141730/https://mistral.ai/news/mistral-large-4-oss/"
+        quote: "Mistral Large 4 is available through Microsoft Foundry, with private deployment options for Azure developers."
+        supports: ["model"]
+        note: "The page's JSON-LD datePublished is 2026-10-29T12:00:07Z."
+  - id: "mistral-large-4-ga-date-2026"
+    state: "open"
+    working_claim: "Mistral Large 4 reached general availability from Mistral on 29 October or 5 November 2026."
+    reason: "Two first-party statements disagree on the day. Microsoft's Foundry post of 29 October says 'Today, Mistral Large 4 (Le Chonk) reaches general availability from Mistral'. Mistral's own post of that day announces the weights ('releasing the weights of this improved Mistral Large 4'), never says general availability, and was modified on 5 November. Mistral's documentation page for the model, read on 11 November 2026, shows a GA badge beside the date 'November 5, 2026', which the page does not label as a release date, a general-availability date or a page date. So general availability is attested by Mistral itself, and its day is either Microsoft's 29 October or the documentation's 5 November. No ga event is recorded until one of them is shown, and mistral-large4-preview-2026-10-06 stays the model's stage on the vendor surface. The open-weight release of 29 October is a fact but not a lifecycle stage."
+    target: "Read the Wayback captures of the documentation page that fall between the two dates: 28 October 15:00 UTC, 29 October 03:02 UTC, 31 October 02:28 UTC and 2 November 16:30 UTC 2026. If the page still reads Public Preview on 31 October or 2 November, general availability is 5 November; if it reads GA on 29 or 31 October, it is 29 October. The captures were located through CDX on 11 November 2026 but not read: the Wayback Machine blocked the replay requests as suspected bot traffic. A Mistral changelog entry naming the day would settle it directly."
+    model_ids: ["mistral-large-4"]
+    surface_ids: ["mistral"]
+    sources:
+      - publisher: "Mistral AI"
+        title: "Mistral Large 4 (Le Chonk) is now open weight"
+        url: "https://mistral.ai/news/mistral-large-4-oss/"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-10-29"
+        source_type: "announcement"
+        archived_url: "https://web.archive.org/web/20261029141730/https://mistral.ai/news/mistral-large-4-oss/"
+        quote: "releasing the weights of this improved Mistral Large 4."
+        supports: ["date", "model"]
+        note: "The sentence begins 'Today, we’re', trimmed here before the apostrophe. The page's JSON-LD datePublished is 2026-10-29T12:00:07Z."
+      - publisher: "Microsoft Community Hub"
+        title: "Mistral Large 4 in Microsoft Foundry: Build sovereign AI within a consistent platform experience"
+        url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/mistral-large-4-in-microsoft-foundry-build-sovereign-ai-within-a/ba-p/4568546"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-10-29"
+        source_type: "announcement"
+        quote: "Mistral Large 4 (Le Chonk) reaches general availability from Mistral."
+        supports: ["lifecycle"]
+        note: "Read through r.jina.ai; the page data's postTime is 2026-10-29T10:46:28-07:00. The sentence begins 'Today,'."
+      - publisher: "Mistral AI"
+        title: "Mistral Large 4"
+        url: "https://docs.mistral.ai/models/mistral-large-4-0"
+        primary: true
+        retrieved_at: "2026-11-11"
+        source_type: "documentation"
+        quote: "November 5, 2026"
+        supports: ["lifecycle"]
+        note: "The model page's header shows this date followed by a GA badge and the licence name, with no label saying what the date is. Fetched directly on 11 November 2026; the words Public Preview occur only in the page's embedded string table, not in the rendered header."
+  - id: "foundry-deepseek-v4-1-flash-1017-arrival-2026-11"
+    state: "open"
+    working_claim: "The dated snapshot DeepSeek-V4.1-Flash-1017 arrived in Microsoft Foundry in preview on 5 November 2026."
+    reason: "The catalogue watcher first saw DeepSeek-V4.1-Flash-1017 (API lifecycleStatus Preview, portal word Preview; GlobalStandard) in 21 regions between 2026-11-05T13:30Z and 19:30Z and in 11 more between 19:30Z and 2026-11-06T01:30Z. No Microsoft page names the -1017 snapshot. Learn's models-sold-directly-by-Azure page gained an unsuffixed DeepSeek-V4.1-Flash row between its captures of 5 November 01:16 UTC and 10 November 11:03 UTC, which may be the same change, and the retirement schedule names DeepSeek-V4.1-Flash only as the replacement for DeepSeek-V3.2. The unsuffixed model's preview arrival is already recorded (foundry-deepseek-v4-1-flash-2026-09-23)."
+    target: "A Microsoft post, schedule row or retrospective naming the 1017 snapshot; otherwise this stays an observation."
+    model_ids: ["deepseek-v4-1-flash-1017"]
+    surface_ids: ["microsoft-foundry"]
+    sources:
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, brazilsouth, 2026-11-05T19:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/0d1ee782c2ca79230ff30e0f62b416f94e9565c6/observations/arm/brazilsouth/2026/11/2026-11-05T19-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-05"
+        source_type: "other"
+        quote: "\"model_key\": \"DeepSeek-V4.1-Flash-1017@2026-10-17\","
+        supports: ["date", "model"]
+        note: "A first_seen_present observation with window_start 2026-11-05T13:30:00Z and window_end 2026-11-05T19:30:00Z; the entry reads lifecycle_status Preview and lifecycle_portal Preview with a GlobalStandard SKU. Cited at its commit-pinned URL."
+      - publisher: "Microsoft Learn"
+        title: "Foundry Models sold directly by Azure"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+        primary: true
+        retrieved_at: "2026-11-11"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20261110110321/https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+        quote: "DeepSeek-V4.1-Flash | chat-completion (with reasoning content)"
+        supports: ["model"]
+        note: "The start of the unsuffixed DeepSeek-V4.1-Flash row in the capture of 10 November 2026, 11:03 UTC. The row names no -1017 snapshot."
+  - id: "foundry-muse-spark-1-3-listing-2026-10"
+    state: "open"
+    working_claim: "Meta's Muse Spark 1.3 was listed in the Microsoft Foundry Models API in preview for about a week from 30-31 October 2026 and then withdrawn."
+    reason: "The catalogue watcher saw muse-spark-1.3 (format Meta, API lifecycleStatus Preview, portal word Preview, GlobalStandard, no retirement date set) appear in 32 regions between 2026-10-30T19:30Z and 2026-10-31T01:30Z, and disappear from 30 of them between 2026-11-06T19:30Z and 2026-11-07T01:30Z, from centralus by 07:30Z and from westcentralus between 2026-11-07T19:30Z and 2026-11-08T01:30Z, each confirmed over four absent runs. Absence is weak: the listing is two subscriptions' view. No Microsoft post, Learn page or schedule row mentions the model, and Meta's posts name no Microsoft surface. Neither an arrival nor a retirement is recorded."
+    target: "Any Microsoft page naming Muse Spark 1.3; if it returns to the listing, the next observation."
+    model_ids: ["muse-spark-1-3"]
+    surface_ids: ["microsoft-foundry"]
+    sources:
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, australiaeast, 2026-10-31T01:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/778aa168b125a5892f0e5e9e2b8ceae9677f11d0/observations/arm/australiaeast/2026/10/2026-10-31T01-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-11"
+        published_at: "2026-10-31"
+        source_type: "other"
+        quote: "\"model_key\": \"muse-spark-1.3@1\","
+        supports: ["date", "model"]
+        note: "A first_seen_present observation with window_start 2026-10-30T19:30:00Z and window_end 2026-10-31T01:30:00Z; the entry reads lifecycle_status Preview, lifecycle_portal Preview and a 2099-12-31 deprecation placeholder. Cited at its commit-pinned URL."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, australiaeast, 2026-11-07T19:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/7e4bd7b4f7997baea571ad3c3c8df9db3b95fd4e/observations/arm/australiaeast/2026/11/2026-11-07T19-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-07"
+        source_type: "other"
+        quote: "\"model_key\": \"muse-spark-1.3@1\","
+        supports: ["date", "model"]
+        note: "A last_seen_absent observation with window_start 2026-11-06T19:30:00Z and window_end 2026-11-07T01:30:00Z. Cited at its commit-pinned URL."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, westcentralus, 2026-11-08T19:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/0f3c850c14591916e598b400931ac202701201db/observations/arm/westcentralus/2026/11/2026-11-08T19-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-08"
+        source_type: "other"
+        quote: "\"model_key\": \"muse-spark-1.3@1\","
+        supports: ["date", "model"]
+        note: "A last_seen_absent observation with window_start 2026-11-07T19:30:00Z and window_end 2026-11-08T01:30:00Z. Cited at its commit-pinned URL."
+  - id: "foundry-fal-video-models-2026-11"
+    state: "open"
+    working_claim: "Five video models served by fal began rolling out in public preview in Microsoft Foundry on 5 November 2026: Kling v3 Pro, LTX-2.5 Fast, LTX-2.5 Pro, MiniMax H3 Max and MiniMax H3 Max Turbo."
+    reason: "Microsoft's post of 5 November 2026 (edited 6 November) says the Kling, LTX and MiniMax video models 'are rolling out to in public preview in Microsoft Foundry through our new partnership with fal', 'served by fal and sourced from the companies that build them', US-hosted, Global Standard except Kling v3 Pro on US Data Zone. The date and stage are attested; what is undecided is scope. None of the five models nor their three vendors is in the registry, and recording them needs three vendor surfaces and five extended video models. The FLUX models sit in meta-cohere-flux-mai-foundry-history on the same grounds. Held for a scope decision rather than registered piecemeal."
+    target: "A scope decision. If the models are registered, record one partner_hosted public_preview event per model on microsoft-foundry dated 2026-11-05 with rollout_start, from this post."
+    model_ids: []
+    surface_ids: ["microsoft-foundry"]
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "Building the next generation of multimodal AI experiences with fal in Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-the-next-generation-of-multimodal-ai-experiences-with/ba-p/4570032"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-05"
+        source_type: "announcement"
+        quote: "The initial portfolio spans Kling v3 Pro, LTX-2.5 Fast, LTX-2.5 Pro, MiniMax H3 Max, and MiniMax H3 Max Turbo."
+        supports: ["date", "model"]
+        note: "Read through r.jina.ai. The page data's postTime is 2026-11-05T10:00:54-08:00 and its lastEditTime is 2026-11-06T11:31:59-08:00, so the text read is the edited state."
+  - id: "studio-computer-use-model-retirement-2026-11-26"
+    state: "open"
+    working_claim: "Copilot Studio ends support for four computer use models in the standard harness on 26 November 2026 - OpenAI Computer-Using Agent, Claude Sonnet 4.5, Claude Sonnet 4.6 and Claude Opus 4.6 - and migrates tools still using them to GPT-6 Sol."
+    reason: "The source is Message Center notice MC1525997, published 26 October 2026, which is tenant-targeted and not public; no public mirror was found. The public Learn page on computer use (ms.date 2026-10-20) predates the notice, carries no retirement wording and lists five models: OpenAI Computer-Using Agent and GPT-6 Sol and Claude Sonnet 4.5 as generally available, Claude Sonnet 4.6 and Claude Opus 4.6 as experimental. The dataset holds no arrival for any model in the computer use tool, which has its own model picker distinct from an agent's primary model, so there is nothing for an ending to end; and the date is in the future. OpenAI Computer-Using Agent is not in the registry."
+    target: "After 26 November 2026, read the Learn computer use page for a revision that drops the four models and take its ms.date. Decide then whether computer use is an experience worth recording, with arrivals, or stays a note."
+    model_ids: ["claude-sonnet-4-5", "claude-sonnet-4-6", "claude-opus-4-6", "gpt-6-sol"]
+    surface_ids: ["copilot-studio"]
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Automate web and desktop apps with computer use"
+        url: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use"
+        primary: true
+        retrieved_at: "2026-11-11"
+        source_type: "documentation"
+        quote: "Anthropic | Claude Sonnet 4.5 | Standard | Generally available | 5"
+        supports: ["model"]
+        note: "A row of the page's model table, read live on 11 November 2026 (ms.date 2026-10-20, updated_at 2026-10-21). The page carries no retirement wording. No archived_url was looked up for this entry."
+  - id: "studio-primary-model-retirements-2026-11"
+    state: "open"
+    working_claim: "Copilot Studio retired GPT-5.3 Chat and GPT-5.4 Reasoning on 15 October 2026 and GPT-5.5 Chat on 31 October 2026 as primary agent models, with GPT-4.1, GPT-4.1 Mini, GPT-5 Chat, GPT-5 Auto and GPT-5 Reasoning to follow in November."
+    reason: "Microsoft's 'Select a primary AI model for your agent' page gained a 'Model retirement dates and extension availability' table between its captures of 14 and 24 October 2026 (ms.date 2026-10-22) giving those dates, with 12 November 2026 for the GPT-4.1 and GPT-5 group and GPT Chat Latest as the replacement. Two things stop it being recorded: the same page's model list still showed GPT-5.3 Chat and GPT-5.5 Chat on 11 November, after their dates, and Message Center notice MC1542165 of 6 November 2026 (not public) gives 30 November 2026 for GPT-4.1 and GPT-5 Chat, not 12 November. A third notice, MC1536101 of 3 November, moves the prompt model tiers in Copilot Studio, Power Automate and Power Apps to newer GPT models on 2 December 2026, retiring Anthropic, Grok and earlier GPT models there. Scheduled dates that the page itself contradicts are not retirements. GPT-5 Chat, GPT-5 Auto and GPT-5 Reasoning do not resolve to a single registry id and are not listed in model_ids."
+    target: "Re-read the page after 12 and 30 November for a revision that drops the rows; record retirements from the revision that shows them gone, bounded by captures."
+    model_ids: ["gpt-5-3-instant", "gpt-5-4", "gpt-5-5-instant", "gpt-4-1", "gpt-4-1-mini"]
+    surface_ids: ["copilot-studio"]
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Select a primary AI model for your agent"
+        url: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-select-agent-model"
+        primary: true
+        retrieved_at: "2026-11-11"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20261024152605/https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-select-agent-model"
+        quote: "GPT-5.5 Chat | Standard | GPT Chat Latest | October 31, 2026 | No"
+        supports: ["date", "model"]
+        note: "A row of the retirement table, read live on 11 November 2026 (ms.date 2026-10-22, updated_at 2026-10-23); the archived_url is the capture of 24 October 2026."
+  - id: "microsoft-mai-image-2-6-stage"
+    state: "open"
+    working_claim: "MAI-Image-2.6's Foundry stage after 27 October 2026 is contradicted by Microsoft's own October retrospective, which calls it a preview."
+    reason: "microsoft-mai-image-2-6-ga-2026-10-27 and microsoft-mai-image-2-6-flash-ga-2026-10-27 record general availability from Microsoft's Foundry blog post ('now generally available in Microsoft Foundry') and the Foundry Models API. Microsoft's 'What's new in Microsoft Foundry | October 2026' retrospective, published 5 November 2026, says 'We announced the model on October 27, and it is available in Microsoft Foundry as a Global Standard preview in East US, West Central US, West US, Sweden Central, West Europe, and South India.' Learn's models page also still reads Preview for both. Both are first-party; neither is picked, and the events stand as recorded."
+    target: "A revision of either page, or the retirement schedule gaining MAI-Image-2.6 rows with a stage word."
+    model_ids: ["mai-image-2-6", "mai-image-2-6-flash"]
+    surface_ids: ["microsoft-ai"]
+    sources:
+      - publisher: "Microsoft Foundry Blog"
+        title: "What's new in Microsoft Foundry | October 2026"
+        url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-october-2026/"
+        primary: true
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-05"
+        source_type: "announcement"
+        quote: "We announced the model on October 27, and it is available in Microsoft Foundry as a Global Standard preview in East US, West Central US, West US, Sweden Central, West Europe, and South India."
+        supports: ["lifecycle"]
+        note: "The page's article:published_time is 2026-11-05T11:40:48Z. The sentence follows the retrospective's MAI-Image-2.6 paragraph."
+      - publisher: "Microsoft Community Hub"
+        title: "MAI-Image-2.6 and MAI-Image-2.6-Flash are now generally available in Microsoft Foundry"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/mai-image-2-6-and-mai-image-2-6-flash-are-now-generally-available-in-microsoft-f/4566327"
+        primary: true
+        retrieved_at: "2026-10-28"
+        published_at: "2026-10-27"
+        source_type: "announcement"
+        quote: "MAI-Image-2.6 and MAI-Image-2.6-Flash are now generally available in Microsoft Foundry"
+        supports: ["date", "model", "lifecycle"]
+        note: "Direct fetches returned 403; read through r.jina.ai. The date is the post's embedded postTime, 2026-10-27T08:00:00-07:00 (Pacific time). One post covers both models, recorded as one event per model."
+  - id: "foundry-claude-4-5-retirement-dates-2026-11"
+    state: "open"
+    working_claim: "The Foundry retirement dates of Claude Haiku 4.5, Claude Opus 4.5 and Claude Sonnet 4.5 moved in early November 2026, and Microsoft's two sources now disagree."
+    reason: "Learn's retirement schedule, in its capture of 5 November 2026 and live on 11 November, reads 'claude-haiku-4-5 | 1 | GA | 2026-11-15' (and version 2 the same), 'claude-opus-4-5 | 1 | GA | 2026-11-24' and 'claude-sonnet-4-5 | 1 | GA | 2026-11-30 | claude-sonnet-5-5'. The Foundry Models API moved its dates between the watcher's runs of 2026-11-05T19:30Z and 2026-11-06T07:30Z: Haiku 4.5 from 2026-11-15 to 2027-03-16, Opus 4.5 from 2026-11-24 to 2027-03-16, and Sonnet 4.5 from 2026-11-30 to 2026-12-01. Anthropic's deprecations page has no entry after 30 September 2026. A retirement recorded from the Learn date on 15 or 24 November would contradict the API. Sonnet 4.5's announced retirement stays foundry-sonnet4-5-retirement-announced-2026-09-30; its stage conflict stays foundry-claude-sonnet-4-5-stage."
+    target: "After each Learn date passes, check whether the model is still deployable and still listed by the API; record a retirement only when a source shows it gone."
+    model_ids: ["claude-haiku-4-5", "claude-opus-4-5", "claude-sonnet-4-5"]
+    surface_ids: ["microsoft-foundry"]
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-11-11"
+        source_type: "documentation"
+        archived_url: "https://web.archive.org/web/20261105002827/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        quote: "claude-haiku-4-5 | 1 | GA | 2026-11-15 | —"
+        supports: ["date", "lifecycle"]
+        note: "The version 1 row, read live on 11 November 2026 and in the capture of 5 November 2026."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, centralus, 2026-11-06T01:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/511a176e45a8b79175c51d55da1293f3a3e084e7/observations/arm/centralus/2026/11/2026-11-06T01-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-11"
+        published_at: "2026-11-06"
+        source_type: "other"
+        quote: "\"model_key\": \"claude-haiku-4-5@20251001\","
+        supports: ["date"]
+        note: "A deprecation_moved observation with window_start 2026-11-05T19:30:00Z and window_end 2026-11-06T01:30:00Z: the before block's deprecation_inference is 2026-11-15T00:00:00Z and the after block's is 2027-03-16T00:00:00Z. Cited at its commit-pinned URL; the same change appears in other regions' files."
+  - id: "sweep-2026-10-29-to-11-10"
+    state: "open"
+    working_claim: "The window from 29 October to 10 November 2026 was swept on 11 November 2026 across the sources listed here; research_cutoff moved to 10 November for the 11 November triage batch."
+    reason: "Events and backlog items were added from candidate issues #167, #171, #173, #181, #182 and #183 and the catalogue observation issues #155 to #189, and from a pass over: the GitHub Copilot changelog month archives for October and November; the Microsoft Foundry blog feed back to 27 October; the October 2026 Foundry retrospective; the Microsoft 365 Copilot blog and Copilot Studio blog; the Microsoft 365 Copilot release notes and Copilot Studio what's-new page; Microsoft's retirement schedule, Claude models and models-sold-directly-by-Azure pages with their Wayback captures; and the OpenAI, Anthropic, Google, Mistral, DeepSeek, xAI, Cohere, Moonshot and Meta release pages. research_cutoff moved from 2026-10-28 to 2026-11-10. This was a wider pass than earlier batches but it is still one day's reading: absence of other events in the window is weak evidence, not proof."
+    target: "Known gaps, to carry forward. Not found, so not recorded: Claude Fable 5.2, Claude Mythos 5.2, Gemini 4 Carbon or GPT-6.1 Terra in Microsoft 365 Copilot, Copilot Cowork or Copilot Studio; the Cowork picker page (updated_at 2026-11-05) lists Claude Fable 5.1 (Frontier) and no Fable 5.2 or GPT-6.1 Terra, has no Wayback capture at all, and so cannot be bracketed, and the Copilot Studio what's-new page has no October or November section yet. Seen and deliberately not recorded: Meta's Muse Ember (9 November 2026, Meta Model API, no Microsoft surface); OpenAI's GPT-6 Rosalind (30 October, the GPT-6 Astra weights under trusted access); OpenAI's deprecation notices for gpt-image-2 (10 November, removal 10 February 2027) and gpt-5.5-cyber-preview (5 November); Google's Gemini Omni 1.2 Flash (5 November, a video model with no Microsoft surface) and its deprecations of Gemini 2.5 Pro and 2.5 Flash (2 November, routing from 1 December); Anthropic's deprecation of fast mode for Claude Opus 4.8 (30 October, removal 30 November); Sonnet 5.5 behind Copilot in PowerPoint ('rolled out in October', no day); GitHub Copilot Fusion (28 October, a router, not a model); Mistral OCR 4 in Foundry. Endings falling due after this cutoff, to verify in the next batch rather than assume: GitHub Copilot's removal of Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra on 16 November; Foundry's o3, o3-mini and o4-mini on 19 November; the MAI-Image-2.5 family, where the API says 24 November and Learn says 1 October; Copilot Studio on 12, 26 and 30 November and 2 December (studio-primary-model-retirements-2026-11, studio-computer-use-model-retirement-2026-11-26); Claude Sonnet 4.5 in Foundry on 30 November or 1 December (foundry-claude-4-5-retirement-dates-2026-11). Not read: Azure Updates, the Microsoft Copilot blog beyond its ten newest posts, the Foundry catalogue portal pages. CDX returned no Wayback capture for any of the six Foundry blog posts cited in this batch; they need captures backfilled. Everything named in the earlier sweep items remains open."
+    model_ids: []
+    surface_ids: []

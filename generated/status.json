@@ -1,23 +1,23 @@
 {
   "totals": {
-    "events": 525,
-    "backlog": 115,
-    "sources": 939,
-    "models": 196,
+    "events": 543,
+    "backlog": 126,
+    "sources": 1002,
+    "models": 205,
     "surfaces": 27,
-    "confirmed": 371,
-    "supported": 154
+    "confirmed": 383,
+    "supported": 160
   },
   "kinds": {
-    "announcement": 31,
-    "availability": 479,
+    "announcement": 32,
+    "availability": 496,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 69,
-    "promoted": 40,
+    "open": 79,
+    "promoted": 41,
     "rejected": 4
   },
   "warnings": [
@@ -72,6 +72,11 @@
       "message": "open item names no surface, so it cannot suppress a lag answer"
     },
     {
+      "code": "backlog_without_surface",
+      "subject": "sweep-2026-10-29-to-11-10",
+      "message": "open item names no surface, so it cannot suppress a lag answer"
+    },
+    {
       "code": "missing_archive",
       "subject": "cowork-fable5-1-2026-09-01",
       "message": "documentation source has no archived_url and may be edited in place: https://pupuweb.com/mc1465748-claude-fable-5-1-is-now-available-in-copilot-cowork-and-copilot-studio-with-microsofts-enterprise-data-protection/"
@@ -118,6 +123,11 @@
     },
     {
       "code": "missing_archive",
+      "subject": "foundry-fable5-2-2026-11-09",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
+    },
+    {
+      "code": "missing_archive",
       "subject": "foundry-fable5-2026-06-09",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
     },
@@ -148,8 +158,18 @@
     },
     {
       "code": "missing_archive",
+      "subject": "foundry-kimi-k3-1-pro-2026-11-04",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+    },
+    {
+      "code": "missing_archive",
       "subject": "foundry-mistral-small-3-1-deprecated-2026-10-09",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/concepts/model-lifecycle-retirement"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-mythos5-2-2026-11-09",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
     },
     {
       "code": "missing_archive",
@@ -174,6 +194,11 @@
     {
       "code": "missing_archive",
       "subject": "google-gemini4-argon-2026-10-13",
+      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "google-gemini4-carbon-2026-11-10",
       "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
     },
     {
@@ -333,8 +358,8 @@
     }
   ],
   "warning_counts": {
-    "backlog_without_surface": 10,
-    "missing_archive": 33,
+    "backlog_without_surface": 11,
+    "missing_archive": 37,
     "no_vendor_baseline": 9,
     "no_vendor_baseline_extended": 9,
     "pre_release_access": 1
@@ -346,7 +371,6 @@
       "cohere-embed-v5-pro",
       "cohere-rerank-v5-fast",
       "cohere-rerank-v5-pro",
-      "gpt-5-6-cyber",
       "grok-4-1-fast",
       "grok-4-20-non-reasoning",
       "grok-4-20-reasoning",
@@ -441,6 +465,7 @@
       "ministral-3b-24-10",
       "mistral-large-24-02",
       "mistral-small-3-1",
+      "muse-spark-1-3",
       "nano-banana-2-1",
       "nemotron-speech-streaming-en",
       "phi-4",
@@ -452,11 +477,11 @@
     ]
   },
   "lag_certainty": {
-    "exact": 387,
-    "not_recorded": 1268,
-    "range": 49,
-    "rollout_start": 149,
-    "unknown_no_baseline": 372,
-    "unknown_open_research": 127
+    "exact": 395,
+    "not_recorded": 1340,
+    "range": 51,
+    "rollout_start": 160,
+    "unknown_no_baseline": 360,
+    "unknown_open_research": 154
   }
 }
