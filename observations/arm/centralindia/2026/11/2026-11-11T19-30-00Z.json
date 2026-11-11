@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "source": "arm",
+  "region": "centralindia",
+  "observed_at": "2026-11-11T19:30:00Z",
+  "previous_run_at": "2026-11-11T13:30:00Z",
+  "runs_since_previous_file": 39,
+  "previous_file": "observations/arm/centralindia/2026/11/2026-11-01T19-30-00Z.json",
+  "checkpoint": "checkpoints/arm/centralindia/2026-11-01T01-30-00Z.json",
+  "observed_from": "standard pay-as-you-go and Visual Studio Enterprise subscriptions",
+  "entry_count": 10,
+  "cell_count": 10,
+  "snapshot_sha256": "e9e57bf99905c97d8a085233a0c84ac6e464c97147a10fdd63c31292f7643979",
+  "keys_present": [
+    "gpt-4.1-mini@2025-04-14",
+    "gpt-4.1-nano@2025-04-14",
+    "gpt-4.1@2025-04-14",
+    "gpt-4o-mini@2024-07-18",
+    "gpt-4o@2024-05-13",
+    "gpt-4o@2024-08-06",
+    "gpt-4o@2024-11-20",
+    "o1@2024-12-17",
+    "o4-mini@2025-04-16",
+    "whisper@001"
+  ],
+  "changes": [
+    {
+      "kind": "deprecation_moved",
+      "model_key": "whisper@001",
+      "window_start": "2026-11-11T13:30:00Z",
+      "window_end": "2026-11-11T19:30:00Z",
+      "fields": [
+        "deprecation_inference"
+      ],
+      "before": {
+        "name": "whisper",
+        "skus": [],
+        "format": "OpenAI",
+        "version": "001",
+        "capabilities": {
+          "audio": "true",
+          "scaleType": "Standard",
+          "audioTranslations": "true",
+          "audioTranscriptions": "true"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2026-12-15T00:00:00Z"
+      },
+      "after": {
+        "name": "whisper",
+        "version": "001",
+        "format": "OpenAI",
+        "lifecycle_status": "GenerallyAvailable",
+        "lifecycle_portal": "Generally Available",
+        "deprecation_inference": "2027-02-26T00:00:00Z",
+        "deprecation_fine_tune": null,
+        "is_default_version": true,
+        "capabilities": {
+          "audio": "true",
+          "audioTranscriptions": "true",
+          "audioTranslations": "true",
+          "scaleType": "Standard"
+        },
+        "skus": []
+      }
+    }
+  ]
+}
