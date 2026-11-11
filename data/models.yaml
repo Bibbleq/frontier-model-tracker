@@ -485,6 +485,20 @@ models:
     family: gpt-image-2-5
     aliases: ["gpt-image-2.5-sunburst"]
     note: "The premium model of the pair, for precision and editing."
+  - id: gpt-image-2-6-sunburst
+    display_name: "GPT Image 2.6 Sunburst"
+    vendor: OpenAI
+    modality: image
+    generation: gpt-image
+    family: gpt-image-2-6
+    aliases: ["gpt-image-2.6-sunburst"]
+  - id: gpt-image-2-6-flare
+    display_name: "GPT Image 2.6 Flare"
+    vendor: OpenAI
+    modality: image
+    generation: gpt-image
+    family: gpt-image-2-6
+    aliases: ["gpt-image-2.6-flare"]
   - id: whisper
     display_name: "Whisper"
     vendor: OpenAI
@@ -765,6 +779,12 @@ models:
     generation: gpt-6
     aliases: ["gpt-6-luna"]
     note: "OpenAI's smallest GPT-6 model, released 22 September 2026 as the successor to GPT-5.6 Luna. Microsoft's 22 September Copilot announcement names GPT-6 Sol only, so no Microsoft 365 Copilot, Cowork or Copilot Studio event exists for Luna."
+  - id: gpt-6-cyber
+    display_name: "GPT-6 Cyber"
+    vendor: OpenAI
+    generation: gpt-6
+    aliases: ["gpt-6-cyber"]
+    note: "OpenAI's purpose-trained cybersecurity model, successor to GPT-5.6-Cyber; available only to approved Daybreak Red customers."
 
   # ------------------------------------------------------------- Anthropic
   - id: claude-1
@@ -941,6 +961,29 @@ models:
     model_line: claude-mythos
     supersedes: claude-mythos-5
     note: "The same model as Fable 5.1 with its full cyber and biology capabilities, offered only through Anthropic's trusted access programmes. Registered separately, as Mythos 5 is from Fable 5, because the two ship under different lifecycles."
+  - id: claude-fable-5-2
+    display_name: "Claude Fable 5.2"
+    vendor: Anthropic
+    generation: claude-5
+    model_line: claude-fable
+    aliases: ["claude-fable-5-2"]
+    note: "Released 9 November 2026 alongside Claude Mythos 5.2, which Anthropic describes as the same underlying model with access limited to verified organisations."
+  - id: claude-fable-5-2-fast
+    display_name: "Claude Fable 5.2 Fast"
+    vendor: Anthropic
+    generation: claude-5
+    model_line: claude-fable
+    aliases: ["claude-fable-5-2-fast"]
+    variant_of: claude-fable-5-2
+    variant_kind: fast
+    note: "Anthropic describes fast mode as the same model with a faster inference configuration, selected per request (`speed: \"fast\"`). Microsoft Foundry lists it as its own catalogue id, hosted on Anthropic infrastructure; registered so that id has a home."
+  - id: claude-mythos-5-2
+    display_name: "Claude Mythos 5.2"
+    vendor: Anthropic
+    generation: claude-5
+    model_line: claude-mythos
+    aliases: ["claude-mythos-5-2"]
+    note: "The same underlying model as Fable 5.2 per Anthropic, available only to organisations verified through Anthropic's verification programmes. Registered separately, as Mythos 5.1 is from Fable 5.1, because the two ship under different lifecycles."
   - id: claude-mythos-preview
     display_name: "Claude Mythos Preview"
     vendor: Anthropic
@@ -994,6 +1037,12 @@ models:
     generation: gemini-4
     aliases: ["gemini-4-argon"]
     note: "Google's first Gemini 4 model; rolled out to Fairwind Program cyber defenders from 30 September 2026 and generally from 13 October 2026."
+  - id: gemini-4-carbon
+    display_name: "Gemini 4 Carbon"
+    vendor: Google
+    generation: gemini-4
+    aliases: ["gemini-4-carbon"]
+    note: "Google's second Gemini 4 model; announced 28 October 2026 with access phased through the Fairwind Program, generally available in the Gemini API from 10 November 2026."
   - id: nano-banana-2-1
     display_name: "Nano Banana 2.1"
     vendor: Google
@@ -1135,8 +1184,8 @@ models:
     display_name: "Mistral Large 4"
     vendor: Mistral AI
     generation: mistral-4
-    aliases: ["ML4", "Mistral Large 4 Preview"]
-    note: "A 1-trillion-parameter mixture-of-experts model with 52 billion active parameters per Mistral's launch page; public preview API on Mistral Studio from 6 October 2026, with weights promised by the end of that month (not yet verified)."
+    aliases: ["ML4", "Mistral Large 4 Preview", "mistral-large-4-latest", "Le Chonk"]
+    note: "A 1-trillion-parameter mixture-of-experts model with 52 billion active parameters per Mistral's launch page; public preview API on Mistral Studio from 6 October 2026, with open weights released on 29 October 2026."
   - id: mistral-large-24-02
     display_name: "Mistral Large (24.02)"
     vendor: Mistral AI
@@ -1224,7 +1273,7 @@ models:
     generation: deepseek-v4
     scope: extended
     supersedes: deepseek-v4-1-flash
-    aliases: ["DeepSeek V4.1 Flash 1017"]
+    aliases: ["DeepSeek V4.1 Flash 1017", "DeepSeek-V4.1-Flash-1017"]
     note: "The dated October 2026 revision of V4.1 Flash, on the pattern of deepseek-v4-flash-0731: DeepSeek ships it as its own weights repository. DeepSeek's API now serves deepseek-flash with it."
   - id: kimi-k2-5
     display_name: "Kimi K2.5"
@@ -1251,6 +1300,12 @@ models:
     generation: kimi-k3
     aliases: ["FW Kimi K3"]
     note: "Microsoft Foundry lists it as 'FW Kimi K3', the prefix marking it as served through Fireworks AI rather than by Microsoft."
+  - id: kimi-k3-1-pro
+    display_name: "Kimi K3.1 Pro"
+    vendor: Moonshot AI
+    generation: kimi-k3
+    aliases: ["Kimi-K3.1-Pro", "kimi-k3.1-pro", "FW-Kimi-K3.1-Pro", "Kimi 3.1 Pro"]
+    note: "First model of Moonshot's K3.1 series, a post-trained version of Kimi K3. Microsoft Foundry carries two offers: Kimi-K3.1-Pro sold by Azure, and FW-Kimi-K3.1-Pro served through Fireworks AI. Kimi K3.1 Pro Highspeed (kimi-k3.1-pro-highspeed) is a speed tier of the same model and is not registered separately."
 
   # ------------------------------------------------------------- Alibaba
   - id: qwen-3-5-vision
@@ -1268,6 +1323,13 @@ models:
     vendor: Meta
     generation: muse-spark
     note: "Meta Superintelligence Labs' first Muse model, announced by Meta on 8 April 2026 (meta-muse-spark-2026-04-08): available in meta.ai and the Meta AI app, with a private API preview. Not muse-spark-open, its open-weight derivative, nor muse-glimmer, the distilled 30B model."
+  - id: muse-spark-1-3
+    display_name: "Muse Spark 1.3"
+    vendor: Meta
+    generation: muse-spark
+    scope: extended
+    aliases: ["muse-spark-1.3"]
+    note: "A point release of Muse Spark, released by Meta on 2 September 2026. Listed in the Microsoft Foundry models API from 30-31 October to 6-8 November 2026 with no Microsoft documentation (foundry-muse-spark-1-3-listing-2026-10)."
   - id: muse-spark-open
     display_name: "Muse Spark Open"
     vendor: Meta
@@ -1291,6 +1353,36 @@ models:
     generation: muse-wonder
     aliases: ["muse-wonder-full-1.0"]
 
+
+  # ------------------------------------------- video models served by fal
+  - id: kling-3-0
+    display_name: "Kling 3.0"
+    vendor: Kuaishou
+    modality: video
+    scope: extended
+    aliases: ["Kling v3 Pro", "Kling 3", "Kling Video 3.0"]
+    note: "Kuaishou's Kling AI 3.0 video model, launched in February 2026. Microsoft Foundry and fal offer it as 'Kling v3 Pro'; Kling's own pages name Video 3.0 and do not say whether Pro is a mode or a separate model, so one model is registered. Recorded under extended scope as a catalogue entry served by fal."
+  - id: ltx-2-5
+    display_name: "LTX-2.5"
+    vendor: Lightricks
+    modality: video
+    scope: extended
+    aliases: ["LTX-2.5 Fast", "LTX-2.5 Pro"]
+    note: "Lightricks' open-weight video model, published under the LTX brand at ltx.io on 11 August 2026. 'LTX-2.5 Fast' and 'LTX-2.5 Pro' are the speed-optimised and quality-optimised endpoints fal serves and Microsoft Foundry lists; LTX's own pages name neither, so they are aliases of one model rather than variants. Recorded under extended scope as a catalogue entry served by fal."
+  - id: minimax-h3-max
+    display_name: "MiniMax H3 Max"
+    vendor: fal
+    modality: video
+    scope: extended
+    aliases: ["H3 Max"]
+    note: "A post-trained version of MiniMax H3 developed by fal Research, released by fal on 27 August 2026. The vendor is fal, its maker, not MiniMax: MiniMax launched the base model H3 on 31 July 2026 and has published no Max model. Microsoft Foundry lists it as 'MiniMax H3 Max'. The base model is not registered."
+  - id: minimax-h3-max-turbo
+    display_name: "MiniMax H3 Max Turbo"
+    vendor: fal
+    modality: video
+    scope: extended
+    aliases: ["H3 Max Turbo"]
+    note: "fal's faster post-trained version of MiniMax H3, listed in Microsoft Foundry beside H3 Max. No dated fal release for the Turbo model was found, so it has no vendor baseline. No variant link: the registry has no turbo variant kind."
   # ------------------------------------------------------------- Cohere
   - id: cohere-parse-v5
     display_name: "Cohere Parse v5"
@@ -1534,6 +1626,9 @@ families:
     vendor: OpenAI
   - id: gpt-image-2-5
     display_name: "GPT Image 2.5 pair"
+    vendor: OpenAI
+  - id: gpt-image-2-6
+    display_name: "GPT Image 2.6 pair"
     vendor: OpenAI
   - id: mai-image-2
     display_name: "MAI-Image-2 pair"

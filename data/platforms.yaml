@@ -100,6 +100,22 @@ surfaces:
     owner: Moonshot AI
     vendor_baseline: true
     counts_as: []
+  - id: kling
+    display_name: "Kling AI"
+    owner: Kuaishou
+    vendor_baseline: true
+    counts_as: []
+  - id: lightricks
+    display_name: "LTX"
+    owner: Lightricks
+    vendor_baseline: true
+    counts_as: []
+  - id: fal
+    display_name: "fal"
+    owner: fal
+    vendor_baseline: true
+    counts_as: []
+    note: "fal is a vendor here only for models it makes itself, such as H3 Max. Models it serves for other makers are recorded on the Microsoft surface with the partner_hosted tag and keep their maker as vendor."
 
   # ----------------------------------------------------------- microsoft 365
   - id: microsoft-ai

@@ -1,23 +1,23 @@
 {
   "totals": {
-    "events": 525,
-    "backlog": 115,
-    "sources": 939,
-    "models": 196,
-    "surfaces": 27,
-    "confirmed": 371,
-    "supported": 154
+    "events": 549,
+    "backlog": 125,
+    "sources": 1012,
+    "models": 209,
+    "surfaces": 30,
+    "confirmed": 387,
+    "supported": 162
   },
   "kinds": {
-    "announcement": 31,
-    "availability": 479,
+    "announcement": 32,
+    "availability": 502,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 69,
-    "promoted": 40,
+    "open": 78,
+    "promoted": 41,
     "rejected": 4
   },
   "warnings": [
@@ -72,6 +72,11 @@
       "message": "open item names no surface, so it cannot suppress a lag answer"
     },
     {
+      "code": "backlog_without_surface",
+      "subject": "sweep-2026-10-29-to-11-10",
+      "message": "open item names no surface, so it cannot suppress a lag answer"
+    },
+    {
       "code": "missing_archive",
       "subject": "cowork-fable5-1-2026-09-01",
       "message": "documentation source has no archived_url and may be edited in place: https://pupuweb.com/mc1465748-claude-fable-5-1-is-now-available-in-copilot-cowork-and-copilot-studio-with-microsofts-enterprise-data-protection/"
@@ -118,6 +123,11 @@
     },
     {
       "code": "missing_archive",
+      "subject": "foundry-fable5-2-2026-11-09",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
+    },
+    {
+      "code": "missing_archive",
       "subject": "foundry-fable5-2026-06-09",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
     },
@@ -148,8 +158,18 @@
     },
     {
       "code": "missing_archive",
+      "subject": "foundry-kimi-k3-1-pro-2026-11-04",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+    },
+    {
+      "code": "missing_archive",
       "subject": "foundry-mistral-small-3-1-deprecated-2026-10-09",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/concepts/model-lifecycle-retirement"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-mythos5-2-2026-11-09",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models"
     },
     {
       "code": "missing_archive",
@@ -178,8 +198,18 @@
     },
     {
       "code": "missing_archive",
+      "subject": "google-gemini4-carbon-2026-11-10",
+      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
       "subject": "google-nano-banana-2-1-2026-10-06",
       "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "lightricks-ltx-2-5-2026-08-11",
+      "message": "documentation source has no archived_url and may be edited in place: https://ltx.io/release-notes"
     },
     {
       "code": "missing_archive",
@@ -318,6 +348,11 @@
     },
     {
       "code": "no_vendor_baseline_extended",
+      "subject": "minimax-h3-max-turbo",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline_extended",
       "subject": "nemotron-speech-streaming-en",
       "message": "no vendor release event, so lag cannot be derived"
     },
@@ -333,10 +368,10 @@
     }
   ],
   "warning_counts": {
-    "backlog_without_surface": 10,
-    "missing_archive": 33,
+    "backlog_without_surface": 11,
+    "missing_archive": 38,
     "no_vendor_baseline": 9,
-    "no_vendor_baseline_extended": 9,
+    "no_vendor_baseline_extended": 10,
     "pre_release_access": 1
   },
   "coverage": {
@@ -346,7 +381,6 @@
       "cohere-embed-v5-pro",
       "cohere-rerank-v5-fast",
       "cohere-rerank-v5-pro",
-      "gpt-5-6-cyber",
       "grok-4-1-fast",
       "grok-4-20-non-reasoning",
       "grok-4-20-reasoning",
@@ -371,6 +405,8 @@
       "cohere-rerank-v5-fast",
       "cohere-rerank-v5-pro",
       "grok-voice-3",
+      "kling-3-0",
+      "ltx-2-5",
       "mai-code-1-1-flash",
       "mai-code-1-flash",
       "mai-cyber-1-flash",
@@ -391,6 +427,8 @@
       "mai-voice-2-1",
       "mai-voice-2-1-flash",
       "microsoft-decision-1",
+      "minimax-h3-max",
+      "minimax-h3-max-turbo",
       "ministral-3b-24-10",
       "mistral-large-24-02",
       "mistral-small-3-1",
@@ -408,7 +446,11 @@
       "cohere-rerank-v5",
       "cohere-rerank-v5-fast",
       "cohere-rerank-v5-pro",
+      "kling-3-0",
+      "ltx-2-5",
       "microsoft-decision-1",
+      "minimax-h3-max",
+      "minimax-h3-max-turbo",
       "ministral-3b-24-10",
       "mistral-large-24-02",
       "mistral-small-3-1",
@@ -436,11 +478,16 @@
       "grok-4-3",
       "kimi-k2-5",
       "kimi-k2-6",
+      "kling-3-0",
       "llama-3-3-70b",
+      "ltx-2-5",
       "microsoft-decision-1",
+      "minimax-h3-max",
+      "minimax-h3-max-turbo",
       "ministral-3b-24-10",
       "mistral-large-24-02",
       "mistral-small-3-1",
+      "muse-spark-1-3",
       "nano-banana-2-1",
       "nemotron-speech-streaming-en",
       "phi-4",
@@ -452,11 +499,11 @@
     ]
   },
   "lag_certainty": {
-    "exact": 387,
-    "not_recorded": 1268,
-    "range": 49,
-    "rollout_start": 149,
+    "exact": 395,
+    "not_recorded": 1370,
+    "range": 51,
+    "rollout_start": 166,
     "unknown_no_baseline": 372,
-    "unknown_open_research": 127
+    "unknown_open_research": 154
   }
 }
