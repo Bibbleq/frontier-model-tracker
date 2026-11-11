@@ -2226,6 +2226,42 @@
       ]
     },
     {
+      "id": "bfl-flux-1-1-pro-2024-10-02",
+      "kind": "availability",
+      "date": {
+        "start": "2024-10-02",
+        "precision": "day"
+      },
+      "surface_id": "black-forest-labs",
+      "model_ids": [
+        "flux-1-1-pro"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Black Forest Labs released FLUX1.1 [pro] on 2 October 2024 through its own API, which opened the same day.",
+      "caveat": "The post calls the API 'the beta BFL API' while announcing its general availability; ga is the classification of a model released without a preview label. Partner channels are announced in the future tense and are not dated here. No Wayback lookup was run for this entry.",
+      "sources": [
+        {
+          "publisher": "Black Forest Labs",
+          "title": "Announcing FLUX1.1 [pro] and the BFL API",
+          "url": "https://bfl.ai/blog/24-10-02-flux",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2024-10-02",
+          "source_type": "announcement",
+          "quote": "Today, we release FLUX1.1 [pro], our most advanced and efficient model yet, alongside the general availability of the beta BFL API.",
+          "supports": [
+            "date",
+            "model",
+            "lifecycle"
+          ],
+          "note": "Fetched directly on 11 November 2026; the page's datePublished is 2024-10-02T14:56:00Z. The older address blackforestlabs.ai/announcing-flux-1-1-pro-and-the-bfl-api/ redirects here."
+        }
+      ]
+    },
+    {
       "id": "mistral-ministral-3b-24-10-2024-10-09",
       "kind": "availability",
       "date": {
@@ -5402,6 +5438,41 @@
       ]
     },
     {
+      "id": "bfl-flux-1-kontext-pro-2025-05-29",
+      "kind": "availability",
+      "date": {
+        "start": "2025-05-29",
+        "precision": "day"
+      },
+      "surface_id": "black-forest-labs",
+      "model_ids": [
+        "flux-1-kontext-pro"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Black Forest Labs released the FLUX.1 Kontext suite on 29 May 2025, bringing FLUX.1 Kontext [pro] and FLUX.1 Kontext [max] to its API and to partner platforms.",
+      "caveat": "The post states a release, not a stage; ga is the classification of a model released to the API without a preview label. FLUX.1 Kontext [max] and the open-weight [dev] model named in the same post are not registered. No Wayback lookup was run for this entry.",
+      "sources": [
+        {
+          "publisher": "Black Forest Labs",
+          "title": "Introducing FLUX.1 Kontext and the BFL Playground",
+          "url": "https://bfl.ai/announcements/flux-1-kontext",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2025-05-29",
+          "source_type": "announcement",
+          "quote": "As part of the FLUX.1 Kontext suite we bring two new in-context image models to the BFL API.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Fetched directly on 11 November 2026; the page's datePublished is 2025-05-29T17:34:00Z. The post opens 'Today, we are excited to release FLUX.1 Kontext' and names the two API models as FLUX.1 Kontext [pro] and FLUX.1 Kontext [max]."
+        }
+      ]
+    },
+    {
       "id": "m365-analyst-ga-2025-06-02",
       "kind": "availability",
       "date": {
@@ -5887,6 +5958,174 @@
             "lifecycle"
           ],
           "note": "Announcement of 2025-04-28, shutdown 2025-07-28, replacement o3."
+        }
+      ]
+    },
+    {
+      "id": "foundry-flux-1-1-pro-2025-08-04",
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-04",
+        "precision": "day"
+      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "flux-1-1-pro"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced on 4 August 2025 that Azure AI Foundry Models hosts FLUX1.1 [pro] direct from Azure, hosted and sold by Microsoft, with FLUX-1.1-pro as its deployment id.",
+      "caveat": "One post covers FLUX.1 Kontext [pro] and FLUX1.1 [pro], recorded as one event per model. The post states no release stage; ga is inferred from the absence of a preview label and agrees with today's retirement schedule row and the Foundry Models API, both of which read GA, so the stage is the weaker part of the claim. Sold directly by Azure, so not partner-hosted. The post's embedded edit time precedes its post time.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Black Forest Labs FLUX.1 Kontext [pro] and FLUX1.1 [pro] Now Available in Azure AI Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/black-forest-labs-flux-1-kontext-pro-and-flux1-1-pro-now-available-in-azure-ai-f/4434659",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2025-08-04",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20250814081347/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/black-forest-labs-flux-1-kontext-pro-and-flux1-1-pro-now-available-in-azure-ai-f/4434659",
+          "quote": "Azure AI Foundry Models now hosts FLUX.1 Kontext [pro] and FLUX1.1 [pro] as direct from Azure",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Read through r.jina.ai; direct requests return 403. The publication date is the page data's postTime, 2025-08-04T13:15:34-07:00. The model names are in bold on the page."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Black Forest Labs FLUX.1 Kontext [pro] and FLUX1.1 [pro] Now Available in Azure AI Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/black-forest-labs-flux-1-kontext-pro-and-flux1-1-pro-now-available-in-azure-ai-f/4434659",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2025-08-04",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20250814081347/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/black-forest-labs-flux-1-kontext-pro-and-flux1-1-pro-now-available-in-azure-ai-f/4434659",
+          "quote": "Models are hosted and sold by Microsoft under Microsoft Product Terms",
+          "supports": [
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "Microsoft Foundry Blog",
+          "title": "What's new in Azure AI Foundry | August 2025",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-august-2025/",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2025-09-03",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20250903152326/https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-august-2025/",
+          "quote": "FLUX.1 Kontext [pro] and FLUX1.1 [pro] are now available",
+          "supports": [
+            "model"
+          ],
+          "note": "The August 2025 retrospective, published 3 September 2025; it also states no stage."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Model retirement schedule - Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20261105002827/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule",
+          "quote": "FLUX-1.1-pro | 1 | GA | 2027-01-05 | —",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "The current stage word, read live on 11 November 2026; it attests today's stage, not the stage at arrival. The capture is of 5 November 2026 and was not re-read for this row."
+        }
+      ]
+    },
+    {
+      "id": "foundry-flux-1-kontext-pro-2025-08-04",
+      "kind": "availability",
+      "date": {
+        "start": "2025-08-04",
+        "precision": "day"
+      },
+      "surface_id": "azure-ai-foundry",
+      "model_ids": [
+        "flux-1-kontext-pro"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced on 4 August 2025 that Azure AI Foundry Models hosts FLUX.1 Kontext [pro] direct from Azure, hosted and sold by Microsoft, with FLUX.1-Kontext-pro as its deployment id.",
+      "caveat": "One post covers FLUX.1 Kontext [pro] and FLUX1.1 [pro], recorded as one event per model. The post states no release stage; ga is inferred from the absence of a preview label and agrees with today's retirement schedule row and the Foundry Models API, both of which read GA, so the stage is the weaker part of the claim. Sold directly by Azure, so not partner-hosted. The post's embedded edit time precedes its post time.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Black Forest Labs FLUX.1 Kontext [pro] and FLUX1.1 [pro] Now Available in Azure AI Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/black-forest-labs-flux-1-kontext-pro-and-flux1-1-pro-now-available-in-azure-ai-f/4434659",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2025-08-04",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20250814081347/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/black-forest-labs-flux-1-kontext-pro-and-flux1-1-pro-now-available-in-azure-ai-f/4434659",
+          "quote": "Azure AI Foundry Models now hosts FLUX.1 Kontext [pro] and FLUX1.1 [pro] as direct from Azure",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Read through r.jina.ai; direct requests return 403. The publication date is the page data's postTime, 2025-08-04T13:15:34-07:00. The model names are in bold on the page."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Black Forest Labs FLUX.1 Kontext [pro] and FLUX1.1 [pro] Now Available in Azure AI Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/black-forest-labs-flux-1-kontext-pro-and-flux1-1-pro-now-available-in-azure-ai-f/4434659",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2025-08-04",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20250814081347/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/black-forest-labs-flux-1-kontext-pro-and-flux1-1-pro-now-available-in-azure-ai-f/4434659",
+          "quote": "Models are hosted and sold by Microsoft under Microsoft Product Terms",
+          "supports": [
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "Microsoft Foundry Blog",
+          "title": "What's new in Azure AI Foundry | August 2025",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-august-2025/",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2025-09-03",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20250903152326/https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-august-2025/",
+          "quote": "FLUX.1 Kontext [pro] and FLUX1.1 [pro] are now available",
+          "supports": [
+            "model"
+          ],
+          "note": "The August 2025 retrospective, published 3 September 2025; it also states no stage."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Model retirement schedule - Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "source_type": "documentation",
+          "archived_url": "https://web.archive.org/web/20261105002827/https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule",
+          "quote": "FLUX.1-Kontext-pro | 1 | GA | 2027-01-05 | —",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "The current stage word, read live on 11 November 2026; it attests today's stage, not the stage at arrival. The capture is of 5 November 2026 and was not re-read for this row."
         }
       ]
     },
@@ -8940,6 +9179,106 @@
       ]
     },
     {
+      "id": "bfl-flux-2-flex-2025-11-25",
+      "kind": "availability",
+      "date": {
+        "start": "2025-11-25",
+        "precision": "day"
+      },
+      "surface_id": "black-forest-labs",
+      "model_ids": [
+        "flux-2-flex"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Black Forest Labs launched FLUX.2 [flex] on 25 November 2025, on its playground, its API and through launch partners.",
+      "caveat": "One launch post and one release-notes entry cover FLUX.2 [pro] and FLUX.2 [flex], recorded as one event per model. The post states a release, not a stage; ga is the classification of a model released to the API without a preview label. The open-weight FLUX.2 [dev] and the later [klein] models are not registered. No Wayback lookup was run for this entry.",
+      "sources": [
+        {
+          "publisher": "Black Forest Labs",
+          "title": "Release Notes",
+          "url": "https://docs.bfl.ai/release-notes",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2025-11-25",
+          "source_type": "release_notes",
+          "quote": "FLUX.2 [pro] and [flex] Launch",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The entry heading under the date 'November 25, 2025'. Fetched directly on 11 November 2026."
+        },
+        {
+          "publisher": "Black Forest Labs",
+          "title": "FLUX.2: Frontier Visual Intelligence",
+          "url": "https://bfl.ai/blog/flux-2",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2025-11-25",
+          "source_type": "announcement",
+          "quote": "the BFL API and via our launch partners.",
+          "supports": [
+            "date",
+            "lifecycle"
+          ],
+          "note": "The end of the availability line the post gives for each of the two models, which begins 'Available now at'; the page's datePublished is 2025-11-25T15:11:07Z."
+        }
+      ]
+    },
+    {
+      "id": "bfl-flux-2-pro-2025-11-25",
+      "kind": "availability",
+      "date": {
+        "start": "2025-11-25",
+        "precision": "day"
+      },
+      "surface_id": "black-forest-labs",
+      "model_ids": [
+        "flux-2-pro"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "ga",
+      "exposure": "not_applicable",
+      "confidence": "confirmed",
+      "evidence_note": "Black Forest Labs launched FLUX.2 [pro] on 25 November 2025, on its playground, its API and through launch partners.",
+      "caveat": "One launch post and one release-notes entry cover FLUX.2 [pro] and FLUX.2 [flex], recorded as one event per model. The post states a release, not a stage; ga is the classification of a model released to the API without a preview label. The open-weight FLUX.2 [dev] and the later [klein] models are not registered. No Wayback lookup was run for this entry.",
+      "sources": [
+        {
+          "publisher": "Black Forest Labs",
+          "title": "Release Notes",
+          "url": "https://docs.bfl.ai/release-notes",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2025-11-25",
+          "source_type": "release_notes",
+          "quote": "FLUX.2 [pro] and [flex] Launch",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "The entry heading under the date 'November 25, 2025'. Fetched directly on 11 November 2026."
+        },
+        {
+          "publisher": "Black Forest Labs",
+          "title": "FLUX.2: Frontier Visual Intelligence",
+          "url": "https://bfl.ai/blog/flux-2",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2025-11-25",
+          "source_type": "announcement",
+          "quote": "the BFL API and via our launch partners.",
+          "supports": [
+            "date",
+            "lifecycle"
+          ],
+          "note": "The end of the availability line the post gives for each of the two models, which begins 'Available now at'; the page's datePublished is 2025-11-25T15:11:07Z."
+        }
+      ]
+    },
+    {
       "id": "azure-gpt-image-1-5-2025-12",
       "kind": "availability",
       "date": {
@@ -9380,6 +9719,76 @@
           "retrieved_at": "2026-07-26",
           "source_type": "release_notes",
           "archived_url": "https://web.archive.org/web/20260331163933/https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-dec-2025-jan-2026/"
+        }
+      ]
+    },
+    {
+      "id": "foundry-flux-2-pro-2025-12-15",
+      "kind": "availability",
+      "date": {
+        "start": "2025-12-15",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "flux-2-pro"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "public_preview",
+      "exposure": "catalogue",
+      "confidence": "supported",
+      "confidence_detail": {
+        "date": "confirmed",
+        "model": "confirmed",
+        "lifecycle": "supported"
+      },
+      "evidence_note": "Microsoft announced on 15 December 2025 that FLUX.2 is available on Microsoft Foundry, introducing FLUX.2 [pro] on Global Standard deployment, twenty days after Black Forest Labs launched it.",
+      "caveat": "The post states no release stage. public_preview comes from Microsoft's retrospective for December 2025 and January 2026, published 19 February 2026, which lists 'FLUX.2 [pro] (Public Preview)'; that is a later page describing the arrival, so the stage is the weaker part of the claim. The post was edited on 16 December 2025 and the text read is the edited state. The move to general availability is undated and held as foundry-flux-2-ga-dates. Hosted and managed on Azure under the Microsoft Product Terms, so not partner-hosted.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Black Forest Labs FLUX.2 Visual Intelligence for Enterprise Creative now on Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/black-forest-labs-flux-2-visual-intelligence-for-enterprise-creative-now-on-micr/4477561",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2025-12-15",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260113033142/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/black-forest-labs-flux-2-visual-intelligence-for-enterprise-creative-now-on-micr/4477561",
+          "quote": "FLUX.2 is now available on Microsoft Foundry.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Read through r.jina.ai; direct requests return 403. The publication date is the page data's postTime, 2025-12-15T12:22:40-08:00; lastEditTime is 2025-12-16T10:26:33-08:00. The next sentence introduces FLUX.2 [pro] by name."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Black Forest Labs FLUX.2 Visual Intelligence for Enterprise Creative now on Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/black-forest-labs-flux-2-visual-intelligence-for-enterprise-creative-now-on-micr/4477561",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2025-12-15",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260113033142/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/black-forest-labs-flux-2-visual-intelligence-for-enterprise-creative-now-on-micr/4477561",
+          "quote": "FLUX.2 [pro] is available through pay-as-you-go and on Global Standard deployment type",
+          "supports": [
+            "model",
+            "exposure"
+          ]
+        },
+        {
+          "publisher": "Microsoft Foundry Blog",
+          "title": "What's new in Microsoft Foundry | Dec 2025 & Jan 2026",
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-dec-2025-jan-2026/",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2026-02-19",
+          "source_type": "announcement",
+          "quote": "FLUX.2 [pro] (Public Preview)",
+          "supports": [
+            "lifecycle"
+          ],
+          "note": "The retrospective's line for the model; published two months after the arrival, so it attests the stage and not the date."
         }
       ]
     },
@@ -10137,6 +10546,56 @@
             "lifecycle"
           ],
           "note": "Entry headed Feb 24. The snapshot version 2026-02-24 agrees and is not the source."
+        }
+      ]
+    },
+    {
+      "id": "foundry-flux-2-flex-2026-02-25",
+      "kind": "availability",
+      "date": {
+        "start": "2026-02-25",
+        "precision": "day"
+      },
+      "surface_id": "microsoft-foundry",
+      "model_ids": [
+        "flux-2-flex"
+      ],
+      "model_claim": "specific",
+      "lifecycle": "limited_preview",
+      "exposure": "catalogue",
+      "confidence": "confirmed",
+      "evidence_note": "Microsoft added FLUX.2 [flex] to Microsoft Foundry on 25 February 2026 as a gated public preview on Global Standard deployment, with access by application.",
+      "caveat": "Microsoft's words are 'gated Public Preview', with a limited access application form; recorded as limited_preview on the precedent of azure-gpt-image-1-5-2025-12, which records a gated arrival that way. The form's wording covers 'these models', which may include FLUX.2 [pro], but the December post for that model mentions no gate. The move to general availability is undated and held as foundry-flux-2-ga-dates. Hosted and managed on Azure under the Microsoft Product Terms, so not partner-hosted.",
+      "sources": [
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Meet FLUX.2 [flex] for Text‑Heavy Design and UI Prototyping Now Available on Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/meet-flux-2-flex-for-text%E2%80%91heavy-design-and-ui-prototyping-now-available-on-micro/4496041",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2026-02-25",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260227201312/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/meet-flux-2-flex-for-text%E2%80%91heavy-design-and-ui-prototyping-now-available-on-micro/4496041",
+          "quote": "excited to add FLUX.2 [flex], now available in Microsoft Foundry.",
+          "supports": [
+            "date",
+            "model"
+          ],
+          "note": "Read through r.jina.ai; direct requests return 403. The publication date is the page data's postTime, 2026-02-25T13:59:42-08:00. The sentence begins 'Today,' and follows 'In December, we announced FLUX.2 on Microsoft Foundry'; it is trimmed here before an apostrophe."
+        },
+        {
+          "publisher": "Microsoft Community Hub",
+          "title": "Meet FLUX.2 [flex] for Text‑Heavy Design and UI Prototyping Now Available on Microsoft Foundry",
+          "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/meet-flux-2-flex-for-text%E2%80%91heavy-design-and-ui-prototyping-now-available-on-micro/4496041",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2026-02-25",
+          "source_type": "announcement",
+          "archived_url": "https://web.archive.org/web/20260227201312/https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/meet-flux-2-flex-for-text%E2%80%91heavy-design-and-ui-prototyping-now-available-on-micro/4496041",
+          "quote": "FLUX.2 [flex] is now available as gated Public Preview.",
+          "supports": [
+            "lifecycle"
+          ]
         }
       ]
     },
@@ -25813,7 +26272,7 @@
       "state": "open",
       "working_claim": "Meta Llama 3.x, Cohere, FLUX and Microsoft MAI have catalogue milestones worth tracking.",
       "reason": "These broader catalogue candidates remain outside the current sourced pack. The same scope question now covers audio models: Microsoft announced OpenAI's GPT-transcribe and GPT-live-transcribe as generally available in Foundry on 29 July 2026, alongside GPT-realtime-2.1 and gpt-realtime-2.1-mini (which the post spells 'GPT-realtime-mini-2.1'), at techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-gpt-transcribe-and-gpt-live-transcribe-in-microsoft/ba-p/4541740. The registry carries no audio model of any kind, so recording that post would open a category, not add an event: Whisper, the gpt-4o transcribe and TTS families and the realtime line would all be implied. Held here until the scope decision is taken deliberately. The July 2026 sweep adds further parked candidates, all Microsoft-carried or vendor-adjacent but unrecorded: Grok 4.1, 4.20 and 4.3, the last confirmed in the Foundry catalogue by the May 2026 retrospective; Kimi K2.5 and K2.6, the latter on the schedule at version 2026-04-20 and arriving via Fireworks in May; the wider Gemini line, 2.0 Pro, 2.5 Flash, 3 Pro, 3.1 Pro, 3.5 Flash and Flash-Lite, and 3 Deep Think; Claude Instant 1.2, Claude 3.5 Haiku and the announced Claude Science; the GPT-5.x Codex line including GPT-5.3-Codex of 5 February 2026; and from the May retrospective, Qwen 3.5 Vision on-device and the Nemotron ASR streaming model. Recording any of these was a scope decision parked for review, and the decision was taken in August 2026: record everything at the same evidence bar, with point releases and catalogue entries marked scope: extended so default presentations can hide them.",
-      "target": "Wave 1 recorded in August 2026 under scope: extended — Grok 4.20 GA, Grok 4.3, Kimi K2.5 and K2.6 via Fireworks, Qwen 3.5 Vision and Nemotron ASR on the new foundry-local surface, plus the missing frontier GPT-5.4 Foundry GA; Grok 4.1 Fast is registered without an event pending a dated arrival source. Remaining for later waves: the wider Gemini line; Claude Instant 1.2, Claude 3.5 Haiku and Claude Science; the GPT-5.x-Codex line and the GPT-5.4 Mini and Pro variants; FLUX, four models GA in the retirement schedule; Llama 3.x and Cohere catalogue history (Llama 3.3 70B Instruct, Command A and Command A+ are now registered with dated arrivals; the rest of Llama 3.x and Cohere's earlier Command, Embed and Rerank history stay parked); DeepSeek V3.2, V3.2-Speciale, gpt-oss-120b and MiniMax M2.5 from the March Fireworks launch; the Phi-4 family (Phi-4, Phi-4-mini, Phi-4-multimodal, Phi-4-reasoning and Phi-4-mini-reasoning are now registered with dated arrivals; Phi-4-reasoning-plus is not); grok-code-fast-1; the NVIDIA Nemotron catalogue family arrival dated 16 March 2026; and the schedule's naming of claude-opus-4-8 as claude-opus-4-1's replacement at its 5 August 2026 retirement. Cohere Parse v5 was recorded from a dated Foundry announcement in September 2026 as foundry-cohere-parse-v5-preview-2026-08-27; the Embed and Rerank history it joined stays parked here.",
+      "target": "Wave 1 recorded in August 2026 under scope: extended — Grok 4.20 GA, Grok 4.3, Kimi K2.5 and K2.6 via Fireworks, Qwen 3.5 Vision and Nemotron ASR on the new foundry-local surface, plus the missing frontier GPT-5.4 Foundry GA; Grok 4.1 Fast is registered without an event pending a dated arrival source. Remaining for later waves: the wider Gemini line; Claude Instant 1.2, Claude 3.5 Haiku and Claude Science; the GPT-5.x-Codex line and the GPT-5.4 Mini and Pro variants; Llama 3.x and Cohere catalogue history (Llama 3.3 70B Instruct, Command A and Command A+ are now registered with dated arrivals; the rest of Llama 3.x and Cohere's earlier Command, Embed and Rerank history stay parked); DeepSeek V3.2, V3.2-Speciale, gpt-oss-120b and MiniMax M2.5 from the March Fireworks launch; the Phi-4 family (Phi-4, Phi-4-mini, Phi-4-multimodal, Phi-4-reasoning and Phi-4-mini-reasoning are now registered with dated arrivals; Phi-4-reasoning-plus is not); grok-code-fast-1; the NVIDIA Nemotron catalogue family arrival dated 16 March 2026; and the schedule's naming of claude-opus-4-8 as claude-opus-4-1's replacement at its 5 August 2026 retirement. Cohere Parse v5 was recorded from a dated Foundry announcement in September 2026 as foundry-cohere-parse-v5-preview-2026-08-27; the Embed and Rerank history it joined stays parked here. FLUX was recorded in November 2026: a Black Forest Labs vendor surface, four image models and their dated arrivals, with the FLUX.2 general-availability dates held as foundry-flux-2-ga-dates.",
       "model_ids": [],
       "surface_ids": [
         "microsoft-foundry"
@@ -28101,6 +28560,53 @@
             "date"
           ],
           "note": "A deprecation_moved observation with window_start 2026-11-05T19:30:00Z and window_end 2026-11-06T01:30:00Z: the before block's deprecation_inference is 2026-11-15T00:00:00Z and the after block's is 2027-03-16T00:00:00Z. Cited at its commit-pinned URL; the same change appears in other regions' files."
+        }
+      ]
+    },
+    {
+      "id": "foundry-flux-2-ga-dates",
+      "state": "open",
+      "working_claim": "FLUX.2 [pro] and FLUX.2 [flex] moved from preview to general availability in Microsoft Foundry on dates Microsoft has not published.",
+      "reason": "foundry-flux-2-pro-2025-12-15 records a public preview and foundry-flux-2-flex-2026-02-25 a gated one. Microsoft's retirement schedule now reads 'FLUX.2-pro | 1 | GA | 2027-01-20' and 'FLUX.2-flex | 1 | GA | 2027-01-20', and the Foundry Models API listed both as GenerallyAvailable when the catalogue watcher's first checkpoint was taken on 27 October 2026. No Microsoft post, retrospective or what's-new entry read dates either promotion, and Microsoft's models-sold-by-Azure page, updated on 29 October 2026, still calls both Preview in a footnote. So the promotions happened between the arrivals and 27 October 2026 and one Microsoft page has not caught up; neither date is recorded.",
+      "target": "Bracket each promotion with Wayback captures of the retirement schedule between February and October 2026: the first capture whose FLUX.2 rows read GA, against the last that reads Preview or lacks the row. Also unread: Microsoft's monthly Foundry retrospectives from February 2026 onwards, any of which may carry a GA line. The same captures would show whether FLUX-1.1-pro and FLUX.1-Kontext-pro, recorded as ga at arrival by inference, ever carried a Preview label.",
+      "model_ids": [
+        "flux-2-pro",
+        "flux-2-flex"
+      ],
+      "surface_ids": [
+        "microsoft-foundry"
+      ],
+      "sources": [
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Model retirement schedule - Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "source_type": "documentation",
+          "quote": "FLUX.2-pro | 1 | GA | 2027-01-20 | —",
+          "note": "Read live on 11 November 2026; the FLUX.2-flex row reads the same."
+        },
+        {
+          "publisher": "Microsoft Learn",
+          "title": "Foundry Models sold by Azure - Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure",
+          "primary": true,
+          "retrieved_at": "2026-11-11",
+          "source_type": "documentation",
+          "quote": "Support for multiple reference images is available for FLUX.2 [pro] (Preview) and FLUX.2 [flex] (Preview)",
+          "note": "A footnote to the page's Black Forest Labs table, read live on 11 November 2026; the page's updated_at is 2026-10-29."
+        },
+        {
+          "publisher": "CtrlAltBen Frontier Model Tracker",
+          "title": "Catalogue checkpoint, Foundry Models API, eastus2, 2026-10-27T19:30:00Z",
+          "url": "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/9e97f6274e6c6d6ada5f71530865c85a46b634cf/checkpoints/arm/eastus2/2026-10-27T19-30-00Z.json",
+          "primary": false,
+          "retrieved_at": "2026-11-11",
+          "published_at": "2026-10-27",
+          "source_type": "other",
+          "quote": "FLUX.2-pro@1",
+          "note": "The watcher's seed checkpoint: FLUX.2-pro@1 and FLUX.2-flex@1 both read lifecycle_status GenerallyAvailable, portal word Generally Available. A checkpoint shows the state when the watcher first looked, not when it changed. Cited at its commit-pinned URL."
         }
       ]
     },

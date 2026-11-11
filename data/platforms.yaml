@@ -100,6 +100,11 @@ surfaces:
     owner: Moonshot AI
     vendor_baseline: true
     counts_as: []
+  - id: black-forest-labs
+    display_name: "Black Forest Labs"
+    owner: Black Forest Labs
+    vendor_baseline: true
+    counts_as: []
   - id: kling
     display_name: "Kling AI"
     owner: Kuaishou

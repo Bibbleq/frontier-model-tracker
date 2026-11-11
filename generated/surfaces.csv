@@ -11,6 +11,7 @@ xai-grok,Grok,xAI,,,true,,,,,6
 deepseek,DeepSeek,DeepSeek,,,true,,,,,10
 meta,Meta,Meta,,,true,,,,,9
 moonshot,Moonshot AI,Moonshot AI,,,true,,,,,3
+black-forest-labs,Black Forest Labs,Black Forest Labs,,,true,,,,,4
 kling,Kling AI,Kuaishou,,,true,,,,,1
 lightricks,LTX,Lightricks,,,true,,,,,1
 fal,fal,fal,,,true,,,,,1
@@ -25,7 +26,7 @@ github-models,GitHub Models,GitHub,GitHub Models,,false,microsoft,,,,10
 azure-openai,Azure OpenAI Service,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,,29
 azure-ai-catalog,Azure AI model catalogue,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,,5
 azure-ai-studio,Azure AI Studio,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,2024-11-19,2
-azure-ai-foundry,Azure AI Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-studio,microsoft-foundry,,37
-microsoft-foundry,Microsoft Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-foundry,,,100
+azure-ai-foundry,Azure AI Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-studio,microsoft-foundry,,39
+microsoft-foundry,Microsoft Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-foundry,,,102
 foundry-local,Foundry Local,Microsoft,Microsoft Foundry,,false,microsoft,,,,2
 microsoft-corporate,Microsoft,Microsoft,,,false,,,,,1
