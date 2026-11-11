@@ -1354,6 +1354,36 @@ models:
     aliases: ["muse-wonder-full-1.0"]
 
 
+  # ------------------------------------------------------- Black Forest Labs
+  - id: flux-1-1-pro
+    display_name: "FLUX1.1 [pro]"
+    vendor: Black Forest Labs
+    modality: image
+    scope: extended
+    aliases: ["FLUX-1.1-pro", "FLUX 1.1 [pro]", "flux-pro-1.1"]
+    note: "Black Forest Labs' text-to-image model of October 2024. Microsoft Foundry sells it directly as FLUX-1.1-pro. Recorded under extended scope as a catalogue entry."
+  - id: flux-1-kontext-pro
+    display_name: "FLUX.1 Kontext [pro]"
+    vendor: Black Forest Labs
+    modality: image
+    scope: extended
+    aliases: ["FLUX.1-Kontext-pro", "flux-kontext-pro"]
+    note: "Black Forest Labs' image generation and editing model of May 2025, released with FLUX.1 Kontext [max], which is not registered. Microsoft Foundry sells it directly as FLUX.1-Kontext-pro. Recorded under extended scope as a catalogue entry."
+  - id: flux-2-pro
+    display_name: "FLUX.2 [pro]"
+    vendor: Black Forest Labs
+    modality: image
+    scope: extended
+    aliases: ["FLUX.2-pro"]
+    note: "Black Forest Labs' FLUX.2 image model, launched with FLUX.2 [flex] on 25 November 2025. Microsoft Foundry lists it as FLUX.2-pro. Recorded under extended scope as a catalogue entry."
+  - id: flux-2-flex
+    display_name: "FLUX.2 [flex]"
+    vendor: Black Forest Labs
+    modality: image
+    scope: extended
+    aliases: ["FLUX.2-flex"]
+    note: "The FLUX.2 model Black Forest Labs positions for text-heavy and adjustable generation, launched with FLUX.2 [pro] on 25 November 2025 and reaching Microsoft Foundry ten weeks after it. Microsoft Foundry lists it as FLUX.2-flex. Recorded under extended scope as a catalogue entry."
+
   # ------------------------------------------- video models served by fal
   - id: kling-3-0
     display_name: "Kling 3.0"

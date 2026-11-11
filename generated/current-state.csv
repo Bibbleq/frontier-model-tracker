@@ -130,6 +130,14 @@ deepseek-v4-flash-0731,DeepSeek-V4-Flash-0731,DeepSeek,microsoft-foundry,Microso
 deepseek-v4-pro,DeepSeek V4 Pro,DeepSeek,deepseek,DeepSeek,,public_preview,not_applicable,false,deepseek-v4-pro-2026-04-24,2026-04-24,day,2026-11-10,,0
 deepseek-v4-pro,DeepSeek V4 Pro,DeepSeek,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-deepseek-v4-pro-2026-04-24,2026-04-24,day,2026-11-10,,0
 deepseek-v4-pro-0813,DeepSeek V4 Pro 0813,DeepSeek,deepseek,DeepSeek,,ga,not_applicable,false,deepseek-v4-pro-0813-2026-08-13,2026-08-13,day,2026-11-10,,0
+flux-1-1-pro,FLUX1.1 [pro],Black Forest Labs,black-forest-labs,Black Forest Labs,,ga,not_applicable,false,bfl-flux-1-1-pro-2024-10-02,2024-10-02,day,2026-11-10,,0
+flux-1-1-pro,FLUX1.1 [pro],Black Forest Labs,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-flux-1-1-pro-2025-08-04,2025-08-04,day,2026-11-10,,0
+flux-1-kontext-pro,FLUX.1 Kontext [pro],Black Forest Labs,black-forest-labs,Black Forest Labs,,ga,not_applicable,false,bfl-flux-1-kontext-pro-2025-05-29,2025-05-29,day,2026-11-10,,0
+flux-1-kontext-pro,FLUX.1 Kontext [pro],Black Forest Labs,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-flux-1-kontext-pro-2025-08-04,2025-08-04,day,2026-11-10,,0
+flux-2-flex,FLUX.2 [flex],Black Forest Labs,black-forest-labs,Black Forest Labs,,ga,not_applicable,false,bfl-flux-2-flex-2025-11-25,2025-11-25,day,2026-11-10,,0
+flux-2-flex,FLUX.2 [flex],Black Forest Labs,microsoft-foundry,Microsoft Foundry,microsoft | foundry,limited_preview,catalogue,false,foundry-flux-2-flex-2026-02-25,2026-02-25,day,2026-11-10,,1
+flux-2-pro,FLUX.2 [pro],Black Forest Labs,black-forest-labs,Black Forest Labs,,ga,not_applicable,false,bfl-flux-2-pro-2025-11-25,2025-11-25,day,2026-11-10,,0
+flux-2-pro,FLUX.2 [pro],Black Forest Labs,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-flux-2-pro-2025-12-15,2025-12-15,day,2026-11-10,,1
 gemini-1-5-pro,Gemini 1.5 Pro,Google,google-gemini,Gemini,,private_preview,not_applicable,false,google-gemini1-5-pro-2024-02-15,2024-02-15,day,2026-11-10,,0
 gemini-1-5-pro,Gemini 1.5 Pro,Google,google-gemini-api,Gemini API,,ga,not_applicable,false,google-gemini1-5-pro-ga-2024-05-30,2024-05-30,day,2026-11-10,,0
 gemini-2-0-flash,Gemini 2.0 Flash,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-gemini2-0-flash-retired-2025-10-23,2025-10-23,day,2026-11-10,,1
