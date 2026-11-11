@@ -799,6 +799,13 @@ models:
     display_name: "Claude 2.1"
     vendor: Anthropic
     generation: claude-2
+  - id: claude-instant-1-2
+    display_name: "Claude Instant 1.2"
+    vendor: Anthropic
+    generation: claude-1
+    scope: extended
+    aliases: ["claude-instant-1.2"]
+    note: "Anthropic's faster, cheaper model of August 2023, retired with the Claude 1 models on 6 November 2024; never on a Microsoft surface."
   - id: claude-3-opus
     display_name: "Claude 3 Opus"
     vendor: Anthropic
@@ -822,6 +829,13 @@ models:
     vendor: Anthropic
     generation: claude-3
     model_line: claude-sonnet
+  - id: claude-3-5-haiku
+    display_name: "Claude 3.5 Haiku"
+    vendor: Anthropic
+    generation: claude-3
+    model_line: claude-haiku
+    aliases: ["claude-3-5-haiku-20241022", "Claude Haiku 3.5"]
+    note: "Announced 22 October 2024, available on the Claude API from 4 November 2024, retired there on 19 February 2026; never in GitHub Copilot or Microsoft Foundry."
   - id: claude-3-7-sonnet
     display_name: "Claude 3.7 Sonnet"
     vendor: Anthropic
@@ -1006,6 +1020,50 @@ models:
     vendor: Google
     generation: gemini-2
     note: "Reached GitHub Copilot on 11 April 2025; no Google release event is recorded yet, so its lag is unmeasurable."
+  - id: gemini-2-0-pro
+    display_name: "Gemini 2.0 Pro"
+    vendor: Google
+    generation: gemini-2
+    scope: extended
+    aliases: ["gemini-2.0-pro-exp-02-05", "gemini-2.0-pro-exp"]
+    note: "Experimental only; never reached general availability or a Microsoft surface; shut down 9 December 2025."
+  - id: gemini-2-5-flash
+    display_name: "Gemini 2.5 Flash"
+    vendor: Google
+    generation: gemini-2
+    aliases: ["gemini-2.5-flash"]
+    note: "Preview 17 April 2025, stable 17 June 2025; never in GitHub Copilot."
+  - id: gemini-3-pro
+    display_name: "Gemini 3 Pro"
+    vendor: Google
+    generation: gemini-3
+    aliases: ["gemini-3-pro-preview"]
+    note: "First Gemini 3 model; preview only, shut down 9 March 2026 with the id pointed at Gemini 3.1 Pro."
+  - id: gemini-3-flash
+    display_name: "Gemini 3 Flash"
+    vendor: Google
+    generation: gemini-3
+    aliases: ["gemini-3-flash-preview"]
+    note: "Preview only at Google."
+  - id: gemini-3-1-pro
+    display_name: "Gemini 3.1 Pro"
+    vendor: Google
+    generation: gemini-3
+    aliases: ["gemini-3.1-pro-preview"]
+    note: "Preview only; no stable id was published."
+  - id: gemini-3-5-flash
+    display_name: "Gemini 3.5 Flash"
+    vendor: Google
+    generation: gemini-3
+    aliases: ["gemini-3.5-flash"]
+    note: "Released straight to general availability on 19 May 2026; Google routed the id to Gemini 3.6 Flash from 8 October 2026."
+  - id: gemini-3-5-flash-lite
+    display_name: "Gemini 3.5 Flash-Lite"
+    vendor: Google
+    generation: gemini-3
+    scope: extended
+    aliases: ["gemini-3.5-flash-lite"]
+    note: "Released with Gemini 3.6 Flash on 21 July 2026; never in GitHub Copilot."
   - id: gemini-3-6-flash
     display_name: "Gemini 3.6 Flash"
     vendor: Google
@@ -1065,6 +1123,11 @@ models:
     display_name: "Grok 4"
     vendor: xAI
     generation: grok-4
+  - id: grok-code-fast-1
+    display_name: "Grok Code Fast 1"
+    vendor: xAI
+    aliases: ["grok-code-fast-1", "Grok Code Fast 1"]
+    note: "xAI's coding model, released quietly under the codename sonic the week before its 28 August 2025 announcement; in GitHub Copilot from 26 August 2025 to 15 May 2026, when xAI retired it. Microsoft Foundry still lists it. Deliberately left without a generation or model line: it is a coding model outside the numbered Grok line."
   - id: grok-4-1-fast
     display_name: "Grok 4.1 Fast"
     vendor: xAI
@@ -1143,6 +1206,27 @@ models:
     display_name: "Llama 2"
     vendor: Meta
     generation: llama-2
+  - id: llama-3
+    display_name: "Llama 3"
+    vendor: Meta
+    generation: llama-3
+    scope: extended
+    aliases: ["Meta-Llama-3-8B-Instruct", "Meta-Llama-3-70B-Instruct"]
+    note: "The April 2024 release, 8B and 70B; one registry model for the release, as Llama 2 is."
+  - id: llama-3-1
+    display_name: "Llama 3.1"
+    vendor: Meta
+    generation: llama-3
+    scope: extended
+    aliases: ["Meta-Llama-3.1-405B-Instruct", "Meta-Llama-3.1-70B-Instruct", "Meta-Llama-3.1-8B-Instruct", "Meta-Llama-3.1-8B"]
+    note: "The July 2024 release, 8B, 70B and 405B."
+  - id: llama-3-2
+    display_name: "Llama 3.2"
+    vendor: Meta
+    generation: llama-3
+    scope: extended
+    aliases: ["Llama-3.2-11B-Vision-Instruct", "Llama-3.2-90B-Vision-Instruct"]
+    note: "The September 2024 release: 1B and 3B text models and 11B and 90B vision models."
   - id: llama-3-3-70b
     display_name: "Llama 3.3 70B Instruct"
     vendor: Meta
@@ -1413,6 +1497,19 @@ models:
     scope: extended
     aliases: ["H3 Max Turbo"]
     note: "fal's faster post-trained version of MiniMax H3, listed in Microsoft Foundry beside H3 Max. No dated fal release for the Turbo model was found, so it has no vendor baseline. No variant link: the registry has no turbo variant kind."
+  # ------------------------------------------------------------- MiniMax
+  - id: minimax-m2-5
+    display_name: "MiniMax M2.5"
+    vendor: MiniMax
+    scope: extended
+    aliases: ["FW-MiniMax-M2.5", "MiniMax-M2.5"]
+    note: "MiniMax's February 2026 text model, released as M2.5 and M2.5-Lightning. One of the four launch models when Fireworks AI inference arrived on Microsoft Foundry on 11 March 2026. No longer in Microsoft's Fireworks catalogue tables in November 2026."
+  - id: minimax-m3
+    display_name: "MiniMax M3"
+    vendor: MiniMax
+    scope: extended
+    aliases: ["FW-MiniMax-M3", "MiniMax-M3"]
+    note: "MiniMax's June 2026 text model, released on 1 June 2026. Listed in Microsoft's Fireworks catalogue as FW-MiniMax-M3 with no dated arrival."
   # ------------------------------------------------------------- Cohere
   - id: cohere-parse-v5
     display_name: "Cohere Parse v5"
@@ -1421,6 +1518,50 @@ models:
     scope: extended
     aliases: ["Cohere-parse-v5", "Cohere Parse"]
     note: "A vision-language document-parsing model: it reads images, tables and forms and writes Markdown, so it is recorded under the image modality on the same reasoning as qwen-3-5-vision. Registered under extended scope as a catalogue entry. Cohere's earlier Embed and Rerank models in Foundry remain unrecorded and stay parked in meta-cohere-flux-mai-foundry-history. Cohere's own Parse v5 release is not dated here, so lag for this model is unknown_no_baseline until a dated Cohere source is read."
+  - id: cohere-embed-v3
+    display_name: "Cohere Embed v3"
+    vendor: Cohere
+    scope: extended
+    aliases: ["Cohere-embed-v3-english", "Cohere-embed-v3-multilingual", "embed-english-v3.0", "embed-multilingual-v3.0"]
+    note: "Cohere's Embed v3 release of November 2023. The English and multilingual models share one release and are aliases here, since the registry has no language variant kind. Still in the Foundry catalogue, due to be deprecated on 15 November 2026."
+  - id: cohere-embed-v4
+    display_name: "Cohere Embed 4"
+    vendor: Cohere
+    scope: extended
+    aliases: ["embed-v-4-0", "embed-v4.0", "Embed 4"]
+    note: "Cohere's multimodal embedding model of April 2025."
+  - id: cohere-rerank-v3
+    display_name: "Cohere Rerank 3"
+    vendor: Cohere
+    scope: extended
+    aliases: ["Cohere-rerank-v3-english", "Cohere-rerank-v3-multilingual"]
+    note: "English and multilingual models as aliases; retired from Azure on 30 June 2025."
+  - id: cohere-rerank-v4
+    display_name: "Cohere Rerank 4"
+    vendor: Cohere
+    scope: extended
+    aliases: ["Rerank 4.0"]
+    note: "Cohere Rerank 4 as released. Its Pro and Fast models are registered as the variants cohere-rerank-v4-pro and cohere-rerank-v4-fast; the events here describe the release. Recorded under extended scope as a catalogue entry on the cohere-parse-v5 reasoning. Cohere's own release of 11 December 2025 is recorded on the cohere vendor surface, so the Foundry lag is zero days."
+  - id: cohere-rerank-v4-pro
+    display_name: "Cohere Rerank 4 Pro"
+    vendor: Cohere
+    scope: extended
+    aliases: ["Cohere-rerank-v4.0-pro", "rerank-v4.0-pro"]
+    variant_of: cohere-rerank-v4
+    variant_kind: pro
+  - id: cohere-rerank-v4-fast
+    display_name: "Cohere Rerank 4 Fast"
+    vendor: Cohere
+    scope: extended
+    aliases: ["Cohere-rerank-v4.0-fast", "rerank-v4.0-fast"]
+    variant_of: cohere-rerank-v4
+    variant_kind: fast
+  - id: cohere-command-r-plus
+    display_name: "Cohere Command R+"
+    vendor: Cohere
+    scope: extended
+    aliases: ["Command R+", "Cohere-command-r-plus", "Cohere-command-r-plus-08-2024"]
+    note: "Cohere's April 2024 model; Azure carried the original and its 08-2024 refresh, retired in June 2025 and May 2026."
   - id: cohere-embed-v5
     display_name: "Cohere Embed 5"
     vendor: Cohere
@@ -1483,12 +1624,24 @@ models:
     scope: extended
     aliases: ["nemotron-speech-streaming-en-0.6b", "Nemotron ASR"]
     note: "The streaming speech-to-text model behind Foundry Local's live audio transcription. Recorded under the audio modality as a processor of speech, not a generator of it."
+  - id: nemotron-3-super
+    display_name: "NVIDIA Nemotron 3 Super"
+    vendor: NVIDIA
+    generation: nemotron
+    aliases: ["Nemotron 3 Super", "Nemotron-3-Super-120B-A12B", "Nvidia Nemotron Super 3"]
+    note: "An open hybrid Mamba-Transformer mixture-of-experts model (120B total, 12B active, per the checkpoint name) released by NVIDIA on 11 March 2026. Reached Microsoft Foundry as an NVIDIA NIM microservice on 16 March 2026, and the Hugging Face collection on Foundry lists it by 30 March. Microsoft's Fireworks catalogue also lists FW-Nemotron-3-Super-120B-A12B-BF16 as a provisioned offering, with no dated arrival."
+  - id: nemotron-3-ultra
+    display_name: "NVIDIA Nemotron 3 Ultra"
+    vendor: NVIDIA
+    generation: nemotron
+    aliases: ["Nemotron 3 Ultra", "FW-Nemotron-3-Ultra-NVFP4", "FW NVIDIA Nemotron 3 Ultra"]
+    note: "A 550B-parameter mixture-of-experts model with 55B active parameters, released by NVIDIA on 4 June 2026. Microsoft's Fireworks catalogue lists it, and Microsoft's 19 August 2026 Foundry post prices it as 'FW NVIDIA Nemotron 3 Ultra', but no Microsoft page found dates its arrival on Foundry."
   - id: nemotron-3-5-lightning
     display_name: "NVIDIA Nemotron 3.5 Lightning"
     vendor: NVIDIA
     generation: nemotron
     aliases: ["Nemotron 3.5 Lightning", "nvidia-nemotron-3.5-lightning-30b-a3b"]
-    note: "A 30B-A3B open-weight agentic model, per the Foundry catalogue identifiers. Reached Microsoft Foundry through Fireworks AI and the Hugging Face collection rather than as a model sold by Azure; no NVIDIA vendor-surface release is recorded, so lag from NVIDIA cannot be derived."
+    note: "A 30B-A3B open-weight agentic model, per the Foundry catalogue identifiers. Reached Microsoft Foundry through Fireworks AI and the Hugging Face collection rather than as a model sold by Azure. NVIDIA's own model card gives a Hugging Face release date of 11 August 2026, recorded as a supported NVIDIA vendor event, so lag from NVIDIA can be derived."
 
   # ------------------------------------------------------------- Phi
   - id: phi-4
@@ -1521,6 +1674,13 @@ models:
     aliases: ["Phi-4-reasoning"]
     variant_of: phi-4
     variant_kind: reasoning
+  - id: phi-4-reasoning-plus
+    display_name: "Phi-4-reasoning-plus"
+    vendor: Microsoft
+    generation: phi-4
+    scope: extended
+    aliases: ["Phi-4-reasoning-plus"]
+    note: "Phi-4-reasoning further trained with reinforcement learning, introduced with it on 30 April 2025. No variant link: the registry has no plus variant kind. Not on the retirement schedule or in the Foundry Models API listing read in November 2026."
   - id: phi-4-mini-reasoning
     display_name: "Phi-4-mini-reasoning"
     vendor: Microsoft
