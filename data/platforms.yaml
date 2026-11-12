@@ -121,6 +121,16 @@ surfaces:
     vendor_baseline: true
     counts_as: []
     note: "fal is a vendor here only for models it makes itself, such as H3 Max. Models it serves for other makers are recorded on the Microsoft surface with the partner_hosted tag and keep their maker as vendor."
+  - id: minimax
+    display_name: "MiniMax"
+    owner: MiniMax
+    vendor_baseline: true
+    counts_as: []
+  - id: nvidia
+    display_name: "NVIDIA"
+    owner: NVIDIA
+    vendor_baseline: true
+    counts_as: []
 
   # ----------------------------------------------------------- microsoft 365
   - id: microsoft-ai

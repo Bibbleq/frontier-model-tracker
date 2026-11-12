@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 557,
-    "backlog": 126,
-    "sources": 1034,
-    "models": 213,
-    "surfaces": 31,
-    "confirmed": 392,
-    "supported": 165
+    "events": 629,
+    "backlog": 133,
+    "sources": 1188,
+    "models": 238,
+    "surfaces": 33,
+    "confirmed": 451,
+    "supported": 178
   },
   "kinds": {
-    "announcement": 32,
-    "availability": 510,
+    "announcement": 44,
+    "availability": 570,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 79,
+    "open": 86,
     "promoted": 41,
     "rejected": 4
   },
@@ -78,6 +78,41 @@
     },
     {
       "code": "missing_archive",
+      "subject": "anthropic-claude-instant-1-2-retired-2024-11-06",
+      "message": "documentation source has no archived_url and may be edited in place: https://platform.claude.com/docs/en/about-claude/model-deprecations"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "anthropic-claude-instant-1-2-retired-2024-11-06",
+      "message": "documentation source has no archived_url and may be edited in place: https://platform.claude.com/docs/en/release-notes/overview"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "anthropic-claude-instant-1-2-retirement-announced-2024-09-04",
+      "message": "documentation source has no archived_url and may be edited in place: https://platform.claude.com/docs/en/about-claude/model-deprecations"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "anthropic-claude3-5-haiku-2024-11-04",
+      "message": "documentation source has no archived_url and may be edited in place: https://platform.claude.com/docs/en/release-notes/overview"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "anthropic-claude3-5-haiku-retired-2026-02-19",
+      "message": "documentation source has no archived_url and may be edited in place: https://platform.claude.com/docs/en/about-claude/model-deprecations"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "anthropic-claude3-5-haiku-retired-2026-02-19",
+      "message": "documentation source has no archived_url and may be edited in place: https://platform.claude.com/docs/en/release-notes/overview"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "anthropic-claude3-5-haiku-retirement-announced-2025-12-19",
+      "message": "documentation source has no archived_url and may be edited in place: https://platform.claude.com/docs/en/about-claude/model-deprecations"
+    },
+    {
+      "code": "missing_archive",
       "subject": "bfl-flux-2-flex-2025-11-25",
       "message": "documentation source has no archived_url and may be edited in place: https://docs.bfl.ai/release-notes"
     },
@@ -85,6 +120,36 @@
       "code": "missing_archive",
       "subject": "bfl-flux-2-pro-2025-11-25",
       "message": "documentation source has no archived_url and may be edited in place: https://docs.bfl.ai/release-notes"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "catalog-cohere-command-r-plus-retired-2026-05-12",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "catalog-cohere-command-r-plus-retired-2026-05-12",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry-classic/openai/concepts/retired-models"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "catalog-cohere-rerank-v3-retired-2025-06-30",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry-classic/openai/concepts/retired-models"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "catalog-llama-3-1-retired-2026-06-13",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "catalog-llama-3-1-retired-2026-06-13",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry-classic/openai/concepts/retired-models"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "catalog-llama-3-retired-2025-06-30",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry-classic/openai/concepts/retired-models"
     },
     {
       "code": "missing_archive",
@@ -140,6 +205,11 @@
       "code": "missing_archive",
       "subject": "foundry-fable5-2026-06-09",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-fw-minimax-m2-5-2026-03-11",
+      "message": "documentation source has no archived_url and may be edited in place: https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-mar-2026/"
     },
     {
       "code": "missing_archive",
@@ -203,6 +273,56 @@
     },
     {
       "code": "missing_archive",
+      "subject": "google-gemini2-0-pro-experimental-2025-02-05",
+      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "google-gemini2-0-pro-retired-2025-12-09",
+      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "google-gemini2-5-flash-2025-06-17",
+      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "google-gemini2-5-flash-preview-2025-04-17",
+      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "google-gemini3-1-pro-preview-2026-02-19",
+      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "google-gemini3-5-flash-2026-05-19",
+      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "google-gemini3-5-flash-lite-2026-07-21",
+      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "google-gemini3-flash-preview-2025-12-17",
+      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "google-gemini3-pro-preview-2025-11-18",
+      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "google-gemini3-pro-retired-2026-03-09",
+      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
       "subject": "google-gemini4-argon-2026-10-13",
       "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
     },
@@ -230,6 +350,21 @@
       "code": "missing_archive",
       "subject": "microsoft-decision-1-2026-10-09",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "minimax-m2-5-2026-02-12",
+      "message": "documentation source has no archived_url and may be edited in place: https://platform.minimax.io/docs/release-notes/models"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "minimax-m3-2026-06-01",
+      "message": "documentation source has no archived_url and may be edited in place: https://platform.minimax.io/docs/release-notes/models"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "nvidia-nemotron-3-5-lightning-2026-08-11",
+      "message": "documentation source has no archived_url and may be edited in place: https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4"
     },
     {
       "code": "missing_archive",
@@ -277,6 +412,11 @@
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-select-agent-model"
     },
     {
+      "code": "missing_archive",
+      "subject": "xai-grok-code-fast-1-retired-2026-05-15",
+      "message": "documentation source has no archived_url and may be edited in place: https://docs.x.ai/developers/migration/may-15-retirement"
+    },
+    {
       "code": "no_vendor_baseline",
       "subject": "deepseek-v3-0324",
       "message": "no vendor release event, so lag cannot be derived"
@@ -314,11 +454,6 @@
     {
       "code": "no_vendor_baseline",
       "subject": "mai-code-1-1-flash",
-      "message": "no vendor release event, so lag cannot be derived"
-    },
-    {
-      "code": "no_vendor_baseline",
-      "subject": "nemotron-3-5-lightning",
       "message": "no vendor release event, so lag cannot be derived"
     },
     {
@@ -379,8 +514,8 @@
   ],
   "warning_counts": {
     "backlog_without_surface": 11,
-    "missing_archive": 40,
-    "no_vendor_baseline": 9,
+    "missing_archive": 68,
+    "no_vendor_baseline": 8,
     "no_vendor_baseline_extended": 10,
     "pre_release_access": 1
   },
@@ -389,6 +524,8 @@
       "claude-mythos-preview",
       "cohere-embed-v5-fast",
       "cohere-embed-v5-pro",
+      "cohere-rerank-v4-fast",
+      "cohere-rerank-v4-pro",
       "cohere-rerank-v5-fast",
       "cohere-rerank-v5-pro",
       "grok-4-1-fast",
@@ -407,10 +544,17 @@
       "codex",
       "cohere-command-a",
       "cohere-command-a-plus",
+      "cohere-command-r-plus",
+      "cohere-embed-v3",
+      "cohere-embed-v4",
       "cohere-embed-v5",
       "cohere-embed-v5-fast",
       "cohere-embed-v5-pro",
       "cohere-parse-v5",
+      "cohere-rerank-v3",
+      "cohere-rerank-v4",
+      "cohere-rerank-v4-fast",
+      "cohere-rerank-v4-pro",
       "cohere-rerank-v5",
       "cohere-rerank-v5-fast",
       "cohere-rerank-v5-pro",
@@ -418,6 +562,7 @@
       "flux-1-kontext-pro",
       "flux-2-flex",
       "flux-2-pro",
+      "grok-code-fast-1",
       "grok-voice-3",
       "kling-3-0",
       "ltx-2-5",
@@ -443,6 +588,8 @@
       "microsoft-decision-1",
       "minimax-h3-max",
       "minimax-h3-max-turbo",
+      "minimax-m2-5",
+      "minimax-m3",
       "ministral-3b-24-10",
       "mistral-large-24-02",
       "mistral-small-3-1",
@@ -453,10 +600,17 @@
       "codex",
       "cohere-command-a",
       "cohere-command-a-plus",
+      "cohere-command-r-plus",
+      "cohere-embed-v3",
+      "cohere-embed-v4",
       "cohere-embed-v5",
       "cohere-embed-v5-fast",
       "cohere-embed-v5-pro",
       "cohere-parse-v5",
+      "cohere-rerank-v3",
+      "cohere-rerank-v4",
+      "cohere-rerank-v4-fast",
+      "cohere-rerank-v4-pro",
       "cohere-rerank-v5",
       "cohere-rerank-v5-fast",
       "cohere-rerank-v5-pro",
@@ -464,11 +618,14 @@
       "flux-1-kontext-pro",
       "flux-2-flex",
       "flux-2-pro",
+      "grok-code-fast-1",
       "kling-3-0",
       "ltx-2-5",
       "microsoft-decision-1",
       "minimax-h3-max",
       "minimax-h3-max-turbo",
+      "minimax-m2-5",
+      "minimax-m3",
       "ministral-3b-24-10",
       "mistral-large-24-02",
       "mistral-small-3-1",
@@ -476,13 +633,21 @@
     ],
     "surfaces_without_events": [],
     "extended_scope_models": [
+      "claude-instant-1-2",
       "codestral-25-01",
       "cohere-command-a",
       "cohere-command-a-plus",
+      "cohere-command-r-plus",
+      "cohere-embed-v3",
+      "cohere-embed-v4",
       "cohere-embed-v5",
       "cohere-embed-v5-fast",
       "cohere-embed-v5-pro",
       "cohere-parse-v5",
+      "cohere-rerank-v3",
+      "cohere-rerank-v4",
+      "cohere-rerank-v4-fast",
+      "cohere-rerank-v4-pro",
       "cohere-rerank-v5",
       "cohere-rerank-v5-fast",
       "cohere-rerank-v5-pro",
@@ -491,6 +656,8 @@
       "flux-1-kontext-pro",
       "flux-2-flex",
       "flux-2-pro",
+      "gemini-2-0-pro",
+      "gemini-3-5-flash-lite",
       "grok-4-1-fast",
       "grok-4-1-fast-non-reasoning",
       "grok-4-1-fast-reasoning",
@@ -501,11 +668,16 @@
       "kimi-k2-5",
       "kimi-k2-6",
       "kling-3-0",
+      "llama-3",
+      "llama-3-1",
+      "llama-3-2",
       "llama-3-3-70b",
       "ltx-2-5",
       "microsoft-decision-1",
       "minimax-h3-max",
       "minimax-h3-max-turbo",
+      "minimax-m2-5",
+      "minimax-m3",
       "ministral-3b-24-10",
       "mistral-large-24-02",
       "mistral-small-3-1",
@@ -517,15 +689,16 @@
       "phi-4-mini-reasoning",
       "phi-4-multimodal",
       "phi-4-reasoning",
+      "phi-4-reasoning-plus",
       "qwen-3-5-vision"
     ]
   },
   "lag_certainty": {
-    "exact": 403,
-    "not_recorded": 1406,
+    "exact": 425,
+    "not_recorded": 1624,
     "range": 51,
-    "rollout_start": 166,
-    "unknown_no_baseline": 372,
-    "unknown_open_research": 158
+    "rollout_start": 196,
+    "unknown_no_baseline": 384,
+    "unknown_open_research": 176
   }
 }

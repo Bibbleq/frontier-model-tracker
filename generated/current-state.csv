@@ -2,6 +2,7 @@ model_id,model,vendor,surface_id,surface,counts_as,lifecycle,exposure,state_is_t
 claude-1,Claude 1,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-claude1-2023-03-14,2023-03-14,day,2026-11-10,,0
 claude-2,Claude 2,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-claude2-2023-07-11,2023-07-11,day,2026-11-10,,0
 claude-2-1,Claude 2.1,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-claude2-1-2023-11-21,2023-11-21,day,2026-11-10,,0
+claude-3-5-haiku,Claude 3.5 Haiku,Anthropic,anthropic-claude,Claude,,retired,not_applicable,true,anthropic-claude3-5-haiku-retired-2026-02-19,2026-02-19,day,2026-11-10,,0
 claude-3-5-sonnet,Claude 3.5 Sonnet,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-claude3-5-sonnet-2024-06-21,2024-06-21,day,2026-11-10,,0
 claude-3-5-sonnet,Claude 3.5 Sonnet,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-claude3-5-sonnet-ga-2025-04-04,2025-04-04,day,2026-11-10,,0
 claude-3-7-sonnet,Claude 3.7 Sonnet,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-claude3-7-sonnet-2025-02-24,2025-02-24,day,2026-11-10,,0
@@ -29,6 +30,7 @@ claude-haiku-4-5,Claude Haiku 4.5,Anthropic,microsoft-foundry,Microsoft Foundry,
 claude-haiku-5-5,Claude Haiku 5.5,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-haiku5-5-2026-10-07,2026-10-07,day,2026-11-10,,0
 claude-haiku-5-5,Claude Haiku 5.5,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-haiku5-5-2026-10-07,2026-10-07,day,2026-11-10,,0
 claude-haiku-5-5,Claude Haiku 5.5,Anthropic,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-haiku5-5-2026-10-07,2026-10-07,day,2026-11-10,,0
+claude-instant-1-2,Claude Instant 1.2,Anthropic,anthropic-claude,Claude,,retired,not_applicable,true,anthropic-claude-instant-1-2-retired-2024-11-06,2024-11-06,day,2026-11-10,,0
 claude-mythos-5,Claude Mythos 5,Anthropic,anthropic-claude,Claude,,restored,catalogue,false,anthropic-fable5-restoration-2026-07-01,2026-07-01,day,2026-11-10,claude-mythos-5-1,0
 claude-mythos-5-1,Claude Mythos 5.1,Anthropic,anthropic-claude,Claude,,limited_preview,not_applicable,false,anthropic-mythos5-1-2026-09-01,2026-09-01,day,2026-11-10,,0
 claude-mythos-5-2,Claude Mythos 5.2,Anthropic,anthropic-claude,Claude,,limited_preview,not_applicable,false,anthropic-mythos5-2-2026-11-09,2026-11-09,day,2026-11-10,,0
@@ -40,7 +42,7 @@ claude-opus-4-1,Claude Opus 4.1,Anthropic,m365-copilot,Microsoft 365 Copilot,mic
 claude-opus-4-1,Claude Opus 4.1,Anthropic,microsoft-foundry,Microsoft Foundry,microsoft | foundry,retired,catalogue,true,foundry-opus4-1-retired-2026-08-05,2026-08-05,day,2026-11-10,,0
 claude-opus-4-1,Claude Opus 4.1,Anthropic,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,public_preview,selectable,false,studio-opus4-1-2025-09-24,2025-09-24,day,2026-11-10,,0
 claude-opus-4-5,Claude Opus 4.5,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-opus4-5-2025-11-24,2025-11-24,day,2026-11-10,,0
-claude-opus-4-5,Claude Opus 4.5,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-opus4-5-ga-2025-12-18,2025-12-18,day,2026-11-10,,0
+claude-opus-4-5,Claude Opus 4.5,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-claude-opus4-5-retired-2026-09-01,2026-09-01,day,2026-11-10,,0
 claude-opus-4-5,Claude Opus 4.5,Anthropic,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-opus4-5-2025-11-24,2025-11-24,day,2026-11-10,,1
 claude-opus-4-5,Claude Opus 4.5,Anthropic,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,public_preview,selectable,false,studio-opus4-5-2025-11-24,2025-11-24,day,2026-11-10,,0
 claude-opus-4-6,Claude Opus 4.6,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-opus4-6-2026-02-05,2026-02-05,day,2026-11-10,,0
@@ -75,11 +77,11 @@ claude-sonnet-4,Claude Sonnet 4,Anthropic,anthropic-claude,Claude,,ga,not_applic
 claude-sonnet-4,Claude Sonnet 4,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,public_preview,selectable,false,github-sonnet4-preview-2025-05-22,2025-05-22,day,2026-11-10,,0
 claude-sonnet-4,Claude Sonnet 4,Anthropic,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,public_preview,selectable,false,studio-sonnet4-2025-09-24,2025-09-24,day,2026-11-10,,0
 claude-sonnet-4-5,Claude Sonnet 4.5,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-sonnet4-5-2025-09-29,2025-09-29,day,2026-11-10,,0
-claude-sonnet-4-5,Claude Sonnet 4.5,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-sonnet4-5-ga-2025-10-13,2025-10-13,day,2026-11-10,,0
+claude-sonnet-4-5,Claude Sonnet 4.5,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-claude-sonnet4-5-retired-2026-09-01,2026-09-01,day,2026-11-10,,0
 claude-sonnet-4-5,Claude Sonnet 4.5,Anthropic,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-sonnet4-5-2025-11-18,2025-11-18,day,2026-11-10,,2
 claude-sonnet-4-5,Claude Sonnet 4.5,Anthropic,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,ga,selectable,false,studio-sonnet4-5-ga-2026-03,2026-03,month,2026-11-10,,1
 claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-sonnet4-6-2026-02-17,2026-02-17,day,2026-11-10,,0
-claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-sonnet4-6-2026-02-17,2026-02-17,day,2026-11-10,,0
+claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-claude-sonnet4-6-retired-2026-09-01,2026-09-01,day,2026-11-10,,0
 claude-sonnet-4-6,Claude Sonnet 4.6,Anthropic,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-sonnet4-6-ga-2026-06,2026-06-26,day,2026-11-10,,0
 claude-sonnet-5,Claude Sonnet 5,Anthropic,anthropic-claude,Claude,,ga,not_applicable,false,anthropic-sonnet5-2026-06-30,2026-06-30,day,2026-11-10,,0
 claude-sonnet-5,Claude Sonnet 5,Anthropic,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-sonnet5-ga-2026-06-30,2026-06-30,day,2026-11-10,,0
@@ -103,9 +105,18 @@ cohere-command-a,Cohere Command A,Cohere,cohere,Cohere,,ga,not_applicable,false,
 cohere-command-a,Cohere Command A,Cohere,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-cohere-command-a-2025-04-15,2025-04-15,day,2026-11-10,,0
 cohere-command-a-plus,Cohere Command A+,Cohere,cohere,Cohere,,ga,not_applicable,false,cohere-command-a-plus-2026-05-20,2026-05-20,day,2026-11-10,,0
 cohere-command-a-plus,Cohere Command A+,Cohere,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-cohere-command-a-plus-2026-05-21,2026-05-21,day,2026-11-10,,1
+cohere-command-r-plus,Cohere Command R+,Cohere,cohere,Cohere,,ga,not_applicable,false,cohere-command-r-plus-2024-04-04,2024-04-04,day,2026-11-10,,0
+cohere-command-r-plus,Cohere Command R+,Cohere,azure-ai-catalog,Azure AI model catalogue,microsoft | foundry,retired,catalogue,true,catalog-cohere-command-r-plus-retired-2026-05-12,2026-05-12,day,2026-11-10,,0
+cohere-embed-v3,Cohere Embed v3,Cohere,cohere,Cohere,,ga,not_applicable,false,cohere-embed-v3-2023-11-02,2023-11-02,day,2026-11-10,,0
+cohere-embed-v4,Cohere Embed 4,Cohere,cohere,Cohere,,ga,not_applicable,false,cohere-embed-v4-2025-04-15,2025-04-15,day,2026-11-10,,0
+cohere-embed-v4,Cohere Embed 4,Cohere,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-cohere-embed-v4-2025-04-15,2025-04-15,day,2026-11-10,,0
 cohere-embed-v5,Cohere Embed 5,Cohere,cohere,Cohere,,ga,not_applicable,false,cohere-embed-v5-2026-09-30,2026-09-30,day,2026-11-10,,0
 cohere-embed-v5,Cohere Embed 5,Cohere,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-cohere-embed-v5-2026-09-30,2026-09-30,day,2026-11-10,,1
 cohere-parse-v5,Cohere Parse v5,Cohere,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-cohere-parse-v5-preview-2026-08-27,2026-08-27,day,2026-11-10,,0
+cohere-rerank-v3,Cohere Rerank 3,Cohere,cohere,Cohere,,ga,not_applicable,false,cohere-rerank-v3-2024-04-11,2024-04-11,day,2026-11-10,,0
+cohere-rerank-v3,Cohere Rerank 3,Cohere,azure-ai-catalog,Azure AI model catalogue,microsoft | foundry,retired,catalogue,true,catalog-cohere-rerank-v3-retired-2025-06-30,2025-06-30,day,2026-11-10,,0
+cohere-rerank-v4,Cohere Rerank 4,Cohere,cohere,Cohere,,ga,not_applicable,false,cohere-rerank-v4-2025-12-11,2025-12-11,day,2026-11-10,,0
+cohere-rerank-v4,Cohere Rerank 4,Cohere,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-cohere-rerank-v4-2025-12-11,2025-12-11,day,2026-11-10,,1
 cohere-rerank-v5,Cohere Rerank 5,Cohere,cohere,Cohere,,ga,not_applicable,false,cohere-rerank-v5-2026-10-21,2026-10-21,day,2026-11-10,,0
 cohere-rerank-v5,Cohere Rerank 5,Cohere,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-cohere-rerank-v5-2026-10-21,2026-10-21,day,2026-11-10,,1
 dall-e-2,DALL-E 2,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,retired,catalogue,true,azure-dall-e-2-retired-2025-01-27,2025-01-27,day,2026-11-10,,0
@@ -142,8 +153,15 @@ gemini-1-5-pro,Gemini 1.5 Pro,Google,google-gemini,Gemini,,private_preview,not_a
 gemini-1-5-pro,Gemini 1.5 Pro,Google,google-gemini-api,Gemini API,,ga,not_applicable,false,google-gemini1-5-pro-ga-2024-05-30,2024-05-30,day,2026-11-10,,0
 gemini-2-0-flash,Gemini 2.0 Flash,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-gemini2-0-flash-retired-2025-10-23,2025-10-23,day,2026-11-10,,1
 gemini-2-0-flash,Gemini 2.0 Flash,Google,google-gemini-api,Gemini API,,ga,not_applicable,false,google-gemini2-0-flash-2025-02-05,2025-02-05,day,2026-11-10,,0
-gemini-2-5-pro,Gemini 2.5 Pro,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,public_preview,selectable,false,github-gemini2-5-pro-preview-2025-04-11,2025-04-11,day,2026-11-10,,0
+gemini-2-0-pro,Gemini 2.0 Pro,Google,google-gemini,Gemini,,retired,not_applicable,true,google-gemini2-0-pro-retired-2025-12-09,2025-12-09,day,2026-11-10,,0
+gemini-2-5-flash,Gemini 2.5 Flash,Google,google-gemini-api,Gemini API,,ga,not_applicable,false,google-gemini2-5-flash-2025-06-17,2025-06-17,day,2026-11-10,,0
+gemini-2-5-pro,Gemini 2.5 Pro,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-gemini2-5-pro-retired-2026-07-31,2026-07-31,day,2026-11-10,,0
 gemini-2-5-pro,Gemini 2.5 Pro,Google,google-gemini,Gemini,,public_preview,not_applicable,false,google-gemini2-5-pro-2025-03-25,2025-03-25,day,2026-11-10,,0
+gemini-3-1-pro,Gemini 3.1 Pro,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-gemini3-1-pro-retired-2026-09-01,2026-09-01,day,2026-11-10,,0
+gemini-3-1-pro,Gemini 3.1 Pro,Google,google-gemini,Gemini,,public_preview,not_applicable,false,google-gemini3-1-pro-preview-2026-02-19,2026-02-19,day,2026-11-10,,0
+gemini-3-5-flash,Gemini 3.5 Flash,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-gemini3-5-flash-retired-2026-10-02,2026-10-02,day,2026-11-10,,0
+gemini-3-5-flash,Gemini 3.5 Flash,Google,google-gemini,Gemini,,ga,not_applicable,false,google-gemini3-5-flash-2026-05-19,2026-05-19,day,2026-11-10,,0
+gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,Google,google-gemini-api,Gemini API,,ga,not_applicable,false,google-gemini3-5-flash-lite-2026-07-21,2026-07-21,day,2026-11-10,,0
 gemini-3-6-flash,Gemini 3.6 Flash,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-gemini3-6-flash-retired-2026-10-02,2026-10-02,day,2026-11-10,,0
 gemini-3-6-flash,Gemini 3.6 Flash,Google,google-gemini-api,Gemini API,,ga,not_applicable,false,google-gemini3-6-flash-2026-07-21,2026-07-21,day,2026-11-10,,0
 gemini-3-7-flash,Gemini 3.7 Flash,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-gemini3-7-flash-retired-2026-10-19,2026-10-19,day,2026-11-10,,0
@@ -151,6 +169,10 @@ gemini-3-8-flash,Gemini 3.8 Flash,Google,github-copilot,GitHub Copilot,microsoft
 gemini-3-8-flash,Gemini 3.8 Flash,Google,google-gemini-api,Gemini API,,ga,not_applicable,false,google-gemini3-8-flash-2026-09-02,2026-09-02,day,2026-11-10,,0
 gemini-3-8-live,Gemini 3.8 Live,Google,google-gemini-api,Gemini API,,ga,not_applicable,false,google-gemini3-8-live-2026-09-15,2026-09-15,day,2026-11-10,,0
 gemini-3-8-live-extended-thinking,Gemini 3.8 Live Extended Thinking,Google,google-gemini-api,Gemini API,,ga,not_applicable,false,google-gemini3-8-live-2026-09-15,2026-09-15,day,2026-11-10,,0
+gemini-3-flash,Gemini 3 Flash,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-gemini3-flash-retired-2026-07-31,2026-07-31,day,2026-11-10,,0
+gemini-3-flash,Gemini 3 Flash,Google,google-gemini-api,Gemini API,,public_preview,not_applicable,false,google-gemini3-flash-preview-2025-12-17,2025-12-17,day,2026-11-10,,0
+gemini-3-pro,Gemini 3 Pro,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-gemini3-pro-retired-2026-03-26,2026-03-26,day,2026-11-10,,0
+gemini-3-pro,Gemini 3 Pro,Google,google-gemini,Gemini,,retired,not_applicable,true,google-gemini3-pro-retired-2026-03-09,2026-03-09,day,2026-11-10,,0
 gemini-4-argon,Gemini 4 Argon,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-gemini4-argon-2026-10-13,2026-10-13,day,2026-11-10,,0
 gemini-4-argon,Gemini 4 Argon,Google,google-gemini,Gemini,,ga,not_applicable,false,google-gemini4-argon-2026-10-13,2026-10-13,day,2026-11-10,,0
 gemini-4-carbon,Gemini 4 Carbon,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-gemini4-carbon-2026-11-10,2026-11-10,day,2026-11-10,,0
@@ -338,8 +360,10 @@ grok-4-6,Grok 4.6,xAI,xai-grok,Grok,,ga,not_applicable,false,xai-grok4-6-2026-08
 grok-4-7,Grok 4.7,xAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-grok4-7-2026-09-21,2026-09-21,day,2026-11-10,,0
 grok-4-7,Grok 4.7,xAI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-grok4-7-2026-10-06,2026-10-06,day,2026-11-10,,0
 grok-4-7,Grok 4.7,xAI,xai-grok,Grok,,ga,not_applicable,false,xai-grok4-7-2026-09-21,2026-09-21,day,2026-11-10,,0
+grok-code-fast-1,Grok Code Fast 1,xAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-grok-code-fast-1-retired-2026-05-15,2026-05-15,day,2026-11-10,,0
+grok-code-fast-1,Grok Code Fast 1,xAI,xai-grok,Grok,,retired,not_applicable,true,xai-grok-code-fast-1-retired-2026-05-15,2026-05-15,day,2026-11-10,,0
 grok-voice-3,Grok Voice 3.0,xAI,xai-grok,Grok,,ga,not_applicable,false,xai-grok-voice3-2026-10-14,2026-10-14,day,2026-11-10,,0
-kimi-k2-5,Kimi K2.5,Moonshot AI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-fw-kimi-k2-5-2026-03,2026-03,month,2026-11-10,,0
+kimi-k2-5,Kimi K2.5,Moonshot AI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-fw-kimi-k2-5-2026-03,2026-03-11,day,2026-11-10,,0
 kimi-k2-6,Kimi K2.6,Moonshot AI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-fw-kimi-k2-6-2026-05,2026-05,month,2026-11-10,,0
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-kimi-k2-7-code-retired-2026-10-02,2026-10-02,day,2026-11-10,,0
 kimi-k2-7-code,Kimi K2.7 Code,Moonshot AI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-kimi-k2-7-code-2026-07-01,2026-07-01,day,2026-11-10,,0
@@ -353,6 +377,12 @@ kling-3-0,Kling 3.0,Kuaishou,kling,Kling AI,,limited_preview,not_applicable,fals
 kling-3-0,Kling 3.0,Kuaishou,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-kling-3-0-2026-11-05,2026-11-05,day,2026-11-10,,0
 llama-2,Llama 2,Meta,meta,Meta,,ga,not_applicable,false,meta-llama2-2023-07-18,2023-07-18,day,2026-11-10,,0
 llama-2,Llama 2,Meta,azure-ai-catalog,Azure AI model catalogue,microsoft | foundry,retired,catalogue,true,catalog-llama-2-retired-2025-06-30,2025-06-30,day,2026-11-10,,0
+llama-3,Llama 3,Meta,meta,Meta,,ga,not_applicable,false,meta-llama-3-2024-04-18,2024-04-18,day,2026-11-10,,0
+llama-3,Llama 3,Meta,azure-ai-catalog,Azure AI model catalogue,microsoft | foundry,retired,catalogue,true,catalog-llama-3-retired-2025-06-30,2025-06-30,day,2026-11-10,,0
+llama-3-1,Llama 3.1,Meta,meta,Meta,,ga,not_applicable,false,meta-llama-3-1-2024-07-23,2024-07-23,day,2026-11-10,,0
+llama-3-1,Llama 3.1,Meta,azure-ai-catalog,Azure AI model catalogue,microsoft | foundry,retired,catalogue,true,catalog-llama-3-1-retired-2026-06-13,2026-06-13,day,2026-11-10,,0
+llama-3-2,Llama 3.2,Meta,meta,Meta,,ga,not_applicable,false,meta-llama-3-2-2024-09-25,2024-09-25,day,2026-11-10,,0
+llama-3-2,Llama 3.2,Meta,azure-ai-catalog,Azure AI model catalogue,microsoft | foundry,ga,catalogue,false,catalog-llama-3-2-2024-09-25,2024-09-25,day,2026-11-10,,0
 llama-3-3-70b,Llama 3.3 70B Instruct,Meta,meta,Meta,,ga,not_applicable,false,meta-llama-3-3-70b-2024-12-06,2024-12-06,day,2026-11-10,,0
 llama-3-3-70b,Llama 3.3 70B Instruct,Meta,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-llama-3-3-70b-2024-12-06,2024-12-06,day,2026-11-10,,0
 llama-4-maverick,Llama 4 Maverick,Meta,meta,Meta,,ga,not_applicable,false,meta-llama4-maverick-2025-04-05,2025-04-05,day,2026-11-10,,0
@@ -379,6 +409,9 @@ microsoft-decision-1,Microsoft-Decision-1,Microsoft,microsoft-ai,Microsoft AI,,p
 minimax-h3-max,MiniMax H3 Max,fal,fal,fal,,ga,not_applicable,false,fal-h3-max-2026-08-27,2026-08-27,day,2026-11-10,,0
 minimax-h3-max,MiniMax H3 Max,fal,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-minimax-h3-max-2026-11-05,2026-11-05,day,2026-11-10,,0
 minimax-h3-max-turbo,MiniMax H3 Max Turbo,fal,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-minimax-h3-max-2026-11-05,2026-11-05,day,2026-11-10,,0
+minimax-m2-5,MiniMax M2.5,MiniMax,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-fw-minimax-m2-5-2026-03-11,2026-03-11,day,2026-11-10,,1
+minimax-m2-5,MiniMax M2.5,MiniMax,minimax,MiniMax,,ga,not_applicable,false,minimax-m2-5-2026-02-12,2026-02-12,day,2026-11-10,,0
+minimax-m3,MiniMax M3,MiniMax,minimax,MiniMax,,ga,not_applicable,false,minimax-m3-2026-06-01,2026-06-01,day,2026-11-10,,0
 ministral-3b-24-10,Ministral 3B (24.10),Mistral AI,azure-ai-studio,Azure AI Studio,microsoft | foundry,ga,catalogue,false,studio-ministral-3b-24-10-2024-10-23,2024-10-23,day,2026-11-10,,0
 ministral-3b-24-10,Ministral 3B (24.10),Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral-ministral-3b-24-10-2024-10-09,2024-10-09,day,2026-11-10,,0
 mistral-3,Mistral 3,Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral3-2025-12-02,2025-12-02,day,2026-11-10,,0
@@ -402,6 +435,10 @@ muse-wonder,Muse Wonder,Meta,meta,Meta,,ga,not_applicable,false,meta-muse-wonder
 muse-wonder-full,Muse Wonder Full,Meta,meta,Meta,,ga,not_applicable,false,meta-muse-wonder-2026-10-12,2026-10-12,day,2026-11-10,,0
 nano-banana-2-1,Nano Banana 2.1,Google,google-gemini-api,Gemini API,,ga,not_applicable,false,google-nano-banana-2-1-2026-10-06,2026-10-06,day,2026-11-10,,0
 nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-nemotron-3-5-lightning-2026-08-19,2026-08-19,day,2026-11-10,,0
+nemotron-3-5-lightning,NVIDIA Nemotron 3.5 Lightning,NVIDIA,nvidia,NVIDIA,,ga,not_applicable,false,nvidia-nemotron-3-5-lightning-2026-08-11,2026-08-11,day,2026-11-10,,0
+nemotron-3-super,NVIDIA Nemotron 3 Super,NVIDIA,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-nemotron-3-super-2026-03-16,2026-03-16,day,2026-11-10,,0
+nemotron-3-super,NVIDIA Nemotron 3 Super,NVIDIA,nvidia,NVIDIA,,ga,not_applicable,false,nvidia-nemotron-3-super-2026-03-11,2026-03-11,day,2026-11-10,,0
+nemotron-3-ultra,NVIDIA Nemotron 3 Ultra,NVIDIA,nvidia,NVIDIA,,ga,not_applicable,false,nvidia-nemotron-3-ultra-2026-06-04,2026-06-04,day,2026-11-10,,0
 nemotron-speech-streaming-en,Nemotron Speech Streaming,NVIDIA,foundry-local,Foundry Local,microsoft,ga,catalogue,false,foundry-local-nemotron-asr-2026-05,2026-05,month,2026-11-10,,0
 o1,o1,OpenAI,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,retired,selectable,true,github-o1-retired-2025-07-07,2025-07-07,day,2026-11-10,,0
 o1,o1,OpenAI,github-models,GitHub Models,microsoft,public_preview,catalogue,false,github-models-o1-2024-12-20,2024-12-20,day,2026-11-10,,0
@@ -442,6 +479,8 @@ phi-4-multimodal,Phi-4-multimodal,Microsoft,microsoft-ai,Microsoft AI,,ga,not_ap
 phi-4-multimodal,Phi-4-multimodal,Microsoft,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-phi-4-multimodal-2025-02-26,2025-02-26,day,2026-11-10,,0
 phi-4-reasoning,Phi-4-reasoning,Microsoft,microsoft-ai,Microsoft AI,,ga,not_applicable,false,microsoft-phi-4-reasoning-2025-04-30,2025-04-30,day,2026-11-10,,0
 phi-4-reasoning,Phi-4-reasoning,Microsoft,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-phi-4-reasoning-2025-04-30,2025-04-30,day,2026-11-10,,0
+phi-4-reasoning-plus,Phi-4-reasoning-plus,Microsoft,microsoft-ai,Microsoft AI,,ga,not_applicable,false,microsoft-phi-4-reasoning-plus-2025-04-30,2025-04-30,day,2026-11-10,,0
+phi-4-reasoning-plus,Phi-4-reasoning-plus,Microsoft,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,ga,catalogue,false,foundry-phi-4-reasoning-plus-2025-04-30,2025-04-30,day,2026-11-10,,0
 qwen-3-5-vision,Qwen 3.5 Vision,Alibaba,foundry-local,Foundry Local,microsoft,ga,catalogue,false,foundry-local-qwen3-5-vision-2026-05,2026-05,month,2026-11-10,,0
 sora-2,Sora 2,OpenAI,azure-ai-foundry,Azure AI Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-sora2-preview-2025-10-15,2025-10-15,day,2026-11-10,,2
 sora-2,Sora 2,OpenAI,openai,OpenAI,,limited_preview,not_applicable,false,openai-sora-2-2025-09-30,2025-09-30,day,2026-11-10,,1
