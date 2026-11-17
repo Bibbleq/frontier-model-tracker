@@ -17,18 +17,18 @@ lightricks,LTX,Lightricks,,,true,,,,,1
 fal,fal,fal,,,true,,,,,1
 minimax,MiniMax,MiniMax,,,true,,,,,2
 nvidia,NVIDIA,NVIDIA,,,true,,,,,3
-microsoft-ai,Microsoft AI,Microsoft,,,true,,,,,21
+microsoft-ai,Microsoft AI,Microsoft,,,true,,,,,25
 m365-copilot,Microsoft 365 Copilot,Microsoft,Microsoft 365,,false,microsoft | copilot | m365,,,,32
 m365-cowork,Microsoft Copilot Cowork,Microsoft,Microsoft 365,,false,microsoft | copilot,,,,14
 m365-admin,Microsoft 365 admin centre,Microsoft,Microsoft 365,,false,microsoft,,,,3
 copilot-studio,Microsoft Copilot Studio,Microsoft,Copilot Studio,,false,microsoft | copilot | studio,power-virtual-agents,,,29
 power-virtual-agents,Power Virtual Agents,Microsoft,Copilot Studio,,false,microsoft | copilot | studio,,copilot-studio,2023-11-15,1
-github-copilot,GitHub Copilot,GitHub,GitHub Copilot,,false,microsoft | copilot | github_copilot,,,,115
+github-copilot,GitHub Copilot,GitHub,GitHub Copilot,,false,microsoft | copilot | github_copilot,,,,117
 github-models,GitHub Models,GitHub,GitHub Models,,false,microsoft,,,,10
 azure-openai,Azure OpenAI Service,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,,29
 azure-ai-catalog,Azure AI model catalogue,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,,14
 azure-ai-studio,Azure AI Studio,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,,azure-ai-foundry,2024-11-19,2
 azure-ai-foundry,Azure AI Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-studio,microsoft-foundry,,41
-microsoft-foundry,Microsoft Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-foundry,,,105
+microsoft-foundry,Microsoft Foundry,Microsoft,Microsoft Foundry,foundry,false,microsoft | foundry,azure-ai-foundry,,,107
 foundry-local,Foundry Local,Microsoft,Microsoft Foundry,,false,microsoft,,,,2
 microsoft-corporate,Microsoft,Microsoft,,,false,,,,,1
