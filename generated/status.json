@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 637,
-    "backlog": 133,
-    "sources": 1208,
-    "models": 247,
+    "events": 650,
+    "backlog": 135,
+    "sources": 1232,
+    "models": 250,
     "surfaces": 33,
-    "confirmed": 456,
-    "supported": 181
+    "confirmed": 468,
+    "supported": 182
   },
   "kinds": {
-    "announcement": 46,
-    "availability": 576,
+    "announcement": 53,
+    "availability": 582,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 86,
+    "open": 88,
     "promoted": 41,
     "rejected": 4
   },
@@ -74,6 +74,11 @@
     {
       "code": "backlog_without_surface",
       "subject": "sweep-2026-10-29-to-11-10",
+      "message": "open item names no surface, so it cannot suppress a lag answer"
+    },
+    {
+      "code": "backlog_without_surface",
+      "subject": "sweep-2026-11-11-to-11-17",
       "message": "open item names no surface, so it cannot suppress a lag answer"
     },
     {
@@ -175,6 +180,11 @@
       "code": "missing_archive",
       "subject": "deepseek-v4-flash-0731-2026-07-31",
       "message": "documentation source has no archived_url and may be edited in place: https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-codex-mini-retired-2026-11-17",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
     },
     {
       "code": "missing_archive",
@@ -333,6 +343,11 @@
     },
     {
       "code": "missing_archive",
+      "subject": "google-gemini4-hydrogen-2026-11-12",
+      "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
       "subject": "google-nano-banana-2-1-2026-10-06",
       "message": "documentation source has no archived_url and may be edited in place: https://ai.google.dev/gemini-api/docs/changelog"
     },
@@ -399,6 +414,11 @@
     {
       "code": "missing_archive",
       "subject": "openai-gpt6-1-terra-2026-10-26",
+      "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/changelog"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "openai-gpt6-2-astra-sol-2026-11-17",
       "message": "documentation source has no archived_url and may be edited in place: https://developers.openai.com/api/docs/changelog"
     },
     {
@@ -528,8 +548,8 @@
     }
   ],
   "warning_counts": {
-    "backlog_without_surface": 11,
-    "missing_archive": 68,
+    "backlog_without_surface": 12,
+    "missing_archive": 71,
     "no_vendor_baseline": 9,
     "no_vendor_baseline_extended": 12,
     "pre_release_access": 1
@@ -726,10 +746,10 @@
   },
   "lag_certainty": {
     "exact": 431,
-    "not_recorded": 1666,
+    "not_recorded": 1692,
     "range": 51,
-    "rollout_start": 196,
-    "unknown_no_baseline": 444,
-    "unknown_open_research": 176
+    "rollout_start": 214,
+    "unknown_no_baseline": 432,
+    "unknown_open_research": 180
   }
 }
