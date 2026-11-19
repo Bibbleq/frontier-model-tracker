@@ -1,6 +1,6 @@
 version: 3
-updated: "2026-11-11"
-research_cutoff: "2026-11-10"
+updated: "2026-11-19"
+research_cutoff: "2026-11-13"
 metadata:
   project: "CtrlAltBen Frontier Model Tracker"
   purpose: "Sourced history of frontier and significant model availability across tracked Microsoft surfaces."
@@ -16107,7 +16107,7 @@ events:
     lifecycle: "ga"
     exposure: "catalogue"
     confidence: "confirmed"
-    evidence_note: "Microsoft made GPT-6 Sol and GPT-6 Luna generally available in Microsoft Foundry on 22 September 2026, OpenAI's release day, with Standard deployment in all 28 Global regions and the US and EU Data Zones, Provisioned Throughput for Sol, and Priority Processing for Sol in Global regions and the US Data Zone."
+    evidence_note: "Microsoft made GPT-6 Sol and GPT-6 Luna generally available in Microsoft Foundry on 22 September 2026, OpenAI's release day, with Standard deployment in all 28 Global regions and the US and EU Data Zones, Provisioned Throughput for Sol, and Priority Processing for Sol in Global regions and the US Data Zone. A 12 November Australia East observation shows the API's fine-tuning deprecation field set to 11 March 2028 while the model remains GA; this is future schedule metadata, not an ending event."
     caveat: "One event for both models, following foundry-gpt5-6-2026-07-09: the announcement names each individually and states one stage for both. Microsoft Learn's region tables list gpt-6-sol and gpt-6-luna with version string 2026-09-22, which agrees with the announcement but is a version string, not the date source. The Azure blog was fetched directly on 27 September 2026 and carries published_time 2026-09-22T18:30:00+00:00; its Wayback capture of 23 September 2026 was located through the archive.org availability API without being read, because web.archive.org itself could not be reached, and the Learn page's latest capture predates the models."
     relations:
       - type: "announced_by"
@@ -16142,6 +16142,16 @@ events:
         quote: "gpt-6-sol | 2026-09-22 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅"
         supports: ["model"]
         note: "Global Standard table, read on 27 September 2026 through the Microsoft Learn MCP server; gpt-6-luna carries the same version string. A version string is not a date source. No archived_url: the Wayback Machine could not be reached from this session."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, australiaeast, 2026-11-12T13:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/25802131154ced33cf0b5b57b83d1689299e3d60/observations/arm/australiaeast/2026/11/2026-11-12T13-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-12"
+        source_type: "other"
+        quote: "\"lifecycle_status\": \"GenerallyAvailable\", \"lifecycle_portal\": \"Generally Available\", \"deprecation_inference\": \"2028-03-11T00:00:00Z\", \"deprecation_fine_tune\": \"2028-03-11T00:00:00Z\""
+        supports: ["lifecycle"]
+        note: "The observation's before block already had the inference and SKU deprecation dates at 11 March 2028 and lifecycle status GenerallyAvailable; only deprecation_fine_tune changed from null. The field is a future schedule, not a deprecation or retirement transition. Source type other because the URL is commit-pinned and immutable."
   - id: "foundry-opus5-5-2026-09-22"
     kind: "availability"
     date:
@@ -18881,7 +18891,7 @@ events:
     model_claim: "specific"
     confidence: "confirmed"
     evidence_note: "Microsoft announced on 29 October 2026 that Mistral Large 4 would become available through Microsoft Foundry in public preview 'in the coming days', in Sweden Central for Global Standard and EU Data Zone deployment."
-    caveat: "An announcement of future availability, not an arrival, and it must not be drawn as one. The post's lastEditTime precedes its postTime and the text read on 11 November still says 'in the coming days' and 'once live'. The arrival itself is tracked as foundry-mistral-large-4-arrival-2026-11. The same post says Mistral OCR 4 moves from public preview to general availability in Foundry on the day Large 4 arrives; that model is not in the registry and is not recorded."
+    caveat: "An announcement of future availability, not an arrival, and it must not be drawn as one. The post's lastEditTime precedes its postTime and the text read on 11 November still says 'in the coming days' and 'once live'. The arrival itself is tracked as foundry-mistral-large-4-arrival-2026-11. The same post says Mistral OCR 4 moves from public preview to general availability in Foundry on the day Large 4 arrives; its observed 12–13 November Preview-to-GA transition is recorded as foundry-mistral-ocr-4-0-ga-2026-11-12, without using this future-tensed announcement to date it."
     sources:
       - publisher: "Microsoft Community Hub"
         title: "Mistral Large 4 in Microsoft Foundry: Build sovereign AI within a consistent platform experience"
@@ -19516,6 +19526,55 @@ events:
         quote: "Gemini 4 Carbon (gemini-4-carbon) generally available (GA): Released Gemini 4 Carbon (gemini-4-carbon), our most capable reasoning model built for sustained agentic coding, multimodal knowledge work, scientific reasoning, and cybersecurity defense"
         supports: ["date", "model", "lifecycle"]
         note: "Entry headed November 10, 2026; backticks around the model id are omitted from the quote, as in the Gemini 4 Argon entry. Read through r.jina.ai because a direct fetch redirects to a sign-in. No archived_url: CDX returned no capture of the changelog page after 9 November 2026."
+  - id: "foundry-mistral-ocr-4-0-ga-2026-11-12"
+    kind: "availability"
+    date:
+      start: "2026-11-12"
+      end: "2026-11-13"
+      precision: "day"
+      basis: "observed"
+    surface_id: "microsoft-foundry"
+    model_ids: ["mistral-ocr-4-0"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      lifecycle: "supported"
+    evidence_note: "The Foundry Models API showed mistral-ocr-4-0@1 as API lifecycleStatus Preview / portal Preview at 2026-11-12T19:30:00Z, then GenerallyAvailable / Generally Available at 2026-11-13T01:30:00Z; the lifecycle mapping pairs GenerallyAvailable with Generally Available and dataset ga."
+    caveat: "Bounded by catalogue observation: the run times delimit when the API stage changed, not a Microsoft-published GA date. The observation is one subscription's listing and does not establish access in every region or tenant."
+    sources:
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, australiaeast, 2026-11-13T01:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/832e52d08d2bacf4f02bf1d1c726d6ba693c9f4d/observations/arm/australiaeast/2026/11/2026-11-13T01-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-13"
+        source_type: "other"
+        quote: "\"model_key\": \"mistral-ocr-4-0@1\", \"window_start\": \"2026-11-12T19:30:00Z\", \"window_end\": \"2026-11-13T01:30:00Z\""
+        supports: ["date", "model", "exposure"]
+        note: "Australia East is one subscription's view and does not establish access for every region or tenant. Source type other because the URL is commit-pinned and immutable."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, australiaeast, 2026-11-13T01:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/832e52d08d2bacf4f02bf1d1c726d6ba693c9f4d/observations/arm/australiaeast/2026/11/2026-11-13T01-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-13"
+        source_type: "other"
+        quote: "\"lifecycle_status\": \"GenerallyAvailable\", \"lifecycle_portal\": \"Generally Available\""
+        supports: ["lifecycle"]
+        note: "The same change's before block reads lifecycle_status Preview and lifecycle_portal Preview. The project's lifecycle mapping maps GenerallyAvailable to dataset ga. Source type other because the URL is commit-pinned and immutable."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, australiaeast, 2026-11-13T01:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/832e52d08d2bacf4f02bf1d1c726d6ba693c9f4d/observations/arm/australiaeast/2026/11/2026-11-13T01-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-13"
+        source_type: "other"
+        quote: "\"lifecycle_status\": \"Preview\", \"lifecycle_portal\": \"Preview\""
+        supports: ["lifecycle"]
+        note: "The before block of the lifecycle_changed record, at 2026-11-12T19:30:00Z. Source type other because the URL is commit-pinned and immutable."
 validation_backlog:
   - id: "m365-apps-fable5-suspension-window"
     state: "open"
@@ -21900,6 +21959,13 @@ validation_backlog:
         source_type: "documentation"
         quote: "FW-Nemotron-3-Ultra-NVFP4"
         note: "The pay-per-token row for the model, read live on 11 November 2026 (ms.date 2026-11-08): life cycle GA, retirement date 2026-11-24, replacement FW-DeepSeek-V4.1-Flash."
+  - id: "sweep-2026-11-11-to-11-13"
+    state: "open"
+    working_claim: "The research cutoff moved from 10 November to 13 November 2026 to include the Foundry catalogue observation of Mistral OCR 4's GA transition."
+    reason: "The Foundry catalogue observation supports the bounded Mistral OCR 4 transition, but this triage did not perform a broad source sweep of 11–13 November. No absence of other events in that interval should be inferred."
+    target: "Sweep vendor release pages and Microsoft, GitHub and partner announcements from 11–13 November 2026, then update the cutoff and this item to reflect the sources actually checked. This PR checked only the catalogue observations for issue #194."
+    model_ids: []
+    surface_ids: []
   - id: "catalog-cohere-embed-v3-arrival-2024"
     state: "open"
     working_claim: "Cohere Embed v3 arrived in the Azure AI model catalogue in April 2024, shortly after Command R+."
@@ -21921,6 +21987,6 @@ validation_backlog:
     state: "open"
     working_claim: "The window from 29 October to 10 November 2026 was swept on 11 November 2026 across the sources listed here; research_cutoff moved to 10 November for the 11 November triage batch."
     reason: "Events and backlog items were added from candidate issues #167, #171, #173, #181, #182 and #183 and the catalogue observation issues #155 to #189, and from a pass over: the GitHub Copilot changelog month archives for October and November; the Microsoft Foundry blog feed back to 27 October; the October 2026 Foundry retrospective; the Microsoft 365 Copilot blog and Copilot Studio blog; the Microsoft 365 Copilot release notes and Copilot Studio what's-new page; Microsoft's retirement schedule, Claude models and models-sold-directly-by-Azure pages with their Wayback captures; and the OpenAI, Anthropic, Google, Mistral, DeepSeek, xAI, Cohere, Moonshot and Meta release pages. research_cutoff moved from 2026-10-28 to 2026-11-10. This was a wider pass than earlier batches but it is still one day's reading: absence of other events in the window is weak evidence, not proof."
-    target: "Known gaps, to carry forward. Not found, so not recorded: Claude Fable 5.2, Claude Mythos 5.2, Gemini 4 Carbon or GPT-6.1 Terra in Microsoft 365 Copilot, Copilot Cowork or Copilot Studio; the Cowork picker page (updated_at 2026-11-05) lists Claude Fable 5.1 (Frontier) and no Fable 5.2 or GPT-6.1 Terra, has no Wayback capture at all, and so cannot be bracketed, and the Copilot Studio what's-new page has no October or November section yet. Seen and deliberately not recorded: Meta's Muse Ember (9 November 2026, Meta Model API, no Microsoft surface); OpenAI's GPT-6 Rosalind (30 October, the GPT-6 Astra weights under trusted access); OpenAI's deprecation notices for gpt-image-2 (10 November, removal 10 February 2027) and gpt-5.5-cyber-preview (5 November); Google's Gemini Omni 1.2 Flash (5 November, a video model with no Microsoft surface) and its deprecations of Gemini 2.5 Pro and 2.5 Flash (2 November, routing from 1 December); Anthropic's deprecation of fast mode for Claude Opus 4.8 (30 October, removal 30 November); Sonnet 5.5 behind Copilot in PowerPoint ('rolled out in October', no day); GitHub Copilot Fusion (28 October, a router, not a model); Mistral OCR 4 in Foundry. Endings falling due after this cutoff, to verify in the next batch rather than assume: GitHub Copilot's removal of Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra on 16 November; Foundry's o3, o3-mini and o4-mini on 19 November; the MAI-Image-2.5 family, where the API says 24 November and Learn says 1 October; Copilot Studio on 12, 26 and 30 November and 2 December (studio-primary-model-retirements-2026-11, studio-computer-use-model-retirement-2026-11-26); Claude Sonnet 4.5 in Foundry on 30 November or 1 December (foundry-claude-4-5-retirement-dates-2026-11). Not read: Azure Updates, the Microsoft Copilot blog beyond its ten newest posts, the Foundry catalogue portal pages. CDX returned no Wayback capture for any of the six Foundry blog posts cited in this batch; they need captures backfilled. Everything named in the earlier sweep items remains open. Further endings falling due, found while registering the parked families: the deprecation of Cohere Embed v3 in Foundry on 15 November, the retirement of Llama 4 Maverick on 19 November, and the Fireworks-served MiniMax M3 and Nemotron pay-per-token listings on 24 November 2026."
+    target: "Known gaps, to carry forward. Not found, so not recorded: Claude Fable 5.2, Claude Mythos 5.2, Gemini 4 Carbon or GPT-6.1 Terra in Microsoft 365 Copilot, Copilot Cowork or Copilot Studio; the Cowork picker page (updated_at 2026-11-05) lists Claude Fable 5.1 (Frontier) and no Fable 5.2 or GPT-6.1 Terra, has no Wayback capture at all, and so cannot be bracketed, and the Copilot Studio what's-new page has no October or November section yet. Seen and deliberately not recorded: Meta's Muse Ember (9 November 2026, Meta Model API, no Microsoft surface); OpenAI's GPT-6 Rosalind (30 October, the GPT-6 Astra weights under trusted access); OpenAI's deprecation notices for gpt-image-2 (10 November, removal 10 February 2027) and gpt-5.5-cyber-preview (5 November); Google's Gemini Omni 1.2 Flash (5 November, a video model with no Microsoft surface) and its deprecations of Gemini 2.5 Pro and 2.5 Flash (2 November, routing from 1 December); Anthropic's deprecation of fast mode for Claude Opus 4.8 (30 October, removal 30 November); Sonnet 5.5 behind Copilot in PowerPoint ('rolled out in October', no day); GitHub Copilot Fusion (28 October, a router, not a model); Mistral OCR 4's earlier Foundry stage before its now-recorded 12–13 November GA transition (foundry-mistral-ocr-4-0-ga-2026-11-12). Endings falling due after this cutoff, to verify in the next batch rather than assume: GitHub Copilot's removal of Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra on 16 November; Foundry's o3, o3-mini and o4-mini on 19 November; the MAI-Image-2.5 family, where the API says 24 November and Learn says 1 October; Copilot Studio on 12, 26 and 30 November and 2 December (studio-primary-model-retirements-2026-11, studio-computer-use-model-retirement-2026-11-26); Claude Sonnet 4.5 in Foundry on 30 November or 1 December (foundry-claude-4-5-retirement-dates-2026-11). Not read: Azure Updates, the Microsoft Copilot blog beyond its ten newest posts, the Foundry catalogue portal pages. CDX returned no Wayback capture for any of the six Foundry blog posts cited in this batch; they need captures backfilled. Everything named in the earlier sweep items remains open. Further endings falling due, found while registering the parked families: the deprecation of Cohere Embed v3 in Foundry on 15 November, the retirement of Llama 4 Maverick on 19 November, and the Fireworks-served MiniMax M3 and Nemotron pay-per-token listings on 24 November 2026."
     model_ids: []
     surface_ids: []
