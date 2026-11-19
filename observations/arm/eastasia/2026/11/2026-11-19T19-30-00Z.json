@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "source": "arm",
+  "region": "eastasia",
+  "observed_at": "2026-11-19T19:30:00Z",
+  "previous_run_at": "2026-11-19T13:30:00Z",
+  "runs_since_previous_file": 30,
+  "previous_file": "observations/arm/eastasia/2026/11/2026-11-11T19-30-00Z.json",
+  "checkpoint": "checkpoints/arm/eastasia/2026-11-01T01-30-00Z.json",
+  "observed_from": "standard pay-as-you-go and Visual Studio Enterprise subscriptions",
+  "entry_count": 10,
+  "cell_count": 10,
+  "snapshot_sha256": "955db83dd59f161a2bff301b597c5b4e74d9537f6b6538ab4d1c1d397c07936b",
+  "keys_present": [
+    "gpt-4.1-mini@2025-04-14",
+    "gpt-4.1-nano@2025-04-14",
+    "gpt-4.1@2025-04-14",
+    "gpt-4o-mini@2024-07-18",
+    "gpt-4o@2024-05-13",
+    "gpt-4o@2024-08-06",
+    "gpt-4o@2024-11-20",
+    "o1@2024-12-17",
+    "o4-mini@2025-04-16",
+    "whisper@001"
+  ],
+  "changes": [
+    {
+      "kind": "deprecation_moved",
+      "model_key": "o4-mini@2025-04-16",
+      "window_start": "2026-11-19T13:30:00Z",
+      "window_end": "2026-11-19T19:30:00Z",
+      "fields": [
+        "deprecation_fine_tune"
+      ],
+      "before": {
+        "name": "o4-mini",
+        "skus": [
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-04-16",
+        "capabilities": {
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "false",
+          "chatCompletion": "true",
+          "FineTuneTokensMaxValue": "2000000000",
+          "FineTuneTokensMaxValuePerExample": "131072"
+        },
+        "lifecycle_portal": "Retired",
+        "lifecycle_status": "Deprecating",
+        "is_default_version": true,
+        "deprecation_fine_tune": "2026-11-19T00:00:00Z",
+        "deprecation_inference": "2026-11-19T00:00:00Z"
+      },
+      "after": {
+        "name": "o4-mini",
+        "version": "2025-04-16",
+        "format": "OpenAI",
+        "lifecycle_status": "Deprecating",
+        "lifecycle_portal": "Retired",
+        "deprecation_inference": "2026-11-19T00:00:00Z",
+        "deprecation_fine_tune": "2027-11-19T00:00:00Z",
+        "is_default_version": true,
+        "capabilities": {
+          "FineTuneTokensMaxValue": "2000000000",
+          "FineTuneTokensMaxValuePerExample": "131072",
+          "agentsV2": "true",
+          "assistants": "false",
+          "chatCompletion": "true",
+          "responses": "true"
+        },
+        "skus": [
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          }
+        ]
+      }
+    }
+  ]
+}
