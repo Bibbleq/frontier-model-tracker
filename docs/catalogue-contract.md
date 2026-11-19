@@ -1,14 +1,15 @@
-# Catalogue contract, version 2
+# Catalogue contract, version 3
 
 This document describes three folders of machine-written catalogue snapshots
 and the file shapes inside them. It is separate from the dataset's
 [data contract](data-contract.md): the dataset is curated research, whereas
 these folders are captured listings of what a public API returned.
 
-**Catalogue contract version 2.**
+**Catalogue contract version 3.**
 
 These folders are append-only but not versioned; they sit outside the immutable
-`published/` promise of the data contract.
+`published/` promise of the data contract. The one exception to append-only is a
+logged correction, described under [Corrections](#corrections).
 
 ## What the folders hold
 
@@ -104,6 +105,68 @@ These are interpretation rules for anything that reads or renders the files.
   watcher no longer writes `capacity`, `capacity_at` or `capacity_changed`
   (27 October 2026). The schema still allows the fields, the seed checkpoints
   carry them as null, and no reader should show them.
+
+## Corrections
+
+Append-only is the rule: a file, once committed, keeps its bytes. There is one
+exception, and it exists so that a broken record can be made whole without
+losing what the watcher saw.
+
+**When it applies.** A watcher run saved its new state and was then interrupted
+before it wrote its observation files. The files of later runs describe changes
+from a state no committed file records, so the chain stops replaying to
+`snapshot_sha256`. Nothing else qualifies.
+
+**What may change.** In each affected region, the first observation file
+committed after the interrupted run may be replaced at the same path. The
+replacement:
+
+- adds the changes the interrupted run saw and never wrote, each with the
+  `window_start` and `window_end` that run recorded. A recovered window is never
+  widened, merged or re-dated to the run whose file carries it;
+- removes and alters nothing. Every change already in the file stays as it was.
+  The recovered changes come first, in canonical order among themselves, and
+  the file's own changes follow, so a replay applies them in the order they
+  happened even where both touch one model key;
+- keeps every header field: `observed_at`, `previous_run_at`,
+  `runs_since_previous_file`, `previous_file`, `checkpoint`, `observed_from`,
+  `keys_present`, `entry_count`, `cell_count` and `snapshot_sha256`. The hash
+  was always the hash of the true state; the correction supplies the changes
+  that lead to it. `previous_run_at` remains the edge of the file's own
+  windows only: a recovered change's window ends at the interrupted run.
+
+**What it is not for.** Removing or rewording an observation, changing a window,
+correcting something the watcher saw wrongly, or adding a file with an earlier
+timestamp between two committed files. A wrong observation stays in the record
+and is answered by a later one.
+
+**How it is authorised.** The maintainer adds a row to the corrections log below,
+in a reviewed pull request, before any file is replaced. The watcher then writes
+the replacements through `bibble-envoy[bot]`, as it writes every other file;
+nothing is hand-edited. The row is completed with the replacing commit.
+
+**What a reader can rely on.**
+
+- A committed file's bytes change only under a row of the corrections log.
+- The earlier bytes remain in Git history, so a commit-pinned raw URL cited
+  before the correction still returns exactly what was cited.
+- After a correction the whole chain replays, and the catalogue build proves it
+  as it proves every other file. A correction that does not replay is not
+  published.
+- A reader that caches observation files should refetch the regions and
+  timestamps a new log row names.
+
+**Its limits.** Changes in regions the interrupted run never reached are not
+lost: the next run sees them, with its own wider window. If the interrupted
+run's changes cannot be recovered from the watcher's own records, no correction
+is possible under this version; restarting a chain would be a new version of
+this contract.
+
+### Corrections log
+
+| Authorised | Interrupted run | Cause | Files replaced | Replacing commit |
+| --- | --- | --- | --- | --- |
+| 20 November 2026 | `2026-11-19T01:30:00Z`, source `arm` | The run reached the watcher host's ten-minute limit after polling and was stopped before it wrote files. The chain stopped replaying in 32 regions from the files of `2026-11-19T07:30:00Z`. | In each affected region, the first observation file after the interrupted run: the `2026-11-19T07-30-00Z` file, or the `2026-11-19T13-30-00Z` or `2026-11-19T19-30-00Z` file where the region has no earlier one. | Recorded when the replacement lands. |
 
 ## The derived catalogue
 
@@ -201,3 +264,4 @@ Microsoft, OpenAI, Anthropic or GitHub.
 | 1 | Initial catalogue contract: observation and checkpoint schemas, the lifecycle mapping table, and the `observations/`, `checkpoints/` and `status/` folders. |
 | 1, amended 27 October 2026 | File names use hyphens in the time part (`2026-10-27T19-30-00Z.json`), so the repository can be cloned on Windows. The 35 seed checkpoints were renamed with their bytes unchanged; no observation file had been written. The `previous_file` and `checkpoint` patterns in the observation schema follow. |
 | 2 | The derived catalogue: `scripts/build_catalogue.py` replays the chain, proves each file against its snapshot hash and publishes `catalogue/manifest.json`, `intervals.json` and the two exports on the Pages site. Capacity is no longer written or published: it is the watcher's subscription quota. The observation and checkpoint shapes are unchanged. |
+| 3 | Corrections: the first observation file after an interrupted watcher run may be replaced at the same path to add the changes that run saw and never wrote, under a row of the corrections log. Nothing is removed, no window or header field changes, and Git history keeps the earlier bytes. The first row authorises the repair of the run of 19 November 2026 at 01:30 UTC. The file shapes and the derived catalogue's shapes are unchanged. |

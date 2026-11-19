@@ -364,7 +364,8 @@ Microsoft, OpenAI, Anthropic or GitHub. A consumer should not imply otherwise.
 
 Three further folders exist in the repository: `observations/`, `checkpoints/`
 and `status/`. They hold machine-written catalogue snapshots and are outside
-this contract. They are append-only but not versioned, and they are not part of
+this contract. They are append-only, with one logged exception for corrections,
+but not versioned, and they are not part of
 the published `/c3/v3/` tree or any immutable snapshot. Their file shapes and
 rules are described in [`catalogue-contract.md`](catalogue-contract.md).
 

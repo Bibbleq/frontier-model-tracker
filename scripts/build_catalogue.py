@@ -50,7 +50,7 @@ try:
 except ModuleNotFoundError:  # run as a script: scripts/ is on sys.path, the package is not
     from build import ATTRIBUTION, BASE_URL
 
-CATALOGUE_CONTRACT_VERSION = 2
+CATALOGUE_CONTRACT_VERSION = 3
 INTERVALS_SCHEMA_VERSION = 1
 
 ROOT = Path(__file__).resolve().parents[1]
