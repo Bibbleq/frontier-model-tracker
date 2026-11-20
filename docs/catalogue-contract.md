@@ -61,7 +61,9 @@ A run that sees nothing new writes no file. A chain of files is still enough to
 show that the silent runs happened:
 
 - `previous_run_at` is the last successful run of the same source and region,
-  and the "absent at" edge of every first-seen window in the file.
+  and the "absent at" edge of every first-seen window in the file, except a
+  recovered change (see [Corrections](#corrections)), which keeps the window of
+  the run that saw it.
 - `runs_since_previous_file` counts the silent successful runs between the
   previous file and this one.
 - `keys_present` is the full list of model keys the run saw, not only the
@@ -155,6 +157,15 @@ nothing is hand-edited. The row is completed with the replacing commit.
   published.
 - A reader that caches observation files should refetch the regions and
   timestamps a new log row names.
+
+**Carrying forward, with no replacement.** Where an interrupted run's changes
+have no later file in that region yet, the watcher writes them into the next
+observation file it commits there, ahead of that file's own changes, each with
+the window the interrupted run recorded. No committed bytes change, so this needs
+no log row; it is still recovery, so the same rules apply: nothing is re-dated,
+widened or merged, and the chain must replay. The watcher holds back a region's
+new file while a recovery there still needs a replacement, rather than commit
+past a gap.
 
 **Its limits.** Changes in regions the interrupted run never reached are not
 lost: the next run sees them, with its own wider window. If the interrupted
@@ -264,4 +275,4 @@ Microsoft, OpenAI, Anthropic or GitHub.
 | 1 | Initial catalogue contract: observation and checkpoint schemas, the lifecycle mapping table, and the `observations/`, `checkpoints/` and `status/` folders. |
 | 1, amended 27 October 2026 | File names use hyphens in the time part (`2026-10-27T19-30-00Z.json`), so the repository can be cloned on Windows. The 35 seed checkpoints were renamed with their bytes unchanged; no observation file had been written. The `previous_file` and `checkpoint` patterns in the observation schema follow. |
 | 2 | The derived catalogue: `scripts/build_catalogue.py` replays the chain, proves each file against its snapshot hash and publishes `catalogue/manifest.json`, `intervals.json` and the two exports on the Pages site. Capacity is no longer written or published: it is the watcher's subscription quota. The observation and checkpoint shapes are unchanged. |
-| 3 | Corrections: the first observation file after an interrupted watcher run may be replaced at the same path to add the changes that run saw and never wrote, under a row of the corrections log. Nothing is removed, no window or header field changes, and Git history keeps the earlier bytes. The first row authorises the repair of the run of 19 November 2026 at 01:30 UTC. The file shapes and the derived catalogue's shapes are unchanged. |
+| 3 | Corrections: the first observation file after an interrupted watcher run may be replaced at the same path to add the changes that run saw and never wrote, under a row of the corrections log. Nothing is removed, no window or header field changes, and Git history keeps the earlier bytes. Where no later file exists yet, the recovered changes are carried into the next new file instead, with no log row. The first row authorises the repair of the run of 19 November 2026 at 01:30 UTC. The file shapes and the derived catalogue's shapes are unchanged. |
