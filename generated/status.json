@@ -1,22 +1,22 @@
 {
   "totals": {
-    "events": 651,
-    "backlog": 135,
-    "sources": 1236,
+    "events": 656,
+    "backlog": 136,
+    "sources": 1248,
     "models": 251,
     "surfaces": 33,
     "confirmed": 468,
-    "supported": 183
+    "supported": 188
   },
   "kinds": {
     "announcement": 53,
-    "availability": 583,
+    "availability": 588,
     "milestone": 9,
     "policy": 6
   },
   "backlog_states": {
     "blocked": 2,
-    "open": 88,
+    "open": 89,
     "promoted": 41,
     "rejected": 4
   },
@@ -79,6 +79,11 @@
     {
       "code": "backlog_without_surface",
       "subject": "sweep-2026-11-11-to-11-17",
+      "message": "open item names no surface, so it cannot suppress a lag answer"
+    },
+    {
+      "code": "backlog_without_surface",
+      "subject": "sweep-2026-11-18-to-11-19",
       "message": "open item names no surface, so it cannot suppress a lag answer"
     },
     {
@@ -270,6 +275,31 @@
       "code": "missing_archive",
       "subject": "foundry-nemotron-3-5-lightning-2026-08-19",
       "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/how-to/fireworks/enable-fireworks-models"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-o1-retired-2026-11-19",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-o3-deep-research-retired-2026-11-19",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-o3-mini-retired-2026-11-19",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-o3-retired-2026-11-19",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+    },
+    {
+      "code": "missing_archive",
+      "subject": "foundry-o4-mini-retired-2026-11-19",
+      "message": "documentation source has no archived_url and may be edited in place: https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
     },
     {
       "code": "missing_archive",
@@ -558,8 +588,8 @@
     }
   ],
   "warning_counts": {
-    "backlog_without_surface": 12,
-    "missing_archive": 72,
+    "backlog_without_surface": 13,
+    "missing_archive": 77,
     "no_vendor_baseline": 9,
     "no_vendor_baseline_extended": 13,
     "pre_release_access": 1

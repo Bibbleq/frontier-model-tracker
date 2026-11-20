@@ -1,6 +1,6 @@
 version: 3
-updated: "2026-11-19"
-research_cutoff: "2026-11-17"
+updated: "2026-11-20"
+research_cutoff: "2026-11-19"
 metadata:
   project: "CtrlAltBen Frontier Model Tracker"
   purpose: "Sourced history of frontier and significant model availability across tracked Microsoft surfaces."
@@ -20285,6 +20285,210 @@ events:
         quote: "Starting today, GPT-6.2 Astra and Sol are available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex."
         supports: ["model", "lifecycle"]
         note: "The page shows no visible dateline; its embedded publicationDateText begins 'November 17' and OpenAI's news index lists it under 'Nov 17, 2026'. The next sentence reads: 'Developers can also access gpt-6.2-astra and gpt-6.2-sol through the OpenAI API, with Ultrafast available for both models at launch.' Read directly in a browser on 19 November 2026."
+  - id: "foundry-o1-retired-2026-11-19"
+    kind: "availability"
+    date:
+      start: "2026-11-19"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["o1"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "o1 (version 2024-12-17) reached its scheduled retirement in Microsoft Foundry on 19 November 2026, with gpt-5.6-sol as the listed replacement. The catalogue watcher saw the Foundry Models API portal stage change from Deprecated to Retired between its runs of 19:30 UTC on 18 November and 01:30 UTC on 19 November, in 31 regions."
+    caveat: "The date is the scheduled one. The stage words disagree and both are shown: the API lifecycleStatus read Deprecating (portal word Deprecated) and lifecycle_portal moved to Retired because deprecation_inference, 2026-11-19T00:00:00Z, had passed; Learn read on 20 November still says Deprecated. The observation dates when the watcher looked and is one subscription's view. The run that saw it was interrupted before it wrote files; its changes were recovered into the 07:30 UTC file under the catalogue contract's corrections log, keeping the window of the run that saw them. The timeline holds no earlier Microsoft Foundry deprecation event for it. The version string is a build identifier and dates nothing."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-11-20"
+        source_type: "documentation"
+        quote: "o1 | 2024-12-17 | Deprecated | 2026-11-19 | gpt-5.6-sol"
+        supports: ["date", "model", "lifecycle"]
+        note: "Table row under Azure OpenAI, columns model, version, lifecycle, retirement date, replacement; cell separators are rendered as ' | ' and the footnote marker after the replacement is dropped. Footnote 4 says the replacement applies where it is available for the deployment type and region. Read on 20 November 2026, when the page's updated_at was 2026-11-18T23:15:00Z. No archived_url: no Wayback lookup was run."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, australiaeast, 2026-11-19T07:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/95005aca256ac1ed44e59f79c314ddf57766f592/observations/arm/australiaeast/2026/11/2026-11-19T07-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-20"
+        published_at: "2026-11-19"
+        source_type: "other"
+        quote: "\"lifecycle_portal\": \"Retired\","
+        supports: ["lifecycle"]
+        note: "A recovered lifecycle_changed observation for o1@2024-12-17 with window_start 2026-11-18T19:30:00Z and window_end 2026-11-19T01:30:00Z; the one changed field is lifecycle_portal, Deprecated before and Retired after, with lifecycle_status Deprecating in both. Cited at the commit that wrote the corrected file. Source type other because the URL is immutable."
+  - id: "foundry-o3-deep-research-retired-2026-11-19"
+    kind: "availability"
+    date:
+      start: "2026-11-19"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["o3-deep-research"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "o3-deep-research (version 2025-06-26) reached its scheduled retirement in Microsoft Foundry on 19 November 2026, with gpt-5.6-sol as the listed replacement. The catalogue watcher saw the Foundry Models API portal stage change from Deprecated to Retired between its runs of 19:30 UTC on 18 November and 01:30 UTC on 19 November, in norwayeast and westus."
+    caveat: "The date is the scheduled one. The stage words disagree and both are shown: the API lifecycleStatus read Deprecating (portal word Deprecated) and lifecycle_portal moved to Retired because deprecation_inference, 2026-11-19T00:00:00Z, had passed; Learn read on 20 November still says Deprecated. The observation dates when the watcher looked and is one subscription's view. The run that saw it was interrupted before it wrote files; its changes were recovered into the 07:30 UTC file under the catalogue contract's corrections log, keeping the window of the run that saw them. The API's own lifecycleStatus then moved from Deprecating to Deprecated (portal word Retired in both readings) between the runs of 13:30 and 19:30 UTC on 19 November, in norwayeast and westus, the only two regions that list the model. The timeline holds no earlier Microsoft Foundry deprecation event for it. The version string is a build identifier and dates nothing."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-11-20"
+        source_type: "documentation"
+        quote: "o3-deep-research | 2025-06-26 | Deprecated | 2026-11-19 | gpt-5.6-sol"
+        supports: ["date", "model", "lifecycle"]
+        note: "Table row under Azure OpenAI, columns model, version, lifecycle, retirement date, replacement; cell separators are rendered as ' | ' and the footnote marker after the replacement is dropped. Footnote 4 says the replacement applies where it is available for the deployment type and region. Read on 20 November 2026, when the page's updated_at was 2026-11-18T23:15:00Z. No archived_url: no Wayback lookup was run."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, norwayeast, 2026-11-19T07:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/95005aca256ac1ed44e59f79c314ddf57766f592/observations/arm/norwayeast/2026/11/2026-11-19T07-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-20"
+        published_at: "2026-11-19"
+        source_type: "other"
+        quote: "\"lifecycle_portal\": \"Retired\","
+        supports: ["lifecycle"]
+        note: "A recovered lifecycle_changed observation for o3-deep-research@2025-06-26 with window_start 2026-11-18T19:30:00Z and window_end 2026-11-19T01:30:00Z; the one changed field is lifecycle_portal, Deprecated before and Retired after, with lifecycle_status Deprecating in both. Cited at the commit that wrote the corrected file. Source type other because the URL is immutable."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, norwayeast, 2026-11-19T19:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/19d280d59cb4bbaabf79fb4e574c3d45c42d93df/observations/arm/norwayeast/2026/11/2026-11-19T19-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-20"
+        published_at: "2026-11-19"
+        source_type: "other"
+        quote: "\"lifecycle_status\": \"Deprecated\","
+        supports: ["lifecycle"]
+        note: "A lifecycle_changed observation for o3-deep-research@2025-06-26 with window_start 2026-11-19T13:30:00Z and window_end 2026-11-19T19:30:00Z: lifecycle_status Deprecating before and Deprecated after, the API word the lifecycle mapping pairs with portal Retired. The same change is in the westus file. Filed as issue #214. Cited at its commit-pinned URL."
+  - id: "foundry-o3-mini-retired-2026-11-19"
+    kind: "availability"
+    date:
+      start: "2026-11-19"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["o3-mini"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "o3-mini (version 2025-01-31) reached its scheduled retirement in Microsoft Foundry on 19 November 2026, with gpt-5.6-terra as the listed replacement. The catalogue watcher saw the Foundry Models API portal stage change from Deprecated to Retired between its runs of 19:30 UTC on 18 November and 01:30 UTC on 19 November, in 29 regions."
+    caveat: "The date is the scheduled one. The stage words disagree and both are shown: the API lifecycleStatus read Deprecating (portal word Deprecated) and lifecycle_portal moved to Retired because deprecation_inference, 2026-11-19T00:00:00Z, had passed; Learn read on 20 November still says Deprecated. The observation dates when the watcher looked and is one subscription's view. The run that saw it was interrupted before it wrote files; its changes were recovered into the 07:30 UTC file under the catalogue contract's corrections log, keeping the window of the run that saw them. The move to Deprecated is foundry-o3-mini-deprecated-2026-04. The version string is a build identifier and dates nothing."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-11-20"
+        source_type: "documentation"
+        quote: "o3-mini | 2025-01-31 | Deprecated | 2026-11-19 | gpt-5.6-terra"
+        supports: ["date", "model", "lifecycle"]
+        note: "Table row under Azure OpenAI, columns model, version, lifecycle, retirement date, replacement; cell separators are rendered as ' | ' and the footnote marker after the replacement is dropped. Footnote 4 says the replacement applies where it is available for the deployment type and region. Read on 20 November 2026, when the page's updated_at was 2026-11-18T23:15:00Z. No archived_url: no Wayback lookup was run."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, australiaeast, 2026-11-19T07:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/95005aca256ac1ed44e59f79c314ddf57766f592/observations/arm/australiaeast/2026/11/2026-11-19T07-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-20"
+        published_at: "2026-11-19"
+        source_type: "other"
+        quote: "\"lifecycle_portal\": \"Retired\","
+        supports: ["lifecycle"]
+        note: "A recovered lifecycle_changed observation for o3-mini@2025-01-31 with window_start 2026-11-18T19:30:00Z and window_end 2026-11-19T01:30:00Z; the one changed field is lifecycle_portal, Deprecated before and Retired after, with lifecycle_status Deprecating in both. Cited at the commit that wrote the corrected file. Source type other because the URL is immutable."
+  - id: "foundry-o3-retired-2026-11-19"
+    kind: "availability"
+    date:
+      start: "2026-11-19"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["o3"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "o3 (version 2025-04-16) reached its scheduled retirement in Microsoft Foundry on 19 November 2026, with gpt-5.6-sol as the listed replacement. The catalogue watcher saw the Foundry Models API portal stage change from Deprecated to Retired between its runs of 19:30 UTC on 18 November and 01:30 UTC on 19 November, in 29 regions."
+    caveat: "The date is the scheduled one. The stage words disagree and both are shown: the API lifecycleStatus read Deprecating (portal word Deprecated) and lifecycle_portal moved to Retired because deprecation_inference, 2026-11-19T00:00:00Z, had passed; Learn read on 20 November still says Deprecated. The observation dates when the watcher looked and is one subscription's view. The run that saw it was interrupted before it wrote files; its changes were recovered into the 07:30 UTC file under the catalogue contract's corrections log, keeping the window of the run that saw them. The move to Deprecated is foundry-o3-deprecated-2026-09. The version string is a build identifier and dates nothing."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-11-20"
+        source_type: "documentation"
+        quote: "o3 | 2025-04-16 | Deprecated | 2026-11-19 | gpt-5.6-sol"
+        supports: ["date", "model", "lifecycle"]
+        note: "Table row under Azure OpenAI, columns model, version, lifecycle, retirement date, replacement; cell separators are rendered as ' | ' and the footnote marker after the replacement is dropped. Footnote 4 says the replacement applies where it is available for the deployment type and region. Read on 20 November 2026, when the page's updated_at was 2026-11-18T23:15:00Z. No archived_url: no Wayback lookup was run."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, australiaeast, 2026-11-19T07:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/95005aca256ac1ed44e59f79c314ddf57766f592/observations/arm/australiaeast/2026/11/2026-11-19T07-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-20"
+        published_at: "2026-11-19"
+        source_type: "other"
+        quote: "\"lifecycle_portal\": \"Retired\","
+        supports: ["lifecycle"]
+        note: "A recovered lifecycle_changed observation for o3@2025-04-16 with window_start 2026-11-18T19:30:00Z and window_end 2026-11-19T01:30:00Z; the one changed field is lifecycle_portal, Deprecated before and Retired after, with lifecycle_status Deprecating in both. Cited at the commit that wrote the corrected file. Source type other because the URL is immutable."
+  - id: "foundry-o4-mini-retired-2026-11-19"
+    kind: "availability"
+    date:
+      start: "2026-11-19"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["o4-mini"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "o4-mini (version 2025-04-16) reached its scheduled retirement in Microsoft Foundry on 19 November 2026, with gpt-5.6-terra as the listed replacement. The catalogue watcher saw the Foundry Models API portal stage change from Deprecated to Retired between its runs of 19:30 UTC on 18 November and 01:30 UTC on 19 November, in 31 regions."
+    caveat: "The date is the scheduled one. The stage words disagree and both are shown: the API lifecycleStatus read Deprecating (portal word Deprecated) and lifecycle_portal moved to Retired because deprecation_inference, 2026-11-19T00:00:00Z, had passed; Learn read on 20 November still says Deprecated. The observation dates when the watcher looked and is one subscription's view. The run that saw it was interrupted before it wrote files; its changes were recovered into the 07:30 UTC file under the catalogue contract's corrections log, keeping the window of the run that saw them. This is the base model's retirement only: Microsoft's fine-tuning table lists o4-mini with a training retirement date of 'No earlier than 2027-05-19' for existing customers and a deployment retirement date of 2027-11-19, so fine-tuned o4-mini deployments continue. The watcher saw the API's deprecation_fine_tune move from 2026-11-19 to 2027-11-19 on 19 November, between 07:30 and 13:30 UTC in uaenorth and between 13:30 and 19:30 UTC in 31 other regions. The move to Deprecated is foundry-o4-mini-deprecated-2026-07. The version string is a build identifier and dates nothing."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-11-20"
+        source_type: "documentation"
+        quote: "o4-mini | 2025-04-16 | Deprecated | 2026-11-19 | gpt-5.6-terra"
+        supports: ["date", "model", "lifecycle"]
+        note: "Table row under Azure OpenAI, columns model, version, lifecycle, retirement date, replacement; cell separators are rendered as ' | ' and the footnote marker after the replacement is dropped. Footnote 4 says the replacement applies where it is available for the deployment type and region. Read on 20 November 2026, when the page's updated_at was 2026-11-18T23:15:00Z. No archived_url: no Wayback lookup was run."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, australiaeast, 2026-11-19T07:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/95005aca256ac1ed44e59f79c314ddf57766f592/observations/arm/australiaeast/2026/11/2026-11-19T07-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-20"
+        published_at: "2026-11-19"
+        source_type: "other"
+        quote: "\"lifecycle_portal\": \"Retired\","
+        supports: ["lifecycle"]
+        note: "A recovered lifecycle_changed observation for o4-mini@2025-04-16 with window_start 2026-11-18T19:30:00Z and window_end 2026-11-19T01:30:00Z; the one changed field is lifecycle_portal, Deprecated before and Retired after, with lifecycle_status Deprecating in both. Cited at the commit that wrote the corrected file. Source type other because the URL is immutable."
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-11-20"
+        source_type: "documentation"
+        quote: "o4-mini | 2025-04-16 | No earlier than 2027-05-19 | 2027-11-19"
+        supports: ["exposure"]
+        note: "Fine-tuning table, columns model, version, training retirement date, deployment retirement date; footnote 1 on the training date reads 'For existing customers only. Otherwise, training retirement occurs at base model retirement.' Read on 20 November 2026."
 validation_backlog:
   - id: "m365-apps-fable5-suspension-window"
     state: "open"
@@ -22723,5 +22927,12 @@ validation_backlog:
     working_claim: "The window from 11 to 17 November 2026 was read only as far as the open candidate and observation issues of 19 November required; research_cutoff moved to 17 November for that batch."
     reason: "Events and backlog items were added from Microsoft's Ignite post of 17 November, candidate issues #197, #199 and #201 and the catalogue observation issues #195 to #210, with the sibling entries those led to in the GitHub Copilot changelog's November archive, the OpenAI news index and API changelog, the Gemini API release notes and Microsoft's retirement schedule. research_cutoff moved from 2026-11-10 to 2026-11-17. This was triage of what had been filed, not a sweep: absence of other events in the window is not evidence."
     target: "A full pass over 11 to 17 November. Seen and deliberately not recorded: Google's Gemini Decision 1 (11 November, the Gemini Decisions API, no Microsoft surface; candidate #200); GitHub's 'models deprecated on November 16, 2026' changelog entry, which was not read, so the retirements announced in October are unconfirmed here; GitHub Copilot Fusion's 17 November update (a router, not a model); Azure Content Understanding's support for GPT-5.6, GPT-6 and GPT-6.1 and its agentic mode (features of a Foundry tool, not a tracked surface; candidates #203 and #205); retirement dates moving by a day or two in the Foundry Models API for DeepSeek-V4-Flash, DeepSeek-V4-Pro, Cohere Embed v3 and Cohere Command A; and the retirement of gpt-chat-latest versions 2026-05-05 and 2026-06-24, noted on foundry-gpt-chat-latest-gpt5-6-sol-2026-08. Dated after the cutoff and left for the next batch: Gemini 4 Neon in GitHub Copilot (18 November) and GPT-image-2.6 Flare and Sunburst in Microsoft Foundry (18 November). Not looked for at all: Fable 5.2, Mythos 5.2, Gemini 4 Hydrogen, Gemini 4 Carbon or GPT-6.2 in Microsoft 365 Copilot, Copilot Cowork or Copilot Studio; Anthropic, Mistral, DeepSeek, xAI, Cohere and Moonshot release pages; and the rest of the Ignite announcements. No Wayback lookups were run for any source added in this batch."
+    model_ids: []
+    surface_ids: []
+  - id: "sweep-2026-11-18-to-11-19"
+    state: "open"
+    working_claim: "The window from 18 to 19 November 2026 was read only as far as catalogue observation issue #214 and the o-series retirements it led to required; research_cutoff moved to 19 November for that batch."
+    reason: "Events were added from issue #214 and from the catalogue observations of 19 November, which recorded the Microsoft Foundry retirements of o1, o3, o3-mini, o3-deep-research and o4-mini; Microsoft's retirement schedule was read on 20 November. research_cutoff moved from 2026-11-17 to 2026-11-19. This was triage of one issue, not a sweep: absence of other events in the window is not evidence."
+    target: "A full pass over 18 and 19 November. Seen and left for their own candidates: Gemini 4 Neon in GitHub Copilot (18 November) and GPT-image-2.6 Flare and Sunburst in Microsoft Foundry (18 November). Not looked for: the same models' retirements on other surfaces, the OpenAI API shutdowns themselves (the 22 April shutdown announcements are recorded), and anything else announced in the window. o3-pro carries the same 19 November row on the schedule but is not in the registry and is not listed by the watcher, so it is not recorded. No Wayback lookups were run for sources added in this batch."
     model_ids: []
     surface_ids: []
