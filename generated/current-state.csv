@@ -177,6 +177,8 @@ gemini-4-argon,Gemini 4 Argon,Google,github-copilot,GitHub Copilot,microsoft | c
 gemini-4-argon,Gemini 4 Argon,Google,google-gemini,Gemini,,ga,not_applicable,false,google-gemini4-argon-2026-10-13,2026-10-13,day,2026-11-10,,0
 gemini-4-carbon,Gemini 4 Carbon,Google,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-gemini4-carbon-2026-11-10,2026-11-10,day,2026-11-10,,0
 gemini-4-carbon,Gemini 4 Carbon,Google,google-gemini,Gemini,,ga,not_applicable,false,google-gemini4-carbon-2026-11-10,2026-11-10,day,2026-11-10,,0
+glm-5-3,GLM-5.3,Z.ai,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-glm-5-3-2026-11-17,2026-11-17,day,2026-11-10,,0
+glm-5-3-flash,GLM-5.3-Flash,Z.ai,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-glm-5-3-2026-11-17,2026-11-17,day,2026-11-10,,0
 gpt-3,GPT-3,OpenAI,azure-openai,Azure OpenAI Service,microsoft | foundry,retired,catalogue,true,azure-gpt3-retired-2024-06-14,2024-06-14,day,2026-11-10,,1
 gpt-3,GPT-3,OpenAI,openai-api,OpenAI API,,ga,not_applicable,false,openai-api-2020-06-11,2020-06-11,day,2026-11-10,,0
 gpt-3-5,GPT-3.5,OpenAI,chatgpt,ChatGPT,,ga,not_applicable,false,chatgpt-launch-2022-11-30,2022-11-30,day,2026-11-10,,0
@@ -392,11 +394,16 @@ llama-4-scout,Llama 4 Scout,Meta,azure-ai-foundry,Azure AI Foundry,microsoft | f
 ltx-2-5,LTX-2.5,Lightricks,lightricks,LTX,,ga,not_applicable,false,lightricks-ltx-2-5-2026-08-11,2026-08-11,day,2026-11-10,,0
 ltx-2-5,LTX-2.5,Lightricks,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-ltx-2-5-2026-11-05,2026-11-05,day,2026-11-10,,0
 mai-code-1-1-flash,MAI-Code-1.1-Flash,Microsoft,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-copilot-mai-code-1-1-flash-2026-08-11,2026-08-11,day,2026-11-10,,0
+mai-code-2,MAI-Code-2,Microsoft,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-mai-code-2-2026-11-17,2026-11-17,day,2026-11-10,,0
+mai-code-2-flash,MAI-Code-2-Flash,Microsoft,github-copilot,GitHub Copilot,microsoft | copilot | github_copilot,ga,selectable,false,github-mai-code-2-flash-2026-11-17,2026-11-17,day,2026-11-10,,0
+mai-code-2-flash,MAI-Code-2-Flash,Microsoft,microsoft-ai,Microsoft AI,,limited_preview,not_applicable,false,microsoft-mai-code-2-flash-2026-11-17,2026-11-17,day,2026-11-10,,0
 mai-image-2,MAI-Image-2,Microsoft,microsoft-ai,Microsoft AI,,retired,catalogue,true,microsoft-mai-image-2-retired-2026-08-15,2026-08-15,day,2026-11-10,,0
 mai-image-2-5,MAI-Image-2.5,Microsoft,microsoft-ai,Microsoft AI,,public_preview,catalogue,false,microsoft-mai-image-2-5-2026-06-02,2026-06-02,day,2026-11-10,,1
 mai-image-2-5-pro,MAI-Image-2.5-Pro,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-mai-image-2-5-pro-2026-07-23,2026-07-23,day,2026-11-10,,0
 mai-image-2-6,MAI-Image-2.6,Microsoft,microsoft-ai,Microsoft AI,,ga,catalogue,false,microsoft-mai-image-2-6-ga-2026-10-27,2026-10-27,day,2026-11-10,,1
 mai-image-2-6-flash,MAI-Image-2.6-Flash,Microsoft,microsoft-ai,Microsoft AI,,ga,catalogue,false,microsoft-mai-image-2-6-flash-ga-2026-10-27,2026-10-27,day,2026-11-10,,1
+mai-image-2-7,MAI-Image-2.7,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-mai-image-2-7-2026-11-17,2026-11-17,day,2026-11-10,,0
+mai-image-2-7-flash,MAI-Image-2.7-Flash,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-mai-image-2-7-2026-11-17,2026-11-17,day,2026-11-10,,0
 mai-image-2e,MAI-Image-2e,Microsoft,m365-copilot,Microsoft 365 Copilot,microsoft | copilot | m365,ga,specialist,false,m365-mai-image-2e-2026-07-01,2026-07-01,day,2026-11-10,,0
 mai-image-2e,MAI-Image-2e,Microsoft,microsoft-ai,Microsoft AI,,retired,catalogue,true,microsoft-mai-image-2e-retired-2026-08,2026-08-15,day,2026-11-10,,0
 mai-transcribe-1,MAI-Transcribe-1,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-mai-transcribe-1-2026-04,2026-04,month,2026-11-10,,0
@@ -406,6 +413,7 @@ mai-voice-1,MAI-Voice-1,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_
 mai-voice-2-1,MAI-Voice-2.1,Microsoft,microsoft-ai,Microsoft AI,,ga,not_applicable,false,microsoft-mai-voice-2-1-2026-10-01,2026-10-01,day,2026-11-10,,0
 mai-voice-2-1-flash,MAI-Voice-2.1-Flash,Microsoft,microsoft-ai,Microsoft AI,,ga,not_applicable,false,microsoft-mai-voice-2-1-2026-10-01,2026-10-01,day,2026-11-10,,0
 microsoft-decision-1,Microsoft-Decision-1,Microsoft,microsoft-ai,Microsoft AI,,public_preview,not_applicable,false,microsoft-decision-1-2026-10-09,2026-10-09,day,2026-11-10,,0
+microsoft-decision-1-1,Microsoft-Decision-1.1,Microsoft,microsoft-ai,Microsoft AI,,ga,not_applicable,false,microsoft-decision-1-1-2026-11-17,2026-11-17,day,2026-11-10,,0
 minimax-h3-max,MiniMax H3 Max,fal,fal,fal,,ga,not_applicable,false,fal-h3-max-2026-08-27,2026-08-27,day,2026-11-10,,0
 minimax-h3-max,MiniMax H3 Max,fal,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-minimax-h3-max-2026-11-05,2026-11-05,day,2026-11-10,,0
 minimax-h3-max-turbo,MiniMax H3 Max Turbo,fal,microsoft-foundry,Microsoft Foundry,microsoft | foundry,public_preview,catalogue,false,foundry-minimax-h3-max-2026-11-05,2026-11-05,day,2026-11-10,,0

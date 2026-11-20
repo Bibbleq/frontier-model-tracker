@@ -1,16 +1,16 @@
 {
   "totals": {
-    "events": 629,
+    "events": 637,
     "backlog": 133,
-    "sources": 1188,
-    "models": 238,
+    "sources": 1208,
+    "models": 247,
     "surfaces": 33,
-    "confirmed": 451,
-    "supported": 178
+    "confirmed": 456,
+    "supported": 181
   },
   "kinds": {
-    "announcement": 44,
-    "availability": 570,
+    "announcement": 46,
+    "availability": 576,
     "milestone": 9,
     "policy": 6
   },
@@ -457,8 +457,23 @@
       "message": "no vendor release event, so lag cannot be derived"
     },
     {
+      "code": "no_vendor_baseline",
+      "subject": "mai-code-2",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
       "code": "no_vendor_baseline_extended",
       "subject": "cohere-parse-v5",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline_extended",
+      "subject": "glm-5-3",
+      "message": "no vendor release event, so lag cannot be derived"
+    },
+    {
+      "code": "no_vendor_baseline_extended",
+      "subject": "glm-5-3-flash",
       "message": "no vendor release event, so lag cannot be derived"
     },
     {
@@ -515,8 +530,8 @@
   "warning_counts": {
     "backlog_without_surface": 11,
     "missing_archive": 68,
-    "no_vendor_baseline": 8,
-    "no_vendor_baseline_extended": 10,
+    "no_vendor_baseline": 9,
+    "no_vendor_baseline_extended": 12,
     "pre_release_access": 1
   },
   "coverage": {
@@ -562,19 +577,26 @@
       "flux-1-kontext-pro",
       "flux-2-flex",
       "flux-2-pro",
+      "glm-5-3",
+      "glm-5-3-flash",
       "grok-code-fast-1",
       "grok-voice-3",
       "kling-3-0",
       "ltx-2-5",
       "mai-code-1-1-flash",
       "mai-code-1-flash",
+      "mai-code-2",
+      "mai-code-2-flash",
       "mai-cyber-1-flash",
+      "mai-cyber-2-flash",
       "mai-image-2",
       "mai-image-2-5",
       "mai-image-2-5-flash",
       "mai-image-2-5-pro",
       "mai-image-2-6",
       "mai-image-2-6-flash",
+      "mai-image-2-7",
+      "mai-image-2-7-flash",
       "mai-image-2e",
       "mai-thinking-1",
       "mai-transcribe-1",
@@ -586,6 +608,7 @@
       "mai-voice-2-1",
       "mai-voice-2-1-flash",
       "microsoft-decision-1",
+      "microsoft-decision-1-1",
       "minimax-h3-max",
       "minimax-h3-max-turbo",
       "minimax-m2-5",
@@ -593,6 +616,7 @@
       "ministral-3b-24-10",
       "mistral-large-24-02",
       "mistral-small-3-1",
+      "muse-ember",
       "openai-deep-research"
     ],
     "models_without_classification": [
@@ -618,10 +642,13 @@
       "flux-1-kontext-pro",
       "flux-2-flex",
       "flux-2-pro",
+      "glm-5-3",
+      "glm-5-3-flash",
       "grok-code-fast-1",
       "kling-3-0",
       "ltx-2-5",
       "microsoft-decision-1",
+      "microsoft-decision-1-1",
       "minimax-h3-max",
       "minimax-h3-max-turbo",
       "minimax-m2-5",
@@ -629,6 +656,7 @@
       "ministral-3b-24-10",
       "mistral-large-24-02",
       "mistral-small-3-1",
+      "muse-ember",
       "openai-deep-research"
     ],
     "surfaces_without_events": [],
@@ -658,6 +686,8 @@
       "flux-2-pro",
       "gemini-2-0-pro",
       "gemini-3-5-flash-lite",
+      "glm-5-3",
+      "glm-5-3-flash",
       "grok-4-1-fast",
       "grok-4-1-fast-non-reasoning",
       "grok-4-1-fast-reasoning",
@@ -674,6 +704,7 @@
       "llama-3-3-70b",
       "ltx-2-5",
       "microsoft-decision-1",
+      "microsoft-decision-1-1",
       "minimax-h3-max",
       "minimax-h3-max-turbo",
       "minimax-m2-5",
@@ -694,11 +725,11 @@
     ]
   },
   "lag_certainty": {
-    "exact": 425,
-    "not_recorded": 1624,
+    "exact": 431,
+    "not_recorded": 1666,
     "range": 51,
     "rollout_start": 196,
-    "unknown_no_baseline": 384,
+    "unknown_no_baseline": 444,
     "unknown_open_research": 176
   }
 }
