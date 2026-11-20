@@ -21959,13 +21959,6 @@ validation_backlog:
         source_type: "documentation"
         quote: "FW-Nemotron-3-Ultra-NVFP4"
         note: "The pay-per-token row for the model, read live on 11 November 2026 (ms.date 2026-11-08): life cycle GA, retirement date 2026-11-24, replacement FW-DeepSeek-V4.1-Flash."
-  - id: "sweep-2026-11-11-to-11-13"
-    state: "open"
-    working_claim: "The research cutoff moved from 10 November to 13 November 2026 to include the Foundry catalogue observation of Mistral OCR 4's GA transition."
-    reason: "The Foundry catalogue observation supports the bounded Mistral OCR 4 transition, but this triage did not perform a broad source sweep of 11–13 November. No absence of other events in that interval should be inferred."
-    target: "Sweep vendor release pages and Microsoft, GitHub and partner announcements from 11–13 November 2026, then update the cutoff and this item to reflect the sources actually checked. This PR checked only the catalogue observations for issue #194."
-    model_ids: []
-    surface_ids: []
   - id: "catalog-cohere-embed-v3-arrival-2024"
     state: "open"
     working_claim: "Cohere Embed v3 arrived in the Azure AI model catalogue in April 2024, shortly after Command R+."
