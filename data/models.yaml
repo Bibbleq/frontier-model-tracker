@@ -773,6 +773,18 @@ models:
     generation: gpt-6
     aliases: ["gpt-6.1-terra", "GPT 6.1 Terra"]
     note: "Released 26 October 2026. OpenAI calls it a significant step up from GPT-5.6 Terra, priced 50% below GPT-5.6 Terra and GPT-6.1 Sol; no supersedes link is recorded because GitHub's 16 November deprecation of GPT-5.6 Terra names GPT-6.1 Sol or GPT-6 Luna, not Terra, as the alternative. No family is declared, matching gpt-6-sol."
+  - id: gpt-6-2-astra
+    display_name: "GPT-6.2 Astra"
+    vendor: OpenAI
+    generation: gpt-6
+    aliases: ["gpt-6.2-astra", "GPT 6.2 Astra"]
+    note: "Released 17 November 2026 with GPT-6.2 Sol. OpenAI calls it its new frontier model, priced 20% below GPT-6 Astra. No family is declared, matching gpt-6-sol."
+  - id: gpt-6-2-sol
+    display_name: "GPT-6.2 Sol"
+    vendor: OpenAI
+    generation: gpt-6
+    aliases: ["gpt-6.2-sol", "GPT 6.2 Sol"]
+    note: "Released 17 November 2026 with GPT-6.2 Astra, at GPT-6.1 Sol's API prices. No family is declared, matching gpt-6-sol."
   - id: gpt-6-luna
     display_name: "GPT-6 Luna"
     vendor: OpenAI
@@ -1101,6 +1113,12 @@ models:
     generation: gemini-4
     aliases: ["gemini-4-carbon"]
     note: "Google's second Gemini 4 model; announced 28 October 2026 with access phased through the Fairwind Program, generally available in the Gemini API from 10 November 2026."
+  - id: gemini-4-hydrogen
+    display_name: "Gemini 4 Hydrogen"
+    vendor: Google
+    generation: gemini-4
+    aliases: ["gemini-4-hydrogen"]
+    note: "Google's third Gemini 4 model, built for fast, efficient agentic execution and offered on every tier including free; generally available in the Gemini API from 12 November 2026. GitHub calls it Google's latest Flash model and names it as the alternative to Gemini 3.8 Flash; no supersedes link is recorded because Google does not state one."
   - id: nano-banana-2-1
     display_name: "Nano Banana 2.1"
     vendor: Google
@@ -1276,6 +1294,7 @@ models:
     modality: image
     scope: extended
     aliases: ["mistral-ocr-4-0"]
+    note: "Mistral's document OCR model, registered from the Foundry catalogue, where Microsoft names it the replacement for mistral-document-ai-2512. Extended scope: a specialist model, not a general model-picker one. No vendor release event is recorded."
   - id: mistral-large-24-02
     display_name: "Mistral Large (24.02)"
     vendor: Mistral AI
@@ -1442,6 +1461,25 @@ models:
     vendor: Meta
     generation: muse-wonder
     aliases: ["muse-wonder-full-1.0"]
+  - id: muse-ember
+    display_name: "Muse Ember"
+    vendor: Meta
+    aliases: ["muse-ember-1.0"]
+    note: "Meta's smallest Muse model, which Microsoft's Ignite post of 17 November 2026 describes as the high-efficiency option beside Muse Wonder and Muse Spark 1.3. Registered so that Microsoft's announcement that it is coming to Foundry can name it (foundry-muse-announced-2026-11-17). No generation: it belongs to neither the Muse Spark nor the Muse Wonder generation. Meta's own release is meta-muse-ember-2026-11-09."
+
+  # ------------------------------------------------------------- Z.ai
+  - id: glm-5-3
+    display_name: "GLM-5.3"
+    vendor: Z.ai
+    scope: extended
+    aliases: ["GLM 5.3", "glm-5.3"]
+    note: "Z.ai's (Zhipu AI's) open text model. Recorded under extended scope as a catalogue entry: Microsoft names it among the launch models of Baseten on Microsoft Foundry on 17 November 2026, as 'GLM 5.3'. No vendor release event is recorded."
+  - id: glm-5-3-flash
+    display_name: "GLM-5.3-Flash"
+    vendor: Z.ai
+    scope: extended
+    aliases: ["GLM 5.3 Flash", "glm-5.3-flash"]
+    note: "The smaller, faster GLM-5.3 model, named beside GLM-5.3 among the launch models of Baseten on Microsoft Foundry on 17 November 2026. Registered as its own model and not as a variant: the registry has no flash variant kind. No vendor release event is recorded."
 
 
   # ------------------------------------------------------- Black Forest Labs
@@ -1815,6 +1853,41 @@ models:
     vendor: Microsoft
     modality: voice
     model_line: mai-voice
+  - id: mai-code-2
+    display_name: "MAI-Code-2"
+    vendor: Microsoft
+    model_line: mai-code
+    aliases: ["MAI Code 2", "MAI-Code-2"]
+    note: "Microsoft AI's coding model for agentic work, announced on 17 November 2026 and selectable in GitHub Copilot that day. Microsoft names no Foundry offering for it: only MAI-Code-2-Flash is in Foundry, in limited access preview."
+  - id: mai-code-2-flash
+    display_name: "MAI-Code-2-Flash"
+    vendor: Microsoft
+    model_line: mai-code
+    aliases: ["MAI Code 2 Flash", "MAI-Code-2-Flash", "Code-2-Flash", "mai-code-2-flash"]
+  - id: mai-cyber-2-flash
+    display_name: "MAI-Cyber-2-Flash"
+    vendor: Microsoft
+    model_line: mai-cyber
+    aliases: ["MAI Cyber 2 Flash", "MAI-Cyber-2-Flash"]
+    note: "A cybersecurity model Microsoft says was trained inside the Codename MDASH harness and will be offered only through Microsoft security products, not the Foundry catalogue. Announced on 17 November 2026 with no arrival yet (microsoft-mai-cyber-2-flash-announced-2026-11-17)."
+  - id: mai-image-2-7
+    display_name: "MAI-Image-2.7"
+    vendor: Microsoft
+    modality: image
+    model_line: mai-image
+    aliases: ["MAI Image 2.7", "MAI-Image-2.7"]
+  - id: mai-image-2-7-flash
+    display_name: "MAI-Image-2.7-Flash"
+    vendor: Microsoft
+    modality: image
+    model_line: mai-image
+    aliases: ["MAI Image 2.7 Flash", "MAI-Image-2.7-Flash"]
+  - id: microsoft-decision-1-1
+    display_name: "Microsoft-Decision-1.1"
+    vendor: Microsoft
+    scope: extended
+    aliases: ["Microsoft Decision 1.1", "Microsoft-Decision-1.1"]
+    note: "Deliberately unclassified, like microsoft-decision-1: it is not an MAI-branded model and has no generation or model line. Microsoft says it is built on Gemma, where Microsoft-Decision-1 was post-trained from Qwen3.5-9B, and that it adds image inputs. No supersession link: Microsoft's post does not say it replaces Microsoft-Decision-1."
 
 families:
   - id: gpt-transcribe

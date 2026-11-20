@@ -1,6 +1,6 @@
 version: 3
 updated: "2026-11-19"
-research_cutoff: "2026-11-13"
+research_cutoff: "2026-11-17"
 metadata:
   project: "CtrlAltBen Frontier Model Tracker"
   purpose: "Sourced history of frontier and significant model availability across tracked Microsoft surfaces."
@@ -16107,7 +16107,7 @@ events:
     lifecycle: "ga"
     exposure: "catalogue"
     confidence: "confirmed"
-    evidence_note: "Microsoft made GPT-6 Sol and GPT-6 Luna generally available in Microsoft Foundry on 22 September 2026, OpenAI's release day, with Standard deployment in all 28 Global regions and the US and EU Data Zones, Provisioned Throughput for Sol, and Priority Processing for Sol in Global regions and the US Data Zone. A 12 November Australia East observation shows the API's fine-tuning deprecation field set to 11 March 2028 while the model remains GA; this is future schedule metadata, not an ending event."
+    evidence_note: "Microsoft made GPT-6 Sol and GPT-6 Luna generally available in Microsoft Foundry on 22 September 2026, OpenAI's release day, with Standard deployment in all 28 Global regions and the US and EU Data Zones, Provisioned Throughput for Sol, and Priority Processing for Sol in Global regions and the US Data Zone."
     caveat: "One event for both models, following foundry-gpt5-6-2026-07-09: the announcement names each individually and states one stage for both. Microsoft Learn's region tables list gpt-6-sol and gpt-6-luna with version string 2026-09-22, which agrees with the announcement but is a version string, not the date source. The Azure blog was fetched directly on 27 September 2026 and carries published_time 2026-09-22T18:30:00+00:00; its Wayback capture of 23 September 2026 was located through the archive.org availability API without being read, because web.archive.org itself could not be reached, and the Learn page's latest capture predates the models."
     relations:
       - type: "announced_by"
@@ -16142,16 +16142,6 @@ events:
         quote: "gpt-6-sol | 2026-09-22 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅"
         supports: ["model"]
         note: "Global Standard table, read on 27 September 2026 through the Microsoft Learn MCP server; gpt-6-luna carries the same version string. A version string is not a date source. No archived_url: the Wayback Machine could not be reached from this session."
-      - publisher: "CtrlAltBen Frontier Model Tracker"
-        title: "Catalogue observation, Foundry Models API, australiaeast, 2026-11-12T13:30:00Z"
-        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/25802131154ced33cf0b5b57b83d1689299e3d60/observations/arm/australiaeast/2026/11/2026-11-12T13-30-00Z.json"
-        primary: false
-        retrieved_at: "2026-11-19"
-        published_at: "2026-11-12"
-        source_type: "other"
-        quote: "\"lifecycle_status\": \"GenerallyAvailable\", \"lifecycle_portal\": \"Generally Available\", \"deprecation_inference\": \"2028-03-11T00:00:00Z\", \"deprecation_fine_tune\": \"2028-03-11T00:00:00Z\""
-        supports: ["lifecycle"]
-        note: "The observation's before block already had the inference and SKU deprecation dates at 11 March 2028 and lifecycle status GenerallyAvailable; only deprecation_fine_tune changed from null. The field is a future schedule, not a deprecation or retirement transition. Source type other because the URL is commit-pinned and immutable."
   - id: "foundry-opus5-5-2026-09-22"
     kind: "availability"
     date:
@@ -19446,6 +19436,39 @@ events:
         source_type: "changelog"
         quote: "Rollout will be gradual."
         supports: ["date"]
+  - id: "meta-muse-ember-2026-11-09"
+    kind: "availability"
+    date:
+      start: "2026-11-09"
+      precision: "day"
+    surface_id: "meta"
+    model_ids: ["muse-ember"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Meta released Muse Ember on 9 November 2026, its smallest and most efficient model, on Muse Code and the Meta Model API as muse-ember-1.0, priced at $0.10 per million input tokens and $0.50 per million output tokens."
+    caveat: "No stage word appears on the page; ga is the classification of an unqualified release, as for Muse Wonder (meta-muse-wonder-2026-10-12). The post also says Muse Ember, Muse Spark and Muse Wonder are now available on Google Cloud and Oracle Cloud, which are not tracked surfaces. The 11 November sweep saw this launch and left it unrecorded because no Microsoft surface carried the model. Microsoft has since said the model is coming to Foundry (foundry-muse-announced-2026-11-17); that is an announcement and not an arrival, so no lag is derivable yet. No Wayback lookup was run for this page."
+    sources:
+      - publisher: "Meta AI"
+        title: "Introducing Our Smallest, Most Efficient Model: Muse Ember"
+        url: "https://research.meta.ai/blog/muse-ember"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-09"
+        source_type: "announcement"
+        quote: "Muse Ember is available today on Muse Code and Meta Model API as muse-ember-1.0."
+        supports: ["date", "model", "lifecycle"]
+        note: "The page's visible date is November 9, 2026 and its article:published_time is 2026-11-09T00:00:00.000Z. Read directly on 19 November 2026."
+      - publisher: "Meta AI"
+        title: "Introducing Our Smallest, Most Efficient Model: Muse Ember"
+        url: "https://research.meta.ai/blog/muse-ember"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-09"
+        source_type: "announcement"
+        quote: "Today, we're introducing Muse Ember, our smallest and most efficient model designed for complex reasoning execution and the work agents repeat all day: tool calls, coding subtasks, routing, extraction, and long document parsing."
+        supports: ["model"]
   - id: "github-gemini4-carbon-2026-11-10"
     kind: "availability"
     date:
@@ -19543,7 +19566,7 @@ events:
       date: "supported"
       lifecycle: "supported"
     evidence_note: "The Foundry Models API showed mistral-ocr-4-0@1 as API lifecycleStatus Preview / portal Preview at 2026-11-12T19:30:00Z, then GenerallyAvailable / Generally Available at 2026-11-13T01:30:00Z; the lifecycle mapping pairs GenerallyAvailable with Generally Available and dataset ga."
-    caveat: "Bounded by catalogue observation: the run times delimit when the API stage changed, not a Microsoft-published GA date. The observation is one subscription's listing and does not establish access in every region or tenant."
+    caveat: "Bounded by catalogue observation: the run times delimit when the API stage changed, not a Microsoft-published GA date. The observation is one subscription's listing and does not establish access in every region or tenant. Microsoft's Mistral Large 4 post of 29 October said Mistral OCR 4 would move to general availability on the day Large 4 arrived in Foundry; that future-tensed sentence is not used to date this event. Microsoft's retirement schedule, read on 19 November, lists the model as GA and names it the replacement for mistral-document-ai-2512, which corroborates the stage but dates nothing. No earlier Foundry stage of the model is recorded."
     sources:
       - publisher: "CtrlAltBen Frontier Model Tracker"
         title: "Catalogue observation, Foundry Models API, australiaeast, 2026-11-13T01:30:00Z"
@@ -19575,6 +19598,693 @@ events:
         quote: "\"lifecycle_status\": \"Preview\", \"lifecycle_portal\": \"Preview\""
         supports: ["lifecycle"]
         note: "The before block of the lifecycle_changed record, at 2026-11-12T19:30:00Z. Source type other because the URL is commit-pinned and immutable."
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-11-19"
+        source_type: "documentation"
+        quote: "mistral-ocr-4-0 | 1 | GA | 2027-10-01 | —"
+        supports: ["lifecycle"]
+        note: "Table row, columns model, version, lifecycle status, retirement date, replacement; cell separators are rendered as ' | '. The same page lists 'mistral-document-ai-2512 | 1 | GA | 2027-02-15 | mistral-ocr-4-0'. Current-state documentation read on 19 November 2026 (updated_at 2026-11-18T23:15:00Z): it corroborates the GA stage and does not date it. No archived_url: no Wayback lookup was run."
+  - id: "google-gemini4-hydrogen-2026-11-12"
+    kind: "availability"
+    date:
+      start: "2026-11-12"
+      precision: "day"
+    surface_id: "google-gemini"
+    model_ids: ["gemini-4-hydrogen"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Google made Gemini 4 Hydrogen generally available on 12 November 2026: in all tiers of Google AI Studio and the Gemini API, including the free tier, in Gemini for business, the Gemini app and Google Search, and for paid Google AI Pro and Ultra subscribers in Google Antigravity, priced at $1.50 per million input tokens and $7.50 per million output tokens across its 1 million-token context window."
+    caveat: "One event on the umbrella surface because the API and the consumer products moved in one post, on the precedent of Gemini 4 Carbon (google-gemini4-carbon-2026-11-10). Google's post says 'available' and 'rolling out globally'; the words generally available are the Gemini API changelog's. The consumer and enterprise side is 'rolling out' with no end stated, so the day dates the API release and the start of that rollout. The post reads 'Last updated November 16, 2026'; what changed is not stated. No Wayback lookup was run for either page."
+    sources:
+      - publisher: "Google"
+        title: "Introducing Gemini 4 Hydrogen"
+        url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-12"
+        source_type: "announcement"
+        quote: "With Hydrogen, we’re also bringing Gemini 4 to everyone — for all tiers of Google AI Studio, the Gemini API, Gemini for business, the Gemini app, Google Search, and paid Google AI Pro and Ultra subscribers in Google Antigravity."
+        supports: ["date", "model"]
+        note: "The page's visible date is Nov 12, 2026 and it carries 'Last updated November 16, 2026'. A later sentence reads 'Starting today, Hydrogen is rolling out globally across our developer, enterprise, and consumer surfaces'. Read directly on 19 November 2026."
+      - publisher: "Google"
+        title: "Gemini API release notes"
+        url: "https://ai.google.dev/gemini-api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-12"
+        source_type: "release_notes"
+        quote: "Gemini 4 Hydrogen (gemini-4-hydrogen) generally available (GA): Released Gemini 4 Hydrogen (gemini-4-hydrogen), bringing cutting-edge intelligence to everyone, with speed and efficiency for everyday coding and agentic workflows."
+        supports: ["date", "model", "lifecycle"]
+        note: "Entry headed November 12, 2026. The URL redirected to aistudio.google.com/docs/changelog when read in a browser on 19 November 2026. No archived_url: no Wayback lookup was run."
+  - id: "github-claude-fable5-deprecation-announced-2026-11-13"
+    kind: "announcement"
+    date:
+      start: "2026-11-13"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["claude-fable-5"]
+    model_claim: "specific"
+    confidence: "confirmed"
+    evidence_note: "GitHub announced that Claude Fable 5 would be deprecated across all GitHub Copilot experiences on 14 December 2026, with Claude Fable 5.2 as the suggested alternative."
+    caveat: "Recorded as an announcement, not a retirement: the deprecation date falls after this dataset's research cutoff. The page read on 19 November names Claude Fable 5.2 as the alternative; the excerpt filed with the candidate on 16 November named Claude Fable 5.1, so the row was revised after publication."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of selected GitHub Copilot models in December"
+        url: "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-13"
+        source_type: "changelog"
+        quote: "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on December 14, 2026"
+        supports: ["date", "model"]
+        note: "Table row: 'Claude Fable 5 | 2026-12-14 | Claude Fable 5.2'. The entry's date line reads 'November 13, 2026' and it is typed 'Retired'. No Wayback lookup was run."
+  - id: "github-claude-haiku4-5-deprecation-announced-2026-11-13"
+    kind: "announcement"
+    date:
+      start: "2026-11-13"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["claude-haiku-4-5"]
+    model_claim: "specific"
+    confidence: "confirmed"
+    evidence_note: "GitHub announced that Claude Haiku 4.5 would be deprecated across all GitHub Copilot experiences on 14 December 2026, with Claude Haiku 5.5 as the suggested alternative, except for individual subscribers on annual plans, who keep it."
+    caveat: "Recorded as an announcement, not a retirement: the deprecation date falls after this dataset's research cutoff. The deprecation is partial by plan, so a later retirement event must not be drawn as the model leaving every Copilot plan. The timeline holds no GitHub Copilot arrival for Claude Haiku 4.5."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of selected GitHub Copilot models in December"
+        url: "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-13"
+        source_type: "changelog"
+        quote: "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on December 14, 2026"
+        supports: ["date", "model"]
+        note: "Table row: 'Claude Haiku 4.5* | 2026-12-14 | Claude Haiku 5.5'. No Wayback lookup was run."
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of selected GitHub Copilot models in December"
+        url: "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-13"
+        source_type: "changelog"
+        quote: "Claude Haiku 4.5 will remain available to individual GitHub Copilot subscribers on annual plans. The deprecation of Claude Haiku 4.5 does not apply to these customers."
+        supports: ["exposure"]
+  - id: "github-gemini3-8-flash-deprecation-announced-2026-11-13"
+    kind: "announcement"
+    date:
+      start: "2026-11-13"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["gemini-3-8-flash"]
+    model_claim: "specific"
+    confidence: "confirmed"
+    evidence_note: "GitHub announced that Gemini 3.8 Flash would be deprecated across all GitHub Copilot experiences on 14 December 2026, with Gemini 4 Hydrogen as the suggested alternative."
+    caveat: "Recorded as an announcement, not a retirement: the deprecation date falls after this dataset's research cutoff. Gemini 4 Hydrogen reached GitHub Copilot the same day (github-gemini4-hydrogen-2026-11-13)."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of selected GitHub Copilot models in December"
+        url: "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-13"
+        source_type: "changelog"
+        quote: "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on December 14, 2026"
+        supports: ["date", "model"]
+        note: "Table row: 'Gemini 3.8 Flash | 2026-12-14 | Gemini 4 Hydrogen'. No Wayback lookup was run."
+  - id: "github-gemini4-argon-deprecation-announced-2026-11-13"
+    kind: "announcement"
+    date:
+      start: "2026-11-13"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["gemini-4-argon"]
+    model_claim: "specific"
+    confidence: "confirmed"
+    evidence_note: "GitHub announced that Gemini 4 Argon would be deprecated across all GitHub Copilot experiences on 14 December 2026, with Gemini 4 Carbon as the suggested alternative."
+    caveat: "Recorded as an announcement, not a retirement: the deprecation date falls after this dataset's research cutoff. The notice came one month after the model's Copilot arrival (github-gemini4-argon-2026-10-13)."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of selected GitHub Copilot models in December"
+        url: "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-13"
+        source_type: "changelog"
+        quote: "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on December 14, 2026"
+        supports: ["date", "model"]
+        note: "Table row: 'Gemini 4 Argon | 2026-12-14 | Gemini 4 Carbon'. No Wayback lookup was run."
+  - id: "github-gemini4-hydrogen-2026-11-13"
+    kind: "availability"
+    date:
+      start: "2026-11-13"
+      precision: "day"
+      rollout_start: true
+    surface_id: "github-copilot"
+    model_ids: ["gemini-4-hydrogen"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "Gemini 4 Hydrogen became generally available in GitHub Copilot on 13 November 2026, the day after Google released it, for Copilot Pro, Pro+, Max, Business and Enterprise, selectable in the model picker and billed at provider list pricing under usage-based billing."
+    caveat: "Includes the base Copilot Pro plan, which Gemini 4 Carbon's launch did not. Rollout is gradual, so 13 November starts the rollout window. Under default model enablement the model is on for Business and Enterprise unless an administrator has turned off the global default or disabled it. GitHub calls it Google's latest Flash model and named it the same day as the suggested alternative to Gemini 3.8 Flash. No Wayback lookup was run for this entry."
+    relations:
+      - type: "announced_by"
+        target: "google-gemini4-hydrogen-2026-11-12"
+    sources:
+      - publisher: "GitHub"
+        title: "Gemini 4 Hydrogen in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-13"
+        source_type: "changelog"
+        quote: "Gemini 4 Hydrogen, Google’s latest Flash model, is now generally available in GitHub Copilot."
+        supports: ["date", "model", "lifecycle"]
+        note: "The entry's date line reads 'November 13, 2026' and it is typed 'Release'."
+      - publisher: "GitHub"
+        title: "Gemini 4 Hydrogen in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-13"
+        source_type: "changelog"
+        quote: "Gemini 4 Hydrogen is available to Copilot Pro, Pro+, Max, Business, and Enterprise users."
+        supports: ["exposure"]
+      - publisher: "GitHub"
+        title: "Gemini 4 Hydrogen in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-13"
+        source_type: "changelog"
+        quote: "Rollout will be gradual."
+        supports: ["date"]
+  - id: "github-grok4-6-deprecation-announced-2026-11-13"
+    kind: "announcement"
+    date:
+      start: "2026-11-13"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["grok-4-6"]
+    model_claim: "specific"
+    confidence: "confirmed"
+    evidence_note: "GitHub announced that Grok 4.6 would be deprecated across all GitHub Copilot experiences on 14 December 2026, with Grok 4.7 as the suggested alternative."
+    caveat: "Recorded as an announcement, not a retirement: the deprecation date falls after this dataset's research cutoff."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of selected GitHub Copilot models in December"
+        url: "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-13"
+        source_type: "changelog"
+        quote: "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on December 14, 2026"
+        supports: ["date", "model"]
+        note: "Table row: 'Grok 4.6 | 2026-12-14 | Grok 4.7'. No Wayback lookup was run."
+  - id: "github-kimi-k3-deprecation-announced-2026-11-13"
+    kind: "announcement"
+    date:
+      start: "2026-11-13"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["kimi-k3"]
+    model_claim: "specific"
+    confidence: "confirmed"
+    evidence_note: "GitHub announced that Kimi K3 would be deprecated across all GitHub Copilot experiences on 14 December 2026. No suggested alternative is named: the table reads 'To be announced'."
+    caveat: "Recorded as an announcement, not a retirement: the deprecation date falls after this dataset's research cutoff. The timeline holds no GitHub Copilot arrival for Kimi K3.1 Pro, so nothing here should be read as a successor."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of selected GitHub Copilot models in December"
+        url: "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-13"
+        source_type: "changelog"
+        quote: "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on December 14, 2026"
+        supports: ["date", "model"]
+        note: "Table row: 'Kimi K3 | 2026-12-14 | To be announced'. No Wayback lookup was run."
+  - id: "foundry-codex-mini-retired-2026-11-17"
+    kind: "availability"
+    date:
+      start: "2026-11-17"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["codex-mini"]
+    model_claim: "specific"
+    lifecycle: "retired"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "supported"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "codex-mini (version 2025-05-16) reached its scheduled retirement in Microsoft Foundry on 17 November 2026: Microsoft's retirement schedule gives that date with no replacement, and the catalogue watcher saw the Foundry Models API's portal stage change from Deprecated to Retired between its runs of 19:30 UTC on 16 November and 01:30 UTC on 17 November."
+    caveat: "The date is the scheduled one. The two stage vocabularies disagree and both are shown: the API's lifecycleStatus stayed Deprecating (portal word Deprecated) while lifecycle_portal moved to Retired because deprecation_inference, 2026-11-17T00:00:00Z, had passed; Learn's schedule row, read on 19 November, still says Deprecated. The observation dates when the watcher looked and is one subscription's view. Recorded on Microsoft Foundry, the product name on the retirement date; the model arrived as Azure AI Foundry (foundry-codex-mini-2025-06-03), the same lineage. The version string 2025-05-16 is a build identifier and dates nothing. No Wayback lookup was run for the schedule."
+    sources:
+      - publisher: "Microsoft Learn"
+        title: "Model retirement schedule - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
+        primary: true
+        retrieved_at: "2026-11-19"
+        source_type: "documentation"
+        quote: "codex-mini | 2025-05-16 | Deprecated | 2026-11-17 | —"
+        supports: ["date", "model", "lifecycle"]
+        note: "Table row under Azure OpenAI, columns model, version, lifecycle status, retirement date, replacement; cell separators are rendered as ' | '. Read on 19 November 2026, when the page's updated_at was 2026-11-18T23:15:00Z. No archived_url: no Wayback lookup was run."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, eastus2, 2026-11-17T01:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/3375d5d589de05629de61d8e0dc96b1d02ea92ca/observations/arm/eastus2/2026/11/2026-11-17T01-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-17"
+        source_type: "other"
+        quote: "\"lifecycle_status\": \"Deprecating\","
+        supports: ["lifecycle"]
+        note: "A lifecycle_changed observation for codex-mini@2025-05-16 with window_start 2026-11-16T19:30:00Z and window_end 2026-11-17T01:30:00Z; the one changed field is lifecycle_portal, Deprecated before and Retired after, with deprecation_inference 2026-11-17T00:00:00Z in both. The same change appears in the swedencentral file. Cited at its commit-pinned URL. Source type other because the URL is immutable."
+  - id: "foundry-glm-5-3-2026-11-17"
+    kind: "availability"
+    date:
+      start: "2026-11-17"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["glm-5-3", "glm-5-3-flash"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "catalogue"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "Microsoft announced at Ignite on 17 November 2026 that Baseten on Microsoft Foundry is in public preview and brings GLM-5.3 and GLM-5.3-Flash, Z.ai's open models, into Foundry on serverless pay-as-you-go, globally or in the US Data Zone."
+    caveat: "Lifecycle is supported, not confirmed: 'public preview' is said of the Baseten service, the models are given as examples ('such as'), and the post's Baseten links both lead to a preview request form (aka.ms/Baseten-Preview-Request), which may mean access is gated. The Foundry Models API listed no GLM model in any polled region at the 13:30 UTC run on 17 November, which is before the post's publication time, so the catalogue watcher neither corroborates nor contradicts it. Tagged partner_hosted on the Fireworks precedent because the models are Baseten-optimised and Microsoft groups Baseten with Fireworks as a serverless option, although the post also calls the offer 'a Microsoft first-party service' and does not say who operates the inference. The same sentence names two models already recorded: Kimi K3, on Foundry through Fireworks since 28 July 2026, for which a second offer is not a separate event, and DeepSeek-V4.1-Flash-1017, whose first arrival is still an open question (foundry-deepseek-v4-1-flash-1017-arrival-2026-11). Provisioned throughput is promised 'starting in December' and is not recorded. Neither GLM model has a vendor release event, so no lag is derived."
+    tags: ["partner_hosted"]
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "From model choice to your durable advantage: Build AI that keeps improving"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/from-model-choice-to-your-durable-advantage-build-ai-that-keeps-improving/4573609"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "Baseten on Microsoft Foundry, now in public preview, brings Baseten-optimized open models such as Kimi-K3, GLM 5.3, GLM-5.3-Flash and DeepSeek V4.1-Flash-1017 into Foundry as a Microsoft first-party service, tuned for speed, throughput and cost."
+        supports: ["date", "model", "lifecycle"]
+        note: "Read directly in a browser on 17 November 2026. The publication date is the page data's postTime, 2026-11-17T10:15:00-08:00; its lastEditTime, 07:30 the same day, precedes it. No Wayback lookup was run for this page."
+      - publisher: "Microsoft Community Hub"
+        title: "From model choice to your durable advantage: Build AI that keeps improving"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/from-model-choice-to-your-durable-advantage-build-ai-that-keeps-improving/4573609"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "Start with serverless pay-as-you-go, globally or in the US Data Zone, and scale with provisioned throughput starting in December."
+        supports: ["exposure"]
+  - id: "foundry-muse-announced-2026-11-17"
+    kind: "announcement"
+    date:
+      start: "2026-11-17"
+      precision: "day"
+    surface_id: "microsoft-foundry"
+    model_ids: ["muse-ember", "muse-spark-1-3", "muse-wonder"]
+    model_claim: "specific"
+    confidence: "confirmed"
+    evidence_note: "Microsoft announced at Ignite on 17 November 2026 that Meta's Muse Wonder, Muse Spark 1.3 and Muse Ember are coming soon to Microsoft Foundry, as frontier, balanced and high-efficiency options."
+    caveat: "An announcement of future availability, not an arrival, and it must not be drawn as one: the post gives no date and no stage. The catalogue link it offers is a publisher filter, not a model page. Muse Spark 1.3 was listed in the Foundry Models API for about a week from 30-31 October 2026 and then withdrawn (foundry-muse-spark-1-3-listing-2026-10); this post is the first Microsoft page to name it and does not explain that listing. The Foundry Models API listed none of the three at the 13:30 UTC run on 17 November. Muse Wonder Full is not named."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "From model choice to your durable advantage: Build AI that keeps improving"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/from-model-choice-to-your-durable-advantage-build-ai-that-keeps-improving/4573609"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "Muse Wonder, Muse Spark 1.3 and Muse Ember are coming soon to Microsoft Foundry."
+        supports: ["date", "model"]
+        note: "The sentence begins 'Meta’s', trimmed here before the apostrophe. Read directly in a browser on 17 November 2026. The publication date is the page data's postTime, 2026-11-17T10:15:00-08:00; its lastEditTime, 07:30 the same day, precedes it. No Wayback lookup was run for this page."
+  - id: "github-gpt6-2-astra-sol-2026-11-17"
+    kind: "availability"
+    date:
+      start: "2026-11-17"
+      precision: "day"
+      rollout_start: true
+    surface_id: "github-copilot"
+    model_ids: ["gpt-6-2-astra", "gpt-6-2-sol"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "confirmed"
+    evidence_note: "GPT-6.2 Astra and GPT-6.2 Sol became generally available in GitHub Copilot on 17 November 2026, OpenAI's release day, for Copilot Pro+, Max, Business and Enterprise, selectable in the model picker and billed at provider list pricing under usage-based billing."
+    caveat: "One event for both models because GitHub gives them the same plans and the same stage. Not offered on the base Copilot Pro plan. Rollout is gradual, so 17 November starts the rollout window. Under default model enablement the models are on for Business and Enterprise unless an administrator has turned off the global default or disabled them. No Wayback lookup was run for this entry."
+    relations:
+      - type: "announced_by"
+        target: "openai-gpt6-2-astra-sol-2026-11-17"
+    sources:
+      - publisher: "GitHub"
+        title: "OpenAI’s GPT-6.2 Astra and GPT-6.2 Sol now available"
+        url: "https://github.blog/changelog/2026-11-17-openais-gpt-6-2-astra-and-gpt-6-2-sol-now-available"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-17"
+        source_type: "changelog"
+        quote: "OpenAI’s GPT-6.2 Astra and GPT-6.2 Sol are now generally available in GitHub Copilot."
+        supports: ["date", "model", "lifecycle"]
+        note: "The entry's date line reads 'November 17, 2026' and it is typed 'Release'."
+      - publisher: "GitHub"
+        title: "OpenAI’s GPT-6.2 Astra and GPT-6.2 Sol now available"
+        url: "https://github.blog/changelog/2026-11-17-openais-gpt-6-2-astra-and-gpt-6-2-sol-now-available"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-17"
+        source_type: "changelog"
+        quote: "GPT-6.2 Astra and GPT-6.2 Sol are available to Copilot Pro+, Max, Business, and Enterprise users."
+        supports: ["exposure"]
+      - publisher: "GitHub"
+        title: "OpenAI’s GPT-6.2 Astra and GPT-6.2 Sol now available"
+        url: "https://github.blog/changelog/2026-11-17-openais-gpt-6-2-astra-and-gpt-6-2-sol-now-available"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-17"
+        source_type: "changelog"
+        quote: "Rollout will be gradual."
+        supports: ["date"]
+  - id: "github-mai-code-1-1-flash-deprecation-announced-2026-11-17"
+    kind: "announcement"
+    date:
+      start: "2026-11-17"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["mai-code-1-1-flash"]
+    model_claim: "specific"
+    confidence: "confirmed"
+    evidence_note: "GitHub announced that MAI-Code-1.1-Flash would be deprecated across all GitHub Copilot experiences on 18 December 2026, following the launch of MAI Code 2 Flash; the suggested alternative reads 'Latest MAI Code Flash model'."
+    caveat: "Recorded as an announcement, not a retirement: the deprecation date falls after this dataset's research cutoff. The successor's arrival is github-mai-code-2-flash-2026-11-17. Not filed as a candidate issue; found beside the 13 November deprecation notice in the changelog's November archive."
+    sources:
+      - publisher: "GitHub"
+        title: "Upcoming deprecation of MAI-Code-1.1-Flash in December"
+        url: "https://github.blog/changelog/2026-11-17-upcoming-deprecation-of-mai-code-1-1-flash-in-december"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-17"
+        source_type: "changelog"
+        quote: "With the launch of MAI Code 2 Flash, we will deprecate MAI-Code-1.1-Flash across all GitHub Copilot experiences on December 18, 2026"
+        supports: ["date", "model"]
+        note: "Table row: 'MAI-Code-1.1-Flash | 2026-12-18 | Latest MAI Code Flash model'. The entry's date line reads 'November 17, 2026' and it is typed 'Retired'. No Wayback lookup was run."
+  - id: "github-mai-code-2-2026-11-17"
+    kind: "availability"
+    date:
+      start: "2026-11-17"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["mai-code-2"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "MAI-Code-2, Microsoft AI's coding model for agentic work, arrived in GitHub Copilot on 17 November 2026 for Copilot Pro, Pro+, Max, Business and Enterprise, selectable in the model picker across VS Code, Visual Studio, Copilot CLI, the cloud agent, the Copilot app, github.com, GitHub Mobile, JetBrains, Xcode and Eclipse."
+    caveat: "The changelog entry is typed 'Release' and states no stage, neither preview nor generally available; ga is the classification of a release with no preview label, as for MAI-Code-1.1-Flash, so lifecycle is supported. Not offered on Copilot Free or Student, which get MAI-Code-2-Flash. The entry also says both models 'are available to eligible GitHub Copilot subscribers on annual plans', which it does not explain. Business and Enterprise access runs through the model policy; under default model enablement the model is on unless an administrator has turned off the global default or disabled it. Microsoft's Ignite post says only 'Try both today in GitHub' and links the MAI-Code repository, so the Copilot scope rests on GitHub's changelog. Microsoft names no Foundry offering for MAI-Code-2, so it has no vendor-channel event and no lag is derived."
+    sources:
+      - publisher: "GitHub"
+        title: "MAI Code 2 and MAI Code 2 Flash in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "changelog"
+        quote: "The next generation of Microsoft AI (MAI) coding models has arrived in GitHub Copilot."
+        supports: ["date", "model"]
+        note: "The entry's date line reads 'November 17, 2026' and it is typed 'Release'. One entry covers both models, recorded as one event per model because their plans differ. No Wayback lookup was run for this page."
+      - publisher: "GitHub"
+        title: "MAI Code 2 and MAI Code 2 Flash in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "changelog"
+        quote: "MAI Code 2: Copilot Pro, Pro+, Max, Business, and Enterprise"
+        supports: ["exposure"]
+        note: "A list item under the heading 'Availability in GitHub Copilot'; the list of clients follows the sentence 'You can select the models in the model picker in:'."
+      - publisher: "Microsoft AI"
+        title: "MAI Code 2 and Code 2 Flash: Everyday coding at scalable prices"
+        url: "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "MAI Code 2 and Code 2 Flash are available in GitHub Copilot, and Code 2 Flash is in limited-access preview in Microsoft Foundry."
+        supports: ["date", "model"]
+        note: "The page's visible date is Nov 17, 2026 and its article:modified_time is 2026-11-17T18:15:17+00:00. No Wayback lookup was run for this page."
+      - publisher: "Microsoft Community Hub"
+        title: "From model choice to your durable advantage: Build AI that keeps improving"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/from-model-choice-to-your-durable-advantage-build-ai-that-keeps-improving/4573609"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "Try both today in GitHub, and access Code-2-Flash through a limited access preview in Foundry."
+        supports: ["date"]
+        note: "The word GitHub links to github.com/microsoft/MAI-Code, the MAI-Code announcement repository, not to GitHub Copilot. The publication date is the page data's postTime, 2026-11-17T10:15:00-08:00."
+  - id: "github-mai-code-2-flash-2026-11-17"
+    kind: "availability"
+    date:
+      start: "2026-11-17"
+      precision: "day"
+    surface_id: "github-copilot"
+    model_ids: ["mai-code-2-flash"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "selectable"
+    confidence: "supported"
+    confidence_detail:
+      date: "confirmed"
+      model: "confirmed"
+      lifecycle: "supported"
+    evidence_note: "MAI-Code-2-Flash, Microsoft AI's lightweight coding model, arrived in GitHub Copilot on 17 November 2026 for Copilot Free, Student, Pro, Pro+, Max, Business and Enterprise, selectable in the model picker across VS Code, Visual Studio, Copilot CLI, the cloud agent, the Copilot app, github.com, GitHub Mobile, JetBrains, Xcode and Eclipse."
+    caveat: "The changelog entry is typed 'Release' and states no stage, neither preview nor generally available; ga is the classification of a release with no preview label, as for MAI-Code-1.1-Flash, so lifecycle is supported. The same model is only in limited access preview in Microsoft Foundry that day (microsoft-mai-code-2-flash-2026-11-17), so the two surfaces sit at different stages. The entry also says both models 'are available to eligible GitHub Copilot subscribers on annual plans', which it does not explain. Business and Enterprise access runs through the model policy; under default model enablement the model is on unless an administrator has turned off the global default or disabled it. A separate changelog entry of the same day announces the deprecation of MAI-Code-1.1-Flash in December; it is not recorded here."
+    sources:
+      - publisher: "GitHub"
+        title: "MAI Code 2 and MAI Code 2 Flash in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "changelog"
+        quote: "The next generation of Microsoft AI (MAI) coding models has arrived in GitHub Copilot."
+        supports: ["date", "model"]
+        note: "The entry's date line reads 'November 17, 2026' and it is typed 'Release'. One entry covers both models, recorded as one event per model because their plans differ. No Wayback lookup was run for this page."
+      - publisher: "GitHub"
+        title: "MAI Code 2 and MAI Code 2 Flash in GitHub Copilot"
+        url: "https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "changelog"
+        quote: "MAI Code 2 Flash: Copilot Free, Student, Pro, Pro+, Max, Business, and Enterprise"
+        supports: ["exposure"]
+        note: "A list item under the heading 'Availability in GitHub Copilot'; the list of clients follows the sentence 'You can select the models in the model picker in:'."
+      - publisher: "Microsoft AI"
+        title: "MAI Code 2 and Code 2 Flash: Everyday coding at scalable prices"
+        url: "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "MAI Code 2 and Code 2 Flash are available in GitHub Copilot, and Code 2 Flash is in limited-access preview in Microsoft Foundry."
+        supports: ["date", "model"]
+        note: "The page's visible date is Nov 17, 2026 and its article:modified_time is 2026-11-17T18:15:17+00:00. No Wayback lookup was run for this page."
+  - id: "microsoft-decision-1-1-2026-11-17"
+    kind: "availability"
+    date:
+      start: "2026-11-17"
+      precision: "day"
+    surface_id: "microsoft-ai"
+    model_ids: ["microsoft-decision-1-1"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Microsoft announced at Ignite on 17 November 2026 that Microsoft-Decision-1.1 is generally available in the Foundry model catalogue: a decision model built on Gemma for routing, classification, prioritisation and verification, which now accepts image inputs."
+    caveat: "Recorded on the microsoft-ai vendor surface because the Foundry catalogue is the vendor channel for Microsoft's own models, as for Microsoft-Decision-1 and the MAI line, although this model is not MAI-branded. No preview of 1.1 is recorded or was found: the post presents it as generally available at first mention. It is a different model from Microsoft-Decision-1, which was post-trained from Qwen3.5-9B and entered public preview on 9 October 2026 (microsoft-decision-1-2026-10-09); the post does not say what happens to that model. The Foundry Models API listed Microsoft-Decision-1 but not 1.1 at the 13:30 UTC run on 17 November, before the post's publication time,."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "From model choice to your durable advantage: Build AI that keeps improving"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/from-model-choice-to-your-durable-advantage-build-ai-that-keeps-improving/4573609"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "Microsoft-Decision-1.1 is now generally available."
+        supports: ["date", "model", "lifecycle"]
+        note: "Read directly in a browser on 17 November 2026. The publication date is the page data's postTime, 2026-11-17T10:15:00-08:00; its lastEditTime, 07:30 the same day, precedes it. The next sentence but one reads 'Find it today in the Foundry model catalog', linking ai.azure.com/catalog/models/Microsoft-Decision-1.1. No Wayback lookup was run for this page."
+      - publisher: "Microsoft Community Hub"
+        title: "From model choice to your durable advantage: Build AI that keeps improving"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/from-model-choice-to-your-durable-advantage-build-ai-that-keeps-improving/4573609"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "Built on Gemma, it delivers fast, cost-effective decisions across routing, classification, prioritization and verification, and now supports image inputs."
+        supports: ["model"]
+  - id: "microsoft-mai-code-2-flash-2026-11-17"
+    kind: "availability"
+    date:
+      start: "2026-11-17"
+      precision: "day"
+    surface_id: "microsoft-ai"
+    model_ids: ["mai-code-2-flash"]
+    model_claim: "specific"
+    lifecycle: "limited_preview"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Microsoft announced at Ignite on 17 November 2026 that MAI-Code-2-Flash, its coding model for high-volume everyday work, is in limited access preview in Microsoft Foundry."
+    caveat: "Recorded on the microsoft-ai vendor surface because the Foundry catalogue is the vendor channel for Microsoft's own MAI models. Access is gated: the post's link leads to the model's Foundry catalogue card, and neither post says how access is granted. The same model is selectable in GitHub Copilot the same day with no preview label (github-mai-code-2-flash-2026-11-17). MAI-Code-2, announced beside it, has no Foundry offering in either post. The Foundry Models API listed neither model at the 13:30 UTC run on 17 November, before the post's publication time. Microsoft AI's post adds that the model will 'soon' be released on OpenRouter, Vercel and other third-party platforms, none of them tracked surfaces."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "From model choice to your durable advantage: Build AI that keeps improving"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/from-model-choice-to-your-durable-advantage-build-ai-that-keeps-improving/4573609"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "Try both today in GitHub, and access Code-2-Flash through a limited access preview in Foundry."
+        supports: ["date", "model", "lifecycle"]
+        note: "Read directly in a browser on 17 November 2026. The publication date is the page data's postTime, 2026-11-17T10:15:00-08:00; its lastEditTime, 07:30 the same day, precedes it. The preview link is aka.ms/mai-code-2-flash-foundrycard. No Wayback lookup was run for this page."
+      - publisher: "Microsoft AI"
+        title: "MAI Code 2 and Code 2 Flash: Everyday coding at scalable prices"
+        url: "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "MAI Code 2 and Code 2 Flash are available in GitHub Copilot, and Code 2 Flash is in limited-access preview in Microsoft Foundry."
+        supports: ["date", "model", "lifecycle"]
+        note: "The page's visible date is Nov 17, 2026 and its article:modified_time is 2026-11-17T18:15:17+00:00. No Wayback lookup was run for this page."
+  - id: "microsoft-mai-cyber-2-flash-announced-2026-11-17"
+    kind: "announcement"
+    date:
+      start: "2026-11-17"
+      precision: "day"
+    surface_id: "microsoft-ai"
+    model_ids: ["mai-cyber-2-flash"]
+    model_claim: "specific"
+    confidence: "confirmed"
+    evidence_note: "Microsoft announced MAI-Cyber-2-Flash on 17 November 2026, a cybersecurity model for code vulnerability discovery, validation and remediation, and said it will be available through Codename MDASH, where it replaces the existing model in the MAI profile for eligible customers from mid-December."
+    caveat: "An announcement of future availability, not an arrival, and it must not be drawn as one. Microsoft AI's post says the model is coming exclusively to Microsoft security products, so no Foundry catalogue listing is promised, and neither MDASH nor Microsoft's security products are tracked surfaces; the event sits on the microsoft-ai vendor surface for that reason. 'Starting mid-December' is a planned start, not a date, and no arrival is recorded."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "From model choice to your durable advantage: Build AI that keeps improving"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/from-model-choice-to-your-durable-advantage-build-ai-that-keeps-improving/4573609"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "It will be available through Codename MDASH."
+        supports: ["date", "model"]
+        note: "The sentence closes the paragraph that opens 'MAI-Cyber-2-Flash is purpose-built for cybersecurity.' Read directly in a browser on 17 November 2026. The publication date is the page data's postTime, 2026-11-17T10:15:00-08:00. No Wayback lookup was run for this page."
+      - publisher: "Microsoft AI"
+        title: "MAI Cyber 2 Flash: Leading security. Lower cost"
+        url: "https://microsoft.ai/news/introducing-mai-cyber-2-flash/"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "MAI Cyber 2 Flash is coming exclusively to Microsoft security products, including Codename MDASH, where it will automatically replace the existing model in the MAI profile for eligible customers starting mid-December."
+        supports: ["date", "model"]
+        note: "The page's visible date is Nov 17, 2026; it exposes no article:published_time. No Wayback lookup was run for this page."
+  - id: "microsoft-mai-image-2-7-2026-11-17"
+    kind: "availability"
+    date:
+      start: "2026-11-17"
+      precision: "day"
+    surface_id: "microsoft-ai"
+    model_ids: ["mai-image-2-7", "mai-image-2-7-flash"]
+    model_claim: "specific"
+    lifecycle: "public_preview"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "Microsoft released MAI-Image-2.7 and MAI-Image-2.7-Flash in public preview in Microsoft Foundry on 17 November 2026, with sharper editing and more consistent image generation; the catalogue watcher first saw both in the Foundry Models API, as Preview, between its runs of 07:30 and 13:30 UTC that day."
+    caveat: "Recorded on the microsoft-ai vendor surface because the Foundry catalogue is the vendor channel for Microsoft's own MAI models. The watcher's sighting is in one region, westcentralus, on Global Standard deployment, and precedes the Tech Community post's publication time of 18:15 UTC; it dates when the watcher looked. The API version string 2026-11-02 is a build identifier and dates nothing. The API sets a retirement date of 17 February 2027 on both preview listings. Microsoft AI's post adds that both models are available through partners including fal, Genspark, OpenRouter and Vercel, none of them tracked surfaces."
+    sources:
+      - publisher: "Microsoft Community Hub"
+        title: "From model choice to your durable advantage: Build AI that keeps improving"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/from-model-choice-to-your-durable-advantage-build-ai-that-keeps-improving/4573609"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "Both are now in public preview in Foundry – find them in the Foundry model catalog."
+        supports: ["date", "lifecycle"]
+        note: "'Both' refers to the sentence before, which names MAI-Image-2.7 and MAI-Image-2.7-Flash. Read directly in a browser on 17 November 2026. The publication date is the page data's postTime, 2026-11-17T10:15:00-08:00; its lastEditTime, 07:30 the same day, precedes it. No Wayback lookup was run for this page."
+      - publisher: "Microsoft Community Hub"
+        title: "From model choice to your durable advantage: Build AI that keeps improving"
+        url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/from-model-choice-to-your-durable-advantage-build-ai-that-keeps-improving/4573609"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "MAI-Image-2.7 and MAI-Image-2.7-Flash bring sharper editing and more consistent image generation, helping brands keep the same visual identity from the first asset to the last."
+        supports: ["model"]
+      - publisher: "Microsoft AI"
+        title: "MAI Image 2.7: Frontier quality at a fraction of the cost"
+        url: "https://microsoft.ai/news/introducing-mai-image-2-7/"
+        primary: true
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "Both models are available in public preview through Microsoft Foundry and partners including fal, Genspark, OpenRouter, and Vercel."
+        supports: ["date", "model", "lifecycle"]
+        note: "The page's visible date is Nov 17, 2026 and its article:modified_time is 2026-11-17T18:41:14+00:00. No Wayback lookup was run for this page."
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, westcentralus, 2026-11-17T13:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/f0340d19460d3e94910b2a870e01f21fe6a49944/observations/arm/westcentralus/2026/11/2026-11-17T13-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-17"
+        published_at: "2026-11-17"
+        source_type: "other"
+        quote: "\"model_key\": \"MAI-Image-2.7@2026-11-02\","
+        supports: ["date", "model"]
+        note: "A first_seen_present observation with window_start 2026-11-17T07:30:00Z and window_end 2026-11-17T13:30:00Z; the same file carries the matching entry for MAI-Image-2.7-Flash@2026-11-02. Both read lifecycle_status Preview and lifecycle_portal Preview with a GlobalStandard SKU. Cited at its commit-pinned URL. Source type other because the URL is immutable."
+  - id: "openai-gpt6-2-astra-sol-2026-11-17"
+    kind: "availability"
+    date:
+      start: "2026-11-17"
+      precision: "day"
+    surface_id: "openai"
+    model_ids: ["gpt-6-2-astra", "gpt-6-2-sol"]
+    model_claim: "specific"
+    lifecycle: "ga"
+    exposure: "not_applicable"
+    confidence: "confirmed"
+    evidence_note: "OpenAI released GPT-6.2 Astra and GPT-6.2 Sol on 17 November 2026, in ChatGPT Work and Codex for Plus, Pro, Enterprise and Edu users and in the API as gpt-6.2-astra and gpt-6.2-sol, with the Ultrafast tier for both at launch. GPT-6.2 Astra is priced at $8 per million input tokens and $40 per million output tokens, 20% below GPT-6 Astra; GPT-6.2 Sol keeps GPT-6.1 Sol's prices. GitHub Copilot carried both the same day."
+    caveat: "One event on the umbrella surface because ChatGPT Work, Codex and the API moved together, following openai-gpt6-1-sol-2026-09-29. No stage word appears in either source; ga is the classification of an unqualified release, as for the earlier GPT-6 launches. The ChatGPT plan list names Plus, Pro, Enterprise and Edu and not Business. The launch post shows no visible dateline; the date rests on its embedded publicationDateText, OpenAI's news index ('Nov 17, 2026') and the API changelog entry headed Nov 17. The Microsoft Foundry arrival is not recorded as an event: it rests on a catalogue observation alone and is held as foundry-gpt6-2-arrival-2026-11. No Wayback lookup was run for either page."
+    sources:
+      - publisher: "OpenAI"
+        title: "Changelog | OpenAI API"
+        url: "https://developers.openai.com/api/docs/changelog"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-17"
+        source_type: "release_notes"
+        quote: "Use GPT-6.2 Astra for demanding reasoning and coding tasks, or GPT-6.2 Sol for everyday coding and agent workflows."
+        supports: ["date", "model", "lifecycle"]
+        note: "Entry headed Nov 17, tagged gpt-6.2-astra and gpt-6.2-sol, endpoints v1/responses and v1/chat/completions. Read directly on 19 November 2026. No archived_url: no Wayback lookup was run."
+      - publisher: "OpenAI"
+        title: "Introducing GPT-6.2 Astra and Sol"
+        url: "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+        primary: true
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-17"
+        source_type: "announcement"
+        quote: "Starting today, GPT-6.2 Astra and Sol are available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex."
+        supports: ["model", "lifecycle"]
+        note: "The page shows no visible dateline; its embedded publicationDateText begins 'November 17' and OpenAI's news index lists it under 'Nov 17, 2026'. The next sentence reads: 'Developers can also access gpt-6.2-astra and gpt-6.2-sol through the OpenAI API, with Ultrafast available for both models at launch.' Read directly in a browser on 19 November 2026."
 validation_backlog:
   - id: "m365-apps-fable5-suspension-window"
     state: "open"
@@ -20499,7 +21209,7 @@ validation_backlog:
     state: "open"
     working_claim: "The gpt-chat-latest alias endpoint in Microsoft Foundry was updated to route to GPT-5.6 Sol on or around 13 August 2026."
     reason: "gpt-chat-latest is a routing alias, not a distinct model: GPT-5.6 Sol's arrival in Microsoft Foundry is already recorded as foundry-gpt5-6-2026-07-09. The blog post, published 13 August 2026, confirms the alias is 'built on GPT-5.6 Sol' but names no versioned endpoint and states no effective date for the routing change — it is current-state documentation of a rolling alias. Without a dated, durable routing commitment there is no availability change to record; whether an alias re-point should ever be a milestone event is unsettled. Routing recorded on 28 October 2026 from the five versions the catalogue lists (2026-05-05, 2026-05-28, 2026-06-24, 2026-08-06 and 2026-10-07). Version 2026-05-05 routes to GPT-5.5 Instant, confirmed by Microsoft's 5 May post ('GPT-5.5 Instant (or Chat-latest in the API) begins rolling out in Microsoft Foundry today as GPT-chat-latest'). Versions 2026-05-28 and 2026-06-24: Microsoft does not say what they route to; OpenAI's changelog describes each chat-latest update as pointing to 'the latest Instant model currently used in ChatGPT', so an Instant model is inferred and not confirmed. Version 2026-08-06 routes to GPT-5.6 Sol, supported: the July and August roundup says 'gpt-chat-latest also moved to version 2026-08-06' and Microsoft's 13 August post says it is 'built on GPT-5.6 Sol'. Version 2026-10-07 routes to a GPT-6-level model, supported: Microsoft's 14 October post says it 'brings GPT-6-level intelligence', and does not name the model. gpt-chat-latest must never be registered as an alias of any one model, because its routing changes with each version."
-    target: "The post has now been read: published 2026-08-13, it confirms the 'built on GPT-5.6 Sol' claim verbatim, names no versioned endpoint (e.g. gpt-chat-latest-YYYY-MM-DD), and gives no effective date for the routing change. Remaining question: whether a rolling alias re-point is worth a kind: milestone event at month precision, or only a note on the existing foundry-gpt5-6-2026-07-09 event. If Microsoft later documents a dated, stable routing commitment for the alias, that would settle it. October 2026 pass: Microsoft's 14 October post on GPT-chat-latest again re-points the alias, now described as GPT-6-level, with no versioned endpoint and no effective date; OpenAI's own API changelog updated its chat-latest snapshot on 7 October; and the Learn models-sold-by-Azure page lists gpt-chat-latest as a new model in Preview. The question whether alias re-points deserve a milestone event stays open."
+    target: "The post has now been read: published 2026-08-13, it confirms the 'built on GPT-5.6 Sol' claim verbatim, names no versioned endpoint (e.g. gpt-chat-latest-YYYY-MM-DD), and gives no effective date for the routing change. Remaining question: whether a rolling alias re-point is worth a kind: milestone event at month precision, or only a note on the existing foundry-gpt5-6-2026-07-09 event. If Microsoft later documents a dated, stable routing commitment for the alias, that would settle it. October 2026 pass: Microsoft's 14 October post on GPT-chat-latest again re-points the alias, now described as GPT-6-level, with no versioned endpoint and no effective date; OpenAI's own API changelog updated its chat-latest snapshot on 7 October; and the Learn models-sold-by-Azure page lists gpt-chat-latest as a new model in Preview. The question whether alias re-points deserve a milestone event stays open. November 2026: the catalogue watcher saw versions 2026-05-05 and 2026-06-24 change to portal Retired between its runs of 19:30 UTC on 16 November and 01:30 UTC on 17 November (API lifecycleStatus still Preview, deprecation_inference 2026-11-17T00:00:00Z), and Microsoft's retirement schedule, read on 19 November, gives both versions the retirement date 2026-11-17; versions 2026-05-28, 2026-08-06 and 2026-10-07 remain, so the alias itself is not retired and no event is recorded."
     model_ids: ["gpt-5-6-sol", "gpt-5-5-instant"]
     surface_ids: ["microsoft-foundry"]
     sources:
@@ -21621,8 +22331,8 @@ validation_backlog:
   - id: "foundry-deepseek-v4-1-flash-1017-arrival-2026-11"
     state: "open"
     working_claim: "The dated snapshot DeepSeek-V4.1-Flash-1017 arrived in Microsoft Foundry in preview on 5 November 2026."
-    reason: "The catalogue watcher first saw DeepSeek-V4.1-Flash-1017 (API lifecycleStatus Preview, portal word Preview; GlobalStandard) in 21 regions between 2026-11-05T13:30Z and 19:30Z and in 11 more between 19:30Z and 2026-11-06T01:30Z. No Microsoft page names the -1017 snapshot. Learn's models-sold-directly-by-Azure page gained an unsuffixed DeepSeek-V4.1-Flash row between its captures of 5 November 01:16 UTC and 10 November 11:03 UTC, which may be the same change, and the retirement schedule names DeepSeek-V4.1-Flash only as the replacement for DeepSeek-V3.2. The unsuffixed model's preview arrival is already recorded (foundry-deepseek-v4-1-flash-2026-09-23)."
-    target: "A Microsoft post, schedule row or retrospective naming the 1017 snapshot; otherwise this stays an observation."
+    reason: "The catalogue watcher first saw DeepSeek-V4.1-Flash-1017 (API lifecycleStatus Preview, portal word Preview; GlobalStandard) in 21 regions between 2026-11-05T13:30Z and 19:30Z and in 11 more between 19:30Z and 2026-11-06T01:30Z. No Microsoft page names the -1017 snapshot. Learn's models-sold-directly-by-Azure page gained an unsuffixed DeepSeek-V4.1-Flash row between its captures of 5 November 01:16 UTC and 10 November 11:03 UTC, which may be the same change, and the retirement schedule names DeepSeek-V4.1-Flash only as the replacement for DeepSeek-V3.2. The unsuffixed model's preview arrival is already recorded (foundry-deepseek-v4-1-flash-2026-09-23). On 17 November 2026 Microsoft's Ignite post became the first Microsoft page to name the snapshot, as 'DeepSeek V4.1-Flash-1017' among the Baseten-optimised models of Baseten on Microsoft Foundry, in public preview. That is a second, Baseten-served offer dated twelve days after the watcher's sighting; it does not date or explain the 5 November listing, so the item stays open."
+    target: "A Microsoft post, schedule row or retrospective that dates the 1017 snapshot's first arrival in Foundry, or says which offer the 5 November listing was; otherwise this stays an observation."
     model_ids: ["deepseek-v4-1-flash-1017"]
     surface_ids: ["microsoft-foundry"]
     sources:
@@ -21649,8 +22359,8 @@ validation_backlog:
   - id: "foundry-muse-spark-1-3-listing-2026-10"
     state: "open"
     working_claim: "Meta's Muse Spark 1.3 was listed in the Microsoft Foundry Models API in preview for about a week from 30-31 October 2026 and then withdrawn."
-    reason: "The catalogue watcher saw muse-spark-1.3 (format Meta, API lifecycleStatus Preview, portal word Preview, GlobalStandard, no retirement date set) appear in 32 regions between 2026-10-30T19:30Z and 2026-10-31T01:30Z, and disappear from 30 of them between 2026-11-06T19:30Z and 2026-11-07T01:30Z, from centralus by 07:30Z and from westcentralus between 2026-11-07T19:30Z and 2026-11-08T01:30Z, each confirmed over four absent runs. Absence is weak: the listing is two subscriptions' view. No Microsoft post, Learn page or schedule row mentions the model, and Meta's posts name no Microsoft surface. Neither an arrival nor a retirement is recorded."
-    target: "Any Microsoft page naming Muse Spark 1.3; if it returns to the listing, the next observation."
+    reason: "The catalogue watcher saw muse-spark-1.3 (format Meta, API lifecycleStatus Preview, portal word Preview, GlobalStandard, no retirement date set) appear in 32 regions between 2026-10-30T19:30Z and 2026-10-31T01:30Z, and disappear from 30 of them between 2026-11-06T19:30Z and 2026-11-07T01:30Z, from centralus by 07:30Z and from westcentralus between 2026-11-07T19:30Z and 2026-11-08T01:30Z, each confirmed over four absent runs. Absence is weak: the listing is two subscriptions' view. No Microsoft post, Learn page or schedule row mentions the model, and Meta's posts name no Microsoft surface. Neither an arrival nor a retirement is recorded. On 17 November 2026 Microsoft's Ignite post named the model for the first time, saying Muse Wonder, Muse Spark 1.3 and Muse Ember are 'coming soon to Microsoft Foundry' (foundry-muse-announced-2026-11-17). That is a statement of future availability, which fits a listing that appeared early and was pulled but does not say so; the item stays open for the arrival."
+    target: "A Microsoft page dating Muse Spark 1.3's arrival in Foundry or explaining the October listing; if it returns to the listing, the next observation."
     model_ids: ["muse-spark-1-3"]
     surface_ids: ["microsoft-foundry"]
     sources:
@@ -21981,5 +22691,37 @@ validation_backlog:
     working_claim: "The window from 29 October to 10 November 2026 was swept on 11 November 2026 across the sources listed here; research_cutoff moved to 10 November for the 11 November triage batch."
     reason: "Events and backlog items were added from candidate issues #167, #171, #173, #181, #182 and #183 and the catalogue observation issues #155 to #189, and from a pass over: the GitHub Copilot changelog month archives for October and November; the Microsoft Foundry blog feed back to 27 October; the October 2026 Foundry retrospective; the Microsoft 365 Copilot blog and Copilot Studio blog; the Microsoft 365 Copilot release notes and Copilot Studio what's-new page; Microsoft's retirement schedule, Claude models and models-sold-directly-by-Azure pages with their Wayback captures; and the OpenAI, Anthropic, Google, Mistral, DeepSeek, xAI, Cohere, Moonshot and Meta release pages. research_cutoff moved from 2026-10-28 to 2026-11-10. This was a wider pass than earlier batches but it is still one day's reading: absence of other events in the window is weak evidence, not proof."
     target: "Known gaps, to carry forward. Not found, so not recorded: Claude Fable 5.2, Claude Mythos 5.2, Gemini 4 Carbon or GPT-6.1 Terra in Microsoft 365 Copilot, Copilot Cowork or Copilot Studio; the Cowork picker page (updated_at 2026-11-05) lists Claude Fable 5.1 (Frontier) and no Fable 5.2 or GPT-6.1 Terra, has no Wayback capture at all, and so cannot be bracketed, and the Copilot Studio what's-new page has no October or November section yet. Seen and deliberately not recorded: Meta's Muse Ember (9 November 2026, Meta Model API, no Microsoft surface); OpenAI's GPT-6 Rosalind (30 October, the GPT-6 Astra weights under trusted access); OpenAI's deprecation notices for gpt-image-2 (10 November, removal 10 February 2027) and gpt-5.5-cyber-preview (5 November); Google's Gemini Omni 1.2 Flash (5 November, a video model with no Microsoft surface) and its deprecations of Gemini 2.5 Pro and 2.5 Flash (2 November, routing from 1 December); Anthropic's deprecation of fast mode for Claude Opus 4.8 (30 October, removal 30 November); Sonnet 5.5 behind Copilot in PowerPoint ('rolled out in October', no day); GitHub Copilot Fusion (28 October, a router, not a model); Mistral OCR 4's earlier Foundry stage before its now-recorded 12–13 November GA transition (foundry-mistral-ocr-4-0-ga-2026-11-12). Endings falling due after this cutoff, to verify in the next batch rather than assume: GitHub Copilot's removal of Claude Opus 4.8, Claude Opus 5 and GPT-5.6 Terra on 16 November; Foundry's o3, o3-mini and o4-mini on 19 November; the MAI-Image-2.5 family, where the API says 24 November and Learn says 1 October; Copilot Studio on 12, 26 and 30 November and 2 December (studio-primary-model-retirements-2026-11, studio-computer-use-model-retirement-2026-11-26); Claude Sonnet 4.5 in Foundry on 30 November or 1 December (foundry-claude-4-5-retirement-dates-2026-11). Not read: Azure Updates, the Microsoft Copilot blog beyond its ten newest posts, the Foundry catalogue portal pages. CDX returned no Wayback capture for any of the six Foundry blog posts cited in this batch; they need captures backfilled. Everything named in the earlier sweep items remains open. Further endings falling due, found while registering the parked families: the deprecation of Cohere Embed v3 in Foundry on 15 November, the retirement of Llama 4 Maverick on 19 November, and the Fireworks-served MiniMax M3 and Nemotron pay-per-token listings on 24 November 2026."
+    model_ids: []
+    surface_ids: []
+  - id: "foundry-gpt6-2-arrival-2026-11"
+    state: "open"
+    working_claim: "GPT-6.2 Astra and GPT-6.2 Sol reached Microsoft Foundry on 17 November 2026, OpenAI's release day, with GPT-6.2 Sol generally available and GPT-6.2 Astra listed as Preview for some hours before it became generally available."
+    reason: "The only dated evidence is the catalogue watcher, and a listing is not documentation of a first date. In australiaeast the watcher first saw gpt-6.2-astra@2026-11-17 (API lifecycleStatus Preview, portal Preview) and gpt-6.2-sol@2026-11-17 (API GenerallyAvailable, portal Generally Available) between its runs of 13:30 and 19:30 UTC on 17 November; in 27 regions gpt-6.2-astra then changed from Preview to GenerallyAvailable between 19:30 UTC on 17 November and 01:30 UTC on 18 November, its retirement date moving from 2027-02-17 to 2027-11-17 in the same window. Microsoft's Learn page for models sold by Azure lists both as new, with the version string 2026-11-17, which is a build identifier and dates nothing. No Microsoft launch post was found. Whether the Preview reading of GPT-6.2 Astra was a real stage or a listing still being populated is unknown; both readings are kept."
+    target: "A dated Microsoft post, Learn revision or Foundry what's-new entry for GPT-6.2 in Foundry, which would promote this to an event with the observation as corroboration. Searched on 19 November 2026 and found nothing: the Microsoft Foundry blog on Community Hub (front page and a search for GPT-6.2, newest first), the Azure blog search for GPT-6.2, and the Foundry docs what's-new page, which still covers August. The retirement schedule read the same day has no gpt-6.2 row. OpenAI's release (openai-gpt6-2-astra-sol-2026-11-17) and the GitHub Copilot arrival (github-gpt6-2-astra-sol-2026-11-17) are recorded."
+    model_ids: ["gpt-6-2-astra", "gpt-6-2-sol"]
+    surface_ids: ["microsoft-foundry"]
+    sources:
+      - publisher: "CtrlAltBen Frontier Model Tracker"
+        title: "Catalogue observation, Foundry Models API, australiaeast, 2026-11-17T19:30:00Z"
+        url: "https://raw.githubusercontent.com/Bibbleq/frontier-model-tracker/65eeb5bc8c9a93851eafd7945d75d7ca5b97fe69/observations/arm/australiaeast/2026/11/2026-11-17T19-30-00Z.json"
+        primary: false
+        retrieved_at: "2026-11-19"
+        published_at: "2026-11-17"
+        source_type: "documentation"
+        quote: "\"model_key\": \"gpt-6.2-astra@2026-11-17\","
+        note: "Two first_seen_present observations, for gpt-6.2-astra@2026-11-17 and gpt-6.2-sol@2026-11-17, each with window_start 2026-11-17T13:30:00Z and window_end 2026-11-17T19:30:00Z. Cited at its commit-pinned URL. The later stage change is in the same region's file for 2026-11-18T01:30:00Z, commit 0231ebeeac8b406d0789c6e248fce2a9f0368ffd."
+      - publisher: "Microsoft Learn"
+        title: "Foundry Models sold by Azure - Microsoft Foundry"
+        url: "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure"
+        primary: true
+        retrieved_at: "2026-11-19"
+        source_type: "documentation"
+        quote: "GPT-6.2 series"
+        note: "Row read on 19 November 2026: 'GPT-6.2 series | NEW gpt-6.2-astra, NEW gpt-6.2-sol'. Current-state documentation, not a date: the page's updated_at metadata read 2026-10-29T22:16:00Z, which predates the models and so cannot be trusted for this row. No Wayback lookup was run."
+  - id: "sweep-2026-11-11-to-11-17"
+    state: "open"
+    working_claim: "The window from 11 to 17 November 2026 was read only as far as the open candidate and observation issues of 19 November required; research_cutoff moved to 17 November for that batch."
+    reason: "Events and backlog items were added from Microsoft's Ignite post of 17 November, candidate issues #197, #199 and #201 and the catalogue observation issues #195 to #210, with the sibling entries those led to in the GitHub Copilot changelog's November archive, the OpenAI news index and API changelog, the Gemini API release notes and Microsoft's retirement schedule. research_cutoff moved from 2026-11-10 to 2026-11-17. This was triage of what had been filed, not a sweep: absence of other events in the window is not evidence."
+    target: "A full pass over 11 to 17 November. Seen and deliberately not recorded: Google's Gemini Decision 1 (11 November, the Gemini Decisions API, no Microsoft surface; candidate #200); GitHub's 'models deprecated on November 16, 2026' changelog entry, which was not read, so the retirements announced in October are unconfirmed here; GitHub Copilot Fusion's 17 November update (a router, not a model); Azure Content Understanding's support for GPT-5.6, GPT-6 and GPT-6.1 and its agentic mode (features of a Foundry tool, not a tracked surface; candidates #203 and #205); retirement dates moving by a day or two in the Foundry Models API for DeepSeek-V4-Flash, DeepSeek-V4-Pro, Cohere Embed v3 and Cohere Command A; and the retirement of gpt-chat-latest versions 2026-05-05 and 2026-06-24, noted on foundry-gpt-chat-latest-gpt5-6-sol-2026-08. Dated after the cutoff and left for the next batch: Gemini 4 Neon in GitHub Copilot (18 November) and GPT-image-2.6 Flare and Sunburst in Microsoft Foundry (18 November). Not looked for at all: Fable 5.2, Mythos 5.2, Gemini 4 Hydrogen, Gemini 4 Carbon or GPT-6.2 in Microsoft 365 Copilot, Copilot Cowork or Copilot Studio; Anthropic, Mistral, DeepSeek, xAI, Cohere and Moonshot release pages; and the rest of the Ignite announcements. No Wayback lookups were run for any source added in this batch."
     model_ids: []
     surface_ids: []
