@@ -157,6 +157,7 @@ mistral-large-3,Mistral Large 3,Mistral AI,text,frontier,mistral,mistral-3,,,Mis
 mistral-medium-3,Mistral Medium 3,Mistral AI,text,frontier,mistral,mistral-3,,,mistral-medium-2505,,,2,,
 mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,text,frontier,mistral,mistral-3,,,Medium 3.5 | mistral-medium-3-5,,,2,,
 mistral-large-4,Mistral Large 4,Mistral AI,text,frontier,mistral,mistral-4,,,ML4 | Mistral Large 4 Preview | mistral-large-4-latest | Le Chonk,,,2,,
+mistral-ocr-4-0,Mistral OCR 4,Mistral AI,image,extended,,,,,mistral-ocr-4-0,,,1,,
 mistral-large-24-02,Mistral Large (24.02),Mistral AI,text,extended,,,,,Mistral-large | mistral-large-2402 | Mistral-large (2402),,,2,,
 mistral-small-3-1,Mistral Small 3.1,Mistral AI,text,extended,,,,,mistral-small-2503 | Mistral Small 3.1 (25.03),,,3,,
 codestral-25-01,Codestral 25.01,Mistral AI,text,extended,,,,,Codestral-2501 | codestral-2501,,,2,,

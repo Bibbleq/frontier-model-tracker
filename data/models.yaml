@@ -1288,6 +1288,13 @@ models:
     generation: mistral-4
     aliases: ["ML4", "Mistral Large 4 Preview", "mistral-large-4-latest", "Le Chonk"]
     note: "A 1-trillion-parameter mixture-of-experts model with 52 billion active parameters per Mistral's launch page; public preview API on Mistral Studio from 6 October 2026, with open weights released on 29 October 2026."
+  - id: mistral-ocr-4-0
+    display_name: "Mistral OCR 4"
+    vendor: Mistral AI
+    modality: image
+    scope: extended
+    aliases: ["mistral-ocr-4-0"]
+    note: "Mistral's document OCR model, registered from the Foundry catalogue, where Microsoft names it the replacement for mistral-document-ai-2512. Extended scope: a specialist model, not a general model-picker one. No vendor release event is recorded."
   - id: mistral-large-24-02
     display_name: "Mistral Large (24.02)"
     vendor: Mistral AI

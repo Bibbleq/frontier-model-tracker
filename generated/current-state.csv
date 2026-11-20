@@ -438,6 +438,7 @@ mistral-medium-3,Mistral Medium 3,Mistral AI,azure-ai-foundry,Azure AI Foundry,m
 mistral-medium-3,Mistral Medium 3,Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral-medium-3-2025-05-07,2025-05-07,day,2026-11-17,,0
 mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,mistral,Mistral,,public_preview,not_applicable,false,mistral-medium3-5-2026-04-28,2026-04-28,day,2026-11-17,,1
 mistral-medium-3-5,Mistral Medium 3.5,Mistral AI,copilot-studio,Microsoft Copilot Studio,microsoft | copilot | studio,public_preview,selectable,false,studio-mistral-medium3-5-2026-05-28,2026-05-28,day,2026-11-17,,0
+mistral-ocr-4-0,Mistral OCR 4,Mistral AI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,ga,catalogue,false,foundry-mistral-ocr-4-0-ga-2026-11-12,2026-11-12,day,2026-11-17,,0
 mistral-small-3-1,Mistral Small 3.1,Mistral AI,microsoft-foundry,Microsoft Foundry,microsoft | foundry,deprecated,catalogue,false,foundry-mistral-small-3-1-deprecated-2026-10-09,2026-10-09,day,2026-11-17,,1
 mistral-small-3-1,Mistral Small 3.1,Mistral AI,mistral,Mistral,,ga,not_applicable,false,mistral-small-3-1-2025-03-17,2025-03-17,day,2026-11-17,,0
 muse-ember,Muse Ember,Meta,meta,Meta,,ga,not_applicable,false,meta-muse-ember-2026-11-09,2026-11-09,day,2026-11-17,,0
