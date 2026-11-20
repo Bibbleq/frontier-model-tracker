@@ -1043,6 +1043,18 @@ gemini-4-carbon,Gemini 4 Carbon,Google,github_copilot,any_exposure,google-gemini
 gemini-4-carbon,Gemini 4 Carbon,Google,github_copilot,selectable_or_default,google-gemini4-carbon-fairwind-2026-10-28,2026-10-28,limited_preview,github-gemini4-carbon-2026-11-10,2026-11-10,github-copilot,selectable,ga,9,13,rollout_start,supported
 gemini-4-carbon,Gemini 4 Carbon,Google,foundry,any_exposure,google-gemini4-carbon-fairwind-2026-10-28,2026-10-28,limited_preview,,,,,,,,not_recorded,
 gemini-4-carbon,Gemini 4 Carbon,Google,foundry,selectable_or_default,google-gemini4-carbon-fairwind-2026-10-28,2026-10-28,limited_preview,,,,,,,,not_recorded,
+gemini-4-hydrogen,Gemini 4 Hydrogen,Google,microsoft,any_exposure,google-gemini4-hydrogen-2026-11-12,2026-11-12,ga,github-gemini4-hydrogen-2026-11-13,2026-11-13,github-copilot,selectable,ga,1,1,rollout_start,confirmed
+gemini-4-hydrogen,Gemini 4 Hydrogen,Google,microsoft,selectable_or_default,google-gemini4-hydrogen-2026-11-12,2026-11-12,ga,github-gemini4-hydrogen-2026-11-13,2026-11-13,github-copilot,selectable,ga,1,1,rollout_start,confirmed
+gemini-4-hydrogen,Gemini 4 Hydrogen,Google,copilot,any_exposure,google-gemini4-hydrogen-2026-11-12,2026-11-12,ga,github-gemini4-hydrogen-2026-11-13,2026-11-13,github-copilot,selectable,ga,1,1,rollout_start,confirmed
+gemini-4-hydrogen,Gemini 4 Hydrogen,Google,copilot,selectable_or_default,google-gemini4-hydrogen-2026-11-12,2026-11-12,ga,github-gemini4-hydrogen-2026-11-13,2026-11-13,github-copilot,selectable,ga,1,1,rollout_start,confirmed
+gemini-4-hydrogen,Gemini 4 Hydrogen,Google,m365,any_exposure,google-gemini4-hydrogen-2026-11-12,2026-11-12,ga,,,,,,,,not_recorded,
+gemini-4-hydrogen,Gemini 4 Hydrogen,Google,m365,selectable_or_default,google-gemini4-hydrogen-2026-11-12,2026-11-12,ga,,,,,,,,not_recorded,
+gemini-4-hydrogen,Gemini 4 Hydrogen,Google,studio,any_exposure,google-gemini4-hydrogen-2026-11-12,2026-11-12,ga,,,,,,,,not_recorded,
+gemini-4-hydrogen,Gemini 4 Hydrogen,Google,studio,selectable_or_default,google-gemini4-hydrogen-2026-11-12,2026-11-12,ga,,,,,,,,not_recorded,
+gemini-4-hydrogen,Gemini 4 Hydrogen,Google,github_copilot,any_exposure,google-gemini4-hydrogen-2026-11-12,2026-11-12,ga,github-gemini4-hydrogen-2026-11-13,2026-11-13,github-copilot,selectable,ga,1,1,rollout_start,confirmed
+gemini-4-hydrogen,Gemini 4 Hydrogen,Google,github_copilot,selectable_or_default,google-gemini4-hydrogen-2026-11-12,2026-11-12,ga,github-gemini4-hydrogen-2026-11-13,2026-11-13,github-copilot,selectable,ga,1,1,rollout_start,confirmed
+gemini-4-hydrogen,Gemini 4 Hydrogen,Google,foundry,any_exposure,google-gemini4-hydrogen-2026-11-12,2026-11-12,ga,,,,,,,,not_recorded,
+gemini-4-hydrogen,Gemini 4 Hydrogen,Google,foundry,selectable_or_default,google-gemini4-hydrogen-2026-11-12,2026-11-12,ga,,,,,,,,not_recorded,
 glm-5-3,GLM-5.3,Z.ai,microsoft,any_exposure,,,,foundry-glm-5-3-2026-11-17,2026-11-17,microsoft-foundry,catalogue,public_preview,,,unknown_no_baseline,
 glm-5-3,GLM-5.3,Z.ai,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline,
 glm-5-3,GLM-5.3,Z.ai,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline,
@@ -1499,6 +1511,30 @@ gpt-6-1-terra,GPT-6.1 Terra,OpenAI,github_copilot,any_exposure,openai-gpt6-1-ter
 gpt-6-1-terra,GPT-6.1 Terra,OpenAI,github_copilot,selectable_or_default,openai-gpt6-1-terra-2026-10-26,2026-10-26,ga,github-gpt6-1-terra-2026-10-26,2026-10-26,github-copilot,selectable,ga,0,0,rollout_start,confirmed
 gpt-6-1-terra,GPT-6.1 Terra,OpenAI,foundry,any_exposure,openai-gpt6-1-terra-2026-10-26,2026-10-26,ga,foundry-gpt6-1-terra-2026-10-26,2026-10-26,microsoft-foundry,catalogue,ga,0,0,exact,confirmed
 gpt-6-1-terra,GPT-6.1 Terra,OpenAI,foundry,selectable_or_default,openai-gpt6-1-terra-2026-10-26,2026-10-26,ga,,,,,,,,not_recorded,
+gpt-6-2-astra,GPT-6.2 Astra,OpenAI,microsoft,any_exposure,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,github-gpt6-2-astra-sol-2026-11-17,2026-11-17,github-copilot,selectable,ga,0,0,rollout_start,confirmed
+gpt-6-2-astra,GPT-6.2 Astra,OpenAI,microsoft,selectable_or_default,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,github-gpt6-2-astra-sol-2026-11-17,2026-11-17,github-copilot,selectable,ga,0,0,rollout_start,confirmed
+gpt-6-2-astra,GPT-6.2 Astra,OpenAI,copilot,any_exposure,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,github-gpt6-2-astra-sol-2026-11-17,2026-11-17,github-copilot,selectable,ga,0,0,rollout_start,confirmed
+gpt-6-2-astra,GPT-6.2 Astra,OpenAI,copilot,selectable_or_default,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,github-gpt6-2-astra-sol-2026-11-17,2026-11-17,github-copilot,selectable,ga,0,0,rollout_start,confirmed
+gpt-6-2-astra,GPT-6.2 Astra,OpenAI,m365,any_exposure,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,,,,,,,,not_recorded,
+gpt-6-2-astra,GPT-6.2 Astra,OpenAI,m365,selectable_or_default,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,,,,,,,,not_recorded,
+gpt-6-2-astra,GPT-6.2 Astra,OpenAI,studio,any_exposure,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,,,,,,,,not_recorded,
+gpt-6-2-astra,GPT-6.2 Astra,OpenAI,studio,selectable_or_default,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,,,,,,,,not_recorded,
+gpt-6-2-astra,GPT-6.2 Astra,OpenAI,github_copilot,any_exposure,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,github-gpt6-2-astra-sol-2026-11-17,2026-11-17,github-copilot,selectable,ga,0,0,rollout_start,confirmed
+gpt-6-2-astra,GPT-6.2 Astra,OpenAI,github_copilot,selectable_or_default,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,github-gpt6-2-astra-sol-2026-11-17,2026-11-17,github-copilot,selectable,ga,0,0,rollout_start,confirmed
+gpt-6-2-astra,GPT-6.2 Astra,OpenAI,foundry,any_exposure,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,,,,,,,,unknown_open_research,
+gpt-6-2-astra,GPT-6.2 Astra,OpenAI,foundry,selectable_or_default,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,,,,,,,,unknown_open_research,
+gpt-6-2-sol,GPT-6.2 Sol,OpenAI,microsoft,any_exposure,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,github-gpt6-2-astra-sol-2026-11-17,2026-11-17,github-copilot,selectable,ga,0,0,rollout_start,confirmed
+gpt-6-2-sol,GPT-6.2 Sol,OpenAI,microsoft,selectable_or_default,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,github-gpt6-2-astra-sol-2026-11-17,2026-11-17,github-copilot,selectable,ga,0,0,rollout_start,confirmed
+gpt-6-2-sol,GPT-6.2 Sol,OpenAI,copilot,any_exposure,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,github-gpt6-2-astra-sol-2026-11-17,2026-11-17,github-copilot,selectable,ga,0,0,rollout_start,confirmed
+gpt-6-2-sol,GPT-6.2 Sol,OpenAI,copilot,selectable_or_default,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,github-gpt6-2-astra-sol-2026-11-17,2026-11-17,github-copilot,selectable,ga,0,0,rollout_start,confirmed
+gpt-6-2-sol,GPT-6.2 Sol,OpenAI,m365,any_exposure,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,,,,,,,,not_recorded,
+gpt-6-2-sol,GPT-6.2 Sol,OpenAI,m365,selectable_or_default,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,,,,,,,,not_recorded,
+gpt-6-2-sol,GPT-6.2 Sol,OpenAI,studio,any_exposure,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,,,,,,,,not_recorded,
+gpt-6-2-sol,GPT-6.2 Sol,OpenAI,studio,selectable_or_default,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,,,,,,,,not_recorded,
+gpt-6-2-sol,GPT-6.2 Sol,OpenAI,github_copilot,any_exposure,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,github-gpt6-2-astra-sol-2026-11-17,2026-11-17,github-copilot,selectable,ga,0,0,rollout_start,confirmed
+gpt-6-2-sol,GPT-6.2 Sol,OpenAI,github_copilot,selectable_or_default,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,github-gpt6-2-astra-sol-2026-11-17,2026-11-17,github-copilot,selectable,ga,0,0,rollout_start,confirmed
+gpt-6-2-sol,GPT-6.2 Sol,OpenAI,foundry,any_exposure,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,,,,,,,,unknown_open_research,
+gpt-6-2-sol,GPT-6.2 Sol,OpenAI,foundry,selectable_or_default,openai-gpt6-2-astra-sol-2026-11-17,2026-11-17,ga,,,,,,,,unknown_open_research,
 gpt-6-astra,GPT-6 Astra,OpenAI,microsoft,any_exposure,openai-gpt6-astra-2026-09-03,2026-09-03,ga,foundry-gpt6-astra-2026-09-03,2026-09-03,microsoft-foundry,catalogue,ga,0,0,rollout_start,confirmed
 gpt-6-astra,GPT-6 Astra,OpenAI,microsoft,selectable_or_default,openai-gpt6-astra-2026-09-03,2026-09-03,ga,cowork-gpt6-astra-2026-09-04,2026-09-04,m365-cowork,selectable,ga,1,1,rollout_start,confirmed
 gpt-6-astra,GPT-6 Astra,OpenAI,copilot,any_exposure,openai-gpt6-astra-2026-09-03,2026-09-03,ga,cowork-gpt6-astra-2026-09-04,2026-09-04,m365-cowork,selectable,ga,1,1,rollout_start,confirmed
@@ -2615,18 +2651,18 @@ mistral-small-3-1,Mistral Small 3.1,Mistral AI,github_copilot,any_exposure,mistr
 mistral-small-3-1,Mistral Small 3.1,Mistral AI,github_copilot,selectable_or_default,mistral-small-3-1-2025-03-17,2025-03-17,ga,,,,,,,,not_recorded,
 mistral-small-3-1,Mistral Small 3.1,Mistral AI,foundry,any_exposure,mistral-small-3-1-2025-03-17,2025-03-17,ga,foundry-mistral-small-3-1-2025-03-17,2025-03-17,azure-ai-foundry,catalogue,ga,0,8,range,supported
 mistral-small-3-1,Mistral Small 3.1,Mistral AI,foundry,selectable_or_default,mistral-small-3-1-2025-03-17,2025-03-17,ga,,,,,,,,unknown_open_research,
-muse-ember,Muse Ember,Meta,microsoft,any_exposure,,,,,,,,,,,unknown_no_baseline,
-muse-ember,Muse Ember,Meta,microsoft,selectable_or_default,,,,,,,,,,,unknown_no_baseline,
-muse-ember,Muse Ember,Meta,copilot,any_exposure,,,,,,,,,,,unknown_no_baseline,
-muse-ember,Muse Ember,Meta,copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline,
-muse-ember,Muse Ember,Meta,m365,any_exposure,,,,,,,,,,,unknown_no_baseline,
-muse-ember,Muse Ember,Meta,m365,selectable_or_default,,,,,,,,,,,unknown_no_baseline,
-muse-ember,Muse Ember,Meta,studio,any_exposure,,,,,,,,,,,unknown_no_baseline,
-muse-ember,Muse Ember,Meta,studio,selectable_or_default,,,,,,,,,,,unknown_no_baseline,
-muse-ember,Muse Ember,Meta,github_copilot,any_exposure,,,,,,,,,,,unknown_no_baseline,
-muse-ember,Muse Ember,Meta,github_copilot,selectable_or_default,,,,,,,,,,,unknown_no_baseline,
-muse-ember,Muse Ember,Meta,foundry,any_exposure,,,,,,,,,,,unknown_no_baseline,
-muse-ember,Muse Ember,Meta,foundry,selectable_or_default,,,,,,,,,,,unknown_no_baseline,
+muse-ember,Muse Ember,Meta,microsoft,any_exposure,meta-muse-ember-2026-11-09,2026-11-09,ga,,,,,,,,not_recorded,
+muse-ember,Muse Ember,Meta,microsoft,selectable_or_default,meta-muse-ember-2026-11-09,2026-11-09,ga,,,,,,,,not_recorded,
+muse-ember,Muse Ember,Meta,copilot,any_exposure,meta-muse-ember-2026-11-09,2026-11-09,ga,,,,,,,,not_recorded,
+muse-ember,Muse Ember,Meta,copilot,selectable_or_default,meta-muse-ember-2026-11-09,2026-11-09,ga,,,,,,,,not_recorded,
+muse-ember,Muse Ember,Meta,m365,any_exposure,meta-muse-ember-2026-11-09,2026-11-09,ga,,,,,,,,not_recorded,
+muse-ember,Muse Ember,Meta,m365,selectable_or_default,meta-muse-ember-2026-11-09,2026-11-09,ga,,,,,,,,not_recorded,
+muse-ember,Muse Ember,Meta,studio,any_exposure,meta-muse-ember-2026-11-09,2026-11-09,ga,,,,,,,,not_recorded,
+muse-ember,Muse Ember,Meta,studio,selectable_or_default,meta-muse-ember-2026-11-09,2026-11-09,ga,,,,,,,,not_recorded,
+muse-ember,Muse Ember,Meta,github_copilot,any_exposure,meta-muse-ember-2026-11-09,2026-11-09,ga,,,,,,,,not_recorded,
+muse-ember,Muse Ember,Meta,github_copilot,selectable_or_default,meta-muse-ember-2026-11-09,2026-11-09,ga,,,,,,,,not_recorded,
+muse-ember,Muse Ember,Meta,foundry,any_exposure,meta-muse-ember-2026-11-09,2026-11-09,ga,,,,,,,,not_recorded,
+muse-ember,Muse Ember,Meta,foundry,selectable_or_default,meta-muse-ember-2026-11-09,2026-11-09,ga,,,,,,,,not_recorded,
 muse-glimmer,Muse Glimmer,Meta,microsoft,any_exposure,meta-muse-glimmer-2026-08-10,2026-08-10,ga,,,,,,,,unknown_open_research,
 muse-glimmer,Muse Glimmer,Meta,microsoft,selectable_or_default,meta-muse-glimmer-2026-08-10,2026-08-10,ga,,,,,,,,unknown_open_research,
 muse-glimmer,Muse Glimmer,Meta,copilot,any_exposure,meta-muse-glimmer-2026-08-10,2026-08-10,ga,,,,,,,,not_recorded,

@@ -773,6 +773,18 @@ models:
     generation: gpt-6
     aliases: ["gpt-6.1-terra", "GPT 6.1 Terra"]
     note: "Released 26 October 2026. OpenAI calls it a significant step up from GPT-5.6 Terra, priced 50% below GPT-5.6 Terra and GPT-6.1 Sol; no supersedes link is recorded because GitHub's 16 November deprecation of GPT-5.6 Terra names GPT-6.1 Sol or GPT-6 Luna, not Terra, as the alternative. No family is declared, matching gpt-6-sol."
+  - id: gpt-6-2-astra
+    display_name: "GPT-6.2 Astra"
+    vendor: OpenAI
+    generation: gpt-6
+    aliases: ["gpt-6.2-astra", "GPT 6.2 Astra"]
+    note: "Released 17 November 2026 with GPT-6.2 Sol. OpenAI calls it its new frontier model, priced 20% below GPT-6 Astra. No family is declared, matching gpt-6-sol."
+  - id: gpt-6-2-sol
+    display_name: "GPT-6.2 Sol"
+    vendor: OpenAI
+    generation: gpt-6
+    aliases: ["gpt-6.2-sol", "GPT 6.2 Sol"]
+    note: "Released 17 November 2026 with GPT-6.2 Astra, at GPT-6.1 Sol's API prices. No family is declared, matching gpt-6-sol."
   - id: gpt-6-luna
     display_name: "GPT-6 Luna"
     vendor: OpenAI
@@ -1101,6 +1113,12 @@ models:
     generation: gemini-4
     aliases: ["gemini-4-carbon"]
     note: "Google's second Gemini 4 model; announced 28 October 2026 with access phased through the Fairwind Program, generally available in the Gemini API from 10 November 2026."
+  - id: gemini-4-hydrogen
+    display_name: "Gemini 4 Hydrogen"
+    vendor: Google
+    generation: gemini-4
+    aliases: ["gemini-4-hydrogen"]
+    note: "Google's third Gemini 4 model, built for fast, efficient agentic execution and offered on every tier including free; generally available in the Gemini API from 12 November 2026. GitHub calls it Google's latest Flash model and names it as the alternative to Gemini 3.8 Flash; no supersedes link is recorded because Google does not state one."
   - id: nano-banana-2-1
     display_name: "Nano Banana 2.1"
     vendor: Google
@@ -1440,7 +1458,7 @@ models:
     display_name: "Muse Ember"
     vendor: Meta
     aliases: ["muse-ember-1.0"]
-    note: "Meta's smallest Muse model, which Microsoft's Ignite post of 17 November 2026 describes as the high-efficiency option beside Muse Wonder and Muse Spark 1.3. Registered so that Microsoft's announcement that it is coming to Foundry can name it (foundry-muse-announced-2026-11-17). No generation: it belongs to neither the Muse Spark nor the Muse Wonder generation. No vendor release event is recorded yet; Meta's own launch is an open candidate."
+    note: "Meta's smallest Muse model, which Microsoft's Ignite post of 17 November 2026 describes as the high-efficiency option beside Muse Wonder and Muse Spark 1.3. Registered so that Microsoft's announcement that it is coming to Foundry can name it (foundry-muse-announced-2026-11-17). No generation: it belongs to neither the Muse Spark nor the Muse Wonder generation. Meta's own release is meta-muse-ember-2026-11-09."
 
   # ------------------------------------------------------------- Z.ai
   - id: glm-5-3
