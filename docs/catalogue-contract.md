@@ -177,7 +177,7 @@ this contract.
 
 | Authorised | Interrupted run | Cause | Files replaced | Replacing commit |
 | --- | --- | --- | --- | --- |
-| 20 November 2026 | `2026-11-19T01:30:00Z`, source `arm` | The run reached the watcher host's ten-minute limit after polling and was stopped before it wrote files. The chain stopped replaying in 32 regions from the files of `2026-11-19T07:30:00Z`. | In each affected region, the first observation file after the interrupted run: the `2026-11-19T07-30-00Z` file, or the `2026-11-19T13-30-00Z` or `2026-11-19T19-30-00Z` file where the region has no earlier one. | Recorded when the replacement lands. |
+| 20 November 2026 | `2026-11-19T01:30:00Z`, source `arm` | The run reached the watcher host's ten-minute limit after polling and was stopped before it wrote files. The chain stopped replaying in 32 regions from the files of `2026-11-19T07:30:00Z`. | In each affected region, the first observation file after the interrupted run: the `2026-11-19T07-30-00Z` file, or the `2026-11-19T13-30-00Z` or `2026-11-19T19-30-00Z` file where the region has no earlier one. | [`95005ac`](https://github.com/Bibbleq/frontier-model-tracker/commit/95005ac), the snapshot of `2026-11-20T07:30:00Z`: 32 files replaced, 445 changes added, the chain replays. |
 
 ## The derived catalogue
 
