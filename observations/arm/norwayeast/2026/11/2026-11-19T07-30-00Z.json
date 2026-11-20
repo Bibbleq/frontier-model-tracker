@@ -133,6 +133,1097 @@
   ],
   "changes": [
     {
+      "kind": "fields_changed",
+      "model_key": "gpt-4.1-mini@2025-04-14",
+      "window_start": "2026-11-18T19:30:00Z",
+      "window_end": "2026-11-19T01:30:00Z",
+      "fields": [
+        "capabilities.textWatermarking"
+      ],
+      "before": {
+        "name": "gpt-4.1-mini",
+        "skus": [
+          {
+            "name": "DeveloperTier",
+            "deprecation_date": "2028-04-13T00:00:00Z"
+          },
+          {
+            "name": "GlobalBatch",
+            "deprecation_date": "2027-04-14T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2027-04-14T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2028-04-13T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-04-14",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "globalFineTune": "true",
+          "devTierFineTune": "true",
+          "FineTuneTokensMaxValue": "2000000000",
+          "FineTuneTokensMaxValuePerExample": "65536"
+        },
+        "lifecycle_portal": "Legacy",
+        "lifecycle_status": "Legacy",
+        "is_default_version": true,
+        "deprecation_fine_tune": "2027-04-14T00:00:00Z",
+        "deprecation_inference": "2027-04-14T00:00:00Z"
+      },
+      "after": {
+        "name": "gpt-4.1-mini",
+        "skus": [
+          {
+            "name": "DeveloperTier",
+            "deprecation_date": "2028-04-13T00:00:00Z"
+          },
+          {
+            "name": "GlobalBatch",
+            "deprecation_date": "2027-04-14T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2027-04-14T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2028-04-13T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-04-14",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "globalFineTune": "true",
+          "devTierFineTune": "true",
+          "textWatermarking": "true",
+          "FineTuneTokensMaxValue": "2000000000",
+          "FineTuneTokensMaxValuePerExample": "65536"
+        },
+        "lifecycle_portal": "Legacy",
+        "lifecycle_status": "Legacy",
+        "is_default_version": true,
+        "deprecation_fine_tune": "2027-04-14T00:00:00Z",
+        "deprecation_inference": "2027-04-14T00:00:00Z"
+      }
+    },
+    {
+      "kind": "fields_changed",
+      "model_key": "gpt-5.1@2025-11-13",
+      "window_start": "2026-11-18T19:30:00Z",
+      "window_end": "2026-11-19T01:30:00Z",
+      "fields": [
+        "capabilities.textWatermarking"
+      ],
+      "before": {
+        "name": "gpt-5.1",
+        "skus": [
+          {
+            "name": "GlobalBatch",
+            "deprecation_date": "2027-07-13T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2027-07-13T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-07-13T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-11-13",
+        "capabilities": {
+          "area": "EUR",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "priorityTierSkus": "GlobalStandard"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": "2027-05-15T00:00:00Z",
+        "deprecation_inference": "2027-07-13T00:00:00Z"
+      },
+      "after": {
+        "name": "gpt-5.1",
+        "skus": [
+          {
+            "name": "GlobalBatch",
+            "deprecation_date": "2027-07-13T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2027-07-13T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-07-13T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-11-13",
+        "capabilities": {
+          "area": "EUR",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "priorityTierSkus": "GlobalStandard",
+          "textWatermarking": "true"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": "2027-05-15T00:00:00Z",
+        "deprecation_inference": "2027-07-13T00:00:00Z"
+      }
+    },
+    {
+      "kind": "fields_changed",
+      "model_key": "gpt-5.2@2025-12-11",
+      "window_start": "2026-11-18T19:30:00Z",
+      "window_end": "2026-11-19T01:30:00Z",
+      "fields": [
+        "capabilities.textWatermarking"
+      ],
+      "before": {
+        "name": "gpt-5.2",
+        "skus": [
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2027-06-08T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-06-08T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-12-11",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "priorityTierSkus": "GlobalStandard"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2027-06-08T00:00:00Z"
+      },
+      "after": {
+        "name": "gpt-5.2",
+        "skus": [
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2027-06-08T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-06-08T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-12-11",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "priorityTierSkus": "GlobalStandard",
+          "textWatermarking": "true"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2027-06-08T00:00:00Z"
+      }
+    },
+    {
+      "kind": "fields_changed",
+      "model_key": "gpt-5.4@2026-03-05",
+      "window_start": "2026-11-18T19:30:00Z",
+      "window_end": "2026-11-19T01:30:00Z",
+      "fields": [
+        "capabilities.textWatermarking"
+      ],
+      "before": {
+        "name": "gpt-5.4",
+        "skus": [
+          {
+            "name": "DataZoneStandard",
+            "deprecation_date": "2027-09-02T00:00:00Z"
+          },
+          {
+            "name": "GlobalBatch",
+            "deprecation_date": "2027-09-02T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2027-09-02T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-09-02T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2026-03-05",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "priorityTierSkus": "GlobalStandard"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2027-09-02T00:00:00Z"
+      },
+      "after": {
+        "name": "gpt-5.4",
+        "skus": [
+          {
+            "name": "DataZoneStandard",
+            "deprecation_date": "2027-09-02T00:00:00Z"
+          },
+          {
+            "name": "GlobalBatch",
+            "deprecation_date": "2027-09-02T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2027-09-02T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-09-02T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2026-03-05",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "priorityTierSkus": "GlobalStandard",
+          "textWatermarking": "true"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2027-09-02T00:00:00Z"
+      }
+    },
+    {
+      "kind": "fields_changed",
+      "model_key": "gpt-5.4-mini@2026-03-17",
+      "window_start": "2026-11-18T19:30:00Z",
+      "window_end": "2026-11-19T01:30:00Z",
+      "fields": [
+        "capabilities.textWatermarking"
+      ],
+      "before": {
+        "name": "gpt-5.4-mini",
+        "skus": [
+          {
+            "name": "DataZoneStandard",
+            "deprecation_date": "2027-09-21T00:00:00Z"
+          },
+          {
+            "name": "GlobalBatch",
+            "deprecation_date": "2027-09-21T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2027-09-21T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-09-21T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2026-03-17",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "priorityTierSkus": "GlobalStandard",
+          "FineTuneTokensMaxValue": "2000000000",
+          "FineTuneTokensMaxValuePerExample": "196608"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": "2027-09-21T00:00:00Z",
+        "deprecation_inference": "2027-09-21T00:00:00Z"
+      },
+      "after": {
+        "name": "gpt-5.4-mini",
+        "skus": [
+          {
+            "name": "DataZoneStandard",
+            "deprecation_date": "2027-09-21T00:00:00Z"
+          },
+          {
+            "name": "GlobalBatch",
+            "deprecation_date": "2027-09-21T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2027-09-21T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-09-21T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2026-03-17",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "priorityTierSkus": "GlobalStandard",
+          "textWatermarking": "true",
+          "FineTuneTokensMaxValue": "2000000000",
+          "FineTuneTokensMaxValuePerExample": "196608"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": "2027-09-21T00:00:00Z",
+        "deprecation_inference": "2027-09-21T00:00:00Z"
+      }
+    },
+    {
+      "kind": "fields_changed",
+      "model_key": "gpt-5.4-nano@2026-03-17",
+      "window_start": "2026-11-18T19:30:00Z",
+      "window_end": "2026-11-19T01:30:00Z",
+      "fields": [
+        "capabilities.textWatermarking"
+      ],
+      "before": {
+        "name": "gpt-5.4-nano",
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-09-21T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2026-03-17",
+        "capabilities": {
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2027-09-21T00:00:00Z"
+      },
+      "after": {
+        "name": "gpt-5.4-nano",
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-09-21T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2026-03-17",
+        "capabilities": {
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "textWatermarking": "true"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2027-09-21T00:00:00Z"
+      }
+    },
+    {
+      "kind": "fields_changed",
+      "model_key": "gpt-5.5@2026-04-24",
+      "window_start": "2026-11-18T19:30:00Z",
+      "window_end": "2026-11-19T01:30:00Z",
+      "fields": [
+        "capabilities.textWatermarking"
+      ],
+      "before": {
+        "name": "gpt-5.5",
+        "skus": [
+          {
+            "name": "DataZoneStandard",
+            "deprecation_date": "2027-10-26T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2027-10-26T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-10-26T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2026-04-24",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "priorityTierSkus": "GlobalStandard"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2027-10-26T00:00:00Z"
+      },
+      "after": {
+        "name": "gpt-5.5",
+        "skus": [
+          {
+            "name": "DataZoneStandard",
+            "deprecation_date": "2027-10-26T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2027-10-26T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-10-26T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2026-04-24",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "priorityTierSkus": "GlobalStandard",
+          "textWatermarking": "true"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2027-10-26T00:00:00Z"
+      }
+    },
+    {
+      "kind": "fields_changed",
+      "model_key": "gpt-5.6-terra@2026-07-09",
+      "window_start": "2026-11-18T19:30:00Z",
+      "window_end": "2026-11-19T01:30:00Z",
+      "fields": [
+        "capabilities.textWatermarking"
+      ],
+      "before": {
+        "name": "gpt-5.6-terra",
+        "skus": [
+          {
+            "name": "DataZoneProvisionedManaged",
+            "deprecation_date": "2028-01-11T00:00:00Z"
+          },
+          {
+            "name": "DataZoneStandard",
+            "deprecation_date": "2028-01-11T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2028-01-11T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2028-01-11T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2026-07-09",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "flexTierSkus": "GlobalStandard",
+          "chatCompletion": "true",
+          "priorityTierSkus": "GlobalStandard"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2028-01-11T00:00:00Z"
+      },
+      "after": {
+        "name": "gpt-5.6-terra",
+        "skus": [
+          {
+            "name": "DataZoneProvisionedManaged",
+            "deprecation_date": "2028-01-11T00:00:00Z"
+          },
+          {
+            "name": "DataZoneStandard",
+            "deprecation_date": "2028-01-11T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2028-01-11T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2028-01-11T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2026-07-09",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "flexTierSkus": "GlobalStandard",
+          "chatCompletion": "true",
+          "priorityTierSkus": "GlobalStandard",
+          "textWatermarking": "true"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2028-01-11T00:00:00Z"
+      }
+    },
+    {
+      "kind": "fields_changed",
+      "model_key": "gpt-5-mini@2025-08-07",
+      "window_start": "2026-11-18T19:30:00Z",
+      "window_end": "2026-11-19T01:30:00Z",
+      "fields": [
+        "capabilities.textWatermarking"
+      ],
+      "before": {
+        "name": "gpt-5-mini",
+        "skus": [
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2027-07-13T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-07-13T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-08-07",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2027-07-13T00:00:00Z"
+      },
+      "after": {
+        "name": "gpt-5-mini",
+        "skus": [
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2027-07-13T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-07-13T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-08-07",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "textWatermarking": "true"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2027-07-13T00:00:00Z"
+      }
+    },
+    {
+      "kind": "fields_changed",
+      "model_key": "gpt-6-astra@2026-09-03",
+      "window_start": "2026-11-18T19:30:00Z",
+      "window_end": "2026-11-19T01:30:00Z",
+      "fields": [
+        "capabilities.textWatermarking"
+      ],
+      "before": {
+        "name": "gpt-6-astra",
+        "skus": [
+          {
+            "name": "DataZoneStandard",
+            "deprecation_date": "2028-01-11T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2028-01-11T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2028-01-11T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2026-09-03",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "flexTierSkus": "GlobalStandard",
+          "chatCompletion": "true"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2028-01-11T00:00:00Z"
+      },
+      "after": {
+        "name": "gpt-6-astra",
+        "skus": [
+          {
+            "name": "DataZoneStandard",
+            "deprecation_date": "2028-01-11T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2028-01-11T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2028-01-11T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2026-09-03",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "flexTierSkus": "GlobalStandard",
+          "chatCompletion": "true",
+          "textWatermarking": "true"
+        },
+        "lifecycle_portal": "Generally Available",
+        "lifecycle_status": "GenerallyAvailable",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2028-01-11T00:00:00Z"
+      }
+    },
+    {
+      "kind": "lifecycle_changed",
+      "model_key": "o1@2024-12-17",
+      "window_start": "2026-11-18T19:30:00Z",
+      "window_end": "2026-11-19T01:30:00Z",
+      "fields": [
+        "lifecycle_portal"
+      ],
+      "before": {
+        "name": "o1",
+        "skus": [
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2024-12-17",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true"
+        },
+        "lifecycle_portal": "Deprecated",
+        "lifecycle_status": "Deprecating",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2026-11-19T00:00:00Z"
+      },
+      "after": {
+        "name": "o1",
+        "skus": [
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2024-12-17",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true"
+        },
+        "lifecycle_portal": "Retired",
+        "lifecycle_status": "Deprecating",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2026-11-19T00:00:00Z"
+      }
+    },
+    {
+      "kind": "lifecycle_changed",
+      "model_key": "o3@2025-04-16",
+      "window_start": "2026-11-18T19:30:00Z",
+      "window_end": "2026-11-19T01:30:00Z",
+      "fields": [
+        "lifecycle_portal"
+      ],
+      "before": {
+        "name": "o3",
+        "skus": [
+          {
+            "name": "GlobalBatch",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-04-16",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "chatCompletion": "true"
+        },
+        "lifecycle_portal": "Deprecated",
+        "lifecycle_status": "Deprecating",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2026-11-19T00:00:00Z"
+      },
+      "after": {
+        "name": "o3",
+        "skus": [
+          {
+            "name": "GlobalBatch",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-04-16",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "chatCompletion": "true"
+        },
+        "lifecycle_portal": "Retired",
+        "lifecycle_status": "Deprecating",
+        "is_default_version": true,
+        "deprecation_fine_tune": null,
+        "deprecation_inference": "2026-11-19T00:00:00Z"
+      }
+    },
+    {
+      "kind": "lifecycle_changed",
+      "model_key": "o3-deep-research@2025-06-26",
+      "window_start": "2026-11-18T19:30:00Z",
+      "window_end": "2026-11-19T01:30:00Z",
+      "fields": [
+        "lifecycle_portal"
+      ],
+      "before": {
+        "name": "o3-deep-research",
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-06-26",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "chatCompletion": "true"
+        },
+        "lifecycle_portal": "Deprecated",
+        "lifecycle_status": "Deprecating",
+        "is_default_version": true,
+        "deprecation_fine_tune": "2026-11-19T00:00:00Z",
+        "deprecation_inference": "2026-11-19T00:00:00Z"
+      },
+      "after": {
+        "name": "o3-deep-research",
+        "skus": [
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-06-26",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "chatCompletion": "true"
+        },
+        "lifecycle_portal": "Retired",
+        "lifecycle_status": "Deprecating",
+        "is_default_version": true,
+        "deprecation_fine_tune": "2026-11-19T00:00:00Z",
+        "deprecation_inference": "2026-11-19T00:00:00Z"
+      }
+    },
+    {
+      "kind": "lifecycle_changed",
+      "model_key": "o3-mini@2025-01-31",
+      "window_start": "2026-11-18T19:30:00Z",
+      "window_end": "2026-11-19T01:30:00Z",
+      "fields": [
+        "lifecycle_portal"
+      ],
+      "before": {
+        "name": "o3-mini",
+        "skus": [
+          {
+            "name": "GlobalBatch",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-01-31",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "FineTuneTokensMaxValue": "2000000000",
+          "FineTuneTokensMaxValuePerExample": "131072"
+        },
+        "lifecycle_portal": "Deprecated",
+        "lifecycle_status": "Deprecating",
+        "is_default_version": true,
+        "deprecation_fine_tune": "2026-11-19T00:00:00Z",
+        "deprecation_inference": "2026-11-19T00:00:00Z"
+      },
+      "after": {
+        "name": "o3-mini",
+        "skus": [
+          {
+            "name": "GlobalBatch",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-01-31",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "true",
+          "chatCompletion": "true",
+          "FineTuneTokensMaxValue": "2000000000",
+          "FineTuneTokensMaxValuePerExample": "131072"
+        },
+        "lifecycle_portal": "Retired",
+        "lifecycle_status": "Deprecating",
+        "is_default_version": true,
+        "deprecation_fine_tune": "2026-11-19T00:00:00Z",
+        "deprecation_inference": "2026-11-19T00:00:00Z"
+      }
+    },
+    {
+      "kind": "lifecycle_changed",
+      "model_key": "o4-mini@2025-04-16",
+      "window_start": "2026-11-18T19:30:00Z",
+      "window_end": "2026-11-19T01:30:00Z",
+      "fields": [
+        "lifecycle_portal"
+      ],
+      "before": {
+        "name": "o4-mini",
+        "skus": [
+          {
+            "name": "DeveloperTier",
+            "deprecation_date": "2027-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalBatch",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-11-19T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-04-16",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "false",
+          "chatCompletion": "true",
+          "globalFineTune": "true",
+          "devTierFineTune": "true",
+          "FineTuneTokensMaxValue": "2000000000",
+          "FineTuneTokensMaxValuePerExample": "131072"
+        },
+        "lifecycle_portal": "Deprecated",
+        "lifecycle_status": "Deprecating",
+        "is_default_version": true,
+        "deprecation_fine_tune": "2026-11-19T00:00:00Z",
+        "deprecation_inference": "2026-11-19T00:00:00Z"
+      },
+      "after": {
+        "name": "o4-mini",
+        "skus": [
+          {
+            "name": "DeveloperTier",
+            "deprecation_date": "2027-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalBatch",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalProvisionedManaged",
+            "deprecation_date": "2026-11-19T00:00:00Z"
+          },
+          {
+            "name": "GlobalStandard",
+            "deprecation_date": "2027-11-19T00:00:00Z"
+          }
+        ],
+        "format": "OpenAI",
+        "version": "2025-04-16",
+        "capabilities": {
+          "area": "EUR",
+          "agentsV2": "true",
+          "responses": "true",
+          "assistants": "false",
+          "chatCompletion": "true",
+          "globalFineTune": "true",
+          "devTierFineTune": "true",
+          "FineTuneTokensMaxValue": "2000000000",
+          "FineTuneTokensMaxValuePerExample": "131072"
+        },
+        "lifecycle_portal": "Retired",
+        "lifecycle_status": "Deprecating",
+        "is_default_version": true,
+        "deprecation_fine_tune": "2026-11-19T00:00:00Z",
+        "deprecation_inference": "2026-11-19T00:00:00Z"
+      }
+    },
+    {
       "kind": "deprecation_moved",
       "model_key": "Cohere-embed-v3-english@1",
       "window_start": "2026-11-19T01:30:00Z",
