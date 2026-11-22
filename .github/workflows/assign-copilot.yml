@@ -79,7 +79,8 @@ jobs:
     #   - on a `labeled` event, `candidate` is the label that was just added,
     #     so re-labelling an old issue with something else does not re-trigger;
     #   - and the issue was filed by the Bibble Envoy bot, which is what
-    #     Steward files candidates through, or by Ben by hand. Anyone else
+    #     Steward files candidates through, or by Ben by hand. The app's login
+    #     on an issue is `bibble-envoy[bot]`, suffix included. Anyone else
     #     opening a `candidate` issue gets no agent time. Add logins to this
     #     list only deliberately: assignment spends Copilot licence quota and
     #     hands an untrusted issue body to an agent.
@@ -87,7 +88,7 @@ jobs:
       github.event.issue.state == 'open'
       && contains(github.event.issue.labels.*.name, 'candidate')
       && (github.event.action != 'labeled' || github.event.label.name == 'candidate')
-      && contains(fromJSON('["bibble-envoy", "Bibbleq"]'), github.event.issue.user.login)
+      && contains(fromJSON('["bibble-envoy[bot]", "Bibbleq"]'), github.event.issue.user.login)
     runs-on: ubuntu-latest
     steps:
       # No secret = dormant mode (the current, deliberate state): skip cleanly

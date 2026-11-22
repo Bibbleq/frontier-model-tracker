@@ -39,11 +39,11 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deploy.outputs.page_url || steps.deploy_retry.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -70,11 +70,25 @@ jobs:
       - name: Verify the published tree matches the manifest
         run: python scripts/check_published_tree.py _site
 
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
+      # deploy-pages sometimes asks for the artifact a second after the upload
+      # finishes and is told there is none ("No artifacts named github-pages
+      # were found"), as on the 20 November 19:30 and 21 November 01:30
+      # snapshots. One retry after a pause, so the site does not stay stale
+      # until the next snapshot. A second failure still fails the job.
       - id: deploy
-        uses: actions/deploy-pages@v4
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+
+      - name: Wait before retrying the deploy
+        if: steps.deploy.outcome == 'failure'
+        run: sleep 45
+
+      - id: deploy_retry
+        if: steps.deploy.outcome == 'failure'
+        uses: actions/deploy-pages@v5
