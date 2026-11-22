@@ -177,6 +177,15 @@ plumbing and **must never appear anywhere in `data/`** — the dataset cites pub
 URLs only, exactly as `docs/research-provenance.md` describes rejecting the
 editorial backlog's internal citation tokens.
 
+A candidate issue may also carry a **Pre-triage lookup** comment, written by
+`scripts/pretriage.py` when the issue was filed. It says whether the source URL
+is already cited by an event or a backlog item, whether the publisher's host
+has been cited before, and what is recorded for any registered model the
+headline names. Treat it as a pointer to where to look. It matched a URL and
+some names; it did not read the page. An issue labelled `likely-duplicate` is
+still yours to decide, because a page already cited for one event can carry a
+second claim nobody recorded.
+
 Then choose one of three outcomes. Say which one you chose, and why, in the PR
 body or the issue comment.
 
