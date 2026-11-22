@@ -1,0 +1,101 @@
+# Look a freshly filed `candidate` issue up against the dataset and leave one
+# comment saying what was found: whether the source URL is already cited,
+# whether the publisher's host has been cited before, and what is recorded for
+# any registered model the headline names. scripts/pretriage.py does the lookup.
+#
+# It adds the label `likely-duplicate` only when a published event already
+# cites the same URL. It never closes an issue and never touches data.
+#
+# No model and no secret are involved: the job reads data/ and the issue, and
+# writes one comment and at most one label with the default token.
+#
+# The issue title and body are untrusted. They reach the script through
+# environment variables and files, never through shell interpolation, and the
+# script echoes none of their text into the comment beyond the URL's host.
+
+name: Pre-triage candidate issues
+
+on:
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  contents: read
+  issues: write
+
+# An issue opened with the label already applied fires `opened` and `labeled`.
+# Serialise per issue; the second run finds the first run's comment and stops.
+concurrency:
+  group: pretriage-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  lookup:
+    # The same guard as assign-copilot.yml: an open issue, carrying exactly
+    # `candidate`, and on a `labeled` event only when `candidate` is the label
+    # just added. Observation issues are left alone; they are digests of many
+    # items and carry their own registry lookup. Filed by the Bibble Envoy app
+    # or by Ben, so a stranger's issue cannot make the job comment.
+    if: >-
+      github.event.issue.state == 'open'
+      && contains(github.event.issue.labels.*.name, 'candidate')
+      && (github.event.action != 'labeled' || github.event.label.name == 'candidate')
+      && contains(fromJSON('["bibble-envoy[bot]", "Bibbleq"]'), github.event.issue.user.login)
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      REPO: ${{ github.repository }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+    steps:
+      - name: Stop if this issue already has a pre-triage comment
+        id: existing
+        run: |
+          set -euo pipefail
+          count=$(gh api "repos/${REPO}/issues/${ISSUE_NUMBER}/comments" --paginate \
+            --jq '.[] | select(.body | startswith("<!-- pretriage -->")) | .id' | wc -l | tr -d ' ')
+          echo "count=${count}" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v7
+        if: steps.existing.outputs.count == '0'
+
+      - uses: actions/setup-python@v7
+        if: steps.existing.outputs.count == '0'
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        if: steps.existing.outputs.count == '0'
+        run: python -m pip install -r requirements.txt
+
+      - name: Look the candidate up
+        id: lookup
+        if: steps.existing.outputs.count == '0'
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          set -euo pipefail
+          work="${RUNNER_TEMP}/pretriage"
+          mkdir -p "$work"
+          printf '%s' "$ISSUE_TITLE" > "$work/title.txt"
+          printf '%s' "$ISSUE_BODY" > "$work/body.txt"
+          python scripts/pretriage.py \
+            --title-file "$work/title.txt" \
+            --body-file "$work/body.txt" \
+            --revision "$GITHUB_SHA" \
+            --comment-out "$work/comment.md" \
+            --result-out "$work/result.json"
+          echo "duplicate=$(jq -r '.duplicate' "$work/result.json")" >> "$GITHUB_OUTPUT"
+          cat "$work/comment.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Comment on the issue
+        if: steps.existing.outputs.count == '0'
+        run: gh issue comment "$ISSUE_NUMBER" --repo "$REPO" --body-file "${RUNNER_TEMP}/pretriage/comment.md"
+
+      - name: Label a likely duplicate
+        if: steps.existing.outputs.count == '0' && steps.lookup.outputs.duplicate == 'true'
+        run: |
+          set -euo pipefail
+          gh label create likely-duplicate --repo "$REPO" --color d4c5f9 \
+            --description "Pre-triage: a published event already cites this source URL" 2>/dev/null || true
+          gh issue edit "$ISSUE_NUMBER" --repo "$REPO" --add-label likely-duplicate
